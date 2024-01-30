@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/ResumeEra/static/css/main.a80168d0.css",
+    "main.js": "/ResumeEra/static/js/main.052fd716.js",
+    "static/js/703.4a01edae.chunk.js": "/ResumeEra/static/js/703.4a01edae.chunk.js",
+    "static/js/198.0a58cd68.chunk.js": "/ResumeEra/static/js/198.0a58cd68.chunk.js",
+    "static/js/787.d4aba7ab.chunk.js": "/ResumeEra/static/js/787.d4aba7ab.chunk.js",
+    "static/media/resume6.jpg": "/ResumeEra/static/media/resume6.a54521d1e93c0621e260.jpg",
+    "static/media/resume7.jpg": "/ResumeEra/static/media/resume7.37aac664bce5e95dd833.jpg",
+    "static/media/resume8.jpg": "/ResumeEra/static/media/resume8.dae9ef24851abcd70cb4.jpg",
+    "static/media/resum1.jpg": "/ResumeEra/static/media/resum1.4accf80c2cd978d320a7.jpg",
+    "static/media/resume2.jpg": "/ResumeEra/static/media/resume2.837f1305c91f037d1be0.jpg",
+    "index.html": "/ResumeEra/index.html",
+    "main.a80168d0.css.map": "/ResumeEra/static/css/main.a80168d0.css.map",
+    "main.052fd716.js.map": "/ResumeEra/static/js/main.052fd716.js.map",
+    "703.4a01edae.chunk.js.map": "/ResumeEra/static/js/703.4a01edae.chunk.js.map",
+    "198.0a58cd68.chunk.js.map": "/ResumeEra/static/js/198.0a58cd68.chunk.js.map",
+    "787.d4aba7ab.chunk.js.map": "/ResumeEra/static/js/787.d4aba7ab.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a80168d0.css",
+    "static/js/main.052fd716.js"
+  ]
+}
