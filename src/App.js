@@ -16,9 +16,10 @@ import resume8 from './image/resume8.jpg'
 import MyResume from './component/MyResume';
 import Preview from './component/Preview';
 import Preview2 from './component/Preview2';
-import Preview3 from './Preview3';
+import Preview3 from './component/Preview3';
 import Preview4 from './component/Preview4';
 import Preview5 from './component/Preview5';
+import ResumeEra from './component/ResumeEra';
 // import Preview2 from './component/Preview2';
 
 
@@ -51,13 +52,15 @@ function App() {
           />
         ))}
         
-        
+        <Route path='/ResumeEra' element={<ResumeEra/>}/>
         <Route path='/myresume' element={<MyResume />} />
         <Route path='/preview' element={<Preview />} />
         <Route path='/preview2' element={<Preview2 />} />
         <Route path='/preview3' element={<Preview3/>}/>
         <Route path='/preview4' element={<Preview4/>}/>
         <Route path='/preview5' element={<Preview5/>}/>
+        
+
       </Routes>
     </Router>
 

@@ -17,20 +17,35 @@ const Preview4 = () => {
     const keyskills = useSelector((state) => [state.reducer.keySkills[0]]);
     const work = useSelector((state) => [state.reducer.workExperience[0]]);
 
-    const handleDownloadPDF = () => {
+    const handleDownloadPDF = async () => {
         const element = document.getElementById('Alisha_mirza');
 
-        html2canvas(element).then((canvas) => {
+        try {
+            const canvas = await html2canvas(element);
             const pdf = new jsPDF('p', 'mm', 'a4');
             pdf.addImage(canvas.toDataURL('image/png'), 'PNG', 0, 0, 210, 297);
-            pdf.save(`${inputFields}.pdf`);
-        });
 
-        alert('Your Resume is downloaded');
-        navigate('/myresume');
+            // Set the file name here
+            const fileName = `${inputFields}.pdf`;
+
+            // Save the PDF file using a download link
+            const downloadLink = document.createElement('a');
+            downloadLink.href = pdf.output('bloburl');
+            downloadLink.download = fileName;
+            downloadLink.click();
+
+            // Save the image data in local storage
+            const imageDataUrl = canvas.toDataURL('image/png');
+    const savedResumes = JSON.parse(localStorage.getItem('savedResumes')) || [];
+    savedResumes.push(imageDataUrl);
+    localStorage.setItem('savedResumes', JSON.stringify(savedResumes));
+
+    alert('Your Resume is downloaded');
+    navigate('/myresume');
+  } catch (error) {
+    console.error('Error downloading PDF:', error);
+  }
     };
-
-
     return (
         <div className='d-flex justify-content-between'>
             <div className='d-flex justify-content-between border p-3'>

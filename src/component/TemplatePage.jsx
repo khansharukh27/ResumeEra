@@ -13,7 +13,8 @@ const TemplatePage = (props) => {
     // console.log('path in template:=',path)
     
     const history = useNavigate();
-    const handleClick = () => {
+    const handleClick = (e) => {
+        e.preventDefault()
         if (hoveredImage !== null) {
             const path = `/mainpage/${hoveredImage}`
 
@@ -25,7 +26,7 @@ const TemplatePage = (props) => {
 
     return (
         <div>
-            {/* {showMainPage && ( */}
+           
                 <div>
                     <h1>Template</h1>
                     <p>Select a template to get started</p>
@@ -40,26 +41,34 @@ const TemplatePage = (props) => {
                             key={image.id}
                             className=" boximage m-3 "
                             style={{ position: 'relative' }}
+                            onMouseEnter={() => setHoveredImage(image.id)}
+                            onMouseLeave={() => setHoveredImage(null)}
+                            
                         >
                             <img
                             className='image border m-3'
                                 src={image.src}
                                 alt={image.alt}
                                 style={{  }}
-                                onMouseEnter={() => setHoveredImage(image.id)}
-                                onMouseLeave={() => setHoveredImage(null)}
-                            />
+                                />
                             {hoveredImage === image.id && (
-                                <button
+                                <a
+                                    href={`/mainpage/${hoveredImage}`}
                                     onClick={handleClick}
                                     style={{
+                                    border:'1px solid grey',
+                                    borderRadius:'8px',
+                                    color:"white",
+                                    padding:'5px',
+                                    textDecoration:'none',
+                                    backgroundImage: 'linear-gradient(144deg,#AF40FF, #5B42F3 50%,#00DDEB)',
                                         position: 'absolute',
                                         top: '50%',
                                         left: '6%',
                                     }}
                                 >
                                     Go Your Resume
-                                </button>
+                                </a>
                             )}
                         </div>
                     ))}
