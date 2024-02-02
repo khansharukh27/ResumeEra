@@ -8,6 +8,7 @@ const initialState = {
   templatePage:[],
   addHobies:[],
   addLanguage:[],
+  socialMediaLink:[]
 };
 
 const reducer = (state = initialState, action) => {
@@ -51,6 +52,11 @@ const reducer = (state = initialState, action) => {
       return{
         ...state,
         addLanguage:[action.payload]
+      }  
+    case 'social_media':
+      return{
+        ...state,
+        socialMediaLink:[action.payload]
       }  
     default:
       return state;

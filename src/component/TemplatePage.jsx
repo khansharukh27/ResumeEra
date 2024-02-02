@@ -26,55 +26,55 @@ const TemplatePage = (props) => {
 
     return (
         <div>
-           
-                <div>
-                    <h1>Template</h1>
-                    <p>Select a template to get started</p>
-                </div>
-           
-            <div className="d-sm-flex m-3 justify-content-start">
-                {images && images.map((image) => (
-                        <div
-                            
-                            data-aos="flip-left"
-                            data-aos-duration='2000s'
-                            key={image.id}
-                            className=" boximage m-3 "
-                            style={{ position: 'relative' }}
-                            onMouseEnter={() => setHoveredImage(image.id)}
-                            onMouseLeave={() => setHoveredImage(null)}
-                            
+    <div>
+        <h1>Template</h1>
+        <p>Select a template to get started </p>
+        <hr />
+    </div>
+
+    <div className="row m-3">
+        {images &&
+            images.map((image) => (
+                <div
+                    data-aos="flip-left"
+                    data-aos-duration="2000s"
+                    key={image.id}
+                    className="col-12 col-md-6 col-lg-4 boximage m-3"
+                    style={{ position: 'relative' }}
+                    onMouseEnter={() => setHoveredImage(image.id)}
+                    onMouseLeave={() => setHoveredImage(null)}
+                >
+                    <img
+                        className="image border m-3"
+                        src={image.src}
+                        alt={image.alt}
+                        style={{}}
+                    />
+                    {hoveredImage === image.id && (
+                        <a
+                            href={`/mainpage/${hoveredImage}`}
+                            onClick={handleClick}
+                            style={{
+                                border: '1px solid grey',
+                                borderRadius: '8px',
+                                color: 'white',
+                                padding: '5px',
+                                textDecoration: 'none',
+                                backgroundImage:
+                                    'linear-gradient(144deg,#AF40FF, #5B42F3 50%,#00DDEB)',
+                                position: 'absolute',
+                                top: '50%',
+                                left: '20px',
+                            }}
                         >
-                            <img
-                            className='image border m-3'
-                                src={image.src}
-                                alt={image.alt}
-                                style={{  }}
-                                />
-                            {hoveredImage === image.id && (
-                                <a
-                                    href={`/mainpage/${hoveredImage}`}
-                                    onClick={handleClick}
-                                    style={{
-                                    border:'1px solid grey',
-                                    borderRadius:'8px',
-                                    color:"white",
-                                    padding:'5px',
-                                    textDecoration:'none',
-                                    backgroundImage: 'linear-gradient(144deg,#AF40FF, #5B42F3 50%,#00DDEB)',
-                                        position: 'absolute',
-                                        top: '50%',
-                                        left: '6%',
-                                    }}
-                                >
-                                    Go Your Resume
-                                </a>
-                            )}
-                        </div>
-                    ))}
-            </div>
-            {/* {showMainPage && <MainPage hoveredImage= {hoveredImage}/>} */}
-        </div>
+                            Go Your Resume
+                        </a>
+                    )}
+                </div>
+            ))}
+    </div>
+</div>
+
     );
 };
 

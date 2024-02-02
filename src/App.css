@@ -103,7 +103,7 @@
     margin-right: 4px;
 }
 .navbar{
-    background-color: aqua;
+  background-image: linear-gradient(144deg,#AF40FF, #5B42F3 50%,#00DDEB);
 }
 
 button {
@@ -293,5 +293,42 @@ button {
   
   
   
+  .shape-container {
+    
+    background-color: rgb(238, 231, 232);
+    border:1px solid green
+  }
+
+  .work-item {
+    position: relative;
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+
+.line {
+    width: 2px;
+    height: 200px; /* Adjust the height of the line */
+    background-color: #ccc;
+    margin: 0 10px; /* Adjust the margin for spacing */
+}
+
+.circle {
+    width: 10px;
+    height: 10px;
+    background-color: #ccc;
+    border-radius: 50%;
+    position: absolute;
+    top: 50px;
+    left:5px;
+    transform: translateY(-50%);
+}
+
+.content {
+    padding: 0 10px;
+}
+
+/* Optional: Remove right border from the last item */
+.work-item:last-child .circle:last-child {
   
-  
+}

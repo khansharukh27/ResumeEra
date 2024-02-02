@@ -3,14 +3,14 @@ import { addHobbies } from "../Redux/action"
 import { useState } from "react"
 import KeySkills from "./KeySkill"
 import Language from "./Language"
+import SocialMedia from "./SocialMedia"
 
 
 const Hobbies=()=>{
     const [input,setInput] = useState([{hobbies:''}])
     const [showLanguage,setShowLanguage] = useState(false)
     const [ showHobbies,setShowHobbies] = useState(true)
-    const [showKeySkills,setShowKeySkills] = useState(false)
-
+    const  [showSocialMedia,setShowSocialMedia] = useState(false)
     const dispatch = useDispatch()
     const handleSubmit = (e) =>{
         e.preventDefault()
@@ -25,13 +25,13 @@ const Hobbies=()=>{
         e.preventDefault()
         setShowLanguage(false)
         setShowHobbies(false)
-        setShowKeySkills(true)
+        setShowSocialMedia(true)
         dispatch(addHobbies(input))
     }
     const handleClickBack = ()=>{
         setShowLanguage(true)
         setShowHobbies(false)
-        setShowKeySkills(false)
+        setShowSocialMedia(false)
     }
     const handleChange=(e,index)=>{
         const {name,value} = e.target;
@@ -68,7 +68,7 @@ const Hobbies=()=>{
                 </div>
                 
             )}
-            {showKeySkills &&(<KeySkills/>)}
+            {showSocialMedia &&(<SocialMedia/>)}
             {showLanguage &&(<Language/>)}
             
         </form>

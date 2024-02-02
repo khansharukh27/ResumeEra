@@ -4,7 +4,7 @@ import { useState } from 'react';
 import { useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 
-const Preview3 = () => {
+const Preview4 = () => {
     const [inputFields, setInputFields] = useState('resume.pdf');
 
     const navigate = useNavigate();
@@ -136,4 +136,4 @@ const Preview3 = () => {
         </div>
     )
 }
-export default Preview3;
+export default Preview4;

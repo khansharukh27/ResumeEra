@@ -53,3 +53,10 @@ export const addLanguage = (input) =>{
         payload:input
     }
 }
+
+export const socialMediaLink = (input) =>{
+    return{
+        type:'social_media',
+        payload:input
+    }
+}

@@ -14,6 +14,8 @@ const Preview2 = () => {
     const Hobbies = useSelector((state) => [state.reducer.addHobies[0]]);
     const keyskills = useSelector((state) => [state.reducer.keySkills[0]]);
     const work = useSelector((state) => [state.reducer.workExperience[0]]);
+    const result = useSelector((state)=>[state.reducer])
+    console.log('reducer:-',result)
 
     
     const handleDownloadPDF = async () => {

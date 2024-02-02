@@ -32,7 +32,16 @@ const KeySkills = (props) => {
             { value: 2, path: '/preview2' },
             {value: 3, path: '/preview3' },
             {value: 4,path: '/preview4'},
-            {value: 5, path: '/preview5'}
+            {value: 5, path: '/preview5'},
+            {value: 6, path:'/preview6'},
+            {value: 7, path:'/preview7'},
+            {value: 8, path:'/preview8'},
+            {value: 9, path:'/preview9'},
+            {value: 10, path:'/preview10'},
+            {value: 11, path:'/preview11'},
+            {value: 12, path:'/preview12'},
+            {value: 13, path:'/preview13'},
+            {value: 14, path:'/preview14'},
             // Add more mappings as needed
         ];
     

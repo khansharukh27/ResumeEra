@@ -18,7 +18,11 @@ const PersonalInfo = () => {
         city: "",
         mobileNumber: "",
         postalCode: "",
-        object: ""
+        object: "",
+        address:'',
+        maritalstatus:'',
+        nationality:'',
+        dateofbirth:''
     });
 
     const dispatch = useDispatch();
@@ -115,6 +119,8 @@ const PersonalInfo = () => {
                         </div>
                         <div className="d-sm-flex one w-sm-50">
                             <textarea className="input m-2" type="text" placeholder="address" name="address" value={inputData.address} onChange={handleChange} />
+                            <textarea className="input m-2" type="text" placeholder="marital status" name="maritalstatus" value={inputData.maritalstatus} onChange={handleChange} />
+
                         </div>
                         <div className="d-sm-flex one" >
                             <input className="input m-2" type="text" placeholder="city" name="city" value={inputData.city} onChange={handleChange} />
@@ -122,17 +128,20 @@ const PersonalInfo = () => {
                         </div>
                         <div className="d-sm-flex one" >
                             <input className="input m-2" type="number" placeholder='postal code' name="postalCode" value={inputData.postalCode} onChange={handleChange} />
+                            <input className="input m-2" type="text" placeholder='Nationality' name="nationality" value={inputData.nationality} onChange={handleChange} />
+
                         </div>
                         <div className="d-sm-flex one">
                             <textarea className="input m-2" type="text" placeholder="object" name="object" value={inputData.object} onChange={handleChange} style={{ width: '100%' }} />
+                            <textarea className="input m-2" type="text" placeholder="date of birth" name="dateofbirth" value={inputData.dateofbirth} onChange={handleChange} style={{ width: '100%' }} />
+
                         </div>
                     </div>
                     <div className="d-sm-flex justify-content-between m-2">
                         <button onClick={handleClickBack}>
                             <span class="text">BACK</span>
                         </button>
-                        {/* <button >Hover me</button> */}
-                        {/* <button onClick={handleClickBack} type="button" className="btn btn-primary">Previous</button> */}
+                        
                         <button onClick={handleClickNext} type="submit"><span className="text">NEXT</span></button>
                     </div>
                 </div>

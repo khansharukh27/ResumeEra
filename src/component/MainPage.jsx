@@ -6,6 +6,7 @@ import WorkExperience from "./WorkExperience";
 import KeySkills from "./KeySkill";
 import Language from "./Language";
 import Hobbies from "./Hobbies";
+import SocialMedia from "./SocialMedia";
 
 const MainPage = (props) => {
     const [showPersonalInfo, setShowPersonalInfo] = useState(true);
@@ -14,6 +15,7 @@ const MainPage = (props) => {
     const [showKeySkills, setShowKeySkills] = useState(false);
     const [showLanguage,setShowLanguage] = useState(false)
     const [showHobbies,setShowHobbies] = useState(false);
+    const [showSocialMedia,setShowSocialMedia] = useState(false);
 
     const {path,hoveredImage} = props;
     console.log('path in mainpage:-',path)
@@ -37,6 +39,7 @@ const MainPage = (props) => {
             setShowKeySkills(false);
             setShowLanguage(false)
             setShowHobbies(false)
+            setShowSocialMedia(false)
            
         } else if (pathnam === `${path}/workexperience`) {
             setShowPersonalInfo(false);
@@ -45,6 +48,7 @@ const MainPage = (props) => {
             setShowKeySkills(false);
             setShowLanguage(false)
             setShowHobbies(false)
+            setShowSocialMedia(false)
            
         } else if (pathnam === `${path}/education`) {
             setShowPersonalInfo(false);
@@ -53,6 +57,7 @@ const MainPage = (props) => {
             setShowKeySkills(false);
             setShowLanguage(false)
             setShowHobbies(false)
+            setShowSocialMedia(false)
         }else if(pathnam === `${path}/language`){    
             setShowPersonalInfo(false);
             setShowEducation(false);
@@ -60,6 +65,7 @@ const MainPage = (props) => {
             setShowKeySkills(false);
             setShowLanguage(true)
             setShowHobbies(false)
+            setShowSocialMedia(false)
         }else if(pathnam === `${path}/hobbies`){    
             setShowPersonalInfo(false);
             setShowEducation(false);
@@ -67,6 +73,15 @@ const MainPage = (props) => {
             setShowKeySkills(false);
             setShowLanguage(false)
             setShowHobbies(true)    
+            setShowSocialMedia(false)
+        }else if(pathnam === `${path}/socialmedia`){    
+            setShowPersonalInfo(false);
+            setShowEducation(false);
+            setShowWorkExperience(false);
+            setShowKeySkills(false);
+            setShowLanguage(false)
+            setShowHobbies(false)    
+            setShowSocialMedia(true)    
         } else if (pathnam === `${path}/keyskills`) {
             setShowPersonalInfo(false);
             setShowKeySkills(true);
@@ -84,7 +99,9 @@ const MainPage = (props) => {
                 <div><Link to={`/${path}/education`} style={{ textDecoration: 'none' }} onClick={handleClick}>Education</Link></div>
                 <div><Link to={`/${path}/language`} style={{ textDecoration: 'none' }} onClick={handleClick}>language</Link></div>
                 <div><Link to={`/${path}/hobbies`} style={{ textDecoration: 'none' }} onClick={handleClick}>Hobbies</Link></div>
+                <div><Link to={`/${path}/socialmedia`} style={{ textDecoration: 'none' }} onClick={handleClick} >Social Media Link</Link></div>
                 <div><Link to={`/${path}/keyskills`} style={{ textDecoration: 'none' }} onClick={handleClick} >Key Skills</Link></div>
+                
                 
             </div>
             <div className="secondDiv mt-2" data-aos="flip-left" data-aos-duration="2000">
@@ -95,6 +112,7 @@ const MainPage = (props) => {
                 {showKeySkills && <KeySkills hoveredImage={hoveredImage} />}
                 {showHobbies && (<Hobbies/>)}
                 {showLanguage && (<Language/>)}
+                {showSocialMedia && (<SocialMedia/>)}
 
             </div>
         </div>
