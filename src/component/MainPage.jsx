@@ -7,6 +7,7 @@ import KeySkills from "./KeySkill";
 import Language from "./Language";
 import Hobbies from "./Hobbies";
 import SocialMedia from "./SocialMedia";
+import '../component/previewfolder/CSS/mainpage.css'
 
 const MainPage = (props) => {
     const [showPersonalInfo, setShowPersonalInfo] = useState(true);
@@ -92,19 +93,19 @@ const MainPage = (props) => {
     };
 
     return (
-        <div className="container d-sm-flex mt-sm-4 m-2 p-2 justify-content-between border">
-            <div className='card me-2' style={{height:'100%'}}>
-                <div><Link to={`/${path}/personalinfo`} style={{ textDecoration: 'none' }} onClick={handleClick}>Personal info</Link></div>
-                <div><Link to={`/${path}/workexperience`} style={{ textDecoration: 'none' }} onClick={handleClick} >Work Experience</Link></div>
-                <div><Link to={`/${path}/education`} style={{ textDecoration: 'none' }} onClick={handleClick}>Education</Link></div>
-                <div><Link to={`/${path}/language`} style={{ textDecoration: 'none' }} onClick={handleClick}>language</Link></div>
-                <div><Link to={`/${path}/hobbies`} style={{ textDecoration: 'none' }} onClick={handleClick}>Hobbies</Link></div>
-                <div><Link to={`/${path}/socialmedia`} style={{ textDecoration: 'none' }} onClick={handleClick} >Social Media Link</Link></div>
-                <div><Link to={`/${path}/keyskills`} style={{ textDecoration: 'none' }} onClick={handleClick} >Key Skills</Link></div>
+        <div className=" d-sm-flex justify-content-around border mainpage">
+            <div className='card me-2' style={{height:'80%'}}>
+                <div><Link to={`/${path}/personalinfo`} style={{ textDecoration: 'none',color:'white' }} onClick={handleClick}>Personal info</Link></div>
+                <div><Link to={`/${path}/workexperience`} style={{ textDecoration: 'none',color:'white' }} onClick={handleClick} >Work Experience</Link></div>
+                <div><Link to={`/${path}/education`} style={{ textDecoration: 'none',color:'white' }} onClick={handleClick}>Education</Link></div>
+                <div><Link to={`/${path}/language`} style={{ textDecoration: 'none',color:'white' }} onClick={handleClick}>language</Link></div>
+                <div><Link to={`/${path}/hobbies`} style={{ textDecoration: 'none',color:'white' }} onClick={handleClick}>Hobbies</Link></div>
+                <div><Link to={`/${path}/socialmedia`} style={{ textDecoration: 'none',color:'white' }} onClick={handleClick} >Social Media Link</Link></div>
+                <div><Link to={`/${path}/keyskills`} style={{ textDecoration: 'none',color:'white' }} onClick={handleClick} >Key Skills</Link></div>
                 
                 
             </div>
-            <div className="secondDiv mt-2" data-aos="flip-left" data-aos-duration="2000">
+            <div className=" mt-2 ms-5" data-aos="flip-left" data-aos-duration="2000">
             
                 {showPersonalInfo && <PersonalInfo />}
                 {showWorkExperience && <WorkExperience />}

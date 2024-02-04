@@ -13,7 +13,8 @@ const WorkExperience = () => {
       jobtitle: '',
       organization: '',
       startYear: '',
-      endYear: ''
+      endYear: '',
+      aboutexperience:''
     }
   ]);
 
@@ -62,13 +63,13 @@ const WorkExperience = () => {
   }
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} style={{height:'600px'}}>
       {showWorkExperience && (
         <div>
           
           {workExperiences.map((experience, index) => (
             <div key={index}>
-                <h1>Work Experience {index+1}</h1>
+                <h1 style={{color:'white'}}>Work Experience {index+1}</h1>
           <hr />
               <div className="d-sm-flex one">
                 <input className="input mb-2" onChange={(e) => handleChange(e, index)} type="text" placeholder='Job Title' name="jobtitle" value={experience.jobtitle} />
@@ -77,6 +78,9 @@ const WorkExperience = () => {
               <div className="d-sm-flex one">
                 <input type="text" className="input mb-2" onChange={(e) => handleChange(e, index)} placeholder="Start Year" name="startYear" value={experience.startYear} />
                 <input type="text" className="input mb-2" onChange={(e) => handleChange(e, index)} placeholder="End Year" name="endYear" value={experience.endYear} />
+              </div>
+              <div>
+                <textarea type='text'  className="input mb-2" onChange={(e) => handleChange(e, index)} placeholder="about work" name="aboutexperience" id="" cols="200" rows="5" value={experience.aboutexperience}></textarea>
               </div>
               <button type="button" class=" m-2" onClick={()=>handleDelete(index)}><span class="text">DELETE</span></button>
               <hr className="m-2" />

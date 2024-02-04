@@ -54,11 +54,9 @@ const Preview2 = () => {
                 <div className="main1 d-flex flex-column m-1 justify-content-center">
                     <div className="maininner1 text-center pt-5" style={{backgroundColor:'black',width:'200px',borderBottomLeftRadius:'50%',borderBottomRightRadius:'50%',color:'white'}}>
                         <h3 className="pt-5">{personalInfo.firstName} {personalInfo.lastName}</h3>
-                        <p>{work[0].map((works, index) => (
-                            <div key={index}>
-                                {works.jobtitle}
-                            </div>
-                        ))}</p>
+                        <p>
+                                {work[0][0].jobtitle}
+                            </p>
                         <div className="maininner2 p-2">
                             <img src={personalInfo.image} className="" alt="Selected" style={{ width: '100px', height: '100px', borderRadius: '50%',border:'3px solid grey'  }} />
 

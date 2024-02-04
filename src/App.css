@@ -87,10 +87,13 @@
     transition: all ease 1s;
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 650px) {
     .image {
       width: 100%;
       height: auto;
+    }
+    .navbar{
+      width: 650px;
     }
   }
   
@@ -156,7 +159,7 @@ button {
    .card {
     position: relative;
     width: 190px;
-    height: 254px;
+    height: 700px;
     background-color: #000;
     display: flex;
     flex-direction: column;
@@ -331,4 +334,7 @@ button {
 /* Optional: Remove right border from the last item */
 .work-item:last-child .circle:last-child {
   
+}
+.c{
+  background-color: #414242cc;
 }

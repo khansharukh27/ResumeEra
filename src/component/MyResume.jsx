@@ -45,8 +45,8 @@ const MyResume = () => {
                 alt={`Saved Resume ${index + 1}`}
                 style={{height:'250px'}}
               />
-              <div className="card-body">
-                <div className="d-flex d-xl-flex d-md-flex justify-content-between">
+              <div className="card-body ">
+                <div className="d-lg-flex  justify-content-between">
                   <button className="btn btn-primary me-2" onClick={() => handleDownload(index)}>
                     Download
                   </button>

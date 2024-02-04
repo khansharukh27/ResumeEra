@@ -61,20 +61,20 @@ const Preview9 = () => {
                         <p>.</p>
                         <h5 className='mt-5 mb-4'> CONTACT_</h5>
                         <div>
-                            <div className='d-flex' style={{height:"70px"}}>
-                                <div className='me-2 mb-3 ' style={{backgroundColor:'yellow',borderBottomLeftRadius:'50%',borderBottomRightRadius:'50%'}}><i class="bi bi-telephone-fill me-2 p-1 "></i></div>
+                            <div className='d-flex' style={{ height: "70px" }}>
+                                <div className='me-2 mb-3 ' style={{ backgroundColor: 'yellow', borderBottomLeftRadius: '50%', borderBottomRightRadius: '50%' }}><i class="bi bi-telephone-fill me-2 p-1 "></i></div>
                                 <div><p>{personalInfo.mobileNumber}</p></div>
                             </div>
                             <div className='d-flex '>
-                                <div className='me-2' style={{backgroundColor:'yellow'}}><i class="bi bi-envelope me-2 p-1"></i></div>
+                                <div className='me-2' style={{ backgroundColor: 'yellow' }}><i class="bi bi-envelope me-2 p-1"></i></div>
                                 <div><p>{personalInfo.email}</p></div>
                             </div>
                             <div className='d-flex'>
-                                <div className='me-2' style={{backgroundColor:'yellow'}}><i class="bi bi-geo-alt-fill me-2 p-1" ></i></div>
+                                <div className='me-2' style={{ backgroundColor: 'yellow' }}><i class="bi bi-geo-alt-fill me-2 p-1" ></i></div>
                                 <div><p>{personalInfo.address} {personalInfo.city} {personalInfo.state} {personalInfo.postalCode}</p></div>
                             </div>
                             <div className='d-flex'>
-                                <div className='me-2' style={{backgroundColor:'yellow',borderBottomLeftRadius:'50%',borderBottomRightRadius:'50%'}}><i class="bi bi-linkedin me-2 p-1"></i></div>
+                                <div className='me-2' style={{ backgroundColor: 'yellow', borderBottomLeftRadius: '50%', borderBottomRightRadius: '50%' }}><i class="bi bi-linkedin me-2 p-1"></i></div>
                                 <div><p> {sMedia[0].linkedin}</p></div>
                             </div>
                         </div>
@@ -107,14 +107,14 @@ const Preview9 = () => {
                             {work[0][0].jobtitle}
                         </p>
                     </div>
-                            <hr className='m-3' style={{backgroundColor:'yellow',height:'5px'}}/>
+                    <hr className='m-3' style={{ backgroundColor: 'yellow', height: '5px' }} />
                     <h5 className='mt-5 mb-5'> JOB EXPERIENCE_</h5>
                     {work[0].map((works, index) => (
                         <div key={index} className='d-flex justify-content-around mt-2'>
-                            <div style={{height:'100px',width:'4px', backgroundColor:'yellow'}}> </div>
+                            <div style={{ height: '100px', width: '4px', backgroundColor: 'yellow' }}> </div>
                             <div><p><b>{works.jobtitle}</b></p>  <p>{works.startYear}-{works.endYear}</p>
-                            <p style={{}}>{works.organization} </p></div>
-                            
+                                <p style={{}}>{works.organization} </p></div>
+
                         </div>
                     ))}
 
@@ -125,16 +125,14 @@ const Preview9 = () => {
                         </div>
                     ))}
                     <div className='row'>
-                    <h5 className='mt-5 mb-5' >SKILLS_</h5>
-                    {keyskills[0].map((keys, index) => (
-                        <div key={index} className="col-6">
-                        <div className='d-flex justify-content-around'>
-                        <div ><p>{keys.keyskills}</p> <hr style={{height:'5px',backgroundColor:'darkgoldenrod'}}/></div>
-                        </div>
-                            
-                                    
-                        </div>
-                    ))}
+                        <h5 className='mt-5 mb-5' >SKILLS_</h5>
+                        {keyskills[0].map((keys, index) => (
+                            <div key={index} className="col-6">
+                                <div className='d-flex justify-content-around'>
+                                    <div ><p>{keys.keyskills}</p> <hr style={{ height: '5px', backgroundColor: 'darkgoldenrod' }} /></div>
+                                </div>
+                            </div>
+                        ))}
                     </div>
                 </div>
             </div>

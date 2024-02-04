@@ -62,13 +62,13 @@ const Education = ({images}) => {
         })
     }
     return (
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit} style={{height:'600px'}}>
             {showEducation && (
 
                 <div>
                     {education.map((edu, index) => (
                         <div key={index}>
-                            <h1>Education {index+1}</h1>
+                            <h1 style={{color:'white'}}>Education {index+1}</h1>
                             <hr className="m-3" />
                             <select class="form-select input bg-dark "  onChange={(e) => handleChange(e, index)} aria-label="Default select example" name="type" value={edu.type} >
                                 <option defaultValue='B.sc'>Education Type</option>

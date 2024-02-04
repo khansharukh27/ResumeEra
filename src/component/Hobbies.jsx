@@ -46,11 +46,11 @@ const Hobbies=()=>{
     }
     
     return(
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit} style={{height:'600px'}}>
             {showHobbies && (
 
                 <div>
-                    <div><h1>Hobbies that's You Have</h1></div>
+                    <div style={{color:'white'}}><h1>Hobbies that's You Have</h1></div>
                     <hr className="mb-3"/>
                 {input.map((inp,index)=>(
                     <div key={index}>

@@ -47,11 +47,11 @@ const Language=()=>{
 
 
     return (
-        <div onSubmit={handleSubmit}>
+        <div onSubmit={handleSubmit} style={{height:'600px'}}>
             
             {showLanguage &&(
                 <div>
-                    <div><h1>Language that's You Know</h1></div>
+                    <div style={{color:'white'}}><h1>Language that's You Know</h1></div>
                     <hr className="mb-3"/>
                 {inputLanguage.map((inputLan,index) =>(
                     <div key={index}>

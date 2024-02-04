@@ -7,7 +7,7 @@ import Hobbies from "./Hobbies";
 const KeySkills = (props) => {
     const { hoveredImage, images } = props;
     const [showKeySkills, setShowKeySkills] = useState(true);
-    const [showHobbies,setShowHobbies] = useState(false)
+    const [showHobbies, setShowHobbies] = useState(false)
     const [inputFields, setInputFields] = useState([{ keyskills: '' }]);
     const dispatch = useDispatch();
     const navigate = useNavigate();
@@ -26,27 +26,27 @@ const KeySkills = (props) => {
         e.preventDefault();
         console.log('images:-,', images);
         dispatch(keyskillsData(inputFields));
-    
+
         const resultMappings = [
             { value: 1, path: '/preview' },
             { value: 2, path: '/preview2' },
-            {value: 3, path: '/preview3' },
-            {value: 4,path: '/preview4'},
-            {value: 5, path: '/preview5'},
-            {value: 6, path:'/preview6'},
-            {value: 7, path:'/preview7'},
-            {value: 8, path:'/preview8'},
-            {value: 9, path:'/preview9'},
-            {value: 10, path:'/preview10'},
-            {value: 11, path:'/preview11'},
-            {value: 12, path:'/preview12'},
-            {value: 13, path:'/preview13'},
-            {value: 14, path:'/preview14'},
+            { value: 3, path: '/preview3' },
+            { value: 4, path: '/preview4' },
+            { value: 5, path: '/preview5' },
+            { value: 6, path: '/preview6' },
+            { value: 7, path: '/preview7' },
+            { value: 8, path: '/preview8' },
+            { value: 9, path: '/preview9' },
+            { value: 10, path: '/preview10' },
+            { value: 11, path: '/preview11' },
+            { value: 12, path: '/preview12' },
+            { value: 13, path: '/preview13' },
+            { value: 14, path: '/preview14' },
             // Add more mappings as needed
         ];
-    
+
         const resultMapping = resultMappings.find(mapping => mapping.value === result);
-    
+
         if (resultMapping) {
             const { path } = resultMapping;
             navigate(path);
@@ -54,7 +54,7 @@ const KeySkills = (props) => {
             console.error(`Unexpected result value: ${result}`);
         }
     };
-    
+
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -80,9 +80,11 @@ const KeySkills = (props) => {
     };
 
     return (
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit} style={{ height: '600px', display: 'flex', flexDirection: 'column' }}>
             {showKeySkills && (
-                <div>
+                <div style={{ flex: 1 }}>
+                                <div style={{color:'white'}}><h1>KEY SKILLS</h1></div>
+
                     {inputFields.map((field, index) => (
                         <div key={index}>
                             <input
@@ -95,15 +97,15 @@ const KeySkills = (props) => {
                             />
                         </div>
                     ))}
-                    <div>
+                    <div class>
                         <button type="button" className="text-center mt-2" onClick={handleAddMore}>
-                        <span class="text">ADD MORE</span>
+                            <span class="text">ADD MORE</span>
                         </button>
                     </div>
                     <hr className="m-2" />
-                    <div className="d-flex justify-content-between m-2">
+                    <div style={{ flex: 1, display: 'flex', justifyContent: 'space-between' }}>
                         <button onClick={handleClickBack} type="button">
-                        <span class="text">BACK</span>
+                            <span class="text">BACK</span>
                         </button>
                         <button onClick={handleClickNext} type="submit"><span className="text">NEXT</span></button>
 

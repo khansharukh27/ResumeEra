@@ -6,9 +6,9 @@ import { socialMediaLink } from "../Redux/action";
 
 const SocialMedia = () => {
     const [textInput, setTextInput] = useState({
-        linkedin:'',
-        github:'',
-        twitter:''
+        linkedin: '',
+        github: '',
+        twitter: ''
     })
     const [showHobbies, setShowHobbies] = useState(false)
     const [showKeySkills, setShowKeySkills] = useState(false)
@@ -16,64 +16,58 @@ const SocialMedia = () => {
     const dispatch = useDispatch()
 
     const handleChange = (e) => {
-        const {name,value} = e.target
-        setTextInput((prev) =>({
+        const { name, value } = e.target
+        setTextInput((prev) => ({
             ...prev,
-            [name]:value
+            [name]: value
         }))
     }
-
-    // const handleDelete = (index) => {
-
-    //     setTextInput((prev) => {
-    //         return prev.filter((_, i) => i !== index)
-    //     })
-    // }
-
-    // const handleAddmore = () => {
-    //     setTextInput([...textInput, { social_1: '' }])
-    // }
 
     const handleClickBack = () => {
         setShowHobbies(true)
         setShowKeySkills(false)
         setShowSocialMedia(false)
     }
+
     const handleClickNext = () => {
         setShowHobbies(false)
         setShowKeySkills(true)
         setShowSocialMedia(false)
         dispatch(socialMediaLink(textInput))
     }
-    const handleSubmit = (e) =>{
+
+    const handleSubmit = (e) => {
         e.preventDefault()
         dispatch(socialMediaLink(textInput))
     }
+
     return (
-        <form onSubmit={handleSubmit}>
+        <form onSubmit={handleSubmit} style={{ height: '600px' }} className="ms-3">
             {showSocialMedia && (
-                <div>
-                    <div>
+                <div className=" " style={{ height: '100%' }}>
+                    <div className=" ">
+                        
                             <input type="text" className="input" name='linkedin' placeholder="LinkedIn Profile Link" onChange={handleChange} value={textInput.linkedin} />
-                            <input type="text" className="input" name='github' placeholder="git hub link" onChange={handleChange} value={textInput.github} />
-                            <input type="text" className="input" name='twitter' placeholder="twitter link" onChange={handleChange} value={textInput.twitter} />
-                        </div>
-                    
+                           <input type="text" className="input" name='github' placeholder="GitHub link" onChange={handleChange} value={textInput.github} />
+                        <input type="text" className="input" name='twitter' placeholder="Twitter link" onChange={handleChange} value={textInput.twitter} />
 
-                    <div>
+                        
                     </div>
-                    <div className="d-flex justify-content-between">
+                    <hr className="mb-5"/>
+                    <div className="d-flex justify-content-between" style={{  }}>
                         <button className="" onClick={handleClickBack}>
-                            <span class="text">BACK</span>
+                            <span className="text">BACK</span>
                         </button>
-                        <button onClick={handleClickNext} type="submit"><span className="text">NEXT</span></button>
-
+                        <button onClick={handleClickNext} type="submit">
+                            <span className="text">NEXT</span>
+                        </button>
                     </div>
                 </div>
             )}
-            {showHobbies && (<Hobbies/>)}
-            {showKeySkills && (<KeySkills/>)}
+            {showHobbies && (<Hobbies />)}
+            {showKeySkills && (<KeySkills />)}
         </form>
     )
 }
-export default SocialMedia
+
+export default SocialMedia;

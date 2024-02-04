@@ -148,7 +148,7 @@ const PersonalInfo = () => {
             )}
             {showWorkExperience && (<WorkExperience />)}
             {/* Add other components based on your flow */}
-            <TemplatePage />
+            
         </form>
     );
 };

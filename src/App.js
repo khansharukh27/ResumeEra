@@ -59,9 +59,9 @@ function App() {
     AOS.init()
   }, [])
   return (
-    <Router style={{ backgroundColor: 'wheat' }}>
+    <Router style={{ backgroundColor: 'white',width:'100%' }}>
       <Navbar />
-      <Routes>
+      <Routes style={{ width:'100%' }}>
         <Route path='/' exact element={<TemplatePage images={images} />} />
         {images.map((image) => (
           <Route
@@ -83,7 +83,7 @@ function App() {
         <Route path='/preview8' element={<Preview8/>}/>
         <Route path='/preview9' element={<Preview9/>}/>
         <Route path='/preview10' element={<Preview10/>}/>
-        <Route path='/preview11' element={<Preview11/>}/>
+        <Route path='/preview11' element={<Preview11 />}/>
         <Route path='/preview12' element={<Preview12/>}/>
         <Route path='/preview13' element={<Preview13/>}/>
         <Route path='/preview14' element={<Preview14/>}/>
