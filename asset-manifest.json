@@ -1,24 +1,32 @@
 {
   "files": {
-    "main.css": "/ResumeEra/static/css/main.0e2b3fa5.css",
-    "main.js": "/ResumeEra/static/js/main.d78e3a3b.js",
+    "main.css": "/ResumeEra/static/css/main.7aee3aee.css",
+    "main.js": "/ResumeEra/static/js/main.ca956a6e.js",
     "static/js/703.4a01edae.chunk.js": "/ResumeEra/static/js/703.4a01edae.chunk.js",
     "static/js/198.0a58cd68.chunk.js": "/ResumeEra/static/js/198.0a58cd68.chunk.js",
     "static/js/787.d4aba7ab.chunk.js": "/ResumeEra/static/js/787.d4aba7ab.chunk.js",
-    "static/media/resume6.jpg": "/ResumeEra/static/media/resume6.a54521d1e93c0621e260.jpg",
-    "static/media/resume7.jpg": "/ResumeEra/static/media/resume7.37aac664bce5e95dd833.jpg",
-    "static/media/resume8.jpg": "/ResumeEra/static/media/resume8.dae9ef24851abcd70cb4.jpg",
+    "static/media/resume8.png": "/ResumeEra/static/media/resume8.1998a338e00571c2ef82.png",
+    "static/media/resume4.jpg": "/ResumeEra/static/media/resume4.a54521d1e93c0621e260.jpg",
+    "static/media/resume5.jpg": "/ResumeEra/static/media/resume5.37aac664bce5e95dd833.jpg",
+    "static/media/resume7.png": "/ResumeEra/static/media/resume7.c3c4e07a792a5202875b.png",
+    "static/media/resume14.png": "/ResumeEra/static/media/resume14.446c01ad4a3b9db73783.png",
+    "static/media/resume10.png": "/ResumeEra/static/media/resume10.3bf3a9193bb264926388.png",
+    "static/media/resume6.jpg": "/ResumeEra/static/media/resume6.dae9ef24851abcd70cb4.jpg",
+    "static/media/resume11.png": "/ResumeEra/static/media/resume11.db19128b1b6c0a94d25c.png",
+    "static/media/resume12.png": "/ResumeEra/static/media/resume12.c9332e1b1774f1ea381e.png",
+    "static/media/resume13.png": "/ResumeEra/static/media/resume13.3fd11f76710c3e5a9416.png",
+    "static/media/resume9.png": "/ResumeEra/static/media/resume9.dca15fc77f1dc30650b8.png",
     "static/media/resum1.jpg": "/ResumeEra/static/media/resum1.4accf80c2cd978d320a7.jpg",
     "static/media/resume2.jpg": "/ResumeEra/static/media/resume2.837f1305c91f037d1be0.jpg",
     "index.html": "/ResumeEra/index.html",
-    "main.0e2b3fa5.css.map": "/ResumeEra/static/css/main.0e2b3fa5.css.map",
-    "main.d78e3a3b.js.map": "/ResumeEra/static/js/main.d78e3a3b.js.map",
+    "main.7aee3aee.css.map": "/ResumeEra/static/css/main.7aee3aee.css.map",
+    "main.ca956a6e.js.map": "/ResumeEra/static/js/main.ca956a6e.js.map",
     "703.4a01edae.chunk.js.map": "/ResumeEra/static/js/703.4a01edae.chunk.js.map",
     "198.0a58cd68.chunk.js.map": "/ResumeEra/static/js/198.0a58cd68.chunk.js.map",
     "787.d4aba7ab.chunk.js.map": "/ResumeEra/static/js/787.d4aba7ab.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.0e2b3fa5.css",
-    "static/js/main.d78e3a3b.js"
+    "static/css/main.7aee3aee.css",
+    "static/js/main.ca956a6e.js"
   ]
 }
