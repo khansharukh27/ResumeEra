@@ -6,7 +6,7 @@ ResumeEra is a web application that allows users to create and customize their r
 ## Pages
 
 ## How To Open WebPage
-![Example Image](images/example.png)[ Resume Era](https://resumeera.xyz)
+![Example Image](C:\Users\shahr\Pictures\Screenshots\Screenshot62)[ Resume Era](https://resumeera.xyz)
 when u click this link u redirect in my webPage Resume Era
 
 ### Template Page
