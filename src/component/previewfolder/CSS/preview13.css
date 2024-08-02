@@ -1,0 +1,10 @@
+@media screen and (max-width: 650px){
+    .main13{
+        width: 650px;
+    }
+}
+@media screen and(min-width:650px) and (max-width:1366px) {
+    .main13{
+        width: 1366px;
+    }
+}
