@@ -1,0 +1,26 @@
+.templatemain {
+    background: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d, #f8ffae);
+    height: 100%;
+    padding: 20px;
+    width: 100%;
+}
+h1 small {
+    background: linear-gradient(90deg, orange, yellow, green, rgb(149, 118, 172), rgb(219, 25, 219));
+    -webkit-background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+    white-space: nowrap;
+    padding-right: 15px;
+    margin-bottom: 10px;
+    text-shadow: 
+    2px 2px 0 rgba(0, 0, 0, 1),   /* Layer 1: Darker base shadow */
+    10px 10px 1px rgba(2, 2, 2, 0.2);   /* Layer 2: Lighter shadow for depth */
+}
+
+@media only screen and (max-width:320px) {
+    .templatemain {
+        background: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d, #f8ffae);
+        height: 100%;
+        width: 320px;
+    }
+}
