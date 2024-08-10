@@ -7,7 +7,7 @@ import KeySkills from "./KeySkill";
 import Language from "./Language";
 import Hobbies from "./Hobbies";
 import SocialMedia from "./SocialMedia";
-import '../component/previewfolder/CSS/mainpage.css'
+import '../css/mainpage.css'
 
 const MainPage = (props) => {
     const [showPersonalInfo, setShowPersonalInfo] = useState(true);
@@ -93,19 +93,8 @@ const MainPage = (props) => {
     };
 
     return (
-        <div className=" d-sm-flex justify-content-around border mainpage">
-            <div className='card me-2' style={{height:'80%'}}>
-                <div><Link to={`/${path}/personalinfo`} style={{ textDecoration: 'none',color:'white' }} onClick={handleClick}>Personal info</Link></div>
-                <div><Link to={`/${path}/workexperience`} style={{ textDecoration: 'none',color:'white' }} onClick={handleClick} >Work Experience</Link></div>
-                <div><Link to={`/${path}/education`} style={{ textDecoration: 'none',color:'white' }} onClick={handleClick}>Education</Link></div>
-                <div><Link to={`/${path}/language`} style={{ textDecoration: 'none',color:'white' }} onClick={handleClick}>language</Link></div>
-                <div><Link to={`/${path}/hobbies`} style={{ textDecoration: 'none',color:'white' }} onClick={handleClick}>Hobbies</Link></div>
-                <div><Link to={`/${path}/socialmedia`} style={{ textDecoration: 'none',color:'white' }} onClick={handleClick} >Social Media Link</Link></div>
-                <div><Link to={`/${path}/keyskills`} style={{ textDecoration: 'none',color:'white' }} onClick={handleClick} >Key Skills</Link></div>
-                
-                
-            </div>
-            <div className=" mt-2 ms-5" data-aos="flip-left" data-aos-duration="2000">
+           
+            <div className=" mt-2 mainpage" data-aos="flip-left" data-aos-duration="2000">
             
                 {showPersonalInfo && <PersonalInfo />}
                 {showWorkExperience && <WorkExperience />}
@@ -116,7 +105,6 @@ const MainPage = (props) => {
                 {showSocialMedia && (<SocialMedia/>)}
 
             </div>
-        </div>
     )
 }
 export default MainPage;

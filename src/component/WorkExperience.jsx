@@ -63,13 +63,19 @@ const WorkExperience = () => {
   }
 
   return (
-    <form onSubmit={handleSubmit} style={{height:'600px'}}>
+    <form onSubmit={handleSubmit} style={{}}>
       {showWorkExperience && (
-        <div>
-          
+        <div className="">
+          <div className="profetional-detail">
+            <h1 className="multicolor-heading">Your Work Experience</h1>
+            <p>Work experience is a crucial component of a resume as it provides tangible 
+              evidence of a candidate's skills, abilities, and accomplishments. It offers 
+              potential employers a clear understanding of a candidate's professional journey, 
+              including the roles they've held, responsibilities undertaken, and results achieved.</p>
+          </div>
           {workExperiences.map((experience, index) => (
             <div key={index}>
-                <h1 style={{color:'white'}}>Work Experience {index+1}</h1>
+                <h1 style={{color:'white',textAlign:'center'}}>Work Experience {index+1}</h1>
           <hr />
               <div className="d-sm-flex one">
                 <input className="input mb-2" onChange={(e) => handleChange(e, index)} type="text" placeholder='Job Title' name="jobtitle" value={experience.jobtitle} />
@@ -79,23 +85,28 @@ const WorkExperience = () => {
                 <input type="text" className="input mb-2" onChange={(e) => handleChange(e, index)} placeholder="Start Year" name="startYear" value={experience.startYear} />
                 <input type="text" className="input mb-2" onChange={(e) => handleChange(e, index)} placeholder="End Year" name="endYear" value={experience.endYear} />
               </div>
-              <div>
-                <textarea type='text'  className="input mb-2" onChange={(e) => handleChange(e, index)} placeholder="about work" name="aboutexperience" id="" cols="200" rows="5" value={experience.aboutexperience}></textarea>
+              <div className="second">
+                <textarea type='text'  className="textarea mb-2" onChange={(e) => handleChange(e, index)} placeholder="about work" name="aboutexperience" id="" cols="200" rows="5" value={experience.aboutexperience}></textarea>
               </div>
-              <button type="button" class=" m-2" onClick={()=>handleDelete(index)}><span class="text">DELETE</span></button>
+              <div className="d-flex justify-content-center m-2">
+              <button className="button1" type="button" onClick={()=>handleDelete(index)}>
+                <span className="text">DELETE</span>
+                </button>
+              </div>
+              
               <hr className="m-2" />
             </div>
           ))}
           <div className="d-flex justify-content-center m-2">
-            <button className="" type="button" onClick={handleAddMore}>
+            <button className="button1" type="button" onClick={handleAddMore}>
             <span class="text">ADD MORE</span>
             </button>
           </div>
-          <div className="d-flex justify-content-between">
-            <button className="" onClick={handleClickBack}>
+          <div className="d-flex justify-content-around">
+            <button onClick={handleClickBack} className="button1">
             <span class="text">BACK</span>
             </button>
-            <button onClick={handleClickNext} type="submit"><span className="text">NEXT</span></button>
+            <button onClick={handleClickNext} type="submit" className="button1"><span className="text">NEXT</span></button>
 
           </div>
         </div>

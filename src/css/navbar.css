@@ -1,0 +1,101 @@
+/* Container for the navbar */
+.navbar-container {
+    /* border: 1px solid #ccc; */
+    width: 100%;
+}
+
+/* Content of the navbar with flexbox for layout */
+.navbar-content {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    background-image: linear-gradient(145deg, #1f2c40, #3b4a5e, #4d5f73, #283448, #101b29);
+    padding: 10px 20px; /* Added padding for spacing */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); /* Added shadow for depth */
+    /* border-radius: 8px; Optional: Rounds the corners of the navbar */
+
+}
+
+/* Branding section of the navbar */
+.navbar-brand {
+    margin-left: 1rem;
+}
+
+/* Brand link styling */
+.navbar-link-brand {
+    text-decoration: none;
+    color: black;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/* Container for the links in the navbar */
+.navbar-links {
+    display: flex;
+    margin-top: 1rem;
+    margin-right: 1rem;
+    color: #e0e0e0; /* Light gray text for better readability */
+
+    background: linear-gradient(145deg, #2b2e4a, #4b4e69, #2c3e50, #0d1f2d); /* Dark multicolor gradient */
+    padding: 10px 20px; /* Adds space around the links */
+    border-radius: 8px; /* Softens the edges */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5); /* Adds a shadow for depth */
+
+    transition: background 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Smooth transition for hover effects */
+}
+
+.navbar-links:hover {
+    background: linear-gradient(145deg, #1a1c35, #303554, #1c2b3a, #091a2d); /* Darker gradient on hover */
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.7); /* Enhance shadow on hover */
+}
+
+
+/* Individual link styling */
+.navbar-link {
+    margin: 0 0.5rem;
+    text-decoration: none;
+    color: black;
+}
+
+@media only screen and (max-width:320px) {
+.navbar-container {
+    border: 1px solid #ccc;
+    width: 320px;
+}
+
+/* Content of the navbar with flexbox for layout */
+.navbar-content {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+/* Branding section of the navbar */
+.navbar-brand {
+    margin-left: 1rem;
+}
+
+/* Brand link styling */
+.navbar-link-brand {
+    text-decoration: none;
+    color: black;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/* Container for the links in the navbar */
+.navbar-links {
+    display: flex;
+    margin-top: 1rem;
+    margin-right: 1rem;
+    color: black;
+}
+
+/* Individual link styling */
+.navbar-link {
+    margin: 0 0.5rem;
+    text-decoration: none;
+    color: black;
+}
+
+}

@@ -1,26 +1,197 @@
-.templatemain {
-    background: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d, #f8ffae);
-    height: 100%;
-    padding: 20px;
-    width: 100%;
+/* CTA Button in Hero Section */
+.template-page-container{
+    margin-left: 0;
+    margin-right: 0;
+    padding: 20px; /* Optional: Adds some space inside the container */
+
+    background: linear-gradient(145deg, #0c0c0c, #1a1a1a, #262626); /* Dark gradient background */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.7), /* Outer shadow for depth */
+                inset 0 0 50px rgba(0, 0, 0, 0.8); /* Inner shadow for a darker, enclosed feel */
+    /* border-radius: 8px; Optional: Rounds the corners */
+    
+    filter: contrast(85%) brightness(75%); /* Reduces brightness and increases contrast for a moody look */
+    color: #e0e0e0; /* Light gray text color for readability */
 }
-h1 small {
-    background: linear-gradient(90deg, orange, yellow, green, rgb(149, 118, 172), rgb(219, 25, 219));
-    -webkit-background-clip: text;
-    color: transparent;
-    -webkit-text-fill-color: transparent;
-    white-space: nowrap;
-    padding-right: 15px;
-    margin-bottom: 10px;
-    text-shadow: 
-    2px 2px 0 rgba(0, 0, 0, 1),   /* Layer 1: Darker base shadow */
-    10px 10px 1px rgba(2, 2, 2, 0.2);   /* Layer 2: Lighter shadow for depth */
+.cta-button {
+    padding: 12px 35px;
+    background-image: linear-gradient(135deg, #f093fb, #f5576c);
+    border: none;
+    border-radius: 50px; /* Fully rounded edges */
+    color: white;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background 0.4s ease, transform 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
 }
 
-@media only screen and (max-width:320px) {
-    .templatemain {
-        background: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d, #f8ffae);
-        height: 100%;
-        width: 320px;
+.cta-button:hover {
+    background-image: linear-gradient(135deg, #f5576c, #f093fb); /* Reverse gradient on hover */
+    transform: translateY(-3px); /* Lift the button slightly on hover */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3); /* Increase shadow depth on hover */
+}
+
+/* Template Link Button in Template Grid */
+.template-link {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-image: linear-gradient(135deg, #ffafbd, #ffc3a0);
+    border: none;
+    padding: 12px 25px;
+    color: white;
+    text-decoration: none;/* Main container styling */
+    .template-page-container {
+        font-family: 'Arial', sans-serif;
+        color: #333;
     }
+    
+    /* Hero Section */
+    .hero-banner {
+        background-image: linear-gradient(to right, #1c1c1c, #343434);
+        color: white;
+        text-align: center;
+        padding: 80px 20px;
+        margin-bottom: 40px;
+    }
+    
+    .hero-title {
+        font-size: 3rem;
+        margin-bottom: 20px;
+    }
+    
+    .hero-description {
+        font-size: 1.2rem;
+        margin-bottom: 30px;
+    }
+    
+    .cta-button {
+        padding: 12px 35px;
+        background-image: linear-gradient(135deg, #f093fb, #f5576c);
+        border: none;
+        border-radius: 50px;
+        color: white;
+        font-size: 1.1rem;
+        cursor: pointer;
+        transition: background 0.4s ease, transform 0.3s ease;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    }
+    
+    .cta-button:hover {
+        background-image: linear-gradient(135deg, #f5576c, #f093fb);
+        transform: translateY(-3px);
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+    }
+    
+    /* Template Grid */
+    .template-grid-container {
+        padding: 20px;
+    }
+    
+    .template-grid-title {
+        text-align: center;
+        font-size: 2.5rem;
+        margin-bottom: 20px;
+    }
+    
+    .template-grid-description {
+        text-align: center;
+        font-size: 1.1rem;
+        margin-bottom: 40px;
+        color: #666;
+    }
+    
+    .template-grid-divider {
+        margin-top: 20px;
+    }
+    
+    .template-card {
+        position: relative;
+        margin-bottom: 30px;
+    }
+    
+    .template-image {
+        width: 100%;
+        border-radius: 8px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    
+    .template-card:hover .template-image {
+        transform: scale(1.05);
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
+    }
+    
+    .template-link {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-image: linear-gradient(135deg, #ffafbd, #ffc3a0);
+        border: none;
+        padding: 12px 25px;
+        color: white;
+        text-decoration: none;
+        border-radius: 50px;
+        font-size: 1.1rem;
+        opacity: 0;
+        transition: opacity 0.3s ease, transform 0.3s ease, background 0.4s ease;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+    }
+    
+    .template-card:hover .template-link {
+        opacity: 1;
+        background-image: linear-gradient(135deg, #ffc3a0, #ffafbd);
+        transform: translate(-50%, -50%) scale(1.05);
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+    }
+    
+    /* Footer */
+    .footer-section {
+        text-align: center;
+        padding: 20px;
+        background-color: #1c1c1c;
+        color: white;
+        margin-top: 40px;
+    }
+    
+    border-radius: 50px; /* Fully rounded edges */
+    font-size: 1.1rem;
+    opacity: 0;
+    transition: opacity 0.3s ease, transform 0.3s ease, background 0.4s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+}
+
+.template-link:hover {
+    opacity: 1; /* Fade in the button on hover */
+    background-image: linear-gradient(135deg, #ffc3a0, #ffafbd); /* Reverse gradient on hover */
+    transform: translate(-50%, -50%) scale(1.05); /* Slightly enlarge the button on hover */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3); /* Increase shadow depth on hover */
+}
+/* Template Box */
+.template-box {
+    position: relative;
+    border: 2px solid #ddd;
+    border-radius: 10px; /* Rounded corners */
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 200px; /* Increased height for better display */
+    width: 50%; /* Full width within its container */
+    max-width: 300px; /* Maximum width */
+    margin: 0 auto; /* Center horizontally */
+}
+
+.template-box:hover {
+    transform: scale(1.05); /* Slightly enlarge the box on hover */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3); /* Increase shadow depth on hover */
+}
+
+.template-image {
+    width: 90%;
+    height: 90%;
+    object-fit: cover; /* Cover the entire box */
+    border-radius: 10px; /* Match box corners */
+    /* margin: 20px; */
+    border: 1px solid greenyellow;
 }

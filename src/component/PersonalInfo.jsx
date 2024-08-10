@@ -4,7 +4,7 @@ import { personalInfoData } from "../Redux/action";
 import WorkExperience from "./WorkExperience";
 import { useNavigate } from "react-router-dom";
 import TemplatePage from "./TemplatePage";
-
+import '../css/personalinfo.css'
 const PersonalInfo = () => {
     const [selectImage, setSelectImage] = useState(null);
     const [showPersonalInfo, setShowPersonalInfo] = useState(true);
@@ -77,19 +77,25 @@ const PersonalInfo = () => {
         <form onSubmit={handleSubmit}>
             {showPersonalInfo && (
                 <div>
-                    <div style={{ position: 'relative' }}>
+                    <div className="profetional-detail">
+                        <h1 className="multicolor-heading">Your Profetional detail</h1>
+                        <p>Personal information in a resume serves as the foundational layer that helps 
+                            employers connect with you on a basic level. It includes essential details 
+                            like your name, contact information, and sometimes a brief profile summary. 
+                            This information ensures that potential employers can reach out to you easily 
+                            for interviews and further communication. It also gives them a first impression 
+                            of who you are beyond your professional qualifications. Including accurate and 
+                            updated personal information is crucial because it reflects your attention to 
+                            detail and professionalism, making your resume complete and effective in the 
+                            hiring process.</p>
+                    </div>
+                    <div className="personal-profile">
                         <input
                             type="file"
                             id="image"
                             name="image"
+                            className="profile-input"
                             onChange={handleImageChange}
-                            style={{
-                                position: 'relative',
-                                height: '100px',
-                                width: '100px',
-                                borderRadius: '50%',
-                                border: '1px solid grey'
-                            }}
                         />
                         {selectImage && (
                             <img
@@ -97,14 +103,7 @@ const PersonalInfo = () => {
                                 src={URL.createObjectURL(selectImage)}
                                 alt="selected"
                                 name="image1"
-                                style={{
-                                    height: "100px",
-                                    width: "100px",
-                                    borderRadius: '50%',
-                                    position: 'absolute',
-                                    left: '0px',
-                                    cursor: 'pointer'
-                                }}
+                                className="profile-img"
                             />
                         )}
                     </div>
@@ -137,12 +136,12 @@ const PersonalInfo = () => {
 
                         </div>
                     </div>
-                    <div className="d-sm-flex justify-content-between m-2">
-                        <button onClick={handleClickBack}>
+                    <div className="d-sm-flex justify-content-around m-2 ">
+                        <button onClick={handleClickBack} className="button1">
                             <span class="text">BACK</span>
                         </button>
                         
-                        <button onClick={handleClickNext} type="submit"><span className="text">NEXT</span></button>
+                        <button onClick={handleClickNext} type="submit" className="button1"><span className="text">NEXT</span></button>
                     </div>
                 </div>
             )}

@@ -1,0 +1,25 @@
+.mainpage {
+  width: 100%; /* Ensure full width */
+  height: 100%; /* Set height to viewport height minus header/navigation */
+  /* margin: 0; */
+  /* padding: 20px; Adjust padding as needed */
+
+  /* Background gradient and shadows */
+  background: linear-gradient(145deg, #0c0c0c, #1a1a1a, #262626);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.7),
+              inset 0 0 50px rgba(0, 0, 0, 0.8);
+
+  /* Optional: Rounded corners */
+  /* border-radius: 8px; */
+
+  /* Adjust text color and contrast for readability */
+  color: #e0e0e0;
+  filter: contrast(85%) brightness(75%); /* Adjust these values if needed */
+
+  /* Optional: Animation library integration (replace with your library if needed) */
+  /* animation: fadeIn 2s ease-in-out; */
+  /* @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  } */
+}

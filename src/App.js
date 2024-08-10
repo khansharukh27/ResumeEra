@@ -4,7 +4,7 @@ import 'aos/dist/aos.css';
 import './App.css';
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
-import Navbar from './component/navbar/Navbar';
+import Navbar from '../src/component/Navbar';
 import TemplatePage from './component/TemplatePage';
 import MainPage from './component/MainPage';
 import resum1 from './image/resum1.jpg'
@@ -37,6 +37,7 @@ import Preview11 from './component/previewfolder/Preview11';
 import Preview12 from './component/previewfolder/Preview12';
 import Preview13 from './component/previewfolder/Preview13';
 import Preview14 from './component/previewfolder/Preview14';
+import Home from './component/Home';
 
 
 
@@ -62,7 +63,8 @@ function App() {
     <Router style={{ backgroundColor: 'white',width:'100%' }}>
       <Navbar />
       <Routes style={{ width:'100%' }}>
-        <Route path='/' exact element={<TemplatePage images={images} />} />
+        <Route path='/' element={<Home images = {images}/>}/>
+        <Route path='/template' exact element={<TemplatePage images={images} />} />
         {images.map((image) => (
           <Route
             key={image.id}
@@ -71,7 +73,7 @@ function App() {
           />
         ))}
         
-        <Route path='/ResumeEra' element={<ResumeEra/>}/>
+        {/* <Route path='/ResumeEra' element={<ResumeEra/>}/> */}
         <Route path='/myresume' element={<MyResume />} />
         <Route path='/preview' element={<Preview />} />
         <Route path='/preview2' element={<Preview2 />} />
@@ -87,10 +89,6 @@ function App() {
         <Route path='/preview12' element={<Preview12/>}/>
         <Route path='/preview13' element={<Preview13/>}/>
         <Route path='/preview14' element={<Preview14/>}/>
-
-
-        
-
       </Routes>
     </Router>
 

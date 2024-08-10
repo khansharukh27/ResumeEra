@@ -79,35 +79,58 @@ const KeySkills = (props) => {
         });
     };
 
+    const handleDelete = (index) => {
+        setInputFields(prev => prev.filter((_, i) => i !== index))
+    }
+
     return (
-        <form onSubmit={handleSubmit} style={{ height: '600px', display: 'flex', flexDirection: 'column' }}>
+        <form onSubmit={handleSubmit} style={{ height: '100%', display: 'flex', flexDirection: 'column' }}>
             {showKeySkills && (
-                <div style={{ flex: 1 }}>
-                                <div style={{color:'white'}}><h1>KEY SKILLS</h1></div>
+                <div>
+                    <div className="profetional-detail">
+                        <h1 className="multicolor-heading">KEY SKILLS</h1>
+                        <p>
+                            Including key skills in a resume is essential because it quickly
+                            communicates your core competencies and expertise to potential employers.
+                            This section helps highlight the specific abilities that are most relevant to the
+                            job you're applying for, making it easier for hiring managers to see why you're a
+                            strong fit for the role. Key skills can include both technical abilities, like
+                            proficiency in software or coding languages, and soft skills, like leadership,
+                            communication, or problem-solving. By listing your key skills, you provide a
+                            snapshot of your qualifications, helping to set you apart from other candidates and
+                            ensuring that your resume passes through initial screening processes.
+                        </p>
+                    </div>
 
                     {inputFields.map((field, index) => (
-                        <div key={index}>
-                            <input
-                                type="text"
-                                className="input"
-                                name='keyskills'
-                                placeholder="key skills"
-                                value={field.keyskills}
-                                onChange={(e) => handleInputChange(e, index)}
-                            />
+                        <div key={index} style={{display:'flex',justifyContent:'center',alignItems:'center'}}>
+                            <div>
+                                <input
+                                    type="text"
+                                    className="input"
+                                    name='keyskills'
+                                    placeholder="key skills"
+                                    value={field.keyskills}
+                                    onChange={(e) => handleInputChange(e, index)}
+                                />
+                            </div>
+                            <div >
+                                <button className="button1 ms-2 mt-2" onClick={() => handleDelete(index)}><span>Delete</span></button>
+                            </div>
+
                         </div>
                     ))}
-                    <div class>
-                        <button type="button" className="text-center mt-2" onClick={handleAddMore}>
+                    <div style={{display:'flex',justifyContent:'center',alignItems:'center'}}>
+                        <button type="button" className="button1 mt-2" onClick={handleAddMore} >
                             <span class="text">ADD MORE</span>
                         </button>
                     </div>
                     <hr className="m-2" />
                     <div style={{ flex: 1, display: 'flex', justifyContent: 'space-between' }}>
-                        <button onClick={handleClickBack} type="button">
+                        <button className="button1" onClick={handleClickBack} type="button">
                             <span class="text">BACK</span>
                         </button>
-                        <button onClick={handleClickNext} type="submit"><span className="text">NEXT</span></button>
+                        <button className="button1" onClick={handleClickNext} type="submit"><span className="text">NEXT</span></button>
 
                     </div>
                 </div>

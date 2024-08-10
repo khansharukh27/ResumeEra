@@ -62,42 +62,60 @@ const Education = ({images}) => {
         })
     }
     return (
-        <form onSubmit={handleSubmit} style={{height:'600px'}}>
+        <form onSubmit={handleSubmit} style={{}}>
             {showEducation && (
 
                 <div>
+                    <div className="profetional-detail">
+                        <h1 className="multicolor-heading">Your Education Detail</h1>
+                        <p>
+                        Including education details in a resume is essential because 
+                        it highlights your academic background and qualifications. 
+                        This section helps employers understand the formal training or 
+                        knowledge you've acquired in a specific field, which may be relevant 
+                        to the job role you're applying for. It showcases your skills, 
+                        expertise, and potential, making you stand out from other candidates. 
+                        For recent graduates, education details are a key way to demonstrate 
+                        their achievements, especially when professional experience is limited. 
+                        Therefore, including education details in your resume strengthens your 
+                        overall profile and enhances your credibility in the eyes of hiring 
+                        managers.
+                        </p>
+                    </div>
                     {education.map((edu, index) => (
                         <div key={index}>
-                            <h1 style={{color:'white'}}>Education {index+1}</h1>
+                            <h1 style={{color:'white',textAlign:'center'}}>Education {index+1}</h1>
                             <hr className="m-3" />
-                            <select class="form-select input bg-dark "  onChange={(e) => handleChange(e, index)} aria-label="Default select example" name="type" value={edu.type} >
+                            <div className="one" style={{display:"flex",justifyContent:'center',textAlign:'center'}}>
+                            <select class=" input " style={{color:'black'}}  onChange={(e) => handleChange(e, index)} aria-label="Default select example" name="type" value={edu.type} >
                                 <option defaultValue='B.sc'>Education Type</option>
                                 <option value="B.sc">B.sc</option>
                                 <option value="Post Graduate">Post Graduate</option>
                                 <option value="another">another</option>
                             </select>
-                            <div className="d-sm-flex justify-content-between">
+                            </div>
+                            
+                            <div className="d-sm-flex justify-content-around one">
                                 <input className="input m-2" onChange={(e) => handleChange(e, index)} type="text" placeholder="Univercity" name="univercity" value={edu.univercity} />
                                 <input className="input m-2" onChange={(e) => handleChange(e, index)} type="text" placeholder="Degree" name="degree" value={edu.degree} />
                             </div>
-                            <div>
+                            <div className="d-sm-flex justify-content-around one">
                                 <input className='input m-2' onChange={(e) => handleChange(e, index)} type="text" placeholder="startYear" name="startYear" value={edu.startYear} />
                                 <input className="input m-2" onChange={(e) => handleChange(e, index)} type="text" placeholder="endYear" name="endYear" value={edu.endYear} />
                             </div>
-                            <div className="d-flex justify-content-between">
-                                <button type="button" className=" m-2" onClick={()=>handleDelete(index)}><span class="text">delete</span></button>
+                            <div className="d-flex justify-content-between one ">
+                                <button className="button1 m-2" type="button" onClick={()=>handleDelete(index)}><span class="text">delete</span></button>
                             </div>
-
                         </div>
 
                     ))}
                     <hr />
                     <div className="d-flex justify-content-center m-2">
-                        <button  type="button" onClick={handleAddMore}><span class="text">ADD MORE</span></button>
+                        <button className="button1"  type="button" onClick={handleAddMore}><span class="text">ADD MORE</span></button>
                     </div>
-                    <div className='d-flex justify-content-between m-2'>
-                        <button onClick={handleClickBack} type="button" ><span class="text">BACK</span></button>
-                        <button onClick={handleClickNext} type="submit"><span className="text">NEXT</span></button>
+                    <div className='d-flex justify-content-around m-2'>
+                        <button className="button1" onClick={handleClickBack} type="button" ><span class="text">BACK</span></button>
+                        <button className="button1" onClick={handleClickNext} type="submit"><span className="text">NEXT</span></button>
                     </div>
                 </div>
 

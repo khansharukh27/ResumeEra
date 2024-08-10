@@ -1,80 +1,77 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-// import MainPage from './MainPage';
 import { useDispatch } from 'react-redux';
 import { templatePage } from '../Redux/action';
+import '../css/templates.css';
 
 const TemplatePage = (props) => {
-    const { images} = props;
+    const { images } = props;
     const [hoveredImage, setHoveredImage] = useState(null);
-    // const [showMainPage, setShowMainPage] = useState(false);
-    const dispatch = useDispatch()
-    // const path = `/mainpage/${hoveredImage}`
-    // console.log('path in template:=',path)
-    
-    const history = useNavigate();
-    const handleClick = (e) => {
-        e.preventDefault()
-        if (hoveredImage !== null) {
-            const path = `/mainpage/${hoveredImage}`
+    const dispatch = useDispatch();
+    const navigate = useNavigate();
 
-            history(`${path}`);
-            dispatch(templatePage(hoveredImage))
-            // setShowMainPage(true);
+    const handleClick = (e) => {
+        e.preventDefault();
+        if (hoveredImage !== null) {
+            const path = `/mainpage/${hoveredImage}`;
+            navigate(path);
+            dispatch(templatePage(hoveredImage));
         }
     };
 
     return (
-        <div>
-    <div>
-        <h1>Template</h1>
-        <p>Select a template to get started </p>
-        <hr />
-    </div>
+        <div className='template-page-container'>
+            {/* Hero Section */}
+            <section className='hero-banner'>
+                <h1 className='hero-title'>Create Your Perfect Resume</h1>
+                <p className='hero-description'>
+                    Choose a template and customize it to stand out from the crowd. Start your career journey with a professional resume.
+                </p>
+                <button className='cta-button'>Get Started</button>
+            </section>
 
-    <div className="row m-3">
-        {images &&
-            images.map((image) => (
-                <div
-                    data-aos="flip-left"
-                    data-aos-duration="2000s"
-                    key={image.id}
-                    className="col-12 col-md-6 col-lg-4 boximage m-3"
-                    style={{ position: 'relative' }}
-                    onMouseEnter={() => setHoveredImage(image.id)}
-                    onMouseLeave={() => setHoveredImage(null)}
-                >
-                    <img
-                        className="image border m-3"
-                        src={image.src}
-                        alt={image.alt}
-                        style={{}}
-                    />
-                    {hoveredImage === image.id && (
-                        <a
-                            href={`/mainpage/${hoveredImage}`}
-                            onClick={handleClick}
-                            style={{
-                                border: '1px solid grey',
-                                borderRadius: '8px',
-                                color: 'white',
-                                padding: '5px',
-                                textDecoration: 'none',
-                                backgroundImage:
-                                    'linear-gradient(144deg,#AF40FF, #5B42F3 50%,#00DDEB)',
-                                position: 'absolute',
-                                top: '50%',
-                                left: '20px',
-                            }}
+            {/* Template Grid */}
+            <section className="template-grid-container container">
+                <h2 className="template-grid-title">Select a Template</h2>
+                <p className="template-grid-description">
+                    Browse our collection of professional resume templates and find the one that suits your needs.
+                </p>
+                <hr className="template-grid-divider" />
+                <div className="template-grid row m-3">
+                    {images && images.map((image) => (
+                        <div
+                            data-aos="flip-left"
+                            data-aos-duration="1000"
+                            key={image.id}
+                            className="template-card col-12 col-md-6 col-lg-4"
+                            onMouseEnter={() => setHoveredImage(image.id)}
+                            onMouseLeave={() => setHoveredImage(null)}
                         >
-                            Go Your Resume
-                        </a>
-                    )}
+                            <img
+                                className="template-image"
+                                src={image.src}
+                                alt={image.alt}
+                            />
+                            {hoveredImage === image.id && (
+                                <a
+                                    href={`/mainpage/${hoveredImage}`}
+                                    onClick={handleClick}
+                                    className="template-link"
+                                >
+                                    Go To Your Resume
+                                </a>
+                            )}
+                        </div>
+                    ))}
                 </div>
-            ))}
-    </div>
-</div>
+            </section>
 
+            {/* Footer */}
+            <footer className='footer-section'>
+                <p>© 2024 Resume Era. All rights reserved.</p>
+                <p>Privacy Policy | Terms of Service</p>
+            </footer>
+        </div>
     );
 };
 

@@ -44,21 +44,39 @@ const SocialMedia = () => {
     return (
         <form onSubmit={handleSubmit} style={{ height: '600px' }} className="ms-3">
             {showSocialMedia && (
-                <div className=" " style={{ height: '100%' }}>
-                    <div className=" ">
+                <div className=" ">
+                    <div className="profetional-detail">
+                        <h1 className="multicolor-heading">
+                            Your Social Media link
+                        </h1>
+                        <p>
+                        Including social media details in a resume is important because 
+                        it allows employers to gain a deeper insight into your professional 
+                        brand and online presence. Platforms like LinkedIn showcase your professional 
+                        network, endorsements, and additional qualifications that might not fit within the 
+                        traditional resume format. For creative professionals, links to portfolios on platforms 
+                        like Behance or GitHub can demonstrate your work and projects in a real-world context. 
+                        Social media profiles also offer a way to highlight your industry engagement, thought 
+                        leadership, and communication skills. Providing these details can make you more relatable 
+                        and transparent, 
+                        offering employers a more comprehensive view of your professional identity.
+                        </p>
+                    </div>
+
+                    <div className=" " style={{display:'flex',flexDirection:'column',justifyContent:'center',alignItems:'center'}}>
                         
-                            <input type="text" className="input" name='linkedin' placeholder="LinkedIn Profile Link" onChange={handleChange} value={textInput.linkedin} />
-                           <input type="text" className="input" name='github' placeholder="GitHub link" onChange={handleChange} value={textInput.github} />
-                        <input type="text" className="input" name='twitter' placeholder="Twitter link" onChange={handleChange} value={textInput.twitter} />
+                            <input type="text" className="input mb-2" name='linkedin' placeholder="LinkedIn Profile Link" onChange={handleChange} value={textInput.linkedin} />
+                           <input type="text" className="input mb-2" name='github' placeholder="GitHub link" onChange={handleChange} value={textInput.github} />
+                        <input type="text" className="input mb-2" name='twitter' placeholder="Twitter link" onChange={handleChange} value={textInput.twitter} />
 
                         
                     </div>
                     <hr className="mb-5"/>
                     <div className="d-flex justify-content-between" style={{  }}>
-                        <button className="" onClick={handleClickBack}>
+                        <button className="button1" onClick={handleClickBack}>
                             <span className="text">BACK</span>
                         </button>
-                        <button onClick={handleClickNext} type="submit">
+                        <button className="button1" onClick={handleClickNext} type="submit">
                             <span className="text">NEXT</span>
                         </button>
                     </div>
