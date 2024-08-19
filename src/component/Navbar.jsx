@@ -3,7 +3,7 @@ import '../css/navbar.css'; // Import the new CSS file
 
 function Navbar() {
     return (
-        <div className="navbar-container">
+        // <div className="navbar-container">
             <div className="navbar-content">
                 <div className="navbar-brand">
                     <Link className="navbar-link-brand" to="/">RESUME ERA</Link>
@@ -14,7 +14,7 @@ function Navbar() {
                     <Link className="navbar-link" to="/aboutme">ABOUT ME</Link>
                 </div>
             </div>
-        </div>
+        // </div>
     );
 }
 

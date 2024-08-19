@@ -1,0 +1,303 @@
+@media only screen and (max-width:1200px) {
+    .container {
+        display: flex;
+        justify-content: space-between;
+    }
+    
+    .resume-wrapper {
+        display: flex;
+        justify-content: space-between;
+        border: 1px solid #ccc;
+        /* padding: 16px; */
+    }
+    .imagediv{
+    position: relative;
+    
+    }
+    .image3{
+    position: absolute;
+    top: 15px;
+    left: 25px;
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    
+    }
+    .contactdiv{
+        margin-top: 170px;
+    }
+    
+    .sidebar {
+        /* margin-left: 12px; */
+        padding: 16px;
+        background-color: #100129;
+        color: white;
+    }
+    
+    .profile-img {
+        margin: 12px;
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+    }
+    
+    .section-title {
+        text-align: start;
+        margin-top: 16px;
+        color: white;
+        background-color: #100129;
+    }
+    
+    .icon {
+        font-size: 1.5rem;
+    }
+    
+    .email {
+        word-wrap: break-word;
+    }
+    
+    .main-content {
+        margin-left: 16px;
+    }
+    
+    .work-experience p {
+        font-weight: bold;
+    }
+    
+    .download-section {
+        display: flex;
+        margin: 12px 0;
+    }
+    
+    .input-field {
+        border-radius: 5px;
+        padding: 10px;
+    }
+    
+    .download-button {
+        margin-left: 8px;
+    }
+    
+}
+
+@media only screen and (max-width:425px) {
+    .container {
+        display: flex;
+        justify-content: space-between;
+        width: 425px;
+    }
+    
+    .resume-wrapper {
+        display: flex;
+        justify-content: space-between;
+        border: 1px solid #ccc;
+        /* padding: 16px; */
+        width: 425px;
+        font-size: x-small;
+    }
+    .imagediv{
+    position: relative;
+    width: 150px;
+    
+    }
+    .image3{
+    position: absolute;
+    top: 25px;
+    left: 45px;
+    width: 100px;
+    height: 100px;
+    
+    }
+    .contactdiv{
+        margin-top: 170px;
+        width: 150px;
+    }
+    
+    .sidebar {
+        /* margin-left: 12px; */
+        /* padding: 16px; */
+        background-color: #100129;
+        color: white;
+    }
+    
+    .image3 {
+        margin: 12px;
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        top: 15px;
+        left: 10%;
+    }
+    
+    .section-title {
+        text-align: start;
+        margin-top: 16px;
+        color: white;
+        background-color: #100129;
+    }
+    
+    .icon {
+        font-size: 1.5rem;
+    }
+    
+    .email {
+        word-wrap: break-word;
+    }
+    
+    .main-content {
+        margin-left: 16px;
+    }
+    .main-content h4{
+        margin-top: 10px;
+        line-height: .4;
+    }
+}
+
+@media only screen and (max-width:375px) {
+    .container {
+        display: flex;
+        justify-content: space-between;
+        width: 375px;
+    }
+    
+    .resume-wrapper {
+        display: flex;
+        justify-content: space-between;
+        border: 1px solid #ccc;
+        /* padding: 16px; */
+        width: 375px;
+        font-size: x-small;
+    }
+    .imagediv{
+    position: relative;
+    width: 150px;
+    
+    }
+    .image3{
+    position: absolute;
+    top: 25px;
+    left: 45px;
+    width: 100px;
+    height: 100px;
+    
+    }
+    .contactdiv{
+        margin-top: 170px;
+        width: 150px;
+    }
+    
+    .sidebar {
+        /* margin-left: 12px; */
+        /* padding: 16px; */
+        background-color: #100129;
+        color: white;
+    }
+    
+    .image3 {
+        margin: 12px;
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        top: 15px;
+        left: 10%;
+    }
+    
+    .section-title {
+        text-align: start;
+        margin-top: 16px;
+        color: white;
+        background-color: #100129;
+    }
+    
+    .icon {
+        font-size: 1.5rem;
+    }
+    
+    .email {
+        word-wrap: break-word;
+    }
+    
+    .main-content {
+        margin-left: 16px;
+    }
+    .main-content h4{
+        margin-top: 10px;
+        line-height: .4;
+    }
+}
+
+@media only screen and (max-width:320px) {
+    .container {
+        display: flex;
+        justify-content: space-between;
+        width: 320px;
+    }
+    
+    .resume-wrapper {
+        display: flex;
+        justify-content: space-between;
+        border: 1px solid #ccc;
+        /* padding: 16px; */
+        width: 320px;
+        font-size: x-small;
+    }
+    .imagediv{
+    position: relative;
+    width: 110px;
+    
+    }
+    .image3{
+    position: absolute;
+    top: 25px;
+    right: 5px;
+    width: 100px;
+    height: 100px;
+    
+    }
+    .contactdiv{
+        margin-top: 170px;
+        width: 110px;
+    }
+    
+    .sidebar {
+        /* margin-left: 12px; */
+        /* padding: 16px; */
+        background-color: #100129;
+        color: white;
+    }
+    
+    .image3 {
+        margin: 12px;
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        top: 15px;
+        left: 10%;
+    }
+    
+    .section-title {
+        text-align: start;
+        margin-top: 16px;
+        color: white;
+        background-color: #100129;
+    }
+    
+    .icon {
+        font-size: 1.5rem;
+    }
+    
+    .email {
+        word-wrap: break-word;
+    }
+    
+    .main-content {
+        margin-left: 16px;
+    }
+    .main-content h4{
+        margin-top: 10px;
+        line-height: .4;
+        font-size: small;
+        white-space: nowrap;
+        font-weight: bold;
+    }
+}

@@ -1,10 +1,10 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { personalInfoData } from "../Redux/action";
 import WorkExperience from "./WorkExperience";
 import { useNavigate } from "react-router-dom";
-import TemplatePage from "./TemplatePage";
-import '../css/personalinfo.css'
+import '../css/personalinfo.css';
+
 const PersonalInfo = () => {
     const [selectImage, setSelectImage] = useState(null);
     const [showPersonalInfo, setShowPersonalInfo] = useState(true);
@@ -19,20 +19,29 @@ const PersonalInfo = () => {
         mobileNumber: "",
         postalCode: "",
         object: "",
-        address:'',
-        maritalstatus:'',
-        nationality:'',
-        dateofbirth:''
+        address: '',
+        maritalstatus: '',
+        nationality: '',
+        dateofbirth: ''
     });
 
     const dispatch = useDispatch();
-    const navigation = useNavigate();
+    const navigate = useNavigate();
+
+    // Load data from local storage when the component mounts
+    useEffect(() => {
+        const savedData = JSON.parse(localStorage.getItem('personalInfoData'));
+        if (savedData) {
+            setInputData(savedData);
+           
+        }
+    }, []);
 
     const handleChange = (e) => {
         const { name, value } = e.target;
         setInputData((prevData) => ({
             ...prevData,
-            [name]: value
+            [name]: value.toUpperCase()
         }));
     };
 
@@ -49,12 +58,13 @@ const PersonalInfo = () => {
 
     const handleImageChange = (event) => {
         const file = event.target.files[0];
-        setSelectImage(file)
-        convertFileToBase64(file)
+        setSelectImage(file);
+        convertFileToBase64(file);
     };
 
     const handleSubmit = (e) => {
         e.preventDefault();
+        localStorage.setItem('personalInfoData', JSON.stringify(inputData)); // Save data to local storage
         dispatch(personalInfoData(inputData));
         console.log('formData in PersonalInfo:', inputData);
     };
@@ -62,11 +72,12 @@ const PersonalInfo = () => {
     const handleClickBack = () => {
         setShowPersonalInfo(true);
         setShowWorkExperience(false);
-        navigation('/');
+        navigate('/');
     };
 
     const handleClickNext = (e) => {
         e.preventDefault();
+        localStorage.setItem('personalInfoData', JSON.stringify(inputData)); // Save data to local storage
         dispatch(personalInfoData(inputData));
         setShowWorkExperience(true);
         setShowPersonalInfo(false);
@@ -76,7 +87,7 @@ const PersonalInfo = () => {
     return (
         <form onSubmit={handleSubmit}>
             {showPersonalInfo && (
-                <div>
+                <div className="prefetional-main">
                     <div className="profetional-detail">
                         <h1 className="multicolor-heading">Your Profetional detail</h1>
                         <p>Personal information in a resume serves as the foundational layer that helps 
@@ -138,7 +149,7 @@ const PersonalInfo = () => {
                     </div>
                     <div className="d-sm-flex justify-content-around m-2 ">
                         <button onClick={handleClickBack} className="button1">
-                            <span class="text">BACK</span>
+                            <span className="text">BACK</span>
                         </button>
                         
                         <button onClick={handleClickNext} type="submit" className="button1"><span className="text">NEXT</span></button>

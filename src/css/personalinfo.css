@@ -1,7 +1,12 @@
+.profetional-main{
+    width: 100%;
+    text-transform: uppercase;
+}
 .profetional-detail{
     display: flex;
     flex-direction: column;
     align-items: center;
+    text-transform: uppercase;
 }
 .multicolor-heading {
     font-size: 48px;
@@ -31,16 +36,18 @@ color: transparent;
     border: 1px solid grey;
     left: 50%;
     position: absolute;
+    text-transform: uppercase;
 }
+
 .profile-img{
     height: 100px;
     width: 100px;
     border-radius: 50%;
     position: absolute;
     left: 50%;
-    cursor: pointer
-    
+    cursor: pointer;
 }
+
 .button1{
 align-items: center;
 background-image: linear-gradient(144deg,#AF40FF, #5B42F3 50%,#00DDEB);
@@ -86,4 +93,44 @@ background: none;
 
 .button1:active {
 transform: scale(0.9);
+}
+
+@media only screen and (width:320px) {
+    .profetional-main{
+        width: 520px;
+        border: 1px solid red;
+    }
+    .profetional-detail p{
+    text-align: justify;
+    width: 90%;
+    background: linear-gradient(45deg, #ff6347, #ffa500, #32cd32, #1e90ff, #ff69b4);
+    -webkit-background-clip: text;
+    color: transparent;
+    margin-bottom: 150px;
+    }
+    .personal-profile{
+        position: relative;
+        margin-bottom: 15px;
+    }
+    .profile-input{
+        height: 100px;
+        width: 100px;
+        border-radius: 50%;
+        border: 1px solid grey;
+        left: 200px;
+        top: -120px;
+        position: absolute;
+        margin-top: 20px;
+    }
+    
+    .profile-img{
+        height: 80px;
+        width: 80px;
+        border-radius: 50%;
+        position: absolute;
+        left: 51%;
+        top: -100px;
+        cursor: pointer;
+    }
+       
 }

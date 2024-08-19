@@ -1,95 +1,135 @@
-import { useDispatch } from "react-redux"
-import { addHobbies } from "../Redux/action"
-import { useState } from "react"
-import KeySkills from "./KeySkill"
-import Language from "./Language"
-import SocialMedia from "./SocialMedia"
+import { useDispatch } from "react-redux";
+import { addHobbies } from "../Redux/action";
+import { useState, useEffect } from "react";
+import KeySkills from "./KeySkill";
+import Language from "./Language";
+import SocialMedia from "./SocialMedia";
 
+const Hobbies = () => {
+  const [input, setInput] = useState(() => {
+    // Load hobbies from local storage if available
+    const savedHobbies = localStorage.getItem("hobbiesData");
+    return savedHobbies ? JSON.parse(savedHobbies) : [{ hobbies: "" }];
+  });
 
-const Hobbies=()=>{
-    const [input,setInput] = useState([{hobbies:''}])
-    const [showLanguage,setShowLanguage] = useState(false)
-    const [ showHobbies,setShowHobbies] = useState(true)
-    const  [showSocialMedia,setShowSocialMedia] = useState(false)
-    const dispatch = useDispatch()
-    const handleSubmit = (e) =>{
-        e.preventDefault()
-        dispatch(addHobbies(input))
-    }
+  const [showLanguage, setShowLanguage] = useState(false);
+  const [showHobbies, setShowHobbies] = useState(true);
+  const [showSocialMedia, setShowSocialMedia] = useState(false);
+  const dispatch = useDispatch();
 
-    const handleAddMore =() =>{
-        setInput((prev) =>[...prev,{hobbies:''}])
-    }
+  useEffect(() => {
+    // Save hobbies to local storage whenever it changes
+    localStorage.setItem("hobbiesData", JSON.stringify(input));
+  }, [input]);
 
-    const handleClick=(e)=>{
-        e.preventDefault()
-        setShowLanguage(false)
-        setShowHobbies(false)
-        setShowSocialMedia(true)
-        dispatch(addHobbies(input))
-    }
-    const handleClickBack = ()=>{
-        setShowLanguage(true)
-        setShowHobbies(false)
-        setShowSocialMedia(false)
-    }
-    const handleChange=(e,index)=>{
-        const {name,value} = e.target;
-        setInput((prev)=>{
-            const updateInput = [...prev];
-            updateInput[index]= {
-                ...updateInput[index],
-                [name]:value
-            }
-            return updateInput;
-        })
-    }
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    dispatch(addHobbies(input));
+  };
 
-    const handleDelete = (index) => {
-        setInput(prev =>prev.filter((_,i) => i!==index))
-    }
-    
-    return(
-        <form onSubmit={handleSubmit}>
-            {showHobbies && (
+  const handleAddMore = () => {
+    setInput((prev) => [...prev, { hobbies: "" }]);
+  };
 
-                <div>
-                    <div className="profetional-detail">
-                        <h1 className="multicolor-heading">Hobbies that's You Have</h1>
-                        <p >
-                        Including hobbies in a resume can provide a more well-rounded view of 
-                        who you are beyond your professional qualifications. Hobbies can showcase your 
-                        personality, interests, and soft skills that may not be evident from your work 
-                        experience or education. For example, involvement in team sports can indicate 
-                        strong teamwork and leadership abilities, while creative hobbies like painting or 
-                        writing may highlight your creativity and problem-solving skills. Additionally, 
-                        sharing hobbies that align with the job role can demonstrate your passion and dedication 
-                        to the field, making you a more appealing candidate. Overall, hobbies add a personal touch 
-                        to your resume, helping you stand out and connect with potential employers on a deeper level.
-                        </p>
-                        </div>
-                    <hr className="mb-3"/>
-                {input.map((inp,index)=>(
-                    <div key={index} className="d-flex justify-content-center">
-                     <input type="text" className="input" name='hobbies' value={inp.hobbies} onChange={(e)=>handleChange(e,index)} placeholder="Hobbies" style={{width:'100%', borderRadius:'5px'}}/>
-                    <button className="button1 ms-2" onClick={()=>handleDelete(index)}><span>Delete</span></button>
-                    </div>
-                ))}
-                <div className="d-flex justify-content-center mt-2">
-                    <button className="button1 " type="button" onClick={handleAddMore}><span class="text">ADD MORE</span></button></div>
-                <div className="d-flex justify-content-between mt-2">
-                    <button className="button1 " type="button"  onClick={handleClickBack}><span class="text">BACK</span></button>
-                    <button className="button1" onClick={handleClick} type="submit"><span className="text">NEXT</span></button>
+  const handleClick = (e) => {
+    e.preventDefault();
+    setShowLanguage(false);
+    setShowHobbies(false);
+    setShowSocialMedia(true);
+    dispatch(addHobbies(input));
+  };
 
-                </div>
-                
-                </div>
-                
-            )}
-            {showSocialMedia &&(<SocialMedia/>)}
-            {showLanguage &&(<Language/>)}
-            
-        </form>
-    )
-}
+  const handleClickBack = () => {
+    setShowLanguage(true);
+    setShowHobbies(false);
+    setShowSocialMedia(false);
+  };
+
+  const handleChange = (e, index) => {
+    const { name, value } = e.target;
+    setInput((prev) => {
+      const updateInput = [...prev];
+      updateInput[index] = {
+        ...updateInput[index],
+        [name]: value,
+      };
+      return updateInput;
+    });
+  };
+
+  const handleDelete = (index) => {
+    setInput((prev) => prev.filter((_, i) => i !== index));
+  };
+
+  return (
+    <form onSubmit={handleSubmit}>
+      {showHobbies && (
+        <div>
+          <div className="profetional-detail">
+            <h1 className="multicolor-heading">Hobbies that You Have</h1>
+            <p>
+              Including hobbies in a resume can provide a more well-rounded
+              view of who you are beyond your professional qualifications.
+              Hobbies can showcase your personality, interests, and soft skills
+              that may not be evident from your work experience or education.
+              For example, involvement in team sports can indicate strong
+              teamwork and leadership abilities, while creative hobbies like
+              painting or writing may highlight your creativity and
+              problem-solving skills. Additionally, sharing hobbies that align
+              with the job role can demonstrate your passion and dedication to
+              the field, making you a more appealing candidate. Overall, hobbies
+              add a personal touch to your resume, helping you stand out and
+              connect with potential employers on a deeper level.
+            </p>
+          </div>
+          <hr className="mb-3" />
+          {input.map((inp, index) => (
+            <div key={index} className="d-flex justify-content-center">
+              <input
+                type="text"
+                className="input"
+                name="hobbies"
+                value={inp.hobbies}
+                onChange={(e) => handleChange(e, index)}
+                placeholder="Hobbies"
+                style={{ width: "100%", borderRadius: "5px" }}
+              />
+              <button
+                className="button1 ms-2"
+                onClick={() => handleDelete(index)}
+                type="button"
+              >
+                <span>Delete</span>
+              </button>
+            </div>
+          ))}
+          <div className="d-flex justify-content-center mt-2">
+            <button
+              className="button1"
+              type="button"
+              onClick={handleAddMore}
+            >
+              <span className="text">ADD MORE</span>
+            </button>
+          </div>
+          <div className="d-flex justify-content-between mt-2">
+            <button
+              className="button1"
+              type="button"
+              onClick={handleClickBack}
+            >
+              <span className="text">BACK</span>
+            </button>
+            <button className="button1" onClick={handleClick} type="submit">
+              <span className="text">NEXT</span>
+            </button>
+          </div>
+        </div>
+      )}
+      {showSocialMedia && <SocialMedia />}
+      {showLanguage && <Language />}
+    </form>
+  );
+};
+
 export default Hobbies;

@@ -27,11 +27,10 @@ const TemplatePage = (props) => {
                 <p className='hero-description'>
                     Choose a template and customize it to stand out from the crowd. Start your career journey with a professional resume.
                 </p>
-                <button className='cta-button'>Get Started</button>
             </section>
 
             {/* Template Grid */}
-            <section className="template-grid-container container">
+            <section className="template-grid-container">
                 <h2 className="template-grid-title">Select a Template</h2>
                 <p className="template-grid-description">
                     Browse our collection of professional resume templates and find the one that suits your needs.

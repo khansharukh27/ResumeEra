@@ -27,7 +27,7 @@ import Preview2 from './component/previewfolder/Preview2';
 import Preview3 from './component/previewfolder/Preview3';
 import Preview4 from './component/previewfolder/Preview4';
 import Preview5 from './component/previewfolder/Preview5';
-import ResumeEra from './component/ResumeEra';
+// import ResumeEra from './component/ResumeEra';
 import Preview6 from './component/previewfolder/Preview6';
 import Preview7 from './component/previewfolder/Preview7';
 import Preview8 from './component/previewfolder/Preview8';
@@ -38,6 +38,7 @@ import Preview12 from './component/previewfolder/Preview12';
 import Preview13 from './component/previewfolder/Preview13';
 import Preview14 from './component/previewfolder/Preview14';
 import Home from './component/Home';
+// import Preview15 from './component/previewfolder/Preview15';
 
 
 
@@ -49,7 +50,8 @@ var images = [
   { id: 4, src: resume4, alt: 'image4' },{ id: 5, src: resume5, alt: 'image5' },{ id: 6, src: resume6, alt : 'image6'},
   { id: 7, src: resume7, alt : 'image7'},{ id: 8, src: resume8, alt: 'image8'}, { id: 9, src: resume9, alt : 'image9'},
   { id: 10, src: resume10, alt: 'image10'},{id:11,src: resume11, alt: 'image11'},{id:12, src: resume12, alt : 'image12'},
-  { id: 13, src: resume13, alt: 'image13'},{id:14, src: resume14, alt: 'image14'}
+  { id: 13, src: resume13, alt: 'image13'},{id:14, src: resume14, alt: 'image14'}, 
+  // {id:15, src:'https://img.freepik.com/free-psd/clean-modern-resume-portfolio-cv-template_120329-3603.jpg', alt : 'image15'}
 ]
 console.log('images:=',images)
 console.log(images[0].id)
@@ -89,6 +91,8 @@ function App() {
         <Route path='/preview12' element={<Preview12/>}/>
         <Route path='/preview13' element={<Preview13/>}/>
         <Route path='/preview14' element={<Preview14/>}/>
+        {/* <Route path='/preview15' element={<Preview15/>}/> */}
+
       </Routes>
     </Router>
 

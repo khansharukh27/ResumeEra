@@ -1,0 +1,351 @@
+.preview2{
+    display: flex;
+}
+/* Main container */
+
+
+/* Main content container */
+.main {
+    border: 1px solid #ccc;
+    /* margin-top:1px; */
+    display: flex;
+    width: fit-content;
+}
+
+/* Left side - Personal info and education */
+.main1 {
+    display: flex;
+    flex-direction: column;
+    margin-top: -275px;
+    justify-content: center;
+    margin-right: 15px;
+}
+
+/* Personal info - Name and image */
+.maininner1 {
+    text-align: center;
+    padding-top: 25px;
+    background-color: black;
+    width: 280px;
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+    color: white;
+    padding-left: 25px;
+    padding-right: 25px;
+}
+.maininner1 h3{
+    white-space: nowrap;
+}
+
+.maininner2 img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 3px solid grey;
+    /* margin: 25px; */
+    margin-top: 25px;
+}
+/* Contact info */
+.maininner3 {
+    margin-left: 16px;
+    margin-top: 16px;
+}
+
+.maininner3 h1, .maininner4 h1 {
+    font-size: 24px;
+}
+
+.maininner3 p, .maininner4 p {
+    margin-bottom: 8px;
+}
+
+/* Education section */
+.maininner4 {
+    margin-left: 8px;
+    margin-top: 16px;
+    padding: 16px;
+    background-color: #000;
+    text-align: center;
+    color: white;
+    width: 200px;
+    border-top-right-radius: 50%;
+    border-top-left-radius: 50%;
+}
+
+/* Right side - About, Job Experience, Skills, Language, Hobbies */
+.main2 {
+    margin-top: 16px;
+}
+
+.about h1, .jobExperience h1 {
+    font-size: 24px;
+    margin-bottom: 16px;
+}
+
+/* Skills */
+.skill-section {
+    text-align: center;
+    margin-top: 16px;
+}
+
+/* Languages and Hobbies */
+.d-sm-flex.justify-content-between {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 16px;
+}
+
+.language-section, .hobbies-section {
+    margin-bottom: 16px;
+}
+
+.language-section ul, .hobbies-section ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+/* Resume download section */
+.resume-download-section {
+    margin-top: 16px;
+}
+
+.resume-name-input {
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.download-button {
+    margin-left: 8px;
+}
+
+.bg-color-picker, .font-style-selector {
+    margin-left: 8px;
+    /* width: 50px; */
+}
+
+.bg-color-picker {
+    margin-top: 5px;
+    display: flex;
+    justify-content: center;
+    height: fit-content;
+    /* width: 50px; */
+}
+
+
+.font-style-selector {
+    margin-left: 8px;
+    height: fit-content;
+}
+.color-picker-container {
+    position: relative;
+    /* display: inline-block; */
+}
+
+.color-picker-label {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    /* background-color: #fff; */
+    padding: 0 5px;
+    font-size: 12px;
+    color: #333;
+    /* border: 1px solid grey; */
+    border-radius: 6px;
+}
+
+.color {
+    width: 100px;
+    height: 40px;
+    border: 1px solid #ccc;
+    padding-left: 10px;
+    box-sizing: border-box;
+    border-radius: 6px;
+    text-align: center;
+}
+
+
+@media only screen and (width:320px) {
+    .preview2{
+        width: 320px;
+        display: flex;
+        flex-direction: column;
+        font-size: xx-small;
+        margin-left: 15px;
+    }
+    .main1 {
+        display: flex;
+        flex-direction: column;
+        margin-top: -310px;
+        margin-left: 5px;
+        justify-content: center;
+        /* width: 170px; */
+    }
+    .main2{
+        width:170px;
+    }
+    .main {
+        border: 1px solid #ccc;
+        /* margin-top:1px; */
+        display: flex;
+        width: fit-content;
+    }
+    .font-style-selector{
+        height: fit-content;
+    }
+    .maininner1{
+        width: 150px;
+    }
+    .maininner1 h3{
+        font-size: xx-small;
+    }
+    .maininner2 img{
+        width: 80px;
+        height: 80px;
+    }
+    .maininner3{
+        width: 150px;
+    }
+    .maininner4{
+        width: 150px;
+    }
+    
+
+}
+@media only screen and (width:375px) {
+    .preview2{
+        width: 375px;
+        display: flex;
+        flex-direction: column;
+        font-size: x-small;
+        margin-left: 5px;
+    }
+    .main1 {
+        display: flex;
+        flex-direction: column;
+        margin-top: -370px;
+        margin-left: 5px;
+        justify-content: center;
+        /* width: 170px; */
+    }
+    .main2{
+        width:170px;
+    }
+    .main {
+        border: 1px solid #ccc;
+        /* margin-top:1px; */
+        display: flex;
+        width: fit-content;
+    }
+    .font-style-selector{
+        height: fit-content;
+    }
+    .maininner1{
+        width: 170px;
+    }
+    .maininner1 h3{
+        font-size: xx-small;
+    }
+    .maininner2 img{
+        width: 80px;
+        height: 80px;
+    }
+    .maininner3{
+        width: 170px;
+    }
+    .maininner4{
+        width: 170px;
+    }
+    
+
+}
+@media only screen and (width:425px) {
+    .preview2{
+        width: 425px;
+        display: flex;
+        flex-direction: column;
+        font-size: x-small;
+        /* margin-left: px; */
+    }
+    .main1 {
+        display: flex;
+        flex-direction: column;
+        margin-top: -240px;
+        margin-left: 5px;
+        justify-content: center;
+        /* width: 170px; */
+    }
+    .main2{
+        width:220px;
+    }
+    .main {
+        border: 1px solid #ccc;
+        /* margin-top:1px; */
+        display: flex;
+        width: fit-content;
+    }
+    .font-style-selector{
+        height: fit-content;
+    }
+    .maininner1{
+        width: 180px;
+    }
+    .maininner1 h3{
+        font-size: small;
+    }
+    .maininner2 img{
+        width: 100px;
+        height: 100px;
+    }
+    .maininner3{
+        width: 180px;
+    }
+    .maininner4{
+        width: 180px;
+    }
+    
+
+}
+@media only screen and (width:768px) {
+    .preview2{
+        width: 768px;
+        display: flex;
+        flex-direction: column;
+        font-size: large;
+        margin-left: 15px;
+    }
+    .main1 {
+        display: flex;
+        flex-direction: column;
+        margin-top: -320px;
+        margin-left: 5px;
+        justify-content: center;
+        width: 372px;
+    }
+    .main2{
+        width:370px;
+    }
+    .main {
+        border: 1px solid #ccc;
+        /* margin-top:1px; */
+        display: flex;
+        width: fit-content;
+    }
+    .font-style-selector{
+        height: fit-content;
+    }
+    .maininner1{
+        width: 250px;
+    }
+    .maininner2 img{
+        width: 150px;
+        height: 150px;
+    }
+    .maininner3{
+        width: 150px;
+    }
+    .maininner4{
+        width: 250px;
+    }
+    
+
+}

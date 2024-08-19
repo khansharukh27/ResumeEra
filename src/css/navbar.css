@@ -1,101 +1,139 @@
-/* Container for the navbar */
-.navbar-container {
-    /* border: 1px solid #ccc; */
-    width: 100%;
-}
-
-/* Content of the navbar with flexbox for layout */
+/* Default styling for larger screens */
 .navbar-content {
     display: flex;
     justify-content: space-between;
     flex-direction: row;
     background-image: linear-gradient(145deg, #1f2c40, #3b4a5e, #4d5f73, #283448, #101b29);
-    padding: 10px 20px; /* Added padding for spacing */
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3); /* Added shadow for depth */
-    /* border-radius: 8px; Optional: Rounds the corners of the navbar */
-
+    padding: 10px 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    width: 100%; /* Use width 100% instead of fit-content for better responsiveness */
 }
 
-/* Branding section of the navbar */
 .navbar-brand {
     margin-left: 1rem;
 }
 
-/* Brand link styling */
 .navbar-link-brand {
     text-decoration: none;
-    color: black;
-    font-size: 1.5rem;
+    font-size: 2.5rem;
     font-weight: bold;
+    background: linear-gradient(45deg, #ff6347, #9c7732, #3a743a, #389e8d, #802373);
+    -webkit-background-clip: text;
+    color: transparent;
 }
 
-/* Container for the links in the navbar */
 .navbar-links {
     display: flex;
     margin-top: 1rem;
     margin-right: 1rem;
-    color: #e0e0e0; /* Light gray text for better readability */
+    color: #e0e0e0;
+    background: linear-gradient(145deg, #2b2e4a, #4b4e69, #2c3e50, #0d1f2d);
+    padding: 10px 20px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
+    transition: background 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
 
-    background: linear-gradient(145deg, #2b2e4a, #4b4e69, #2c3e50, #0d1f2d); /* Dark multicolor gradient */
-    padding: 10px 20px; /* Adds space around the links */
-    border-radius: 8px; /* Softens the edges */
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5); /* Adds a shadow for depth */
+.navbar-link {
+    border: 1px solid black;
+    border-radius: 8px;
+    padding: 5px;
+    text-decoration: none;
+    color: black;
+    margin: 5px;
+}
 
-    transition: background 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Smooth transition for hover effects */
+.navbar-link:hover {
+    text-decoration: dashed;
 }
 
 .navbar-links:hover {
-    background: linear-gradient(145deg, #1a1c35, #303554, #1c2b3a, #091a2d); /* Darker gradient on hover */
-    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.7); /* Enhance shadow on hover */
+    background: linear-gradient(145deg, #1a1c35, #303554, #1c2b3a, #091a2d);
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.7);
 }
 
+/* Media query for tablets and small screens */
+@media (max-width: 768px) {
+    .navbar-content {
+        flex-direction: row;
+        align-items: center;
+    }
 
-/* Individual link styling */
-.navbar-link {
-    margin: 0 0.5rem;
-    text-decoration: none;
-    color: black;
+    .navbar-links {
+        margin-top: 0.5rem;
+        margin-right: 0;
+        width: 100%;
+        justify-content: center;
+        background: linear-gradient(145deg, #2b2e4a, #4b4e69, #2c3e50, #0d1f2d);
+        padding: 10px 0;
+        border-radius: 0;
+    }
+
+    .navbar-link {
+        margin: 0.5rem 0;
+        width: 100%; /* Full width links on smaller screens */
+        text-align: center; /* Center align the text */
+    }
 }
 
-@media only screen and (max-width:320px) {
-.navbar-container {
-    border: 1px solid #ccc;
-    width: 320px;
+/* Media query for mobile screens */
+@media (max-width: 480px) {
+    .navbar-content {
+        padding: 5px 10px;
+        flex-direction: column;
+    }
+
+    .navbar-brand {
+        margin-left: 0.5rem;
+    }
+
+    .navbar-link-brand {
+        font-size: 1.8rem;
+        text-align: center;
+    }
+
+    .navbar-links {
+        margin-top: 0.5rem;
+        padding: 5px 0;
+        border-radius: 0;
+        width: 100%;
+    }
+
+    .navbar-link {
+        margin: 0.5rem 0;
+        font-size: 0.9rem;
+        width: 100%;
+        text-align: center;
+    }
 }
 
-/* Content of the navbar with flexbox for layout */
-.navbar-content {
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column;
-}
+/* Media query for extra small screens */
+@media (max-width: 320px) {
+    .navbar-content {
+        padding: 5px;
+        flex-direction: column;
+        align-items: center;
+    }
 
-/* Branding section of the navbar */
-.navbar-brand {
-    margin-left: 1rem;
-}
+    .navbar-brand {
+        width: 100%;
+        text-align: center;
+        font-size: xx-large;
+    }
 
-/* Brand link styling */
-.navbar-link-brand {
-    text-decoration: none;
-    color: black;
-    font-size: 1.5rem;
-    font-weight: bold;
-}
+    .navbar-link-brand {
+        font-size: 1.2rem;
+        text-align: center;
+    }
 
-/* Container for the links in the navbar */
-.navbar-links {
-    display: flex;
-    margin-top: 1rem;
-    margin-right: 1rem;
-    color: black;
-}
+    .navbar-links {
+        padding: 5px 0;
+        width: 100%;
+    }
 
-/* Individual link styling */
-.navbar-link {
-    margin: 0 0.5rem;
-    text-decoration: none;
-    color: black;
-}
-
+    .navbar-link {
+        font-size: 0.8rem;
+        width: 100%;
+        text-align: center;
+    }
 }

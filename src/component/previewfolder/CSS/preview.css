@@ -1,0 +1,341 @@
+/* Default styling (larger screens) */
+.navbar-container{
+    /* width:520px; */
+}
+.preview-container {
+    padding: 15px;
+    margin: 15px;
+    border: 1px solid grey;
+    width:100%;
+}
+
+.preview-page {
+    margin: 15px;
+    padding: 15px;
+    width: 70%;
+    box-shadow: 4px 4px 4px pink;
+
+}
+
+.preview-image-container {
+    padding: 25px;
+}
+
+.preview-image {
+    border: 1px solid wheat;
+    border-radius: 8px;
+    width: 100px;
+    height: 100px;
+}
+
+.preview-text {
+    text-transform: uppercase;
+}
+
+.preview-name {
+    transform: scaleY(1.5);
+    display: inline-block;
+    font-size: 25px;
+}
+
+.preview-address {
+    white-space: nowrap;
+}
+
+.outer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+    margin-top: 15px;
+}
+
+.emptydiv {
+    height: 10px;
+    width: 10px;
+    border: 1px solid grey;
+    border-radius: 50%;
+    margin-right: 5px;
+    margin-left: 5px;
+}
+
+.preview-details {
+    margin-bottom: 15px;
+    margin-top: 15px;
+    width: 100%;
+}
+.preview-details-section{
+    width: 50%;
+}
+.details-title{
+margin-bottom: 5px;
+padding-bottom: 5px;
+color: black;
+font-weight: bold;
+}
+.details-address,
+.details-city-state,
+.details-mobile,
+.details-email {
+
+}
+
+.skills-title {
+    margin-bottom: 5px;
+    padding-bottom: 5px;
+}
+
+.skill-item {}
+
+.skill-divider {
+    
+}
+
+.education-item {}
+
+.education-title {}
+
+.education-duration {}
+
+.education-detail {}
+
+.preview-profile-section {}
+
+.profile-title {}
+
+.profile-description {
+    display: flex;
+    text-align: justify;
+}
+
+.employment-history {
+    padding: 10px;
+}
+
+.employment-title {}
+
+.employment-detail {
+    white-space: nowrap;
+}
+
+.employment-duration {}
+
+.resume-download-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+}
+
+.resume-name-input {
+    border: 2px solid #007bff;
+    border-radius: 5px;
+    padding: 10px;
+    font-size: 14px;
+    width: 250px;
+    transition: border-color 0.3s ease;
+}
+
+.resume-name-input:focus {
+    border-color: #0056b3;
+    outline: none;
+}
+
+.download-button {
+    padding: 10px 15px;
+    font-size: 14px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.download-button:hover {
+    background-color: #0056b3;
+}
+
+.bg-color-picker {
+    width: 80px;
+    height: 40px;
+    border: 2px solid #007bff;
+    background: none;
+    cursor: pointer;
+    padding: 0;
+    margin-left: 10px;
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.bg-color-picker:hover {
+    transform: scale(1.1);
+}
+
+.font-style-selector {
+    border: 2px solid #007bff;
+    border-radius: 5px;
+    padding: 8px;
+    font-size: 14px;
+    background-color: #fff;
+    margin-left: 10px;
+    cursor: pointer;
+    transition: border-color 0.3s ease;
+}
+
+.font-style-selector:focus {
+    border-color: #0056b3;
+    outline: none;
+}
+
+/* Media query for tablets and small screens (max-width: 768px) */
+@media (max-width: 768px) {
+    .preview-page {
+        width: 768px;
+    }
+
+    .preview-image {
+        width: 80px;
+        height: 80px;
+    }
+
+    .preview-name {
+        font-size: 20px;
+    }
+
+    .resume-name-input {
+        width: 200px;
+    }
+
+    .download-button {
+        font-size: 12px;
+        padding: 8px 12px;
+    }
+
+    .bg-color-picker {
+        width: 60px;
+        height: 30px;
+    }
+
+    .font-style-selector {
+        padding: 6px;
+        font-size: 12px;
+    }
+}
+
+/* Media query for mobile screens (max-width: 480px) */
+@media (max-width: 425px) {
+    .navbar-container{
+        width: 100%;
+    }
+    .preview-container {
+        
+        margin: 0px;
+        padding: 0px;
+    }
+
+    .preview-page {
+        /* width:fit-content; */
+        margin: 0px;
+        padding: 0px;
+    }
+
+    .preview-image {
+        width: 60px;
+        height: 60px;
+    }
+
+    .preview-name {
+        font-size: 18px;
+    }
+
+    .resume-name-input {
+        width: 180px;
+    }
+
+    .download-button {
+        font-size: 12px;
+        padding: 8px 10px;
+    }
+
+    .bg-color-picker {
+        width: 50px;
+        height: 25px;
+    }
+
+    .font-style-selector {
+        padding: 5px;
+        font-size: 12px;
+    }
+}
+
+/* Media query for extra small screens (max-width: 320px) */
+
+@media (max-width: 320px) {
+   
+    .preview-container {
+        width: 390px;
+        margin: -0px;
+        padding: 0px;
+        font-size: 10px;
+    }
+
+    .preview-page {
+        width:390px;
+        margin: 0px;
+        padding: 0px;
+    }
+
+    .preview-image {
+        width: 50px;
+        height: 50px;
+    }
+
+    .preview-name {
+        font-size: 18px;
+    }
+    .preview-details{
+        width: 100%;
+        margin: 0px;
+    }
+.preview-profile-section{
+    width: 40%;
+}
+.preview-details-section{
+    width: 40%;
+}
+.outer{
+    margin: 0px;
+}
+
+    .resume-name-input {
+        width: 200px;
+    }
+
+    .download-button {
+        font-size: 12px;
+        padding: 8px 10px;
+    }
+
+    .bg-color-picker {
+        width: 50px;
+        height: 25px;
+    }
+
+    .font-style-selector {
+        padding: 5px;
+        font-size: 12px;
+    }
+    .employment-history{
+        padding: 0px;
+    }
+}
+
+/* Media query for extra small screens (max-width: 320px) */
+
