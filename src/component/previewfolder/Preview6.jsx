@@ -4,9 +4,12 @@ import html2canvas from 'html2canvas';
 import { useState } from 'react';
 import { useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
-
+import '../previewfolder/CSS/preview6.css'
 const Preview6 = () => {
     const [inputFields, setInputFields] = useState('resume.pdf');
+    const [bgColor, setBgColor] = useState('#F5DEB3'); // Default background color (wheat)
+    const [fontStyle, setFontStyle] = useState('Arial'); // Default font style
+
 
     const navigate = useNavigate();
     const personalInfo = useSelector((state) => state.reducer.personalInfo[0]);
@@ -25,19 +28,16 @@ const Preview6 = () => {
 
         try {
             const canvas = await html2canvas(element);
-            const pdf = new jsPDF('p', 'mm', 'a4');
+            const pdf = new jsPDF('span', 'mm', 'a4');
             pdf.addImage(canvas.toDataURL('image/png'), 'PNG', 0, 0, 210, 297);
 
-            // Set the file name here
             const fileName = `${inputFields}.pdf`;
 
-            // Save the PDF file using a download link
             const downloadLink = document.createElement('a');
             downloadLink.href = pdf.output('bloburl');
             downloadLink.download = fileName;
             downloadLink.click();
 
-            // Save the image data in local storage
             const imageDataUrl = canvas.toDataURL('image/png');
             const savedResumes = JSON.parse(localStorage.getItem('savedResumes')) || [];
             savedResumes.push(imageDataUrl);
@@ -50,68 +50,72 @@ const Preview6 = () => {
         }
     };
     return (
-        <div className=' d-flex justify-content-between p-5'>
-            <div id='Alisha_mirza'>
-                <h1 className="pt-5">{personalInfo.firstName} {personalInfo.lastName}</h1>
-                <p>
-                    {work[0][0].jobtitle}
-                </p>
-                <div className="row">
-                    <div className="col-md-4 mt-2"><b> <i className="bi bi-telephone-forward-fill me-2"></i>{personalInfo.mobileNumber}</b> </div>
-                    <div className="col-md-4 mt-2"> <b><i className="bi bi-envelope-at me-2"></i>{personalInfo.email}</b></div>
-                    <div className="col-md-4 mt-2"> <b><i className="bi bi-linkedin me-2"></i>{sMedia[0].linkedin}</b></div>
-                    <div className="col-md-4 mt-2"><b><i className="bi bi-geo-alt-fill me-2"></i>{personalInfo.address} {personalInfo.city} {personalInfo.state} {personalInfo.postalCode}</b></div>
+        <div className='preview6-main'>
+            <div className="resume-preview6" style={{ backgroundColor: bgColor, fontFamily: fontStyle }} id="Alisha_mirza">
+
+                <div className='name-div'>
+                    <h5 className="pt-5 ms-5"><b>{personalInfo.firstName} {personalInfo.lastName}</b></h5>
+                    <p className='ms-5 '>
+                        {work[0][0].jobtitle}
+                    </p>
                 </div>
-                <div className="mt-4">
-                    <h1> Job Experience</h1>
+                <div className="information-section6 ms-5" style={{color:'grey'}}>
+                    <div className='d-flex inner-information6' >
+                        <div className="mt-2 me-3"><b> <i className="bi bi-telephone-forward-fill"></i>{personalInfo.mobileNumber}</b> </div>
+                        <div className="mt-2 me-3"><b><i className="bi bi-geo-alt-fill "></i> {personalInfo.city} {personalInfo.state} </b></div>
+
+                    </div>
+                    <div className='d-flex justify-content-between inner-information6'>
+                        <div className=" mt-2 me-3" style={{ whiteSpace: 'nowrap' }}> <b><i className="bi bi-envelope-at"></i>{personalInfo.email}</b></div>
+                        <div className=" mt-2 me-3"> <b><i className="bi bi-linkedin "></i>{sMedia[0].linkedin}</b></div>
+                    </div>
+                </div>
+                <div className="job-experience6 mt-4 ms-5">
+                    <h5 className='job-heading6'> JOB EXPERIENCE</h5>
                     <hr />
                     {work[0].map((works, index) => (
-                        <div key={index}>
+                        <div key={index} style={{color:'grey'}}>
                             <ul>
                                 <li>
-                                    <p><b>{works.jobtitle}</b></p>  <p>{works.startYear}-{works.endYear}</p>
+                                    <p>{works.jobtitle}</p>  <p>{works.startYear}-{works.endYear}</p>
                                     <p style={{}}>{works.organization} </p>
+                                    <p>{works.aboutexperience}</p>
                                 </li>
                             </ul>
-
                         </div>
                     ))}
                 </div>
-                <div className="" style={{}}>
-
-                    <h1 className="mt-5 " >Education</h1>
+                <div className="ms-5 education-section6" style={{}}>
+                    <h5 className="mt-5 education-heading6" >EDUCATION</h5>
                     <hr />
                     {education[0].map((edu, index) => (
-                        <div key={index} className="">
+                        <div key={index} className="" style={{color:'grey'}}>
                             <p ><b> {edu.univercity}</b></p>
                             <p>{edu.type}</p>
                             <p>{edu.startYear} - {edu.endYear}</p>
                         </div>
                     ))}
                 </div>
-                <div className="mt-4">
-                    <h4>Hobbies</h4>
+                <div className=" ms-5 mt-4 hobbies-section6">
+                    <h5 className='hobbies-heading6'>HOBBIES</h5>
                     <hr />
                     <div className='row'>
-                    {Hobbies[0].map((hobb, index) => (
-                        <div key={index} className='col-4'>
-                            <div className='d-flex justify-content-between'>
-                                <div><p> {hobb.hobbies}</p><hr style={{height:'5px'}} /></div>
+                        {Hobbies[0].map((hobb, index) => (
+                            <div key={index} className='col-4' style={{color:'grey'}}>
+                                <div className='d-flex justify-content-between'>
+                                    <div><p> {hobb.hobbies}</p><hr style={{ height: '5px' }} /></div>
+                                </div>
                             </div>
-                            
-                                   
-                                
-                        </div>
-                    ))}
+                        ))}
                     </div>
                 </div>
-                <div className="mt-4">
+                <div className="ms-5 mt-4 skills-section6">
 
-                    <h1>Skills</h1>
+                    <h5 className='skills-heading6'>SKILLS</h5>
                     <hr />
                     <div className="row">
                         {keyskills[0].map((keys, index) => (
-                            <div key={index} className="col-4">
+                            <div key={index} className="col-4" style={{color:'grey'}}>
                                 <div className="d-flex justify-content-between">
                                     <div><p>{keys.keyskills}</p><hr style={{ height: '5px' }} /></div>
 
@@ -121,12 +125,12 @@ const Preview6 = () => {
                     </div>
 
                 </div>
-                <div className="mt-4">
-                    <h4><i class="bi bi-translate me-2 " />language</h4>
+                <div className="language-section6 mt-4 ms-5">
+                    <h5 className='language-heading6'><i class="bi bi-translate me-2 " />LANGUAGE</h5>
                     <hr />
                     <div className='row'>
                         {LLanguage[0].map((lan, index) => (
-                            <div key={index} className='col-4'>
+                            <div key={index} className='col-4' style={{color:'grey'}}>
                                 <div className="d-flex justify-content-between">
                                     <div><p>{lan.language}</p><hr style={{ height: '5px' }} /></div>
 
@@ -135,22 +139,60 @@ const Preview6 = () => {
                         ))}
                     </div>
                 </div>
-                <div className='mt-5'>
-                    <h1>About Me</h1>
+                <div className='about-section6 mt-5 ms-5'>
+                    <h5 className='about-heading6'>ABOUT ME</h5>
                     <hr />
-                    <div className='d-flex justify-content-between'>
-                        <div><b>Date of Birth:- </b><p>{personalInfo.dateofbirth}</p><hr style={{height:'5px'}}/></div>
-                        <div><b>Marital Status:- </b><p> {personalInfo.maritalstatus}</p><hr style={{height:'5px'}} /></div>
-                        <div><b>Nationality:- </b><p>{personalInfo.nationality}</p><hr style={{height:'5px'}}/></div>
+                    <div className='about-inner-div6 ' style={{color:'grey'}}>
+                        <div><b>Date of Birth:- </b><p>{personalInfo.dateofbirth}</p><hr style={{ height: '5px' }} /></div>
+                        <div><b>Marital Status:- </b><p> {personalInfo.maritalstatus}</p><hr style={{ height: '5px' }} /></div>
+                        <div><b>Nationality:- </b><p>{personalInfo.nationality}</p><hr style={{ height: '5px' }} /></div>
                     </div>
-                        
 
-                    
+
+
                 </div>
             </div>
-            <div className="d-flex m-sm-3 mt-3" style={{}}>
-                <input type="text" placeholder="enter your resume name" style={{ borderRadius: '5px', padding: '10px' }} onChange={(e) => setInputFields(e.target.value)} />
-                <button onClick={handleDownloadPDF} type="btn" className="btn btn-primary ms-2">Download</button>
+            <div className="resume-download-section">
+                <div className='d-flex'>
+                    <input type="text" placeholder="Enter your resume name" className="resume-name-input" style={{ borderRadius: '5px', padding: '10px' }} onChange={(e) => setInputFields(e.target.value)} />
+                    <button onClick={handleDownloadPDF} type="btn" className="btn btn-primary ms-2 download-button">Download</button>
+                </div>
+
+                {/* Color Picker for Background Color */}
+                <div className='d-flex border' style={{ marginTop: '5px', display: 'flex', flexDirection: 'row', justifyContent: 'center' }}>
+                    <input type="color" value={bgColor} onChange={(e) => setBgColor(e.target.value)} className="bg-color-picker ms-2" />
+                    {/* Font Style Selector */}
+                    <select value={fontStyle} onChange={(e) => setFontStyle(e.target.value)} className="font-style-selector ms-2">
+                        <option value="Arial">Arial</option>
+                        <option value="Arial Black">Arial Black</option>
+                        <option value="Verdana">Verdana</option>
+                        <option value="Tahoma">Tahoma</option>
+                        <option value="Trebuchet MS">Trebuchet MS</option>
+                        <option value="Impact">Impact</option>
+                        <option value="Times New Roman">Times New Roman</option>
+                        <option value="Georgia">Georgia</option>
+                        <option value="Palatino Linotype">Palatino Linotype</option>
+                        <option value="Courier New">Courier New</option>
+                        <option value="Lucida Console">Lucida Console</option>
+                        <option value="Lucida Sans Unicode">Lucida Sans Unicode</option>
+                        <option value="Gill Sans">Gill Sans</option>
+                        <option value="Century Gothic">Century Gothic</option>
+                        <option value="Comic Sans MS">Comic Sans MS</option>
+                        <option value="Garamond">Garamond</option>
+                        <option value="Bookman">Bookman</option>
+                        <option value="Arial Narrow">Arial Narrow</option>
+                        <option value="Brush Script MT">Brush Script MT</option>
+                        <option value="Candara">Candara</option>
+                        <option value="Franklin Gothic Medium">Franklin Gothic Medium</option>
+                        <option value="Goudy Old Style">Goudy Old Style</option>
+                        <option value="Herculanum">Herculanum</option>
+                        <option value="Monaco">Monaco</option>
+                        <option value="Optima">Optima</option>
+                        <option value="Perpetua">Perpetua</option>
+                        <option value="Rockwell">Rockwell</option>
+                        <option value="Segoe UI">Segoe UI</option>
+                    </select>
+                </div>
             </div>
 
         </div>
