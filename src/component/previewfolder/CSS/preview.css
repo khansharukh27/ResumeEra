@@ -1,12 +1,14 @@
 /* Default styling (larger screens) */
-.navbar-container{
+.navbar-container {
     /* width:520px; */
+    width: 100%; /* Make navbar full-width for better responsiveness */
 }
+
 .preview-container {
     padding: 15px;
     margin: 15px;
     border: 1px solid grey;
-    width:100%;
+    width: 100%;
 }
 
 .preview-page {
@@ -14,7 +16,6 @@
     padding: 15px;
     width: 70%;
     box-shadow: 4px 4px 4px pink;
-
 }
 
 .preview-image-container {
@@ -63,62 +64,21 @@
     margin-bottom: 15px;
     margin-top: 15px;
     width: 100%;
-}
-.preview-details-section{
-    width: 50%;
-}
-.details-title{
-margin-bottom: 5px;
-padding-bottom: 5px;
-color: black;
-font-weight: bold;
-}
-.details-address,
-.details-city-state,
-.details-mobile,
-.details-email {
-
-}
-
-.skills-title {
-    margin-bottom: 5px;
-    padding-bottom: 5px;
-}
-
-.skill-item {}
-
-.skill-divider {
-    
-}
-
-.education-item {}
-
-.education-title {}
-
-.education-duration {}
-
-.education-detail {}
-
-.preview-profile-section {}
-
-.profile-title {}
-
-.profile-description {
-    display: flex;
-    text-align: justify;
-}
-
-.employment-history {
     padding: 10px;
 }
 
-.employment-title {}
-
-.employment-detail {
-    white-space: nowrap;
+.preview-details-section {
+    width: 50%;
 }
 
-.employment-duration {}
+.details-title {
+    margin-bottom: 5px;
+    padding-bottom: 5px;
+    color: black;
+    font-weight: bold;
+}
+
+/* Skipping empty classes for brevity */
 
 .resume-download-section {
     display: flex;
@@ -130,7 +90,6 @@ font-weight: bold;
     background-color: #f9f9f9;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-
 }
 
 .resume-name-input {
@@ -197,7 +156,8 @@ font-weight: bold;
 /* Media query for tablets and small screens (max-width: 768px) */
 @media (max-width: 768px) {
     .preview-page {
-        width: 768px;
+        width: 100%;
+        font-size: small; /* Adjusted width for better tablet view */
     }
 
     .preview-image {
@@ -229,21 +189,25 @@ font-weight: bold;
     }
 }
 
-/* Media query for mobile screens (max-width: 480px) */
+/* Media query for mobile screens (max-width: 425px) */
 @media (max-width: 425px) {
-    .navbar-container{
+    .navbar-container {
         width: 100%;
     }
+
     .preview-container {
-        
         margin: 0px;
         padding: 0px;
     }
 
     .preview-page {
-        /* width:fit-content; */
         margin: 0px;
         padding: 0px;
+        width: 100%; /* Fit content to the screen */
+        font-size: x-small;
+    }
+    .preview-page h6{
+        font-size: small;
     }
 
     .preview-image {
@@ -276,20 +240,18 @@ font-weight: bold;
 }
 
 /* Media query for extra small screens (max-width: 320px) */
-
 @media (max-width: 320px) {
-   
     .preview-container {
-        width: 390px;
-        margin: -0px;
-        padding: 0px;
-        font-size: 10px;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        font-size: xx-small;
     }
 
     .preview-page {
-        width:390px;
-        margin: 0px;
-        padding: 0px;
+        width: fit-content;
+        margin: 0;
+        padding: 0;
     }
 
     .preview-image {
@@ -298,44 +260,51 @@ font-weight: bold;
     }
 
     .preview-name {
-        font-size: 18px;
+        font-size: 14px; /* Reduced font size for extra small screens */
     }
-    .preview-details{
+
+    .preview-details {
         width: 100%;
-        margin: 0px;
+        margin: 0;
     }
-.preview-profile-section{
-    width: 40%;
-}
-.preview-details-section{
-    width: 40%;
-}
-.outer{
-    margin: 0px;
-}
+    .preview-container h6{
+        font-size: x-small;
+    }
+    .preview-profile-section,
+    .preview-details-section {
+        width: 100%; /* Use full width for each section on small screens */
+    }
+
+    .outer {
+        margin: 0;
+        flex-direction: row; /* Stack elements vertically */
+        align-items: flex-start;
+        /* border: 1px solid grey; */
+        
+
+         /* Align to the start for better readability */
+    }
 
     .resume-name-input {
-        width: 200px;
+        width: 160px; /* Adjusted width for small screens */
     }
 
     .download-button {
-        font-size: 12px;
-        padding: 8px 10px;
+        font-size: 10px;
+        padding: 6px 8px; /* Adjusted padding for small screens */
     }
 
     .bg-color-picker {
-        width: 50px;
-        height: 25px;
+        width: 40px;
+        height: 20px; /* Adjusted size for small screens */
     }
 
     .font-style-selector {
-        padding: 5px;
-        font-size: 12px;
+        padding: 4px;
+        font-size: 10px;
     }
-    .employment-history{
-        padding: 0px;
+
+    .employment-history {
+        padding: 5px; /* Adjusted padding for small screens */
     }
 }
-
-/* Media query for extra small screens (max-width: 320px) */
-

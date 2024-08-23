@@ -164,30 +164,35 @@
 }
 
 
-@media only screen and (width:320px) {
+@media(min-width:320px) {
     .preview2{
         width: 320px;
         display: flex;
         flex-direction: column;
         font-size: xx-small;
-        margin-left: 15px;
+        /* margin-left: 15px; */
+        margin: auto;
     }
     .main1 {
         display: flex;
         flex-direction: column;
-        margin-top: -310px;
+        margin-top: -290px;
         margin-left: 5px;
         justify-content: center;
         /* width: 170px; */
     }
     .main2{
-        width:170px;
+        width:140px;
     }
     .main {
         border: 1px solid #ccc;
         /* margin-top:1px; */
         display: flex;
         width: fit-content;
+    }
+    .main h1{
+     font-size: small;
+     font-weight: 700;   
     }
     .font-style-selector{
         height: fit-content;
@@ -203,15 +208,16 @@
         height: 80px;
     }
     .maininner3{
-        width: 150px;
+        width: 110px;
     }
     .maininner4{
         width: 150px;
+
     }
     
 
 }
-@media only screen and (width:375px) {
+@media (width:375px) {
     .preview2{
         width: 375px;
         display: flex;
@@ -258,7 +264,7 @@
     
 
 }
-@media only screen and (width:425px) {
+@media (width:425px) {
     .preview2{
         width: 425px;
         display: flex;
@@ -283,6 +289,7 @@
         display: flex;
         width: fit-content;
     }
+    
     .font-style-selector{
         height: fit-content;
     }
@@ -305,7 +312,7 @@
     
 
 }
-@media only screen and (width:768px) {
+@media (width:768px) {
     .preview2{
         width: 768px;
         display: flex;
@@ -329,6 +336,55 @@
         /* margin-top:1px; */
         display: flex;
         width: fit-content;
+    }
+    .font-style-selector{
+        height: fit-content;
+    }
+    .maininner1{
+        width: 250px;
+    }
+    .maininner2 img{
+        width: 150px;
+        height: 150px;
+    }
+    .maininner3{
+        width: 150px;
+    }
+    .maininner4{
+        width: 250px;
+    }
+    
+
+}
+@media (width:1024px) {
+    .preview2{
+        width: 1024px;
+        display: flex;
+        flex-direction: column;
+        font-size: large;
+        margin-left: 15px;
+        padding: 10px;
+    }
+    .preview2 h1{
+        font-size: x-large;
+    }
+    .main1 {
+        display: flex;
+        flex-direction: column;
+        margin-top: -320px;
+        margin-left: 5px;
+        justify-content: center;
+        width: 372px;
+    }
+    .main2{
+        width:370px;
+    }
+    .main {
+        /* border: 1px solid #ccc; */
+        /* margin-top:1px; */
+        display: flex;
+        width: fit-content;
+        padding: 10px;
     }
     .font-style-selector{
         height: fit-content;

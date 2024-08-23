@@ -3,9 +3,11 @@ import html2canvas from 'html2canvas';
 import { useState } from 'react';
 import { useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
-
+import '../previewfolder/CSS/preview11.css'
 const Preview11 = () => {
     const [inputFields, setInputFields] = useState('resume.pdf');
+    const [bgColor, setBgColor] = useState('#F5DEB3'); // Default background color (wheat)
+    const [fontStyle, setFontStyle] = useState('Arial'); // Default font style
 
     const navigate = useNavigate();
     const personalInfo = useSelector((state) => state.reducer.personalInfo[0]);
@@ -57,91 +59,137 @@ const Preview11 = () => {
     };
 
     return (
-        <div className='d-sm-flex justify-content-between' style={{ width: '100%' }}>
-            <div className='d-flex justify-content-between  ' style={{ width: '100%' }} id='Alisha_mirza'>
-                <div className='m' style={{ backgroundColor: '#96d1dbcc' }}>
-                    <div className="text-center " style={{}}>
-                        <h1 style={{ lineHeight: '.5', fontWeight: '800', whiteSpace: 'nowrap' }} className="pt-1">{personalInfo.firstName} {personalInfo.lastName}</h1>
-                        <p style={{ lineHeight: '.5' }}>
-                            {work[0][0].jobtitle}
-                        </p>
-                        <div className="maininner2 p-2" >
-                            <img src={personalInfo.image} className="" alt="Selected" style={{ width: '100px', height: '100px', borderRadius: '50%', border: '5px solid white' }} />
-
-                        </div>
+        <div className="main11">
+            <div className="resume-container" style={{ fontFamily: fontStyle, backgroundColor: bgColor }} id='Alisha_mirza'>
+                <div className="left-section" >
+                    <div className="profile">
+                        <h1>{personalInfo.firstName} {personalInfo.lastName}</h1>
+                        <p>{work[0].map((wor, index) => (
+                            <div key={index}>
+                                <p>{wor.jobtitle}</p>
+                            </div>
+                        ))}</p>
+                        <img src={personalInfo.image} alt="Profile Image" className="profile-img" />
                     </div>
-                    <div className="text-center mt-5">
-                        <h5> <i class="bi bi-person-lines-fill me-2" style={{ color: '#082f36cc' }} />CONTACT</h5>
-                        <p><i class="bi bi-telephone-fill me-2"></i>{personalInfo.mobileNumber}</p>
-                        <p><i class="bi bi-envelope-fill me-2"></i>{personalInfo.email}</p>
-                        <p><i class="bi bi-geo-alt-fill me-2" ></i>{personalInfo.address} {personalInfo.city} {personalInfo.state} {personalInfo.postalCode}</p>
 
+                    <div className="contact-info">
+                        <div className="contact"><i class="bi bi-person-circle me-2 "></i><h3>CONTACT ME</h3></div>
+                        
+                        <p><i className="bi bi-telephone-fill"></i>{personalInfo.mobileNumber}</p>
+                        <p><i className="bi bi-envelope-fill"></i> {personalInfo.email}</p>
+                        <p><i className="bi bi-geo-alt-fill"></i> {personalInfo.city} {personalInfo.state}</p>
                     </div>
-                    <div className=" text-center"  >
-                        <h5 className="mt-5 " ><i class="bi bi-mortarboard-fill me-2" style={{ color: '#082f36cc' }}></i>EDUCATION</h5>
-                        {education[0].map((edu, index) => (
+                    <hr />
+                    <div className="education">
+                    <div className="contact"><i class="bi bi-backpack me-2 "></i><h3>EDUCATION</h3></div>
+                    {education[0].map((edu, index) => (
                             <div key={index} className="">
-                                <p style={{ lineHeight: '1' }}><b> {edu.univercity}</b></p>
-                                <p style={{ lineHeight: '.5' }}>{edu.type}</p>
-                                <p style={{ lineHeight: '.5' }}>{edu.startYear} - {edu.endYear}</p>
+                                <p lassName='work-title10'>{edu.degree}</p>
+                                <p className='work-title10'> {edu.univercity}</p>
+                                <p className='work-title10'>{edu.type}</p>
+                                <p className='work-title10'>{edu.startYear} - {edu.endYear}</p>
                             </div>
                         ))}
                     </div>
-
+                    <hr />
+                    <div className="references">
+                    <div className="contact"><i class="bi bi-translate me-2 "></i><h3>LANGUAGE</h3></div>
+                        {LLanguage[0].map((lan, index) => (
+                            <div key={index}>
+                                <ul>
+                                    <li>
+                                        {lan.language}
+                                    </li>
+                                </ul>
+                            </div>
+                        ))}
+                    </div>
                 </div>
 
-                <div className='ms-2 me-2' style={{ width: '3px', height: '100%', backgroundColor: 'grey' }}></div>
-
-
-                <div>
-                    <div>
-                        <h5><i class="bi bi-file-person-fill me-2" style={{ color: '#082f36cc' }}></i>ABOUT</h5>
+                <div className="right-section">
+                    <div className="about-me">
+                    <div className="contact"><i class="bi bi-vector-pen me-2"></i><h3>OBJECT</h3></div>
                         <p>{personalInfo.object}</p>
                     </div>
-
-                    <div className="jobExperience">
-                        <h5> <i class="bi bi-briefcase-fill me-2" style={{ color: '#082f36cc' }}></i>JOB EXPERIENCE</h5>
+                    <hr />
+                    <div className="job-experience">
+                    <div className="contact"><i class="bi bi-person-workspace me-2 "></i><h3>JOB EXPERIENCE</h3></div>
                         {work[0].map((works, index) => (
-                            <div key={index}>
-                                <p style={{ lineHeight: '.5' }}><b>{works.jobtitle}</b></p>  <p>{works.startYear}-{works.endYear}</p>
-                                <p style={{ lineHeight: '.5' }}>{works.organization} </p>
+                            <div key={index} className='d-flex justify-content-around mt-2 job-experience'>
+                                <div>
+                                    <p className='work-title10'>{works.jobtitle}</p>
+                                    <p className='work-title10'>{works.startYear}-{works.endYear}</p>
+                                    <p className='work-title10' style={{}}>{works.organization} </p>
+                                </div>
                             </div>
                         ))}
+
                     </div>
-                    <div className="">
-                        <h5><i class="bi bi-mortarboard-fill me-2" style={{ color: '#082f36cc' }}></i>SKILLS</h5>
+                    <hr />
+                    <div className="skills">
+                    <div className="contact"><i class="bi bi-gear me-2 "></i><h3>SKILLS</h3></div>
                         {keyskills[0].map((keys, index) => (
-                            <div key={index} className=" d-flex justify-content-between">
-                                <div>  {keys.keyskills}</div>
+
+                            <div className='d-flex justify-content-around ' key={index}>
+                                <div ><p className='mt-2'>{keys.keyskills}</p>
+                                </div>
                                 <div className='' style={lineStyle}></div>
                             </div>
                         ))}
                     </div>
-                    <div>
-                        <div className="">
-                            <h5><i class="bi bi-mortarboard-fill me-2" style={{ color: '#082f36cc' }}></i>LANGUAGE</h5>
-                            {LLanguage[0].map((keys, index) => (
-                                <div key={index} className=" d-flex justify-content-between">
-                                    <div>  {keys.language}</div>
-                                </div>
-                            ))}
-                        </div>
-                        <div className='row'>
-                            <h5 className='mt-5 mb-5' >HOBBIES</h5>
-                            {Hobbies[0].map((keys, index) => (
-                                <div key={index} className="col-6">
-                                    <div className='d-flex justify-content-around'>
-                                        <div ><p>{keys.hobbies}</p> <hr style={{ height: '5px', backgroundColor: 'darkgoldenrod' }} /></div>
-                                    </div>
-                                </div>
-                            ))}
-                        </div>
+
+                    <div className="language-hobbies">
+                        <hr />
+                        <div className="contact"><i class="bi bi-dice-4-fill me-2 "></i><h3>HOBBIES</h3></div>
+                        {Hobbies[0].map((hobb, index) => (
+                            <div key={index}>
+                                <p lassName='work-title10'>{hobb.hobbies}</p>
+                            </div>
+                        ))}
                     </div>
                 </div>
             </div>
-            <div className="d-flex m-sm-3 mt-3" style={{}}>
-                <input type="text" placeholder="enter your resume name" style={{ borderRadius: '5px', padding: '10px' }} onChange={(e) => setInputFields(e.target.value)} />
-                <button onClick={handleDownloadPDF} type="btn" className="btn btn-primary ms-2">Download</button>
+            <div className="resume-download-section">
+                <div className='d-flex'>
+                    <input type="text" placeholder="Enter your resume name" className="resume-name-input" style={{ borderRadius: '5px', padding: '10px' }} onChange={(e) => setInputFields(e.target.value)} />
+                    <button onClick={handleDownloadPDF} type="btn" className="btn btn-primary ms-2 download-button">Download</button>
+                </div>
+
+                {/* Color Picker for Background Color */}
+                <div className='d-flex border' style={{ marginTop: '5px', display: 'flex', flexDirection: 'row', justifyContent: 'center' }}>
+                    <input type="color" placeholder='bg color changer' value={bgColor} onChange={(e) => setBgColor(e.target.value)} className="bg-color-picker ms-2" />
+                    {/* Font Style Selector */}
+                    <select value={fontStyle} onChange={(e) => setFontStyle(e.target.value)} className="font-style-selector ms-2">
+                        <option value="Arial">Arial</option>
+                        <option value="Arial Black">Arial Black</option>
+                        <option value="Verdana">Verdana</option>
+                        <option value="Tahoma">Tahoma</option>
+                        <option value="Trebuchet MS">Trebuchet MS</option>
+                        <option value="Impact">Impact</option>
+                        <option value="Times New Roman">Times New Roman</option>
+                        <option value="Georgia">Georgia</option>
+                        <option value="Palatino Linotype">Palatino Linotype</option>
+                        <option value="Courier New">Courier New</option>
+                        <option value="Lucida Console">Lucida Console</option>
+                        <option value="Lucida Sans Unicode">Lucida Sans Unicode</option>
+                        <option value="Gill Sans">Gill Sans</option>
+                        <option value="Century Gothic">Century Gothic</option>
+                        <option value="Comic Sans MS">Comic Sans MS</option>
+                        <option value="Garamond">Garamond</option>
+                        <option value="Bookman">Bookman</option>
+                        <option value="Arial Narrow">Arial Narrow</option>
+                        <option value="Brush Script MT">Brush Script MT</option>
+                        <option value="Candara">Candara</option>
+                        <option value="Franklin Gothic Medium">Franklin Gothic Medium</option>
+                        <option value="Goudy Old Style">Goudy Old Style</option>
+                        <option value="Herculanum">Herculanum</option>
+                        <option value="Monaco">Monaco</option>
+                        <option value="Optima">Optima</option>
+                        <option value="Perpetua">Perpetua</option>
+                        <option value="Rockwell">Rockwell</option>
+                        <option value="Segoe UI">Segoe UI</option>
+                    </select>
+                </div>
             </div>
         </div>
     )

@@ -51,7 +51,7 @@ const Hobbies = () => {
       const updateInput = [...prev];
       updateInput[index] = {
         ...updateInput[index],
-        [name]: value,
+        [name]: value.toUpperCase(),
       };
       return updateInput;
     });

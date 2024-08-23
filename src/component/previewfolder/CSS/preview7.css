@@ -1,0 +1,172 @@
+/* Main Container */
+.preview-main7 {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Resume Preview Section */
+.resume-preview7 {
+    background-color: inherit;
+    font-family: inherit;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Inner Sections */
+.name-div7, 
+.contact-div7, 
+.education-div7, 
+.skills-div7, 
+.hobbies-div7, 
+.job-experience7, 
+.language7, 
+.resume-download-section {
+    margin-bottom: 20px;
+}
+
+/* Divider */
+.devider7 {
+    width: 3px;
+    background-color: grey;
+    margin: 20px 0;
+}
+
+/* Headings */
+.heading7 {
+    margin-bottom: -10px;
+    white-space: nowrap;
+    font-weight: 700;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .preview-main7 {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+    }
+    .devider7 {
+        display: none;
+    }
+    .resume-preview7 {
+        width: 100%;
+        padding: 10px;
+    }
+    .name-div7 h1 {
+        font-size: 1.5rem;
+        text-align: center;
+    }
+    .contact-div7, 
+    .education-div7, 
+    .skills-div7, 
+    .hobbies-div7, 
+    .job-experience7, 
+    .language7 {
+        padding: 5px;
+        width: 100%;
+        font-size: small;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .resume-preview7 {
+        padding: 20px;
+        max-width: 90%;
+    }
+    .name-div7 h1 {
+        font-size: 2rem;
+    }
+}
+
+@media (min-width: 1025px) {
+    .resume-preview7 {
+        max-width: 80%;
+        padding: 20px;
+    }
+    .name-div7 h1 {
+        font-size: 2.5rem;
+    }
+}
+
+@media (max-width: 425px) {
+    .preview-main7 {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        margin: 0;
+        padding: 0;
+    }
+    .resume-preview7 {
+        width: 100%;
+    }
+    .name-div7 h1 {
+        font-size: 1.2rem;
+        text-align: center;
+    }
+    .contact-div7, 
+    .education-div7, 
+    .skills-div7, 
+    .hobbies-div7, 
+    .job-experience7, 
+    .language7 {
+        padding: 5px;
+        font-size: x-small;
+    }
+}
+
+@media (max-width: 375px) {
+    .preview-main7 {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        margin: 0;
+        padding: 0;
+    }
+    .resume-preview7 {
+        width: 100%;
+    }
+    .name-div7 h1 {
+        font-size: 1rem;
+        text-align: center;
+    }
+    .contact-div7, 
+    .education-div7, 
+    .skills-div7, 
+    .hobbies-div7, 
+    .job-experience7, 
+    .language7 {
+        padding: 5px;
+        font-size: xx-small;
+    }
+}
+
+@media (max-width: 320px) {
+    .preview-main7 {
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        margin: 0;
+        padding: 0;
+    }
+    .resume-preview7 {
+        width: 100%;
+    }
+    .name-div7 h1 {
+        font-size: 0.9rem;
+        text-align: center;
+    }
+    .contact-div7, 
+    .education-div7, 
+    .skills-div7, 
+    .hobbies-div7, 
+    .job-experience7, 
+    .language7 {
+        padding: 3px;
+        font-size: xx-small;
+    }
+}

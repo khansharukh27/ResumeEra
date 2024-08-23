@@ -1,0 +1,528 @@
+.preview10 {
+    display: flex;
+}
+
+.resume-preview10 {
+    display: flex;
+}
+
+.resume-header9 {
+    background-color: grey;
+}
+
+.resume-image-section9 {
+    background-color: black;
+    color: white;
+}
+
+.resume-image9 {
+    width: 120px;
+    height: 120px;
+    margin-top: 60px;
+    margin-left: 5px;
+    background-color: black;
+}
+
+.resume-job-title9 {
+    background-color: black;
+    color: white;
+}
+
+.resume-job-title-text9 {
+    background-color: yellow;
+    color: black;
+    border-radius: 5px;
+}
+
+.resume-education-heading9 {
+    margin-top: 5px;
+}
+.name-div10 h1{
+    white-space: nowrap;
+}
+.image-div10{
+    margin-left: 10px;
+}
+
+.resume-education-divider9,
+.resume-skills-divider9,
+.resume-contact-divider9,
+.resume-experience-divider9,
+.resume-hobbies-divider9,
+.resume-about-divider9,
+.resume-language-divider9 {
+    width: 50px;
+    height: 4px;
+    background-color: yellow;
+}
+.main10{
+    margin-left: 10px;
+}
+.resume-skills9,
+.resume-skill-item9 {
+    display: flex;
+    justify-content: space-between;
+}
+.work-title10,.work-year10,.work-organization10{
+    margin-top: -15px;
+}
+.resume-contact-icon9 {
+    background-color: yellow;
+    border-radius: 5px;
+}
+
+.resume-main9 {
+    margin-left: 10px;
+}
+
+.resume-name9 {
+    padding-top: 5px;
+}
+
+.resume-experience-item9 {
+    display: flex;
+    justify-content: space-between;
+}
+
+.resume-experience-line9 {
+    width: 4px;
+    background-color: yellow;
+}
+
+.resume-about9,
+.resume-about-item9 {
+    display: flex;
+    justify-content: space-between;
+}
+
+.resume-about-line9 {
+    height: 5px;
+    background-color: grey;
+}
+
+.resume-download-section9,
+.resume-download-controls9,
+.resume-settings9 {
+    display: flex;
+    justify-content: center;
+    margin-top: 5px;
+}
+
+.resume-name-input9 {
+    border-radius: 5px;
+    padding: 10px;
+}
+
+.download-button9 {
+    margin-left: 10px;
+}
+
+.bg-color-picker9 {
+    margin-left: 10px;
+}
+
+.font-style-selector9 {
+    margin-left: 10px;
+}
+
+/* preview10.css */
+
+/* Styles for small screens (phones) */
+@media only screen and (max-width: 576px) {
+    .resume-preview9 {
+        padding: 10px;
+        font-size: 12px;
+    }
+
+    .image10 {
+        width: 80px;
+        height: 100px;
+    }
+
+    .jobtite10 {
+        font-size: 14px;
+        margin-top: 20px;
+    }
+
+    .education10, .work-year10, .work-title10 {
+        font-size: 12px;
+    }
+
+    .resume-download-section {
+        flex-direction: column;
+    }
+
+    .resume-name-input, .bg-color-picker, .font-style-selector {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .download-button {
+        width: 100%;
+    }
+}
+
+/* Styles for medium screens (tablets) */
+@media only screen and (min-width: 577px) and (max-width: 768px) {
+    .resume-preview9 {
+        padding: 15px;
+        font-size: 14px;
+    }
+
+    .image10 {
+        width: 100px;
+        height: 130px;
+    }
+
+    .jobtite10 {
+        font-size: 16px;
+        margin-top: 30px;
+    }
+
+    .education10, .work-year10, .work-title10 {
+        font-size: 14px;
+    }
+
+    .resume-download-section {
+        flex-direction: column;
+    }
+
+    .resume-name-input, .bg-color-picker, .font-style-selector {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .download-button {
+        width: 100%;
+    }
+}
+
+/* Styles for large screens (desktops) */
+@media only screen and (min-width: 769px) {
+    .resume-preview9 {
+        padding: 20px;
+        font-size: 16px;
+    }
+
+    .image10 {
+        width: 140px;
+        height: 180px;
+    }
+
+    .jobtite10 {
+        font-size: 18px;
+        margin-top: 40px;
+    }
+
+    .education10, .work-year10, .work-title10 {
+        font-size: 16px;
+    }
+
+    .resume-download-section {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .resume-name-input {
+        width: 60%;
+    }
+
+    .bg-color-picker, .font-style-selector {
+        width: auto;
+    }
+
+    .download-button {
+        width: auto;
+    }
+}
+@media only screen and (max-width: 425px) {
+    .resume-preview9 {
+        padding: 5px;
+        font-size: x-small;
+        margin-right: 0px;
+        margin-left: 0px;
+    }
+    .resume-preview9 h1{
+        font-size: large;
+    }
+    .resume-preview9 h5{
+        font-size: small;
+    }
+    .image10 {
+        width: 120px;
+        height: 160px;
+    }
+    .work-year10{
+        font-size: xx-small;
+    }
+    .work-title10{
+        font-size: xx-small;
+    }
+    .main1-div10{
+        padding: 5px;
+        /* width: 200px; */
+        margin-left: 0px;
+        margin-right: 0px;
+    }
+
+    .jobtite10 {
+        font-size: xx-small;
+        margin-top: 40px;
+    }
+
+    .education10, .work-year10, .work-title10 {
+        font-size: 16px;
+    }
+
+    .resume-download-section {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .resume-name-input {
+        width: 60%;
+    }
+
+    .bg-color-picker, .font-style-selector {
+        width: auto;
+    }
+
+    .download-button {
+        width: auto;
+    }
+}
+@media only screen and (max-width: 375px) {
+    .resume-preview10 {
+        padding: 5px;
+        font-size: xx-small;
+        margin-right: 0px;
+        margin-left: 0px;
+        width: 375px;
+    }
+    .resume-preview9 h1{
+        font-size: small;
+    }
+    .resume-preview9 h5{
+        font-size: x-large;
+    }
+    .image10 {
+        width: 100px;
+        height: 160px;
+        margin-left: px;
+    }
+    .work-year10{
+        font-size: xx-small;
+    }
+    .work-title10{
+        font-size: xx-small;
+    }
+    .main10{
+       margin-left: 0px; 
+       width: fit-content;
+       /* text-align: center; */
+       padding-left: 10px;
+       padding-right: 10px;
+       margin-right: 5px;
+    }
+    .main1-div10{
+        padding: 0px;
+        /* width: 200px; */
+        margin-left: -0px;
+        margin-right: -0px;
+        width: 100%;
+    }
+    .name-div10  p{
+        font-size: small;
+    }
+    .name-div10 h1{
+        font-size: medium;
+    }
+
+    .jobtite10 {
+        font-size: xx-small;
+        margin-top: 40px;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+
+    .education10, .work-year10, .work-title10 {
+        font-size: 16px;
+    }
+
+    .resume-download-section {
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .resume-name-input {
+        width: 60%;
+    }
+
+    .bg-color-picker, .font-style-selector {
+        width: auto;
+    }
+
+    .download-button {
+        width: auto;
+    }
+}
+@media only screen and (max-width: 375px) {
+    .resume-preview10 {
+        padding: 5px;
+        font-size: xx-small;
+        margin-right: 0px;
+        margin-left: 0px;
+        width: 375px;
+    }
+    .resume-preview9 h1{
+        font-size: small;
+    }
+    .resume-preview9 h5{
+        font-size: x-large;
+    }
+    .image10 {
+        width: 100px;
+        height: 160px;
+        margin-left: px;
+    }
+    .work-year10{
+        font-size: xx-small;
+    }
+    .work-title10{
+        font-size: xx-small;
+    }
+    .main10{
+       margin-left: 0px; 
+       width: fit-content;
+       /* text-align: center; */
+       padding-left: 10px;
+       padding-right: 10px;
+       margin-right: 5px;
+    }
+    .main1-div10{
+        padding: 0px;
+        /* width: 200px; */
+        margin-left: -0px;
+        margin-right: -0px;
+        width: 100%;
+    }
+    .name-div10  p{
+        font-size: small;
+    }
+    .name-div10 h1{
+        font-size: medium;
+    }
+
+    .jobtite10 {
+        font-size: xx-small;
+        margin-top: 40px;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+
+    .education10, .work-year10, .work-title10 {
+        font-size: 16px;
+    }
+
+    .resume-download-section {
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .resume-name-input {
+        width: 60%;
+    }
+
+    .bg-color-picker, .font-style-selector {
+        width: auto;
+    }
+
+    .download-button {
+        width: auto;
+    }
+}
+@media (max-width: 320px) {
+    .resume-preview10 {
+        padding: 0px;
+        font-size: xx-small;
+        margin-right: 0px;
+        margin-left: 0px;
+        width: 370px;
+    }
+    .resume-preview9 h1{
+        font-size: small;
+    }
+    .resume-preview9 h5{
+        font-size: x-small;
+    }
+    .image-div10{
+        width: 100px;
+    }
+    .imagediv-inner10 img {
+        width: 20px;
+        height: 120px;
+        margin-left: 0px;
+    }
+    .work-year10{
+        font-size: xx-small;
+    }
+    .work-title10{
+        font-size: xx-small;
+    }
+    .main10{
+       margin-left: 0px; 
+       width: 100;
+       /* text-align: center; */
+       /* padding-left: 10px; */
+       /* padding-right: 10px; */
+       margin-right: 5px;
+    }
+    .main10 h5{
+        font-size: small;
+    }
+    .main1-div10{
+        padding: 0px;
+        /* width: 200px; */
+        margin-left: -0px;
+        margin-right: -0px;
+        width: 100%;
+    }
+    .name-div10  p{
+        font-size: xx-small;
+    }
+    .name-div10 h1{
+        font-size: small;
+    }
+
+    .jobtite10 {
+        font-size: xx-small;
+        margin-top: 40px;
+        padding-left: 5px;
+        padding-right: 5px;
+    }
+    .main2-10 h5{
+        font-size: small;
+    }
+
+    .education10, .work-year10, .work-title10 {
+        font-size: x-small;
+    }
+
+    .resume-download-section {
+        flex-direction: column;
+        justify-content: space-between;
+        width: 370px;
+    }
+
+    .resume-name-input {
+        width: 60%;
+    }
+
+    .bg-color-picker, .font-style-selector {
+        width: auto;
+    }
+
+    .download-button {
+        width: auto;
+    }
+}

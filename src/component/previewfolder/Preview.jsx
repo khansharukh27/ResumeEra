@@ -60,7 +60,7 @@ const Preview = () => {
                         {personalInfo.address} {personalInfo.city} {personalInfo.state} {personalInfo.postalCode}
                     </span>
                 </div>
-                <div className="d-flex me-5 ms-4 preview-details">
+                <div className="d-flex preview-details">
                     <div className="me-4 text-center preview-details-section">
                         <div className='d-flex outer'>
                             <div className='emptydiv'></div><h6 className="details-title">Detail</h6><div className='emptydiv'></div>

@@ -47,7 +47,6 @@ const Preview2 = () => {
 
     return (
         <div className="preview2" >
-
             <div className=" main" id="Alisha_mirza" style={{ backgroundColor: bgColor, fontFamily: fontStyle }}>
                 <div className="main1">
                     <div className="maininner1">
@@ -98,7 +97,7 @@ const Preview2 = () => {
                         </div>
                         <div className="d-sm-flex justify-content-between">
                             <div className="language-section">
-                                <h4><i className="bi bi-translate me-2" />Language</h4>
+                                <h1><i className="bi bi-translate me-2" />Language</h1>
                                 {LLanguage && LLanguage[0].map((lan, index) => (
                                     <div key={index}>
                                         <ul>
@@ -108,7 +107,7 @@ const Preview2 = () => {
                                 ))}
                             </div>
                             <div className="hobbies-section">
-                                <h4><i className="bi bi-joystick me-2" />Hobbies</h4>
+                                <h1><i className="bi bi-joystick me-2" />Hobbies</h1>
                                 {Hobbies && Hobbies[0].map((hobb, index) => (
                                     <div key={index}>
                                         <ul>
