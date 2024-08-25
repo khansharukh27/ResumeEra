@@ -1,10 +1,485 @@
-@media screen and (max-width: 650px){
-    .main12{
-        width: 650px;
+
+.image-profile-div12{
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    position: absolute;
+    top: 300px;
+    left: 650px;
+}
+.image-profile12{
+    width: 280px;
+    height: 280px;
+    border-radius: 50%;
+    position: absolute;
+    
+}
+.workTitle-div12{
+    white-space: nowrap;
+    font-size: xx-large;
+}
+ h1{
+    font-size: xx-large;
+}
+.job-exe12{
+    margin-left: 8px;
+}
+.objective-div12{
+    font-size: small;
+}
+.contact-card12{
+    margin-left: 8px;
+    margin-right: 0px;
+    padding-left: 8px;
+    padding-right: 8px;
+    margin-top: 130px;
+}
+.skill12 .row .col-6{
+    display: flex;
+    justify-content: space-evenly;
+}
+.about1-inner12{
+    white-space: nowrap;
+}
+/* Styles for smaller screens */
+@media  (max-width: 1440px) {
+    .main12 {
+        flex-direction: row;
+        height: auto;
+    }
+
+    .resume-12 {
+        width: 100%;
+    }
+
+    .main12-1 {
+        flex-direction: row;
+        height: auto;
+        padding: 1rem;
+    }
+
+    .objective-div12 {
+        width: 100%;
+        text-align: center;
+    }
+
+    .workTitle-div12 {
+        text-align: center;
+        font-size: 1.5rem;
+        line-height: 1.2;
+        margin-top: 1rem;
+    }
+
+    .workTitle-div12 h1 {
+        font-size: 2rem;
+    }
+    .image-profile-div12{
+        width: 250px;
+        height: 250px;
+        border-radius: 50%;
+        top: 120px;
+        left: 720px;
+    }
+    .image-profile12{
+        width: 230px;
+        height: 230px;
+        margin-top: 50px;
+        top: -50px;
+        left: -0px;
+    }
+
+    .main12 .resume-download-section {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 2rem;
+    }
+
+    .resume-download-section .resume-name-input {
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+
+    .resume-download-section .download-button {
+        width: 100%;
+    }
+
+    .bg-color-picker, .font-style-selector {
+        width: 100%;
+        margin-top: 1rem;
+    }
+    .about1-inner12 {
+        white-space: nowrap;
     }
 }
-@media screen and(min-width:650px) and (max-width:1366px) {
-    .main12{
-        width: 1366px;
+
+@media  (max-width: 1024px) {
+    .main12 {
+        flex-direction: row;
+        height: auto;
     }
+
+    .resume-12 {
+        width: 100%;
+    }
+
+    .main12-1 {
+        flex-direction: row;
+        height: auto;
+        padding: 1rem;
+    }
+
+    .objective-div12 {
+        width: 100%;
+        text-align: center;
+    }
+
+    .workTitle-div12 {
+        text-align: center;
+        font-size: 1.5rem;
+        line-height: 1.2;
+        margin-top: 1rem;
+    }
+
+    .workTitle-div12 h1 {
+        font-size: 2rem;
+    }
+    .image-profile-div12{
+        width: 250px;
+        height: 250px;
+        border-radius: 50%;
+        top: 220px;
+        left: 480px;
+    }
+    .image-profile12{
+        width: 230px;
+        height: 230px;
+        margin-top: 50px;
+        top: -50px;
+        left: -0px;
+    }
+
+    .main12 .resume-download-section {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 2rem;
+    }
+
+    .resume-download-section .resume-name-input {
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+
+    .resume-download-section .download-button {
+        width: 100%;
+    }
+
+    .bg-color-picker, .font-style-selector {
+        width: 100%;
+        margin-top: 1rem;
+    }
+}
+
+@media  (max-width: 768px) {
+    .main12 {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .resume-12 {
+        width: 100%;
+    }
+
+    .main12-1 {
+        flex-direction: row;
+        height: auto;
+        padding: 1rem;
+    }
+
+    .objective-div12 {
+        width: 100%;
+        text-align: center;
+    }
+
+    .workTitle-div12 {
+        text-align: center;
+        font-size: 1.5rem;
+        line-height: 1.2;
+        margin-top: 1rem;
+    }
+
+    .workTitle-div12 h1 {
+        font-size: 2rem;
+    }
+    .image-profile-div12{
+        width: 250px;
+        height: 250px;
+        border-radius: 50%;
+        top: 220px;
+        left: 480px;
+    }
+    .image-profile12{
+        width: 230px;
+        height: 230px;
+        margin-top: 50px;
+        top: -50px;
+        left: -0px;
+    }
+
+    .main12 .resume-download-section {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 2rem;
+    }
+
+    .resume-download-section .resume-name-input {
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+
+    .resume-download-section .download-button {
+        width: 100%;
+    }
+
+    .bg-color-picker, .font-style-selector {
+        width: 100%;
+        margin-top: 1rem;
+    }
+}
+
+/* Styles for very small screens (mobile devices) */
+@media (max-width: 425px) {
+    .resume-12{
+        width: 425px;
+        font-size: xx-small;
+        height: fit-content;
+    }
+    .objective-div12{
+        height:50%;
+    }
+    .resume-12 h5{
+        font-size: small;
+    }
+    .resume-12 h1{
+        font-size: large;
+    }
+    .workTitle-div12 h1{
+        font-size: x-small;
+    }
+    .main12-1 {
+        padding: 0.5rem;
+        font-size: small;
+        width: fit-content;
+        height: 70%;
+        /* margin-bottom: 40px; */
+    }
+    .image-profile-div12{
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        top: 180px;
+        left: 260px;
+    }
+    .image-profile12{
+        width: 130px;
+        height: 130px;
+        margin-top: 50px;
+        top: -50px;
+        left: -0px;
+    }
+
+    .workTitle-div12 h1 {
+        font-size: medium;
+    }
+
+    .workTitle-div12 p {
+        font-size: x-small;
+    }
+    .contact-card12{
+        margin-top: 30px;
+    }
+
+    .objective-div12 ,
+    .resume-download-section h5 {
+        font-size: xx-small;
+    }
+
+    .resume-download-section .resume-name-input {
+        padding: 0.5rem;
+    }
+
+    .resume-download-section .download-button {
+        padding: 0.5rem;
+    }
+
+    .resume-download-section {
+        padding: 0.5rem;
+    }
+}
+
+@media (max-width: 375px) {
+    .resume-12{
+        width: 320px;
+        font-size: xx-small;
+        height: fit-content;
+    }
+    .objective-div12{
+        height:50%;
+    }
+    .resume-12 h5{
+        font-size: small;
+        font-weight: 700;
+    }
+    .resume-12 h1{
+        font-size: large;
+    }
+    
+    .job-experience12 h5{
+font-size: x-small;
+    }
+    .job-experience12 p{
+        font-size: xx-small;
+        white-space: none;
+    }
+    .job-experience12{
+        width: 40%;
+    }
+    .main12-1 {
+        padding: 0.5rem;
+        font-size: small;
+        width: fit-content;
+        height: 70%;
+        /* margin-bottom: 40px; */
+    }
+    .image-profile-div12{
+        width: 140px;
+        height: 140px;
+        border-radius: 50%;
+        top: 190px;
+        left: 220px;
+    }
+    .image-profile12{
+        width: 120px;
+        height: 120px;
+        margin-top: 50px;
+        top: -50px;
+        left: -0px;
+    }
+
+    .workTitle-div12 h3 {
+        font-size: small;
+    }
+
+    .workTitle-div12 p {
+        font-size: x-small;
+        white-space: none;
+    }
+    .contact-card12{
+        margin-top: 30px;
+        margin-left: -00px;
+    margin-right: 0px;
+    padding-left: 8px;
+    padding-right: 8px;
+    /* margin-top: 130px; */
+    }
+    .skill12 .row .col-6{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+    .job-exe12{
+        width: 120%;
+        margin-right: 10px;
+        padding-right: 15px;
+    }
+
+    .objective-div12 ,
+    .resume-download-section h5 {
+        font-size: xx-small;
+    }
+
+   
+}
+
+@media (max-width: 320px) {
+    .resume-12{
+        width: 320px;
+        font-size: xx-small;
+        height: fit-content;
+    }
+    .objective-div12{
+        height:50%;
+    }
+    .resume-12 h5{
+        font-size: small;
+        font-weight: 700;
+    }
+    .resume-12 h1{
+        font-size: large;
+    }
+    
+    .job-experience12 h5{
+font-size: x-small;
+    }
+    .job-experience12 p{
+        font-size: xx-small;
+        white-space: none;
+    }
+    .job-experience12{
+        width: 40%;
+    }
+    .main12-1 {
+        padding: 0.5rem;
+        font-size: small;
+        width: fit-content;
+        height: 70%;
+        /* margin-bottom: 40px; */
+    }
+    .image-profile-div12{
+        width: 140px;
+        height: 140px;
+        border-radius: 50%;
+        top: 260px;
+        left: 170px;
+    }
+    .image-profile12{
+        width: 120px;
+        height: 120px;
+        margin-top: 50px;
+        top: -50px;
+        left: -0px;
+    }
+
+    .workTitle-div12 h3 {
+        font-size: small;
+    }
+
+    .workTitle-div12 p {
+        font-size: x-small;
+        white-space: none;
+    }
+    .contact-card12{
+        margin-top: 30px;
+        margin-left: -030px;
+    margin-right: 0px;
+    padding-left: 8px;
+    padding-right: 8px;
+    /* margin-top: 130px; */
+    }
+    .skill12 .row .col-6{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+    .job-exe12{
+        width: 120%;
+        margin-right: 10px;
+        padding-right: 15px;
+    }
+
+    .objective-div12 ,
+    .resume-download-section h5 {
+        font-size: xx-small;
+    }
+
+   
 }
