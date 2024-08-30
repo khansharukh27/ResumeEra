@@ -1,303 +1,382 @@
-@media only screen and (max-width:1200px) {
-    .container {
+@media only screen and (min-width: 1024px) {
+    .container3 {
         display: flex;
+        flex-direction: row;
         justify-content: space-between;
+        flex-grow: 1;
     }
-    
+
     .resume-wrapper {
         display: flex;
+        flex-direction: row;
         justify-content: space-between;
         border: 1px solid #ccc;
-        /* padding: 16px; */
+        flex-grow: inherit;
+        font-size: large;
     }
-    .imagediv{
-    position: relative;
-    
+
+    .imagediv3 {
+        position: relative;
+        width: 200px;
+        height: 200px;
+        /* border: 5px solid red; */
     }
-    .image3{
-    position: absolute;
-    top: 15px;
-    left: 25px;
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
-    
+
+    .image3 {
+        position: absolute;
+        top: 45px;
+        left: 40;
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
     }
-    .contactdiv{
+
+    .contactdiv {
         margin-top: 170px;
     }
-    
+
     .sidebar {
-        /* margin-left: 12px; */
-        padding: 16px;
+        padding: 25px;
         background-color: #100129;
         color: white;
+        font-size: large;
+        width: 40%;
     }
-    
+
     .profile-img {
         margin: 12px;
         width: 150px;
         height: 150px;
         border-radius: 50%;
     }
-    
+
     .section-title {
         text-align: start;
         margin-top: 16px;
         color: white;
         background-color: #100129;
     }
-    
+
+    .sidebar h6 {
+        font-size: x-large;
+        font-weight: 900;
+    }
+
     .icon {
         font-size: 1.5rem;
     }
-    
+
     .email {
-        word-wrap: break-word;
+        /* white-space: nowrap; */
     }
-    
+
     .main-content {
         margin-left: 16px;
+        width: 60%;
+        font-size: large;
     }
-    
+
+    .main-content h6 {
+        font-size: x-large;
+        font-weight: 900;
+    }
+
     .work-experience p {
         font-weight: bold;
     }
-    
+
     .download-section {
         display: flex;
         margin: 12px 0;
     }
-    
+
     .input-field {
         border-radius: 5px;
         padding: 10px;
     }
-    
+
     .download-button {
         margin-left: 8px;
     }
-    
 }
 
-@media only screen and (max-width:425px) {
+@media only screen and (max-width: 768px) {
     .container {
         display: flex;
-        justify-content: space-between;
-        width: 425px;
+        flex-direction: row;
+        width: 768px;
     }
-    
+
     .resume-wrapper {
         display: flex;
+        flex-direction: row;
         justify-content: space-between;
         border: 1px solid #ccc;
-        /* padding: 16px; */
-        width: 425px;
-        font-size: x-small;
+        font-size: medium;
     }
-    .imagediv{
-    position: relative;
-    width: 150px;
-    
+
+    .imagediv {
+        position: relative;
+        width: 150px;
     }
-    .image3{
-    position: absolute;
-    top: 25px;
-    left: 45px;
-    width: 100px;
-    height: 100px;
-    
+
+    .image3 {
+        position: absolute;
+        top: 150px;
+        left: 20px;
+        width: 100px;
+        height: 100px;
     }
-    .contactdiv{
+
+    .contactdiv {
         margin-top: 170px;
         width: 150px;
     }
-    
+
     .sidebar {
-        /* margin-left: 12px; */
-        /* padding: 16px; */
         background-color: #100129;
         color: white;
+        padding-left: 5px;
+        padding-right: 5px;
+        width: 40%;
     }
-    
-    .image3 {
-        margin: 12px;
-        width: 100px;
-        height: 100px;
-        border-radius: 50%;
-        top: 15px;
-        left: 10%;
-    }
-    
+
     .section-title {
         text-align: start;
         margin-top: 16px;
         color: white;
         background-color: #100129;
     }
-    
+
     .icon {
         font-size: 1.5rem;
     }
-    
+
     .email {
-        word-wrap: break-word;
+        /* word-wrap: break-word; */
+        /* white-space: nowrap; */
+
     }
-    
+
     .main-content {
         margin-left: 16px;
+        width: 60%;
     }
-    .main-content h4{
+
+    .main-content h4 {
         margin-top: 10px;
-        line-height: .4;
+        line-height: 0.4;
     }
 }
 
-@media only screen and (max-width:375px) {
+@media only screen and (max-width: 425px) {
     .container {
         display: flex;
         justify-content: space-between;
-        width: 375px;
+        width: 425px;
     }
-    
+
     .resume-wrapper {
         display: flex;
+        flex-direction: row;
         justify-content: space-between;
         border: 1px solid #ccc;
-        /* padding: 16px; */
-        width: 375px;
+        width: 425px;
         font-size: x-small;
     }
-    .imagediv{
-    position: relative;
-    width: 150px;
-    
+
+    .imagediv {
+        position: relative;
+        width: 150px;
     }
-    .image3{
-    position: absolute;
-    top: 25px;
-    left: 45px;
-    width: 100px;
-    height: 100px;
-    
+
+    .image3 {
+        position: absolute;
+        top: 180px;
+        left: 30px;
+        width: 100px;
+        height: 100px;
     }
-    .contactdiv{
+
+    .contactdiv {
         margin-top: 170px;
         width: 150px;
     }
-    
+
     .sidebar {
-        /* margin-left: 12px; */
-        /* padding: 16px; */
         background-color: #100129;
         color: white;
+        padding-right: 5px;
+        padding-left: 5px;
     }
-    
-    .image3 {
-        margin: 12px;
-        width: 100px;
-        height: 100px;
-        border-radius: 50%;
-        top: 15px;
-        left: 10%;
-    }
-    
+
     .section-title {
         text-align: start;
         margin-top: 16px;
         color: white;
         background-color: #100129;
     }
-    
+
     .icon {
         font-size: 1.5rem;
     }
-    
+
     .email {
         word-wrap: break-word;
     }
-    
+
     .main-content {
         margin-left: 16px;
     }
-    .main-content h4{
+
+    .main-content h4 {
         margin-top: 10px;
-        line-height: .4;
+        line-height: 0.4;
     }
 }
 
-@media only screen and (max-width:320px) {
+@media (max-width: 374px) {
     .container {
         display: flex;
+        flex-direction: column;
         justify-content: space-between;
-        width: 320px;
+        width: 375px;
     }
-    
+
     .resume-wrapper {
         display: flex;
         justify-content: space-between;
         border: 1px solid #ccc;
-        /* padding: 16px; */
-        width: 320px;
+        width: 375px;
         font-size: x-small;
     }
-    .imagediv{
-    position: relative;
-    width: 110px;
-    
+    .imagediv {
+        position: relative;
+        width: 150px;
     }
-    .image3{
-    position: absolute;
-    top: 25px;
-    right: 5px;
-    width: 100px;
-    height: 100px;
-    
+    .image3 {
+        position: absolute;
+        top: 200px;
+        left: 10px;
+        width: 100px;
+        height: 100px;
     }
-    .contactdiv{
+    .contactdiv {
         margin-top: 170px;
+        width: 150px;
+    }
+    .sidebar {
+        padding-left: 16px;
+        padding-right: 5px;
+        background-color: #100129;
+        color: white;
+        width: 40%;
+    }
+    .section-title {
+        text-align: start;
+        margin-top: 16px;
+        color: white;
+        background-color: #100129;
+    }
+    .icon {
+        font-size: 1.5rem;
+    }
+    .email {
+        word-wrap: break-word;
+    }
+    .main-content {
+        margin-left: 16px;
+        text-align: justify;
+        margin-right: 4px;
+        width: 60%;
+    }
+
+    .main-content h4 {
+        margin-top: 10px;
+        line-height: 0.4;
+        text-align: start;
+    }
+}
+
+@media only screen and (max-width: 321px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+        width: 320px;
+        text-align: justify;
+    }
+
+    .resume-wrapper {
+        display: flex;
+        justify-content: space-between;
+        border: 1px solid #ccc;
+        width: 320px;
+        font-size: x-small;
+        margin-left: 0;
+    }
+
+    .imagediv3 {
+        position: relative;
         width: 110px;
+        height: 110px;
+        align-items: start;
+        margin-right: 20px;
     }
-    
+
+    .image3 {
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        width: 80px;
+        height: 80px;
+    }
+
+    .contactdiv {
+        margin-top: 10px;
+        width: 110px;
+        padding-left: 15px;
+        padding-right: 5px;
+    }
+
     .sidebar {
-        /* margin-left: 12px; */
-        /* padding: 16px; */
+        position: relative;
+        margin-left: 0;
+        padding-left: 0px;
         background-color: #100129;
         color: white;
+        white-space: 40%;
     }
-    
-    .image3 {
-        margin: 12px;
-        width: 100px;
-        height: 100px;
-        border-radius: 50%;
-        top: 15px;
-        left: 10%;
-    }
-    
+
     .section-title {
         text-align: start;
         margin-top: 16px;
         color: white;
         background-color: #100129;
     }
-    
+
     .icon {
         font-size: 1.5rem;
     }
-    
+
     .email {
-        word-wrap: break-word;
+        word-wrap:break-word;
     }
-    
+
     .main-content {
-        margin-left: 16px;
+        margin-left: 5px;
+        text-align: justify;
+        width: 60%;
     }
-    .main-content h4{
+
+    .main-content h4 {
         margin-top: 10px;
-        line-height: .4;
+        line-height: 0.4;
         font-size: small;
         white-space: nowrap;
         font-weight: bold;
+        margin-bottom: 0px;
+    }
+    .contactdiv h6{
+        margin-bottom: -15px;
     }
 }

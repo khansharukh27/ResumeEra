@@ -22,22 +22,30 @@ const Preview2 = () => {
         const element = document.getElementById('Alisha_mirza');
 
         try {
-            const canvas = await html2canvas(element);
-            const pdf = new jsPDF('span', 'mm', 'a4');
-            pdf.addImage(canvas.toDataURL('image/png'), 'PNG', 0, 0, 210, 297);
-
+            const scale = 5; // Increase the scale for better resolution
+            const canvas = await html2canvas(element, {
+                scale: scale, 
+                useCORS: true, // Allows cross-origin images to be rendered correctly
+                logging: true, // Enable logging for debugging
+            });
+    
+            const pdf = new jsPDF('p', 'mm', 'a4');
+            const imgData = canvas.toDataURL('image/png');
+    
+            // Calculate the aspect ratio to fit A4
+            const imgWidth = 210; // A4 width in mm
+            const imgHeight = (canvas.height * imgWidth) / canvas.width;
+    
+            pdf.addImage(imgData, 'PNG', 0, 0, imgWidth, imgHeight, undefined, 'FAST');
+    
             const fileName = `${inputFields}.pdf`;
-
-            const downloadLink = document.createElement('a');
-            downloadLink.href = pdf.output('bloburl');
-            downloadLink.download = fileName;
-            downloadLink.click();
-
-            const imageDataUrl = canvas.toDataURL('image/png');
+            pdf.save(fileName);
+    
+            // Store the image data URL in localStorage
             const savedResumes = JSON.parse(localStorage.getItem('savedResumes')) || [];
-            savedResumes.push(imageDataUrl);
+            savedResumes.push(imgData);
             localStorage.setItem('savedResumes', JSON.stringify(savedResumes));
-
+    
             alert('Your Resume is downloaded');
             navigate('/myresume');
         } catch (error) {
@@ -122,21 +130,14 @@ const Preview2 = () => {
             </div>
             <div className="resume-download-section">
                 <div className='d-flex'>
-                    <input type="text" placeholder="Enter your resume name" className="resume-name-input" onChange={(e) => setInputFields(e.target.value)} />
-                    <button onClick={handleDownloadPDF} type="button" className="btn btn-primary download-button">Download</button>
+                    <input type="text" placeholder="Enter your resume name" className="resume-name-input" style={{ borderRadius: '5px', padding: '10px' }} onChange={(e) => setInputFields(e.target.value)} />
+                    <button onClick={handleDownloadPDF} type="btn" className="btn btn-primary ms-2 download-button">Download</button>
                 </div>
-                <div className='d-flex bg-color-picker'>
-                    <div className="color-picker-container">
-                        <span className="color-picker-label">Color Picker</span>
-                        <input
-                            type="color"
-                            value={bgColor}
-                            onChange={(e) => setBgColor(e.target.value)}
-                            className="color"
-                            id="colorPicker"
-                        />
-                    </div>
 
+                {/* Color Picker for Background Color */}
+                <div className=' ' style={{ marginTop: '5px', display: 'flex', flexDirection: 'row', justifyContent: 'center' }}>
+                    <input type="color" placeholder='bg color changer' value={bgColor} onChange={(e) => setBgColor(e.target.value)} className="bg-color-picker ms-2" />
+                    {/* Font Style Selector */}
                     <select value={fontStyle} onChange={(e) => setFontStyle(e.target.value)} className="font-style-selector ms-2">
                         <option value="Arial">Arial</option>
                         <option value="Arial Black">Arial Black</option>

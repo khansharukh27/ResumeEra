@@ -4,9 +4,11 @@ import { useState } from 'react';
 import { useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import './CSS/preview14.css'
-
+import imagepng from './imagepng.png'
 const Preview14 = () => {
     const [inputFields, setInputFields] = useState('resume.pdf');
+    const [bgColor, setBgColor] = useState('#F5DEB3'); // Default background color (wheat)
+    const [fontStyle, setFontStyle] = useState('Arial'); // Default font style
 
     const navigate = useNavigate();
     const personalInfo = useSelector((state) => state.reducer.personalInfo[0]);
@@ -19,37 +21,48 @@ const Preview14 = () => {
     const result = useSelector((state) => [state.reducer])
     console.log('reducer:-', result)
 
-
     const handleDownloadPDF = async () => {
-        const element = document.getElementById('Alisha_mirza');
-
+        const element = document.getElementById('Alisha_mirza14');
+    
         try {
-            const canvas = await html2canvas(element);
+            const scale = 5; // Increase the scale for better resolution
+            console.log('Rendering element with id:', element.id);
+            
+            const canvas = await html2canvas(element, {
+                scale: scale,
+                useCORS: true,
+                logging: true,
+                backgroundColor: null,
+            });
+    
+            console.log('Canvas rendered:', canvas);
+            
             const pdf = new jsPDF('p', 'mm', 'a4');
-            pdf.addImage(canvas.toDataURL('image/png'), 'PNG', 0, 0, 210, 297);
-
-            // Set the file name here
-            const fileName = `${inputFields}.pdf`;
-
-            // Save the PDF file using a download link
-            const downloadLink = document.createElement('a');
-            downloadLink.href = pdf.output('bloburl');
-            downloadLink.download = fileName;
-            downloadLink.click();
-
-            // Save the image data in local storage
-            const imageDataUrl = canvas.toDataURL('image/png');
+            const imgData = canvas.toDataURL('image/png');
+            console.log('Image data URL:', imgData);
+    
+            const imgWidth = 210;
+            const imgHeight = (canvas.height * imgWidth) / canvas.width;
+            
+            pdf.addImage(imgData, 'PNG', 0, 0, imgWidth, imgHeight, undefined, 'FAST');
+            
+            const fileName = `${inputFields || 'resume'}.pdf`;
+            console.log('Saving PDF with filename:', fileName);
+            pdf.save(fileName);
+    
             const savedResumes = JSON.parse(localStorage.getItem('savedResumes')) || [];
-            savedResumes.push(imageDataUrl);
+            savedResumes.push(imgData);
             localStorage.setItem('savedResumes', JSON.stringify(savedResumes));
-
+    
             alert('Your Resume is downloaded');
             navigate('/myresume');
+    
         } catch (error) {
             console.error('Error downloading PDF:', error);
+            alert('An error occurred while downloading your resume.');
         }
     };
-
+    
     const lineStyle = {
         height: '5px',
         width: '75%',
@@ -61,17 +74,17 @@ const Preview14 = () => {
 
     return (
         <div className=' d-sm-flex justify-content-between main14'>
-            <div className='d-flex justify-content-between border' id='Alisha_mirza'>
-                <div>
-                    <div className='d-flex ms-5' style={{ backgroundColor: 'yellow', width: '180px', height: '180px', border: '10px solid white', borderRadius: '50%' }}>
-                        <img src={personalInfo.image} className=" " alt="Selected" style={{ width: '150px', height: '150px', borderRadius: '50%', marginLeft: '5px', marginTop: '5px' }} />
-
+            <div className='' id='Alisha_mirza14' style={{ backgroundColor: bgColor, fontFamily: fontStyle}}>
+               <div className='d-flex justify-content-between faltu14'>
+                <div className='main1-14 '>
+                    <div className='d-flex images14 mt-2 ms-2' style={{}}>
+                        <img src={personalInfo.image} className=" " alt="Selected" style={{}} />
                     </div>
-
-                    <div className='ms-5 mt-1 local'>
-                        <div className='localinner'></div>
-                        <div>
-                            <h1 className="-5" style={{ lineHeight: '.5', whiteSpace: 'nowrap', fontWeight: '500' }}>{personalInfo.firstName}  </h1>
+                    <div className=' mt-2 local'>
+                        <img className='circle-div' src={imagepng} alt="png" style={{ width: '10px', height: '10px' }} />
+                        <div className='localinner'></div>                        
+                        <div className='mt-4'>
+                            <h1 className="" style={{ lineHeight: '.5', whiteSpace: 'nowrap', fontWeight: '500' }}>{personalInfo.firstName}  </h1>
                             <h1 style={{ fontWeight: '800' }}>{personalInfo.lastName}</h1>
                             <p className=''>
                                 {work[0][0].jobtitle}
@@ -79,71 +92,72 @@ const Preview14 = () => {
                         </div>
 
                     </div>
-                    <div className='ms-5 mt-5 local'>
+                    <div className=' local '>
+                        <img className='circle-div' src={imagepng} alt="png" style={{ width: '10px', height: '10px' }} />
                         <div className='localinner'></div>
-                        <div>
-                            <h5 className=' mb-4'><i class="bi bi-person-lines-fill me-2"></i> CONTACT</h5>
+                        <div className='contact-div14'>
+                            <h5 className='heading14'><i class="bi bi-person-lines-fill me-1"></i> CONTACT</h5>
                             <div>
                                 <div className='d-flex' style={{ height: "" }}>
-                                    <div className='me-2 mb-3 ' style={{ backgroundColor: '', borderBottomLeftRadius: '50%', borderBottomRightRadius: '50%' }}><i class="bi bi-telephone-fill me-2 p-1 "></i></div>
+                                    <div className='me-1 ' style={{ backgroundColor: '', borderBottomLeftRadius: '50%', borderBottomRightRadius: '50%' }}><i class="bi bi-telephone-fill "></i></div>
                                     <div><p>{personalInfo.mobileNumber}</p></div>
                                 </div>
                                 <div className='d-flex '>
-                                    <div className='me-2' style={{}}><i class="bi bi-envelope me-2 p-1"></i></div>
-                                    <div><p>{personalInfo.email}</p></div>
+                                    <div className='me-1' style={{}}><i class="bi bi-envelope"></i></div>
+                                    <div><p style={{ whiteSpace: 'none', marginRight: '' }}>{personalInfo.email}</p></div>
                                 </div>
                                 <div className='d-flex'>
-                                    <div className='me-2' style={{}}><i class="bi bi-geo-alt-fill me-2 p-1" ></i></div>
-                                    <div><p>{personalInfo.address} {personalInfo.city} {personalInfo.state} {personalInfo.postalCode}</p></div>
+                                    <div className='me-1' style={{}}><i class="bi bi-geo-alt-fill " ></i></div>
+                                    <div><p> {personalInfo.city} {personalInfo.state}</p></div>
                                 </div>
                                 <div className='d-flex'>
-                                    <div className='me-2' style={{}}><i class="bi bi-linkedin me-2 "></i></div>
+                                    <div className='me-1' style={{}}><i class="bi bi-linkedin "></i></div>
                                     <div><p> {sMedia[0].linkedin}</p></div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div className=' ms-5 local'>
+                    <div className=' local'>
+                        <img className='circle-div' src={imagepng} alt="png" style={{ width: '10px', height: '10px' }} />
                         <div className='localinner'></div>
-
-                        <div className="row">
-                            <h5 className='mt-5'><i class="bi bi-translate me-2"></i>LANGUAGE</h5>
-                                {LLanguage[0].map((keys, index) => (
-                                    <div key={index} className=" d-flex col-6 justify-content-between">
-                                        <div>  {keys.language}</div>
-                                    </div>
-                                ))}
+                        <div className="">
+                            <h5 className=' heading14'><i class="bi bi-translate me-1"></i>LANGUAGE</h5>
+                            {LLanguage[0].map((keys, index) => (
+                                <div key={index} className=" d-flex col-6 justify-content-between">
+                                    <div>  <p>{keys.language}</p></div>
+                                </div>
+                            ))}
                         </div>
 
                     </div>
-                    <div className='ms-5 local'>
+                    <div className=' local'>
+                        <img className='circle-div' src={imagepng} alt="png" style={{ width: '10px', height: '10px' }} />
                         <div className='localinner'></div>
-                        <div className='row'>
-                            <h5 className='mt-5 ' > <i class="bi bi-controller me-2"></i>HOBBIES</h5>
+                        <div className=''>
+                            <h5 className=' heading14' > <i class="bi bi-controller me-1"></i>HOBBIES</h5>
                             {Hobbies[0].map((keys, index) => (
-                                <div key={index} className=" d-flex col-6 justify-content-between">   
-                                        <div ><p>{keys.hobbies}</p> </div>
+                                <div key={index} className=" d-flex justify-content-between">
+                                    <div ><p>{keys.hobbies}</p> </div>
                                 </div>
                             ))}
-
                         </div>
                     </div>
                 </div>
-                <div style={{width:'3px',height:'100%',backgroundColor:'grey',marginLeft:'10px',marginRight:'10px'}}></div>
-                <div>
-                    <div>
-                        <h5 className='mt-5' >ABOUT ME</h5>
-                        <div className=' mb-4' style={{ width: '50px', height: '4px', backgroundColor: 'yellow' }}></div>
+                <div className='devider14' style={{width:'5px',height:'100%',margin:'5px'}}></div>
+                <div className='main2-14'>
+                    <div className='about-div14'>
+                        <h5 className='mt-5 heading14' >ABOUT ME</h5>
+                        <div className='' style={{ width: '50px', height: '4px', backgroundColor: 'yellow' }}></div>
                         <div className=' row'>
-                            <div className=' d-flex justify-content-between col-6'>
+                            <div className=' d-sm-flex justify-content-between'>
                                 <div className=''><i>Date of Birth:-</i> <p >{personalInfo.dateofbirth}</p><hr style={{ height: '5px', backgroundColor: 'grey' }} /></div>
-                                <div className='ms-4'><i>Marital Status:-</i> <p> {personalInfo.maritalstatus}</p><hr style={{ height: '5px', backgroundColor: 'grey' }} /></div>
-                                <div className='ms-4 '><i>Nationality:-</i> <p>{personalInfo.nationality}</p><hr style={{ height: '5px', backgroundColor: 'grey' }} /></div>
+                                <div className=''><i>Marital Status:-</i> <p> {personalInfo.maritalstatus}</p><hr style={{ height: '5px', backgroundColor: 'grey' }} /></div>
+                                <div className=' '><i>Nationality:-</i> <p>{personalInfo.nationality}</p><hr style={{ height: '5px', backgroundColor: 'grey' }} /></div>
                             </div>
                         </div>
                     </div>
                     <div className='mb-2 pb-2'>
-                        <h5 className="mt-5 mb-5"  > <i class="bi bi-journal-code me-2"></i>EDUCATION</h5>
+                        <h5 className="mt-2 heading14"  > <i class="bi bi-journal-code me-1"></i>EDUCATION</h5>
                         {education[0].map((edu, index) => (
                             <div key={index} className="">
                                 <p style={{ lineHeight: '.5' }}><b> {edu.univercity}</b></p>
@@ -153,32 +167,70 @@ const Preview14 = () => {
                         ))}
                     </div>
                     <div>
-                        <h5 className='mt-4 mb-5'><i class="bi bi-person-workspace me-2"></i> JOB EXPERIENCE</h5>
+                        <h5 className=' heading14'><i class="bi bi-person-workspace me-1"></i> JOB EXPERIENCE</h5>
                         {work[0].map((works, index) => (
                             <div key={index} className='d-flex justify-content-between mt-2'>
-                                <div style={{ lineHeight: '.5' }}><p style={{ whiteSpace: 'nowrap' }}><b>{works.jobtitle}</b></p>
+                                <div style={{ lineHeight: '' }}><p style={{}}><b>{works.jobtitle}</b></p>
                                     <p >{works.organization} </p></div>
                                 <div><p>{works.startYear}-{works.endYear}</p></div>
                             </div>
                         ))}
                     </div>
-                    <div className="mt-4">
-                        <h5><i class="bi bi-mortarboard-fill me-2" style={{ color: '#082f36cc' }}></i>SKILLS</h5>
+                    <div className="skill14">
+                        <h5 className='heading14'><i class="bi bi-mortarboard-fill me-1" style={{ color: '#082f36cc' }}></i>SKILLS</h5>
                         <div className='row'>
                             {keyskills[0].map((keys, index) => (
-                                <div key={index} className="col-6 d-flex justify-content-between">
+                                <div key={index} className="col-6 d-flex justify-content-around">
                                     <div>  {keys.keyskills}</div>
                                     <div className='' style={lineStyle}></div>
                                 </div>
-
                             ))}
                         </div>
                     </div>
                 </div>
+                </div>
             </div>
-            <div className="d-flex m-sm-3 mt-3" style={{}}>
-                <input type="text" placeholder="enter your resume name" style={{ borderRadius: '5px', padding: '10px' }} onChange={(e) => setInputFields(e.target.value)} />
-                <button onClick={handleDownloadPDF} type="btn" className="btn btn-primary ms-2">Download</button>
+            <div className="resume-download-section">
+                <div className='d-flex'>
+                    <input type="text" placeholder="Enter your resume name" className="resume-name-input" style={{ borderRadius: '5px', padding: '10px' }} onChange={(e) => setInputFields(e.target.value)} />
+                    <button onClick={handleDownloadPDF} type="btn" className="btn btn-primary ms-2 download-button">Download</button>
+                </div>
+
+                {/* Color Picker for Background Color */}
+                <div className='d-flex border' style={{ marginTop: '5px', display: 'flex', flexDirection: 'row', justifyContent: 'center' }}>
+                    <input type="color" placeholder='bg color changer' value={bgColor} onChange={(e) => setBgColor(e.target.value)} className="bg-color-picker ms-2" />
+                    {/* Font Style Selector */}
+                    <select value={fontStyle} onChange={(e) => setFontStyle(e.target.value)} className="font-style-selector ms-2">
+                        <option value="Arial">Arial</option>
+                        <option value="Arial Black">Arial Black</option>
+                        <option value="Verdana">Verdana</option>
+                        <option value="Tahoma">Tahoma</option>
+                        <option value="Trebuchet MS">Trebuchet MS</option>
+                        <option value="Impact">Impact</option>
+                        <option value="Times New Roman">Times New Roman</option>
+                        <option value="Georgia">Georgia</option>
+                        <option value="Palatino Linotype">Palatino Linotype</option>
+                        <option value="Courier New">Courier New</option>
+                        <option value="Lucida Console">Lucida Console</option>
+                        <option value="Lucida Sans Unicode">Lucida Sans Unicode</option>
+                        <option value="Gill Sans">Gill Sans</option>
+                        <option value="Century Gothic">Century Gothic</option>
+                        <option value="Comic Sans MS">Comic Sans MS</option>
+                        <option value="Garamond">Garamond</option>
+                        <option value="Bookman">Bookman</option>
+                        <option value="Arial Narrow">Arial Narrow</option>
+                        <option value="Brush Script MT">Brush Script MT</option>
+                        <option value="Candara">Candara</option>
+                        <option value="Franklin Gothic Medium">Franklin Gothic Medium</option>
+                        <option value="Goudy Old Style">Goudy Old Style</option>
+                        <option value="Herculanum">Herculanum</option>
+                        <option value="Monaco">Monaco</option>
+                        <option value="Optima">Optima</option>
+                        <option value="Perpetua">Perpetua</option>
+                        <option value="Rockwell">Rockwell</option>
+                        <option value="Segoe UI">Segoe UI</option>
+                    </select>
+                </div>
             </div>
         </div>
     )

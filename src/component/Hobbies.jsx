@@ -103,7 +103,7 @@ const Hobbies = () => {
               </button>
             </div>
           ))}
-          <div className="d-flex justify-content-center mt-2">
+          <div className="d-flex justify-content-around mt-2">
             <button
               className="button1"
               type="button"
@@ -112,7 +112,7 @@ const Hobbies = () => {
               <span className="text">ADD MORE</span>
             </button>
           </div>
-          <div className="d-flex justify-content-between mt-2">
+          <div className="d-flex justify-content-around">
             <button
               className="button1"
               type="button"

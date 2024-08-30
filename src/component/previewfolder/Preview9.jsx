@@ -26,25 +26,30 @@ const Preview9 = () => {
         const element = document.getElementById('Alisha_mirza');
 
         try {
-            const canvas = await html2canvas(element);
+            const scale = 5; // Increase the scale for better resolution
+            const canvas = await html2canvas(element, {
+                scale: scale, 
+                useCORS: true, // Allows cross-origin images to be rendered correctly
+                logging: true, // Enable logging for debugging
+            });
+    
             const pdf = new jsPDF('p', 'mm', 'a4');
-            pdf.addImage(canvas.toDataURL('image/png'), 'PNG', 0, 0, 210, 297);
-
-            // Set the file name here
+            const imgData = canvas.toDataURL('image/png');
+    
+            // Calculate the aspect ratio to fit A4
+            const imgWidth = 210; // A4 width in mm
+            const imgHeight = (canvas.height * imgWidth) / canvas.width;
+    
+            pdf.addImage(imgData, 'PNG', 0, 0, imgWidth, imgHeight, undefined, 'FAST');
+    
             const fileName = `${inputFields}.pdf`;
-
-            // Save the PDF file using a download link
-            const downloadLink = document.createElement('a');
-            downloadLink.href = pdf.output('bloburl');
-            downloadLink.download = fileName;
-            downloadLink.click();
-
-            // Save the image data in local storage
-            const imageDataUrl = canvas.toDataURL('image/png');
+            pdf.save(fileName);
+    
+            // Store the image data URL in localStorage
             const savedResumes = JSON.parse(localStorage.getItem('savedResumes')) || [];
-            savedResumes.push(imageDataUrl);
+            savedResumes.push(imgData);
             localStorage.setItem('savedResumes', JSON.stringify(savedResumes));
-
+    
             alert('Your Resume is downloaded');
             navigate('/myresume');
         } catch (error) {
@@ -56,13 +61,12 @@ const Preview9 = () => {
         <div className=' preview9'>
             <div className="resume-preview9 " style={{ backgroundColor: bgColor, fontFamily: fontStyle }} id="Alisha_mirza">
                 <div className='main-one-9' style={{ position: 'relative' }}>
-                    <div className=' image-div9' style={{ position: 'absolute', left:'15px', backgroundColor: 'yellow', borderBottomLeftRadius: '70px', borderBottomRightRadius: '70px', borderBottom: `10px solid ${bgColor}`, borderRight: `10px solid ${bgColor}`, borderLeft: `10px solid ${bgColor}` }}>
-                        <img src={personalInfo.image} className=" image9" alt="Selected" style={{ }} />
-
+                    <div className='image-div9' style={{ position: 'absolute', left:'15px', backgroundColor: 'yellow', borderBottomLeftRadius: '70px', borderBottomRightRadius: '70px', borderBottom: `10px solid ${bgColor}`, borderRight: `10px solid ${bgColor}`, borderLeft: `10px solid ${bgColor}` }}>
+                        <img src={personalInfo.image} className="image9" alt="Selected" style={{ }} />
                     </div>
                     <div className='contact-div9' style={{ backgroundColor: '#e4e2df', marginTop: '150px' }}>
                         <p>.</p>
-                        <h5 className='mt-5 mb-4'> CONTACT_</h5>
+                        <p className='heading9' style={{color:'black'}}> CONTACT_</p>
                         <div>
                             <div className='d-flex' style={{ height: "70px" }}>
                                 <div className='me-2 mb-3 ' style={{ backgroundColor: 'yellow', borderBottomLeftRadius: '50%', borderBottomRightRadius: '50%' }}><i class="bi bi-telephone-fill me-2 p-1 "></i></div>
@@ -81,7 +85,7 @@ const Preview9 = () => {
                                 <div><p> {sMedia[0].linkedin}</p></div>
                             </div>
                         </div>
-                        <h5 className="mt-5 mb-5"  >EDUCATION_</h5>
+                        <p className="heading9" style={{color:'black'}}  >EDUCATION_</p>
                         {education[0].map((edu, index) => (
                             <div key={index} className="education-inner9">
                                 <p>{edu.degree}</p>
@@ -91,7 +95,7 @@ const Preview9 = () => {
                             </div>
                         ))}
 
-                        <h5 className='mt-5 mb-5' >ABOUT ME_</h5>
+                        <p className='heading9' style={{color:'black'}} >ABOUT ME_</p>
                         <hr />
                         <div className='d-flex justify-content-between'>
                             <div><b>Date of Birth:- </b><p>{personalInfo.dateofbirth}</p><hr style={{ height: '5px' }} /></div>
@@ -99,46 +103,42 @@ const Preview9 = () => {
                             <div><b>Nationality:- </b><p>{personalInfo.nationality}</p><hr style={{ height: '5px' }} /></div>
                         </div>
 
-                        <h5 className='mt-5 mb-5'>OBJECT CARRIERE_</h5>
+                        <p className='heading9' style={{color:'black'}}>OBJECT CARRIERE_</p>
                         <p style={{textAlign:'justify'}}>{personalInfo.object}</p>
                     </div>
                 </div>
                 <div className='main2-9'>
-                    <div className='name-div9' >
-                        <div >
+                    <div className='name-div9' > 
                             <h1 className="pt-5">{personalInfo.firstName} {personalInfo.lastName}</h1>
-
-                        </div>
-
-                        <p className='mb-5' style={{whiteSpace:'nowrap'}}>
+                        <p className='mb-5 job-titlen' style={{whiteSpace:''}}>
                             {work[0][0].jobtitle}
                         </p>
                     </div>
                     <hr className='m-3' style={{ backgroundColor: 'yellow', height: '5px' }} />
-                    <h5 className='mt-5 mb-5'> JOB EXPERIENCE_</h5>
+                    <p className='heading9' style={{color:'black'}}> JOB EXPERIENCE_</p>
                     {work[0].map((works, index) => (
-                        <div key={index} className='d-flex justify-content-around mt-2'>
-                            <div style={{ height: '100px', width: '4px', backgroundColor: 'yellow' }}> </div>
+                        <div key={index} className='d-flex justify-content-around mt-2 work-div9'>
+                            <div style={{ height: '100px', width: '3px', backgroundColor: 'yellow'}}> </div>
                             <div className='work-inner-div9'>
-                                <p className='jobtitle9'><b>{works.jobtitle}</b></p>
+                                <p className='jobtitle9'>{works.jobtitle}</p>
                                 <p className='job-year9'>{works.startYear}-{works.endYear}</p>
                                 <p className='job-organization9' >{works.organization} </p></div>
                         </div>
                     ))}
 
-                    <div><h5 className='mt-5 mb-5'>HOBBIES_</h5></div>
+                    <div><p className='heading9' style={{color:'black'}}>HOBBIES_</p></div>
                     {Hobbies[0].map((hobb, index) => (
                         <div key={index}>
                             <p className='hobbiesp9'>{hobb.hobbies}</p>
                         </div>
                     ))}
                     <div className='row'>
-                        <h5 className='mt-5 mb-5' >SKILLS_</h5>
+                        <p className='heading9' style={{color:'black'}} >SKILLS_</p>
                         {keyskills[0].map((keys, index) => (
-                            <div key={index} className="col-6">
-                                <div className='d-flex justify-content-around'>
+                            
+                                <div className='skills9'>
                                     <div ><p>{keys.keyskills}</p> <hr style={{ height: '5px', backgroundColor: 'darkgoldenrod' }} /></div>
-                                </div>
+                               
                             </div>
                         ))}
                     </div>

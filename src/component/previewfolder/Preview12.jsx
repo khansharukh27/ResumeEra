@@ -26,25 +26,30 @@ const Preview12 = () => {
         const element = document.getElementById('Alisha_mirza');
 
         try {
-            const canvas = await html2canvas(element);
+            const scale = 5; // Increase the scale for better resolution
+            const canvas = await html2canvas(element, {
+                scale: scale, 
+                useCORS: true, // Allows cross-origin images to be rendered correctly
+                logging: true, // Enable logging for debugging
+            });
+    
             const pdf = new jsPDF('p', 'mm', 'a4');
-            pdf.addImage(canvas.toDataURL('image/png'), 'PNG', 0, 0, 210, 297);
-
-            // Set the file name here
+            const imgData = canvas.toDataURL('image/png');
+    
+            // Calculate the aspect ratio to fit A4
+            const imgWidth = 210; // A4 width in mm
+            const imgHeight = (canvas.height * imgWidth) / canvas.width;
+    
+            pdf.addImage(imgData, 'PNG', 0, 0, imgWidth, imgHeight, undefined, 'FAST');
+    
             const fileName = `${inputFields}.pdf`;
-
-            // Save the PDF file using a download link
-            const downloadLink = document.createElement('a');
-            downloadLink.href = pdf.output('bloburl');
-            downloadLink.download = fileName;
-            downloadLink.click();
-
-            // Save the image data in local storage
-            const imageDataUrl = canvas.toDataURL('image/png');
+            pdf.save(fileName);
+    
+            // Store the image data URL in localStorage
             const savedResumes = JSON.parse(localStorage.getItem('savedResumes')) || [];
-            savedResumes.push(imageDataUrl);
+            savedResumes.push(imgData);
             localStorage.setItem('savedResumes', JSON.stringify(savedResumes));
-
+    
             alert('Your Resume is downloaded');
             navigate('/myresume');
         } catch (error) {
@@ -62,18 +67,13 @@ const Preview12 = () => {
     };
 
     return (
-        <div className='d-md-flex justify-content-between main12' style={{
-            backgroundColor: 'black',
-            height: '100%'
-        }}>
+        <div className='d-md-flex justify-content-between main12' style={{backgroundColor: 'black',height: '100%'}}>
             <div className='me-4 resume-12' style={{
                 position: "relative",
                 borderRadius: '8px',
                 backgroundColor: bgColor,
                 fontFamily: fontStyle,
-                width: '100%'
-            }}
-                id='Alisha_mirza'>
+                width: '100%' }} id='Alisha_mirza'>
                 <div className=' d-flex justify-content-between p-3 main12-1'
                     style={{ backgroundColor: "lightgray" }}>
                     <div className=' objective-div12 me-2'>

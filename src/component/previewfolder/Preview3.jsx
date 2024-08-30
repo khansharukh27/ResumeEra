@@ -19,37 +19,44 @@ const Preview3 = () => {
     const Hobbies = useSelector((state) => [state.reducer.addHobies[0]]);
 
     const handleDownloadPDF = async () => {
-        const element = document.getElementById('Alisha_mirza');
-
+        const element = document.getElementById('Alish_mirza');
+    
         try {
-            const canvas = await html2canvas(element);
-            const pdf = new jsPDF('span', 'mm', 'a4');
-            pdf.addImage(canvas.toDataURL('image/png'), 'PNG', 0, 0, 210, 297);
-
+            const scale = 5; // Increase the scale for better resolution
+            const canvas = await html2canvas(element, {
+                scale: scale, 
+                useCORS: true, // Allows cross-origin images to be rendered correctly
+                logging: true, // Enable logging for debugging
+            });
+    
+            const pdf = new jsPDF('p', 'mm', 'a4');
+            const imgData = canvas.toDataURL('image/png');
+    
+            // Calculate the aspect ratio to fit A4
+            const imgWidth = 210; // A4 width in mm
+            const imgHeight = (canvas.height * imgWidth) / canvas.width;
+    
+            pdf.addImage(imgData, 'PNG', 0, 0, imgWidth, imgHeight, undefined, 'FAST');
+    
             const fileName = `${inputFields}.pdf`;
-
-            const downloadLink = document.createElement('a');
-            downloadLink.href = pdf.output('bloburl');
-            downloadLink.download = fileName;
-            downloadLink.click();
-
-            const imageDataUrl = canvas.toDataURL('image/png');
+            pdf.save(fileName);
+    
+            // Store the image data URL in localStorage
             const savedResumes = JSON.parse(localStorage.getItem('savedResumes')) || [];
-            savedResumes.push(imageDataUrl);
+            savedResumes.push(imgData);
             localStorage.setItem('savedResumes', JSON.stringify(savedResumes));
-
+    
             alert('Your Resume is downloaded');
             navigate('/myresume');
         } catch (error) {
             console.error('Error downloading PDF:', error);
         }
     };
-
     return (
-        <div className=''>
+        <div className='container3'>
             <div className='resume-wrapper' id='Alish_mirza' style={{ backgroundColor: bgColor, fontFamily: fontStyle }}>
                 <div className='sidebar'>
-                    <div className='imagediv'>
+                    <div className='imagediv3'>
                         <img src={personalInfo.image} alt="Selected" className='image3' />
                     </div>
                     <div className='contactdiv'>

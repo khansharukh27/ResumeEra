@@ -26,25 +26,30 @@ const Preview7 = () => {
         const element = document.getElementById('Alisha_mirza');
 
         try {
-            const canvas = await html2canvas(element);
+            const scale = 5; // Increase the scale for better resolution
+            const canvas = await html2canvas(element, {
+                scale: scale, 
+                useCORS: true, // Allows cross-origin images to be rendered correctly
+                logging: true, // Enable logging for debugging
+            });
+    
             const pdf = new jsPDF('p', 'mm', 'a4');
-            pdf.addImage(canvas.toDataURL('image/png'), 'PNG', 0, 0, 210, 297);
-
-            // Set the file name here
+            const imgData = canvas.toDataURL('image/png');
+    
+            // Calculate the aspect ratio to fit A4
+            const imgWidth = 210; // A4 width in mm
+            const imgHeight = (canvas.height * imgWidth) / canvas.width;
+    
+            pdf.addImage(imgData, 'PNG', 0, 0, imgWidth, imgHeight, undefined, 'FAST');
+    
             const fileName = `${inputFields}.pdf`;
-
-            // Save the PDF file using a download link
-            const downloadLink = document.createElement('a');
-            downloadLink.href = pdf.output('bloburl');
-            downloadLink.download = fileName;
-            downloadLink.click();
-
-            // Save the image data in local storage
-            const imageDataUrl = canvas.toDataURL('image/png');
+            pdf.save(fileName);
+    
+            // Store the image data URL in localStorage
             const savedResumes = JSON.parse(localStorage.getItem('savedResumes')) || [];
-            savedResumes.push(imageDataUrl);
+            savedResumes.push(imgData);
             localStorage.setItem('savedResumes', JSON.stringify(savedResumes));
-
+    
             alert('Your Resume is downloaded');
             navigate('/myresume');
         } catch (error) {
@@ -101,7 +106,7 @@ const Preview7 = () => {
                             ))}
                         </div>
                     </div>
-                    <div className=' devider7' style={{ height: '800px', width: '3px', backgroundColor: 'grey' }}></div>
+                    <div className=' devider7' style={{  }}></div>
                     <div className='job-experience7'>
                         <h5 className='heading7'> JOB EXPERIENCE</h5>
                         <hr />
@@ -130,7 +135,7 @@ const Preview7 = () => {
                         <div>
                             <h5 className='heading7'>ABOUT ME</h5>
                             <hr />
-                            <div className='d-flex justify-content-between'>
+                            <div className='d-flex justify-content-start'>
                                 <div><b>Date of Birth:- </b><p>{personalInfo.dateofbirth}</p><hr style={{ height: '5px' }} /></div>
                                 <div><b>Marital Status:- </b><p> {personalInfo.maritalstatus}</p><hr style={{ height: '5px' }} /></div>
                                 <div><b>Nationality:- </b><p>{personalInfo.nationality}</p><hr style={{ height: '5px' }} /></div>

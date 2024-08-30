@@ -22,22 +22,30 @@ const Preview4 = () => {
         const element = document.getElementById('Alisha_mirza');
 
         try {
-            const canvas = await html2canvas(element);
-            const pdf = new jsPDF('span', 'mm', 'a4');
-            pdf.addImage(canvas.toDataURL('image/png'), 'PNG', 0, 0, 210, 297);
-
+            const scale = 5; // Increase the scale for better resolution
+            const canvas = await html2canvas(element, {
+                scale: scale, 
+                useCORS: true, // Allows cross-origin images to be rendered correctly
+                logging: true, // Enable logging for debugging
+            });
+    
+            const pdf = new jsPDF('p', 'mm', 'a4');
+            const imgData = canvas.toDataURL('image/png');
+    
+            // Calculate the aspect ratio to fit A4
+            const imgWidth = 210; // A4 width in mm
+            const imgHeight = (canvas.height * imgWidth) / canvas.width;
+    
+            pdf.addImage(imgData, 'PNG', 0, 0, imgWidth, imgHeight, undefined, 'FAST');
+    
             const fileName = `${inputFields}.pdf`;
-
-            const downloadLink = document.createElement('a');
-            downloadLink.href = pdf.output('bloburl');
-            downloadLink.download = fileName;
-            downloadLink.click();
-
-            const imageDataUrl = canvas.toDataURL('image/png');
+            pdf.save(fileName);
+    
+            // Store the image data URL in localStorage
             const savedResumes = JSON.parse(localStorage.getItem('savedResumes')) || [];
-            savedResumes.push(imageDataUrl);
+            savedResumes.push(imgData);
             localStorage.setItem('savedResumes', JSON.stringify(savedResumes));
-
+    
             alert('Your Resume is downloaded');
             navigate('/myresume');
         } catch (error) {
@@ -75,12 +83,12 @@ const Preview4 = () => {
                             <h4 className="section-title about-title w-100 text-center">About</h4>
                             <div className="about-content ms-3">
                                 <p className="objective ms-2 ">{personalInfo.object}</p>
-                                <p className="contact-info"><i className="bi bi-telephone-forward-fill me-2" style={{ fontSize: '1.5rem' }} />{personalInfo.mobileNumber}</p>
-                                <p className="email" style={{ wordWrap: 'break-word' }}><i className="bi bi-envelope-at-fill" style={{ fontSize: '1.5rem' }}></i>{personalInfo.email}</p>
-                                <p className="address"><i className="bi bi-geo-alt-fill" style={{ fontSize: '1.5rem' }}></i>{personalInfo.state} {personalInfo.city} {personalInfo.postalCode}</p>
+                                <p className="contact-info"><i className="bi bi-telephone-forward-fill me-2" style={{ }} />{personalInfo.mobileNumber}</p>
+                                <p className="email" style={{ wordWrap: 'break-word' }}><i className="bi bi-envelope-at-fill" style={{  }}></i>{personalInfo.email}</p>
+                                <p className="address"><i className="bi bi-geo-alt-fill" style={{ fontSize: '' }}></i>{personalInfo.state} {personalInfo.city} {personalInfo.postalCode}</p>
                             </div>
 
-                            <h4 className="section-title language-title mt-3 text-center" style={{ color: 'white', backgroundColor: '#100129' }}>Language</h4>
+                            <h4 className="section-title language-title text-center" style={{ color: 'white', backgroundColor: '#100129' }}>Language</h4>
                             <div className="language-content">
                                 {LLanguage[0].map((lan, index) => (
                                     <ul key={index}>

@@ -88,7 +88,7 @@ const PersonalInfo = () => {
         <form onSubmit={handleSubmit}>
             {showPersonalInfo && (
                 <div className="prefetional-main">
-                    <div className="profetional-detail">
+                    <header className="profetional-detail">
                         <h1 className="multicolor-heading">Your Profetional detail</h1>
                         <p>Personal information in a resume serves as the foundational layer that helps 
                             employers connect with you on a basic level. It includes essential details 
@@ -99,7 +99,7 @@ const PersonalInfo = () => {
                             updated personal information is crucial because it reflects your attention to 
                             detail and professionalism, making your resume complete and effective in the 
                             hiring process.</p>
-                    </div>
+                    </header>
                     <div className="personal-profile">
                         <input
                             type="file"
@@ -114,11 +114,11 @@ const PersonalInfo = () => {
                                 src={URL.createObjectURL(selectImage)}
                                 alt="selected"
                                 name="image1"
-                                className="profile-img"
+                                className="profile-imgs"
                             />
                         )}
                     </div>
-                    <div className="m-2">
+                    <div className="m-2 input-div">
                         <div className="d-sm-flex one">
                             <input className="input m-2" type="text" placeholder="first name" name="firstName" value={inputData.firstName} onChange={handleChange} />
                             <input className="input m-2" type="text" placeholder="last name" name="lastName" value={inputData.lastName} onChange={handleChange} />
@@ -147,7 +147,7 @@ const PersonalInfo = () => {
 
                         </div>
                     </div>
-                    <div className="d-sm-flex justify-content-around m-2 ">
+                    <div className="d-sm-flex justify-content-around m-2 button-div">
                         <button onClick={handleClickBack} className="button1">
                             <span className="text">BACK</span>
                         </button>

@@ -95,7 +95,6 @@ const MainPage = (props) => {
     return (
            
             <div className=" mt-2 mainpage" data-aos="flip-left" data-aos-duration="2000">
-            
                 {showPersonalInfo && <PersonalInfo />}
                 {showWorkExperience && <WorkExperience />}
                 {showEducation && <Education />}

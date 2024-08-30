@@ -2,7 +2,7 @@
     display: flex;
 }
 
-.preview9 h5 {
+.preview9 .heading9 {
     font-weight: 700;
 }
 
@@ -92,7 +92,7 @@ hr {
         width: 100%;
     }
 
-    .preview9 h5 {
+    .preview9 h4 {
         font-size: large;
     }
     .resume-preview9{
@@ -147,7 +147,7 @@ hr {
         padding-right: 0px;
     }
 
-    .preview9 h5 {
+    .preview9 h4 {
         font-size: medium;
     }
     .resume-preview9{
@@ -204,7 +204,7 @@ hr {
         padding-right: 0px;
     }
 
-    .preview9 h5 {
+    .preview9 h4 {
         font-size: medium;
     }
     .resume-preview9{
@@ -258,13 +258,21 @@ hr {
         padding-right: 0px;
     }
 
-    .preview9 h5 {
+    .preview9 h4 {
         font-size: small;
     }
     .resume-preview9{
         width: 425px;
     }
+    .resume-preview9 p{
 
+    }
+    .contact-div9 .heading9{
+        margin-top: 50px;
+    }
+    .heading9{
+        font-size: 1rem;
+    }
     .preview9 h1 {
         font-size: medium;
     }
@@ -293,8 +301,8 @@ hr {
         /* width: 50%; */
         /* border: 5px solid black; */
         width: fit-content;
-        margin-left: 5px;
-        padding: 15px;
+        margin-left: 0px;
+        padding: 1px;
     }
     .resume-download-section{
         width: 425px;
@@ -306,29 +314,43 @@ hr {
     .preview9 {
         display: flex;
         flex-direction: column;
-        font-size: xx-small;
+        /* font-size: xx-small; */
         margin-left: 0px;
-        margin-right: 0px;
+        margin-right: -50px;
         padding-right: 0px;
+        width: 100%;
+        border: 2px solid red;
     }
-
-    .preview9 h5 {
+    .heading9{
         font-size: small;
+        white-space: nowrap;
     }
+    .contact-div9 .heading9{
+        margin-top: 50px;
+    }
+    .work-div9{
+        margin-left: -10px;
+        padding-right: 5px;
+    }
+    .name-div9{
+        /* border: 5px solid red; */
+        margin-left: -10px;
+        white-space: nowrap;
+    }
+    
     .resume-preview9{
-        width: 375px;
+        width: 100%;
+        margin-right: -50px;
     }
-
-    .preview9 h1 {
-        font-size: small;
+    hr{
+        width: 50%;
     }
-    .resume-preview9{
-        width: 375px;
-    }
-
+    /* .work-inner-div9{
+        margin-left: 1px;
+    } */
     .main-one-9 {
-        margin-left: 0px;
-        width: fit-content;
+        margin-left: -25px;
+        width: 100%;
         margin-right: 0px;
     }
 
@@ -345,12 +367,94 @@ hr {
         margin-top: 100px;
         margin-left: 10px;
     }
-
     .main2-9 {
-        /* width: 50%; */
-        /* border: 5px solid black; */
         width: fit-content;
-        margin-left: 5px;
+        margin-left: -20px;
+        margin-right: 20px;
+        /* padding: 15px; */
+        padding-right: 15px;
+    }
+    .resume-download-section{
+        width: 375px;
+    }
+}
+
+
+@media (max-width: 320px) {
+    .preview9 {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+       
+    }
+    .contact-div9{
+        margin-top: 100px;
+        margin-left: -0px;
+        padding-left: -0px;
+    }
+    .contact-div9 .heading9{
+        margin-top: 50px;
+    }
+    
+    .work-div9{
+        margin-left: -10px;
+        padding-right: 15px;
+    }
+    .heading9{
+        margin-top: 5px;
+        margin-bottom:15px;
+        font-size: xx-small;
+        color:black ;
+    }
+    .skills9{
+        display: flex;
+        flex-direction: row;
+        /* justify-content: ; */
+    }
+    .jobtitlen{
+        white-space:none;
+    }
+   
+    .name-div9{
+        /* border: 5px solid red; */
+        margin-left: -60px;
+    }
+    .resume-preview9{
+        width: 100%;
+        margin-right: -50px;
+       
+    }
+    hr{
+        width: 50%;
+    }
+    /* .work-inner-div9{
+        margin-left: 1px;
+    } */
+    .main-one-9 {
+        margin-left: -25px;
+        width: 90%;
+        margin-right: 0px;
+        padding-right: -200px;
+    }
+
+    .image-div9 {
+        width: 120px;
+        height: 200px;
+        margin-left: 10px;
+        padding-right: 20px;
+    }
+
+    .image9 {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        margin-top: 100px;
+        margin-left: 10px;
+    }
+    .main2-9 {
+        width: 50%;
+        margin-left: -20px;
+        margin-right: 20px;
         padding: 15px;
     }
     .resume-download-section{
@@ -358,45 +462,3 @@ hr {
     }
 }
 
-@media (max-width: 320px) {
-    .preview9 {
-        display: flex;
-        flex-direction: column;
-        font-size: xx-small;
-        margin-left: 0px;
-        margin-right: 0px;
-        padding-right: 0px;
-    }
-
-    .preview9 h5 {
-        font-size: x-small;
-    }
-
-    .preview9 h1 {
-        font-size: small;
-    }
-
-    .main-one-9 {
-        margin-left: 0px;
-        width: 50%;
-        margin-right: 0px;
-    }
-
-    .image-div9 {
-        width: 120px;
-        height: 200px;
-        margin-left: 10px;
-    }
-
-    .image9 {
-        width: 80px;
-        height: 80px;
-        border-radius: 50%;
-        margin-top: 100px;
-        margin-left: 10px;
-    }
-
-    .main2-9 {
-        width: 50%;
-    }
-}

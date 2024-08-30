@@ -38,12 +38,6 @@ import Preview12 from './component/previewfolder/Preview12';
 import Preview13 from './component/previewfolder/Preview13';
 import Preview14 from './component/previewfolder/Preview14';
 import Home from './component/Home';
-// import Preview15 from './component/previewfolder/Preview15';
-
-
-
-// import Preview2 from './component/Preview2';
-
 
 var images = [
   { id: 1, src: resum1, alt: 'image1' },{ id: 2, src: resume2, alt: 'image2' },{ id: 3, src: resume3, alt: 'image3' },
@@ -51,7 +45,6 @@ var images = [
   { id: 7, src: resume7, alt : 'image7'},{ id: 8, src: resume8, alt: 'image8'}, { id: 9, src: resume9, alt : 'image9'},
   { id: 10, src: resume10, alt: 'image10'},{id:11,src: resume11, alt: 'image11'},{id:12, src: resume12, alt : 'image12'},
   { id: 13, src: resume13, alt: 'image13'},{id:14, src: resume14, alt: 'image14'}, 
-  // {id:15, src:'https://img.freepik.com/free-psd/clean-modern-resume-portfolio-cv-template_120329-3603.jpg', alt : 'image15'}
 ]
 console.log('images:=',images)
 console.log(images[0].id)
@@ -62,20 +55,15 @@ function App() {
     AOS.init()
   }, [])
   return (
-    <Router style={{ backgroundColor: 'white',width:'100%' }}>
+    <Router style={{ backgroundColor: 'black',width:'100%' }}>
       <Navbar />
       <Routes style={{ width:'100%' }}>
         <Route path='/' element={<Home images = {images}/>}/>
         <Route path='/template' exact element={<TemplatePage images={images} />} />
         {images.map((image) => (
-          <Route
-            key={image.id}
-            path={`/mainpage/${image.id}`}
-            element={<MainPage path={`/${path}/${image.id}`} images={images} />}
-          />
-        ))}
-        
-        {/* <Route path='/ResumeEra' element={<ResumeEra/>}/> */}
+          <Route key={image.id} path={`/mainpage/${image.id}`} 
+          element={<MainPage path={`/${path}/${image.id}`} images={images} />}/>
+        ))}        
         <Route path='/myresume' element={<MyResume />} />
         <Route path='/preview' element={<Preview />} />
         <Route path='/preview2' element={<Preview2 />} />
@@ -91,8 +79,6 @@ function App() {
         <Route path='/preview12' element={<Preview12/>}/>
         <Route path='/preview13' element={<Preview13/>}/>
         <Route path='/preview14' element={<Preview14/>}/>
-        {/* <Route path='/preview15' element={<Preview15/>}/> */}
-
       </Routes>
     </Router>
 

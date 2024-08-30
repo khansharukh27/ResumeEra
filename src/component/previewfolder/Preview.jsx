@@ -17,25 +17,33 @@ const Preview = () => {
     const work = useSelector((state) => [state.reducer.workExperience[0]]);
 
     const handleDownloadPDF = async () => {
-        const element = document.getElementById('Alisha_mirza');
+        const element = document.getElementById('Alisha_mirza1');
 
         try {
-            const canvas = await html2canvas(element);
-            const pdf = new jsPDF('span', 'mm', 'a4');
-            pdf.addImage(canvas.toDataURL('image/png'), 'PNG', 0, 0, 210, 297);
-
+            const scale = 5; // Increase the scale for better resolution
+            const canvas = await html2canvas(element, {
+                scale: scale, 
+                useCORS: true, // Allows cross-origin images to be rendered correctly
+                logging: true, // Enable logging for debugging
+            });
+    
+            const pdf = new jsPDF('p', 'mm', 'a4');
+            const imgData = canvas.toDataURL('image/png');
+    
+            // Calculate the aspect ratio to fit A4
+            const imgWidth = 210; // A4 width in mm
+            const imgHeight = (canvas.height * imgWidth) / canvas.width;
+    
+            pdf.addImage(imgData, 'PNG', 0, 0, imgWidth, imgHeight, undefined, 'FAST');
+    
             const fileName = `${inputFields}.pdf`;
-
-            const downloadLink = document.createElement('a');
-            downloadLink.href = pdf.output('bloburl');
-            downloadLink.download = fileName;
-            downloadLink.click();
-
-            const imageDataUrl = canvas.toDataURL('image/png');
+            pdf.save(fileName);
+    
+            // Store the image data URL in localStorage
             const savedResumes = JSON.parse(localStorage.getItem('savedResumes')) || [];
-            savedResumes.push(imageDataUrl);
+            savedResumes.push(imgData);
             localStorage.setItem('savedResumes', JSON.stringify(savedResumes));
-
+    
             alert('Your Resume is downloaded');
             navigate('/myresume');
         } catch (error) {
@@ -45,7 +53,7 @@ const Preview = () => {
 
     return (
         <div className="preview-container d-sm-flex" style={{ position: 'relative' }}>
-            <div className="preview-page" id="Alisha_mirza" style={{ backgroundColor: bgColor, fontFamily: fontStyle }}>
+            <div className="preview-page" id="Alisha_mirza1" style={{ backgroundColor: bgColor, fontFamily: fontStyle }}>
                 <div className="d-flex justify-content-center preview-image-container">
                     <img src={personalInfo.image} alt="Selected" className="preview-image" />
                 </div>

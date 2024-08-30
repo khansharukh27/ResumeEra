@@ -212,34 +212,11 @@
     z-index: 1; /* Ensure the grid is on top */
 
 }   
+.objective{
+    margin-bottom: -120px;
+    text-align: justify;
+    /* border: 5px solid red; */
 }
-
-
-@media only screen and (max-width:425px) {
-    .preview-container4{
-        display: flex;
-        flex-direction: column;
-        width: 425px;
-        font-size:small;
-    }
-    .preview-container4 h4{
-        font-size: medium;
-    }
-    .resume-header4{
-        position: relative;
-    }
-    .first-name{
-        font-size:medium;
-        left: 2000px;
-    }
-    .last-name{
-        font-size:medium;
-        margin-left: -50px;
-        margin-top: -15px;
-    }
-    .job-title{
-        margin-top: -40px;
-    }
 }
 
 @media (max-width:768px) {
@@ -266,6 +243,10 @@
     }
     .job-title{
         margin-top: -25px;
+    }
+    .objective{
+        margin-bottom: -150px;
+        text-align: justify;
     }
 }
 
@@ -294,6 +275,11 @@
     .job-title{
         margin-top: -25px;
     }
+    .objective{
+        margin-bottom: -120px;
+        text-align: justify;
+        /* border: 5px solid red; */
+    }
 }
 
 @media only screen and (max-width:375px) {
@@ -321,6 +307,11 @@
     .job-title{
         margin-top: -40px;
     }
+    .objective{
+        margin-bottom: -150px;
+        text-align: justify;
+        /* border: 5px solid red; */
+    }
 }
 
 @media only screen and (max-width:320px) {
@@ -331,7 +322,10 @@
         font-size:x-small;
     }
     .preview-container4 h4{
-        font-size: medium;
+        font-size: small;
+    }
+    .about-content{
+        font-size: small;
     }
     .resume-header4{
         position: relative;
@@ -346,6 +340,14 @@
         margin-top: -15px;
     }
     .job-title{
-        margin-top: -40px;
+        margin-top: -20px;
+    }
+    .objective{
+        margin-bottom: -150px;
+        text-align: justify;
+        /* border: 5px solid red; */
+    }
+    .contact-info{
+        margin-top: 0px;
     }
 }

@@ -26,25 +26,30 @@ const Preview10 = () => {
         const element = document.getElementById('Alisha_mirza');
 
         try {
-            const canvas = await html2canvas(element);
+            const scale = 5; // Increase the scale for better resolution
+            const canvas = await html2canvas(element, {
+                scale: scale, 
+                useCORS: true, // Allows cross-origin images to be rendered correctly
+                logging: true, // Enable logging for debugging
+            });
+    
             const pdf = new jsPDF('p', 'mm', 'a4');
-            pdf.addImage(canvas.toDataURL('image/png'), 'PNG', 0, 0, 210, 297);
-
-            // Set the file name here
+            const imgData = canvas.toDataURL('image/png');
+    
+            // Calculate the aspect ratio to fit A4
+            const imgWidth = 210; // A4 width in mm
+            const imgHeight = (canvas.height * imgWidth) / canvas.width;
+    
+            pdf.addImage(imgData, 'PNG', 0, 0, imgWidth, imgHeight, undefined, 'FAST');
+    
             const fileName = `${inputFields}.pdf`;
-
-            // Save the PDF file using a download link
-            const downloadLink = document.createElement('a');
-            downloadLink.href = pdf.output('bloburl');
-            downloadLink.download = fileName;
-            downloadLink.click();
-
-            // Save the image data in local storage
-            const imageDataUrl = canvas.toDataURL('image/png');
+            pdf.save(fileName);
+    
+            // Store the image data URL in localStorage
             const savedResumes = JSON.parse(localStorage.getItem('savedResumes')) || [];
-            savedResumes.push(imageDataUrl);
+            savedResumes.push(imgData);
             localStorage.setItem('savedResumes', JSON.stringify(savedResumes));
-
+    
             alert('Your Resume is downloaded');
             navigate('/myresume');
         } catch (error) {
@@ -60,18 +65,18 @@ const Preview10 = () => {
         borderRadius: '5px'
     };
     return (
-        <div className='d-sm-flex'>
+        <div className='d-sm-flex resume-10'>
             <div className="resume-preview10 " style={{ backgroundColor: bgColor, fontFamily: fontStyle }} id="Alisha_mirza">
                 <div className='main10' style={{ backgroundColor: 'grey' }}>
                     <div style={{ backgroundColor: 'black', color: 'white', }} className='main1-div10'>
                         <div className=' imagediv-inner10'>
-                            <img src={personalInfo.image} className=" image10" alt="Selected" style={{ width: '140px', height: '180px', marginTop: '60px', marginLeft: '5px', backgroundColor: 'black' }} />
+                            <img src={personalInfo.image} className=" image10" alt="Selected" style={{ }} />
                         </div>
                         <div className=' jobtite10' style={{}} >
                             <p className='mb-5 p-2' style={{ backgroundColor: 'yellow', color: 'black', borderRadius: '5px' }}>
                                 {work[0][0].jobtitle}
                             </p>
-                            <h5 className=" education10 heading"  >EDUCATION</h5>
+                            <h5 className=" education10"  >EDUCATION</h5>
                             <div style={{ width: '50px', height: '4px', backgroundColor: 'yellow' }}></div>
                             {education[0].map((edu, index) => (
                                 <div key={index} className="">
@@ -110,7 +115,7 @@ const Preview10 = () => {
                             </div>
                             <div className='d-flex '>
                                 <div className='me-2' style={{ backgroundColor: 'yellow' }}><i class="bi bi-envelope me-2 p-1"></i></div>
-                                <div><p>{personalInfo.email}</p></div>
+                                <div style={{wordBreak:'break-word'}}><p style={{}}>{personalInfo.email}</p></div>
                             </div>
                             <div className='d-flex'>
                                 <div className='me-2' style={{ backgroundColor: 'yellow' }}><i class="bi bi-geo-alt-fill me-2 p-1" ></i></div>

@@ -1,5 +1,8 @@
 .preview2{
     display: flex;
+    align-items: center;
+    justify-content: center;
+
 }
 /* Main container */
 
@@ -10,6 +13,7 @@
     /* margin-top:1px; */
     display: flex;
     width: fit-content;
+    text-align: justify;
 }
 
 /* Left side - Personal info and education */
@@ -356,11 +360,12 @@
     
 
 }
-@media (width:1024px) {
+@media (min-width:1024px) {
     .preview2{
         width: 1024px;
         display: flex;
-        flex-direction: column;
+        flex-direction: row;
+        justify-content: space-between;
         font-size: large;
         margin-left: 15px;
         padding: 10px;

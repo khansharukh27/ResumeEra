@@ -78,7 +78,7 @@ const Home = ({ images }) => {
             </div>
             <hr className="home-divider" />
             <div className="home-resume-builder">
-                <h1>Easy online free resume builder</h1>
+                <h4>Easy online free resume builder</h4>
                 <p>Create an awesome free resume in minutes, without leaving your web browser.</p>
                 <div className="home-resume-features">
                     <div className="home-feature">
@@ -103,7 +103,7 @@ const Home = ({ images }) => {
             </div>
             <hr />
             <div className="home-professional-story">
-                <h1>Use the best free resume maker as your guide</h1>
+                <h2>Use the best free resume maker as your guide</h2>
                 <p>Getting that dream job can seem like an impossible task. We're here to change that. Give yourself a real advantage with the best online free resume maker: created by experts, improved by data, trusted by millions of professionals.</p>
                 <div className='home-story-feature-main'>
                     <div className="home-story-feature">
@@ -125,7 +125,7 @@ const Home = ({ images }) => {
             </div>
             <hr />
             <div className="home-cover-letter">
-                <h1>Create a professional story in minutes. Use our cover letter maker.</h1>
+                <h2>Create a professional story in minutes. Use our cover letter maker.</h2>
                 <p>Tired of struggling with free cover letters? Our free cover letter maker transforms hours
                     of work into minutes. Craft compelling pitches effortlessly with ready-to-use
                     templates and persuasive phrases. Focus on showcasing your skills without the
