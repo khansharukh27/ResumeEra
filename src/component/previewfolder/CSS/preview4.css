@@ -1,0 +1,353 @@
+
+
+.header-shapes4{
+
+}
+.shape-left4{
+
+}
+.shape-right4{
+    border-bottom-left-radius: 150px;
+    border-top-left-radius: 200px;
+
+
+    width: 60px; /* Set the width of the div */
+    height: 100px; /* Set the height of the div */
+    background-color: rgb(218, 216, 216); /* Set the background color to grey */    
+    position: relative; 
+    /* Needed for positioning  */
+    overflow: hidden; /* To hide the overflow of the rotated grid */
+}
+.shape-right4::before{
+    content: '';
+    position: absolute;
+    top: -100%;
+    left: -100%;
+    width: 300%;
+    height: 300%;
+    background-image: 
+        /* linear-gradient(white 1px, transparent 1px), */
+        linear-gradient(90deg, white 1px, transparent 1px);
+    background-size: 5px 20px;
+    transform: rotate(65deg); /* Rotate the grid by 65 degrees */
+    z-index: 1; /* Ensure the grid is on top */
+
+}
+.job-title{
+    white-space: nowrap;
+}
+.underdiv{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    /* border: 1px solid black; */
+    position: relative;
+/* bottom: -500px; */
+}
+
+.shape-bottom-left4{
+    border-bottom-left-radius: 150px;
+    border-top-left-radius: 200px; 
+    width: 60px; /* Set the width of the div */
+    height: 100px; /* Set the height of the div */
+    background-color: rgb(240, 239, 239); /* Set the background color to grey */    
+    /* position: absolute;  */
+    /* Needed for positioning  */
+    overflow: hidden;  
+    rotate: 180deg;
+    bottom: 10px;
+    margin-bottom: 80px; 
+}
+
+.shape-bottom-right4{
+    /* border-bottom-left-radius: ; */
+    border-top-left-radius: 200px;
+    
+    width: 120px; /* Set the width of the div */
+    height: 100px; /* Set the height of the div */
+    background-color: rgb(240, 239, 239); /* Set the background color to grey */    
+    /* position: relative;  */
+    /* Needed for positioning  */
+    overflow: hidden; 
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+}
+.shape-bottom-left4::before{
+    content: '';
+    position: absolute;
+    top: -100%;
+    left: -100%;
+    width: 300%;
+    height: 300%;
+    background-image: 
+        /* linear-gradient(white 1px, transparent 1px), */
+        linear-gradient(90deg, white 1px, transparent 1px);
+    background-size: 5px 20px;
+    transform: rotate(65deg); /* Rotate the grid by 65 degrees */
+    z-index: 1; /* Ensure the grid is on top */
+
+
+}
+.shape-bottom-right4::before{
+    content: '';
+    position: absolute;
+    top: -100%;
+    left: -100%;
+    width: 300%;
+    height: 300%;
+    background-image: 
+        /* linear-gradient(white 1px, transparent 1px), */
+        linear-gradient(90deg, white 1px, transparent 1px);
+    background-size: 5px 20px;
+    transform: rotate(65deg); /* Rotate the grid by 65 degrees */
+    z-index: 1; /* Ensure the grid is on top */
+
+}
+
+@media only  screen and (max-width:1440px) {
+ 
+
+.header-shapes4{
+
+}
+.shape-left4{
+
+}
+.shape-right4{
+    border-bottom-left-radius: 150px;
+    border-top-left-radius: 200px;
+
+
+    width: 60px; /* Set the width of the div */
+    height: 100px; /* Set the height of the div */
+    background-color: rgb(218, 216, 216); /* Set the background color to grey */    
+    position: relative; 
+    /* Needed for positioning  */
+    overflow: hidden; /* To hide the overflow of the rotated grid */
+}
+.shape-right4::before{
+    content: '';
+    position: absolute;
+    top: -100%;
+    left: -100%;
+    width: 300%;
+    height: 300%;
+    background-image: 
+        /* linear-gradient(white 1px, transparent 1px), */
+        linear-gradient(90deg, white 1px, transparent 1px);
+    background-size: 5px 20px;
+    transform: rotate(65deg); /* Rotate the grid by 65 degrees */
+    z-index: 1; /* Ensure the grid is on top */
+
+}
+.job-title{
+    white-space: nowrap;
+}
+.underdiv{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    /* border: 1px solid black; */
+    position: relative;
+/* bottom: -500px; */
+}
+
+.shape-bottom-left4{
+    border-bottom-left-radius: 150px;
+    border-top-left-radius: 200px; 
+    width: 60px; /* Set the width of the div */
+    height: 100px; /* Set the height of the div */
+    background-color: rgb(240, 239, 239); /* Set the background color to grey */    
+    /* position: absolute;  */
+    /* Needed for positioning  */
+    overflow: hidden;  
+    rotate: 180deg;
+    bottom: 10px;
+    margin-bottom: 80px; 
+}
+
+.shape-bottom-right4{
+    /* border-bottom-left-radius: ; */
+    border-top-left-radius: 200px;
+    
+    width: 120px; /* Set the width of the div */
+    height: 100px; /* Set the height of the div */
+    background-color: rgb(240, 239, 239); /* Set the background color to grey */    
+    /* position: relative;  */
+    /* Needed for positioning  */
+    overflow: hidden; 
+    position: absolute;
+    right: 0px;
+    bottom: 0px;
+}
+.shape-bottom-left4::before{
+    content: '';
+    position: absolute;
+    top: -100%;
+    left: -100%;
+    width: 300%;
+    height: 300%;
+    background-image: 
+        /* linear-gradient(white 1px, transparent 1px), */
+        linear-gradient(90deg, white 1px, transparent 1px);
+    background-size: 5px 20px;
+    transform: rotate(65deg); /* Rotate the grid by 65 degrees */
+    z-index: 1; /* Ensure the grid is on top */
+
+
+}
+.shape-bottom-right4::before{
+    content: '';
+    position: absolute;
+    top: -100%;
+    left: -100%;
+    width: 300%;
+    height: 300%;
+    background-image: 
+        /* linear-gradient(white 1px, transparent 1px), */
+        linear-gradient(90deg, white 1px, transparent 1px);
+    background-size: 5px 20px;
+    transform: rotate(65deg); /* Rotate the grid by 65 degrees */
+    z-index: 1; /* Ensure the grid is on top */
+
+}   
+.objective{
+    margin-bottom: -120px;
+    text-align: justify;
+    /* border: 5px solid red; */
+}
+}
+
+@media (max-width:768px) {
+    .preview-container4{
+        display: flex;
+        flex-direction: column;
+        width: 768px;
+        font-size:small;
+    }
+    .preview-container4 h4{
+        font-size: x-large;
+    }
+    .resume-header4{
+        position: relative;
+    }
+    .first-name{
+        font-size:x-large;
+        /* left: 2000px; */
+    }
+    .last-name{
+        font-size:x-large;
+        margin-left: -30px;
+        margin-top: -10px;
+    }
+    .job-title{
+        margin-top: -25px;
+    }
+    .objective{
+        margin-bottom: -150px;
+        text-align: justify;
+    }
+}
+
+@media (max-width:425px) {
+    .preview-container4{
+        display: flex;
+        flex-direction: column;
+        width: 425px;
+        font-size:small;
+    }
+    .preview-container4 h4{
+        font-size: large;
+    }
+    .resume-header4{
+        position: relative;
+    }
+    .first-name{
+        font-size:large;
+        /* left: 2000px; */
+    }
+    .last-name{
+        font-size:large;
+        margin-left: -30px;
+        margin-top: -10px;
+    }
+    .job-title{
+        margin-top: -25px;
+    }
+    .objective{
+        margin-bottom: -120px;
+        text-align: justify;
+        /* border: 5px solid red; */
+    }
+}
+
+@media only screen and (max-width:375px) {
+    .preview-container4{
+        display: flex;
+        flex-direction: column;
+        width: 375px;
+        font-size:xx-small;
+    }
+    .preview-container4 h4{
+        font-size: xx-small;
+    }
+    .resume-header4{
+        position: relative;
+    }
+    .first-name{
+        font-size:small;
+        left: 2000px;
+    }
+    .last-name{
+        font-size:small;
+        margin-left: -50px;
+        margin-top: -15px;
+    }
+    .job-title{
+        margin-top: -40px;
+    }
+    .objective{
+        margin-bottom: -150px;
+        text-align: justify;
+        /* border: 5px solid red; */
+    }
+}
+
+@media only screen and (max-width:320px) {
+    .preview-container4{
+        display: flex;
+        flex-direction: column;
+        width: 320px;
+        font-size:x-small;
+    }
+    .preview-container4 h4{
+        font-size: small;
+    }
+    .about-content{
+        font-size: small;
+    }
+    .resume-header4{
+        position: relative;
+    }
+    .first-name{
+        font-size:medium;
+        left: 2000px;
+    }
+    .last-name{
+        font-size:medium;
+        margin-left: -50px;
+        margin-top: -15px;
+    }
+    .job-title{
+        margin-top: -20px;
+    }
+    .objective{
+        margin-bottom: -150px;
+        text-align: justify;
+        /* border: 5px solid red; */
+    }
+    .contact-info{
+        margin-top: 0px;
+    }
+}

@@ -1,0 +1,106 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.resume {
+    width: 800px;
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+}
+
+.header {
+    text-align: center;
+    border-bottom: 2px solid #ccc;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 36px;
+    color: #333;
+}
+
+.header p {
+    margin: 5px 0;
+    font-size: 18px;
+    color: #666;
+}
+
+.content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.left-column {
+    width: 30%;
+    padding-right: 20px;
+    border-right: 2px solid #ccc;
+}
+
+.right-column {
+    width: 65%;
+    padding-left: 20px;
+}
+
+.profile-picture img {
+    width: 100%;
+    border-radius: 50%;
+    margin-bottom: 20px;
+}
+
+.contact-info,
+.skills,
+.section {
+    margin-bottom: 20px;
+}
+
+.contact-info h2,
+.skills h2,
+.section h2 {
+    font-size: 24px;
+    color: #333;
+    border-bottom: 2px solid #f4f4f4;
+    padding-bottom: 10px;
+    margin-bottom: 10px;
+}
+
+.contact-info p,
+.skills ul,
+.skills ul li,
+.section p {
+    margin: 5px 0;
+    color: #666;
+    font-size: 16px;
+}
+
+.skills ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.skills ul li {
+    margin-bottom: 5px;
+}
+
+.right-column h3 {
+    margin: 10px 0;
+    font-size: 20px;
+    color: #333;
+}
+
+.right-column p {
+    color: #666;
+    font-size: 16px;
+}

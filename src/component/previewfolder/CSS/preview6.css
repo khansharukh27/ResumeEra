@@ -1,0 +1,173 @@
+/* preview6-media.css */
+.job-heading6,.education-heading6,.hobbies-heading6,.skills-heading6,.about-heading6,.language-heading6{
+    margin-bottom: -15px;
+    font-weight: 700;
+    margin-top: -15px;
+}
+.inner-information6{
+    margin-bottom: -10px;
+    color: rgb(179, 177, 177);
+}
+.information-section6{
+    margin-top: -20px;
+}
+.name-div p{
+    margin-top: -10px;
+}
+.bg-color-picker{
+    height: 25px;
+    border-radius: 8px;
+    padding: 5px;
+}
+
+@media (min-width: 1024px) {
+    .preview6-main {
+        padding: 10px;
+        font-size: 14px;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .resume-preview6 {
+        padding: 15px;
+    }
+
+    .name-div h5 {
+        font-size: 20px;
+    }
+
+    .information-section6 .mt-2 {
+        font-size: 12px;
+    }
+
+    .job-experience6 h5,
+    .education-section6 h5,
+    .hobbies-section6 h5,
+    .skills-section6 h5,
+    .language-section6 h5,
+    .about-section6 h5 {
+        font-size: 16px;
+    }
+
+    .job-experience6 ul li,
+    .education-section6 div,
+    .hobbies-section6 .col-4 div,
+    .skills-section6 .col-4 div,
+    .language-section6 .col-4 div,
+    .about-inner-div6 div {
+        font-size: 12px;
+    }
+
+    .resume-download-section {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .resume-download-section input,
+    .resume-download-section button,
+    .resume-download-section select {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
+
+
+
+/* For tablets and below (max-width: 768px) */
+@media only screen and (max-width: 768px) {
+    .preview6-main {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    .resume-preview6 {
+        padding: 15px;
+    }
+
+    .name-div h5 {
+        font-size: 20px;
+    }
+
+    .information-section6 .mt-2 {
+        font-size: 12px;
+    }
+
+    .job-experience6 h5,
+    .education-section6 h5,
+    .hobbies-section6 h5,
+    .skills-section6 h5,
+    .language-section6 h5,
+    .about-section6 h5 {
+        font-size: 16px;
+    }
+
+    .job-experience6 ul li,
+    .education-section6 div,
+    .hobbies-section6 .col-4 div,
+    .skills-section6 .col-4 div,
+    .language-section6 .col-4 div,
+    .about-inner-div6 div {
+        font-size: 12px;
+    }
+
+    .resume-download-section {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .resume-download-section input,
+    .resume-download-section button,
+    .resume-download-section select {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+}
+
+/* For smartphones (max-width: 480px) */
+@media only screen and (max-width: 480px) {
+    .preview6-main {
+        padding: 5px;
+        font-size: 12px;
+    }
+
+    .resume-preview6 {
+        padding: 10px;
+    }
+
+    .name-div h5 {
+        font-size: 18px;
+    }
+
+    .information-section6 .mt-2 {
+        font-size: 10px;
+    }
+
+    .resume-download-section {
+        padding: 10px;
+    }
+}
+
+/* For larger screens (min-width: 1024px) */
+@media only screen and (min-width: 1024px) {
+    .preview6-main {
+        padding: 20px;
+        font-size: 18px;
+    }
+
+    .resume-preview6 {
+        padding: 20px;
+    }
+
+    .name-div h5 {
+        font-size: 24px;
+    }
+
+    .information-section6 {
+        font-size: 16px;
+        display: flex;
+    }
+
+    .resume-download-section {
+        padding: 20px;
+    }
+}

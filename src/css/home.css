@@ -1,0 +1,738 @@
+
+/* Container class for the Home component */
+.home-container {
+    margin-left: 0;
+    margin-right: 0;
+    padding: 20px; /* Optional: Adds some space inside the container */
+
+    background: linear-gradient(145deg, #0c0c0c, #1a1a1a, #262626); /* Dark gradient background */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.7), /* Outer shadow for depth */
+                inset 0 0 50px rgba(0, 0, 0, 0.8); /* Inner shadow for a darker, enclosed feel */
+    /* border-radius: 8px; Optional: Rounds the corners */
+    
+    filter: contrast(85%) brightness(75%); /* Reduces brightness and increases contrast for a moody look */
+    color: #e0e0e0; /* Light gray text color for readability */
+}
+
+
+/* Warning message for refreshing the page */
+@keyframes move {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+/* Refresh warning with animation */
+.home-refresh-warning {
+    border: 2px solid goldenrod;
+    border-radius: 8px;
+    margin: 5px;
+    padding: 5px;
+    overflow: hidden;
+}
+.home-refresh-warning p{
+    animation: move 25s linear 0s infinite ;
+}
+
+.home_div{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+/* Container for the logo */
+/* Container for the logo */
+.home-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    object-fit: cover;
+}
+
+/* Add rotation animation to the logo */
+.home-logo img {
+    width: 120px; /* Adjust as needed */
+    height: 120px;
+    animation: rotate 3s linear infinite;
+    border: 2px solid black;
+    border-radius: 50%;
+}
+
+/* Keyframes for the rotation animation */
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Welcome message and link */
+.home-welcome {
+    margin-top: 25px;
+    text-align: center;
+
+    
+}
+.home-welcome h4{
+    font-size: 30px;
+            font-weight: bold;
+            background: linear-gradient(90deg, red, orange, yellow, green, blue, indigo, violet);
+            -webkit-background-clip: text;
+            color: transparent;
+            margin-left: 20px;
+}
+.home-welcome h4 a{
+    text-decoration: none;
+}
+
+.home-link {
+}
+
+/* Carousel container */
+.home-carousel {
+    margin-right: 15px;
+    margin-left: 15px;
+}
+
+/* Description of the ResumeEra platform */
+.home-description {
+}
+
+/* Section for how to create a resume */
+.home-how-to {    
+    text-align: center;
+    font-size: 30px;
+            font-weight: bold;
+            background: linear-gradient(90deg, red, orange, yellow, green, blue, indigo, violet);
+            -webkit-background-clip: text;
+            color: transparent;
+            margin-left: 20px;
+
+}
+
+/* Steps for creating a resume */
+.home-steps {
+    display: flex;
+    justify-content: space-around;
+}
+.home-step p {
+    font-size: medium;
+}
+
+.home-step img {
+    width: 200px;
+}
+
+/* Divider line */
+.home-divider {
+}
+
+/* Section for changing CV */
+.home-change-cv {
+    display: flex;
+    justify-content: space-around;
+}
+
+.home-change-cv-image {
+    margin: 5px;
+    padding: 5px;
+   
+}
+.home-change-cv-image img{
+    width: 300px;
+    height: 300px;
+}
+
+.home-change-cv-info {
+    margin-left: 15px;
+    padding: 5px;
+    margin-top: 45px;
+    /* font-size: 30px; */
+            /* font-weight: bold; */
+            background: linear-gradient(90deg, red, orange, yellow, green, blue, indigo, violet);
+            -webkit-background-clip: text;
+            color: transparent;
+
+}
+.home-change-cv-info p a{
+    border: 3px solid black;
+    text-decoration: none;
+    border-radius: 8px;
+    background-color: aqua;
+    padding: 15px;
+    text-align: center;
+    font-size: 20px;
+            font-weight: bold;
+            /* background: linear-gradient(90deg, red, orange, yellow, green, blue, indigo, violet);
+            -webkit-background-clip: text;
+            color: transparent; */
+    
+}
+
+/* Features of the resume builder */
+.home-resume-builder {
+    text-align: center;
+}
+
+.home-resume-features {
+    display: flex;
+    justify-content: space-around;
+}
+
+.home-feature {
+    margin: 15px;
+    padding: 5px;
+    text-align: justify;
+}
+.home-feature h5{
+ background: linear-gradient(90deg, red, orange, yellow, green, blue, indigo, violet);
+ -webkit-background-clip: text;
+ color: transparent;
+}
+.home-feature p{
+    background: linear-gradient(90deg, red, orange, green, blue, indigo, violet);
+            -webkit-background-clip: text;
+            color: transparent;
+}
+
+
+/* Section for creating a professional story */
+.home-professional-story {
+    text-align: center;
+    /* display: flex; */
+    border: 2px solid grey;
+    border-radius: 8px;
+    padding: 10px;
+    background-color: grey;
+    
+}
+.home-professional-story h1 {
+    background: linear-gradient(90deg, red, orange, green, blue, indigo, violet);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+.home-story-feature-main{
+    display: flex;
+    
+}
+.home-story-feature {
+    border: 1px solid black;
+    border-radius: 8px;
+    padding: 5px;
+    text-align: justify;
+    margin: 5px;
+}
+.home-story-feature h3{
+    background: linear-gradient(90deg, red, orange, green, blue, indigo, violet);
+    -webkit-background-clip: text;
+    color: transparent;
+
+}
+
+/* Section for cover letter */
+.home-cover-letter h1 {
+    text-align: center;
+    background: linear-gradient(90deg, red, orange, green, blue, indigo, violet);
+    -webkit-background-clip: text;
+    color: transparent;
+    
+}
+.home-cover-letter p{
+    text-align: justify;
+}
+
+.home-cover-letter-carousel {
+}
+
+@media (max-width:320px) {
+    /* home.css */
+
+/* Container class for the Home component */
+.home-container {
+    margin-left: 0px;
+    margin-right: 0px;
+
+}
+
+/* Warning message for refreshing the page */
+@keyframes move {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+/* Refresh warning with animation */
+.home-refresh-warning {
+    border: 2px solid goldenrod;
+    border-radius: 8px;
+    margin: 5px;
+    padding: 5px;
+    overflow: hidden;
+}
+.home-refresh-warning p{
+    animation: move 25s linear 0s infinite ;
+}
+
+.home_div{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+/* Container for the logo */
+/* Container for the logo */
+.home-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Add rotation animation to the logo */
+.home-logo img {
+    width: 100px; /* Adjust as needed */
+    height: 100px;
+    animation: rotate 3s linear infinite;
+    border: 2px solid transparent;
+}
+
+/* Keyframes for the rotation animation */
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Welcome message and link */
+.home-welcome {
+    margin-top: 25px;
+    text-align: center;
+
+    
+}
+.home-welcome h4{
+    font-size: 30px;
+            font-weight: bold;
+            background: linear-gradient(90deg, red, orange, yellow, green, blue, indigo, violet);
+            -webkit-background-clip: text;
+            color: transparent;
+            margin-left: 20px;
+}
+.home-welcome h4 a{
+    text-decoration: none;
+}
+
+.home-link {
+}
+
+/* Carousel container */
+.home-carousel {
+    margin-right: 15px;
+    margin-left: 15px;
+}
+
+/* Description of the ResumeEra platform */
+.home-description {
+    text-align: justify;
+    margin: 5px;
+}
+
+/* Section for how to create a resume */
+.home-how-to {    
+    text-align: center;
+    background: linear-gradient(90deg, red, orange, yellow, green, blue, indigo, violet);
+    -webkit-background-clip: text;
+    color: transparent;
+    margin-left: 20px;
+}
+
+/* Steps for creating a resume */
+.home-steps {
+    display: flex;
+    flex-direction: column;
+}
+.home-step p {
+    font-size: medium;
+}
+
+.home-step img {
+    width: 200px;
+}
+
+/* Divider line */
+.home-divider {
+}
+
+/* Section for changing CV */
+.home-change-cv {
+    display: flex;
+    flex-direction: column;
+}
+
+.home-change-cv-image {
+    margin: 5px;
+    padding: 5px;
+   
+}
+.home-change-cv-image img{
+    width: 300px;
+    height: 300px;
+}
+
+.home-change-cv-info {
+    margin-left: 15px;
+    padding: 5px;
+    margin-top: 45px;
+    background: linear-gradient(90deg, red, orange, yellow, green, blue, indigo, violet);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+.home-change-cv-info p a{
+    border: 3px solid black;
+    text-decoration: none;
+    border-radius: 8px;
+    background-color: aqua;
+    padding: 15px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    margin-left: 35px;
+    margin-top: 10px;
+
+}
+.home-change-cv-info p {
+    margin-right: 15px;
+}
+/* Features of the resume builder */
+.home-resume-builder {
+    text-align: center;
+}
+
+.home-resume-features {
+    display: flex;
+    flex-direction: column;
+}
+
+.home-feature {
+    margin: 5px;
+    padding: 5px;
+    text-align: justify;
+}
+.home-feature h5{
+ background: linear-gradient(90deg, red, orange, yellow, green, blue, indigo, violet);
+ -webkit-background-clip: text;
+ color: transparent;
+}
+.home-feature p{
+    background: linear-gradient(90deg, red, orange, green, blue, indigo, violet);
+            -webkit-background-clip: text;
+            color: transparent;
+}
+
+
+/* Section for creating a professional story */
+.home-professional-story {
+    text-align: justify;
+    /* display: flex; */
+    border: 2px solid grey;
+    border-radius: 8px;
+    padding: 10px;
+    background-color: grey;
+    
+}
+.home-professional-story h1 {
+    background: linear-gradient(90deg, red, orange, green, blue, indigo, violet);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+.home-story-feature-main{
+    display: flex;
+    flex-direction: column;
+}
+.home-story-feature {
+    border: 1px solid black;
+    border-radius: 8px;
+    padding: 5px;
+    text-align: justify;
+    margin: 5px;
+}
+.home-story-feature h3{
+    background: linear-gradient(90deg, red, orange, green, blue, indigo, violet);
+    -webkit-background-clip: text;
+    color: transparent;
+
+}
+
+/* Section for cover letter */
+.home-cover-letter h1 {
+    text-align: justify;
+    background: linear-gradient(90deg, red, orange, green, blue, indigo, violet);
+    -webkit-background-clip: text;
+    color: transparent;
+    padding: 10px;
+    
+}
+.home-cover-letter p{
+    text-align: justify;
+    padding: 10px;
+}
+
+.home-cover-letter-carousel {
+}
+
+}
+
+@media (max-width:425px) {
+    /* home.css */
+
+/* Container class for the Home component */
+.home-container {
+    margin-left: 0px;
+    margin-right: 0px;
+
+}
+
+/* Warning message for refreshing the page */
+@keyframes move {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+/* Refresh warning with animation */
+.home-refresh-warning {
+    border: 2px solid goldenrod;
+    border-radius: 8px;
+    margin: 5px;
+    padding: 5px;
+    overflow: hidden;
+}
+.home-refresh-warning p{
+    animation: move 25s linear 0s infinite ;
+}
+
+.home_div{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+/* Container for the logo */
+/* Container for the logo */
+.home-logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Add rotation animation to the logo */
+.home-logo img {
+    width: 100px; /* Adjust as needed */
+    height: 100px;
+    animation: rotate 3s linear infinite;
+    border: 2px solid transparent;
+}
+
+/* Keyframes for the rotation animation */
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Welcome message and link */
+.home-welcome {
+    margin-top: 25px;
+    text-align: center;
+
+    
+}
+.home-welcome h4{
+    font-size: 30px;
+            font-weight: bold;
+            background: linear-gradient(90deg, red, orange, yellow, green, blue, indigo, violet);
+            -webkit-background-clip: text;
+            color: transparent;
+            margin-left: 20px;
+}
+.home-welcome h4 a{
+    text-decoration: none;
+}
+
+.home-link {
+}
+
+/* Carousel container */
+.home-carousel {
+    margin-right: 15px;
+    margin-left: 15px;
+}
+
+/* Description of the ResumeEra platform */
+.home-description {
+    text-align: justify;
+    margin: 5px;
+}
+
+/* Section for how to create a resume */
+.home-how-to {    
+    text-align: center;
+    background: linear-gradient(90deg, red, orange, yellow, green, blue, indigo, violet);
+    -webkit-background-clip: text;
+    color: transparent;
+    margin-left: 20px;
+}
+
+/* Steps for creating a resume */
+.home-steps {
+    display: flex;
+    flex-direction: column;
+}
+.home-step p {
+    font-size: medium;
+}
+
+.home-step img {
+    width: 200px;
+}
+
+/* Divider line */
+.home-divider {
+}
+
+/* Section for changing CV */
+.home-change-cv {
+    display: flex;
+    flex-direction: column;
+}
+
+.home-change-cv-image {
+    margin: 5px;
+    padding: 5px;
+   
+}
+.home-change-cv-image img{
+    width: 300px;
+    height: 300px;
+}
+
+.home-change-cv-info {
+    margin-left: 15px;
+    padding: 5px;
+    margin-top: 45px;
+    background: linear-gradient(90deg, red, orange, yellow, green, blue, indigo, violet);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+.home-change-cv-info p a{
+    border: 3px solid black;
+    text-decoration: none;
+    border-radius: 8px;
+    background-color: aqua;
+    padding: 15px;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+    margin-left: 35px;
+    margin-top: 10px;
+
+}
+.home-change-cv-info p {
+    margin-right: 15px;
+}
+/* Features of the resume builder */
+.home-resume-builder {
+    text-align: center;
+}
+
+.home-resume-features {
+    display: flex;
+    flex-direction: column;
+}
+
+.home-feature {
+    margin: 5px;
+    padding: 5px;
+    text-align: justify;
+}
+.home-feature h5{
+ background: linear-gradient(90deg, red, orange, yellow, green, blue, indigo, violet);
+ -webkit-background-clip: text;
+ color: transparent;
+}
+.home-feature p{
+    background: linear-gradient(90deg, red, orange, green, blue, indigo, violet);
+            -webkit-background-clip: text;
+            color: transparent;
+}
+
+
+/* Section for creating a professional story */
+.home-professional-story {
+    text-align: justify;
+    /* display: flex; */
+    border: 2px solid grey;
+    border-radius: 8px;
+    padding: 10px;
+    background-color: grey;
+    
+}
+.home-professional-story h1 {
+    background: linear-gradient(90deg, red, orange, green, blue, indigo, violet);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+.home-story-feature-main{
+    display: flex;
+    flex-direction: column;
+}
+.home-story-feature {
+    border: 1px solid black;
+    border-radius: 8px;
+    padding: 5px;
+    text-align: justify;
+    margin: 5px;
+}
+.home-story-feature h3{
+    background: linear-gradient(90deg, red, orange, green, blue, indigo, violet);
+    -webkit-background-clip: text;
+    color: transparent;
+
+}
+
+/* Section for cover letter */
+.home-cover-letter h1 {
+    text-align: justify;
+    background: linear-gradient(90deg, red, orange, green, blue, indigo, violet);
+    -webkit-background-clip: text;
+    color: transparent;
+    padding: 10px;
+    
+}
+.home-cover-letter p{
+    text-align: justify;
+    padding: 10px;
+}
+
+.home-cover-letter-carousel {
+}
+
+}

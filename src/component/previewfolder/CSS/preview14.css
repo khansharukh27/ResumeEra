@@ -1,0 +1,191 @@
+
+.main14 {
+    width: 100%;
+    height: fit-content;   
+  }
+  .local{
+    display: flex;
+  }
+  .localinner{
+    width: 3px;
+    height: inherit; 
+    background-color: grey;
+    color: green;
+    /* margin-right: 10px; */
+    margin-bottom: -5px;
+    margin-right: 10px;
+    margin-left: -7px;
+    margin-top: 15px; 
+  }
+  .circle-div{
+    margin-top: 5px;
+  }
+  
+  .localinner::before{
+    content: '';
+    width: 20px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: green;
+  }
+  .images14{
+    /* background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="600 0 500 250"><path fill="rgb(229 225 225)" fill-opacity="1" d="M0,0L20,48C40,96,80,192,120,229.3C160,267,200,245,240,202.7C280,160,320,96,360,106.7C400,117,440,203,480,240C520,277,560,267,600,245.3C640,224,680,192,720,154.7C760,117,800,75,840,69.3C880,64,920,96,960,101.3C1000,107,1040,85,1080,69.3C1120,53,1160,43,1200,48C1240,53,1280,75,1320,69.3C1360,64,1400,32,1420,16L1440,0L1440,0L1420,0C1400,0,1360,0,1320,0C1280,0,1240,0,1200,0C1160,0,1120,0,1080,0C1040,0,1000,0,960,0C920,0,880,0,840,0C800,0,760,0,720,0C680,0,640,0,600,0C560,0,520,0,480,0C440,0,400,0,360,0C320,0,280,0,240,0C200,0,160,0,120,0C80,0,40,0,20,0L0,0Z"></path></svg>');
+    background-size: cover;
+    background-repeat: no-repeat; */
+
+  }
+  .images14 img{
+    width:180px ;
+    height:180px ;
+    border-radius: 50%;
+  }
+
+  .devider14{
+    height: 100%;
+    width: 5px;
+    background-color: grey;
+    color: grey;
+    margin: auto;
+  }
+  .main1-14{
+    padding-right: 0px;
+    margin-right: 0px;
+  }
+  .main2-14 {
+    
+      background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(254,226,226,0.8) 25%, rgba(254,226,226,1) calc(100% -450px),rgba(255,255,255, 0) calc(100% - 349px), rgba(255,255,255,0) 100%);
+     margin-top:px;
+ 
+}
+
+  .faltu14{
+    background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(254,226,226,0.8) 25%, rgba(254,226,226,1) calc(100% -450px),rgba(255,255,255, 0) calc(100% - 349px), rgba(255,255,255,0) 100%);
+    background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(254,226,226,0.8) 25%, rgba(254,226,226,1) calc(100% -450px),rgba(255,255,255, 0) calc(100% - 349px), rgba(255,255,255,0) 100%);
+    
+    /* padding-right: 15px; */
+  
+  }
+  
+  .heading14{
+    font-weight: 900;
+  }
+  @media (max-width: 425px){
+   .main14{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        font-size: xx-small;
+    }
+    .main14 h1{
+      font-size: small;
+    }
+    .main14 h5{
+      font-size: small;
+    }
+    .images14{
+      background-clip: yellow;
+      width: 100px;
+      height: 10px;
+      /* border: 2px solid white; */
+      border-radius: 50%;
+      margin-left: 5px;
+      margin-top: 5px;
+      margin-bottom: 120px; 
+    }
+    .images14 img{
+      width:100px ;
+      height:100px ;
+      border-radius: 50%;
+    }
+}
+@media (max-width: 375px){
+  .main14{
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      font-size: xx-small;
+  }
+  .main14 h1{
+    font-size: small;
+  }
+  .main14 h5{
+    font-size: small;
+  }
+  .images14{
+    background-clip: yellow;
+    width: 100px;
+    height: 10px;
+    /* border: 2px solid white; */
+    border-radius: 50%;
+    margin-left: 5px;
+    margin-top: 5px;
+    margin-bottom: 120px;
+  } 
+  .devider14{
+    width: 5px;
+    height: 100%;
+    background-color: black;
+    margin: 5px;
+  }
+}
+@media (max-width: 320px){
+  .main14{
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      font-size: xx-small;
+      color: grey;
+  }
+  .main14 h1{
+    font-size: small;
+  }
+  .main14 h5{
+    font-size: x-small;
+    color: black;
+  }
+  .images14{
+    background-clip: yellow;
+    width: 100px;
+    height: 10px;
+    /* border: 2px solid white; */
+    border-radius: 50%;
+    margin-left: 5px;
+    margin-top: 5px;
+    margin-bottom: 120px;
+
+  }
+  .main1-14{
+    padding-right: 0px;
+    margin-right: 0px;
+    background: 
+    url('data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%22600 10 500 670%22%3E%3Cpath fill=%22rgb(229%20225%20225)%22 fill-opacity=%221%22 d=%22M0,0L20,48C40,96,80,192,120,229.3C160,267,200,245,240,202.7C280,160,320,96,360,106.7C400,117,440,203,480,240C520,277,560,267,600,245.3C640,224,680,192,720,154.7C760,117,800,75,840,69.3C880,64,920,96,960,101.3C1000,107,1040,85,1080,69.3C1120,53,1160,43,1200,48C1240,53,1280,75,1320,69.3C1360,64,1400,32,1420,16L1440,0L1440,0L1420,0C1400,0,1360,0,1320,0C1280,0,1240,0,1200,0C1160,0,1120,0,1080,0C1040,0,1000,0,960,0C920,0,880,0,840,0C800,0,760,0,720,0C680,0,640,0,600,0C560,0,520,0,480,0C440,0,400,0,360,0C320,0,280,0,240,0C200,0,160,0,120,0C80,0,40,0,20,0L0,0Z%22%3E%3C/path%3E%3C/svg%3E');
+  background-size: cover, cover;
+  background-repeat: no-repeat, no-repeat;
+  }
+  .main2-14{
+    padding-right: 0px;
+    width: 50%;
+  }
+  .images14 img{
+    width:100px ;
+    height:100px ;
+    border-radius: 50%;
+  }
+  .images14 img{
+    width:100px ;
+    height:100px ;
+    border-radius: 50%;
+  }
+  .heading14{
+    font-weight: 900;
+  }
+  .conatact-div14{
+    /* margin-left: 35px; */
+  }
+  .skill14{
+    width: 100px;
+  }
+  .about-div14{
+    width: 100px;
+  }  
+}
