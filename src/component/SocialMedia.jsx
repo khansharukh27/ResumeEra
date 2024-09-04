@@ -1,8 +1,9 @@
 import { useState, useEffect } from "react";
 import Hobbies from "./Hobbies";
-import KeySkills from "./KeySkill";
+// import KeySkills from "./KeySkill";
 import { useDispatch } from "react-redux";
 import { socialMediaLink } from "../Redux/action";
+import SoftSkills from "./SoftSkills";
 
 const SocialMedia = () => {
     const [textInput, setTextInput] = useState(() => {
@@ -12,7 +13,7 @@ const SocialMedia = () => {
     });
 
     const [showHobbies, setShowHobbies] = useState(false);
-    const [showKeySkills, setShowKeySkills] = useState(false);
+    const [showSoftSkills, setShowSoftSkills] = useState(false);
     const [showSocialMedia, setShowSocialMedia] = useState(true);
     const dispatch = useDispatch();
 
@@ -31,13 +32,14 @@ const SocialMedia = () => {
 
     const handleClickBack = () => {
         setShowHobbies(true);
-        setShowKeySkills(false);
+        setShowSoftSkills(false);
         setShowSocialMedia(false);
     };
 
-    const handleClickNext = () => {
+    const handleClickNext = (e) => {
+        e.preventDefault()
         setShowHobbies(false);
-        setShowKeySkills(true);
+        setShowSoftSkills(true);
         setShowSocialMedia(false);
         dispatch(socialMediaLink(textInput));
     };
@@ -124,7 +126,7 @@ const SocialMedia = () => {
                 </div>
             )}
             {showHobbies && (<Hobbies />)}
-            {showKeySkills && (<KeySkills />)}
+            {showSoftSkills && (<SoftSkills />)}
         </form>
     );
 };

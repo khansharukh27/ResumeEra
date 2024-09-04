@@ -60,3 +60,10 @@ export const socialMediaLink = (input) =>{
         payload:input
     }
 }
+
+export const addSoftSkills = (input) =>{
+    return{
+        type:'add_soft_skills',
+        payload:input
+    }
+}

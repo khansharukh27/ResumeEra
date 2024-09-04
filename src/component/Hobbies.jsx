@@ -1,9 +1,11 @@
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { addHobbies } from "../Redux/action";
 import { useState, useEffect } from "react";
-import KeySkills from "./KeySkill";
+// import KeySkills from "./KeySkill";
 import Language from "./Language";
 import SocialMedia from "./SocialMedia";
+import { useLocation } from "react-router-dom";
+import KeySkills from "./KeySkill";
 
 const Hobbies = () => {
   const [input, setInput] = useState(() => {
@@ -15,7 +17,10 @@ const Hobbies = () => {
   const [showLanguage, setShowLanguage] = useState(false);
   const [showHobbies, setShowHobbies] = useState(true);
   const [showSocialMedia, setShowSocialMedia] = useState(false);
+  const [showSkills,setShowSkills] = useState(false)
   const dispatch = useDispatch();
+  const result = useSelector((state)=>state.reducer.templatePage[0])
+  console.log('hobbies mai id ko lana h:-,',result)
 
   useEffect(() => {
     // Save hobbies to local storage whenever it changes
@@ -30,13 +35,21 @@ const Hobbies = () => {
   const handleAddMore = () => {
     setInput((prev) => [...prev, { hobbies: "" }]);
   };
-
+const location = useLocation()
+console.log(location)
   const handleClick = (e) => {
     e.preventDefault();
-    setShowLanguage(false);
-    setShowHobbies(false);
-    setShowSocialMedia(true);
-    dispatch(addHobbies(input));
+    if(location.pathname === `/mainpage/${result}`){
+      setShowLanguage(false);
+      setShowHobbies(false);
+      setShowSkills(true);
+      dispatch(addHobbies(input));
+    }else if(location.pathname=== `/techmain/${result}`){
+      setShowLanguage(false);
+      setShowHobbies(false);
+      setShowSocialMedia(true);
+      dispatch(addHobbies(input));
+    }
   };
 
   const handleClickBack = () => {
@@ -128,6 +141,7 @@ const Hobbies = () => {
       )}
       {showSocialMedia && <SocialMedia />}
       {showLanguage && <Language />}
+      {showSkills && <KeySkills/>}
     </form>
   );
 };

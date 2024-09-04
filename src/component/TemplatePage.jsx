@@ -1,23 +1,10 @@
 import React, { useState } from 'react';
-import { useNavigate } from 'react-router-dom';
-import { useDispatch } from 'react-redux';
-import { templatePage } from '../Redux/action';
 import '../css/templates.css';
-
+import NormalResume from './NormalResume';
+import TechnicalResumeImages from './TechResume/TechnicalResumeImages';
 const TemplatePage = (props) => {
-    const { images } = props;
-    const [hoveredImage, setHoveredImage] = useState(null);
-    const dispatch = useDispatch();
-    const navigate = useNavigate();
-
-    const handleClick = (e) => {
-        e.preventDefault();
-        if (hoveredImage !== null) {
-            const path = `/mainpage/${hoveredImage}`;
-            navigate(path);
-            dispatch(templatePage(hoveredImage));
-        }
-    };
+    const { images ,techImages} = props;
+    
 
     return (
         <div className='template-page-container'>
@@ -30,41 +17,8 @@ const TemplatePage = (props) => {
             </section>
 
             {/* Template Grid */}
-            <section className="template-grid-container">
-                <h2 className="template-grid-title">Select a Template</h2>
-                <p className="template-grid-description">
-                    Browse our collection of professional resume templates and find the one that suits your needs.
-                </p>
-                <hr className="template-grid-divider" />
-                <div className="template-grid row m-3">
-                    {images && images.map((image) => (
-                        <div
-                            data-aos="flip-left"
-                            data-aos-duration="1000"
-                            key={image.id}
-                            className="template-card col-12 col-md-6 col-lg-4"
-                            onMouseEnter={() => setHoveredImage(image.id)}
-                            onMouseLeave={() => setHoveredImage(null)}
-                        >
-                            <img
-                                className="template-image"
-                                src={image.src}
-                                alt={image.alt}
-                            />
-                            {hoveredImage === image.id && (
-                                <a
-                                    href={`/mainpage/${hoveredImage}`}
-                                    onClick={handleClick}
-                                    className="template-link"
-                                >
-                                    Go To Your Resume
-                                </a>
-                            )}
-                        </div>
-                    ))}
-                </div>
-            </section>
-
+            <NormalResume images = {images}/>
+            <TechnicalResumeImages techImages = {techImages}/>
             {/* Footer */}
             <footer className='footer-section'>
                 <p>© 2024 Resume Era. All rights reserved.</p>

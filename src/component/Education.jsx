@@ -4,7 +4,7 @@ import { useDispatch } from "react-redux";
 import { educationData } from "../Redux/action";
 import Language from "./Language";
 
-const Education = ({ images }) => {
+const Education = ({}) => {
   const [showEducation, setShowEducation] = useState(true);
   const [showWorkExperience, setShowWorkExperience] = useState(false);
   const [showLanguage, setShowLanguage] = useState(false);

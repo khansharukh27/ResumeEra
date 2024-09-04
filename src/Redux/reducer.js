@@ -1,5 +1,7 @@
 // import { templatePage } from "./action";
 
+// import { addSoftSkills } from "./action";
+
 const initialState = {
   personalInfo: [],
   workExperience: [],
@@ -7,6 +9,7 @@ const initialState = {
   keySkills: [],
   templatePage:[],
   addHobies:[],
+  addSoftSkills:[],
   addLanguage:[],
   socialMediaLink:[]
 };
@@ -47,7 +50,12 @@ const reducer = (state = initialState, action) => {
       return{
         ...state,
         addHobies:[action.payload]
-      } 
+      }
+    case 'addSoftSkills':
+      return{
+        ...state,
+        addSoftSkills:[action.payload]
+      }   
     case 'add_Language':
       return{
         ...state,

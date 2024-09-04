@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 import Hobbies from "./Hobbies";
 
 const KeySkills = (props) => {
-    const { hoveredImage, images } = props;
+    // const { hoveredImage, images } = props;
     const [showKeySkills, setShowKeySkills] = useState(true);
     const [showHobbies, setShowHobbies] = useState(false);
     const [inputFields, setInputFields] = useState(() => {
@@ -49,6 +49,7 @@ const KeySkills = (props) => {
             { value: 13, path: '/preview13' },
             { value: 14, path: '/preview14' },
             { value: 15, path: '/preview15' },
+            { value: 101,path: '/preview101'}
         ];
 
         const resultMapping = resultMappings.find(mapping => mapping.value === result);

@@ -12,7 +12,7 @@ import resume7 from './image/resume7.png'
 import resume2 from './image/resume2.jpg'
 import resume3 from './image/resume3.jpg'
 import resume4 from './image/resume4.jpg'
-import resume5 from './image/resume5.jpg'
+// import resume5 from './image/resume5.jpg'
 import resume6 from './image/resume6.jpg'
 import resume8 from './image/resume8.png'
 import resume9 from './image/resume9.png'
@@ -38,7 +38,8 @@ import Preview12 from './component/previewfolder/Preview12';
 import Preview13 from './component/previewfolder/Preview13';
 import Preview14 from './component/previewfolder/Preview14';
 import Home from './component/Home';
-
+import profetional_resume_3 from '../src/image/technical_Image/profetional_resume_3.jpg'
+import Preview101 from './component/previewfolder/Preview101';
 var images = [
   { id: 1, src: resum1, alt: 'image1' },{ id: 2, src: resume2, alt: 'image2' },{ id: 3, src: resume3, alt: 'image3' },
   { id: 4, src: resume4, alt: 'image4' },
@@ -47,6 +48,9 @@ var images = [
   { id: 7, src: resume7, alt : 'image7'},{ id: 8, src: resume8, alt: 'image8'}, { id: 9, src: resume9, alt : 'image9'},
   { id: 10, src: resume10, alt: 'image10'},{id:11,src: resume11, alt: 'image11'},{id:12, src: resume12, alt : 'image12'},
   { id: 13, src: resume13, alt: 'image13'},{id:14, src: resume14, alt: 'image14'}, 
+]
+var techImages = [
+  {id:101, src: profetional_resume_3, alt : 'image3'}
 ]
 console.log('images:=',images)
 console.log(images[0].id)
@@ -61,10 +65,14 @@ function App() {
       <Navbar />
       <Routes style={{ width:'100%' }}>
         <Route path='/' element={<Home images = {images}/>}/>
-        <Route path='/template' exact element={<TemplatePage images={images} />} />
+        <Route path='/template' exact element={<TemplatePage images={images} techImages = {techImages} />} />
         {images.map((image) => (
           <Route key={image.id} path={`/mainpage/${image.id}`} 
           element={<MainPage path={`/${path}/${image.id}`} images={images} />}/>
+        ))}
+        {techImages.map((image) => (
+          <Route key={image.id} path={`/techmain/${image.id}`} 
+          element={<MainPage path={`/${path}/${image.id}`} techImages={techImages} />}/>
         ))}        
         <Route path='/myresume' element={<MyResume />} />
         <Route path='/preview' element={<Preview />} />
@@ -81,6 +89,7 @@ function App() {
         <Route path='/preview12' element={<Preview12/>}/>
         <Route path='/preview13' element={<Preview13/>}/>
         <Route path='/preview14' element={<Preview14/>}/>
+        <Route path='/preview101' element={<Preview101/>}/>
       </Routes>
     </Router>
 

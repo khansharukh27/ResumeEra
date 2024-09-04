@@ -32,15 +32,15 @@ const Home = ({ images }) => {
             </div>
             <div className="home-description">
                 <p>
-                    ResumeEra is a user-friendly platform that allows you to create and customize your resumes.
+                    ResumeEra is a user-friendly platform that allows you to create and customize your free resumes.
                     Choose from a variety of templates to make your free resume stand out. Whether you're highlighting
                     your work experience, education, skills, or personal information, ResumeEra makes it easy to
-                    create a professional-looking resume.
+                    create a professional-looking free resume.
                 </p>
             </div>
             <hr />
             <div className="home-how-to">
-                <h1>HOW TO CREATE RESUME</h1>
+                <h1>HOW TO CREATE FREE RESUME</h1>
                 <div className="home-steps">
                     <div className="home-step">
                         <img src={step1} alt="step1" />
@@ -73,7 +73,7 @@ const Home = ({ images }) => {
                         <li>Blow away recruiters with sleek designs.</li>
                         <li>Let employers see your true self—the best candidate for the job.</li>
                     </ul>
-                    <p><a href="/template">Create your CV</a></p>
+                    <p><a href="/template">Create Your Free CV</a></p>
                 </div>
             </div>
             <hr className="home-divider" />
