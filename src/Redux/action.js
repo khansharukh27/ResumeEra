@@ -67,3 +67,9 @@ export const addSoftSkills = (input) =>{
         payload:input
     }
 }
+export const honorAndAwardData = (honorsAndAwards)  => {
+    return{
+        type:'honor_and_award',
+        payload:honorsAndAwards
+    }
+}

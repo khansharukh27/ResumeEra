@@ -11,7 +11,8 @@ const initialState = {
   addHobies:[],
   addSoftSkills:[],
   addLanguage:[],
-  socialMediaLink:[]
+  socialMediaLink:[],
+  honorAndaward:[],
 };
 
 const reducer = (state = initialState, action) => {
@@ -51,7 +52,7 @@ const reducer = (state = initialState, action) => {
         ...state,
         addHobies:[action.payload]
       }
-    case 'addSoftSkills':
+    case 'add_soft_skills':
       return{
         ...state,
         addSoftSkills:[action.payload]
@@ -65,6 +66,11 @@ const reducer = (state = initialState, action) => {
       return{
         ...state,
         socialMediaLink:[action.payload]
+      }
+      case 'honor_and_award':
+      return{
+        ...state,
+        honorAndaward:[action.payload]
       }  
     default:
       return state;

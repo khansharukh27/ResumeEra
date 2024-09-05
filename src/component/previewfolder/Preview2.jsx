@@ -19,6 +19,7 @@ const Preview2 = () => {
     const work = useSelector((state) => [state.reducer.workExperience[0]]);
     const LLanguage = useSelector((state) => state.reducer.addLanguage);
     const Hobbies = useSelector((state) => state.reducer.addHobbies);
+    
 
     const handleDownloadPDF = async () => {
         const element = document.getElementById('Alisha_mirza');
@@ -126,6 +127,7 @@ const Preview2 = () => {
                                     </div>
                                 ))}
                             </div>
+                            
                         </div>
                     </div>
                 </div>

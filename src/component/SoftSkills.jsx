@@ -4,7 +4,8 @@ import { useState, useEffect } from "react";
 // import Language from "./Language";
 import SocialMedia from "./SocialMedia";
 // import { useLocation } from "react-router-dom";
-import KeySkills from "./KeySkill";
+// import KeySkills from "./KeySkill";
+import HonorAndAward from "./HonorAndAward";
 
 const SoftSkills = () => {
   const [input, setInput] = useState(() => {
@@ -15,7 +16,7 @@ const SoftSkills = () => {
 
   const [showSoftSkill, setShowSoftSkill] = useState(true);
   const [showSocialMedia, setShowSocialMedia] = useState(false);
-  const [showSkills, setShowSkills] = useState(false);
+  const [showHonor,setShowHonor] = useState(false);
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -38,12 +39,12 @@ const SoftSkills = () => {
     e.preventDefault();
       setShowSocialMedia(false);
       setShowSoftSkill(false);
-      setShowSkills(true);
+      setShowHonor(true);
       dispatch(addSoftSkills(input));
   };
 
   const handleClickBack = () => {
-    setShowSkills(false);
+    setShowHonor(false);
     setShowSoftSkill(false);
     setShowSocialMedia(true);
   };
@@ -119,7 +120,7 @@ const SoftSkills = () => {
       )}
       {showSocialMedia && <SocialMedia />}
       {/* {showSoftSkill && <SoftSkill />} */}
-      {showSkills && <KeySkills />}
+      {showHonor && <HonorAndAward />}
     </form>
   );
 };
