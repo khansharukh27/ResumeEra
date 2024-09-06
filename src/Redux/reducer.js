@@ -1,5 +1,7 @@
 // import { templatePage } from "./action";
 
+import { addReferences } from "./action";
+
 // import { addSoftSkills } from "./action";
 
 const initialState = {
@@ -13,6 +15,7 @@ const initialState = {
   addLanguage:[],
   socialMediaLink:[],
   honorAndaward:[],
+  addReference:[]
 };
 
 const reducer = (state = initialState, action) => {
@@ -71,7 +74,12 @@ const reducer = (state = initialState, action) => {
       return{
         ...state,
         honorAndaward:[action.payload]
-      }  
+      }
+      case 'add_references':
+        return{
+          ...state,
+          addReference:[action.payload]
+        }  
     default:
       return state;
   }

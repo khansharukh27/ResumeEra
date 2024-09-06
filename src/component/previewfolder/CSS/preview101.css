@@ -1,284 +1,132 @@
-.personal-info-section101 {
+#Alisha_mirza103 {
+    /* Styles for the main container */
+}
+.preview101{
     display: flex;
-    justify-content: space-between;
 
 }
-.personal-info-section101 h5{
-    margin-top: 5px;
+.preview101-1{
+    width: 40%;
+    background-color: rgb(61, 60, 60);
+    color: white;
+}
+.preview101-2{
+    width: 60%;
+    margin-left: 15px;
+}
+.profile101{
+    text-align: center;
+    background-color: rgb(27, 27, 27);
+
+}
+.image101{
+    width: 150px;
+    height:150px ;
+    margin: 15px;
+
+}
+.personal-name101 {
+    /* Styles for the personal name */
+}
+
+.profile-summary-section101 {
+    /* Styles for the profile summary section */
+    margin-left: 35px;
+}
+
+.profile-summary-title101 {
+    /* Styles for the profile summary title */
+}
+
+.profile-summary-content101 {
+    /* Styles for the profile summary content */
+    text-align: justify;
+    margin-right: 10px;
+}
+
+.contact101 {
+    /* Styles for the contact section */
+    margin-left: 35px;
+}
+.reference101{
+    margin-left: 35px;
+    margin-bottom: 10px;
+}
+.reference101 p{
     margin-bottom: -5px;
 }
-.main101{
-    width: 70%;
-    border: 2px solid grey;
-    margin: 5px;
-    padding-left: 5px;
-}
-.personal-header {
-    text-align: center;
-    /* padding-right: 5px; */
-}
-.personal-name {}
-.personal-details {}
 
-.profile-summary-section {}
-.profile-summary-title {}
-.profile-summary-hr {}
-.profile-summary-content {
-    padding-right:75px;
-    text-align: justify;
+.experience-section101 {
+    /* Styles for the experience section */
 }
 
-.education-section {}
-.details-title101 {}
-.education-hr {}
-.education-item101 {}
+.details-title101 {
+    /* Styles for the section titles (experience, education, etc.) */
+}
+
+.experience-hr101 {
+    /* Styles for the horizontal line under experience section */
+}
+
+.employment-history101 {
+    /* Styles for each employment history item */
+}
+
+.exp-inner101 {
+    /* Styles for the inner experience details */
+}
+
+.employment-detail101 {
+    /* Styles for the employment detail (organization and job title) */
+}
+
+.employment-duration101 {
+    /* Styles for the employment duration */
+}
+
+.aboutexperience101 {
+    /* Styles for the description of work experience */
+}
+
+.education-section101 {
+    /* Styles for the education section */
+}
+
+.education-hr101 {
+    /* Styles for the horizontal line under education section */
+}
+
+.education-item101 {
+    /* Styles for each education item */
+}
+
 .education-degree101 {
-    display: flex;
-    justify-content: space-between;
-    margin-right: 95px;
+    /* Styles for the education degree and duration */
 }
-.education-duration101 {}
-.education-details {}
-.education-detail101 {}
 
-.experience-section {}
-.experience-hr {}
-.employment-history101 {}
-.exp-inner101{
-display: flex;
-justify-content: space-between;
-margin-right: 95px;
+.education-duration101 {
+    /* Styles for the duration of education */
 }
-.employment-detail101 {}
-.employment-duration101 {}
-.aboutexperience101 {}
 
-.skill-section101 {}
-.technical-skills-title {}
-.technical-skills-hr {}
-.technical-skill-item {}
+.education-details101 {
+    /* Styles for additional education details (university name) */
+}
 
-.honor-award-section {}
-.honor-title {}
-.honor-hr {}
-.honor-item {}
-.honor-info {
-    display: flex;
-    justify-content: space-between;
-    margin-right: 95px;
+.skill-section101 {
+    /* Styles for the skill section */
 }
-.honor-organization {
 
+.technical-skills-title101 {
+    /* Styles for the technical skills title */
 }
-.honor-organization p{
-    margin-bottom: 0px;
+
+.technical-skills-hr101 {
+    /* Styles for the horizontal line under technical skills section */
 }
-@media (width:320px){
-    .personal-info-section101 {
-        display: flex;
-        /* justify-content: ; */
-        flex-direction: column;
-        width: 100%;
-    }  
-    .main101{
-        width: 100%;
-        border: 2px solid grey;
-        /* margin-right: 50px; */
-        padding-left: 5px;
-        margin: 0px;
-        font-size: xx-small;
-    } 
-    .main101 h1,h5{
-        font-size: small;
-    }
-    .personal-info-section101 hr{
-        width:310px;
-    }
-    .profile-summary-content {
-        padding-right:5px;
-        text-align: justify;
-    }
-    .education-degree101 {
-        display: flex;
-        justify-content: space-between;
-        margin-right: 5px;
-    }
-    .exp-inner101{
-        display: flex;
-        justify-content: space-between;
-        margin-right: 5px;
-        }
-        .honor-info {
-            display: flex;
-            justify-content: space-between;
-            margin-right: 5px;
-        }
-    
+
+.technical-skill-item101 {
+    /* Styles for each technical skill item */
 }
-@media (min-width:768px){
-    .personal-info-section101 {
-        display: flex;
-        /* justify-content: ; */
-        flex-direction: row;
-        width: 100%;
-    }  
-    .main101{
-        width: 100%;
-        border: 2px solid grey;
-        /* margin-right: 50px; */
-        padding-left: 5px;
-        margin: 0px;
-        font-size: xx-small;
-    } 
-    .main101 h1,h5{
-        font-size: small;
-    }
-    .personal-info-section101 hr{
-        width:100%;
-    }
-    .profile-summary-content {
-        padding-right:5px;
-        text-align: justify;
-    }
-    .education-degree101 {
-        display: flex;
-        justify-content: space-between;
-        margin-right: 5px;
-    }
-    .exp-inner101{
-        display: flex;
-        justify-content: space-between;
-        margin-right: 5px;
-        }
-        .honor-info {
-            display: flex;
-            justify-content: space-between;
-            margin-right: 5px;
-        }
-    
-}
-@media (width:425px){
-    .personal-info-section101 {
-        display: flex;
-        /* justify-content: ; */
-        flex-direction: column;
-        width: 100%;
-    }  
-    .main101{
-        width: 100%;
-        border: 2px solid grey;
-        /* margin-right: 50px; */
-        padding-left: 5px;
-        margin: 0px;
-        font-size: xx-small;
-    } 
-    .main101 h1,h5{
-        font-size: small;
-    }
-    .personal-info-section101 hr{
-        width:415px;
-    }
-    .profile-summary-content {
-        padding-right:5px;
-        text-align: justify;
-    }
-    .education-degree101 {
-        display: flex;
-        justify-content: space-between;
-        margin-right: 5px;
-    }
-    .exp-inner101{
-        display: flex;
-        justify-content: space-between;
-        margin-right: 5px;
-        }
-        .honor-info {
-            display: flex;
-            justify-content: space-between;
-            margin-right: 5px;
-        }   
-}
-@media (width:375px){
-    .personal-info-section101 {
-        display: flex;
-        /* justify-content: ; */
-        flex-direction: column;
-        width: 100%;
-    }  
-    .main101{
-        width: 100%;
-        border: 2px solid grey;
-        /* margin-right: 50px; */
-        padding-left: 5px;
-        margin: 0px;
-        font-size: xx-small;
-    } 
-    .main101 h1,h5{
-        font-size: small;
-    }
-    .personal-info-section101 hr{
-        width:365px;
-    }
-    .profile-summary-content {
-        padding-right:5px;
-        text-align: justify;
-    }
-    .education-degree101 {
-        display: flex;
-        justify-content: space-between;
-        margin-right: 5px;
-    }
-    .exp-inner101{
-        display: flex;
-        justify-content: space-between;
-        margin-right: 5px;
-        }
-        .honor-info {
-            display: flex;
-            justify-content: space-between;
-            margin-right: 5px;
-        }
-    
-}
-@media (width:320px){
-    .personal-info-section101 {
-        display: flex;
-        /* justify-content: ; */
-        flex-direction: column;
-        width: 100%;
-    }  
-    .main101{
-        width: 100%;
-        border: 2px solid grey;
-        /* margin-right: 50px; */
-        padding-left: 5px;
-        margin: 0px;
-        font-size: xx-small;
-    } 
-    .main101 h1,h5{
-        font-size: small;
-    }
-    .personal-info-section101 hr{
-        width:310px;
-    }
-    .profile-summary-content {
-        padding-right:5px;
-        text-align: justify;
-    }
-    .education-degree101 {
-        display: flex;
-        justify-content: space-between;
-        margin-right: 5px;
-    }
-    .exp-inner101{
-        display: flex;
-        justify-content: space-between;
-        margin-right: 5px;
-        }
-        .honor-info {
-            display: flex;
-            justify-content: space-between;
-            margin-right: 5px;
-        }
-    
+.skill-section101 .inner-101-1{
+margin-left: 15px;
 }

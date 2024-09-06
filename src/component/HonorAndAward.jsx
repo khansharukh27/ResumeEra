@@ -1,15 +1,18 @@
 import { useState, useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { honorAndAwardData } from "../Redux/action";
-import WorkExperience from "./WorkExperience"; // assuming you want to go back to WorkExperience
-import Education from "./Education"; // assuming you want to go next to Education
+// import WorkExperience from "./WorkExperience"; // assuming you want to go back to WorkExperience
+// import Education from "./Education"; // assuming you want to go next to Education
 import SoftSkills from "./SoftSkills";
 import KeySkills from "./KeySkill";
+import References from "./Refrences";
+import { useLocation } from "react-router-dom";
 
 const HonorAndAward = () => {
     const [showSoftSkill, setShowSoftSkill] = useState(false);
     const [showHonorAndAward, setShowHonorAndAward] = useState(true);
     const [showKeySkills, setShowKeySkills] = useState(false);
+    const [showReferences,setShowReferences] = useState(false);
   const [honorsAndAwards, setHonorsAndAwards] = useState(() => {
     const savedHonorsAndAwards = localStorage.getItem("honorsAndAwards");
     return savedHonorsAndAwards ? JSON.parse(savedHonorsAndAwards) : [
@@ -49,21 +52,30 @@ const HonorAndAward = () => {
       prev.filter((_, i) => i !== index)
     ));
   };
-
+const location = useLocation();
   const handleClickBack = (e) => {
     e.preventDefault();
     setShowSoftSkill(true);
     setShowHonorAndAward(false);
-    setShowSoftSkill(false)
+    setShowReferences(false)
   };
 
   const handleClickNext = (e) => {
     e.preventDefault();
-    setShowKeySkills(true);
-    setShowHonorAndAward(false);
-    setShowSoftSkill(false)
-    dispatch(honorAndAwardData(honorsAndAwards));
-    console.log('Honors and Awards:', honorsAndAwards);
+    if(location.pathname === '/techmain/101'){
+      setShowHonorAndAward(false);
+      setShowSoftSkill(false)
+      setShowReferences(true)
+      dispatch(honorAndAwardData(honorsAndAwards));
+      console.log('Honors and Awards:', honorsAndAwards);
+    }else{
+      setShowHonorAndAward(false);
+      setShowSoftSkill(false)
+      setShowKeySkills(true)
+      dispatch(honorAndAwardData(honorsAndAwards));
+      console.log('Honors and Awards:', honorsAndAwards);
+    }
+    
   };
 
   return (
@@ -113,7 +125,8 @@ const HonorAndAward = () => {
         </div>
       )}
       {showSoftSkill && <SoftSkills />}
-      {showKeySkills && <KeySkills />}
+      {showReferences && <References />}
+      {showKeySkills && <KeySkills/>}
     </form>
   );
 };

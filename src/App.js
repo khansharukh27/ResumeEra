@@ -39,6 +39,8 @@ import Preview13 from './component/previewfolder/Preview13';
 import Preview14 from './component/previewfolder/Preview14';
 import Home from './component/Home';
 import profetional_resume_3 from '../src/image/technical_Image/profetional_resume_3.jpg'
+import profetional_resume_1 from '../src/image/technical_Image/profetional_resume_1.jpg'
+import Preview103 from './component/previewfolder/Preview103';
 import Preview101 from './component/previewfolder/Preview101';
 var images = [
   { id: 1, src: resum1, alt: 'image1' },{ id: 2, src: resume2, alt: 'image2' },{ id: 3, src: resume3, alt: 'image3' },
@@ -50,7 +52,8 @@ var images = [
   { id: 13, src: resume13, alt: 'image13'},{id:14, src: resume14, alt: 'image14'}, 
 ]
 var techImages = [
-  {id:101, src: profetional_resume_3, alt : 'image3'}
+  {id:101, src: profetional_resume_1, alt : 'image3'},
+  {id:103, src: profetional_resume_3, alt : 'image3'}
 ]
 console.log('images:=',images)
 console.log(images[0].id)
@@ -90,6 +93,7 @@ function App() {
         <Route path='/preview13' element={<Preview13/>}/>
         <Route path='/preview14' element={<Preview14/>}/>
         <Route path='/preview101' element={<Preview101/>}/>
+        <Route path='/preview103' element={<Preview103/>}/>
       </Routes>
     </Router>
 

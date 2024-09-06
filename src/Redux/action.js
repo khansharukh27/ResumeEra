@@ -73,3 +73,9 @@ export const honorAndAwardData = (honorsAndAwards)  => {
         payload:honorsAndAwards
     }
 }
+export const addReferences = (data)  => {
+    return{
+        type:'add_references',
+        payload:data
+    }
+}

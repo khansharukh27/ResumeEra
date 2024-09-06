@@ -1,13 +1,15 @@
 import { useState, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { keyskillsData } from "../Redux/action";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import Hobbies from "./Hobbies";
+import References from "./Refrences";
 
 const KeySkills = (props) => {
     // const { hoveredImage, images } = props;
     const [showKeySkills, setShowKeySkills] = useState(true);
     const [showHobbies, setShowHobbies] = useState(false);
+    const [showReferences,setShowReferences] = useState(false)
     const [inputFields, setInputFields] = useState(() => {
         // Load key skills from local storage if available
         const savedKeySkills = localStorage.getItem("keySkills");
@@ -18,6 +20,8 @@ const KeySkills = (props) => {
     const navigate = useNavigate();
     const result = useSelector((state) => state.reducer.templatePage[0]);
 
+    const location = useLocation()
+
     useEffect(() => {
         // Save key skills to local storage whenever inputFields change
         localStorage.setItem("keySkills", JSON.stringify(inputFields));
@@ -25,8 +29,16 @@ const KeySkills = (props) => {
 
     const handleClickBack = (e) => {
         e.preventDefault();
-        setShowHobbies(true);
-        setShowKeySkills(false);
+        if(location.pathname === `/techmain/${result}`){
+            setShowHobbies(false);
+            setShowKeySkills(false);
+            setShowReferences(true)
+        }else{
+            setShowHobbies(true);
+            setShowKeySkills(false);
+            setShowReferences(false)
+        }
+       
     };
 
     const handleClickNext = (e) => {
@@ -49,7 +61,8 @@ const KeySkills = (props) => {
             { value: 13, path: '/preview13' },
             { value: 14, path: '/preview14' },
             { value: 15, path: '/preview15' },
-            { value: 101,path: '/preview101'}
+            { value: 101,path: '/preview101'},
+            { value: 103,path: '/preview103'}
         ];
 
         const resultMapping = resultMappings.find(mapping => mapping.value === result);
@@ -151,6 +164,7 @@ const KeySkills = (props) => {
                 </div>
             )}
             {showHobbies && (<Hobbies />)}
+            {showReferences && (<References/>)}
         </form>
     );
 };

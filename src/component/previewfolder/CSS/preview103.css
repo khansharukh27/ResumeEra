@@ -1,0 +1,284 @@
+.personal-info-section101 {
+    display: flex;
+    justify-content: space-between;
+
+}
+.personal-info-section101 h5{
+    margin-top: 5px;
+    margin-bottom: -5px;
+}
+.main101{
+    width: 70%;
+    border: 2px solid grey;
+    margin: 5px;
+    padding-left: 5px;
+}
+.personal-header {
+    text-align: center;
+    /* padding-right: 5px; */
+}
+.personal-name {}
+.personal-details {}
+
+.profile-summary-section {}
+.profile-summary-title {}
+.profile-summary-hr {}
+.profile-summary-content {
+    padding-right:75px;
+    text-align: justify;
+}
+
+.education-section {}
+.details-title101 {}
+.education-hr {}
+.education-item101 {}
+.education-degree101 {
+    display: flex;
+    justify-content: space-between;
+    margin-right: 95px;
+}
+.education-duration101 {}
+.education-details {}
+.education-detail101 {}
+
+.experience-section {}
+.experience-hr {}
+.employment-history101 {}
+.exp-inner101{
+display: flex;
+justify-content: space-between;
+margin-right: 95px;
+}
+.employment-detail101 {}
+.employment-duration101 {}
+.aboutexperience101 {}
+
+.skill-section101 {}
+.technical-skills-title {}
+.technical-skills-hr {}
+.technical-skill-item {}
+
+.honor-award-section {}
+.honor-title {}
+.honor-hr {}
+.honor-item {}
+.honor-info {
+    display: flex;
+    justify-content: space-between;
+    margin-right: 95px;
+}
+.honor-organization {
+
+}
+.honor-organization p{
+    margin-bottom: 0px;
+}
+@media (width:320px){
+    .personal-info-section101 {
+        display: flex;
+        /* justify-content: ; */
+        flex-direction: column;
+        width: 100%;
+    }  
+    .main101{
+        width: 100%;
+        border: 2px solid grey;
+        /* margin-right: 50px; */
+        padding-left: 5px;
+        margin: 0px;
+        font-size: xx-small;
+    } 
+    .main101 h1,h5{
+        font-size: small;
+    }
+    .personal-info-section101 hr{
+        width:310px;
+    }
+    .profile-summary-content {
+        padding-right:5px;
+        text-align: justify;
+    }
+    .education-degree101 {
+        display: flex;
+        justify-content: space-between;
+        margin-right: 5px;
+    }
+    .exp-inner101{
+        display: flex;
+        justify-content: space-between;
+        margin-right: 5px;
+        }
+        .honor-info {
+            display: flex;
+            justify-content: space-between;
+            margin-right: 5px;
+        }
+    
+}
+@media (min-width:768px){
+    .personal-info-section101 {
+        display: flex;
+        /* justify-content: ; */
+        flex-direction: row;
+        width: 100%;
+    }  
+    .main101{
+        width: 100%;
+        border: 2px solid grey;
+        /* margin-right: 50px; */
+        padding-left: 5px;
+        margin: 0px;
+        font-size: xx-small;
+    } 
+    .main101 h1,h5{
+        font-size: small;
+    }
+    .personal-info-section101 hr{
+        width:100%;
+    }
+    .profile-summary-content {
+        padding-right:5px;
+        text-align: justify;
+    }
+    .education-degree101 {
+        display: flex;
+        justify-content: space-between;
+        margin-right: 5px;
+    }
+    .exp-inner101{
+        display: flex;
+        justify-content: space-between;
+        margin-right: 5px;
+        }
+        .honor-info {
+            display: flex;
+            justify-content: space-between;
+            margin-right: 5px;
+        }
+    
+}
+@media (width:425px){
+    .personal-info-section101 {
+        display: flex;
+        /* justify-content: ; */
+        flex-direction: column;
+        width: 100%;
+    }  
+    .main101{
+        width: 100%;
+        border: 2px solid grey;
+        /* margin-right: 50px; */
+        padding-left: 5px;
+        margin: 0px;
+        font-size: xx-small;
+    } 
+    .main101 h1,h5{
+        font-size: small;
+    }
+    .personal-info-section101 hr{
+        width:415px;
+    }
+    .profile-summary-content {
+        padding-right:5px;
+        text-align: justify;
+    }
+    .education-degree101 {
+        display: flex;
+        justify-content: space-between;
+        margin-right: 5px;
+    }
+    .exp-inner101{
+        display: flex;
+        justify-content: space-between;
+        margin-right: 5px;
+        }
+        .honor-info {
+            display: flex;
+            justify-content: space-between;
+            margin-right: 5px;
+        }   
+}
+@media (width:375px){
+    .personal-info-section101 {
+        display: flex;
+        /* justify-content: ; */
+        flex-direction: column;
+        width: 100%;
+    }  
+    .main101{
+        width: 100%;
+        border: 2px solid grey;
+        /* margin-right: 50px; */
+        padding-left: 5px;
+        margin: 0px;
+        font-size: xx-small;
+    } 
+    .main101 h1,h5{
+        font-size: small;
+    }
+    .personal-info-section101 hr{
+        width:365px;
+    }
+    .profile-summary-content {
+        padding-right:5px;
+        text-align: justify;
+    }
+    .education-degree101 {
+        display: flex;
+        justify-content: space-between;
+        margin-right: 5px;
+    }
+    .exp-inner101{
+        display: flex;
+        justify-content: space-between;
+        margin-right: 5px;
+        }
+        .honor-info {
+            display: flex;
+            justify-content: space-between;
+            margin-right: 5px;
+        }
+    
+}
+@media (width:320px){
+    .personal-info-section101 {
+        display: flex;
+        /* justify-content: ; */
+        flex-direction: column;
+        width: 100%;
+    }  
+    .main101{
+        width: 100%;
+        border: 2px solid grey;
+        /* margin-right: 50px; */
+        padding-left: 5px;
+        margin: 0px;
+        font-size: xx-small;
+    } 
+    .main101 h1,h5{
+        font-size: small;
+    }
+    .personal-info-section101 hr{
+        width:310px;
+    }
+    .profile-summary-content {
+        padding-right:5px;
+        text-align: justify;
+    }
+    .education-degree101 {
+        display: flex;
+        justify-content: space-between;
+        margin-right: 5px;
+    }
+    .exp-inner101{
+        display: flex;
+        justify-content: space-between;
+        margin-right: 5px;
+        }
+        .honor-info {
+            display: flex;
+            justify-content: space-between;
+            margin-right: 5px;
+        }
+    
+}
