@@ -22,7 +22,7 @@ const Preview101 = () => {
     console.log('refrences:-', Refrence)
     console.log('honorand award:-', Honor)
     const handleDownloadPDF = async () => {
-        const element = document.getElementById('Alisha_mirza103');
+        const element = document.getElementById('Alisha_mirza101');
         try {
             const scale = 5; // Increase the scale for better resolution
             const canvas = await html2canvas(element, {
@@ -51,33 +51,37 @@ const Preview101 = () => {
         }
     };
     return (
-        <div>
-            <div id="Alisha_mirza103" className="preview101">
+        <div className="main101">
+            <div id="Alisha_mirza101" className="preview101"
+             style={{ color:fontColor,fontFamily:fontStyle, backgroundColor:bgColor}}>
                 <div className="preview101-1">
-                    <div className="profile101">
+                    <div className="imagediv101">
                         <img className="image101" src={personalInfo.image} alt="Selected" />
                         <h1 className="personal-name101" style={{ color: headingColor }}>{personalInfo.firstName} <br />{personalInfo.lastName}</h1>
                         <p>{work[0][0].jobtitle}</p>
                     </div>
                     <div className="profile-summary-section101">
                         <h5 className="profile-summary-title101" style={{ color: headingColor }}>
-                            <i class="bi bi-person-circle me-3"></i>PROFILE SUMMARY
+                            <i class="bi bi-person-circle me-3"/>PROFILE SUMMARY
                         </h5>
                         <p className="profile-summary-content101">{personalInfo.object}</p>
                     </div>
                     <div className="contact101">
-                        <h5 style={{ color: headingColor }}><i className="bi bi-person-lines-fill me-3" />Contact</h5>
+                        <h5 style={{color: headingColor }}><i className="bi bi-person-lines-fill me-3" />Contact</h5>
                         <p><i className="bi bi-geo-alt-fill me-2"></i>{personalInfo.address} {personalInfo.city} {personalInfo.state} {personalInfo.postalCode}</p>
                         <p><i className="bi bi-telephone-fill me-2"></i>{personalInfo.mobileNumber}</p>
-                        <p><i className="bi bi-envelope me-2"></i>{personalInfo.email}</p>
+                        <p style={{wordBreak:"break-all"}}><i className="bi bi-envelope me-2" ></i>{personalInfo.email}</p>
                     </div>
                     <div className="reference101">
-                        <h5><i class="bi bi-person-fill-gear me-3"></i>REFERENCE</h5>
+                        <h5 style={{color: headingColor }}><i class="bi bi-person-fill-gear me-3"/>REFERENCE</h5>
                         {
                             Refrence[0].map((ref, index) => (
                                 <div key={index}>
+                                    <div className="mbk-2">
                                     <p className="" style={{ textAlign: 'center' }}><b>{ref.name}</b></p>
                                     <p style={{ textAlign: 'center' }}>{ref.position}</p>
+                                    </div>
+                                    
                                     <p className="ms-4"><i className="bi bi-telephone-fill me-2"></i>{ref.contact}</p>
                                     <p className="ms-4"><i className="bi bi-envelope me-2"></i>{ref.email}</p>
                                 </div>
@@ -87,9 +91,10 @@ const Preview101 = () => {
                 </div>
                 <div className="preview101-2">
                     <div className="experience-section101">
-                        <h5 className="details-title101" style={{ color: headingColor }}><i class="bi bi-person-workspace me-3"></i>PROFECTION EXPERIENCE</h5>
+                        <h5 className="details-title101" style={{ color: headingColor }}>
+                            <i class="bi bi-person-workspace me-3"></i>WORK EXPERIENCE</h5>
                         {work[0].map((works, index) => (
-                            <div key={index} className="employment-history101 ms-5">
+                            <div key={index} className="employment-history101 ms-4">
                                 <div className="exp-inner101">
                                     <p className="employment-duration101">{works.startYear} - {works.endYear}</p>
                                     <p>/</p>
@@ -102,7 +107,7 @@ const Preview101 = () => {
                     <div className="education-section101">
                         <h5 className="details-title101" style={{ color: headingColor }}><i class="bi bi-book me-3"></i>EDUCATION</h5>
                         {education[0].map((edu, index) => (
-                            <div key={index} className="education-item101 ms-5">
+                            <div key={index} className="education-item101 ms-4">
                                 <div className="education-degree101">
                                     <span className="education-duration101">{edu.startYear} - {edu.endYear}</span>
                                     <span>{edu.degree} <br />{edu.univercity}</span>
@@ -115,10 +120,11 @@ const Preview101 = () => {
                     </div>
                     <div className="skill-section101 mt-3">
                         <h5><i class="bi bi-gear-wide-connected me-3"></i>SKILL</h5>
-                        <div className="inner-101-1">
-                            <h6 className="technical-skills-title101" style={{ color: headingColor }}><i class="bi bi-person-fill-gear"></i>TECHNICAL SKILL</h6>
+                        <div className="inner-101-1 ms-4">
+                            <h6 className="technical-skills-title101" style={{ color: headingColor }}>
+                                <i class="bi bi-person-fill-gear"></i>TECHNICAL SKILL</h6>
                             {keyskills[0].map((keys, index) => (
-                                <div key={index} className="technical-skill-item101 d-flex ms-4">
+                                <div key={index} className="technical-skill-item101 d-flex justify-content-between">
                                     <p>{keys.keyskills}</p>
                                     {/* 5-star rating system */}
                                     <div className="star-rating ms-3 w-50">

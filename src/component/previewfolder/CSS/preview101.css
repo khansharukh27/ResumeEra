@@ -1,5 +1,11 @@
-#Alisha_mirza103 {
+.main101{
+    display: flex;
+    flex-direction: row;
+}
+#Alisha_mirza101 {
     /* Styles for the main container */
+    display: flex;
+    /* width: 70%; */
 }
 .preview101{
     display: flex;
@@ -16,13 +22,22 @@
 }
 .profile101{
     text-align: center;
-    background-color: rgb(27, 27, 27);
+    
 
+}
+.imagediv101{
+    text-align: center;
+    background-color: rgb(37, 48, 40);
+}
+.imagediv101 h1{
+    font-size: large;
+    font-weight: 900;
 }
 .image101{
     width: 150px;
     height:150px ;
     margin: 15px;
+    border-radius: 50%;
 
 }
 .personal-name101 {
@@ -36,6 +51,7 @@
 
 .profile-summary-title101 {
     /* Styles for the profile summary title */
+    margin-left: -25px;
 }
 
 .profile-summary-content101 {
@@ -48,9 +64,15 @@
     /* Styles for the contact section */
     margin-left: 35px;
 }
+.contact101 h5{
+    margin-left: -25px;
+}
 .reference101{
     margin-left: 35px;
     margin-bottom: 10px;
+}
+.reference101 h5{
+    margin-left: -25px;
 }
 .reference101 p{
     margin-bottom: -5px;
@@ -129,4 +151,108 @@
 }
 .skill-section101 .inner-101-1{
 margin-left: 15px;
+}
+
+/* General styles for larger screens */
+@media (max-width: 768px) {
+    .main101 {
+        display: flex;
+        /* flex-direction: row; */
+        font-size: 0.75rem; /* Slightly more universal sizing */
+    }
+    .main101 h5, .main101 h6 {
+        font-size: 0.875rem; /* Small font size */
+        font-weight: 900;
+    }
+    .image101 {
+        width: 120px;
+        height: 120px;
+    }
+    .preview101-1 {
+        width: 50%;
+        background-color: rgb(61, 60, 60);
+        color: white;
+        margin-left: -5px;
+    }
+    .preview101-2 {
+        width: 50%;
+        margin-left: 5px;
+    }
+}
+
+/* Styles for tablets and smaller desktops */
+
+
+/* Styles for smartphones (width up to 425px) */
+@media (max-width: 425px) {
+    .main101 {
+        display: flex;
+        flex-direction: column;
+        font-size: 0.625rem;
+    }
+    .main101 h5, .main101 h6 {
+        font-size: 0.75rem;
+        font-weight: 900;
+    }
+    #Alish_mirza101 {
+        width: 120%; /* Full width for smaller devices */
+    }
+    .image101 {
+        width: 50px;
+        height: 50px;
+    }
+    .preview101-1, .preview101-2 {
+        width: 100%; /* Full width for better stacking */
+        margin: 0;
+    }
+}
+
+/* Styles for very small mobile devices (width up to 375px) */
+@media (min-width: 376px),(max-width: 375px) {
+    .main101 {
+        display: flex;
+        flex-direction: column;
+        font-size: 0.5625rem;
+        width: 100%;
+    }
+    .main101 h5, .main101 h6 {
+        font-size: 0.6875rem;
+        font-weight: 900;
+    }
+    #Alish_mirza101 {
+        width: 100%;
+    }
+    .image101 {
+        width: 40px;
+        height: 40px;
+    }
+    .preview101-1, .preview101-2 {
+        width: 100%;
+        margin: 0;
+    }
+}
+
+/* Styles for ultra-small mobile devices (width up to 320px) */
+@media (min-width: 320px) {
+    .main101 {
+        display: flex;
+        flex-direction: column;
+        font-size: 0.5rem;
+    }
+    .main101 h5, .main101 h6 {
+        font-size: 0.625rem;
+        font-weight: 900;
+    }
+    #Alish_mirza101 {
+        width: 100%;
+        margin: 0;
+    }
+    .image101 {
+        width: 30px;
+        height: 30px;
+    }
+    .preview101-1, .preview101-2 {
+        width: 100%;
+        margin: 0;
+    }
 }
