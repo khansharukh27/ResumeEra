@@ -62,7 +62,10 @@ const KeySkills = (props) => {
             { value: 14, path: '/preview14' },
             { value: 15, path: '/preview15' },
             { value: 101,path: '/preview101'},
-            { value: 103,path: '/preview103'}
+            { value: 103,path: '/preview103'},
+            { value: 104,path: '/preview104'},
+            { value: 102,path: '/preview102'}
+
         ];
 
         const resultMapping = resultMappings.find(mapping => mapping.value === result);

@@ -1,0 +1,51 @@
+.main104{
+    display: flex;
+    justify-content: space-between;
+}
+.alisha104{}
+.personalinfo104{
+display: flex;
+justify-content: space-between;
+/* margin-right: 20px; */
+background-color: beige;
+padding: 15px;
+}
+.personalinfo104 p{
+    margin-bottom: -5px;
+    margin-top: 5px;
+}
+.imagediv104{
+    margin-right: 20px;
+}
+.imagediv104 img{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+}
+.namediv104{
+    text-align: start;
+    margin-right: 20px;
+    margin-top: 20px;
+}
+.contactdiv104{
+text-align: end;
+margin-left: 20px;
+margin-top: 20px;
+}
+.skill-section104{
+    display: flex;
+}
+.skill-section104 p{
+    margin-bottom: -5px;
+}
+.education-section104{
+    
+}
+.education-item101{
+    display: flex;
+    justify-content: space-between;
+}
+.education-section104 p{
+    margin-bottom: -5px;
+
+}
