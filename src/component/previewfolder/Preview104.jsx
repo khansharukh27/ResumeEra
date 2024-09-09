@@ -4,6 +4,7 @@ import { useState } from "react";
 import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import './CSS/preview104.css'
+import Hobbies from "../Hobbies";
 // import { socialMediaLink } from "../../Redux/action";
 
 
@@ -22,7 +23,9 @@ const Preview104 = () => {
     const Refrence = useSelector((state) => [state.reducer.addReference[0]]);
     const SoftSkill = useSelector((state) => [state.reducer.addSoftSkills[0]]);
     const socialMediaLink = useSelector((state) => [state.reducer.socialMediaLink[0]]);
-    const languages = useSelector((state)=>[state.reducer.addLanguage[0]]);
+    const languages = useSelector((state) => [state.reducer.addLanguage[0]]);
+    const Hobbies = useSelector((state)=>[state.reducer.addHobies[0]])
+    console.log('hobbies:-',Hobbies)
     console.log('refrences:-', Refrence)
     console.log('honorand award:-', Honor)
     const handleDownloadPDF = async () => {
@@ -64,76 +67,104 @@ const Preview104 = () => {
                     <div className="namediv104">
                         <p>{personalInfo.firstName}</p>
                         <p>{personalInfo.lastName}</p>
-                        <p style={{color:'lightgray'}}>{work[0][0].jobtitle}</p>
+                        <p style={{ color: 'lightgray' }}>{work[0][0].jobtitle}</p>
                     </div>
                     <div className="contactdiv104">
-                        <p>{personalInfo.address} {personalInfo.city} {personalInfo.state} {personalInfo.postalCode}<i className="bi bi-geo-alt-fill me-2"/></p>
-                        <p>{personalInfo.mobileNumber}<i className="bi bi-telephone-fill me-2"/></p>
-                        <p style={{ wordBreak: "break-all" }}>{personalInfo.email}<i className="bi bi-envelope me-2" /></p>
-                            <p>{socialMediaLink.github}<i class="bi bi-github"/></p>
+                        <p>{personalInfo.address} {personalInfo.city} {personalInfo.state} {personalInfo.postalCode}<i className="bi bi-geo-alt-fill me-2 ms-2" /></p>
+                        <p>{personalInfo.mobileNumber}<i className="bi bi-telephone-fill me-2 ms-2" /></p>
+                        <p style={{ wordBreak: "break-all" }}>{personalInfo.email}<i className="bi bi-envelope me-2 ms-2" /></p>
+                        <p>{socialMediaLink.github}<i class="bi bi-github ms-2" /></p>
                     </div>
                 </div>
-                <div>
-                     <p><b>aoutme.</b>{personalInfo.object}</p>   
+                <div className="aboutme104" >
+                    <p><b>aoutme.</b>{personalInfo.object}</p>
                 </div>
                 <div>
-                <h5>SKILL</h5>
-                <hr />
+                    <h5>SKILL</h5>
+                    <hr />
                 </div>
                 <div className="skill-section104 mt-3">
-                        <div className="inner-104-1 me-4">
-                            {keyskills[0].map((keys, index) => (
-                                <div key={index} className="technical-skill-item104 d-flex justify-content-between">
-                                    <p>{keys.keyskills}</p>
-                                    {/* 5-star rating system */}
-                                    
-                                </div>
-                            ))}
-                        </div>
-                        <div className="row inner-104-1">
-                            {languages[0].map((keys, index) => (
-                                <div key={index} className="col-6 ms-2 d-flex justify-content-between me-5">
-                                    <p>{keys.language}</p>
-                                    <div className="star-rating ms-3 w-50 d-flex">
-                                        {[...Array(5)].map((_, i) => (
-                                            <i
-                                                key={i}
-                                                className={`bi bi-star${i < keys.rating ? '-fill' : ''}`}
-                                                style={{ color: i < keys.rating ? '#ffc150' : 'grey' }} // Filled stars are gold, others are gray
-                                            />
-                                        ))}
-                                    </div>
-                                </div>
-                            ))}
-                        </div>
-                        <div className="row inner-104-1">
-                            {SoftSkill[0].map((soft, index) => (
-                                <div className="col-4 ms-2">
-                                    <p>{soft.softSkill}</p>
-                                </div>
-                            ))}
-                        </div>
+                    <div className="inner-104-1 me-4">
+                        {keyskills[0].map((keys, index) => (
+                            <div key={index} className="technical-skill-item104 d-flex justify-content-between">
+                                <p>{keys.keyskills}</p>
+                                {/* 5-star rating system */}
+
+                            </div>
+                        ))}
                     </div>
-                    <div>
-                    <h5 className="details-title104" style={{ color: headingColor }}>EDUCATION</h5>
-                    <hr />
-                    </div>
-                    <div className="education-section104">
-                        {education[0].map((edu, index) => (
-                            <div key={index} className="education-item101 ms-4">
-                                <div className="education-degree104">
-                                    <p className="education-duration104">{edu.startYear} - {edu.endYear}</p>
-                                    <p>{edu.univercity},{edu.city}</p>
+                    <div className="row inner-104-1">
+                        {languages[0].map((keys, index) => (
+                            <div key={index} className="col-6 ms-2 d-flex justify-content-between me-5">
+                                <div>
+                                <p>{keys.language}</p>
                                 </div>
-                                <div className="education-details104">
-                                    <p>{edu.degree}</p>
-                                    <p>{edu.univercity}</p>
+                                <div className="star-rating ms-3 w-50 d-flex">
+                                    {[...Array(5)].map((_, i) => (
+                                        <i
+                                            key={i}
+                                            className={`bi bi-star${i < keys.rating ? '-fill' : ''}`}
+                                            style={{ color: i < keys.rating ? '#ffc150' : 'grey' }} // Filled stars are gold, others are gray
+                                        />
+                                    ))}
                                 </div>
                             </div>
                         ))}
                     </div>
+                    <div className="row inner-104-1">
+                        {SoftSkill[0].map((soft, index) => (
+                            <div className="col-4 ms-2">
+                                <p>{soft.softSkill}</p>
+                            </div>
+                        ))}
+                    </div>
+                </div>
+                <div>
+                    <h5 className="details-title104" style={{ color: headingColor }}>EDUCATION</h5>
+                    <hr />
+                </div>
+                <div className="education-section104">
+                    {education[0].map((edu, index) => (
+                        <div key={index} className="education-item101 ms-4">
+                            <div className="education-degree104">
+                                <p className="education-duration104">{edu.startYear} - {edu.endYear}</p>
+                                <p>{edu.univercity},{edu.city}</p>
+                            </div>
+                            <div className="education-details104">
+                                <p>{edu.degree}</p>
+                                <p>{edu.univercity}</p>
+                            </div>
+                        </div>
+                    ))}
+                </div>
+                <div className="experience-section104 mt-4">
+                    <h5 className="details-title104" style={{ color: headingColor }}>
+                        VOLUNTEER EXPERIENCE</h5>
+                        <hr />
+                    {work[0].map((works, index) => (
+                        <div key={index} className="employment-history101 ms-4 d-flex justify-content-between">
+                            <div className="exp-inner104">
+                                <p className="employment-duration104">{works.startYear} - {works.endYear}</p>
+                            </div>
+                            <div>
+                            <p className="employment-detail104"><b>{works.organization}</b><br />{works.jobtitle}</p>
+                                <p className='aboutexperience104'>{works.aboutexperience}</p>
+                            </div>
+                        </div>
+                    ))}
+                </div>
+                <div className="experience-section104">
+                    <h5 className="details-title101" style={{ color: headingColor }}>
+                        INTEREST</h5>
+                        <hr />
+                    {Hobbies[0].map((works, index) => (
+                        <div key={index} className="employment-history104 ms-4 ">     
+                             <p className="employment-duration101">{works.hobbies}</p>
+                        </div>
+                    ))}
+                </div>
             </div>
-            <div className="resume-download-section w-30">
+            <div className="resume-download-section">
                 <div className='d-flex'>
                     <input type="text" placeholder="Enter your resume name" className="resume-name-input" style={{ borderRadius: '5px', padding: '10px' }} onChange={(e) => setInputFields(e.target.value)} />
                     <button onClick={handleDownloadPDF} type="btn" className="btn btn-primary ms-2 download-button">Download</button>

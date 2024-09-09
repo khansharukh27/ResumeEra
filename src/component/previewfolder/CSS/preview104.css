@@ -2,13 +2,24 @@
     display: flex;
     justify-content: space-between;
 }
-.alisha104{}
+.alisha104{
+    padding: 15px;
+font-size: medium;
+}
+.alisha104 h5{
+    font-size: large;
+    margin-top: 10px;
+    margin-bottom: -5px;
+}
 .personalinfo104{
 display: flex;
 justify-content: space-between;
 /* margin-right: 20px; */
 background-color: beige;
-padding: 15px;
+
+}
+.personalinfo104 h5{
+    
 }
 .personalinfo104 p{
     margin-bottom: -5px;
@@ -26,11 +37,20 @@ padding: 15px;
     text-align: start;
     margin-right: 20px;
     margin-top: 20px;
+    font-weight: 900;
 }
 .contactdiv104{
 text-align: end;
 margin-left: 20px;
 margin-top: 20px;
+margin-right: 5px;
+}
+.aboutme104{
+    margin-right: 5px;
+    text-align: justify;
+}
+.alisha104 hr{
+    width: 100%;
 }
 .skill-section104{
     display: flex;
@@ -48,4 +68,97 @@ margin-top: 20px;
 .education-section104 p{
     margin-bottom: -5px;
 
+}
+@media (min-width:768px){
+    .main104{
+        display: flex;
+        flex-direction: row;
+        /* justify-content: space-between; */
+    }
+    
+    .alisha104{
+        font-size: xx-small;
+        width: 60%;
+    }
+    .alisha104 h5{
+        font-size: small;
+        font-weight: 900;
+    }
+    .imagediv104 img{
+        width: 80px;
+        height: 80px;
+       margin: 10px;
+    }
+    .resume-download-section{
+        width: 40%;
+    }
+}
+
+
+
+
+@media (max-width:425px){
+    .main104{
+        display: flex;
+        flex-direction: column;
+        /* justify-content: space-between; */
+    }
+    
+    .alisha104{
+        font-size: xx-small;
+    }
+    .alisha104 h5{
+        font-size: small;
+        font-weight: 900;
+    }
+    .imagediv104 img{
+        width: 80px;
+        height: 80px;
+       margin: 10px;
+    }
+}
+
+
+@media (max-width:375px){
+    .main104{
+        display: flex;
+        flex-direction: column;
+        /* justify-content: space-between; */
+    }
+    
+    .alisha104{
+        font-size: xx-small;
+    }
+    .alisha104 h5{
+        font-size: small;
+        font-weight: 900;
+    }
+    .imagediv104 img{
+        width: 80px;
+        height: 80px;
+       margin: 10px;
+    }
+}
+
+
+@media (max-width:320px){
+    .main104{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+    
+    .alisha104{
+        font-size: xx-small;
+    }
+    .alisha104 h5{
+        font-size: small;
+        font-weight: 900;
+    }
+    .imagediv104 img{
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+       margin: 10px;
+    }
 }
