@@ -42,11 +42,13 @@ import profetional_resume_3 from '../src/image/technical_Image/profetional_resum
 import profetional_resume_1 from '../src/image/technical_Image/profetional_resume_1.jpg'
 import profetional_resume_2 from '../src/image/technical_Image/profetional_resume_2.jpg'
 import profetional_resume_4 from '../src/image/technical_Image/profetional_resume_4.jpg'
+import profetional_resume_5 from '../src/image/technical_Image/profetional_resume_5.jpg'
 
 import Preview103 from './component/previewfolder/Preview103';
 import Preview101 from './component/previewfolder/Preview101';
 import Preview102 from './component/previewfolder/Preview102';
 import Preview104 from './component/previewfolder/Preview104';
+import Preview105 from './component/previewfolder/Preview105';
 
 var images = [
   { id: 1, src: resum1, alt: 'image1' },{ id: 2, src: resume2, alt: 'image2' },{ id: 3, src: resume3, alt: 'image3' },
@@ -60,8 +62,9 @@ var images = [
 var techImages = [
   {id:101, src: profetional_resume_1, alt : 'auto cade resume'},
   {id:103, src: profetional_resume_3, alt : 'image3'},
-  {id:102, src: profetional_resume_2, alt : 'manager resume'},
-  {id:104, src: profetional_resume_4, alt : 'hospital resume'}
+  {id:102, src: profetional_resume_2, alt : 'manager resume'},  {id:104, src: profetional_resume_4, alt : 'hospital resume'}
+  ,{id:105, src: profetional_resume_5, alt : 'hospital resume'}
+
 ]
 console.log('images:=',images)
 console.log(images[0].id)
@@ -104,6 +107,8 @@ function App() {
         <Route path='/preview102' element={<Preview102/>}/>
         <Route path='/preview103' element={<Preview103/>}/>
         <Route path='/preview104' element={<Preview104/>}/>
+        <Route path='/preview105' element={<Preview105/>}/>
+
       </Routes>
     </Router>
 

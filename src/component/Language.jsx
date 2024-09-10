@@ -3,11 +3,12 @@ import { useDispatch } from "react-redux";
 import { addLanguage } from "../Redux/action";
 import Education from "./Education";
 import Hobbies from "./Hobbies";
+// import { float } from "html2canvas/dist/types/css/property-descriptors/float";
 
 const Language = () => {
   const [inputLanguage, setInputLanguage] = useState(() => {
     const savedLanguages = localStorage.getItem("inputLanguageData");
-    return savedLanguages ? JSON.parse(savedLanguages) : [{ language: "" }];
+    return savedLanguages ? JSON.parse(savedLanguages) : [{ language: "", rating: 0 }];
   });
 
   const [showEducation, setShowEducation] = useState(false);
@@ -42,17 +43,17 @@ const Language = () => {
   const handleChange = (e, index) => {
     const { name, value } = e.target;
     setInputLanguage((prev) => {
-      const updateInputLanguage = [...prev];
-      updateInputLanguage[index] = {
-        ...updateInputLanguage[index],
-        [name]: value.toUpperCase(),
+      const updatedLanguages = [...prev];
+      updatedLanguages[index] = {
+        ...updatedLanguages[index],
+        [name]: name === "rating" ? Number(value) : value.toUpperCase(),
       };
-      return updateInputLanguage;
+      return updatedLanguages;
     });
   };
 
   const handleAddMore = () => {
-    setInputLanguage((prev) => [...prev, { language: "" }]);
+    setInputLanguage((prev) => [...prev, { language: "", rating: 0 }]);
   };
 
   const handleDelete = (index) => {
@@ -60,7 +61,7 @@ const Language = () => {
   };
 
   const handleKeyDown = (e) => {
-    if (e.key === 'Enter') {
+    if (e.key === "Enter") {
       e.preventDefault(); // Prevent default form submission if needed
       handleClick(e);
     }
@@ -93,24 +94,43 @@ const Language = () => {
               className=""
               style={{
                 display: "flex",
+                flexDirection: "column",
                 justifyContent: "center",
                 alignItems: "center",
               }}
             >
               <input
-                className="input w-100"
+                className="input w-50"
                 style={{
                   borderRadius: "5px",
                   padding: "10px",
                   marginTop: "7px",
                 }}
                 type="text"
-                placeholder={`language ${index + 1}`}
+                placeholder={`Language ${index + 1}`}
                 name="language"
                 value={inputLan.language}
                 onChange={(e) => handleChange(e, index)}
-                onKeyDown={handleKeyDown} // Optionally add for input
+                onKeyDown={handleKeyDown}
               />
+             
+                
+                <input
+                  type="number"
+                  name="rating"
+                  min="1"
+                  max="5"
+                  placeholder="Proficiency Number"
+                  className="input mt-2"
+                  value={inputLan.rating}
+                  onChange={(e) => handleChange(e, index)}
+                  style={{
+                    borderRadius: "5px",
+                    padding: "10px",
+                    marginTop: "7px",
+                  }}
+                  
+                />
               <div className="d-flex justify-content-around mt-2">
                 <button
                   onClick={() => handleDelete(index)}
@@ -123,27 +143,19 @@ const Language = () => {
             </div>
           ))}
           <div className="mt-2 d-flex justify-content-center align-item-center">
-            <button
-              className="button1"
-              type="button"
-              onClick={handleAddMore}
-            >
+            <button className="button1" type="button" onClick={handleAddMore}>
               <span className="text">ADD MORE</span>
             </button>
           </div>
 
           <div className="d-flex justify-content-around mt-2">
-            <button
-              className="button1"
-              type="button"
-              onClick={handleClickBack}
-            >
+            <button className="button1" type="button" onClick={handleClickBack}>
               <span className="text">BACK</span>
             </button>
             <button
               onClick={handleClick}
               onKeyDown={handleKeyDown}
-              type="button" // Changed to button to avoid form submission
+              type="button"
               className="button1"
             >
               <span className="text">NEXT</span>

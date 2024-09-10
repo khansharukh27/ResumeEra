@@ -125,8 +125,17 @@ const Preview14 = () => {
                         <div className="">
                             <h5 style={{color:headingColor}} className=' heading14'><i class="bi bi-translate me-1"></i>LANGUAGE</h5>
                             {LLanguage[0].map((keys, index) => (
-                                <div key={index} className=" d-flex col-6 justify-content-between">
+                                <div key={index} className=" d-flex  justify-content-between">
                                     <div>  <p>{keys.language}</p></div>
+                                    <div className="star-rating ms-3 w-50">
+                                        {[...Array(5)].map((_, i) => (
+                                            <i
+                                                key={i}
+                                                className={`bi bi-star${i < keys.rating ? '-fill' : ''}`}
+                                                style={{ color: i < keys.rating ? '#ffc150' : 'grey' }} // Filled stars are gold, others are gray
+                                            />
+                                        ))}
+                                    </div>
                                 </div>
                             ))}
                         </div>
@@ -184,7 +193,15 @@ const Preview14 = () => {
                             {keyskills[0].map((keys, index) => (
                                 <div key={index} className="col-6 d-flex justify-content-around">
                                     <div>  {keys.keyskills}</div>
-                                    <div className='' style={lineStyle}></div>
+                                    <div className="star-rating ms-3 w-50">
+                                        {[...Array(5)].map((_, i) => (
+                                            <i
+                                                key={i}
+                                                className={`bi bi-star${i < keys.rating ? '-fill' : ''}`}
+                                                style={{ color: i < keys.rating ? '#ffc150' : 'grey' }} // Filled stars are gold, others are gray
+                                            />
+                                        ))}
+                                    </div>
                                 </div>
                             ))}
                         </div>

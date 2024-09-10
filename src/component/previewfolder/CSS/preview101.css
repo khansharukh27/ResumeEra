@@ -1,23 +1,20 @@
 .main101{
+    /* display: flex;
+    flex-direction: row; */
     display: flex;
-    flex-direction: row;
 }
-#Alisha_mirza101 {
-    /* Styles for the main container */
-    display: flex;
-    /* width: 70%; */
-}
+
 .preview101{
     display: flex;
 
 }
 .preview101-1{
-    width: 40%;
+    /* width: 40%; */
     background-color: rgb(61, 60, 60);
     color: white;
 }
 .preview101-2{
-    width: 60%;
+    /* width: 60%; */
     margin-left: 15px;
 }
 .profile101{
@@ -100,6 +97,7 @@
 
 .employment-detail101 {
     /* Styles for the employment detail (organization and job title) */
+    margin-right: 50%;
 }
 
 .employment-duration101 {
@@ -157,7 +155,7 @@ margin-left: 15px;
 @media (max-width: 768px) {
     .main101 {
         display: flex;
-        /* flex-direction: row; */
+        flex-direction: row;
         font-size: 0.75rem; /* Slightly more universal sizing */
     }
     .main101 h5, .main101 h6 {
@@ -169,14 +167,17 @@ margin-left: 15px;
         height: 120px;
     }
     .preview101-1 {
-        width: 50%;
+        width: 35%;
         background-color: rgb(61, 60, 60);
         color: white;
         margin-left: -5px;
     }
     .preview101-2 {
-        width: 50%;
+        width: 35%;
         margin-left: 5px;
+    }
+    #preview101{
+       width: 70%;
     }
 }
 

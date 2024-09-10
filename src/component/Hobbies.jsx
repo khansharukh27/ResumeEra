@@ -125,6 +125,7 @@ console.log(location)
               <span className="text">ADD MORE</span>
             </button>
           </div>
+         
           <div className="d-flex justify-content-around">
             <button
               className="button1"
