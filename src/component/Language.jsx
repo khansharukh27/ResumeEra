@@ -94,13 +94,13 @@ const Language = () => {
               className=""
               style={{
                 display: "flex",
-                flexDirection: "column",
+                flexDirection: '',
                 justifyContent: "center",
                 alignItems: "center",
               }}
             >
               <input
-                className="input w-50"
+                className="input w-50 me-2"
                 style={{
                   borderRadius: "5px",
                   padding: "10px",
@@ -113,24 +113,24 @@ const Language = () => {
                 onChange={(e) => handleChange(e, index)}
                 onKeyDown={handleKeyDown}
               />
-             
-                
-                <input
-                  type="number"
-                  name="rating"
-                  min="1"
-                  max="5"
-                  placeholder="Proficiency Number"
-                  className="input mt-2"
-                  value={inputLan.rating}
-                  onChange={(e) => handleChange(e, index)}
-                  style={{
-                    borderRadius: "5px",
-                    padding: "10px",
-                    marginTop: "7px",
-                  }}
-                  
-                />
+
+                Rating:
+              <input
+                type="number"
+                name="rating"
+                min="1"
+                max="5"
+                placeholder="Proficiency Number"
+                className="input mt-2"
+                value={inputLan.rating}
+                onChange={(e) => handleChange(e, index)}
+                style={{
+                  borderRadius: "5px",
+                  padding: "10px",
+                  marginTop: "7px",
+                }}
+
+              />
               <div className="d-flex justify-content-around mt-2">
                 <button
                   onClick={() => handleDelete(index)}

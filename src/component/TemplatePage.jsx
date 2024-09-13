@@ -1,10 +1,9 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import '../css/templates.css';
 import NormalResume from './NormalResume';
 import TechnicalResumeImages from './TechResume/TechnicalResumeImages';
 const TemplatePage = (props) => {
     const { images ,techImages} = props;
-    
 
     return (
         <div className='template-page-container'>
@@ -14,6 +13,7 @@ const TemplatePage = (props) => {
                 <p className='hero-description'>
                     Choose a template and customize it to stand out from the crowd. Start your career journey with a professional resume.
                 </p>
+                
             </section>
 
             {/* Template Grid */}

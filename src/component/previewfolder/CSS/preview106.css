@@ -1,0 +1,157 @@
+.main106{
+    display: flex;
+    justify-content: space-between;
+    /* padding: 10px; */
+}
+.preview106{
+    margin: 20px;
+    width: 70%;
+    /* display: flex; */
+    font-size: small;
+    padding: 10px;
+}
+.headermain106{
+    display: flex;
+    justify-content: space-between;
+}
+.previewinner106{
+    display: flex;
+}
+.imagediv106{
+width: 80px;
+height: 80px;
+display: flex;
+align-items: center;
+justify-content: center;
+margin: 20px;
+
+}
+.imagediv106 img{
+    margin-top: -20px;
+    margin-left: 40px;
+    width: 70px;
+height: 70px;
+padding: 10px;
+/* margin: 20px; */
+}
+.header106-1{
+    /* white-space: nowrap; */
+    width: 50%;
+    height: 100px;
+    /* height: initial; */
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid grey;
+    border-top-right-radius: 50%;
+    border-bottom-right-radius: 50%;
+    background-color: #a8906b;
+    /* padding: -20px; */
+    padding-left: 20px;
+    padding-right: 20px;
+    margin-right: 5px;
+   
+}
+.profile106{
+    /* margin-bottom: -15px; */
+    margin-top:10px;
+}
+
+.header106-2{
+    /* display: flex; */
+    width: 50%;
+    text-align: end;
+    border: 1px solid grey;
+    border-bottom-left-radius: 50%;
+    border-top-left-radius: 50%;
+    padding-left: 20px;
+    padding-right: 20px;
+       background-color: #a8906b;
+       /* margin-left: 15px; */
+           /* white-space: nowrap; */
+
+
+}
+.header106-2 p{
+    margin-bottom: -3px;
+}
+.inner106-1{
+width: 50%;
+text-align: start;
+}
+.inner106-2{
+    width: 50%;
+    text-align: end;
+}
+.employment-detail106{
+    margin-bottom: -3px;
+}
+
+.resume-download-section{
+    width: 30%;
+}
+.details-title106{
+    font-weight: 700;
+}
+.exp-inner106{
+    margin-bottom: -7px;
+}
+.technical-skill-item106 p{
+    margin-bottom: -3px;
+}
+
+@media (max-width:320px) {
+    .main106{
+        display: flex;
+        flex-direction: column;
+       
+    }
+    .preview106{
+        margin: 0px;
+        width: 100%;
+        /* display: flex; */
+        font-size: xx-small;
+        padding: 0px;
+        margin-top: 10px;
+    }
+    .preview106 h6{
+        font-size: xx-small;
+        font-weight: 900;
+    }
+    .header106-1{
+        /* white-space: nowrap; */
+        width: 50%;
+        height: 100px;
+        /* height: initial; */
+        display: flex;
+        justify-content: space-between;
+        border: 1px solid grey;
+        border-top-right-radius: 50%;
+        border-bottom-right-radius: 50%;
+        background-color: #a8906b;
+       padding-left: 0px;
+       padding-right: 0px;
+       
+    }
+    .profile106{
+        /* margin-bottom: -15px; */
+        margin-top:10px;
+    }
+    
+    .header106-2{
+        /* display: flex; */
+        width: 50%;
+        height: 100px;
+        text-align: end;
+        border: 1px solid grey;
+        border-bottom-left-radius: 50%;
+        border-top-left-radius: 50%;
+        padding-left: 0px;
+        padding-right: 0px;
+        background-color: #a8906b;
+
+    }
+    .resume-download-section{
+        width: 100%;
+    }
+    
+}

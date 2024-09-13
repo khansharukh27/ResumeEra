@@ -84,7 +84,7 @@ const SoftSkills = () => {
           </div>
           <hr className="mb-3" />
           {input.map((inp, index) => (
-            <div key={index} className="d-flex justify-content-center">
+            <div key={index} className="d-flex justify-content-center mt-2">
               <input
                 type="text"
                 className="input"

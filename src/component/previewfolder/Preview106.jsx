@@ -3,9 +3,11 @@ import jsPDF from "jspdf";
 import { useState } from "react";
 import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
-import './/CSS/preview103.css'
-// import { fontFamily } from "html2canvas/dist/types/css/property-descriptors/font-family";
-const Preview101 = () => {
+import './CSS/preview106.css'
+
+
+const Preview106 = () => {
+
     const [inputFields, setInputFields] = useState('resume.pdf');
     const [bgColor, setBgColor] = useState('white'); // Default background color (wheat)
     const [fontStyle, setFontStyle] = useState('Arial'); // Default font style
@@ -17,6 +19,11 @@ const Preview101 = () => {
     const keyskills = useSelector((state) => [state.reducer.keySkills[0]]);
     const work = useSelector((state) => [state.reducer.workExperience[0]]);
     const Honor = useSelector((state) => [state.reducer.honorAndaward[0]]);
+    const Refrence = useSelector((state) => [state.reducer.addReference[0]])
+    const SoftSkill = useSelector((state) => [state.reducer.addSoftSkills[0]])
+    const socialMediaLink = useSelector((state) => [state.reducer.socialMediaLink[0]]);
+    const languages = useSelector((state) => [state.reducer.addLanguage[0]]);
+    console.log('refrences:-', Refrence)
     console.log('honorand award:-', Honor)
     const handleDownloadPDF = async () => {
         const element = document.getElementById('Alisha_mirza101');
@@ -47,70 +54,90 @@ const Preview101 = () => {
             console.error('Error downloading PDF:', error);
         }
     };
+
+
     return (
-        <div className="personal-info-section101">
-            <div className="main103" id="Alisha_mirza101" style={{fontFamily:fontStyle,color:fontColor,backgroundColor:bgColor}}>
-                <div className="personal-header">
-                    <h1 className="personal-name" style={{ color: headingColor }}>{personalInfo.firstName} {personalInfo.lastName}</h1>
-                    <p className="personal-details">{personalInfo.city} {personalInfo.state} <b>.</b> {personalInfo.email} <b>.</b> {personalInfo.mobileNumber}</p>
-                </div>
-                <div className="profile-summary-section">
-                    <h5 className="profile-summary-title" style={{ color: headingColor }}>PROFILE SUMMARY</h5>
-                    <hr className="profile-summary-hr" />
-                    <p className="profile-summary-content">{personalInfo.object}</p>
-                </div>
-                <div className="education-section">
-                    <h5 className="details-title101" style={{ color: headingColor }}>EDUCATION</h5>
-                    <hr className="education-hr" />
-                    {education[0].map((edu, index) => (
-                        <div key={index} className="education-item101">
-                            <div className="education-degree101">
-                                <span>{edu.degree}</span>
-                                <span className="education-duration101">{edu.startYear} - {edu.endYear}</span>
-                            </div>
-                            <div className="education-details">
-                                <span><b>{edu.univercity}</b></span>
-                            </div>
+        <div className="main106">
+            <div className="preview106" id="Alisha_mirza106" style={{ fontFamily: fontStyle, color: fontColor, backgroundColor: bgColor }}>
+                <div className="headermain106">
+                    <header className="header106-1 ">
+                        <div className="profile106">
+                            <h6 className="personal-name106" style={{ color: headingColor }}>{personalInfo.firstName} <br /> {personalInfo.lastName}</h6>
+                            <p style={{ color: 'lightgray' }}>{work[0][0].jobtitle}</p>
                         </div>
-                    ))}
-                </div>
-                <div className="experience-section">
-                    <h5 className="details-title101" style={{ color: headingColor }}>PROFECTION EXPERIENCE</h5>
-                    <hr className="experience-hr" />
-                    {work[0].map((works, index) => (
-                        <div key={index} className="employment-history101">
-                            <div className="exp-inner101">
-                            <p className="employment-detail101" style={{}}><b>{works.organization}</b>--{works.jobtitle}</p>
-                            <p className="employment-duration101">{works.startYear} - {works.endYear}</p>
-                            </div>
-                            <p className='aboutexperience101'>{works.aboutexperience}</p>
+                        <div className="imagediv106">
+                            <img src={personalInfo.image} alt="doctore resume" />
                         </div>
-                    ))}
+                    </header>
+                    <header className="header106-2 ">
+                        <p className="mt-3">{personalInfo.address} {personalInfo.city} {personalInfo.state} {personalInfo.postalCode}<i className="bi bi-geo-alt-fill me-2 ms-2" /></p>
+                        <p>{personalInfo.mobileNumber}<i className="bi bi-telephone-fill me-2 ms-2" /></p>
+                        <p style={{ wordBreak: "break-all" }}>{personalInfo.email}<i className="bi bi-envelope me-2 ms-2" /></p>
+                        <p>{socialMediaLink.github}<i class="bi bi-github ms-2 me-2" /></p>
+                    </header>
                 </div>
-                <div className="skill-section101">
-                    <h5 className="technical-skills-title" style={{ color: headingColor }}>TECHNICAL SKILL</h5>
-                    <hr className="technical-skills-hr" />
-                    {keyskills[0].map((keys, index) => (
-                        <div key={index} className="technical-skill-item d-flex">
-                            <p>{keys.keyskills}|</p> 
+                <div className="previewinner106 mt-5">
+                    <div className="inner106-1">
+                        <div className="experience-section106">
+                            <h6 className="details-title106" style={{ color: headingColor }}>
+                                Work experience</h6>
+                            {work[0].map((works, index) => (
+                                <div key={index} className="employment-history106">
+                                    <div className="exp-inner106">
+                                        <p className="employment-detail106"><b>{works.jobtitle}</b><br />{works.organization}{work.city}</p>
+                                        <p className="employment-detail106">{works.startYear} - {works.endYear}</p>
+                                        <p className='employment-detail106'>{works.aboutexperience}</p>
+                                    </div>
+                                </div>
+                            ))}
                         </div>
-                    ))}
-                </div>
-                <div className="honor-award-section">
-                    <h5 className="honor-title" style={{ color: headingColor }}>HONOR & AWARD</h5>
-                    <hr className="honor-hr" />
-                    {Honor[0].map((hobb, index) => (
-                        <div key={index} className="honor-item">
-                            <div className="honor-info">
-                                <p><b>{hobb.title}</b></p>
-                                <p><b>{hobb.year}</b></p>
+                        <div className="education-section106 mt-3">
+                        <h6 className="details-title106" style={{ color: headingColor }}>Education</h6>
+                        {education[0].map((edu, index) => (
+                            <div key={index} className="education-item106">
+                                <div className="">
+                                    <p className="employment-detail106">{edu.degree}</p>
+                                    <p className="employment-detail106">{edu.univercity}</p>
+                                    <p className="employment-detail106">{edu.startYear} - {edu.endYear},{edu.city}</p>
+                                </div>
+                                <div className="education-details106">
+                                    <span><b></b></span>
+                                </div>
                             </div>
-                            <div className="honor-organization">
-                                <p><b>{hobb.organization}</b></p>
-                                <p><b>{hobb.description}</b></p>
-                            </div>
+                        ))}
+                    </div>
+                    </div>
+                    
+                    <div className="inner106-2">
+                        <div>
+                            <h6 style={{ color: headingColor }}>Profile</h6>
+                            <p>{personalInfo.object}</p>
                         </div>
-                    ))}
+                        <div className=" ">
+                            <h6 style={{ color: headingColor }}>Language</h6>
+                            {languages[0].map((keys, index) => (
+                                <div key={index} className="">
+                                    <div>
+                                        {keys.language}
+                                    </div>
+                                    <div className="line-container">
+                                        <div className="filled-line" style={{ width: `${(keys.rating / 5) * 100}%` }}></div>
+                                        <div className="empty-line" style={{ width: `${100 - (keys.rating / 5) * 100}%` }}></div>
+                                    </div>
+                                </div>
+                            ))}
+                        </div>
+                        <div className="technical-skills-title106 mt-3">
+                            <h6 className="" style={{ color: headingColor }}>
+                                TECHNICAL SKILL</h6>
+                            {keyskills[0].map((keys, index) => (
+                                <div key={index} className="technical-skill-item106">
+                                    <p>{keys.keyskills}</p>     
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                    
                 </div>
             </div>
             <div className="resume-download-section">
@@ -165,4 +192,4 @@ const Preview101 = () => {
         </div>
     )
 }
-export default Preview101;
+export default Preview106;

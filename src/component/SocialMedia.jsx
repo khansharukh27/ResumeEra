@@ -86,7 +86,7 @@ const SocialMedia = () => {
                                 onChange={handleChange}
                                 value={textInput.linkedin}
                             />
-                            <button className="button1" onClick={(index) => handleDelete(index)}><span>Delete</span> </button>
+                            <button className="button1 mb-2" onClick={(index) => handleDelete(index)}><span>Delete</span> </button>
                         </div>
                         <div className='d-flex'>
                             <input
@@ -97,7 +97,7 @@ const SocialMedia = () => {
                                 onChange={handleChange}
                                 value={textInput.github}
                             />
-                            <button className="button1" onClick={(index) => handleDelete(index)}><span>Delete</span></button>
+                            <button className="button1 mb-2" onClick={(index) => handleDelete(index)}><span>Delete</span></button>
 
                         </div>
                         <div className='d-flex'>
@@ -109,7 +109,7 @@ const SocialMedia = () => {
                                 onChange={handleChange}
                                 value={textInput.twitter}
                             />
-                            <button className="button1" onClick={(index) => handleDelete(index)}><span>Delete</span></button>
+                            <button className="button1 mb-2" onClick={(index) => handleDelete(index)}><span>Delete</span></button>
 
                         </div>
 

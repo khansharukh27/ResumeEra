@@ -3,9 +3,11 @@ import jsPDF from "jspdf";
 import { useState } from "react";
 import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
-import './/CSS/preview103.css'
-// import { fontFamily } from "html2canvas/dist/types/css/property-descriptors/font-family";
-const Preview101 = () => {
+import './CSS/preview105.css'
+
+
+const Preview107 =() =>{
+
     const [inputFields, setInputFields] = useState('resume.pdf');
     const [bgColor, setBgColor] = useState('white'); // Default background color (wheat)
     const [fontStyle, setFontStyle] = useState('Arial'); // Default font style
@@ -17,6 +19,11 @@ const Preview101 = () => {
     const keyskills = useSelector((state) => [state.reducer.keySkills[0]]);
     const work = useSelector((state) => [state.reducer.workExperience[0]]);
     const Honor = useSelector((state) => [state.reducer.honorAndaward[0]]);
+    const Refrence = useSelector((state) => [state.reducer.addReference[0]])
+    const SoftSkill = useSelector((state) => [state.reducer.addSoftSkills[0]])
+    const socialMediaLink = useSelector((state) => [state.reducer.socialMediaLink[0]]);
+    const languages = useSelector((state) => [state.reducer.addLanguage[0]]);
+    console.log('refrences:-', Refrence)
     console.log('honorand award:-', Honor)
     const handleDownloadPDF = async () => {
         const element = document.getElementById('Alisha_mirza101');
@@ -47,72 +54,11 @@ const Preview101 = () => {
             console.error('Error downloading PDF:', error);
         }
     };
-    return (
-        <div className="personal-info-section101">
-            <div className="main103" id="Alisha_mirza101" style={{fontFamily:fontStyle,color:fontColor,backgroundColor:bgColor}}>
-                <div className="personal-header">
-                    <h1 className="personal-name" style={{ color: headingColor }}>{personalInfo.firstName} {personalInfo.lastName}</h1>
-                    <p className="personal-details">{personalInfo.city} {personalInfo.state} <b>.</b> {personalInfo.email} <b>.</b> {personalInfo.mobileNumber}</p>
-                </div>
-                <div className="profile-summary-section">
-                    <h5 className="profile-summary-title" style={{ color: headingColor }}>PROFILE SUMMARY</h5>
-                    <hr className="profile-summary-hr" />
-                    <p className="profile-summary-content">{personalInfo.object}</p>
-                </div>
-                <div className="education-section">
-                    <h5 className="details-title101" style={{ color: headingColor }}>EDUCATION</h5>
-                    <hr className="education-hr" />
-                    {education[0].map((edu, index) => (
-                        <div key={index} className="education-item101">
-                            <div className="education-degree101">
-                                <span>{edu.degree}</span>
-                                <span className="education-duration101">{edu.startYear} - {edu.endYear}</span>
-                            </div>
-                            <div className="education-details">
-                                <span><b>{edu.univercity}</b></span>
-                            </div>
-                        </div>
-                    ))}
-                </div>
-                <div className="experience-section">
-                    <h5 className="details-title101" style={{ color: headingColor }}>PROFECTION EXPERIENCE</h5>
-                    <hr className="experience-hr" />
-                    {work[0].map((works, index) => (
-                        <div key={index} className="employment-history101">
-                            <div className="exp-inner101">
-                            <p className="employment-detail101" style={{}}><b>{works.organization}</b>--{works.jobtitle}</p>
-                            <p className="employment-duration101">{works.startYear} - {works.endYear}</p>
-                            </div>
-                            <p className='aboutexperience101'>{works.aboutexperience}</p>
-                        </div>
-                    ))}
-                </div>
-                <div className="skill-section101">
-                    <h5 className="technical-skills-title" style={{ color: headingColor }}>TECHNICAL SKILL</h5>
-                    <hr className="technical-skills-hr" />
-                    {keyskills[0].map((keys, index) => (
-                        <div key={index} className="technical-skill-item d-flex">
-                            <p>{keys.keyskills}|</p> 
-                        </div>
-                    ))}
-                </div>
-                <div className="honor-award-section">
-                    <h5 className="honor-title" style={{ color: headingColor }}>HONOR & AWARD</h5>
-                    <hr className="honor-hr" />
-                    {Honor[0].map((hobb, index) => (
-                        <div key={index} className="honor-item">
-                            <div className="honor-info">
-                                <p><b>{hobb.title}</b></p>
-                                <p><b>{hobb.year}</b></p>
-                            </div>
-                            <div className="honor-organization">
-                                <p><b>{hobb.organization}</b></p>
-                                <p><b>{hobb.description}</b></p>
-                            </div>
-                        </div>
-                    ))}
-                </div>
-            </div>
+ 
+
+    return(
+        <div>
+            <h1>coming soon...</h1>
             <div className="resume-download-section">
                 <div className='d-flex'>
                     <input type="text" placeholder="Enter your resume name" className="resume-name-input" style={{ borderRadius: '5px', padding: '10px' }} onChange={(e) => setInputFields(e.target.value)} />
@@ -165,4 +111,4 @@ const Preview101 = () => {
         </div>
     )
 }
-export default Preview101;
+export default Preview107;

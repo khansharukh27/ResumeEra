@@ -7,15 +7,23 @@
     margin-top: 5px;
     margin-bottom: -5px;
 }
-.main101{
-    width: 70%;
+.main103{
+    width: 90%;
     border: 2px solid grey;
-    margin: 5px;
+    margin: 20px;
     padding-left: 5px;
+    filter: drop-shadow(10px 0px 10px  rgb(192, 142, 68));
+    font-weight: 10;
+    font-size: small;
+    color: grey;
+
 }
 .personal-header {
     text-align: center;
     /* padding-right: 5px; */
+}
+.main103 h5{
+    font-weight: 900;
 }
 .personal-name {}
 .personal-details {}
@@ -56,7 +64,9 @@ margin-right: 95px;
 .skill-section101 {}
 .technical-skills-title {}
 .technical-skills-hr {}
-.technical-skill-item {}
+.technical-skill-item {
+    display: flex;
+}
 
 .honor-award-section {}
 .honor-title {}
