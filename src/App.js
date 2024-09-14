@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import './App.css';
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { HashRouter as Router , Route, Routes } from "react-router-dom";
 
 import Navbar from '../src/component/Navbar';
 import TemplatePage from './component/TemplatePage';
@@ -53,6 +53,11 @@ import Preview104 from './component/previewfolder/Preview104';
 import Preview105 from './component/previewfolder/Preview105';
 import Preview106 from './component/previewfolder/Preview106';
 import Preview107 from './component/previewfolder/Preview107';
+import AboutUs from './component/AboutUs';
+import Footer from './component/Footer';
+import PrivacyPolicy from './component/PrivacyPolicy';
+import TermsAndServices from './component/TermsAndServices';
+import Contact from './component/Contact';
 
 var images = [
   { id: 1, src: resum1, alt: 'image1' },{ id: 2, src: resume2, alt: 'image2' },{ id: 3, src: resume3, alt: 'image3' },
@@ -95,6 +100,10 @@ function App() {
           element={<MainPage path={`/${path}/${image.id}`} techImages={techImages} />}/>
         ))}        
         <Route path='/myresume' element={<MyResume />} />
+        <Route path='/privacypolicy' element={<PrivacyPolicy />} />
+        <Route path='/contact' element={<Contact/>} />
+        <Route path='/terms-of-service' element={<TermsAndServices />} />
+        <Route path='/AboutUs' element={<AboutUs />} />
         <Route path='/preview' element={<Preview />} />
         <Route path='/preview2' element={<Preview2 />} />
         <Route path='/preview3' element={<Preview3/>}/>
@@ -117,6 +126,7 @@ function App() {
         <Route path='/preview106' element={<Preview106/>}/>
         <Route path='/preview107' element={<Preview107/>}/>
       </Routes>
+      <Footer/>
     </Router>
 
 

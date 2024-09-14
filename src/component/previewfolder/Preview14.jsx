@@ -139,7 +139,6 @@ const Preview14 = () => {
                                 </div>
                             ))}
                         </div>
-
                     </div>
                     <div className=' local'>
                         <img className='circle-div' src={imagepng} alt="png" style={{ width: '10px', height: '10px' }} />

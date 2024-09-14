@@ -1,0 +1,64 @@
+.about-me-container {
+    padding: 20px;
+    max-width: 900px;
+    margin: 0 auto;
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+  }
+  
+  h1, h2 {
+    background: linear-gradient(90deg, red, orange, yellow, green, blue, indigo, violet);
+            -webkit-background-clip: text;
+            color: transparent;
+  }
+  
+  .about-me-container p {
+    margin-bottom: 16px;
+    font-size: 1rem;
+    color: #555;
+  }
+  
+  h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  h2 {
+    font-size: 1.75rem;
+    margin-top: 20px;
+  }
+  
+  strong {
+    color: #2c3e50;
+  }
+  
+  .about-me-call-to-action {
+    background-color: #f5f5f5;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    margin-top: 30px;
+  }
+  
+  .about-me-call-to-action p {
+    font-size: 1.2rem;
+    background-color: #fff;
+    border: 2px solid whitesmoke;
+    padding: 5px;
+    border-radius: 8px;
+    box-shadow: 10px 0px 100px 10px pink;
+  }
+  
+  strong{
+    background: linear-gradient(90deg, orange, yellow, green, rgb(185, 147, 207));
+            -webkit-background-clip: text;
+            color: transparent;
+  }
+  .about-me-belief{
+    background-color: #fff;
+    border: 2px solid whitesmoke;
+    padding: 5px;
+    border-radius: 8px;
+    box-shadow: 10px 0px 100px 10px pink;
+  }

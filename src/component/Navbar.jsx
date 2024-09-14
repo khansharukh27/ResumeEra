@@ -10,7 +10,7 @@ function Navbar() {
             <div className="navbar-links">
                 <Link className="navbar-link" to="/template">TEMPLATES</Link>
                 <Link className="navbar-link" to="/myresume">MY RESUME</Link>
-                <Link className="navbar-link" to="/aboutme">ABOUT ME</Link>
+                <Link className="navbar-link" to="/AboutUs">ABOUT ME</Link>
             </div>
         </div>
     );

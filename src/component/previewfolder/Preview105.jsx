@@ -11,6 +11,7 @@ const Preview105 = () => {
     const [fontStyle, setFontStyle] = useState('Arial'); // Default font style
     const [fontColor, setFontColor] = useState('#rrggbb')
     const [headingColor, setHeadingColor] = useState('#rrggbb')
+    const [fontSize,setFontSize] = useState('medium')
     const navigate = useNavigate();
     const personalInfo = useSelector((state) => state.reducer.personalInfo[0]);
     const education = useSelector((state) => [state.reducer.education[0]]);
@@ -54,7 +55,7 @@ const Preview105 = () => {
     };
     return (
         <div className="main105">
-            <div className="preview105" id="Alisha_mirza" style={{ color: fontColor, backgroundColor: bgColor, fontFamily: fontStyle }}>
+            <div className="preview105" id="Alisha_mirza" style={{ fontSize:fontSize,color: fontColor, backgroundColor: bgColor, fontFamily: fontStyle }}>
                 <div className="personalinfo105">
                     <div className="imagediv105">
                         <img src={personalInfo.image} alt="doctore resume" />
@@ -178,6 +179,24 @@ const Preview105 = () => {
                     <span>Heading Color </span>
                     <input type="color" value={headingColor} onChange={(e) => setHeadingColor(e.target.value)} className="bg-color-picker ms-2" />
                 </div>
+                <div>
+    <span>Font Size </span>
+    <select value={fontSize} onChange={(e) => setFontSize(e.target.value)} className="bg-color-picker ms-2">
+    <option value="xx-small">xx-Small</option>
+    <option value="x-small">x-Small</option>
+        <option value="small">Small</option>
+        <option value="medium">Medium</option>
+        <option value="xx-large">xx-Large</option>
+        <option value="xx-large">x-Large</option>
+        <option value="large">Large</option>
+        <option value="12px">12px</option>
+        <option value="14px">14px</option>
+        <option value="16px">16px</option>
+        <option value="18px">18px</option>
+        <option value="20px">20px</option>
+        <option value="24px">24px</option>
+    </select>
+</div>
             </div>
         </div>
     )

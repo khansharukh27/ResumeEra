@@ -1,0 +1,44 @@
+.terms-and-services {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+  }
+  
+  .terms-and-services h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+  }
+  
+  .terms-and-services h2 {
+    font-size: 1.8rem;
+    margin-top: 20px;
+    color: #333;
+  }
+  
+  .terms-and-services p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 15px;
+  }
+  
+  .terms-and-services ul {
+    margin-left: 20px;
+    list-style-type: disc;
+  }
+  
+  .terms-and-services ul li {
+    margin-bottom: 10px;
+  }
+  
+  .terms-and-services a {
+    color: #00acee;
+    text-decoration: none;
+  }
+  
+  .terms-and-services a:hover {
+    text-decoration: underline;
+  }
+  
