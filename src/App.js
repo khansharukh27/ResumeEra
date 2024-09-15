@@ -58,6 +58,12 @@ import Footer from './component/Footer';
 import PrivacyPolicy from './component/PrivacyPolicy';
 import TermsAndServices from './component/TermsAndServices';
 import Contact from './component/Contact';
+import ImportantPost from './component/ImportantPost';
+import HowToCreateResume from './component/Important_post/HowToCreateResume';
+import TipsForWritingCoverLetter from './component/Important_post/TipsForWritingCoverLetter';
+import WhySoftSkillsMatter from './component/Important_post/WhySoftSkillsMatter';
+import TopResumeTemplates2024 from './component/Important_post/TopResumeTemplates2024';
+import CommonMistakesToAvoid from './component/Important_post/CommonMistakesToAvoid';
 
 var images = [
   { id: 1, src: resum1, alt: 'image1' },{ id: 2, src: resume2, alt: 'image2' },{ id: 3, src: resume3, alt: 'image3' },
@@ -104,6 +110,27 @@ function App() {
         <Route path='/contact' element={<Contact/>} />
         <Route path='/terms-of-service' element={<TermsAndServices />} />
         <Route path='/AboutUs' element={<AboutUs />} />
+        <Route path='/important_post' element={<ImportantPost/>} />
+        <Route path='/how-to-create-a-professional-resume' element={<HowToCreateResume/>} />
+        <Route path='/tips-for-writing-a-cover-letter' element={<TipsForWritingCoverLetter/>} />
+        <Route path='/why-soft-skills-matter' element={<WhySoftSkillsMatter/>} />
+        <Route path='/top-resume-templates-for-2024' element={<TopResumeTemplates2024/>} />
+        <Route path='/common-mistakes-to-avoid-on-your-resume' element={<CommonMistakesToAvoid/>} />
+         {/*<Route path='/how-to-choose-the-right-resume-template' element={<ChooseRightResumeTemplate />} />
+        <Route path='/creating-a-resume-for-your-first-job' element={<CreatingResumeForFirstJob />} />
+        <Route path='/how-to-highlight-achievements-in-a-resume' element={<HighlightAchievementsInResume />} />
+        <Route path='/resume-tips-for-experienced-professionals' element={<ResumeTipsForExperiencedProfessionals />} />
+        <Route path='/crafting-a-modern-resume' element={<CraftingModernResume />} />
+        <Route path='/how-to-format-a-resume-correctly' element={<FormatResumeCorrectly />} />
+        <Route path='/what-employers-look-for-in-a-resume' element={<WhatEmployersLookFor />} />
+        <Route path='/how-to-use-keywords-in-a-resume' element={<UseKeywordsInResume />} />
+        <Route path='/improving-your-resume-with-action-verbs' element={<ImprovingResumeWithActionVerbs />} />
+        <Route path='/how-to-create-a-resume-for-international-jobs' element={<CreateResumeForInternationalJobs />} />
+        <Route path='/resume-vs-cv-what-you-need-to-know' element={<ResumeVsCV />} />
+        <Route path='/how-to-showcase-your-education-in-a-resume' element={<ShowcaseEducationInResume />} />
+        <Route path='/creating-a-resume-with-no-experience' element={<CreatingResumeWithNoExperience />} />
+        <Route path='/how-to-write-a-resume-for-career-change' element={<WriteResumeForCareerChange />} />
+        <Route path='/resume-writing-tips-for-remote-jobs' element={<ResumeWritingTipsForRemoteJobs />} /> */}
         <Route path='/preview' element={<Preview />} />
         <Route path='/preview2' element={<Preview2 />} />
         <Route path='/preview3' element={<Preview3/>}/>

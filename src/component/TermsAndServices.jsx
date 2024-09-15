@@ -73,15 +73,16 @@ const TermsAndServices = () => {
       <section>
         <h2>8. Governing Law</h2>
         <p>
-          These terms shall be governed by and construed in accordance with the laws of [Your Country/State]. 
-          Any disputes arising from or related to these terms shall be subject to the exclusive jurisdiction of the courts of [Your Location].
+          These terms shall be governed by and construed in accordance with the laws of <strong>India</strong>. 
+          Any disputes arising from or related to these terms shall be subject to the exclusive jurisdiction 
+          of the courts of Delhi.
         </p>
       </section>
 
       <section>
         <h2>9. Contact Information</h2>
         <p>
-          If you have any questions or concerns regarding these terms, please contact us at support@resumeera.xyz.
+          If you have any questions or concerns regarding these terms, please contact us at <strong>support@resumeera.xyz</strong>.
         </p>
       </section>
     </div>

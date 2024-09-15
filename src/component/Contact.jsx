@@ -28,7 +28,7 @@ const Contact = () => {
     }
 
     // Construct the mailto link
-    const mailtoLink = `mailto:support@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(
+    const mailtoLink = `mailto:support@resumeera.xyz?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(
       `Name: ${name}\nEmail: ${email}\n\nMessage: ${message}`
     )}`;
 

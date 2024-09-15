@@ -1,0 +1,57 @@
+.mobile-resume-guide {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .mobile-resume-guide h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 15px;
+  }
+  
+  .mobile-resume-guide p {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.6;
+  }
+  
+  .mobile-resume-guide ol {
+    padding-left: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .mobile-resume-guide ol li {
+    font-size: 16px;
+    margin-bottom: 15px;
+    color: #444;
+  }
+  
+  .mobile-resume-guide strong {
+    color: #222;
+  }
+  
+  .mobile-resume-guide a {
+    color: #1e90ff;
+    text-decoration: none;
+  }
+  
+  .mobile-resume-guide a:hover {
+    text-decoration: underline;
+  }
+  
+  .mobile-resume-guide ul {
+    margin-top: 10px;
+    padding-left: 20px;
+    list-style-type: disc;
+  }
+  
+  .mobile-resume-guide ul li {
+    margin-bottom: 8px;
+    font-size: 15px;
+    color: #555;
+  }
+  

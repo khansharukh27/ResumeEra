@@ -1,0 +1,39 @@
+.cover-letter-tips {
+    font-family: 'Arial', sans-serif;
+    margin: 30px;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  .cover-letter-tips-title {
+    font-size: 32px;
+    color: #222;
+    margin-bottom: 25px;
+    text-align: center;
+  }
+  
+  .cover-letter-tips-intro {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+  
+  .cover-letter-tips-section-title {
+    font-size: 24px;
+    color: #333;
+    margin-top: 20px;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #007bff;
+    padding-bottom: 5px;
+  }
+  
+  .cover-letter-tips-content {
+    font-size: 16px;
+    color: #444;
+    line-height: 1.7;
+    margin-bottom: 25px;
+  }
+  

@@ -1,0 +1,39 @@
+.soft-skills-matter {
+    font-family: 'Arial', sans-serif;
+    margin: 30px;
+    padding: 20px;
+    background-color: #f4f7f6;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  .soft-skills-matter-title {
+    font-size: 32px;
+    color: #2c3e50;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .soft-skills-matter-intro {
+    font-size: 18px;
+    color: #34495e;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+  
+  .soft-skills-matter-section-title {
+    font-size: 24px;
+    color: #2c3e50;
+    margin-top: 25px;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 5px;
+  }
+  
+  .soft-skills-matter-content {
+    font-size: 16px;
+    color: #555;
+    line-height: 1.7;
+    margin-bottom: 20px;
+  }
+  
