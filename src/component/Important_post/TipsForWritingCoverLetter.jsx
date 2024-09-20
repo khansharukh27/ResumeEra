@@ -1,9 +1,15 @@
 import React from 'react';
 import '../../css/Important_Post/TipsForWritingCoverLetter.css';
+import { Helmet } from 'react-helmet';
 
 const TipsForWritingCoverLetter = () => {
     return (
         <div className="cover-letter-tips">
+            <Helmet>
+      <link rel="canonical" href="https://resumeera.xyz/tips-for-writing-a-cover-letter" />
+      <title>Tips for Writing a Cover Letter</title>
+            <meta name="description" content="A well-crafted cover letter can significantly boost your job application. Here are some key tips to help you write a cover letter that grabs the attention of hiring managers and sets you apart from other candidates." />
+            </Helmet>
             <h1 className="cover-letter-tips-title">Tips for Writing a Cover Letter</h1>
             <p className="cover-letter-tips-intro">
                 A well-crafted cover letter can significantly boost your job application. Here are some key tips to help you write a cover letter that grabs the attention of hiring managers and sets you apart from other candidates.

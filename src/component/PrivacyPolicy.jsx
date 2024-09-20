@@ -1,9 +1,15 @@
 import React from 'react';
 import '../css/privacypolicy.css'; // Custom CSS for the Privacy Policy component
+import { Helmet } from 'react-helmet';
 
 const PrivacyPolicy = () => {
   return (
     <div className="privacy-policy">
+      <Helmet>
+      <link rel="canonical" href="https://resumeera.xyz/privacypolicy" />
+      <title>Privacy Policy</title>
+            <meta name="description" content="this page is releted to privacy policy to avoid miss consumption." />
+            </Helmet>
       <h1>Privacy Policy</h1>
       <p>Effective date: September 14, 2024</p>
 

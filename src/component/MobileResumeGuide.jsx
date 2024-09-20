@@ -3,6 +3,11 @@ import '../css/MobileResumeGuide.css'
 const MobileResumeGuide = () => {
   return (
     <div className="mobile-resume-guide">
+      <Helmet>
+      <link rel="canonical" href="https://resumeera.xyz/privacypolicy" />
+      <title>Privacy Policy</title>
+            <meta name="description" content="this page is releted to privacy policy to avoid miss consumption." />
+            </Helmet>
       <h2>How to Create a Resume in 5 Minutes on Mobile – Completely Free!</h2>
       <p>
         Creating a professional resume has never been this easy and customizable! Follow these simple steps to make your resume in just 5 minutes using your mobile phone on <a href="https://resumeera.xyz">ResumeEra</a> — and the best part? It’s all free!

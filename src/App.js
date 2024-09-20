@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import './App.css';
-import { HashRouter as Router , Route, Routes } from "react-router-dom";
+import { BrowserRouter as Router , Route, Routes } from "react-router-dom";
 
 import Navbar from '../src/component/Navbar';
 import TemplatePage from './component/TemplatePage';
@@ -64,6 +64,24 @@ import TipsForWritingCoverLetter from './component/Important_post/TipsForWriting
 import WhySoftSkillsMatter from './component/Important_post/WhySoftSkillsMatter';
 import TopResumeTemplates2024 from './component/Important_post/TopResumeTemplates2024';
 import CommonMistakesToAvoid from './component/Important_post/CommonMistakesToAvoid';
+import ChooseTemplate from './component/Important_post/ChooseTemplate';
+import FirstJobResume from './component/Important_post/FirstJobResume';
+import HighlightAchievements from './component/Important_post/HighlightAchievements';
+import ExperiencedResumeTips from './component/Important_post/ExperiencedResumeTips';
+import ModernResumeCrafting from './component/Important_post/ModernResumeCrafting';
+import CorrectResumeFormatting from './component/Important_post/CorrectResumeFormatting';
+import EmployerResumeExpectations from './component/Important_post/EmployerResumeExpectations';
+import ResumeKeywords from './component/Important_post/ResumeKeywords';
+import ActionVerbsResume from './component/Important_post/ActionVerbsResume';
+import InternationalResume from './component/Important_post/InternationalResume';
+import ResumeVsCV from './component/Important_post/ResumeVsCV';
+import ShowcaseEducation from './component/Important_post/ShowcaseEducation';
+import ResumeNoExperience from './component/Important_post/ResumeNoExperience';
+import ResumeCareerChange from './component/Important_post/ResumeCareerChange';
+import ResumeRemoteJobs from './component/Important_post/ResumeRemoteJobs';
+import ResumeTipsComponent from './component/Important_post/ResumeTipsComponent';
+import XYZFormula from './component/Important_post/XYZFormula';
+import GoogleForm from './component/GoogleForm';
 
 var images = [
   { id: 1, src: resum1, alt: 'image1' },{ id: 2, src: resume2, alt: 'image2' },{ id: 3, src: resume3, alt: 'image3' },
@@ -95,6 +113,7 @@ function App() {
     <Router style={{ backgroundColor: 'black',width:'100%' }}>
       <Navbar />
       <Routes style={{ width:'100%' }}>
+        <Route path='/login_form' element={<GoogleForm/>}/>
         <Route path='/' element={<Home images = {images}/>}/>
         <Route path='/template' exact element={<TemplatePage images={images} techImages = {techImages} />} />
         {images.map((image) => (
@@ -116,21 +135,23 @@ function App() {
         <Route path='/why-soft-skills-matter' element={<WhySoftSkillsMatter/>} />
         <Route path='/top-resume-templates-for-2024' element={<TopResumeTemplates2024/>} />
         <Route path='/common-mistakes-to-avoid-on-your-resume' element={<CommonMistakesToAvoid/>} />
-         {/*<Route path='/how-to-choose-the-right-resume-template' element={<ChooseRightResumeTemplate />} />
-        <Route path='/creating-a-resume-for-your-first-job' element={<CreatingResumeForFirstJob />} />
-        <Route path='/how-to-highlight-achievements-in-a-resume' element={<HighlightAchievementsInResume />} />
-        <Route path='/resume-tips-for-experienced-professionals' element={<ResumeTipsForExperiencedProfessionals />} />
-        <Route path='/crafting-a-modern-resume' element={<CraftingModernResume />} />
-        <Route path='/how-to-format-a-resume-correctly' element={<FormatResumeCorrectly />} />
-        <Route path='/what-employers-look-for-in-a-resume' element={<WhatEmployersLookFor />} />
-        <Route path='/how-to-use-keywords-in-a-resume' element={<UseKeywordsInResume />} />
-        <Route path='/improving-your-resume-with-action-verbs' element={<ImprovingResumeWithActionVerbs />} />
-        <Route path='/how-to-create-a-resume-for-international-jobs' element={<CreateResumeForInternationalJobs />} />
-        <Route path='/resume-vs-cv-what-you-need-to-know' element={<ResumeVsCV />} />
-        <Route path='/how-to-showcase-your-education-in-a-resume' element={<ShowcaseEducationInResume />} />
-        <Route path='/creating-a-resume-with-no-experience' element={<CreatingResumeWithNoExperience />} />
-        <Route path='/how-to-write-a-resume-for-career-change' element={<WriteResumeForCareerChange />} />
-        <Route path='/resume-writing-tips-for-remote-jobs' element={<ResumeWritingTipsForRemoteJobs />} /> */}
+        <Route path='/how-to-choose-the-right-resume-template' element={<ChooseTemplate />} />
+       <Route path='/creating-a-resume-for-your-first-job' element={<FirstJobResume />} />
+         <Route path='/how-to-highlight-achievements-in-a-resume' element={<HighlightAchievements />} />
+         <Route path='/resume-tips-for-experienced-professionals' element={<ExperiencedResumeTips />} />
+        <Route path='/crafting-a-modern-resume' element={<ModernResumeCrafting />} />
+        <Route path='/how-to-format-a-resume-correctly' element={<CorrectResumeFormatting />} />
+        <Route path='/what-employers-look-for-in-a-resume' element={<EmployerResumeExpectations />} />
+      <Route path='/how-to-use-keywords-in-a-resume' element={<ResumeKeywords />} />
+         <Route path='/improving-your-resume-with-action-verbs' element={<ActionVerbsResume />} />
+       <Route path='/how-to-create-a-resume-for-international-jobs' element={<InternationalResume />} />
+          <Route path='/resume-vs-cv-what-you-need-to-know' element={<ResumeVsCV/>} />
+        <Route path='/how-to-showcase-your-education-in-a-resume' element={<ShowcaseEducation />} />
+        <Route path='/creating-a-resume-with-no-experience' element={<ResumeNoExperience/>} />
+        <Route path='/how-to-write-a-resume-for-career-change' element={<ResumeCareerChange/>} />
+        <Route path='/resume-writing-tips-for-remote-jobs' element={<ResumeRemoteJobs />} />
+        <Route path='/resume-tip-component' element={<ResumeTipsComponent />} />
+        <Route path='/xyz-formula-resume' element={<XYZFormula />} />
         <Route path='/preview' element={<Preview />} />
         <Route path='/preview2' element={<Preview2 />} />
         <Route path='/preview3' element={<Preview3/>}/>

@@ -1,0 +1,55 @@
+.experienced-resume-tips {
+    padding: 20px;
+    background-color: #f2f4f8;
+    border-radius: 10px;
+  }
+  
+  .experienced-resume-tips-title {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .experienced-resume-tips-intro {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    color: #444;
+  }
+  
+  .experienced-resume-tips-heading {
+    font-size: 1.5em;
+    margin-top: 20px;
+    color: #222;
+  }
+  
+  .experienced-resume-tips-text {
+    font-size: 1em;
+    margin-top: 10px;
+    line-height: 1.6;
+    color: #666;
+  }
+  
+  .experienced-resume-tips-cta {
+    margin-top: 30px;
+    text-align: center;
+  }
+  
+  .experienced-resume-tips-summary {
+    font-size: 1.1em;
+    color: #333;
+  }
+  
+  .experienced-resume-tips-link {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+  }
+  
+  .experienced-resume-tips-link:hover {
+    background-color: #0056b3;
+  }
+  

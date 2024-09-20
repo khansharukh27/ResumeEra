@@ -1,0 +1,55 @@
+.resume-keywords {
+    padding: 20px;
+    background-color: #f0f8ff;
+    border-radius: 10px;
+  }
+  
+  .resume-keywords-title {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .resume-keywords-intro {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    color: #555;
+  }
+  
+  .resume-keywords-heading {
+    font-size: 1.5em;
+    margin-top: 20px;
+    color: #222;
+  }
+  
+  .resume-keywords-text {
+    font-size: 1em;
+    margin-top: 10px;
+    line-height: 1.6;
+    color: #666;
+  }
+  
+  .resume-keywords-cta {
+    margin-top: 30px;
+    text-align: center;
+  }
+  
+  .resume-keywords-summary {
+    font-size: 1.1em;
+    color: #333;
+  }
+  
+  .resume-keywords-link {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+  }
+  
+  .resume-keywords-link:hover {
+    background-color: #0056b3;
+  }
+  

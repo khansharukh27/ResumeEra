@@ -1,0 +1,57 @@
+.resume-vs-cv-container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: 'Arial, sans-serif';
+    color: #333;
+  }
+  
+  .resume-vs-cv-title {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #0056b3;
+  }
+  
+  .resume-vs-cv-intro {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+  }
+  
+  .resume-vs-cv-section {
+    margin-bottom: 40px;
+  }
+  
+  .resume-vs-cv-subtitle {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    color: #333;
+  }
+  
+  .resume-vs-cv-text {
+    font-size: 1.1rem;
+    line-height: 1.6;
+  }
+  
+  .resume-vs-cv-list {
+    font-size: 1.1rem;
+    list-style-type: disc;
+    padding-left: 20px;
+    line-height: 1.6;
+  }
+  
+  @media (max-width: 768px) {
+    .resume-vs-cv-title {
+      font-size: 2rem;
+    }
+  
+    .resume-vs-cv-subtitle {
+      font-size: 1.5rem;
+    }
+  
+    .resume-vs-cv-text,
+    .resume-vs-cv-list {
+      font-size: 1rem;
+    }
+  }
+  

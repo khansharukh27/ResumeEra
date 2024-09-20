@@ -1,9 +1,15 @@
 import React from 'react';
 import '../css/termsAndServices.css'; // Custom CSS for the Terms and Services component
+import { Helmet } from 'react-helmet';
 
 const TermsAndServices = () => {
   return (
     <div className="terms-and-services">
+      <Helmet>
+      <link rel="canonical" href="https://resumeera.xyz/terms-of-service" />
+      <title>Terms and Services</title>
+            <meta name="description" content="this page is releted to services terms to avoid miss consumption." />
+            </Helmet>
       <h1>Terms and Services</h1>
       <p>Effective date: September 14, 2024</p>
 

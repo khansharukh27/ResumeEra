@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import '../css/contact.css'; // Import custom CSS
+import { Helmet } from 'react-helmet';
 
 const Contact = () => {
   // State to handle form data
@@ -41,6 +42,11 @@ const Contact = () => {
 
   return (
     <div className="contact-container">
+       <Helmet>
+      <link rel="canonical" href="https://resumeera.xyz/contact" />
+      <title>Contact Us</title>
+            <meta name="description" content="this page is releted to contact us to give query" />
+            </Helmet>
       <h1>Contact Us</h1>
 
       <form className="contact-form" onSubmit={handleSubmit}>

@@ -11,7 +11,15 @@
             -webkit-background-clip: text;
             color: transparent;
   }
-  
+ 
+  .img_div{
+    display: flex;
+    justify-content: space-between;
+  }
+  .img_div img{
+    border-radius: 8px;
+    box-shadow: 10px 0px 100px 10px pink;
+  }
   .about-me-container p {
     margin-bottom: 16px;
     font-size: 1rem;
@@ -61,4 +69,12 @@
     padding: 5px;
     border-radius: 8px;
     box-shadow: 10px 0px 100px 10px pink;
+  }
+  .mission_div{
+    display: flex;
+    justify-content: space-between;
+    
+  }
+  .mission_div img{
+    border-radius: 8px;
   }

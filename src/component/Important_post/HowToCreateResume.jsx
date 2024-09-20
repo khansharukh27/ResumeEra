@@ -1,9 +1,15 @@
 import React from 'react';
 import '../../css/Important_Post/HowToCreateResume.css';
+import { Helmet } from 'react-helmet';
 
 const HowToCreateResume = () => {
     return (
         <div className="resume-guide">
+             <Helmet>
+      <link rel="canonical" href="https://resumeera.xyz/how-to-create-a-professional-resume" />
+      <title>How to Create a Professional Resume</title>
+            <meta name="description" content="Crafting a professional resume is crucial to making a great first impression on potential employers. Follow these essential steps to build a resume that stands out and effectively highlights your qualifications and experience." />
+            </Helmet>
             <h1 className="resume-guide-title">How to Create a Professional Resume</h1>
             <p className="resume-guide-intro">
                 Crafting a professional resume is crucial to making a great first impression on potential employers. Follow these essential steps to build a resume that stands out and effectively highlights your qualifications and experience.

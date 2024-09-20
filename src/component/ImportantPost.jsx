@@ -1,9 +1,15 @@
 import { Link } from 'react-router-dom';
 import '../css/importantpost.css'
+import { Helmet } from 'react-helmet';
 
 const ImportantPost = () => {
     return (
         <div className="important-posts">
+            <Helmet>
+      <link rel="canonical" href="https://resumeera.xyz/important_post" />
+      <title>Important Links</title>
+            <meta name="description" content="this page is releted to importannt link to show valuable things." />
+            </Helmet>
             <ul>
                 <li>
                     <Link to="/how-to-create-a-professional-resume">
@@ -104,6 +110,15 @@ const ImportantPost = () => {
                     <Link to="/resume-writing-tips-for-remote-jobs" >
                         Resume Writing Tips for Remote Jobs
                     </Link>
+                </li>
+                <li>
+                    <Link to="/resume-tip-component" >
+                    Resume कैसे बनाएं जो नियोक्ता को प्रभावित कर सके?...with ResumeEra
+                    </Link>
+                </li>
+                <li>
+                    <Link to="/xyz-formula-resume" >
+                    XYZ Formula: A Simple Approach to Showcasing Your Achievements in Your Resume                    </Link>
                 </li>
             </ul>
         </div>

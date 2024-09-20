@@ -1,0 +1,58 @@
+.xyz-formula-container {
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    font-family: Arial, sans-serif;
+    color: #333;
+  }
+  
+  .xyz-formula-title {
+    font-size: 2rem;
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .xyz-formula-intro {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    text-align: justify;
+  }
+  
+  .xyz-formula-subtitle {
+    font-size: 1.5rem;
+    color: #2980b9;
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+  
+  .xyz-formula-description {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin-bottom: 10px;
+    text-align: justify;
+  }
+  
+  .xyz-formula-list {
+    list-style-type: disc;
+    margin-left: 20px;
+    margin-bottom: 15px;
+  }
+  
+  .xyz-formula-list li {
+    margin-bottom: 5px;
+  }
+  
+  .xyz-example-before {
+    font-size: 1.1rem;
+    color: #e74c3c;
+    margin-bottom: 10px;
+  }
+  
+  .xyz-example-after {
+    font-size: 1.1rem;
+    color: #27ae60;
+    margin-bottom: 10px;
+  }
+  

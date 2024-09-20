@@ -1,9 +1,15 @@
 import React from 'react';
 import '../../css/Important_Post/WhySoftSkillsMatte.css';
+import { Helmet } from 'react-helmet';
 
 const WhySoftSkillsMatter = () => {
     return (
         <div className="soft-skills-matter">
+            <Helmet>
+      <link rel="canonical" href="https://resumeera.xyz/why-soft-skills-matter" />
+      <title>Why Soft Skills Matter in Your Resume</title>
+            <meta name="description" content="While technical skills and qualifications are essential, soft skills play a crucial role in determining your overall suitability for a job. Here’s why incorporating soft skills into your resume can significantly enhance your candidacy." />
+            </Helmet>
             <h1 className="soft-skills-matter-title">Why Soft Skills Matter in Your Resume</h1>
             <p className="soft-skills-matter-intro">
                 While technical skills and qualifications are essential, soft skills play a crucial role in determining your overall suitability for a job. Here’s why incorporating soft skills into your resume can significantly enhance your candidacy.

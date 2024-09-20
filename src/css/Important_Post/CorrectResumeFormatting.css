@@ -1,0 +1,55 @@
+.correct-resume-formatting {
+    padding: 20px;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+  }
+  
+  .correct-resume-formatting-title {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #333;
+  }
+  
+  .correct-resume-formatting-intro {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+    color: #555;
+  }
+  
+  .correct-resume-formatting-heading {
+    font-size: 1.5em;
+    margin-top: 20px;
+    color: #222;
+  }
+  
+  .correct-resume-formatting-text {
+    font-size: 1em;
+    margin-top: 10px;
+    line-height: 1.6;
+    color: #666;
+  }
+  
+  .correct-resume-formatting-cta {
+    margin-top: 30px;
+    text-align: center;
+  }
+  
+  .correct-resume-formatting-summary {
+    font-size: 1.1em;
+    color: #333;
+  }
+  
+  .correct-resume-formatting-link {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+  }
+  
+  .correct-resume-formatting-link:hover {
+    background-color: #0056b3;
+  }
+  

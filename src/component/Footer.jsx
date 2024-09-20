@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaFacebook, FaTwitter, FaLinkedin, FaInstagram } from 'react-icons/fa';
+import { FaFacebook, FaTwitter, FaLinkedin, FaInstagram, FaReddit, FaQuora } from 'react-icons/fa';
 import '../css/footer.css'; // Custom CSS file for footer styling
 import { Link } from 'react-router-dom';
 
@@ -11,27 +11,41 @@ const Footer = () => {
           <h3>Follow Us</h3>
           <ul className="social-links">
             <li>
-              <Link to="https://facebook.com" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+              <Link to="https://www.facebook.com/shahrukh.mirza.123276" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
                 <FaFacebook />
               </Link>
             </li>
             <li>
-              <Link to="https://twitter.com" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
+              <Link to="https://x.com/shahrukhmirza88" target="_blank" rel="noopener noreferrer" aria-label="Twitter">
                 <FaTwitter />
               </Link>
             </li>
             <li>
-              <Link to="https://linkedin.com" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+              <Link to="https://www.linkedin.com/in/shahrukh-mirza-3027438a/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
                 <FaLinkedin />
               </Link>
             </li>
             <li>
-              <Link to="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+              <Link to="https://www.instagram.com/shahrukhmirza88/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
                 <FaInstagram />
               </Link>
             </li>
           </ul>
+          
+          <ul className="social-links">
+            <li>
+            <Link to="https://www.reddit.com/user/shahrukhmirza888/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                <FaReddit />
+              </Link>
+            </li>
+            <li>
+            <Link to="https://www.quora.com/profile/Shahrukh-Mirza-18" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                <FaQuora />
+              </Link>
+            </li>
+          </ul>
         </div>
+       
         <div className="footer-links">
           <h3>Quick Links</h3>
           <ul>

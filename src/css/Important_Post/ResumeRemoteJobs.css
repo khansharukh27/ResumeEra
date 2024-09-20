@@ -1,0 +1,55 @@
+.remote-jobs-container {
+    width: 100%;
+    max-width: 1100px;
+    /* margin: 20px ; */
+    margin-right: 20px;
+    margin-left: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    font-family: 'Arial, sans-serif';
+    color: #333;
+    border-radius: 8px;
+  }
+  
+  .remote-jobs-title {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #1E88E5;
+  }
+  
+  .remote-jobs-intro {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+  }
+  
+  .remote-jobs-section {
+    margin-bottom: 40px;
+  }
+  
+  .remote-jobs-subtitle {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    color: #333;
+  }
+  
+  .remote-jobs-text {
+    font-size: 1.1rem;
+    line-height: 1.6;
+  }
+  
+  @media (max-width: 768px) {
+    .remote-jobs-title {
+      font-size: 2rem;
+    }
+  
+    .remote-jobs-subtitle {
+      font-size: 1.4rem;
+    }
+  
+    .remote-jobs-text {
+      font-size: 1rem;
+    }
+  }
+  

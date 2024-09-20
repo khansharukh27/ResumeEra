@@ -1,9 +1,15 @@
 import React from 'react';
 import '../../css/Important_Post/TopResumeTemplates2024.css';
+import { Helmet } from 'react-helmet';
 
 const TopResumeTemplates2024 = () => {
     return (
         <div className="resume-templates">
+            <Helmet>
+      <link rel="canonical" href="https://resumeera.xyz/top-resume-templates-for-2024" />
+      <title>Top Resume Templates for 2024</title>
+            <meta name="description" content="With 2024 just around the corner, it's essential to have a resume that stands out. Here are some of the top resume templates for the year, designed to help you make a strong impression and land your dream job." />
+            </Helmet>
             <h1 className="resume-templates-title">Top Resume Templates for 2024</h1>
             <p className="resume-templates-intro">
                 With 2024 just around the corner, it's essential to have a resume that stands out. Here are some of the top resume templates for the year, designed to help you make a strong impression and land your dream job.

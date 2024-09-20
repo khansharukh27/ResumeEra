@@ -1,16 +1,28 @@
 import React from 'react';
 import '../css/aboutme.css'; // Assuming you'll add your custom styling here
+import { Helmet } from 'react-helmet';
 
 const AboutUs = () => {
   return (
     <div className="about-me-container">
+      <Helmet>
+      <link rel="canonical" href="https://resumeera.xyz/AboutUs" />
+      <title>About Me</title>
+            <meta name="description" content="this page is releted to about me to tell the world what the website do" />
+            </Helmet>
      
         <h1>"I give the answer whole world How create free resume online absolutely free" </h1>
       <section className="about-me-intro">
       <h1>About Me</h1>
-        <div data-aos="fade-down-left">
+        <div data-aos="fade-down-left ">
           Welcome to <strong>ResumeEra</strong>—your ultimate destination for crafting the perfect free resume 
           and landing your dream job. But before we get to your journey, let me introduce myself.
+          <div className='img_div'>
+          <img style={{height:'250px'}} src="https://images.pexels.com/photos/6893933/pexels-photo-6893933.jpeg?auto=compress&cs=tinysrgb&w=600" alt="office_image_1" />
+          <img style={{height:'250px'}} src="https://images.pexels.com/photos/7876708/pexels-photo-7876708.jpeg?auto=compress&cs=tinysrgb&w=600" alt="office_image_1" />
+          <img style={{height:'250px'}} src="https://images.pexels.com/photos/7394570/pexels-photo-7394570.jpeg?auto=compress&cs=tinysrgb&w=600" alt="office_image_1" />
+          </div>
+         
         </div>
         <p>
           My name is <strong>SHAHRUKH KHAN</strong>, and I’m passionate about helping individuals stand out in a 
@@ -56,6 +68,12 @@ const AboutUs = () => {
             transitioning careers, has access to high-quality tools that simplify the process while delivering 
             outstanding results.
         </p>
+        <div className='mission_div'>
+        <img src="https://st.depositphotos.com/1368414/2484/i/380/depositphotos_24844585-stock-photo-mission.jpg" alt="mission_img" />
+        <img src="https://st2.depositphotos.com/3591429/11211/i/380/depositphotos_112111052-stock-photo-business-team-working-in-office.jpg" alt="mission_img" />
+
+        </div>
+        
       </section>
 
       <section className="about-me-personal">
