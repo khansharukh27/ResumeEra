@@ -82,6 +82,7 @@ import ResumeRemoteJobs from './component/Important_post/ResumeRemoteJobs';
 import ResumeTipsComponent from './component/Important_post/ResumeTipsComponent';
 import XYZFormula from './component/Important_post/XYZFormula';
 import GoogleForm from './component/GoogleForm';
+import NotFoundPage from './component/Important_post/NotFoundPage';
 
 var images = [
   { id: 1, src: resum1, alt: 'image1' },{ id: 2, src: resume2, alt: 'image2' },{ id: 3, src: resume3, alt: 'image3' },
@@ -115,6 +116,7 @@ function App() {
       <Routes style={{ width:'100%' }}>
         <Route path='/login_form' element={<GoogleForm/>}/>
         <Route path='/' element={<Home images = {images}/>}/>
+        <Route path="*" element={<NotFoundPage />} />
         <Route path='/template' exact element={<TemplatePage images={images} techImages = {techImages} />} />
         {images.map((image) => (
           <Route key={image.id} path={`/mainpage/${image.id}`} 

@@ -90,6 +90,39 @@ const PrivacyPolicy = () => {
           If you have any questions about this privacy policy, please contact us at support@resumeera.xyz.
         </p>
       </section>
+      <section>
+  <h2>9. Cookies and Tracking Technologies</h2>
+  <p>
+    We and our third-party partners, such as Google, use cookies and similar tracking technologies to deliver personalized advertisements based on your interests and browsing behavior. 
+    You can opt out of personalized advertising by visiting the <a href="https://adssettings.google.com/" target="_blank" rel="noopener noreferrer">Google Ad Settings</a>.
+  </p>
+</section>
+<section>
+  <h2>10. Third-Party Links</h2>
+  <p>
+    Our website may contain links to third-party websites or services. Please note that we are not responsible for the privacy practices or content of such third parties.
+  </p>
+</section>
+<section>
+  <h2>11. Children's Privacy</h2>
+  <p>
+    Our services are not intended for individuals under the age of 16. We do not knowingly collect personal information from children. 
+    If you believe that we have collected such information, please contact us so we can take appropriate steps to delete it.
+  </p>
+</section>
+<section>
+  <h2>12. User Consent and Opt-Out</h2>
+  <p>
+    By using our website, you consent to our collection and use of your information as described in this Privacy Policy. 
+    If you wish to withdraw your consent or opt-out of data collection practices, please contact us at support@resumeera.xyz.
+  </p>
+</section>
+<section>
+  <h2>13. Opting Out of Data Collection</h2>
+  <p>
+    You can opt out of personalized ads and data collection via Google by visiting the <a href="https://www.networkadvertising.org/choices/" target="_blank" rel="noopener noreferrer">Network Advertising Initiative</a> or by adjusting your browser settings to disable cookies.
+  </p>
+</section>
     </div>
   );
 };

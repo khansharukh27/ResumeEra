@@ -14,7 +14,28 @@ const HowToCreateResume = () => {
             <p className="resume-guide-intro">
                 Crafting a professional resume is crucial to making a great first impression on potential employers. Follow these essential steps to build a resume that stands out and effectively highlights your qualifications and experience.
             </p>
+            <img 
+                src="https://img.freepik.com/free-photo/handsome-young-man-working-laptop-smiling-while-sitting-sidewalk-cafe_231208-12079.jpg" 
+                alt="Resume creation example" 
+                className="resume-guide-image"
+            />
+
             <h2 className="resume-guide-section-title">1. Choose the Right Resume Format</h2>
+            <div className='resume-guide-image_div d-sm-flex'>
+                <div>
+                <img src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/5wmEECloDc1OMWAMEamsQ8/edb1da18b9ce2e661d227312c7d61805/GettyImages-1203940958.jpg" 
+                alt="choose the right resume format" 
+                className="resume-guide-image"
+                />
+                </div>
+                <div>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROg697jrLnez0P-sqrIwEv8PAXEjUjVU7dbnh-H3yVPh_aVG2gV0mvagvFRLZGIBFIXLU&usqp=CAU" 
+                alt="Choose the Right Resume Format"
+                className="resume-guide-image"
+                 />
+                </div>
+                
+            </div>
             <p className="resume-guide-content">
                 Select a resume format that best suits your career stage and the job you are applying for. The three most common formats are chronological, functional, and combination. Chronological focuses on your work history, functional highlights skills and abilities, and combination merges both approaches.
             </p>

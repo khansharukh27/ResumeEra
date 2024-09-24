@@ -1,25 +1,31 @@
 /* carousel.css */
 
 .carousel-container {
-    max-width: 100%;
+    width: 100%;
     overflow: hidden;
     border: 8px;
 }
 
 .carousel-slide {
-    padding: 10px;
+    /* padding: 10px; */
+    width: 150%;
 }
-
+/*  */
 .carousel-image-wrapper {
-    position: relative;
+    /* position: relative; */
+    
+    /* margin-right: 10px; */
+    /* width: 200%; */
 }
 
 .carousel-image {
     width: 150px;
     height: 150px;
-    object-fit: cover;
+    /* object-fit: cover; */
     border: 3px solid green;
     border-radius: 8px;
+    margin-right: 25px;
+    /* margin-right: 20px; */
 }
 
 .carousel-button {
@@ -44,50 +50,99 @@
 .carousel-button:hover {
     background-color: #45a049;
 }
-
-@media only screen and (max-width:320px) {
-
+/* For very small screens (e.g. 320px) */
+@media (max-width: 320px) {
     .carousel-container {
-        max-width:320px;
+        max-width: 100%;
         overflow: hidden;
         border: 8px;
     }
 
-    .carousel-slide {
-        padding: 10px;
+    .carousel-image {
+        width: 80px;
+        height: 80px;
+        margin: 10px;
     }
 
-    .carousel-image-wrapper {
-        position: relative;
+    .carousel-button {
+        padding: 4px 8px;
+        font-size: 12px;
+    }
+}
+
+/* For small mobile screens (e.g. 375px) */
+@media (max-width: 375px) {
+    .carousel-container {
+        max-width: 100%;
+        overflow: hidden;
+        border: 8px;
+    }
+
+    .carousel-image {
+        width: 100px;
+        height: 100px;
+        margin: 15px;
+    }
+
+    .carousel-button {
+        padding: 5px 10px;
+        font-size: 13px;
+    }
+}
+
+/* For mobile screens (e.g. 425px) */
+@media (min-width: 375px) and (max-width: 425px) {
+    .carousel-container {
+        max-width: 100%;
+        border: 8px;
     }
 
     .carousel-image {
         width: 120px;
         height: 120px;
-        /* object-fit: cover; */
-        border: 3px solid green;
-        border-radius: 8px;
+        margin: 20px;
     }
-   
 
     .carousel-button {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        background-color: #4CAF50;
-        /* Green */
-        border: none;
-        color: rgb(197, 18, 18);
-        padding: 5px 5px;
-        text-align: center;
-        text-decoration: none;
-        display: inline-block;
+        padding: 5px 10px;
         font-size: 14px;
-        cursor: pointer;
+    }
+}
+
+/* For tablets and small desktops (768px to 1024px) */
+@media (min-width: 768px) and (max-width: 1024px) {
+    .carousel-container {
+        max-width: 90%;
+        border: 8px;
     }
 
-    .carousel-button:hover {
-        background-color: #45a049;
+    .carousel-image {
+        width: 150px;
+        height: 150px;
+        margin: 20px;
+    }
+
+    .carousel-button {
+        padding: 6px 12px;
+        font-size: 16px;
+    }
+}
+
+/* For large desktops (1024px and above) */
+@media (min-width: 1024px) {
+    .carousel-container {
+        max-width: 100%;
+        border: 8px;
+    }
+
+    .carousel-image {
+        width: 180px;
+        height: 180px;
+        margin: 25px;
+    }
+
+    .carousel-button {
+        padding: 8px 16px;
+        font-size: 18px;
     }
 }

@@ -3,7 +3,7 @@
     display: flex;
     justify-content: space-between;
     flex-direction: row;
-    background-image: linear-gradient(145deg, #1f2c40, #3b4a5e, #4d5f73, #283448, #101b29);
+    background-image: linear-gradient(145deg, purple,pink,magenta);
     padding: 10px 20px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
     width: 100%; /* Use width 100% instead of fit-content for better responsiveness */
@@ -27,7 +27,7 @@
     margin-top: 1rem;
     margin-right: 1rem;
     color: #e0e0e0;
-    background: linear-gradient(145deg, #2b2e4a, #4b4e69, #2c3e50, #0d1f2d);
+    background: linear-gradient(145deg, purple,aqua,pink);
     padding: 10px 20px;
     border-radius: 15px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
@@ -35,16 +35,17 @@
 }
 
 .navbar-link {
-    border: 1px solid black;
+    border: 1px solid whitesmoke;
     border-radius: 8px;
     padding: 5px;
     text-decoration: none;
-    color: black;
+    color:white;
     margin: 5px;
 }
 
 .navbar-link:hover {
     text-decoration: dashed;
+    color: white;
 }
 
 .navbar-links:hover {
