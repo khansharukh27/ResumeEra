@@ -1,0 +1,88 @@
+/* Overall Container */
+.container {
+    /* max-width: 100%; */
+    /* margin: 0; */
+    padding: 40px;
+    font-family: Arial, sans-serif;
+    color: #333;
+    box-shadow: 0 4px 100px rgba(223, 137, 9, 0.1);
+    width: 70%;
+    margin-top: 50px;
+}
+
+/* Headings */
+h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #4a90e2;
+
+}
+
+h3 {
+    font-size: 1.8em;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    color: #333;
+}
+
+/* Paragraphs */
+p {
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+
+/* Lists */
+ul, ol {
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+/* Table Styles */
+table {
+    width: 80%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    margin-left: 50px;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Images */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 20px auto;
+}
+.quotes{
+    width: 100%;
+    background-color: wheat;
+    padding: 20px;
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2em;
+    }
+
+    h3 {
+        font-size: 1.5em;
+    }
+
+    p, ul, ol {
+        font-size: 0.9em;
+    }
+}

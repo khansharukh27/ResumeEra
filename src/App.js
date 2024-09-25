@@ -83,6 +83,7 @@ import ResumeTipsComponent from './component/Important_post/ResumeTipsComponent'
 import XYZFormula from './component/Important_post/XYZFormula';
 import GoogleForm from './component/GoogleForm';
 import NotFoundPage from './component/Important_post/NotFoundPage';
+import AboutResumeEra from './component/Important_post/AboutResumeEra';
 
 var images = [
   { id: 1, src: resum1, alt: 'image1' },{ id: 2, src: resume2, alt: 'image2' },{ id: 3, src: resume3, alt: 'image3' },
@@ -132,6 +133,7 @@ function App() {
         <Route path='/terms-of-service' element={<TermsAndServices />} />
         <Route path='/AboutUs' element={<AboutUs />} />
         <Route path='/important_post' element={<ImportantPost/>} />
+        <Route path='/about-resumeera' element={<AboutResumeEra/>} />
         <Route path='/how-to-create-a-professional-resume' element={<HowToCreateResume/>} />
         <Route path='/tips-for-writing-a-cover-letter' element={<TipsForWritingCoverLetter/>} />
         <Route path='/why-soft-skills-matter' element={<WhySoftSkillsMatter/>} />

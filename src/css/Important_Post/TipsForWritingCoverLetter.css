@@ -6,6 +6,10 @@
     border-radius: 10px;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
   }
+  .cover-letter-tips img{
+    width: 90%;
+    height: 250px;
+  }
   
   .cover-letter-tips-title {
     font-size: 32px;

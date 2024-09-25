@@ -12,6 +12,11 @@ const ImportantPost = () => {
             </Helmet>
             <ul>
                 <li>
+                    <Link to='/about-resumeera'>
+                    ResumeEra: Craft Your Perfect Resume Today
+                    </Link>
+                </li>
+                <li>
                     <Link to="/how-to-create-a-professional-resume">
                         How to Create a Professional Resume
                     </Link>

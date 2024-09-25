@@ -1,6 +1,7 @@
 import React from 'react';
 import '../../css/Important_Post/TipsForWritingCoverLetter.css';
 import { Helmet } from 'react-helmet';
+import download_4 from '../../image/image_for_link/download_4.jpg'
 
 const TipsForWritingCoverLetter = () => {
     return (
@@ -14,6 +15,7 @@ const TipsForWritingCoverLetter = () => {
             <p className="cover-letter-tips-intro">
                 A well-crafted cover letter can significantly boost your job application. Here are some key tips to help you write a cover letter that grabs the attention of hiring managers and sets you apart from other candidates.
             </p>
+            <img src={download_4} alt="how_to_create_coverLetter" />
             <h2 className="cover-letter-tips-section-title">1. Personalize Your Greeting</h2>
             <p className="cover-letter-tips-content">
                 Address your cover letter to a specific person whenever possible. Using a personalized greeting, such as "Dear [Hiring Manager's Name]," shows that you've done your research and are genuinely interested in the position.
