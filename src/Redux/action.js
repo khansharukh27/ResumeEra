@@ -79,3 +79,9 @@ export const addReferences = (data)  => {
         payload:data
     }
 }
+ export const coverletters = (data) => {
+    return{
+        type:'cover_letter',
+        payload:data
+    }
+}

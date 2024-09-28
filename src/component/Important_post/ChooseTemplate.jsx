@@ -1,7 +1,7 @@
 import React from 'react';
 import '../../css/Important_Post/ChooseTemplate.css'; // Assuming you prefer to keep styles separate
 import { Helmet } from 'react-helmet';
-
+import Choose_temp from '../../image/image_for_link/choose_temp.jpg'
 const ChooseTemplate = () => {
   return (
     <div className="choose-template">
@@ -12,6 +12,7 @@ const ChooseTemplate = () => {
             between making a great first impression and being overlooked. Here’s how to pick the perfect one for you:" />
             </Helmet>
       <h2 className="choose-template-title">How to Choose the Right Resume Template</h2>
+      <img src={Choose_temp} alt="choose template" />
       <p className="choose-template-intro">
         A well-chosen resume template can be the difference between making a great first impression and being overlooked. Here’s how to pick the perfect one for you:
       </p>

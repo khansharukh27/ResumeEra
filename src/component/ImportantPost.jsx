@@ -123,7 +123,11 @@ const ImportantPost = () => {
                 </li>
                 <li>
                     <Link to="/xyz-formula-resume" >
-                    XYZ Formula: A Simple Approach to Showcasing Your Achievements in Your Resume                    </Link>
+                    XYZ Formula: A Simple Approach to Showcasing Your Achievements in Your Resume</Link>
+                </li>
+                <li>
+                    <Link to='/resume_component'>
+                    Create a Professional Resume with Free Templates and Showcase Your Skills</Link>
                 </li>
             </ul>
         </div>

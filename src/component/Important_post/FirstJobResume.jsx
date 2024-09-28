@@ -1,7 +1,7 @@
 import React from 'react';
 import '../../css/Important_Post/FirstJobResume.css'; // Assuming you prefer to keep styles separate
 import { Helmet } from 'react-helmet';
-
+import job_resume from '../../image/image_for_link/job_resume.jpg'
 const FirstJobResume = () => {
   return (
     <div className="first-job-resume">
@@ -11,6 +11,7 @@ const FirstJobResume = () => {
             <meta name="description" content="Crafting a resume for your first job can seem daunting, but it's all about highlighting your skills, education, and enthusiasm. Here’s how to create a resume that stands out, even without much experience." />
             </Helmet>
       <h2 className="first-job-resume-title">Creating a Resume for Your First Job</h2>
+      <img src={job_resume} alt="first job resume" />
       <p className="first-job-resume-intro">
         Crafting a resume for your first job can seem daunting, but it's all about highlighting your skills, education, and enthusiasm. Here’s how to create a resume that stands out, even without much experience.
       </p>

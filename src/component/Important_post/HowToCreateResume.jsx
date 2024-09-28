@@ -21,7 +21,7 @@ const HowToCreateResume = () => {
             />
 
             <h2 className="resume-guide-section-title">1. Choose the Right Resume Format</h2>
-            <div className='resume-guide-image_div d-sm-flex'>
+            <div className='resume-guide-image_div'>
                 <div>
                 <img src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/5wmEECloDc1OMWAMEamsQ8/edb1da18b9ce2e661d227312c7d61805/GettyImages-1203940958.jpg" 
                 alt="choose the right resume format" 

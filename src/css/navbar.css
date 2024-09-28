@@ -13,6 +13,7 @@
     margin-left: 1rem;
 }
 
+
 .navbar-link-brand {
     text-decoration: none;
     font-size: 2.5rem;
@@ -20,7 +21,36 @@
     background: linear-gradient(45deg, #ff6347, #9c7732, #3a743a, #389e8d, #802373);
     -webkit-background-clip: text;
     color: transparent;
+    animation: shine 1.5s infinite alternate;
+
 }
+
+.star {
+    font-size: 20px;
+    color: gold;
+    animation: shine 1.5s infinite alternate;
+}
+
+.star:nth-child(odd) {
+    transform: rotate(15deg);
+    margin-top: 20px;
+}
+
+.star:nth-child(even) {
+    transform: rotate(-15deg);
+    margin-bottom: 20px;
+}
+
+@keyframes shine {
+    0% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 1.5;
+        transform: scale(1.2);
+    }
+}
+
 
 .navbar-links {
     display: flex;
@@ -60,20 +90,20 @@
         align-items: center;
     }
 
+    
     .navbar-links {
-        margin-top: 0.5rem;
-        margin-right: 0;
+        padding: 5px 10px;
         width: 100%;
-        justify-content: center;
-        background: linear-gradient(145deg, #2b2e4a, #4b4e69, #2c3e50, #0d1f2d);
-        padding: 10px 0;
-        border-radius: 0;
+        border-radius: 8px;
+        background: linear-gradient(145deg, purple,aqua,pink);
+
     }
 
     .navbar-link {
-        margin: 0.5rem 0;
-        width: 100%; /* Full width links on smaller screens */
-        text-align: center; /* Center align the text */
+        font-size: 0.8rem;
+        width: 100%;
+        margin-right: 5px;
+        text-align: center;
     }
 }
 
@@ -94,22 +124,23 @@
     }
 
     .navbar-links {
-        margin-top: 0.5rem;
-        padding: 5px 0;
-        border-radius: 0;
+        padding: 5px 10px;
         width: 100%;
+        border-radius: 8px;
+        background: linear-gradient(145deg, purple,aqua,pink);
+
     }
 
     .navbar-link {
-        margin: 0.5rem 0;
-        font-size: 0.9rem;
+        font-size: 0.8rem;
         width: 100%;
+        margin-right: 5px;
         text-align: center;
     }
 }
 
 /* Media query for extra small screens */
-@media (max-width: 320px) {
+@media (max-width: 320px),(min-width:321px) {
     .navbar-content {
         padding: 5px;
         flex-direction: column;
@@ -119,7 +150,7 @@
     .navbar-brand {
         width: 100%;
         text-align: center;
-        font-size: xx-large;
+        font-size: large;
     }
 
     .navbar-link-brand {
@@ -128,13 +159,19 @@
     }
 
     .navbar-links {
-        padding: 5px 0;
+        /* justify-content: flex; */
+        margin-left: auto;
+        padding: 5px 10px;
         width: 100%;
+        border-radius: 8px;
+        background: linear-gradient(145deg, purple,aqua,pink);
+
     }
 
     .navbar-link {
         font-size: 0.8rem;
         width: 100%;
+        margin-right: 5px;
         text-align: center;
     }
 }

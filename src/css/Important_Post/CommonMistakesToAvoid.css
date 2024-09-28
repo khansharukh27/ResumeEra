@@ -6,6 +6,10 @@
     border-radius: 10px;
     box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
   }
+  .common-mistakes img{
+    width: 100%;
+    height: 250px;
+  }
   
   .common-mistakes-title {
     font-size: 34px;

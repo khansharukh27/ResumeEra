@@ -12,7 +12,6 @@ import resume7 from './image/resume7.png'
 import resume2 from './image/resume2.jpg'
 import resume3 from './image/resume3.jpg'
 import resume4 from './image/resume4.jpg'
-// import resume5 from './image/resume5.jpg'
 import resume6 from './image/resume6.jpg'
 import resume8 from './image/resume8.png'
 import resume9 from './image/resume9.png'
@@ -84,7 +83,10 @@ import XYZFormula from './component/Important_post/XYZFormula';
 import GoogleForm from './component/GoogleForm';
 import NotFoundPage from './component/Important_post/NotFoundPage';
 import AboutResumeEra from './component/Important_post/AboutResumeEra';
-
+import CoverLetter from './component/CoverLetter';
+import cover_letter_1 from '../src/image/CoverImage/cover_letter_1.png'
+import ResumeComponent from './component/Important_post/ResumeComponent';
+// import CoverComponent from './component/CoverComponent';
 var images = [
   { id: 1, src: resum1, alt: 'image1' },{ id: 2, src: resume2, alt: 'image2' },{ id: 3, src: resume3, alt: 'image3' },
   { id: 4, src: resume4, alt: 'image4' },
@@ -103,6 +105,10 @@ var techImages = [
   ,{id:106, src: profetional_resume_6, alt : 'hospital resume'}
   ,{id:107, src: profetional_resume_7, alt : 'hospital resume'}
 ]
+
+var CoverImage = [
+  {id:201, src: cover_letter_1, alt: 'cover leter'},
+]
 console.log('images:=',images)
 console.log(images[0].id)
 const path = 'mainpage'
@@ -118,7 +124,7 @@ function App() {
         <Route path='/login_form' element={<GoogleForm/>}/>
         <Route path='/' element={<Home images = {images}/>}/>
         <Route path="*" element={<NotFoundPage />} />
-        <Route path='/template' exact element={<TemplatePage images={images} techImages = {techImages} />} />
+        <Route path='/template' exact element={<TemplatePage images={images} techImages = {techImages} CoverImage = {CoverImage}/>} />
         {images.map((image) => (
           <Route key={image.id} path={`/mainpage/${image.id}`} 
           element={<MainPage path={`/${path}/${image.id}`} images={images} />}/>
@@ -126,8 +132,13 @@ function App() {
         {techImages.map((image) => (
           <Route key={image.id} path={`/techmain/${image.id}`} 
           element={<MainPage path={`/${path}/${image.id}`} techImages={techImages} />}/>
+        ))}
+        {CoverImage.map((image) => (
+          <Route key={image.id} path={`/cover_letter/${image.id}`} 
+          element={<MainPage path={`/${path}/${image.id}`} CoverImage={CoverImage} />}/>
         ))}        
         <Route path='/myresume' element={<MyResume />} />
+        <Route path='/coverletter' element={<CoverLetter CoverImage={CoverImage}/>}/>
         <Route path='/privacypolicy' element={<PrivacyPolicy />} />
         <Route path='/contact' element={<Contact/>} />
         <Route path='/terms-of-service' element={<TermsAndServices />} />
@@ -156,8 +167,9 @@ function App() {
         <Route path='/resume-writing-tips-for-remote-jobs' element={<ResumeRemoteJobs />} />
         <Route path='/resume-tip-component' element={<ResumeTipsComponent />} />
         <Route path='/xyz-formula-resume' element={<XYZFormula />} />
+        <Route path='/resume_component' element={<ResumeComponent/>}/>
         <Route path='/preview' element={<Preview />} />
-        <Route path='/preview2' element={<Preview2 />} />
+        <Route path='/preview2' element={<Preview2 />}/>
         <Route path='/preview3' element={<Preview3/>}/>
         <Route path='/preview4' element={<Preview4/>}/>
         <Route path='/preview5' element={<Preview5/>}/>

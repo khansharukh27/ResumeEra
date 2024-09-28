@@ -1,4 +1,4 @@
-import logo from '../image/logo.png';
+// import logo from '../image/logo.png';
 import Carousel from './Crousel';
 import step1 from '../image/step1.png';
 import step2 from '../image/step2.png';
@@ -7,14 +7,23 @@ import changeCV_image from '../image/changeCV_image.png';
 import CoverLetterCrousel from './CoverLetterCrousel';
 import '../css/home.css'
 import { Link } from 'react-router-dom';
+import best_logo from '../image/best_logo.webp'
+import { Helmet } from 'react-helmet';
 
 const Home = ({ images }) => {
     return (
         <div className="home-container">
-            
+             <Helmet>
+      <link rel="canonical" href="https://resumeera.xyz" />
+      <title> Welcome to ResumeEra </title>
+            <meta name="description" content="ResumeEra is a user-friendly platform that allows you to create and customize your free resumes.
+                    Choose from a variety of templates to make your free resume stand out. Whether you're highlighting
+                    your work experience, education, skills, or personal information, ResumeEra makes it easy to
+                    create a professional-looking free resume." />
+            </Helmet>
             <div className='home_div'>
                 <div className="home-logo">
-                    <img src={logo} alt="logo" />
+                    <img src={best_logo} alt="logo" />
                 </div>
                 <div className="home-welcome">
                     <h4>

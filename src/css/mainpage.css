@@ -5,9 +5,7 @@
   /* padding: 20px; Adjust padding as needed */
 
   /* Background gradient and shadows */
-  background: linear-gradient(145deg, #0c0c0c, #1a1a1a, #262626);
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.7),
-              inset 0 0 50px rgba(0, 0, 0, 0.8);
+  background-image: linear-gradient(145deg, purple,pink,magenta);
 
   
   /* Adjust text color and contrast for readability */

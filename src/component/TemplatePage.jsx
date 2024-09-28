@@ -3,8 +3,10 @@ import {Helmet} from 'react-helmet'
 import '../css/templates.css';
 import NormalResume from './NormalResume';
 import TechnicalResumeImages from './TechResume/TechnicalResumeImages';
+import CoverLetter from './CoverLetter';
 const TemplatePage = (props) => {
-    const { images ,techImages} = props;
+    const { images ,techImages,CoverImage} = props;
+    console.log('coverimage in template:-',CoverImage)
 
     return (
         <div className='template-page-container'>
@@ -26,6 +28,7 @@ const TemplatePage = (props) => {
             {/* Template Grid */}
             <NormalResume images = {images}/>
             <TechnicalResumeImages techImages = {techImages}/>
+            <CoverLetter CoverImage={CoverImage}/>
             {/* Footer */}
             
         </div>

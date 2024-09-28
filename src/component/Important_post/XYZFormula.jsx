@@ -5,12 +5,12 @@ import { Helmet } from 'react-helmet';
 const XYZFormula = () => {
   return (
     <div className="xyz-formula-container">
-         <Helmet>
-      <link rel="canonical" href="https://resumeera.xyz/xyz-formula-resume" />
-      <title>XYZ Formula: A Simple Approach to Showcasing Your Achievements in Your Resume</title>
-            <meta name="description" content=" When creating a resume, one challenge many face is how to present their work experience and achievements in a way that stands out.
+      <Helmet>
+        <link rel="canonical" href="https://resumeera.xyz/xyz-formula-resume" />
+        <title>XYZ Formula: A Simple Approach to Showcasing Your Achievements in Your Resume</title>
+        <meta name="description" content=" When creating a resume, one challenge many face is how to present their work experience and achievements in a way that stands out.
         Enter the XYZ Formula — a simple yet effective method to highlight your contributions clearly and powerfully." />
-            </Helmet>
+      </Helmet>
       <h1 className="xyz-formula-title">XYZ Formula: A Simple Approach to Showcasing Your Achievements in Your Resume</h1>
       <p className="xyz-formula-intro">
         When creating a resume, one challenge many face is how to present their work experience and achievements in a way that stands out.

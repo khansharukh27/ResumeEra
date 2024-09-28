@@ -1,10 +1,11 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import WorkExperience from "./WorkExperience";
 import { useDispatch } from "react-redux";
 import { educationData } from "../Redux/action";
 import Language from "./Language";
+import debounce from "./debounce";
 
-const Education = ({}) => {
+const Education = ()=> {
   const [showEducation, setShowEducation] = useState(true);
   const [showWorkExperience, setShowWorkExperience] = useState(false);
   const [showLanguage, setShowLanguage] = useState(false);
@@ -31,7 +32,7 @@ const Education = ({}) => {
     localStorage.setItem("educationData", JSON.stringify(education));
   }, [education]);
 
-  const handleChange = (e, index) => {
+  const handleChange = debounce((e, index) => {
     const { name, value } = e.target;
     setEducation((prev) => {
       const updateEducation = [...prev];
@@ -41,7 +42,11 @@ const Education = ({}) => {
       };
       return updateEducation;
     });
-  };
+  }, 500); // 500ms delay
+
+  useEffect(() => {
+    console.log('Debounced education update:', education);
+  }, [education]);
 
   const handleClickBack = (e) => {
     e.preventDefault();

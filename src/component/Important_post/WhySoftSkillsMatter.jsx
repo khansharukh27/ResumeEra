@@ -1,7 +1,7 @@
 import React from 'react';
 import '../../css/Important_Post/WhySoftSkillsMatte.css';
 import { Helmet } from 'react-helmet';
-
+import soft_skill_image from '../../image/image_for_link/soft_skill_image.jpg'
 const WhySoftSkillsMatter = () => {
     return (
         <div className="soft-skills-matter">
@@ -14,6 +14,7 @@ const WhySoftSkillsMatter = () => {
             <p className="soft-skills-matter-intro">
                 While technical skills and qualifications are essential, soft skills play a crucial role in determining your overall suitability for a job. Here’s why incorporating soft skills into your resume can significantly enhance your candidacy.
             </p>
+            <img src={soft_skill_image} alt="soft_skill_image" />
             <h2 className="soft-skills-matter-section-title">1. Demonstrates Interpersonal Abilities</h2>
             <p className="soft-skills-matter-content">
                 Soft skills such as communication, teamwork, and problem-solving are vital for interacting effectively with colleagues and clients. Highlighting these skills shows employers that you can contribute positively to the team dynamics and company culture.

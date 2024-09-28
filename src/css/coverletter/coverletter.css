@@ -1,0 +1,191 @@
+.coverdiv{
+    background-image: linear-gradient(145deg,magenta,aqua,pink,purple);
+    padding-right: 35px;
+    padding-left: 35px;
+
+}
+.covermain h1, .covermain h2, .covermain h3, .covermain h4, .covermain p {
+    color: black;
+}
+.what-is-cover{
+    display: flex;
+    justify-content: space-between;
+    padding-left: 20px;
+    padding-right: 20px;
+    width: 90%;
+    
+}
+.what-is-cover img{
+    border-radius: 8px;
+    
+}
+.what-is-cover p{
+    margin-top: 55px;
+    text-align: justify;
+    margin-right: 25px;
+}
+.importance_of_cover img{
+    width: 70%;
+    border-radius: 8px;
+    margin-left: auto;
+}
+.cover_letter_image_sample{
+    display: flex;
+    justify-content: space-between;
+
+}
+.cover_letter_image_sample img{
+    border-radius: 8px;
+}
+.cover_img{
+    position: relative;
+
+}
+.cover_img img{
+    width: 250px;
+    height: 250px;
+}
+
+
+@media (max-width:425px){
+    .coverdiv{
+        width: 425px;
+        margin-left: 0px;
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+    .covermain{
+        width: 425px;
+        padding-right: 10px;
+        padding-left:  10px;
+    }
+    .cover_letter_image_sample{
+        width: 425px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    
+    }
+    .what-is-cover{
+        display: flex;        flex-direction: column;
+        justify-content: space-between;
+        padding-left: 0px;
+        padding-right: 0px;
+        width: 90%;
+        
+    }
+    .what-is-cover img{
+        width: 150px;
+    }
+    .cover_letter_image_sample{
+        width: 200px;
+        margin: auto;
+    }
+    .covermain h1 {
+        color: black;
+        font-size: medium;
+    }
+     .covermain p{
+        font-size: small;
+    }
+    .covermain h2, .covermain h3, .covermain h4{
+        font-size: medium;
+        font-weight: 900;
+    }
+}
+
+@media (max-width:375px){
+    .coverdiv{
+        width: 375px;
+        margin-left: 0px;
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+    .covermain{
+        width: 375px;
+        padding-right: 10px;
+        padding-left:  10px;
+    }
+    .cover_letter_image_sample{
+        width: 320px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    
+    }
+    .what-is-cover{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding-left: 0px;
+        padding-right: 0px;
+        width: 90%;
+        
+    }
+    .what-is-cover img{
+        width: 150px;
+    }
+    .cover_letter_image_sample{
+        width: 200px;
+        margin: auto;
+    }
+    .covermain h1 {
+        color: black;
+        font-size: medium;
+    }
+     .covermain p{
+        font-size: small;
+    }
+    .covermain h2, .covermain h3, .covermain h4{
+        font-size: medium;
+        font-weight: 900;
+    }
+}
+
+@media (max-width:320px){
+    .coverdiv{
+        width: 320px;
+        margin-left: 0px;
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+    .covermain{
+        width: 320px;
+        padding-right: 10px;
+        padding-left:  10px;
+    }
+    .cover_letter_image_sample{
+        width: 320px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    
+    }
+    .what-is-cover{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        padding-left: 0px;
+        padding-right: 0px;
+        width: 90%;
+        
+    }
+    .what-is-cover img{
+        width: 150px;
+    }
+    .cover_letter_image_sample{
+        width: 200px;
+        margin: auto;
+    }
+    .covermain h1 {
+        color: black;
+        font-size: medium;
+    }
+     .covermain p{
+        font-size: small;
+    }
+    .covermain h2, .covermain h3, .covermain h4{
+        font-size: medium;
+        font-weight: 900;
+    }
+}

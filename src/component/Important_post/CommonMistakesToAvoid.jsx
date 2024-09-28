@@ -1,18 +1,19 @@
 import React from 'react';
 import '../../css/Important_Post/CommonMistakesToAvoid.css';
 import { Helmet } from 'react-helmet';
-
+import common_mistake from '../../image/image_for_link/common_mistake.jpg'
 const CommonMistakesToAvoid = () => {
     return (
         <div className="common-mistakes">
             <Helmet>
       <link rel="canonical" href="https://resumeera.xyz/common-mistakes-to-avoid-on-your-resume" />
-      <title>Common Mistakes to Avoid on Your Resume</title>
+      <title>Common Mistakes to Avoid on Your Resume with ResumeEra</title>
             <meta name="description" content="Crafting a resume can be challenging, and it's easy to make mistakes 
             that could hurt your chances of landing an interview. Here are some common resume mistakes to avoid to 
             ensure your resume makes a positive impression." />
             </Helmet>
-            <h1 className="common-mistakes-title">Common Mistakes to Avoid on Your Resume</h1>
+            <h1 className="common-mistakes-title">Common Mistakes to Avoid on Your Resume with ResumeEra</h1>
+            <img src={common_mistake} alt="common_mistake" />
             <p className="common-mistakes-intro">
                 Crafting a resume can be challenging, and it's easy to make mistakes that could hurt your chances of landing an interview. Here are some common resume mistakes to avoid to ensure your resume makes a positive impression.
             </p>
