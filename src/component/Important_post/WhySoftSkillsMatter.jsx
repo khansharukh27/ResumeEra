@@ -4,7 +4,7 @@ import { Helmet } from 'react-helmet';
 import soft_skill_image from '../../image/image_for_link/soft_skill_image.jpg'
 const WhySoftSkillsMatter = () => {
     return (
-        <div className="soft-skills-matter">
+        <div className="soft-skills-matter container">
             <Helmet>
       <link rel="canonical" href="https://resumeera.xyz/why-soft-skills-matter" />
       <title>Why Soft Skills Matter in Your Resume</title>

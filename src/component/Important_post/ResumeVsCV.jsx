@@ -4,7 +4,7 @@ import { Helmet } from "react-helmet";
 
 const ResumeVsCV = () => {
   return (
-    <div className="resume-vs-cv-container">
+    <div className="resume-vs-cv-container container">
       <Helmet>
       <link rel="canonical" href="https://resumeera.xyz/resume-vs-cv-what-you-need-to-know" />
       <title>Resume vs. CV: What You Need to Know</title>

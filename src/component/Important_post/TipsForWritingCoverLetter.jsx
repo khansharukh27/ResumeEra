@@ -5,7 +5,7 @@ import download_4 from '../../image/image_for_link/download_4.jpg'
 
 const TipsForWritingCoverLetter = () => {
     return (
-        <div className="cover-letter-tips">
+        <div className="cover-letter-tips container">
             <Helmet>
       <link rel="canonical" href="https://resumeera.xyz/tips-for-writing-a-cover-letter" />
       <title>Tips for Writing a Cover Letter</title>

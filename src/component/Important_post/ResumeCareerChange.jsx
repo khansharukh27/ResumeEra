@@ -4,7 +4,7 @@ import { Helmet } from "react-helmet";
 
 const ResumeCareerChange = () => {
   return (
-    <div className="career-change-container">
+    <div className="career-change-container container">
       <Helmet>
       <link rel="canonical" href="https://resumeera.xyz/how-to-write-a-resume-for-career-change" />
       <title>How to Write a Resume for Career Change</title>

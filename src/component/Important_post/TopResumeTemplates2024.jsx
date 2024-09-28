@@ -4,7 +4,7 @@ import { Helmet } from 'react-helmet';
 
 const TopResumeTemplates2024 = () => {
     return (
-        <div className="resume-templates">
+        <div className="resume-templates container">
             <Helmet>
       <link rel="canonical" href="https://resumeera.xyz/top-resume-templates-for-2024" />
       <title>Top Resume Templates for 2024</title>

@@ -4,7 +4,7 @@ import { Helmet } from 'react-helmet';
 
 const ResumeTipsComponent = () => {
   return (
-    <div className="resume-tips">
+    <div className="resume-tips container">
       <Helmet>
       <link rel="canonical" href="https://resumeera.xyz/resume-tip-component" />
       <title>Resume कैसे बनाएं जो नियोक्ता को प्रभावित कर सके?</title>

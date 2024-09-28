@@ -4,7 +4,7 @@ import { Helmet } from 'react-helmet';
 
 const ModernResumeCrafting = () => {
   return (
-    <div className="modern-resume-crafting">
+    <div className="modern-resume-crafting container">
        <Helmet>
       <link rel="canonical" href="https://resumeera.xyz/crafting-a-modern-resume" />
       <title>Crafting a Modern Resume</title>

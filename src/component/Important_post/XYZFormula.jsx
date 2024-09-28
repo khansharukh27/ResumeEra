@@ -4,7 +4,7 @@ import { Helmet } from 'react-helmet';
 
 const XYZFormula = () => {
   return (
-    <div className="xyz-formula-container">
+    <div className="xyz-formula-container container">
       <Helmet>
         <link rel="canonical" href="https://resumeera.xyz/xyz-formula-resume" />
         <title>XYZ Formula: A Simple Approach to Showcasing Your Achievements in Your Resume</title>

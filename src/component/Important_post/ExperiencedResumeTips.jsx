@@ -4,7 +4,7 @@ import { Helmet } from 'react-helmet';
 
 const ExperiencedResumeTips = () => {
   return (
-    <div className="experienced-resume-tips">
+    <div className="experienced-resume-tips container">
       <Helmet>
       <link rel="canonical" href="https://resumeera.xyz/resume-tips-for-experienced-professionals" />
       <title>Resume Tips for Experienced Professionals</title>

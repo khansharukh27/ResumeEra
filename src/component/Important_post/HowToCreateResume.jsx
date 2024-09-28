@@ -4,7 +4,7 @@ import { Helmet } from 'react-helmet';
 
 const HowToCreateResume = () => {
     return (
-        <div className="resume-guide">
+        <div className="resume-guide container">
              <Helmet>
       <link rel="canonical" href="https://resumeera.xyz/how-to-create-a-professional-resume" />
       <title>How to Create a Professional Resume</title>

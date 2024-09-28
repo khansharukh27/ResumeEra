@@ -4,7 +4,7 @@ import { Helmet } from 'react-helmet';
 
 const ActionVerbsResume = () => {
   return (
-    <div className="action-verbs-resume">
+    <div className="action-verbs-resume container">
        <Helmet>
       <link rel="canonical" href="https://resumeera.xyz/improving-your-resume-with-action-verbs" />
       <title>Improving Your Resume with Action Verbs</title>

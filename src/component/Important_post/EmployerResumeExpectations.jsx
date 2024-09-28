@@ -4,7 +4,7 @@ import { Helmet } from 'react-helmet';
 
 const EmployerResumeExpectations = () => {
   return (
-    <div className="employer-resume-expectations">
+    <div className="employer-resume-expectations container">
       <Helmet>
       <link rel="canonical" href="https://resumeera.xyz/what-employers-look-for-in-a-resume" />
       <title>What Employers Look for in a Resume</title>

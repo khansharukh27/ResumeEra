@@ -28,7 +28,6 @@ const TemplatePage = (props) => {
             {/* Template Grid */}
             <NormalResume images = {images}/>
             <TechnicalResumeImages techImages = {techImages}/>
-            <CoverLetter CoverImage={CoverImage}/>
             {/* Footer */}
             
         </div>

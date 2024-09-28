@@ -33,8 +33,8 @@ const CoverLetter = (props) => {
     };
 
     return (
-        <div className='coverdiv '>
-            <div className='covermain'>
+        <div className='coverdiv container'>
+            <div className='covermain '>
                 <h1>How to Write an Effective Cover Letter with ResumeEra: A Complete Guide</h1>
                 <hr style={{width:'inherit'}}/>
                 <h3>Introduction: What is a Cover Letter?</h3>

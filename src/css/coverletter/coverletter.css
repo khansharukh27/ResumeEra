@@ -2,6 +2,8 @@
     background-image: linear-gradient(145deg,magenta,aqua,pink,purple);
     padding-right: 35px;
     padding-left: 35px;
+    margin-top:-10px;
+    border-radius: 25px;
 
 }
 .covermain h1, .covermain h2, .covermain h3, .covermain h4, .covermain p {

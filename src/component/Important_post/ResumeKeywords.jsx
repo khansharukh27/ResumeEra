@@ -4,7 +4,7 @@ import { Helmet } from 'react-helmet';
 
 const ResumeKeywords = () => {
   return (
-    <div className="resume-keywords">
+    <div className="resume-keywords container">
        <Helmet>
       <link rel="canonical" href="https://resumeera.xyz/how-to-use-keywords-in-a-resume" />
       <title>How to Use Keywords in a Resume</title>

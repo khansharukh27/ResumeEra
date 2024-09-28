@@ -4,7 +4,7 @@ import { Helmet } from 'react-helmet';
 
 const CorrectResumeFormatting = () => {
   return (
-    <div className="correct-resume-formatting">
+    <div className="correct-resume-formatting container">
       <Helmet>
       <link rel="canonical" href="https://resumeera.xyz/how-to-format-a-resume-correctly" />
       <title>How to Format a Resume Correctly</title>

@@ -4,7 +4,7 @@ import { Helmet } from 'react-helmet';
 
 const InternationalResume = () => {
   return (
-    <div className="international-resume">
+    <div className="international-resume container">
       <Helmet>
       <link rel="canonical" href="https://resumeera.xyz/how-to-create-a-resume-for-international-jobs" />
       <title>How to Create a Resume for International Jobs</title>

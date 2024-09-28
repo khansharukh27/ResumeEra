@@ -4,7 +4,7 @@ import { Helmet } from 'react-helmet';
 import Choose_temp from '../../image/image_for_link/choose_temp.jpg'
 const ChooseTemplate = () => {
   return (
-    <div className="choose-template">
+    <div className="choose-template container">
       <Helmet>
       <link rel="canonical" href="https://resumeera.xyz/how-to-choose-the-right-resume-template" />
       <title>How to Choose the Right Resume Template</title>

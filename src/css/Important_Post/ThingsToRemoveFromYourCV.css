@@ -1,0 +1,141 @@
+/* Global Styles */
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f7f9fc;
+    margin: 0;
+    padding: 0;
+  }
+  
+  main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+  }
+  
+  /* Headings */
+  h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: #2c3e50;
+    text-align: center;
+  }
+  
+  h2 {
+    font-size: 1.8rem;
+    margin: 1.5rem 0;
+    color: #34495e;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 0.3rem;
+  }
+  
+  p {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: #555;
+    margin-bottom: 1rem;
+  }
+  
+  /* Section Styling */
+  section {
+    margin-bottom: 2rem;
+  }
+  
+  section:last-child {
+    margin-bottom: 0;
+  }
+  
+  section h2 {
+    margin-top: 0;
+  }
+  
+  section p {
+    margin-top: 0.5rem;
+  }
+  
+  /* Bullet Points */
+  ul {
+    margin-left: 1.5rem;
+  }
+  
+  li {
+    margin-bottom: 0.8rem;
+  }
+  
+  /* Highlight for Important Text */
+  strong {
+    color: #2c3e50;
+  }
+  
+  em {
+    font-style: italic;
+    color: #e74c3c;
+  }
+  
+  /* Links */
+  a {
+    color: #3498db;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Button Styling */
+  button {
+    background-color: #3498db;
+    color: #fff;
+    padding: 0.8rem 1.2rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #2980b9;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    main {
+      padding: 1.5rem;
+    }
+  
+    h1 {
+      font-size: 2rem;
+    }
+  
+    h2 {
+      font-size: 1.5rem;
+    }
+  
+    p {
+      font-size: 0.95rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    h1 {
+      font-size: 1.8rem;
+    }
+  
+    h2 {
+      font-size: 1.3rem;
+    }
+  
+    p {
+      font-size: 0.9rem;
+    }
+  }
+  .container img{
+    height: 300px;
+    width:100%;
+    border-radius: 25px;
+}
+  

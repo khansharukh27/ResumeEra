@@ -4,7 +4,7 @@ import { Helmet } from 'react-helmet';
 import common_mistake from '../../image/image_for_link/common_mistake.jpg'
 const CommonMistakesToAvoid = () => {
     return (
-        <div className="common-mistakes">
+        <div className="common-mistakes container">
             <Helmet>
       <link rel="canonical" href="https://resumeera.xyz/common-mistakes-to-avoid-on-your-resume" />
       <title>Common Mistakes to Avoid on Your Resume with ResumeEra</title>

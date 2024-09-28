@@ -4,7 +4,7 @@ import { Helmet } from 'react-helmet';
 import job_resume from '../../image/image_for_link/job_resume.jpg'
 const FirstJobResume = () => {
   return (
-    <div className="first-job-resume">
+    <div className="first-job-resume container">
        <Helmet>
       <link rel="canonical" href="https://resumeera.xyz/creating-a-resume-for-your-first-job" />
       <title>Creating a Resume for Your First Job</title>

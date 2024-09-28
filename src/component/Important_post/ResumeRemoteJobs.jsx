@@ -4,7 +4,7 @@ import { Helmet } from "react-helmet";
 
 const ResumeRemoteJobs = () => {
   return (
-    <div className="remote-jobs-container">
+    <div className="remote-jobs-container container">
       <Helmet>
       <link rel="canonical" href="https://resumeera.xyz/resume-writing-tips-for-remote-jobs" />
       <title>Resume Writing Tips for Remote Jobs</title>

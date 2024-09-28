@@ -4,7 +4,7 @@ import { Helmet } from "react-helmet";
 
 const ResumeNoExperience = () => {
   return (
-    <div className="resume-no-exp-container">
+    <div className="resume-no-exp-container container">
       <Helmet>
       <link rel="canonical" href="https://resumeera.xyz/creating-a-resume-with-no-experience" />
       <title>Creating a Resume with No Experience</title>

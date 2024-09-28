@@ -128,6 +128,11 @@ const ImportantPost = () => {
                 <li>
                     <Link to='/resume_component'>
                     Create a Professional Resume with Free Templates and Showcase Your Skills</Link>
+
+                </li>
+                <li>
+                    <Link to='/Things_To_Remove_From_Your_Cv'>
+                    Things to Remove from Your CV - Resume Tips</Link>
                 </li>
             </ul>
         </div>

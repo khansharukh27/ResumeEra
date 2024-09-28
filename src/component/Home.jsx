@@ -15,7 +15,7 @@ const Home = ({ images }) => {
         <div className="home-container">
              <Helmet>
       <link rel="canonical" href="https://resumeera.xyz" />
-      <title> Welcome to ResumeEra </title>
+      <title>Free Resume:How to Create Resumes Online ,Professional And Free </title>
             <meta name="description" content="ResumeEra is a user-friendly platform that allows you to create and customize your free resumes.
                     Choose from a variety of templates to make your free resume stand out. Whether you're highlighting
                     your work experience, education, skills, or personal information, ResumeEra makes it easy to

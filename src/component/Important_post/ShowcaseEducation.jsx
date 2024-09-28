@@ -4,7 +4,7 @@ import { Helmet } from "react-helmet";
 
 const ShowcaseEducation = () => {
   return (
-    <div className="education-container">
+    <div className="education-container container">
       <Helmet>
       <link rel="canonical" href="https://resumeera.xyz/how-to-showcase-your-education-in-a-resume" />
       <title>How to Showcase Your Education in a Resume</title>

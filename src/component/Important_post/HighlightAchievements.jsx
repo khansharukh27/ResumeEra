@@ -4,7 +4,7 @@ import { Helmet } from 'react-helmet';
 
 const HighlightAchievements = () => {
   return (
-    <div className="highlight-achievements">
+    <div className="highlight-achievements container">
        <Helmet>
       <link rel="canonical" href="https://resumeera.xyz/how-to-highlight-achievements-in-a-resume" />
       <title>How to Highlight Achievements in a Resume</title>
