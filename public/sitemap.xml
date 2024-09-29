@@ -114,7 +114,13 @@
     <loc>https://resumeera.xyz/xyz-formula-resume</loc>
     <priority>0.8</priority>
   </url>
-  
- 
+  <url>
+    <loc>https://resumeera.xyz/resume_component</loc>
+    <priority>0.8</priority>
+  </url>
+ <url>
+    <loc>https://resumeera.xyz/Things_To_Remove_From_Your_Cv</loc>
+    <priority>0.8</priority>
+  </url>
     
 </urlset>

@@ -134,6 +134,10 @@ const ImportantPost = () => {
                     <Link to='/Things_To_Remove_From_Your_Cv'>
                     Things to Remove from Your CV - Resume Tips</Link>
                 </li>
+                <li>
+                    <Link to='/Tip_for_Interview'>
+                    Tip for Interview:ResumeEra</Link>
+                </li>
             </ul>
         </div>
     );
