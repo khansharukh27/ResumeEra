@@ -1,7 +1,5 @@
 /* Overall Container */
-.container {
-    /* max-width: 100%; */
-    /* margin: 0; */
+.aboutResumeEra {
     padding: 40px;
     font-family: Arial, sans-serif;
     color: #333;
@@ -9,16 +7,26 @@
     width: 70%;
     margin-top: 50px;
     border-radius: 25px;
-    background-image: linear-gradient(145deg,magenta,aqua,pink,purple);
+    background-image: linear-gradient(145deg, magenta, aqua, pink, purple);
+    margin-left: auto;
+    margin-right: auto;
+    color: black;
 }
-
+.aboutResumeEra p,.aboutResumeEra h1,.aboutResumeEra h3{
+    color: black;
+}
+.aboutResumeEra bold{
+    font-weight: 700;
+}
+.aboutResumeEra img{
+    border-radius: 25px;
+}
 /* Headings */
 h1 {
     font-size: 2.5em;
     margin-bottom: 20px;
     text-align: center;
     color: #4a90e2;
-
 }
 
 h3 {
@@ -66,7 +74,9 @@ img {
     display: block;
     margin: 20px auto;
 }
-.quotes{
+
+/* Quotes */
+.quotes {
     width: 100%;
     background-color: wheat;
     padding: 20px;
@@ -74,8 +84,13 @@ img {
     margin-top: 15px;
 }
 
-/* Responsive Styles */
-@media (max-width: 768px) {
+
+
+/* Responsive Styles for small screens (mobile) */
+
+@media (min-width:769px) {
+    
+
     h1 {
         font-size: 2em;
     }
@@ -87,4 +102,47 @@ img {
     p, ul, ol {
         font-size: 0.9em;
     }
+
+    table {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    th, td {
+        font-size: 0.8em;
+        padding: 8px;
+    }
 }
+
+
+
+@media (max-width: 768px) {
+    .aboutResumeEra {
+        padding: 20px;
+        width: 100%;
+        margin: 20px auto;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    h3 {
+        font-size: 1.5em;
+    }
+
+    p, ul, ol {
+        font-size: 0.9em;
+    }
+
+    table {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    th, td {
+        font-size: 0.8em;
+        padding: 8px;
+    }
+}
+

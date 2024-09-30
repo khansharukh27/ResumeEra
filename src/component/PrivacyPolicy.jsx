@@ -4,7 +4,7 @@ import { Helmet } from 'react-helmet';
 
 const PrivacyPolicy = () => {
   return (
-    <div className="privacy-policy">
+    <div className="aboutResumeEra">
       <Helmet>
       <link rel="canonical" href="https://resumeera.xyz/privacypolicy" />
       <title>Privacy Policy</title>

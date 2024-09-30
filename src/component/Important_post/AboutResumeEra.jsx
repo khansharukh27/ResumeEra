@@ -9,8 +9,8 @@ const AboutResumeEra = () => {
             <Helmet>
                 <title>ResumeEra: Craft Your Perfect and free Resume Today</title>
                 <meta name="description" content="Create your standout resume effortlessly with ResumeEra. 
-        Our free online tools and expert tips help you craft a professional CV that lands interviews. 
-        Start your job search strong today!" />
+                    Our free online tools and expert tips help you craft a professional CV that lands interviews. 
+                        Start your job search strong today!" />
                 <meta name="keywords" content="ResumeEra, free resumes, resume builder, professional resume, modern templates, resume tips, career growth" />
                 <meta name="author" content="ResumeEra" />
                 <meta property="og:title" content="About ResumeEra - Create Professional Resumes for Free" />
@@ -19,7 +19,7 @@ const AboutResumeEra = () => {
                 <meta property="og:type" content="website" />
 
             </Helmet>
-            <div className="container">
+            <div className="aboutResumeEra">
                 <h1>ResumeEra: Craft Your Perfect Resume Today</h1>
                 <p>
                     As I sit here, staring at the blank page, my career ambitions feel heavy.
@@ -33,7 +33,7 @@ const AboutResumeEra = () => {
                 </p>
                 <img src={download} alt="Perfect Resume" />
             </div>
-            <div className="container">
+            <div className=" aboutResumeEra">
                 <h3>Key Takeaways</h3>
                 <ul>
                     <li>ResumeEra is a free online platform that helps you create a professional, visually-appealing resume</li>
@@ -253,6 +253,8 @@ const AboutResumeEra = () => {
 
                 <h3>What are the essential design and formatting considerations for my resume?</h3>
                 <p>Your resume should be clean and professional. Use clear headings and consistent formatting. Good design makes a strong impression.</p>
+                <a href="https://resumeera.xyz" className="international-resume-link">Learn More About International Job Applications</a>
+
             </div>
         </div>
     )

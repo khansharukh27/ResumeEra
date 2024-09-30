@@ -19,6 +19,7 @@
   .img_div img{
     border-radius: 8px;
     box-shadow: 10px 0px 100px 10px pink;
+    width: 45%;
   }
   .about-me-container p {
     margin-bottom: 16px;
@@ -77,4 +78,17 @@
   }
   .mission_div img{
     border-radius: 8px;
+  }
+  /* @media (min-width:769px){
+img
+  } */
+  @media (max-width:768px) {
+    .img_div{
+      display: flex;
+      flex-direction: column;
+    }
+    .img_div img{
+      width: 100%;
+      border-radius: 25px;
+    }
   }

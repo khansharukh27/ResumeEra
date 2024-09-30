@@ -4,7 +4,7 @@ import { Helmet } from 'react-helmet';
 
 const TermsAndServices = () => {
   return (
-    <div className="terms-and-services">
+    <div className="aboutResumeEra">
       <Helmet>
       <link rel="canonical" href="https://resumeera.xyz/terms-of-service" />
       <title>Terms and Services</title>

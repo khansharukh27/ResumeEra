@@ -41,7 +41,7 @@ const Contact = () => {
   };
 
   return (
-    <div className="contact-container">
+    <div className="aboutResumeEra">
        <Helmet>
       <link rel="canonical" href="https://resumeera.xyz/contact" />
       <title>Contact Us</title>

@@ -4,7 +4,7 @@ import { Helmet } from 'react-helmet';
 
 const AboutUs = () => {
   return (
-    <div className="about-me-container">
+    <div className="aboutResumeEra">
       <Helmet>
       <link rel="canonical" href="https://resumeera.xyz/AboutUs" />
       <title>About Me</title>
@@ -68,7 +68,7 @@ const AboutUs = () => {
             transitioning careers, has access to high-quality tools that simplify the process while delivering 
             outstanding results.
         </p>
-        <div className='mission_div'>
+        <div className='img_div'>
         <img src="https://st.depositphotos.com/1368414/2484/i/380/depositphotos_24844585-stock-photo-mission.jpg" alt="mission_img" />
         <img src="https://st2.depositphotos.com/3591429/11211/i/380/depositphotos_112111052-stock-photo-business-team-working-in-office.jpg" alt="mission_img" />
 
