@@ -52,4 +52,20 @@
   .highlight-achievements-link:hover {
     background-color: #0056b3;
   }
+
+  .table{
+    width: 100%;
+  }
+  .quote{
+    background-color:whitesmoke;
+    padding: 15px;
+    border-radius: 25px;
+  }
+  @media (max-width:320) {
+    .table{
+      /* margin-left: 0px; */
+      width: 70%;
+    }
+    
+  }
   

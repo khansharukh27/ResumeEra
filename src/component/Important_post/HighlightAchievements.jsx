@@ -2,14 +2,18 @@ import React from 'react';
 import '../../css/Important_Post/HighlightAchievements.css'; // Assuming you prefer to keep styles separate
 import { Helmet } from 'react-helmet';
 import highlight_image from '../../image/image_for_link/highlight_image.jpg'
+import VideoPlayer from './VideoPlayer';
+import beuti_img from '../../image/image_for_link/beauti_img.jpg'
+import measurable_img from '../../image/image_for_link/measurable-img.jpg'
+import { Link } from 'react-router-dom';
 const HighlightAchievements = () => {
   return (
     <div className="aboutResumeEra">
-       <Helmet>
-      <link rel="canonical" href="https://resumeera.xyz/how-to-highlight-achievements-in-a-resume"/>
-      <title>How to Highlight Achievements in a Resume</title>
-            <meta name="description" content="Highlighting achievements in your resume can set you apart from other candidates. Employers look for measurable successes that demonstrate your impact in previous roles. Here’s how to effectively showcase your accomplishments." />
-            <meta name='keyword' content='ResumeEra,Resume Era, Free Resume, how to create free resume online,free resume creator,free resume creator online ,Create Resume Online,Free Resume Builder,free resume maker ,Professional Resume, 
+      <Helmet>
+        <link rel="canonical" to="https://resumeera.xyz/how-to-highlight-achievements-in-a-resume" />
+        <title>How to Highlight Achievements in a Resume</title>
+        <meta name="description" content="Highlighting achievements in your resume can set you apart from other candidates. Employers look for measurable successes that demonstrate your impact in previous roles. Here’s how to effectively showcase your accomplishments." />
+        <meta name='keyword' content='ResumeEra,Resume Era, Free Resume, how to create free resume online,free resume creator,free resume creator online ,Create Resume Online,Free Resume Builder,free resume maker ,Professional Resume, 
     Online Resume Builder, Job Application, CV Maker, Resume Templates, Career, 
     Employment, Resume, Curriculum Vitae, Job Seeker, Resume Writing, Cover Letter, 
     Job Interview, Career Development, Job Search, Online CV, Job Market, Job Board, 
@@ -59,7 +63,7 @@ const HighlightAchievements = () => {
     AI resume insights free, AI resume analysis tool free, Free AI resume builder online, 
     AI resume creation app free, Free AI resume tools, AI resume generation free, 
     AI resume review tool free'/>
-            </Helmet>
+      </Helmet>
       <h2 className="highlight-achievements-title">How to Highlight Achievements in a Resume</h2>
       <p>Looking at a blank document, I felt overwhelmed. I had given my all to my work, but how to show my achievements? It was a challenge I had to face if I wanted my dream job.</p>
       <p>In this article, we'll look at ways to highlight your achievements. These tips will help you make your resume stand out. Whether you're starting from scratch or updating an old one, these strategies will showcase your value and successes.</p>
@@ -106,15 +110,111 @@ const HighlightAchievements = () => {
       <h3>Utilizing Power Words to Enhance Impact      </h3>
       <p>Making a strong resume is about showing off your wins in the best light. Using powerful words can really help. These words show what you can do and what you've done.
 
-Choose verbs that show you've done something big. Words like "achieved," "spearheaded," "optimized," and "streamlined" are great. They make your skills and achievements clear.</p>
- <p>
-  <ul>
-    <li>Achieved: Completed a big project or goal with clear results.    </li>
-    <li>Spearheaded: Led a key project or team effort.    </li>
-    <li>Optimized: Made things better by improving processes or systems.    </li>
-    <li>Streamlined: Made things easier by simplifying procedures.    </li>
-  </ul>
- </p>
+        Choose verbs that show you've done something big. Words like "achieved," "spearheaded," "optimized," and "streamlined" are great. They make your skills and achievements clear.</p>
+      <p>
+        <ul>
+          <li>Achieved: Completed a big project or goal with clear results.    </li>
+          <li>Spearheaded: Led a key project or team effort.    </li>
+          <li>Optimized: Made things better by improving processes or systems.    </li>
+          <li>Streamlined: Made things easier by simplifying procedures.    </li>
+        </ul>
+        Using the right words can make your resume stand out. It shows you're valuable and different. This way, you'll make a strong impression on employers.
+      </p>
+      <p>
+        <table>
+          <thead>
+            <tr>
+              <td>Weak Language</td>
+              <td>Weak Language</td>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Responsible for</td>
+              <td>Managed, Oversaw, Coordinated</td>
+            </tr>
+            <tr>
+              <td>Assisted with</td>
+              <td>	Supported, Contributed to, Facilitated</td>
+            </tr>
+            <tr>
+              <td>Involved in</td>
+              <td>Participated in, Collaborated on</td>
+            </tr>
+            <tr>
+              <td>Familiar with</td>
+              <td>Proficient in, Experienced in, Skilled in</td>
+            </tr>
+          </tbody>
+        </table>
+      </p>
+      <h3>Formatting Your Achievements for Easy Readability     </h3>
+      <p>When you're making your free resume or free resume online, how you show your achievements matters a lot. To make sure your main accomplishments stand out, use clear, short bullet points.</p>
+      <h3>Using Bullet Points and Concise Phrasing     </h3>
+      <p>Stay away from long, complicated descriptions. They can confuse the reader. Instead, choose a simple, organized layout. This makes it easy for the hiring manager to see your value.</p>
+      <p>
+        <ul>
+          <li>Use bullet points to create a visually appealing and scannable structure.        </li>
+          <li>Craft each bullet point to be succinct, capturing the essence of your achievement in 1-2 sentences.        </li>
+          <li>Prioritize quantifiable results and metrics to demonstrate the impact of your contributions.        </li>
+          <li>Tailor the language to the specific job description, ensuring your achievements are directly relevant.        </li>
+          <li>Maintain a consistent formatting style throughout your free resume or free resume online.        </li>
+        </ul>
+      </p>
+      <p>By focusing on clear and brief descriptions, you'll help the hiring manager see your worth. This can boost your chances of getting an interview.</p>
+      <h3>HOW TO CREATE RESUME ONLINE     </h3>
+      <p>In today's digital world, making a resume online is easy and popular. Sites like Canva, Novoresume, and AI-powered resume builders let you make a professional resume without design skills.
+
+        These tools offer templates, tips, and content ideas. They help you highlight your achievements well. Look at the free resume creation options and pick what works best for you.</p>
+      <p>
+        <ul>
+          <li><Link to="https://resumeera.xyz">Canva</Link> has many free resume templates for you to customize.    </li>
+          <li><Link to="https://resumeera.xyz">Novoresume</Link> uses AI to give you personalized advice for a standout resume.    </li>
+          <li>AI-powered resume builders like <Link to="https://resumeera.xyz">Resumeera</Link> and Enhancv create a professional resume for you.    </li>
+
+        </ul>
+        Whether you're experienced or new to the job market, these online resume creation tools are great. They help you craft a compelling and visually appealing resume that employers will notice.</p>
+      <img src={beuti_img} alt="resumeEra image" />
+      <p className='quote'>"Creating a resume online has never been easier. These tools make it simple to showcase your skills and achievements in a professional manner."</p>
+      <h3>Highlighting Transferable Skills and Accomplishments    </h3>
+      <p>When you make your free resume, it's key to show off your skills and achievements that fit many jobs and fields. By carefully looking at the job description, you can show you're flexible and ready for new challenges. This makes you more appealing to employers.</p>
+      <h3>Adapting Your Achievements to Different Industries    </h3>
+      <p>Your resume should match the job and industry you're aiming for. Look for ways to connect your past achievements to the new role. This shows you can adjust and succeed in different settings, a big plus in today's job market.
+
+        For instance, moving from sales to marketing? Focus on your skills in making strong presentations, analyzing data, and creating marketing plans. These skills are valuable in marketing. By linking your past to the new role, you stand out more.</p>
+      
+      <p>
+        By focusing on your transferable skills and tailoring your achievements, your resume will show your flexibility. This is valuable to employers, whether you're making a free resume, a free resume online, or a detailed how to create resume online plan.</p>
+      <h3>Balancing Quantitative and Qualitative Achievements</h3>
+      <p>When making your resume, it's key to find the right mix of numbers and words. Numbers show how much you've done, like sales or scores. Words, like awards or praise, show your skills and how you've made a mark.</p>
+      <h3>Providing Context and Measurable Results</h3>
+      <p>To make your resume stand out, list your wins and explain them well. This lets readers see the big picture of what you've done. Talk about the challenges you faced, the plans you made, and the results you got.</p>
+      <p>For instance, saying "Increased sales by 25%" is good. But adding more detail makes it better: "A new sales plan led to a 25% jump in quarterly sales. This beat our yearly goal by $1.2 million."</p>
+      <p>Qualitative wins can also be made stronger with numbers. Mention awards or praise, and add details that back it up. For example, "Won 'Top Performer of the Year' for hitting customer satisfaction goals by 20%. Also, kept a 98% on-time delivery rate."</p>
+      <p>By mixing numbers and words, your resume will show off your skills and achievements. This makes you a strong candidate for how to create resume online, best resume for free online, ai resume online, and free website for create resume.</p>
+      <img src={measurable_img} alt="measurable Result image " />
+      <h3>Conclusion      </h3>
+      <p>Highlighting your achievements on your resume is key to showing your worth to employers. An impactful resume summary and well-placed accomplishments can make your resume stand out. Using the right words and formatting can grab the attention of hiring managers.</p>
+      <p>Free online tools can make creating a resume easier and more professional. Tailor your achievements to the job you want, mixing numbers and descriptions. This shows you're a complete candidate.</p>
+      <p>By using these tips, you'll make a resume that showcases your skills and increases your job chances. Whether you use Canva, Nove, or another free site, focus on what makes you unique. A well-made online resume can help you stand out from others.</p>
+      <h3>FAQ      </h3>
+      <Link to="https://resumeera.xyz">How can I create a resume online for free?      </Link>
+      <p>You can use free platforms like Canva, Novoresume, and AI-powered resume builders. They have templates and guides to help you. You don't need design skills to make your resume stand out.</p>
+      <Link to="https://resumeera.xyz"><h4>What are the best tips for highlighting achievements in my resume?      </h4></Link>
+      <p>To highlight achievements, show what makes you unique. Use numbers to show your results. Place your best achievements at the top.
+
+Match your achievements to the job description and use keywords. Use powerful words and bullet points for easy reading.</p>
+<Link to="https://resumeera.xyz"><h4>How can I adapt my achievements to different industries or job roles?</h4></Link>
+<p>Review the job description carefully. Look for relevant skills and experiences. Highlight your transferable skills and versatility.</p>
+<Link to="https://resumeera.xyz"><h4>How can I balance quantitative and qualitative achievements on my resume?</h4
+
+></Link>
+<p>Mix both types of achievements. Quantitative ones show your impact with numbers. Qualitative ones highlight your skills and recognition.
+
+By explaining your achievements clearly, you'll show your full range of skills.</p>
+<Link to="https://resumeera.xyz"><h4>What are the best free websites to create a resume online?</h4></Link>
+<p>Top free sites include Canva, Novoresume, and AI-powered resume builders. They offer easy-to-use tools and templates. You can make a professional resume without design skills.</p>
+
     </div>
   );
 };
