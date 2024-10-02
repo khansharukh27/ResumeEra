@@ -20,7 +20,15 @@ const VideoPlayer = () => {
         />
       ) : (
         // Show YouTube video embed if video is playing
-        <iframe width="868" height="488" src="https://www.youtube.com/embed/YvEWVC6EjTw" title="Create a Resume in Microsoft Word with Resume Assistant" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <iframe width="100%" height="488" 
+        src="https://www.youtube.com/embed/YvEWVC6EjTw" 
+        title="Create a Resume in Microsoft Word with Resume Assistant" 
+        frameborder="0" 
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+        referrerpolicy="strict-origin-when-cross-origin" 
+        allowfullscreen>
+          
+        </iframe>
       )}
     </div>
   );

@@ -88,6 +88,7 @@ import cover_letter_1 from '../src/image/CoverImage/cover_letter_1.png'
 import ResumeComponent from './component/Important_post/ResumeComponent';
 import ThingsToRemoveFromYourCV from './component/Important_post/ThingsToRemoveFromYourCV';
 import Tip_for_Interview from './component/Important_post/Tip_for_Interview';
+import AnupamKher_resume from './component/Important_post/AnupamKher_resume';
 // import CoverComponent from './component/CoverComponent';
 var images = [
   { id: 1, src: resum1, alt: 'image1' },{ id: 2, src: resume2, alt: 'image2' },{ id: 3, src: resume3, alt: 'image3' },
@@ -172,6 +173,7 @@ function App() {
         <Route path='/resume_component' element={<ResumeComponent/>}/>
         <Route path='/Things_To_Remove_From_Your_Cv' element={<ThingsToRemoveFromYourCV/>}/>
         <Route path='/Tip_for_Interview' element={<Tip_for_Interview/>}/>
+        <Route path='/AnupamKher_resume' element={<AnupamKher_resume/>}/>
         <Route path='/preview' element={<Preview />} />
         <Route path='/preview2' element={<Preview2 />}/>
         <Route path='/preview3' element={<Preview3/>}/>
@@ -196,9 +198,6 @@ function App() {
       </Routes>
       <Footer/>
     </Router>
-
-
-
   );
 }
 

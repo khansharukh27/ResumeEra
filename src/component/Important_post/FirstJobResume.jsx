@@ -2,6 +2,7 @@ import React from 'react';
 import '../../css/Important_Post/FirstJobResume.css'; // Assuming you prefer to keep styles separate
 import { Helmet } from 'react-helmet';
 import job_resume from '../../image/image_for_link/job_resume.jpg'
+import { Link } from 'react-router-dom';
 const FirstJobResume = () => {
   return (
     <div className="aboutResumeEra">
@@ -100,7 +101,11 @@ const FirstJobResume = () => {
         <p className="first-job-resume-summary">
           Your first job resume is your chance to showcase your potential. Highlight your skills, education, and any relevant experience, and tailor your resume to the role you’re applying for. 
         </p>
-        <a href="https://resumeera.xyz/template" className="international-resume-link">create resume free</a>
+      </div>
+      <div className='btn'>
+        <Link className='.button' to='/how-to-choose-the-right-resume-template'>Last Post</Link>
+        <Link className='.button' to='https://resumeera.xyz'>Home Page</Link>
+        <Link className='.button' to='/how-to-highlight-achievements-in-a-resume'>Next Post</Link>
       </div>
     </div>
   );

@@ -61,10 +61,24 @@
     padding: 15px;
     border-radius: 25px;
   }
+   .btn{
+    border: 1px solid #007bff;
+    border-radius: 25px;
+    display: flex;
+    justify-content: space-around;
+  }
   @media (max-width:320) {
     .table{
       /* margin-left: 0px; */
       width: 70%;
+    }
+    .btn{
+      display: flex;
+      flex-direction: column;
+    }
+    .btn Link{
+      margin-top: 15px;
+      align-items: center;
     }
     
   }

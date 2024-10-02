@@ -64,10 +64,10 @@ const HighlightAchievements = () => {
     AI resume creation app free, Free AI resume tools, AI resume generation free, 
     AI resume review tool free'/>
       </Helmet>
-      <h2 className="highlight-achievements-title">How to Highlight Achievements in a Resume</h2>
+      <h2 className="highlight-achievements-title">How to Highlight Achievements in a Resume :ResumeEra</h2>
       <p>Looking at a blank document, I felt overwhelmed. I had given my all to my work, but how to show my achievements? It was a challenge I had to face if I wanted my dream job.</p>
       <p>In this article, we'll look at ways to highlight your achievements. These tips will help you make your resume stand out. Whether you're starting from scratch or updating an old one, these strategies will showcase your value and successes.</p>
-      <img src={highlight_image} alt=" highlight image resumeera" />
+      <img src={highlight_image} alt="highlight_image_resumeera" />
       <h3>Key Takeaways</h3>
       <p>
         <ul>
@@ -174,7 +174,7 @@ const HighlightAchievements = () => {
 
         </ul>
         Whether you're experienced or new to the job market, these online resume creation tools are great. They help you craft a compelling and visually appealing resume that employers will notice.</p>
-      <img src={beuti_img} alt="resumeEra image" />
+      <img src={beuti_img} alt="resumeEra_image" />
       <p className='quote'>"Creating a resume online has never been easier. These tools make it simple to showcase your skills and achievements in a professional manner."</p>
       <h3>Highlighting Transferable Skills and Accomplishments    </h3>
       <p>When you make your free resume, it's key to show off your skills and achievements that fit many jobs and fields. By carefully looking at the job description, you can show you're flexible and ready for new challenges. This makes you more appealing to employers.</p>
@@ -192,7 +192,7 @@ const HighlightAchievements = () => {
       <p>For instance, saying "Increased sales by 25%" is good. But adding more detail makes it better: "A new sales plan led to a 25% jump in quarterly sales. This beat our yearly goal by $1.2 million."</p>
       <p>Qualitative wins can also be made stronger with numbers. Mention awards or praise, and add details that back it up. For example, "Won 'Top Performer of the Year' for hitting customer satisfaction goals by 20%. Also, kept a 98% on-time delivery rate."</p>
       <p>By mixing numbers and words, your resume will show off your skills and achievements. This makes you a strong candidate for how to create resume online, best resume for free online, ai resume online, and free website for create resume.</p>
-      <img src={measurable_img} alt="measurable Result image " />
+      <img src={measurable_img} alt="measurable_Result_image " />
       <h3>Conclusion      </h3>
       <p>Highlighting your achievements on your resume is key to showing your worth to employers. An impactful resume summary and well-placed accomplishments can make your resume stand out. Using the right words and formatting can grab the attention of hiring managers.</p>
       <p>Free online tools can make creating a resume easier and more professional. Tailor your achievements to the job you want, mixing numbers and descriptions. This shows you're a complete candidate.</p>
@@ -214,7 +214,11 @@ Match your achievements to the job description and use keywords. Use powerful wo
 By explaining your achievements clearly, you'll show your full range of skills.</p>
 <Link to="https://resumeera.xyz"><h4>What are the best free websites to create a resume online?</h4></Link>
 <p>Top free sites include Canva, Novoresume, and AI-powered resume builders. They offer easy-to-use tools and templates. You can make a professional resume without design skills.</p>
-
+<div className='btn'>
+  <Link className='.button' to='/creating-a-resume-for-your-first-job'>Last Post</Link>
+  <Link className='.button' to='https://resumeera.xyz'>Home Page</Link>
+  <Link className='.button' to='/resume-tips-for-experienced-professionals'>Next Post</Link>
+</div>
     </div>
   );
 };

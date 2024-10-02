@@ -1,6 +1,7 @@
 import React from 'react';
 import '../../css/Important_Post/InternationalResume.css'; // Assuming you prefer to keep styles separate
 import { Helmet } from 'react-helmet';
+import { Link } from 'react-router-dom';
 
 const InternationalResume = () => {
   return (
@@ -99,8 +100,12 @@ const InternationalResume = () => {
         <p className="international-resume-summary">
           Creating a resume for international jobs requires attention to cultural differences, language skills, and format preferences. Tailor your resume to the country and company you’re applying to, and emphasize any international experience to increase your chances of success.
         </p>
-        <a href="/international-resume-tips" className="international-resume-link">Learn More About International Job Applications</a>
       </div>
+      <div className='btn'>
+  <Link className='.button' to='/improving-your-resume-with-action-verbs'>Last Post</Link>
+  <Link className='.button' to='https://resumeera.xyz'>Home Page</Link>
+  <Link className='.button' to='/resume-vs-cv-what-you-need-to-know'>Next Post</Link>
+</div>
     </div>
   );
 };

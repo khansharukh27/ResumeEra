@@ -7,6 +7,7 @@
     padding: 10px 20px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
     width: 100%; /* Use width 100% instead of fit-content for better responsiveness */
+   
 }
 
 .navbar-brand {
@@ -22,6 +23,7 @@
     -webkit-background-clip: text;
     color: transparent;
     animation: shine 1.5s infinite alternate;
+    
 
 }
 
@@ -58,10 +60,12 @@
     margin-right: 1rem;
     color: #e0e0e0;
     background: linear-gradient(145deg, purple,aqua,pink);
-    padding: 10px 20px;
+    padding: 40px;
     border-radius: 15px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
     transition: background 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    margin-bottom: 5px;
+    
 }
 
 .navbar-link {

@@ -3,6 +3,7 @@ import download from '../../image/image_for_link/download.jpg'
 import download_1 from '../../image/image_for_link/download_1.jpg'
 import download_2 from '../../image/image_for_link/download_2.jpg'
 import '../../css/Important_Post/aboutResumeEra.css'
+import { Link } from "react-router-dom";
 const AboutResumeEra = () => {
     return (
         <div>
@@ -253,8 +254,11 @@ const AboutResumeEra = () => {
 
                 <h3>What are the essential design and formatting considerations for my resume?</h3>
                 <p>Your resume should be clean and professional. Use clear headings and consistent formatting. Good design makes a strong impression.</p>
-                <a href="https://resumeera.xyz" className="international-resume-link">Learn More About International Job Applications</a>
+                <div className='btn'>
 
+                    <Link className='.button' to='https://resumeera.xyz'>Home Page</Link>
+                    <Link className='.button' to='/how-to-create-a-professional-resume'>Next Post</Link>
+                </div>
             </div>
         </div>
     )

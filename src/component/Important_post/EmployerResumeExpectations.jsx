@@ -1,6 +1,7 @@
 import React from 'react';
 import '../../css/Important_Post/EmployerResumeExpectations.css'; // Assuming you prefer to keep styles separate
 import { Helmet } from 'react-helmet';
+import { Link } from 'react-router-dom';
 
 const EmployerResumeExpectations = () => {
   return (
@@ -100,7 +101,11 @@ const EmployerResumeExpectations = () => {
         <p className="employer-resume-expectations-summary">
           To catch the attention of employers, your resume should be tailored to the job, highlight your achievements, and be easy to read. Focus on relevant experience, clear accomplishments, and a professional layout to stand out from the competition.
         </p>
-        <a href="https://resumeera.xyz" className="international-resume-link">Learn More About International Job Applications</a>
+      </div>
+      <div className='btn'>
+        <Link className='.button' to='/how-to-format-a-resume-correctly'>Last Post</Link>
+        <Link className='.button' to='https://resumeera.xyz'>Home Page</Link>
+        <Link className='.button' to='/how-to-use-keywords-in-a-resume'>Next Post</Link>
       </div>
     </div>
   );

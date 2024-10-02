@@ -1,15 +1,16 @@
 import React from 'react';
 import '../../css/Important_Post/CorrectResumeFormatting.css'; // Assuming you prefer to keep styles separate
 import { Helmet } from 'react-helmet';
+import { Link } from 'react-router-dom';
 
 const CorrectResumeFormatting = () => {
   return (
     <div className="aboutResumeEra">
       <Helmet>
-      <link rel="canonical" href="https://resumeera.xyz/how-to-format-a-resume-correctly" />
-      <title>How to Format a Resume Correctly</title>
-            <meta name="description" content="A well-formatted resume ensures that your qualifications are easily understood by both hiring managers and Applicant Tracking Systems (ATS). Follow these tips to make sure your resume is formatted correctly." />
-            <meta name='keyword' content='ResumeEra,Resume Era, Free Resume, how to create free resume online,free resume creator,free resume creator online ,Create Resume Online,Free Resume Builder,free resume maker ,Professional Resume, 
+        <link rel="canonical" href="https://resumeera.xyz/how-to-format-a-resume-correctly" />
+        <title>How to Format a Resume Correctly</title>
+        <meta name="description" content="A well-formatted resume ensures that your qualifications are easily understood by both hiring managers and Applicant Tracking Systems (ATS). Follow these tips to make sure your resume is formatted correctly." />
+        <meta name='keyword' content='ResumeEra,Resume Era, Free Resume, how to create free resume online,free resume creator,free resume creator online ,Create Resume Online,Free Resume Builder,free resume maker ,Professional Resume, 
     Online Resume Builder, Job Application, CV Maker, Resume Templates, Career, 
     Employment, Resume, Curriculum Vitae, Job Seeker, Resume Writing, Cover Letter, 
     Job Interview, Career Development, Job Search, Online CV, Job Market, Job Board, 
@@ -59,7 +60,7 @@ const CorrectResumeFormatting = () => {
     AI resume insights free, AI resume analysis tool free, Free AI resume builder online, 
     AI resume creation app free, Free AI resume tools, AI resume generation free, 
     AI resume review tool free'/>
-            </Helmet>
+      </Helmet>
       <h1 className="correct-resume-formatting-title">How to Format a Resume Correctly</h1>
       <p className="correct-resume-formatting-intro">
         A well-formatted resume ensures that your qualifications are easily understood by both hiring managers and Applicant Tracking Systems (ATS). Follow these tips to make sure your resume is formatted correctly.
@@ -106,8 +107,11 @@ const CorrectResumeFormatting = () => {
         </p>
         <a href="/resume-format-templates" className="correct-resume-formatting-link">Explore Correctly Formatted Resume Templates</a>
       </div>
-      <a href="https://resumeera.xyz" className="international-resume-link">Learn More About International Job Applications</a>
-    </div>
+      <div className='btn'>
+        <Link className='.button' to='/common-mistakes-to-avoid-on-your-resume'>Last Post</Link>
+        <Link className='.button' to='https://resumeera.xyz'>Home Page</Link>
+        <Link className='.button' to='/creating-a-resume-for-your-first-job'>Next Post</Link>
+      </div>    </div>
   );
 };
 

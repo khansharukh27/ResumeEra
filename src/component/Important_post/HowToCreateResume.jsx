@@ -1,6 +1,7 @@
 import React from 'react';
 import '../../css/Important_Post/HowToCreateResume.css';
 import { Helmet } from 'react-helmet';
+import { Link } from 'react-router-dom';
 
 const HowToCreateResume = () => {
     return (
@@ -113,6 +114,11 @@ const HowToCreateResume = () => {
             <p className="resume-guide-content">
                 Ensure your resume is free from grammatical errors and typos. Consider having a friend or mentor review your resume for additional feedback. A polished resume reflects your attention to detail and professionalism.
             </p>
+            <div className='btn'>
+  <Link className='.button' to='/creating-a-resume-for-your-first-job'>Last Post</Link>
+  <Link className='.button' to='https://resumeera.xyz'>Home Page</Link>
+  <Link className='.button' to='/resume-tips-for-experienced-professionals'>Next Post</Link>
+</div>
         </div>
     );
 };

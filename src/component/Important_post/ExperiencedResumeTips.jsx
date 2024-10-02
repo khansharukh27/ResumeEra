@@ -1,6 +1,7 @@
 import React from 'react';
 import '../../css/Important_Post/ExperiencedResumeTips.css'; // Assuming you prefer to keep styles separate
 import { Helmet } from 'react-helmet';
+import { Link } from 'react-router-dom';
 
 const ExperiencedResumeTips = () => {
   return (
@@ -99,7 +100,11 @@ const ExperiencedResumeTips = () => {
         <p className="experienced-resume-tips-summary">
           Your experience is your greatest asset. Focus on measurable results, tailor your resume for each role, and keep the design professional and modern to make a lasting impression.
         </p>
-        <a href="https://resumeera.xyz" className="international-resume-link">Learn More About International Job Applications</a>
+      </div>
+      <div className='btn'>
+        <Link className='.button' to='/how-to-highlight-achievements-in-a-resume'>Last Post</Link>
+        <Link className='.button' to='https://resumeera.xyz'>Home Page</Link>
+        <Link className='.button' to='/crafting-a-modern-resume'>Next Post</Link>
       </div>
     </div>
   );

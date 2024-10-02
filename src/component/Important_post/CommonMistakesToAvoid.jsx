@@ -2,6 +2,7 @@ import React from 'react';
 import '../../css/Important_Post/CommonMistakesToAvoid.css';
 import { Helmet } from 'react-helmet';
 import common_mistake from '../../image/image_for_link/common_mistake.jpg'
+import { Link } from 'react-router-dom';
 const CommonMistakesToAvoid = () => {
     return (
         <div className="aboutResumeEra">
@@ -107,8 +108,11 @@ const CommonMistakesToAvoid = () => {
             <p className="common-mistakes-content">
                 Focusing solely on job duties without mentioning specific achievements can make your resume less impactful. Include quantifiable accomplishments to demonstrate your value and contributions in previous roles.
             </p>
-            <a href="https://resumeera.xyz" className="international-resume-link">Learn More About International Job Applications</a>
-
+            <div className='btn'>
+  <Link className='.button' to='/top-resume-templates-for-2024'>Last Post</Link>
+  <Link className='.button' to='https://resumeera.xyz'>Home Page</Link>
+  <Link className='.button' to='/how-to-choose-the-right-resume-template'>Next Post</Link>
+</div>
         </div>
     );
 };

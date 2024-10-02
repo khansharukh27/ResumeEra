@@ -170,8 +170,8 @@ const Tip_for_Interview = () => {
                     </p>
                     <p>
                         <h4>8. Dress Appropriately for the Role</h4>
-                        <p>The way you dress for an interview should reflect the company’s culture. If you're interviewing with a formal company (e.g., law firms, finance), business attire is a must. If it’s a more relaxed startup, business casual may be more appropriate.</p>
-                        <p>When in doubt, it’s better to be slightly overdressed than underdressed. Pay attention to details—ensure your clothes are clean, ironed, and free of wrinkles.</p>
+                        <p>The way you dress for an interview should reflect the companys culture. If you're interviewing with a formal company (e.g., law firms, finance), business attire is a must. If it’s a more relaxed startup, business casual may be more appropriate.</p>
+                        <p>When in doubt, its better to be slightly overdressed than underdressed. Pay attention to details—ensure your clothes are clean, ironed, and free of wrinkles.</p>
                     </p>
                     <p>
                         <h4>9. Arrive Early, But Not Too Early</h4>

@@ -2,6 +2,7 @@ import React from 'react';
 import '../../css/Important_Post/ChooseTemplate.css'; // Assuming you prefer to keep styles separate
 import { Helmet } from 'react-helmet';
 import Choose_temp from '../../image/image_for_link/choose_temp.jpg'
+import { Link } from 'react-router-dom';
 const ChooseTemplate = () => {
   return (
     <div className="aboutResumeEra">
@@ -101,8 +102,12 @@ const ChooseTemplate = () => {
         <p className="choose-template-summary">
           Choosing the right resume template is crucial for making a strong impression. Take the time to select one that reflects your industry, highlights your strengths, and is easy to read.
         </p>
-        <a href="https://resumeera.xyz" className="international-resume-link">Learn More About International Job Applications</a>
       </div>
+      <div className='btn'>
+  <Link className='.button' to='/common-mistakes-to-avoid-on-your-resume'>Last Post</Link>
+  <Link className='.button' to='https://resumeera.xyz'>Home Page</Link>
+  <Link className='.button' to='/creating-a-resume-for-your-first-job'>Next Post</Link>
+</div>
     </div>
   );
 };

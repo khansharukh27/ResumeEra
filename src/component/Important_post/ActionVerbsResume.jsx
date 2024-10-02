@@ -1,6 +1,7 @@
 import React from 'react';
 import '../../css/Important_Post/ActionVerbsResume.css'; // Assuming you prefer to keep styles separate
 import { Helmet } from 'react-helmet';
+import { Link } from 'react-router-dom';
 
 const ActionVerbsResume = () => {
   return (
@@ -105,8 +106,12 @@ const ActionVerbsResume = () => {
         <p className="action-verbs-resume-summary">
           By integrating strong action verbs into your resume, you can effectively demonstrate your role in past achievements and make a lasting impression on employers. Review your resume today and replace passive language with compelling, action-oriented verbs.
         </p>
-        <a href="https://resumeera.xyz" className="international-resume-link">Learn More About International Job Applications</a>
       </div>
+      <div className='btn'>
+  <Link className='.button' to='/how-to-use-keywords-in-a-resume'>Last Post</Link>
+  <Link className='.button' to='https://resumeera.xyz'>Home Page</Link>
+  <Link className='.button' to='/how-to-create-a-resume-for-international-jobs'>Next Post</Link>
+</div>
     </div>
   );
 };
