@@ -15,13 +15,13 @@ const Carousel = ({ images }) => {
     const settings = {
         dots: false,
         infinite: true,
-        speed: 2000,
+        speed: 500, // Adjust speed for swipe transition
         slidesToShow: 5,
         slidesToScroll: 1,
-        autoplay: true,
-        autoplaySpeed: 0, // Adjust the speed as per your requirement
-        cssEase: 'linear', // Linear easing for smooth continuous movement
-        swipeToSlide: true,
+        autoplay: false, // Disable autoplay for manual control
+        cssEase: 'ease', // Smooth easing for swipe effect
+        swipeToSlide: true, // Allows smooth swiping between slides
+        draggable: true, // Allows dragging/sliding on desktop
         responsive: [
             {
                 breakpoint: 1024,
@@ -49,7 +49,6 @@ const Carousel = ({ images }) => {
             }
         ]
     };
-
     const handleClick = (e, imageId) => {
         e.preventDefault();
         const path = `/mainpage/${imageId}`;

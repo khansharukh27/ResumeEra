@@ -14,8 +14,8 @@ const Home = ({ images }) => {
     return (
         <div className="home-container">
              <Helmet>
-      <link rel="canonical" href="https://resumeera.xyz" />
-      <title>Free Resume:How to Create Resumes Online ,Professional And Free </title>
+      <link rel="canonical" href="/" />
+      <title>Resume Era:How to Create Resumes Online ,Professional And Free </title>
             <meta name="description" content="ResumeEra is a user-friendly platform that allows you to create and customize your free resumes.
                     Choose from a variety of templates to make your free resume stand out. Whether you're highlighting
                     your work experience, education, skills, or personal information, ResumeEra makes it easy to
@@ -75,11 +75,12 @@ const Home = ({ images }) => {
                 <div className="home-logo">
                     <img src={best_logo} alt="logo" />
                 </div>
-                <div className="home-welcome">
-                    <h4>
-                        Welcome to ResumeEra! Please Click
-                        <Link className="home-link" to="/template">PERSONALLIZED TEMPLATES FOR EVERY INDUSTRY</Link>
-                        to make a resume.
+                <div className="home-welcome " style={{color:'orange'}}>
+                    <h4 style={{color:'black'}}>
+                        
+                        <Link className="home-link" to="/template">Welcome to ResumeEra! Please Click
+                        PERSONALLIZED TEMPLATES FOR EVERY INDUSTRY  to make a resume.</Link>
+                       
                     </h4>
                 </div>
             </div>

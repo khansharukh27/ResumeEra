@@ -4,11 +4,12 @@ import PersonalInfo from "./PersonalInfo";
 
 import '../css/mainpage.css'
 
-const CoverComponent = () => {
+const CoverComponent = ({CoverImage}) => {
+    console.log('coverImage:',CoverImage)
     return (
            
             <div className=" mt-2 mainpage" data-aos="flip-left" data-aos-duration="2000">
-                { <PersonalInfo />}
+                { <PersonalInfo CoverImage={CoverImage} />}
             </div>
     )
 }

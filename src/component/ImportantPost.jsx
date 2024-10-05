@@ -10,6 +10,7 @@ const ImportantPost = () => {
       <title>Important Links</title>
             <meta name="description" content="this page is releted to importannt link to show valuable things." />
             </Helmet>
+            <h1>Important Post to gain knowledge</h1>
             <ul>
                 <li>
                     <Link to='/about-resumeera'>

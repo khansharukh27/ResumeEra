@@ -16,17 +16,6 @@
 }
 
 
-/* Warning message for refreshing the page */
-@keyframes move {
-    0% {
-        transform: translateX(100%);
-    }
-    100% {
-        transform: translateX(-100%);
-    }
-}
-
-/* Refresh warning with animation */
 
 .home_div{
     display: flex;
@@ -34,8 +23,6 @@
     margin-top: 20px;
 }
 
-/* Container for the logo */
-/* Container for the logo */
 .home-logo {
     display: flex;
     justify-content: center;
@@ -47,22 +34,11 @@
 .home-logo img {
     width: 120px; /* Adjust as needed */
     height: 120px;
-    animation: rotate 3s linear infinite;
     border: 2px solid black;
     border-radius: 50%;
 }
 
-/* Keyframes for the rotation animation */
-@keyframes rotate {
-    from {
-        transform: rotate(0deg);
-    }
-    to {
-        transform: rotate(360deg);
-    }
-}
 
-/* Welcome message and link */
 .home-welcome {
     margin-top: 25px;
     text-align: justify;
@@ -70,16 +46,16 @@
     
 }
 .home-welcome h4{
-    font-size: 30px;
-            font-weight: bold;
-            background: linear-gradient(90deg, red, orange, yellow, green, blue, indigo, violet);
-            -webkit-background-clip: text;
-            color: transparent;
-            margin-left: 20px;
+    font-size: 0px;
+            font-weight: bold;   
+            color: black;
+            margin-left: 40px;
 }
+
 .home-welcome h4 a{
     text-decoration: none;
-    font-size: small;
+    font-size: medium;
+    margin-top: 40px;
 }
 
 .home-link {
@@ -288,14 +264,7 @@
         border: 2px solid transparent;
     }
 
-    @keyframes rotate {
-        from {
-            transform: rotate(0deg);
-        }
-        to {
-            transform: rotate(360deg);
-        }
-    }
+    
 
     .home-welcome {
         margin-top: 25px;
@@ -305,9 +274,8 @@
     .home-welcome h4 {
         font-size: 30px;
         font-weight: bold;
-        background: linear-gradient(90deg, white);
-        -webkit-background-clip: text;
-        color: transparent;
+        
+        color: black;
         margin-left: 20px;
     }
 
@@ -426,18 +394,11 @@
     .home-logo img {
         width: 100px; /* Adjust as needed */
         height: 100px;
-        animation: rotate 3s linear infinite;
+        /* animation: rotate 3s linear infinite; */
         border: 2px solid transparent;
     }
 
-    @keyframes rotate {
-        from {
-            transform: rotate(0deg);
-        }
-        to {
-            transform: rotate(360deg);
-        }
-    }
+    
 
     .home-welcome {
         margin-top: 25px;

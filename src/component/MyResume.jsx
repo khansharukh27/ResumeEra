@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import html2canvas from "html2canvas";
 import jsPDF from "jspdf";
-
+import '../css/myresume.css'
 const MyResume = () => {
   const [savedImages, setSavedImages] = useState([]);
 
@@ -32,18 +32,18 @@ const MyResume = () => {
   };
 
   return (
-    <div>
+    <div className="myresume">
       <h1>Your Saved Resumes</h1>
       <div className="row row-cols-1 row-cols-md-4 g-4 " style={{width:'',height:'250px'}}>
         {savedImages.map((image, index) => (
           <div key={index} className="col">
-            <div className="card h-100">
+            <div className="card">
               <img
                 id={`resumeImage_${index}`}
                 src={image}
                 className="card-img-top"
                 alt={`Saved Resume ${index + 1}`}
-                style={{height:'250px'}}
+                // style={{height:'250px'}}
               />
               <div className="card-body ">
                 <div className="d-lg-flex  justify-content-between">

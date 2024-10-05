@@ -16,7 +16,7 @@ function Navbar() {
         <span class="star">★</span> </Link>
             </div>
             <div className="navbar-links">
-            <Link className="navbar-link" to="https://resumeera.xyz">Home</Link>
+            <Link className="navbar-link" to="/">Home</Link>
                 <Link className="navbar-link" to="/template">TEMPLATES</Link>
                 <Link className="navbar-link" to="/myresume">MY RESUME</Link>
                 <Link className="navbar-link" to="/coverletter">CoverLetter</Link>

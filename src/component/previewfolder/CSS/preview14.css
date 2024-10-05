@@ -7,18 +7,19 @@
     display: flex;
   }
   .localinner{
-    width: 3px;
-    height: inherit; 
+    width: 5px;
+    height: 100%; 
     background-color: grey;
     color: green;
     /* margin-right: 10px; */
-    margin-bottom: -5px;
+    /* margin-bottom: 5px; */
     margin-right: 10px;
-    margin-left: -7px;
-    margin-top: 15px; 
+    margin-left: 10px;
+    margin-top: -20px; 
   }
   .circle-div{
     margin-top: 5px;
+    /* margin-left: 5px; */
   }
   
   .localinner::before{
@@ -50,8 +51,10 @@
   .main1-14{
     padding-right: 0px;
     margin-right: 0px;
+    width: 50%;
   }
   .main2-14 {
+    width: 50%;
     
       background: linear-gradient(0deg, rgba(255,255,255,1) 0%, rgba(254,226,226,0.8) 25%, rgba(254,226,226,1) calc(100% -450px),rgba(255,255,255, 0) calc(100% - 349px), rgba(255,255,255,0) 100%);
      margin-top:px;
@@ -188,4 +191,8 @@
   .about-div14{
     width: 100px;
   }  
+  .stars{
+    display: flex;
+    flex-direction: column;
+  }
 }

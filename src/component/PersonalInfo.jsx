@@ -1,11 +1,11 @@
 import { useState, useEffect } from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { personalInfoData } from "../Redux/action";
 import WorkExperience from "./WorkExperience";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import '../css/personalinfo.css';
 
-const PersonalInfo = () => {
+const PersonalInfo = ({coverImage}) => {
     const [selectImage, setSelectImage] = useState(null);
     const [showPersonalInfo, setShowPersonalInfo] = useState(true);
     const [showWorkExperience, setShowWorkExperience] = useState(false);
@@ -24,7 +24,8 @@ const PersonalInfo = () => {
         nationality: '',
         dateofbirth: ''
     });
-
+const result2 = coverImage
+console.log('result2:-',result2)
     const dispatch = useDispatch();
     const navigate = useNavigate();
 
@@ -33,7 +34,7 @@ const PersonalInfo = () => {
         const savedData = JSON.parse(localStorage.getItem('personalInfoData'));
         if (savedData) {
             setInputData(savedData);
-           
+
         }
     }, []);
 
@@ -69,10 +70,23 @@ const PersonalInfo = () => {
         console.log('formData in PersonalInfo:', inputData);
     };
 
+    const location = useLocation()
+    console.log('location',location)
+    
+    const result = useSelector((state)=>state.reducer.coverletter)
+    console.log('personlainfo to id:-',result)
+
     const handleClickBack = () => {
-        setShowPersonalInfo(true);
+        if(location.pathname ===`/cover_letter/${result}`){
+            setShowPersonalInfo(true);
         setShowWorkExperience(false);
-        navigate('/');
+        navigate('/cover_letter');
+        }else{
+            setShowPersonalInfo(true);
+            setShowWorkExperience(false);
+            navigate('/');
+        }
+       
     };
 
     const handleClickNext = (e) => {
@@ -90,14 +104,14 @@ const PersonalInfo = () => {
                 <div className="prefetional-main">
                     <header className="profetional-detail">
                         <h1 className="multicolor-heading">Your Profetional detail</h1>
-                        <p>Personal information in a resume serves as the foundational layer that helps 
-                            employers connect with you on a basic level. It includes essential details 
-                            like your name, contact information, and sometimes a brief profile summary. 
-                            This information ensures that potential employers can reach out to you easily 
-                            for interviews and further communication. It also gives them a first impression 
-                            of who you are beyond your professional qualifications. Including accurate and 
-                            updated personal information is crucial because it reflects your attention to 
-                            detail and professionalism, making your resume complete and effective in the 
+                        <p>Personal information in a resume serves as the foundational layer that helps
+                            employers connect with you on a basic level. It includes essential details
+                            like your name, contact information, and sometimes a brief profile summary.
+                            This information ensures that potential employers can reach out to you easily
+                            for interviews and further communication. It also gives them a first impression
+                            of who you are beyond your professional qualifications. Including accurate and
+                            updated personal information is crucial because it reflects your attention to
+                            detail and professionalism, making your resume complete and effective in the
                             hiring process.</p>
                     </header>
                     <div className="personal-profile">
@@ -151,14 +165,14 @@ const PersonalInfo = () => {
                         <button onClick={handleClickBack} className="button1">
                             <span className="text">BACK</span>
                         </button>
-                        
+
                         <button onClick={handleClickNext} type="submit" className="button1"><span className="text">NEXT</span></button>
                     </div>
                 </div>
             )}
             {showWorkExperience && (<WorkExperience />)}
             {/* Add other components based on your flow */}
-            
+
         </form>
     );
 };

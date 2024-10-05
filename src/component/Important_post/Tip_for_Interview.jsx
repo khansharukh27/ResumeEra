@@ -1,6 +1,6 @@
 import { Helmet } from 'react-helmet';
 import '../../css/Important_Post/Tip_for_Interview.css'
-const Tip_for_Interview = () => {
+const Tip_For_Interview = () => {
     return (
         <div className="aboutResumeEra">
             <Helmet>
@@ -271,4 +271,4 @@ const Tip_for_Interview = () => {
         </div>
     )
 }
-export default Tip_for_Interview;
+export default Tip_For_Interview;

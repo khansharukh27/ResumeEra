@@ -3,7 +3,7 @@
     display: flex;
     justify-content: space-between;
     flex-direction: row;
-    background-image: linear-gradient(145deg, purple,pink,magenta);
+    background-color:whitesmoke;
     padding: 10px 20px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
     width: 100%; /* Use width 100% instead of fit-content for better responsiveness */
@@ -19,9 +19,9 @@
     text-decoration: none;
     font-size: 2.5rem;
     font-weight: bold;
-    background: linear-gradient(45deg, #ff6347, #9c7732, #3a743a, #389e8d, #802373);
+    
     -webkit-background-clip: text;
-    color: transparent;
+    color: black;
     animation: shine 1.5s infinite alternate;
     
 
@@ -59,7 +59,7 @@
     margin-top: 1rem;
     margin-right: 1rem;
     color: #e0e0e0;
-    background: linear-gradient(145deg, purple,aqua,pink);
+    background-color:  green;
     padding: 40px;
     border-radius: 15px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5);
@@ -99,7 +99,7 @@
         padding: 5px 10px;
         width: 100%;
         border-radius: 8px;
-        background: linear-gradient(145deg, purple,aqua,pink);
+        /* background: linear-gradient(145deg, purple,aqua,pink); */
 
     }
 
@@ -131,7 +131,7 @@
         padding: 5px 10px;
         width: 100%;
         border-radius: 8px;
-        background: linear-gradient(145deg, purple,aqua,pink);
+        /* background: linear-gradient(145deg, purple); */
 
     }
 
@@ -168,12 +168,12 @@
         padding: 5px 10px;
         width: 100%;
         border-radius: 8px;
-        background: linear-gradient(145deg, purple,aqua,pink);
+        /* background: linear-gradient(145deg, purple,pink); */
 
     }
 
     .navbar-link {
-        font-size: 0.8rem;
+        font-size: 0.5rem;
         width: 100%;
         margin-right: 5px;
         text-align: center;

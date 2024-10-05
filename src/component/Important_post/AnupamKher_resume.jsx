@@ -205,7 +205,7 @@ const AnupamKher_resume = () => {
                     </div>
                 </div>
                 <div itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                    <h3 itemprop="name">How can I make my job application stand out from the crowd?</h3>
+                    <h3 itemprop="name"><Link to='/coverletter'>How can I make my job application stand out from the crowd?</Link></h3>
                     <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
                         <div itemprop="text"><p>To stand out, write a compelling cover letter. Make sure
                             your resume fits the company's culture and values. Tailor your application to

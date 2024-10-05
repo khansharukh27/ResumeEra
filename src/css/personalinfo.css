@@ -12,19 +12,19 @@
     font-size: 48px;
     font-weight: bold;
     text-align: center;
-    background: linear-gradient(45deg, #ff6347, #ffa500, #32cd32, #1e90ff, #ff69b4);
+    /* background: linear-gradient(45deg, #ff6347, #ffa500, #32cd32, #1e90ff, #ff69b4); */
     -webkit-background-clip: text;
-    color: transparent;
+    color: black;
     position: relative;
     text-shadow: 4px 4px 4px rgba(255, 165, 0, 0.7), /* First shadow */
-                 4px 0px 0px rgba(30, 144, 255, 0.5); /* Second shadow */
+                  /* Second shadow */
 }
 .profetional-detail p{
     text-align: justify;
 width: 90%;
-background: linear-gradient(45deg, #ff6347, #ffa500, #32cd32, #1e90ff, #ff69b4);
+/* background: linear-gradient(45deg, #ff6347, #ffa500, #32cd32, #1e90ff, #ff69b4); */
 -webkit-background-clip: text;
-color: transparent;
+color: black;
 }
 .personal-profile{
     position: relative;
@@ -121,20 +121,7 @@ transform: scale(0.9);
     .profetional-detail h1{
         font-size: xx-large;
     }
-    .profetional-detail p{
-    text-align: justify;
-    width: 100%;
-    background: linear-gradient(45deg, #ff6347, #ffa500, #32cd32, #1e90ff, #ff69b4);
-    -webkit-background-clip: text;
-    color: transparent;
-    margin-bottom: 20px;
-    font-size: 1.5rem;
-    /* width: 310px; */
-    /* margin-left: 0px; */
-    padding-left: 15px;
-    padding-right: 50px;
-    margin: 0px;
-    }
+    
     .personal-profile{
         position: relative;
         margin-bottom: 100px;
@@ -186,20 +173,7 @@ transform: scale(0.9);
     .profetional-detail h1{
         font-size: x-large;
     }
-    .profetional-detail p{
-    text-align: justify;
-    width: 100%;
-    background: linear-gradient(45deg, #ff6347, #ffa500, #32cd32, #1e90ff, #ff69b4);
-    -webkit-background-clip: text;
-    color: transparent;
-    margin-bottom: 20px;
-    font-size: 1rem;
-    /* width: 310px; */
-    /* margin-left: 0px; */
-    padding-left: 15px;
-    padding-right: 15px;
-    margin: 0px;
-    }
+    
     .personal-profile{
         position: relative;
         margin-bottom: 100px;
@@ -249,20 +223,7 @@ transform: scale(0.9);
     .profetional-detail h1{
         font-size: x-large;
     }
-    .profetional-detail p{
-    text-align: justify;
-    width: 100%;
-    background: linear-gradient(45deg, #ff6347, #ffa500, #32cd32, #1e90ff, #ff69b4);
-    -webkit-background-clip: text;
-    color: transparent;
-    margin-bottom: 20px;
-    font-size: 1rem;
-    /* width: 310px; */
-    /* margin-left: 0px; */
-    padding-left: 15px;
-    padding-right: 15px;
-    margin: 0px;
-    }
+    
     .personal-profile{
         position: relative;
         margin-bottom: 100px;
@@ -365,7 +326,7 @@ transform: scale(0.9);
     .profetional-detail h1{
         font-size: large;
     }
-    .profetional-detail p{
+    /* .profetional-detail p{
     text-align: justify;
     width: 100%;
     background: linear-gradient(45deg, #ff6347, #ffa500, #32cd32, #1e90ff, #ff69b4);
@@ -374,7 +335,7 @@ transform: scale(0.9);
     margin-bottom: 20px;
     font-size: small;
     width: 250px;
-    }
+    } */
     .personal-profile{
         position: relative;
         margin-bottom: 100px;

@@ -1,5 +1,5 @@
 .coverdiv{
-    background-image: linear-gradient(145deg,magenta,aqua,pink,purple);
+    /* background-image: linear-gradient(145deg,magenta,aqua,pink,purple); */
     padding-right: 35px;
     padding-left: 35px;
     margin-top:-10px;
@@ -20,6 +20,9 @@
 .what-is-cover img{
     border-radius: 8px;
     
+}
+.template-link{
+    margin-left: auto;
 }
 .what-is-cover p{
     margin-top: 55px;

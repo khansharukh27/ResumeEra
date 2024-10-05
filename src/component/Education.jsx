@@ -32,7 +32,7 @@ const Education = ()=> {
     localStorage.setItem("educationData", JSON.stringify(education));
   }, [education]);
 
-  const handleChange = debounce((e, index) => {
+  const handleChange = (e, index) => {
     const { name, value } = e.target;
     setEducation((prev) => {
       const updateEducation = [...prev];
@@ -42,7 +42,7 @@ const Education = ()=> {
       };
       return updateEducation;
     });
-  }, 500); // 500ms delay
+  }; // 500ms delay
 
   useEffect(() => {
     console.log('Debounced education update:', education);
@@ -121,9 +121,9 @@ const Education = ()=> {
                   onChange={(e) => handleChange(e, index)}
                   aria-label="Default select example"
                   name="type"
-                  value={edu.type}
+                  value={edu.type || ''}
                 >
-                  <option defaultValue="B.sc">Education Type</option>
+                  <option Value="B.sc">Education Type</option>
                   <option value="B.sc">B.sc</option>
                   <option value="Post Graduate">Post Graduate</option>
                   <option value="another">another</option>

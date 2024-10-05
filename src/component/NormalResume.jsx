@@ -48,7 +48,7 @@ const NormalResume = (props) => {
                                     onClick={handleClick}
                                     className="template-link"
                                 >
-                                    Go To Your Resume
+                                    Go To  Resume
                                 </a>
                             )}
                         </div>

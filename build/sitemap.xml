@@ -122,5 +122,17 @@
     <loc>https://resumeera.xyz/Things_To_Remove_From_Your_Cv</loc>
     <priority>0.8</priority>
   </url>
+  <url>
+    <loc>https://resumeera.xyz/how-to-land-your-dream-job</loc>
+    <priority>0.8</priority>
+  </url>
+  <url>
+  <loc>https://resumeera.xyz/Blog_or_Career_Tips_Page</loc>
+  <priority>.08</priority>
+  </url>
+  <url>
+  <loc>https://resumeera.xyz/top-job-search-websites</loc>
+  <priority>.08</priority>
+  </url>
     
 </urlset>

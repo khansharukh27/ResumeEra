@@ -9,7 +9,7 @@ const HowToCreateResume = () => {
              <Helmet>
       <link rel="canonical" href="https://resumeera.xyz/how-to-create-a-professional-resume" />
       <title>How to Create a Professional Resume</title>
-            <meta name="description" content="Crafting a professional resume is crucial to making a great first impression on potential employers. Follow these essential steps to build a resume that stands out and effectively highlights your qualifications and experience." />
+            <meta name="description" content=" how to create resume is crucial question to making a great first impression on potential employers. Follow these essential steps to build a resume that stands out and effectively highlights your qualifications and experience." />
             <meta name='keyword' content='ResumeEra,Resume Era, Free Resume, how to create free resume online,free resume creator,free resume creator online ,Create Resume Online,Free Resume Builder,free resume maker ,Professional Resume, 
     Online Resume Builder, Job Application, CV Maker, Resume Templates, Career, 
     Employment, Resume, Curriculum Vitae, Job Seeker, Resume Writing, Cover Letter, 
@@ -61,7 +61,7 @@ const HowToCreateResume = () => {
     AI resume creation app free, Free AI resume tools, AI resume generation free, 
     AI resume review tool free'/>
             </Helmet>
-            <h1 className="resume-guide-title">How to Create a Professional Resume</h1>
+            <h1 className="resume-guide-title">How to Create a Resume</h1>
             <p className="resume-guide-intro">
                 Crafting a professional resume is crucial to making a great first impression on potential employers. Follow these essential steps to build a resume that stands out and effectively highlights your qualifications and experience.
             </p>
