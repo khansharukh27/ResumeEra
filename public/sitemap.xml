@@ -134,5 +134,13 @@
   <loc>https://resumeera.xyz/top-job-search-websites</loc>
   <priority>.08</priority>
   </url>
+  <url>
+  <loc>https://resumeera.xyz/networking-tips</loc>
+  <priority>.08</priority>
+  </url>
+  <url>
+  <loc>https://resumeera.xyz/linkedin-job-hunting</loc>
+  <priority>.08</priority>
+  </url>
     
 </urlset>

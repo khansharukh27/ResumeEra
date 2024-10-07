@@ -1,14 +1,15 @@
 import { useDispatch } from 'react-redux';
 import '../css/coverletter/coverletter.css';
-import { Link, useNavigate } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { coverletters } from '../Redux/action';
 import { useState, useEffect } from 'react';
 import what_is_cover from '../image/image_for_link/what_is_cover.jpg'
 import importance_of_cover from '../image/image_for_link/importance_of _cover.jpg'
 import cover_letter_1 from '../image/image_for_link/cover_letter_1.jpg'
 import cover_letter_2 from '../image/image_for_link/cover_letter_2.png'
-import cover_letter_3 from '../image/image_for_link/cover_letter_3.jpg'
 
+import cover_letter_3 from '../image/image_for_link/cover_letter_3.jpg'
+import '../css/covercomponent.css'
 
 const CoverLetter = (props) => {
     const CoverImage = props; // Assuming CoverImage is passed as a prop
@@ -19,9 +20,12 @@ const CoverLetter = (props) => {
     // Log the image source from the props
     useEffect(() => {
         if (CoverImage.CoverImage && CoverImage.CoverImage.length > 0) {
-            console.log('images show in normal resume:-', CoverImage.CoverImage[0].src);
+            console.log('images show in coverLetter:-', CoverImage.CoverImage[0].src);
         }
     }, [CoverImage]); // Log whenever CoverImage changes
+
+    const location = useLocation()
+
 
     const handleClick = (e) => {
         e.preventDefault();

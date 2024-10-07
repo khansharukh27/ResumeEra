@@ -91,6 +91,7 @@ console.log('result2:-',result2)
 
     const handleClickNext = (e) => {
         e.preventDefault();
+        
         localStorage.setItem('personalInfoData', JSON.stringify(inputData)); // Save data to local storage
         dispatch(personalInfoData(inputData));
         setShowWorkExperience(true);

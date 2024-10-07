@@ -6,15 +6,15 @@ const ImportantPost = () => {
     return (
         <div className="important-posts">
             <Helmet>
-      <link rel="canonical" href="https://resumeera.xyz/important_post" />
-      <title>Important Links</title>
-            <meta name="description" content="this page is releted to importannt link to show valuable things." />
+                <link rel="canonical" href="https://resumeera.xyz/important_post" />
+                <title>Important Links</title>
+                <meta name="description" content="this page is releted to importannt link to show valuable things." />
             </Helmet>
             <h1>Important Post to gain knowledge</h1>
             <ul>
                 <li>
                     <Link to='/about-resumeera'>
-                    ResumeEra: Craft Your Perfect Resume Today
+                        ResumeEra: Craft Your Perfect Resume Today
                     </Link>
                 </li>
                 <li>
@@ -119,29 +119,29 @@ const ImportantPost = () => {
                 </li>
                 <li>
                     <Link to="/resume-tip-component" >
-                    Resume कैसे बनाएं जो नियोक्ता को प्रभावित कर सके?...with ResumeEra
+                        Resume कैसे बनाएं जो नियोक्ता को प्रभावित कर सके?...with ResumeEra
                     </Link>
                 </li>
                 <li>
                     <Link to="/xyz-formula-resume" >
-                    XYZ Formula: A Simple Approach to Showcasing Your Achievements in Your Resume</Link>
+                        XYZ Formula: A Simple Approach to Showcasing Your Achievements in Your Resume</Link>
                 </li>
                 <li>
                     <Link to='/resume_component'>
-                    Create a Professional Resume with Free Templates and Showcase Your Skills</Link>
+                        Create a Professional Resume with Free Templates and Showcase Your Skills</Link>
 
                 </li>
                 <li>
                     <Link to='/Things_To_Remove_From_Your_Cv'>
-                    Things to Remove from Your CV - Resume Tips:ResumeEra</Link>
+                        Things to Remove from Your CV - Resume Tips:ResumeEra</Link>
                 </li>
                 <li>
                     <Link to='/Tip_for_Interview'>
-                    Tip for Interview:ResumeEra</Link>
+                        Tip for Interview:ResumeEra</Link>
                 </li>
                 <li>
                     <Link to='/AnupamKher_resume'>
-                    Anupam kher Resume wit ResumeEra:ResumeEra</Link>
+                        Anupam kher Resume wit ResumeEra:ResumeEra</Link>
                 </li>
             </ul>
         </div>

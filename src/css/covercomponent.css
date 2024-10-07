@@ -1,0 +1,16 @@
+.two{
+    width: 400px;
+    /* margin-left: ; */
+    height: 400px;
+}
+
+.textarea1{
+    width:inherit;
+    border-radius: 8px;
+    padding: 15px;
+    height: auto;
+    border-color: #00DDEB;
+    outline: none;
+    background: none;
+
+}

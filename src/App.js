@@ -94,6 +94,8 @@ import DreamJob2024 from './component/blogandcareer/DreamJob2024';
 import TopJobSearchWebsites from './component/blogandcareer/TopJobSearchWebsites';
 import CoverComponent from './component/CoverComponent';
 import Networking_tips from './component/blogandcareer/Networking_tips';
+import LinkedInJobHunting from './component/blogandcareer/LinkedInJobHunting';
+import Preview201 from './component/coverletterFolder/Preview201';
 // import CoverComponent from './component/CoverComponent';
 var images = [
   { id: 1, src: resum1, alt: 'image1' },{ id: 2, src: resume2, alt: 'image2' },{ id: 3, src: resume3, alt: 'image3' },
@@ -114,7 +116,7 @@ var techImages = [
   ,{id:107, src: profetional_resume_7, alt : 'hospital resume'}
 ]
 
-var CoverImage = [
+const CoverImage = [
   {id:201, src: cover_letter_1, alt: 'cover leter'},
 ]
 console.log('images:=',images)
@@ -135,7 +137,7 @@ function App() {
         <Route path='/template' exact element={<TemplatePage images={images} techImages = {techImages} CoverImage = {CoverImage}/>} />
         {images.map((image) => (
           <Route key={image.id} path={`/mainpage/${image.id}`} 
-          element={<MainPage path={`/${path}/${image.id}`} images={images} />}/>
+          element={<MainPage path={`/${path}/${image.id}`} images={images} CoverImage = {CoverImage} />}/>
         ))}
         {techImages.map((image) => (
           <Route key={image.id} path={`/techmain/${image.id}`} 
@@ -185,6 +187,7 @@ function App() {
         <Route path='/how-to-land-your-dream-job' element={<DreamJob2024/>}/>
         <Route path='top-job-search-websites' element={<TopJobSearchWebsites/>}/>
         <Route path='/networking-tips' element={<Networking_tips/>}/>
+        <Route path='/linkedin-job-hunting' element={<LinkedInJobHunting/>}/>
         <Route path='/preview' element={<Preview />} />
         <Route path='/preview2' element={<Preview2 />}/>
         <Route path='/preview3' element={<Preview3/>}/>
@@ -206,6 +209,7 @@ function App() {
         <Route path='/preview105' element={<Preview105/>}/>
         <Route path='/preview106' element={<Preview106/>}/>
         <Route path='/preview107' element={<Preview107/>}/>
+        <Route path='/preview201' element={<Preview201/>}/>
       </Routes>
       <Footer/>
     </Router>
