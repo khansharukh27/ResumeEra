@@ -142,5 +142,9 @@
   <loc>https://resumeera.xyz/linkedin-job-hunting</loc>
   <priority>.08</priority>
   </url>
+  <url>
+  <loc>https://resumeera.xyz/follow-up-after-interview</loc>
+  <priority>.08</priority>
+  </url>
     
 </urlset>

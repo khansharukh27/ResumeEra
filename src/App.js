@@ -96,6 +96,7 @@ import CoverComponent from './component/CoverComponent';
 import Networking_tips from './component/blogandcareer/Networking_tips';
 import LinkedInJobHunting from './component/blogandcareer/LinkedInJobHunting';
 import Preview201 from './component/coverletterFolder/Preview201';
+import Follow_Up_After_A_Job_Interview from './component/blogandcareer/Follow_Up_After_A_Job_Interview';
 // import CoverComponent from './component/CoverComponent';
 var images = [
   { id: 1, src: resum1, alt: 'image1' },{ id: 2, src: resume2, alt: 'image2' },{ id: 3, src: resume3, alt: 'image3' },
@@ -188,6 +189,7 @@ function App() {
         <Route path='top-job-search-websites' element={<TopJobSearchWebsites/>}/>
         <Route path='/networking-tips' element={<Networking_tips/>}/>
         <Route path='/linkedin-job-hunting' element={<LinkedInJobHunting/>}/>
+        <Route path='/follow-up-after-interview' element={<Follow_Up_After_A_Job_Interview/>}/>
         <Route path='/preview' element={<Preview />} />
         <Route path='/preview2' element={<Preview2 />}/>
         <Route path='/preview3' element={<Preview3/>}/>
@@ -209,7 +211,7 @@ function App() {
         <Route path='/preview105' element={<Preview105/>}/>
         <Route path='/preview106' element={<Preview106/>}/>
         <Route path='/preview107' element={<Preview107/>}/>
-        <Route path='/preview201' element={<Preview201/>}/>
+        <Route path='/preview/201' element={<Preview201/>}/>
       </Routes>
       <Footer/>
     </Router>

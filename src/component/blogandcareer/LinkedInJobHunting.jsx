@@ -2,6 +2,7 @@ import React from 'react';
 import linkedin_profile_img1 from '../../image/image_for_link/linkedin_profile_img1.jpg'
 import linkedin_profile_img2 from '../../image/image_for_link/linkedin_profile_img2.jpg'
 import ImportantPost from '../ImportantPost';
+import { Helmet } from 'react-helmet';
 
 // SEO component for adding meta tags for better optimization
 const SEO = ({ title, description, keywords }) => {
@@ -35,6 +36,11 @@ const SEO = ({ title, description, keywords }) => {
 const LinkedInJobHunting = () => {
   return (
     <div className="content aboutResumeEra">
+        <Helmet>
+                <link rel="canonical" href="https://resumeera.xyz/linkedin-job-hunting" />
+                <title>Resume Era: LinkedIn के माध्यम से प्रभावी रूप से नौकरी की तलाश कैसे करें | ResumeEra</title>
+                <meta name="description" content="LinkedIn का सही उपयोग करके नौकरी कैसे ढूंढी जा सकती है और ResumeEra.xyz के साथ अपने रिज्यूमे को पेशेवर तरीके से कैसे बनाएं।" />
+            </Helmet>
       <SEO 
         title="Resume Era: LinkedIn के माध्यम से प्रभावी रूप से नौकरी की तलाश कैसे करें | <a href='https://resumeera.xyz' >ResumeEra</a>"
         description="LinkedIn का सही उपयोग करके नौकरी कैसे ढूंढी जा सकती है और <a href='https://resumeera.xyz' >ResumeEra</a>.xyz के साथ अपने रिज्यूमे को पेशेवर तरीके से कैसे बनाएं।"

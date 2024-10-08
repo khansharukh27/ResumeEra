@@ -1,22 +1,17 @@
-// import { Link } from "react-router-dom"
-import PersonalInfo from "./PersonalInfo";
-// import { useState } from "react";
-
-import '../css/mainpage.css'
-import { personalInfoData } from "../Redux/action";
-import { useLocation, useNavigate } from "react-router-dom";
-import { useDispatch, useSelector } from "react-redux";
 import { useEffect, useState } from "react";
-// import WorkExperience from "./WorkExperience";
+import { useDispatch, useSelector } from "react-redux";
+import { useLocation, useNavigate } from "react-router-dom";
+import { personalInfoData } from "../Redux/action";
+import '../css/mainpage.css';
 
-const CoverComponent = ({CoverImage}) => {
+const CoverComponent = ({ CoverImage }) => {
     const [selectImage, setSelectImage] = useState(null);
-    const [showPersonalInfo, setShowPersonalInfo] = useState(true);
-    const [showWorkExperience, setShowWorkExperience] = useState(false);
+    
+
     const [inputData, setInputData] = useState({
         image: null,
-        firstName: "",
-        lastName: "",
+        fullname: "",
+        jobposition: "",
         email: "",
         state: "",
         city: "",
@@ -24,12 +19,16 @@ const CoverComponent = ({CoverImage}) => {
         postalCode: "",
         object: "",
         address: '',
-        maritalstatus: '',
+        linkedin: '',
+        hiringManager: '',
+        companyName: '',
+        companyLocation: '',
+        companyWebsite: '',
         nationality: '',
         dateofbirth: ''
     });
-const result2 = CoverImage && CoverImage.map((result)=>result.id)
-console.log('result2:-',result2)
+
+    const result2 = CoverImage && CoverImage.map((result) => result.id);
     const dispatch = useDispatch();
     const navigate = useNavigate();
 
@@ -38,7 +37,6 @@ console.log('result2:-',result2)
         const savedData = JSON.parse(localStorage.getItem('personalInfoData'));
         if (savedData) {
             setInputData(savedData);
-
         }
     }, []);
 
@@ -46,7 +44,7 @@ console.log('result2:-',result2)
         const { name, value } = e.target;
         setInputData((prevData) => ({
             ...prevData,
-            [name]: value.toUpperCase()
+            [name]: value.toUpperCase() // Keep the uppercase behavior
         }));
     };
 
@@ -67,101 +65,88 @@ console.log('result2:-',result2)
         convertFileToBase64(file);
     };
 
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        localStorage.setItem('personalInfoData', JSON.stringify(inputData)); // Save data to local storage
-        dispatch(personalInfoData(inputData));
-        console.log('formData in PersonalInfo:', inputData);
-    };
-
-    const location = useLocation()
-    console.log('location',location)
     
-    const result = useSelector((state)=>state.reducer.coverletter)
-    console.log('personlainfo to id:-',result)
+    const location = useLocation();
+    const result = useSelector((state) => state.reducer.coverletter);
 
     const handleClickBack = () => {
-        if(location.pathname ===`/cover_letter/${result}`){
-            setShowPersonalInfo(true);
-        setShowWorkExperience(false);
-        navigate('/cover_letter');
-        }else{
-            setShowPersonalInfo(true);
-            setShowWorkExperience(false);
+        if (location.pathname === `/cover_letter/${result}`) {
+           
+            navigate('/cover_letter');
+        } else {
+            
             navigate('/');
         }
-       
     };
-    
 
     const handleClickNext = (e) => {
         e.preventDefault();
-        
         localStorage.setItem('personalInfoData', JSON.stringify(inputData)); // Save data to local storage
         dispatch(personalInfoData(inputData));
-        navigate(`/preview/${result2}`)
-        console.log('formData in PersonalInfo:', inputData);
+        navigate(`/preview/${result2}`);
     };
-    
+
     return (
-           
-            <div className=" mt-2">
-               <div className="personal-profile">
-                        <input
-                            type="file"
-                            id="image"
-                            name="image"
-                            className="profile-input"
-                            onChange={handleImageChange}
-                        />
-                        {selectImage && (
-                            <img
-                                onClick={() => document.getElementById('image').click()}
-                                src={URL.createObjectURL(selectImage)}
-                                alt="selected"
-                                name="image1"
-                                className="profile-imgs"
-                            />
-                        )}
-                    </div>
-                    <div className="m-2 input-div">
-                        <div className="d-sm-flex one">
-                            <input className="input m-2" type="text" placeholder="first name" name="firstName" value={inputData.firstName} onChange={handleChange} />
-                            <input className="input m-2" type="text" placeholder="last name" name="lastName" value={inputData.lastName} onChange={handleChange} />
-                        </div>
-                        <div className="d-sm-flex one">
-                            <input className="input m-2" type="text" placeholder="email" name="email" value={inputData.email} onChange={handleChange} />
-                            <input className="input m-2" type="number" placeholder="mobile number" name="mobileNumber" value={inputData.mobileNumber} onChange={handleChange} />
-                        </div>
-                        <div className="d-sm-flex one w-sm-50">
-                            <textarea className="input m-2" type="text" placeholder="address" name="address" value={inputData.address} onChange={handleChange} />
-                            <textarea className="input m-2" type="text" placeholder="marital status" name="maritalstatus" value={inputData.maritalstatus} onChange={handleChange} />
+        <div className="mt-2">
+            <div className="personal-profile">
+                <input
+                    type="file"
+                    id="image"
+                    name="image"
+                    className="profile-input"
+                    onChange={handleImageChange}
+                />
+                {selectImage && (
+                    <img
+                        onClick={() => document.getElementById('image').click()}
+                        src={URL.createObjectURL(selectImage)}
+                        alt="selected"
+                        name="image1"
+                        className="profile-imgs"
+                    />
+                )}
+            </div>
+            <div className="m-2 input-div">
+                <div className="d-sm-flex one">
+                    <input className="input m-2" type="text" placeholder="fullname" name="fullname" value={inputData.fullname} onChange={handleChange} />
+                    <input className="input m-2" type="text" placeholder="job position" name="jobposition" value={inputData.jobposition} onChange={handleChange} />
+                </div>
+                <div className="d-sm-flex one">
+                    <input className="input m-2" type="text" placeholder="email" name="email" value={inputData.email} onChange={handleChange} />
+                    <input className="input m-2" type="number" placeholder="mobile number" name="mobileNumber" value={inputData.mobileNumber} onChange={handleChange} />
+                </div>
+                <div className="d-sm-flex one w-sm-50">
+                    <textarea className="input m-2" type="text" placeholder="address" name="address" value={inputData.address} onChange={handleChange} />
+                    <textarea className="input m-2" type="text" placeholder="linkedin" name="linkedin" value={inputData.linkedin} onChange={handleChange} />
+                </div>
+                <div className="d-sm-flex one">
+                    <input className="input m-2" type="text" placeholder="city" name="city" value={inputData.city} onChange={handleChange} />
+                    <input className="input m-2" type="text" placeholder="state" name="state" value={inputData.state} onChange={handleChange} />
+                </div>
+                <div className="d-sm-flex one">
+                    <input className="input m-2" type="number" placeholder='postal code' name="postalCode" value={inputData.postalCode} onChange={handleChange} />
+                    <input className="input m-2" type="text" placeholder='Nationality' name="nationality" value={inputData.nationality} onChange={handleChange} />
+                </div>
+                <div className="d-sm-flex one">
+                    <input className="input m-2" type="text" placeholder="Hiring Manager Name" name="hiringManager" value={inputData.hiringManager} onChange={handleChange} />
+                    <input className="input m-2" type="text" placeholder="Company Name" name="companyName" value={inputData.companyName} onChange={handleChange} />
+                </div>
+                <div className="d-sm-flex one">
+                    <input className="input m-2" type="text" placeholder="Company Website" name="companyWebsite" value={inputData.companyWebsite} onChange={handleChange} />
+                    <input className="input m-2" type="text" placeholder="Company Location" name="companyLocation" value={inputData.companyLocation} onChange={handleChange} />
+                </div>
+                <div className="d-sm-flex two">
+                    <textarea className="textarea1 m-2" type="text" placeholder="object" name="object" value={inputData.object} onChange={handleChange} style={{ width: '100%' }} />
+                </div>
+            </div>
+            <div className="d-sm-flex justify-content-around m-2 button-div">
+                <button onClick={handleClickBack} className="button1">
+                    <span className="text">BACK</span>
+                </button>
+                <button onClick={handleClickNext} type="submit" className="button1"><span className="text">NEXT</span></button>
+            </div>
+        </div>
+    );
+};
 
-                        </div>
-                        <div className="d-sm-flex one" >
-                            <input className="input m-2" type="text" placeholder="city" name="city" value={inputData.city} onChange={handleChange} />
-                            <input className="input m-2" type="text" placeholder="state" name="state" value={inputData.state} onChange={handleChange} />
-                        </div>
-                        <div className="d-sm-flex one" >
-                            <input className="input m-2" type="number" placeholder='postal code' name="postalCode" value={inputData.postalCode} onChange={handleChange} />
-                            <input className="input m-2" type="text" placeholder='Nationality' name="nationality" value={inputData.nationality} onChange={handleChange} />
-
-                        </div>
-                        <div className="d-sm-flex two">
-                            <textarea className="textarea1 m-2" type="text" placeholder="object" name="object" value={inputData.object} onChange={handleChange} style={{ width: '100%' }} />
-                            {/* <textarea className="input m-2" type="text" placeholder="date of birth" name="dateofbirth" value={inputData.dateofbirth} onChange={handleChange} style={{ width: '100%' }} /> */}
-
-                        </div>
-                    </div>
-                    <div className="d-sm-flex justify-content-around m-2 button-div">
-                        <button onClick={handleClickBack} className="button1">
-                            <span className="text">BACK</span>
-                        </button>
-
-                        <button onClick={handleClickNext} type="submit" className="button1"><span className="text">NEXT</span></button>
-                    </div>
-                
-                           </div>
-    )
-}
 export default CoverComponent;
