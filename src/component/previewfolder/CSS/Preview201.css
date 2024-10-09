@@ -1,0 +1,71 @@
+.preview-container201{
+    margin-top: 15px;
+    width: 100%;
+    margin-left: 15px;    
+    padding: 15px;
+    /* font-size: medium; */
+    display: flex;
+    justify-content: space-around;
+}
+.preview201{
+    margin-right: 25px;
+    box-shadow: 5px 0px 15px 5px grey;
+    width: 60%;
+    height: fit-content;
+    padding-bottom: 15px;
+
+}
+.preview-container201 p{
+    /* margin-bottom: ; */
+}
+.name-201{
+    height: 100px;
+    border: 1px solid green;
+    background-color: #333b4e;
+}
+.name-201 h3{
+    margin-bottom: -8px;
+    color: white;
+    margin-left: 25px;
+}
+.name-201 p{
+    size: small;
+    color: #445f6e;
+    margin-left: 25px;
+    padding-left: 15px;
+    padding-left: 15px;
+}
+.contact-201{
+    display: flex;
+    justify-content: space-around;
+    background-color: #222b34;
+    color: white;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.contact-201 p{
+    /* margin-bottom: 15px; */
+    font-size: xx-small;
+    columns: white;
+}
+.company-detail-201{
+    margin-left: 25px;
+    /* margin-bottom:-15px ; */
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.company-detail-201 p{
+    margin-bottom: -10px;
+}
+.your-object-201{
+    margin-top: 25px;
+    margin-left: 25px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+.sincerely-201{
+    margin-left: 25px;
+}
+.sincerely-201 p{
+    margin-bottom: -5px;
+}

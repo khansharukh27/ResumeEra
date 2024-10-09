@@ -6,7 +6,7 @@ const Follow_Up_After_A_Job_Interview = () => {
         <div className="aboutResumeEra">
             <Helmet>
             <link rel="canonical" href="https://resumeera.xyz/follow-up-after-interview" />
-                <title>Mastering the Art of a Follow-Up After an Interview: A Complete Guide for Job Seekers</title>
+                <title>ResumeEra:Mastering the Art of a Follow-Up After an Interview: A Complete Guide for Job Seekers</title>
                 <meta name="description" content="After landing an interview for your dream job, the process doesn't end when
                     you walk out of the interview room. One essential yet often overlooked step is sending a
                     thoughtful and timely follow-up after the interview. This article will explore why it’s important,
@@ -15,7 +15,7 @@ const Follow_Up_After_A_Job_Interview = () => {
                     from the competition." />
 </Helmet>
             <div>
-                <h1>Mastering the Art of a Follow-Up After an Interview: A Complete Guide for Job Seekers</h1>
+                <h1>ResumeEra:- Mastering the Art of a Follow-Up After an Interview: A Complete Guide for Job Seekers</h1>
                 <p>
                     After landing an interview for your dream job, the process doesn't end when
                     you walk out of the interview room. One essential yet often overlooked step is sending a
@@ -42,7 +42,7 @@ const Follow_Up_After_A_Job_Interview = () => {
                     </li>
                     <li><a href="#Follow-Up-Email-Templates">Follow-Up Email Templates</a></li>
                     <li><a href="#Common-Mistakes-to-Avoid-in-Follow-Ups">Common Mistakes to Avoid in Follow-Ups</a></li>
-                    <li><a href="#How-ResumeEra-Can-Help-You-Shine">How ResumeEra Can Help You Shine</a></li>
+                    <li><a href="#How-ResumeEra-Can-Help-You-Shine">How <a href="https://resumeera.xyz">ResumeEra.xyz</a> Can Help You Shine</a></li>
                     <li><a href="#Final-Thoughts">Final Thoughts</a></li>
                     <li><a href="#Frequently-Asked-Questions">Frequently Asked Questions</a></li>
                 </ul>
@@ -139,7 +139,7 @@ const Follow_Up_After_A_Job_Interview = () => {
 
             <div id="How-ResumeEra-Can-Help-You-Shine">
                 <h3>How ResumeEra Can Help You Shine</h3>
-                <p>ResumeEra offers more than just resume templates.</p>
+                <p><a href="https://resumeera.xyz">ResumeEra</a> offers more than just resume templates.</p>
                 <ol>
                     <li>Tailored Resume and Cover Letter Templates.</li>
                     <li>Follow-Up Email Templates.</li>
@@ -152,7 +152,8 @@ const Follow_Up_After_A_Job_Interview = () => {
 
             <div id="Final-Thoughts">
                 <h3>Final Thoughts</h3>
-                <p>A well-crafted follow-up email can significantly improve your chances of landing a job. By using ResumeEra's resources, you’ll be well-equipped to navigate the post-interview process.</p>
+                <p>A well-crafted follow-up email can significantly improve your chances of landing a job. 
+                    By using <a href="https://resumeera.xyz">ResumeEra's</a> resources, you’ll be well-equipped to navigate the post-interview process.</p>
             </div>
 
             <hr />
