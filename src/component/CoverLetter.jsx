@@ -14,6 +14,7 @@ import '../css/covercomponent.css'
 const CoverLetter = (props) => {
     const CoverImage = props; // Assuming CoverImage is passed as a prop
     const [hoveredImage, setHoveredImage] = useState(null);
+    
     const dispatch = useDispatch();
     const navigate = useNavigate();
 
@@ -25,8 +26,6 @@ const CoverLetter = (props) => {
     }, [CoverImage]); // Log whenever CoverImage changes
 
     const location = useLocation()
-
-
     const handleClick = (e) => {
         e.preventDefault();
         if (hoveredImage !== null) {
@@ -38,6 +37,7 @@ const CoverLetter = (props) => {
 
     return (
         <div className='aboutResumeEra'>
+            <div>
             <div className='covermain '>
                 <h1>How to Write an Effective Cover Letter with ResumeEra: A Complete Guide</h1>
                 <hr style={{width:'inherit'}}/>
@@ -215,6 +215,7 @@ const CoverLetter = (props) => {
                     <li><Link to='https://resumeera.xyz'>ResumeEra: Your Go-To for Resumes and Cover Letters</Link> </li>
                 </ul>
             </p>
+            </div>
         </div>
     );
 };

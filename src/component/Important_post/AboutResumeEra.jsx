@@ -4,7 +4,7 @@ import download_1 from '../../image/image_for_link/download_1.jpg'
 import download_2 from '../../image/image_for_link/download_2.jpg'
 import '../../css/Important_Post/aboutResumeEra.css'
 import { Link } from "react-router-dom";
-const AboutResumeEra = () => {
+const AboutResumeEra= () => {
     return (
         <div>
             <Helmet>
@@ -14,7 +14,7 @@ const AboutResumeEra = () => {
                         Start your job search strong today!" />
                 <meta name="keywords" content="ResumeEra, free resumes, resume builder, professional resume, modern templates, resume tips, career growth" />
                 <meta name="author" content="ResumeEra" />
-                <meta property="og:title" content="About ResumeEra - Create Professional Resumes for Free" />
+                <meta property="og:title" content="About ResumeEra Create Professional Resumes for Free" />
                 <meta property="og:description" content="Join ResumeEra to create stunning professional resumes without any cost. Customize, download, and share your resume instantly." />
                 <meta property="og:url" content="https://resumeera.xyz/about" />
                 <meta property="og:type" content="website" />
@@ -37,7 +37,7 @@ const AboutResumeEra = () => {
             <div className=" aboutResumeEra">
                 <h3>Key Takeaways</h3>
                 <ul>
-                    <li>ResumeEra is a free online platform that helps you create a professional, visually-appealing resume</li>
+                    <li><a href="https://resumeera.xyz">ResumeEra</a> is a free online platform that helps you create a professional, visually-appealing resume</li>
                     <li>The platform offers a wide range of resume templates, making it easy to find the right format for your needs</li>
                     <li>ResumeEra's AI-powered suggestions and customization options allow you to tailor your resume to each job application</li>
                     <li>Using measurable achievements and quantifiable results in your resume can significantly enhance its effectiveness</li>
@@ -170,11 +170,11 @@ const AboutResumeEra = () => {
                 <img src={download_1} alt="resume_for_reusme" />
                 <p>By making your resume fit the industry and job you want, you'll get noticed more. A well-made, industry-focused resume is key to moving forward in your career.</p>
                 <h3>The Benefits of Using resumeera</h3>
-                <p>In today's job market, a standout resume is key to success. ResumeEra is here to help, offering many benefits for creating a winning resume. It provides a wide range of professionally-designed templates, making your resume look polished and appealing.</p>
+                <p>In today's job market, a standout resume is key to success. <a href="https://resumeera.xyz">ResumeEra</a> is here to help, offering many benefits for creating a winning resume. It provides a wide range of professionally-designed templates, making your resume look polished and appealing.</p>
                 <p>ResumeEra's AI-powered suggestion engine is a big plus. It analyzes job descriptions and gives you tailored advice to improve your resume. This ensures your resume matches the job you're applying for, highlighting your skills and achievements.</p>
-                <p>ResumeEra also makes it easy to customize your resume. You can change the layout, font, and sections to reflect your unique qualifications and career path. This empowers you to create a resume that truly showcases your strengths.</p>
-                <p>Finally, ResumeEra lets you download and share your resume for free. This makes it easy to apply to many jobs without constantly updating your resume. With ResumeEra, you can focus on your job search, knowing your resume is ready for success.</p>
-                <p>In summary, ResumeEra offers many benefits. You get access to professional templates, AI-powered optimization, customizable tools, and easy download and sharing. By using ResumeEra, you can make your resume-building process easier and boost your chances of getting your dream job.</p>
+                <p><a href="https://resumeera.xyz">ResumeEra</a> also makes it easy to customize your resume. You can change the layout, font, and sections to reflect your unique qualifications and career path. This empowers you to create a resume that truly showcases your strengths.</p>
+                <p>Finally, <a href="https://resumeera.xyz">ResumeEra</a> lets you download and share your resume for free. This makes it easy to apply to many jobs without constantly updating your resume. With ResumeEra, you can focus on your job search, knowing your resume is ready for success.</p>
+                <p>In summary, <a href="https://resumeera.xyz">ResumeEra</a> offers many benefits. You get access to professional templates, AI-powered optimization, customizable tools, and easy download and sharing. By using ResumeEra, you can make your resume-building process easier and boost your chances of getting your dream job.</p>
                 <h3>Common Resume Mistakes to Avoid</h3>
                 <p>Making a resume that grabs the attention of hiring managers is tough. One big mistake is using vague language and buzzwords too much. These generic terms don't make you stand out and don't show off your special skills and qualifications.</p>
                 <h3>Steer Clear of Vague Language and Buzzwords</h3>
@@ -223,7 +223,7 @@ const AboutResumeEra = () => {
                 <h3>Conclusion</h3>
                 <p>Crafting a winning resume is key to your career journey. By using strategies like optimizing for Applicant Tracking Systems, you can stand out. Showcasing your unique value and using LinkedIn can also help.</p>
                 <p>This guide has shown how important a professional, tailored resume is. It should highlight your achievements and match the job requirements. By using keywords, quantifying your accomplishments, and making it visually appealing, you boost your chances of getting an interview.</p>
-                <p>Understanding the modern recruitment landscape is crucial. Tools like ResumeEra can help. Investing in your resume opens doors to new career opportunities and growth.</p>
+                <p>Understanding the modern recruitment landscape is crucial. Tools like <a href="https://resumeera.xyz">ResumeEra</a> can help. Investing in your resume opens doors to new career opportunities and growth.</p>
                 <h3>What is the importance of a professional resume?</h3>
                 <h1>FAQs about Professional Resumes</h1>
                 <p><strong>A professional resume</strong> is key to making a good first impression. It highlights your skills and experience, showing you're a good fit for the job.</p>
@@ -246,8 +246,8 @@ const AboutResumeEra = () => {
                 <h3>How can I tailor my resume for different industries and job roles?</h3>
                 <p>Customize your resume for each industry and job. Tailoring shows you fit the role by highlighting your relevant skills and experience.</p>
 
-                <h3>What are the benefits of using ResumeEra to create my resume?</h3>
-                <p>ResumeEra offers free templates and AI suggestions. It's easy to customize and download your resume. This platform helps you create a polished, ATS-friendly resume.</p>
+                <h3>What are the benefits of using <a href="https://resumeera.xyz">ResumeEra</a> to create my resume?</h3>
+                <p><a href="https://resumeera.xyz">ResumeEra</a> offers free templates and AI suggestions. It's easy to customize and download your resume. This platform helps you create a polished, ATS-friendly resume.</p>
 
                 <h3>What common resume mistakes should I avoid?</h3>
                 <p>Avoid vague language and buzzwords. Instead, use specific examples and clear language to show your skills and achievements.</p>

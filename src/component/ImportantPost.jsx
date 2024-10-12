@@ -1,6 +1,7 @@
 import { Link } from 'react-router-dom';
 import '../css/importantpost.css'
 import { Helmet } from 'react-helmet';
+import NewAds from './adFolder/NewAds';
 
 const ImportantPost = () => {
     return (
@@ -10,6 +11,7 @@ const ImportantPost = () => {
                 <title>Important Links</title>
                 <meta name="description" content="this page is releted to importannt link to show valuable things." />
             </Helmet>
+            <div>
             <h1>Important Post to gain knowledge</h1>
             <ul>
                 <li>
@@ -144,6 +146,10 @@ const ImportantPost = () => {
                         Anupam kher Resume wit ResumeEra:ResumeEra</Link>
                 </li>
             </ul>
+            </div>
+            <div>
+                <NewAds/>
+            </div>
         </div>
     );
 };

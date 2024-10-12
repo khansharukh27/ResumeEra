@@ -19,7 +19,7 @@ function Navbar() {
             <Link className="navbar-link" to="/">Home</Link>
                 <Link className="navbar-link" to="/template">TEMPLATES</Link>
                 <Link className="navbar-link" to="/myresume">MY RESUME</Link>
-                <Link className="navbar-link" to="/coverletter">CoverLetter</Link>
+                <Link className="navbar-link" to="/cover_letter">CoverLetter</Link>
             </div>
         </div>
     );

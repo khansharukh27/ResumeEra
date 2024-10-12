@@ -20,7 +20,7 @@ const Blog_Career = () => {
                     <li><Link to="/networking-tips">Networking Tips to Boost Your Job Search</Link></li>
                     <li><Link to="/linkedin-job-hunting">How to Use LinkedIn Effectively for Job Hunting</Link></li>
                     <li><Link to="/follow-up-after-interview">How to Follow Up After a Job Interview</Link></li>
-
+                    <li><Link to={"/Salary_Negotiation_Component"}>Salary Negotiation Tips - Get the Best Deal | ResumeEra free online resume builder</Link></li>
                 </ul>
             </section>
 

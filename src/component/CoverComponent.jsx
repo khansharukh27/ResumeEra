@@ -6,6 +6,7 @@ import '../css/mainpage.css';
 
 const CoverComponent = ({ CoverImage }) => {
     const [selectImage, setSelectImage] = useState(null);
+    // const result = useSelector((state) =>state.reducer)
     
 
     const [inputData, setInputData] = useState({
@@ -28,7 +29,7 @@ const CoverComponent = ({ CoverImage }) => {
         dateofbirth: ''
     });
 
-    const result2 = CoverImage && CoverImage.map((result) => result.id);
+    const result2 = CoverImage;
     const dispatch = useDispatch();
     const navigate = useNavigate();
 
@@ -67,23 +68,18 @@ const CoverComponent = ({ CoverImage }) => {
 
     
     const location = useLocation();
-    const result = useSelector((state) => state.reducer.coverletter);
+    const result = useSelector((state) => state.reducer.coverletterss);
+    console.log('coverComponent hoverId:-',result)
 
     const handleClickBack = () => {
-        if (location.pathname === `/cover_letter/${result}`) {
-           
             navigate('/cover_letter');
-        } else {
-            
-            navigate('/');
-        }
     };
 
     const handleClickNext = (e) => {
         e.preventDefault();
         localStorage.setItem('personalInfoData', JSON.stringify(inputData)); // Save data to local storage
         dispatch(personalInfoData(inputData));
-        navigate(`/preview/${result2}`);
+        navigate(`/preview/${result}`);
     };
 
     return (

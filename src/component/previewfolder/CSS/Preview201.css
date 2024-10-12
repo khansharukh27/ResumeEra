@@ -15,6 +15,9 @@
     padding-bottom: 15px;
 
 }
+.adsbygoogle{
+    display: block;
+}
 .preview-container201 p{
     /* margin-bottom: ; */
 }
@@ -69,3 +72,103 @@
 .sincerely-201 p{
     margin-bottom: -5px;
 }
+
+
+
+@media (max-width:768px){
+    .preview-container201{
+        margin-top: 15px;
+        width: 100%;
+        margin-left: 1px;    
+        padding: 15px;
+        /* font-size: medium; */
+        display: flex;
+        justify-content: space-around;
+        flex-direction: column;
+    }
+    .preview201{
+        margin-right: 0px;
+        box-shadow: 5px 0px 15px 5px grey;
+        width: 100%;
+        height: fit-content;
+        padding-bottom: 15px;
+    
+    }
+    .resume-download-section{
+        width: 100%;
+    }
+   
+}
+
+@media (max-width:425px){
+    .preview-container201{
+        margin-top: 15px;
+        width: 100%;
+        margin-left: 1px;    
+        padding: 1px;
+        /* font-size: medium; */
+        display: flex;
+        justify-content: space-around;
+        flex-direction: column;
+    }
+    .preview201{
+        margin-right: 0px;
+        box-shadow: 5px 0px 15px 5px grey;
+        width: 100%;
+        height: fit-content;
+        padding-bottom: 15px;
+    
+    }
+    .resume-download-section{
+        width: 100%;
+    }
+   
+}
+
+@media (max-width:375px){
+    .preview-container201{
+        margin-top: 15px;
+        width: 100%;
+        margin-left: 1px;    
+        padding: 1px;
+        /* font-size: medium; */
+        display: flex;
+        justify-content: space-around;
+        flex-direction: column;
+    }
+    .preview201{
+        margin-right: 0px;
+        box-shadow: 5px 0px 15px 5px grey;
+        width: 100%;
+        height: fit-content;
+        padding-bottom: 15px;
+    
+    }
+    .resume-download-section{
+        width: 100%;
+    }
+   
+}
+
+@media (max-width:320px){
+    .preview-container201{
+        margin-top: 15px;
+        width: 100%;
+        margin-left: 1px;    
+        padding: 1px;
+        /* font-size: medium; */
+        display: flex;
+        justify-content: space-around;
+        flex-direction: column;
+    }
+    .preview201{
+        margin-right: 0px;
+        box-shadow: 5px 0px 15px 5px grey;
+        width: 100%;
+        height: fit-content;
+        padding-bottom: 15px;
+    
+    }
+   
+}
+

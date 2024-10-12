@@ -1,0 +1,69 @@
+/* Container styling */
+.hadith-container {
+    max-width: 800px; /* Limit the width for readability */
+    margin: 20px auto; /* Center the container */
+    padding: 20px; /* Add some padding */
+    background: linear-gradient(135deg, #f0f4f8, #e3e3e3); /* Soft gradient background */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
+    transition: transform 0.3s ease; /* Smooth scale transition on hover */
+  }
+  
+  /* Heading styling */
+  .hadith-heading {
+    font-size: 2.5rem; /* Large heading */
+    text-align: center; /* Center the heading */
+    color: #2c3e50; /* Dark color for contrast */
+    margin-bottom: 20px; /* Space below the heading */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2); /* Subtle text shadow */
+  }
+  
+  /* Text styling */
+  .hadith-text,
+  .hadith-subtext {
+    font-size: 1.2rem; /* Moderate font size */
+    line-height: 1.6; /* Line height for readability */
+    color: #34495e; /* Darker text for better readability */
+    margin: 10px 0; /* Vertical spacing */
+  }
+  
+  /* Responsive text sizes */
+  @media (max-width: 768px) {
+    .hadith-heading {
+      font-size: 2rem; /* Smaller heading on mobile */
+    }
+  
+    .hadith-text,
+    .hadith-subtext {
+      font-size: 1rem; /* Smaller text on mobile */
+    }
+  }
+  
+  /* Hover effect for container */
+  .hadith-container:hover {
+    transform: scale(1.02); /* Slightly scale up on hover */
+  }
+  
+  /* Animation for text */
+  .hadith-text,
+  .hadith-subtext {
+    opacity: 0; /* Start invisible */
+    transform: translateY(20px); /* Move down slightly */
+    animation: fadeInUp 0.8s forwards; /* Animation to fade in */
+  }
+  
+  @keyframes fadeInUp {
+    to {
+      opacity: 1; /* Fully visible */
+      transform: translateY(0); /* Reset position */
+    }
+  }
+  
+  /* Adding a border to the paragraphs */
+  .hadith-text,
+  .hadith-subtext {
+    border-left: 4px solid #2980b9; /* Left border */
+    padding-left: 15px; /* Padding to the left */
+    margin-left: 20px; /* Margin to the left */
+  }
+  

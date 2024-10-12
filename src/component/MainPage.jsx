@@ -33,7 +33,7 @@ const MainPage = (props) => {
     return (
         <div className="mt-2 mainpage" data-aos="flip-left" data-aos-duration="2000">
             { personalInfo && <PersonalInfo /> }
-            { workExperience && <CoverComponent CoverImage={CoverImage} /> }
+            {/* { workExperience && <CoverComponent CoverImage={CoverImage} /> } */}
         </div>
     );
 };

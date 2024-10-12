@@ -85,6 +85,9 @@ import NotFoundPage from './component/Important_post/NotFoundPage';
 import AboutResumeEra from './component/Important_post/AboutResumeEra';
 import CoverLetter from './component/CoverLetter';
 import cover_letter_1 from '../src/image/CoverImage/cover_letter_1.png'
+import cover_letter_2 from '../src/image/CoverImage/cover_letter_2.webp'
+import cover_letter_3 from '../src/image/CoverImage/cover_letter_3.webp'
+
 import ResumeComponent from './component/Important_post/ResumeComponent';
 import ThingsToRemoveFromYourCV from './component/Important_post/ThingsToRemoveFromYourCV';
 import Tip_For_Interview from './component/Important_post/Tip_For_Interview';
@@ -97,6 +100,10 @@ import Networking_tips from './component/blogandcareer/Networking_tips';
 import LinkedInJobHunting from './component/blogandcareer/LinkedInJobHunting';
 import Preview201 from './component/coverletterFolder/Preview201';
 import Follow_Up_After_A_Job_Interview from './component/blogandcareer/Follow_Up_After_A_Job_Interview';
+import Preview202 from './component/coverletterFolder/Preview202';
+import CoverLettermain from './component/CoverLettermain';
+import SalaryNegotiationComponent from './component/blogandcareer/SalaryNegotiation';
+// import CoverLetterInput from './component/CoverLetterInput';
 // import CoverComponent from './component/CoverComponent';
 var images = [
   { id: 1, src: resum1, alt: 'image1' },{ id: 2, src: resume2, alt: 'image2' },{ id: 3, src: resume3, alt: 'image3' },
@@ -119,6 +126,8 @@ var techImages = [
 
 const CoverImage = [
   {id:201, src: cover_letter_1, alt: 'cover leter'},
+  {id:202, src: cover_letter_2, alt: 'INTERNSHIP'},
+  {id:203, src: cover_letter_3, alt: 'TEACHER'},
 ]
 console.log('images:=',images)
 console.log(images[0].id)
@@ -146,12 +155,13 @@ function App() {
         ))}
         {CoverImage.map((image) => (
           <Route key={image.id} path={`/cover_letter/${image.id}`} 
-          element={<MainPage path={`/${path}/${image.id}`} CoverImage={CoverImage} />}/>
-        ))}        
+          element={<CoverLettermain path={`/${path}/${image.id}`} CoverImage={CoverImage} />}/>
+        ))}
+                
         <Route path='/myresume' element={<MyResume />} />
-        <Route path='/coverletter' element={<CoverLetter CoverImage={CoverImage}/>}/>
+        <Route path='/cover_letter' element={<CoverLetter CoverImage={CoverImage}/>}/>
         <Route path='/coverletter_component' element={<CoverComponent CoverImage={CoverImage}/>}/>
-
+        {/* <Route path=`/cover_lett` element={<CoverLetterInput CoverImage={CoverImage}/>}/> */}
         <Route path='/privacypolicy' element={<PrivacyPolicy />} />
         <Route path='/contact' element={<Contact/>} />
         <Route path='/terms-of-service' element={<TermsAndServices />} />
@@ -190,6 +200,7 @@ function App() {
         <Route path='/networking-tips' element={<Networking_tips/>}/>
         <Route path='/linkedin-job-hunting' element={<LinkedInJobHunting/>}/>
         <Route path='/follow-up-after-interview' element={<Follow_Up_After_A_Job_Interview/>}/>
+        <Route path='/Salary_Negotiation_Component' element={<SalaryNegotiationComponent/>}/>
         <Route path='/preview' element={<Preview />} />
         <Route path='/preview2' element={<Preview2 />}/>
         <Route path='/preview3' element={<Preview3/>}/>
@@ -212,6 +223,8 @@ function App() {
         <Route path='/preview106' element={<Preview106/>}/>
         <Route path='/preview107' element={<Preview107/>}/>
         <Route path='/preview/201' element={<Preview201/>}/>
+        <Route path='/preview/202' element={<Preview202/>}/>
+       
       </Routes>
       <Footer/>
     </Router>
