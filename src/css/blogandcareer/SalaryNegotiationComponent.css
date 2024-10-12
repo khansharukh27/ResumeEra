@@ -24,10 +24,10 @@
 color: white;
 }
 .do-point img {
-    width: 100%;
-    border-radius: 8px;
-    height: fit-content; /* This keeps the height at half the width */
-    object-fit: cover; /* Ensures image maintains its proportions */
+    width: 600px;
+    border-radius: 28px;
+    height: 350px; /* This keeps the height at half the width */
+    object-fit: contain; /* Ensures image maintains its proportions */
 }
 
 .dont-point{
@@ -46,4 +46,27 @@ color: white;
         border-radius: 8px;
         height: fit-content; /* This keeps the height at half the width */
         object-fit: cover; /* Ensures image maintains its proportions */
+    }
+    @media (max-width:780px) {
+        .SalaryNegotiationComponent{
+            width: 100%;
+            margin-left: 0px;
+    margin-right: 0px;
+    box-shadow: 0px 0px 2px 5px rgb(207, 166, 166);
+    padding: 15px;
+    margin-top: 20px;
+    border-radius: 8px;
+        }
+    }
+
+    @media (max-width:320px) {
+        .SalaryNegotiationComponent{
+            width: 100%;
+            margin-left: 0px;
+    margin-right: 0px;
+    box-shadow: 0px 0px 2px 5px rgb(207, 166, 166);
+    padding: 15px;
+    margin-top: 20px;
+    border-radius: 8px;
+        }
     }

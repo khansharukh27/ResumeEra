@@ -11,6 +11,7 @@ import dont_discuss_salary from '../../image/image_for_link/dont_discuss_salary.
 import go_away from '../../image/image_for_link/go_away.jpeg'
 import don_reveal_salary from '../../image/image_for_link/don_reveal_salary.jpeg'
 import dont_undermine_confidence from '../../image/image_for_link/dont_undermine_confidence.jpeg'
+import NewAds from '../adFolder/NewAds';
 
 
 const SalaryNegotiationComponent = () => {
@@ -50,7 +51,9 @@ const SalaryNegotiationComponent = () => {
           </p>
           <img src={market_research} alt="market research" />
         </div>
-
+          <div className="newads">
+            <NewAds/>
+          </div>
         <div className="do-point">
           <h3>2. Know Your Worth</h3>
           <p>
@@ -60,7 +63,9 @@ const SalaryNegotiationComponent = () => {
           </p>
           <img src={know_your_worth} alt="know your worth" />
         </div>
-
+        <div className="newads">
+            <NewAds/>
+          </div>
         <div className="do-point">
           <h3>3. Practice Your Pitch</h3>
           <p>
@@ -69,7 +74,9 @@ const SalaryNegotiationComponent = () => {
           </p>
           <img src={practice} alt="practice your piches" />
         </div>
-
+        <div className="newads">
+            <NewAds/>
+          </div>
         <div className="do-point">
           <h3>4. Be Flexible</h3>
           <p>
@@ -78,7 +85,9 @@ const SalaryNegotiationComponent = () => {
           </p>
           <img src={be_flexible} alt="be flexible" />
         </div>
-
+        <div className="newads">
+            <NewAds/>
+          </div>
         <div className="do-point">
           <h3>5. Ask for Time to Consider</h3>
           <p>
@@ -101,7 +110,9 @@ const SalaryNegotiationComponent = () => {
           </p>
           <img src={less_worth} alt="Don't Settle for Less Than You're Worth" />
         </div>
-
+        <div className="newads">
+            <NewAds/>
+          </div>
         <div className="dont-point">
           <h3>2. Don't Discuss Salary Too Early</h3>
           <p>
@@ -110,7 +121,9 @@ const SalaryNegotiationComponent = () => {
           </p>
           <img src={dont_discuss_salary} alt="Don't Discuss Salary Too Early" />
         </div>
-
+        <div className="newads">
+            <NewAds/>
+          </div>
         <div className="dont-point">
           <h3>3. Don't Be Afraid to Walk Away</h3>
           <p>
@@ -119,7 +132,9 @@ const SalaryNegotiationComponent = () => {
           </p>
           <img src={go_away} alt="Don't Be Afraid to Walk Away" />
         </div>
-
+        <div className="newads">
+            <NewAds/>
+          </div>
         <div className="dont-point">
           <h3>4. Don't Reveal Your Previous Salary</h3>
           <p>
@@ -128,7 +143,9 @@ const SalaryNegotiationComponent = () => {
           </p>
           <img src={don_reveal_salary} alt="Don't Reveal Your Previous Salary" />
         </div>
-
+        <div className="newads">
+            <NewAds/>
+          </div>
         <div className="dont-point">
           <h3>5. Don't Undermine Your Confidence</h3>
           <p>

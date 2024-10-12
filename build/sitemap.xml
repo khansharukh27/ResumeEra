@@ -146,5 +146,11 @@
   <loc>https://resumeera.xyz/follow-up-after-interview</loc>
   <priority>.08</priority>
   </url>
-    
+  <url>
+  <loc>https://resumeera.xyz/Salary_Negotiation_Component</loc>
+  <priority>.08</priority>
+  </url>
+  <loc>https://resumeera.xyz/Best_Online_CV_Builder</loc>
+  <priority>.08</priority>
+  </url>
 </urlset>

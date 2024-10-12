@@ -21,6 +21,8 @@ const Blog_Career = () => {
                     <li><Link to="/linkedin-job-hunting">How to Use LinkedIn Effectively for Job Hunting</Link></li>
                     <li><Link to="/follow-up-after-interview">How to Follow Up After a Job Interview</Link></li>
                     <li><Link to={"/Salary_Negotiation_Component"}>Salary Negotiation Tips - Get the Best Deal | ResumeEra free online resume builder</Link></li>
+                    <li><Link to={"/Best_Online_CV_Builder"}>Best Online CV Builder - Create a Free Resume Online at ResumeEra</Link></li>
+                    <li><Link to={"/Best_AI_Resume_Builder"}>Best AI Resume Builder - Build Your Free Resume Online | ResumeEra That A Best Ai Resume Builder</Link></li>
                 </ul>
             </section>
 

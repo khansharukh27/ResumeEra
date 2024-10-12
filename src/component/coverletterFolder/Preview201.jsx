@@ -71,18 +71,18 @@ const Preview201 = () => {
     return (
         <div className="">
             <div>
-            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7258253904826153"
-     crossorigin="anonymous"></script>
-{/* <!-- horizontal --> */}
-<ins class="adsbygoogle"
+                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7258253904826153"
+                    crossorigin="anonymous"></script>
+                {/* <!-- horizontal --> */}
+                <ins class="adsbygoogle"
 
-     data-ad-client="ca-pub-7258253904826153"
-     data-ad-slot="9663652543"
-     data-ad-format="auto"
-     data-full-width-responsive="true"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
+                    data-ad-client="ca-pub-7258253904826153"
+                    data-ad-slot="9663652543"
+                    data-ad-format="auto"
+                    data-full-width-responsive="true"></ins>
+                <script>
+                    (adsbygoogle = window.adsbygoogle || []).push({ });
+                </script>
             </div>
             <div className="preview-container201">
                 <div className="preview201" id='Alish_mirza' style={{ color: fontColor, backgroundColor: bgColor, fontFamily: fontStyle }}>
@@ -170,18 +170,18 @@ const Preview201 = () => {
                 </div>
             </div>
             <div>
-            <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7258253904826153"
-     crossorigin="anonymous"></script>
-{/* <!-- horizontal --> */}
-<ins class="adsbygoogle"
-    
-     data-ad-client="ca-pub-7258253904826153"
-     data-ad-slot="9663652543"
-     data-ad-format="auto"
-     data-full-width-responsive="true"></ins>
-<script>
-     (adsbygoogle = window.adsbygoogle || []).push({});
-</script>
+                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7258253904826153"
+                    crossorigin="anonymous"></script>
+                {/* <!-- horizontal --> */}
+                <ins class="adsbygoogle"
+
+                    data-ad-client="ca-pub-7258253904826153"
+                    data-ad-slot="9663652543"
+                    data-ad-format="auto"
+                    data-full-width-responsive="true"></ins>
+                <script>
+                    (adsbygoogle = window.adsbygoogle || []).push({ });
+                </script>
             </div>
         </div>
     );

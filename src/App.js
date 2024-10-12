@@ -103,6 +103,8 @@ import Follow_Up_After_A_Job_Interview from './component/blogandcareer/Follow_Up
 import Preview202 from './component/coverletterFolder/Preview202';
 import CoverLettermain from './component/CoverLettermain';
 import SalaryNegotiationComponent from './component/blogandcareer/SalaryNegotiation';
+import BestOnlineCVBuilder from './component/blogandcareer/BestOnlineCVBuilder';
+import BestAIResumeBuilder from './component/blogandcareer/BestAIResumeBuilder';
 // import CoverLetterInput from './component/CoverLetterInput';
 // import CoverComponent from './component/CoverComponent';
 var images = [
@@ -194,6 +196,9 @@ function App() {
         <Route path='/Things_To_Remove_From_Your_Cv' element={<ThingsToRemoveFromYourCV/>}/>
         <Route path='/Tip_for_Interview' element={<Tip_For_Interview/>}/>
         <Route path='/AnupamKher_resume' element={<AnupamKher_resume/>}/>
+
+        {/* job and carier blog component */}
+        
         <Route path='/Blog_or_Career_Tips_Page' element={<Blog_Career/>}/>
         <Route path='/how-to-land-your-dream-job' element={<DreamJob2024/>}/>
         <Route path='top-job-search-websites' element={<TopJobSearchWebsites/>}/>
@@ -201,6 +206,9 @@ function App() {
         <Route path='/linkedin-job-hunting' element={<LinkedInJobHunting/>}/>
         <Route path='/follow-up-after-interview' element={<Follow_Up_After_A_Job_Interview/>}/>
         <Route path='/Salary_Negotiation_Component' element={<SalaryNegotiationComponent/>}/>
+        <Route path='/Best_Online_CV_Builder' element={<BestOnlineCVBuilder/>}/>
+        <Route path='/Best_AI_Resume_Builder' element={<BestAIResumeBuilder/>}/>
+
         <Route path='/preview' element={<Preview />} />
         <Route path='/preview2' element={<Preview2 />}/>
         <Route path='/preview3' element={<Preview3/>}/>
