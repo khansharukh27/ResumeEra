@@ -16,6 +16,10 @@ const BestAIResumeBuilder = () => {
           name="description"
           content="Find the best AI resume builder that helps you create a professional, free resume online. Explore the top tools and how AI can enhance your job applications."
         />
+        <meta
+          name="keyword"
+          content="best AI resume builder,free resume online ,best ai resume builder"
+        />
         <link rel="canonical" href="https://resumeera.xyz/Best_AI_Resume_Builder" />
       </Helmet>
 

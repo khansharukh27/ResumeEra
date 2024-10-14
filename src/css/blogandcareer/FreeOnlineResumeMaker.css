@@ -1,0 +1,10 @@
+.sepratediv{
+    margin-top: 10px;
+    box-shadow: 0px 0px 25px 1px  paleturquoise;
+    padding: 15px;
+    border-radius: 15px;
+
+}
+.sepratediv img{
+    box-shadow: 0px 0px 25px 1px palegreen;
+}

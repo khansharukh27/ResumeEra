@@ -61,21 +61,21 @@ const Preview3 = () => {
                     <div className='imagediv3'>
                         <img src={personalInfo.image} alt="Selected" className='image3' />
                     </div>
-                    <div className='contactdiv'>
+                    <div className='contactdiv' style={{color:fontColor}}>
                         <h6 style={{ color: headingColor }} className='section-title' >Contact</h6>
                         <hr />
-                        <p>PHONE</p>
-                        <p><i className="bi bi-telephone-forward-fill icon" /> {personalInfo.mobileNumber}</p>
-                        <p className='email'><i className="bi bi-envelope-at-fill icon" /> {personalInfo.email}</p>
-                        <p><i className="bi bi-geo-alt-fill icon" /> {personalInfo.state} {personalInfo.city} {personalInfo.postalCode}</p>
+                        
+                        <p style={{color:fontColor}}><i className="bi bi-telephone-forward-fill icon" /> {personalInfo.mobileNumber}</p>
+                        <p className='email' style={{color:fontColor}}><i className="bi bi-envelope-at-fill icon" /> {personalInfo.email}</p>
+                        <p style={{color:fontColor}}><i className="bi bi-geo-alt-fill icon" /> {personalInfo.state} {personalInfo.city} {personalInfo.postalCode}</p>
 
                         <h6 style={{ color: headingColor }} className='section-title'>Education</h6>
                         <hr />
                         {education[0].map((edu, index) => (
                             <div key={index}>
-                                <p>{edu.startYear} - {edu.endYear}</p>
-                                <p>{edu.type}</p>
-                                <p><b>{edu.univercity}</b></p>
+                                <p style={{color:fontColor}}>{edu.startYear} - {edu.endYear}</p>
+                                <p style={{color:fontColor}}>{edu.type}</p>
+                                <p style={{color:fontColor}}><b>{edu.univercity}</b></p>
                             </div>
                         ))}
                         <h6 style={{ color: headingColor }} className='section-title'>Skills</h6>
@@ -83,7 +83,7 @@ const Preview3 = () => {
                         {keyskills[0].map((skill, index) => (
                             <div key={index}>
                                 <ul>
-                                    <li>{skill.keyskills}</li>
+                                    <li style={{color:fontColor}}>{skill.keyskills}</li>
                                 </ul>
                             </div>
                         ))}
@@ -93,7 +93,7 @@ const Preview3 = () => {
                         {LLanguage[0].map((lan, index) => (
                             <div key={index}>
                                 <ul>
-                                    <li>{lan.language}</li>
+                                    <li style={{color:fontColor}}>{lan.language}</li>
                                 </ul>
                             </div>
                         ))}
@@ -104,19 +104,19 @@ const Preview3 = () => {
                     <h4>{personalInfo.firstName} {personalInfo.lastName}</h4>
                     <div className='work-experience'>
                         {work[0].map((i, index) => (
-                            <p key={index}>{i.jobtitle}</p>
+                            <p key={index} style={{color:fontColor}}>{i.jobtitle}</p>
                         ))}
                     </div>
                     <h6 style={{ color: headingColor }}>Object</h6>
                     <hr />
-                    <p style={{textAlign:'justify'}}>{personalInfo.object}</p>
+                    <p style={{textAlign:'justify',color:fontColor}}>{personalInfo.object}</p>
 
                     <h6 style={{ color: headingColor }} className='section-title'>Experience</h6>
                     {work[0].map((i, index) => (
                         <div key={index}>
-                            <p><b>{i.jobtitle}</b></p>
-                            <p><b>{i.organization}</b></p>
-                            <p><b>{i.startYear}-{i.endYear}</b></p>
+                            <p style={{color:fontColor}}><b>{i.jobtitle}</b></p>
+                            <p style={{color:fontColor}}><b>{i.organization}</b></p>
+                            <p style={{color:fontColor}}><b>{i.startYear}-{i.endYear}</b></p>
                         </div>
                     ))}
                     <h6 style={{ color: headingColor }} className='section-title'>Hobbies</h6>
@@ -124,7 +124,7 @@ const Preview3 = () => {
                     {Hobbies[0].map((hobb, index) => (
                         <div key={index}>
                             <ul>
-                                <li>{hobb.hobbies}</li>
+                                <li style={{color:fontColor}}>{hobb.hobbies}</li>
                             </ul>
                         </div>
                     ))}

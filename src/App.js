@@ -105,6 +105,7 @@ import CoverLettermain from './component/CoverLettermain';
 import SalaryNegotiationComponent from './component/blogandcareer/SalaryNegotiation';
 import BestOnlineCVBuilder from './component/blogandcareer/BestOnlineCVBuilder';
 import BestAIResumeBuilder from './component/blogandcareer/BestAIResumeBuilder';
+import FreeOnlineResumeMaker from './component/blogandcareer/FreeOnlineResumeMaker';
 // import CoverLetterInput from './component/CoverLetterInput';
 // import CoverComponent from './component/CoverComponent';
 var images = [
@@ -208,6 +209,7 @@ function App() {
         <Route path='/Salary_Negotiation_Component' element={<SalaryNegotiationComponent/>}/>
         <Route path='/Best_Online_CV_Builder' element={<BestOnlineCVBuilder/>}/>
         <Route path='/Best_AI_Resume_Builder' element={<BestAIResumeBuilder/>}/>
+        <Route path='/free-online-resume-maker' element={<FreeOnlineResumeMaker/>}/>
 
         <Route path='/preview' element={<Preview />} />
         <Route path='/preview2' element={<Preview2 />}/>

@@ -3,8 +3,8 @@
     margin-left: 0;
     margin-right: 0;
     padding: 20px;
-    background: linear-gradient(145deg, #0c0c0c, #1a1a1a, #262626);
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.7), inset 0 0 50px rgba(0, 0, 0, 0.8);
+    /* background: linear-gradient(145deg, #0c0c0c, #1a1a1a, #262626); */
+    /* box-shadow: 0 4px 15px rgba(), inset 0 0 50px rgba(); */
     filter: contrast(85%) brightness(75%);
     color: #e0e0e0;
 }

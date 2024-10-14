@@ -175,7 +175,7 @@ const Preview12 = () => {
                                 </div>
                                 <div className='d-flex '>
                                     <div className='me-2' style={{}}><i class="bi bi-envelope"></i></div>
-                                    <div><p>{personalInfo.email}</p></div>
+                                    <div><p style={{wordBreak:'break-word'}}>{personalInfo.email}</p></div>
                                 </div>
                                 <div className='d-flex'>
                                     <div className='me-2' style={{}}><i class="bi bi-geo-alt-fill" ></i></div>
@@ -183,7 +183,13 @@ const Preview12 = () => {
                                 </div>
                                 <div className='d-flex'>
                                     <div className='me-2' style={{}}><i class="bi bi-linkedin "></i></div>
-                                    <div><p> {sMedia[0].linkedin}</p></div>
+                                    <div><b>
+                            {sMedia?.[0]?.linkedin && (
+                                <>
+                                    <i className="bi bi-linkedin" /> {sMedia[0].linkedin}
+                                </>
+                            )}
+                        </b></div>
                                 </div>
                             </div>
                             <div className='mb-2 pb-2' style={{color:fontColor }}>

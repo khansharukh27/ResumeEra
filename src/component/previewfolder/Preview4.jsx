@@ -72,7 +72,7 @@ const Preview4 = () => {
                             <h1 className="last-name" style={{ color:headingColor,position: 'absolute', top: '50px', left: '250px' }}>{personalInfo.lastName}</h1>
                             <p className="job-title" style={{ position: 'absolute', top: '90px', left: '150px' }}>
                                 {work[0].map((i, index) => (
-                                    <div key={index} style={{}}>
+                                    <div key={index}  style={{color:fontColor}}>
                                         {i.jobtitle}
                                     </div>
                                 ))}
@@ -83,11 +83,11 @@ const Preview4 = () => {
                     <div className="resume-body d-flex mt-3 justify-content-between w-100">
                         <div className="left-column ms-2 me-2 w-50" style={{ marginTop: '110px' }}>
                             <h4 style={{ color: headingColor }} className="section-title about-title w-100 text-center">About</h4>
-                            <div className="about-content ms-3">
-                                <p className="objective ms-2 ">{personalInfo.object}</p>
-                                <p className="contact-info"><i className="bi bi-telephone-forward-fill me-2" style={{ }} />{personalInfo.mobileNumber}</p>
-                                <p className="email" style={{ wordWrap: 'break-word' }}><i className="bi bi-envelope-at-fill" style={{  }}></i>{personalInfo.email}</p>
-                                <p className="address"><i className="bi bi-geo-alt-fill" style={{ fontSize: '' }}></i>{personalInfo.state} {personalInfo.city} {personalInfo.postalCode}</p>
+                            <div className="about-content ms-3" >
+                                <p style={{color:fontColor}} className="objective ms-2 ">{personalInfo.object}</p>
+                                <p style={{color:fontColor}} className="contact-info"><i className="bi bi-telephone-forward-fill me-2" style={{ }} />{personalInfo.mobileNumber}</p>
+                                <p  className="email" style={{ wordWrap: 'break-word',color:fontColor }}><i className="bi bi-envelope-at-fill" style={{  }}></i>{personalInfo.email}</p>
+                                <p style={{color:fontColor}} className="address"><i className="bi bi-geo-alt-fill" style={{ fontSize: '' }}></i>{personalInfo.state} {personalInfo.city} {personalInfo.postalCode}</p>
                             </div>
 
                             <h4 className="section-title language-title text-center" style={{ color: 'white', backgroundColor: '#100129',color:headingColor }}>Language</h4>
@@ -114,10 +114,10 @@ const Preview4 = () => {
                             <div className="experience-content">
                                 {work[0].map((i, index) => (
                                     <div key={index}>
-                                        <p style={{ marginBottom: '2px', whiteSpace: 'nowrap' }}><b>{i.jobtitle}</b></p>
-                                        <p style={{ marginBottom: '2px' }}><b>{i.organization}</b></p>
-                                        <p><b>{i.startYear}-{i.endYear}</b></p>
-                                        <p>{i.aboutexperience}</p>
+                                        <p style={{ marginBottom: '2px', whiteSpace: 'nowrap',color:fontColor }}><b>{i.jobtitle}</b></p>
+                                        <p style={{ marginBottom: '2px',color:fontColor }}><b>{i.organization}</b></p>
+                                        <p style={{color:fontColor}}><b>{i.startYear}-{i.endYear}</b></p>
+                                        <p style={{color:fontColor}}>{i.aboutexperience}</p>
                                     </div>
                                 ))}
                             </div>
@@ -126,9 +126,9 @@ const Preview4 = () => {
                             <div className="education-content">
                                 {education[0].map((edu, index) => (
                                     <div key={index}>
-                                        <p className=''><b>{edu.univercity}</b></p>
-                                        <p className=''>{edu.type}</p>
-                                        <p>{edu.startYear} - {edu.endYear}</p>
+                                        <p style={{color:fontColor}} className=''><b>{edu.univercity}</b></p>
+                                        <p style={{color:fontColor}} className=''>{edu.type}</p>
+                                        <p style={{color:fontColor}}>{edu.startYear} - {edu.endYear}</p>
                                     </div>
                                 ))}
                             </div>

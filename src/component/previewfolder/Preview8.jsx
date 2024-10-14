@@ -29,28 +29,28 @@ const Preview8 = () => {
         try {
             const scale = 5; // Increase the scale for better resolution
             const canvas = await html2canvas(element, {
-                scale: scale, 
+                scale: scale,
                 useCORS: true, // Allows cross-origin images to be rendered correctly
                 logging: true, // Enable logging for debugging
             });
-    
+
             const pdf = new jsPDF('p', 'mm', 'a4');
             const imgData = canvas.toDataURL('image/png');
-    
+
             // Calculate the aspect ratio to fit A4
             const imgWidth = 210; // A4 width in mm
             const imgHeight = (canvas.height * imgWidth) / canvas.width;
-    
+
             pdf.addImage(imgData, 'PNG', 0, 0, imgWidth, imgHeight, undefined, 'FAST');
-    
+
             const fileName = `${inputFields}.pdf`;
             pdf.save(fileName);
-    
+
             // Store the image data URL in localStorage
             const savedResumes = JSON.parse(localStorage.getItem('savedResumes')) || [];
             savedResumes.push(imgData);
             localStorage.setItem('savedResumes', JSON.stringify(savedResumes));
-    
+
             alert('Your Resume is downloaded');
             navigate('/myresume');
         } catch (error) {
@@ -59,15 +59,23 @@ const Preview8 = () => {
     };
     return (
         <div className="preview-main8">
-            <div className="resume-preview8 " style={{color:fontColor, backgroundColor: bgColor, fontFamily: fontStyle }} id="Alisha_mirza">
+            <div className="resume-preview8 " style={{ color: fontColor, backgroundColor: bgColor, fontFamily: fontStyle }} id="Alisha_mirza">
                 <div className='main1-8' style={{ backgroundColor: '#c9bca4' }}>
                     <img src={personalInfo.image} className="mb-3 " alt="Selected" style={{ width: '100px', height: '100px', borderRadius: '50%' }} />
-                    <h5  style={{ backgroundColor: 'black', color: headingColor, padding: '3px' }}> CONTACT</h5>
+                    <h5 style={{ backgroundColor: 'black', color: headingColor, padding: '3px' }}> CONTACT</h5>
 
                     <p><i class="bi bi-telephone-fill me-2"></i>{personalInfo.mobileNumber}</p>
                     <p><i class="bi bi-envelope me-2"></i>{personalInfo.email}</p>
                     <p><i class="bi bi-geo-alt-fill me-2" ></i>{personalInfo.address} {personalInfo.city} {personalInfo.state} {personalInfo.postalCode}</p>
-                    <p><i class="bi bi-linkedin"></i> {sMedia[0].linkedin}</p>
+                    <div className="mt-2 me-3">
+                        <b>
+                            {sMedia?.[0]?.linkedin && (
+                                <>
+                                    <i className="bi bi-linkedin" /> {sMedia[0].linkedin}
+                                </>
+                            )}
+                        </b>
+                    </div>
                     <h5 className="mt-5 " style={{ backgroundColor: 'black', color: headingColor, padding: '3px' }} >EDUCATION</h5>
                     {education[0].map((edu, index) => (
                         <div key={index} className="">
@@ -76,7 +84,7 @@ const Preview8 = () => {
                             <p>{edu.startYear} - {edu.endYear}</p>
                         </div>
                     ))}
-                    <h5  className='mt-5' style={{ backgroundColor: 'balck', color: headingColor, padding: '3px' }}>SKILLS</h5>
+                    <h5 className='mt-5' style={{ backgroundColor: 'balck', color: headingColor, padding: '3px' }}>SKILLS</h5>
                     {keyskills[0].map((keys, index) => (
                         <div key={index} className="">
                             <ul>
@@ -95,33 +103,33 @@ const Preview8 = () => {
                         </p>
                     </div>
                     <div>
-                        <h5  style={{ backgroundColor: 'black', color: headingColor, padding: '3px' }}> JOB EXPERIENCE</h5>
+                        <h5 style={{ backgroundColor: 'black', color: headingColor, padding: '3px' }}> JOB EXPERIENCE</h5>
                         {work[0].map((works, index) => (
                             <div key={index} className='jobinner-div8'>
-                                <p><b>{works.jobtitle}</b></p>  
+                                <p><b>{works.jobtitle}</b></p>
                                 <p className='year8'>{works.startYear}-{works.endYear}</p>
                                 <p className='year8'>{works.organization} </p>
                             </div>
                         ))}
-                        <div><h5  style={{ backgroundColor: 'black', color: headingColor, padding: '3px' }}>LANGUAGE</h5>
-                        {LLanguage[0].map((lan, index) => (
-                            <div key={index}>
-                                <ul>
-                                    <li>
-                                        {lan.language}
-                                    </li>
-                                </ul>
-                            </div>
-                        ))}
+                        <div><h5 style={{ backgroundColor: 'black', color: headingColor, padding: '3px' }}>LANGUAGE</h5>
+                            {LLanguage[0].map((lan, index) => (
+                                <div key={index}>
+                                    <ul>
+                                        <li>
+                                            {lan.language}
+                                        </li>
+                                    </ul>
+                                </div>
+                            ))}
                         </div>
-                        <h5  className='mt-5' style={{ backgroundColor: 'black', color: headingColor, padding: '3px' }}>ABOUT ME</h5>
+                        <h5 className='mt-5' style={{ backgroundColor: 'black', color: headingColor, padding: '3px' }}>ABOUT ME</h5>
                         <hr />
                         <div className='d-flex justify-content-between'>
                             <div><b>Date of Birth:- </b><p>{personalInfo.dateofbirth}</p><hr style={{ height: '5px' }} /></div>
                             <div><b>Marital Status:- </b><p> {personalInfo.maritalstatus}</p><hr style={{ height: '5px' }} /></div>
                             <div><b>Nationality:- </b><p>{personalInfo.nationality}</p><hr style={{ height: '5px' }} /></div>
                         </div>
-                        <div><h5  style={{ backgroundColor: 'black', color: headingColor, padding: '3px' }}>HOBBIES</h5></div>
+                        <div><h5 style={{ backgroundColor: 'black', color: headingColor, padding: '3px' }}>HOBBIES</h5></div>
                         <hr />
                         {Hobbies[0].map((hobb, index) => (
                             <div key={index}>

@@ -4,11 +4,12 @@ import '.././previewfolder/CSS/Preview201.css'
 import { useNavigate } from "react-router-dom";
 import html2canvas from "html2canvas";
 import jsPDF from "jspdf";
-import Hadith from "../Hadith";
+// import Hadith from "../Hadith";
+import '../../component/previewfolder/CSS/preview202.css'
 const Preview202 = () => {
     const [localData, setLocalData] = useState({});
     const [inputFields, setInputFields] = useState('resume.pdf');
-    const [bgColor, setBgColor] = useState('#F5DEB3'); // Default background color (wheat)
+    const [bgColor, setBgColor] = useState('white'); // Default background color (wheat)
     const [fontStyle, setFontStyle] = useState('Arial'); // Default font style
     const [headingColor, setHeadingColor] = useState('black')
     const [fontColor, setFontColor] = useState('black')
@@ -67,44 +68,82 @@ const Preview202 = () => {
     const result = Object.keys(reduxData).length > 0 ? reduxData : localData;
 
     // Check if required fields are available
-    const hasRequiredData = result && result.fullname && result.jobposition;
+    
 
     return (
-        <div className="">
-            <div>
-                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7258253904826153"
-                    crossorigin="anonymous"></script>
-                {/* <!-- horizontal --> */}
-                <ins class="adsbygoogle"
+        <div className="preview-container202">
+            
+            
+                <div className="preview202" id='Alish_mirza' style={{ color: fontColor, backgroundColor: bgColor, fontFamily: fontStyle }}>
+                    <header className="header">
+                    <h3 style={{color:headingColor,textAlign:'center',fontWeight:'900'}} >{result.fullname}</h3>
+                    <p style={{ color: fontColor ,textAlign:'center'}}>{result.mobileNumber}</p>
+                    <p style={{ color: fontColor,textAlign:'center',lineHeight:'.5px' }}>{result.email}</p>
+                    </header>
+                    <hr style={{width:'inherite'}} />
+                    <div className="your-object-202">
+                        <p style={{ color: fontColor }}>DEAR {result.hiringManager}</p>
+                        <p style={{ color: fontColor }}>{result.object}</p>
+                    </div>
+                    <div className="sincerely-201" style={{fontWeight:'bolder'}}><p style={{ color: fontColor }}>SINCERELY</p>
+                        <p style={{ color: fontColor }}>{result.fullname}</p>
+                        <p style={{ color: fontColor }}>{result.mobileNumber}</p>
+                    <p style={{ color: fontColor }}>{result.email}</p>
+                    </div>
+                    
+                </div>
+                <div className="resume-download-section">
+                    <div className='d-flex'>
+                        <input type="text" placeholder="resume name" className="resume-name-input" style={{ borderRadius: '5px', padding: '10px' }} onChange={(e) => setInputFields(e.target.value)} />
+                        <button onClick={handleDownloadPDF} type="btn" className="btn btn-primary ms-2 download-button">Download</button>
 
-                    data-ad-client="ca-pub-7258253904826153"
-                    data-ad-slot="9663652543"
-                    data-ad-format="auto"
-                    data-full-width-responsive="true"></ins>
-                <script>
-                    (adsbygoogle = window.adsbygoogle || []).push({ });
-                </script>
-            </div>
-            <div className="preview-container201">
-                <div className="preview201" id='Alish_mirza' style={{ color: fontColor, backgroundColor: bgColor, fontFamily: fontStyle }}>
-                    <h1>coming soon...</h1>
-                </div>
-                </div>
-                <div>
-                    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7258253904826153"
-                        crossorigin="anonymous"></script>
-                    {/* <!-- horizontal --> */}
-                    <ins class="adsbygoogle"
+                    </div>
 
-                        data-ad-client="ca-pub-7258253904826153"
-                        data-ad-slot="9663652543"
-                        data-ad-format="auto"
-                        data-full-width-responsive="true"></ins>
-                    <script>
-                        (adsbygoogle = window.adsbygoogle || []).push({ });
-                    </script>
+                    {/* Color Picker for Background Color */}
+                    <div className='d-flex border' style={{ marginTop: '5px', display: 'flex', flexDirection: 'row', justifyContent: 'center' }}>
+                        <input type="color" value={bgColor} onChange={(e) => setBgColor(e.target.value)} className="bg-color-picker ms-2" />
+                        {/* Font Style Selector */}
+                        <select value={fontStyle} onChange={(e) => setFontStyle(e.target.value)} className="font-style-selector ms-2">
+                            <option value="Arial">Arial</option>
+                            <option value="Arial Black">Arial Black</option>
+                            <option value="Verdana">Verdana</option>
+                            <option value="Tahoma">Tahoma</option>
+                            <option value="Trebuchet MS">Trebuchet MS</option>
+                            <option value="Impact">Impact</option>
+                            <option value="Times New Roman">Times New Roman</option>
+                            <option value="Georgia">Georgia</option>
+                            <option value="Palatino Linotype">Palatino Linotype</option>
+                            <option value="Courier New">Courier New</option>
+                            <option value="Lucida Console">Lucida Console</option>
+                            <option value="Lucida Sans Unicode">Lucida Sans Unicode</option>
+                            <option value="Gill Sans">Gill Sans</option>
+                            <option value="Century Gothic">Century Gothic</option>
+                            <option value="Comic Sans MS">Comic Sans MS</option>
+                            <option value="Garamond">Garamond</option>
+                            <option value="Bookman">Bookman</option>
+                            <option value="Arial Narrow">Arial Narrow</option>
+                            <option value="Brush Script MT">Brush Script MT</option>
+                            <option value="Candara">Candara</option>
+                            <option value="Franklin Gothic Medium">Franklin Gothic Medium</option>
+                            <option value="Goudy Old Style">Goudy Old Style</option>
+                            <option value="Herculanum">Herculanum</option>
+                            <option value="Monaco">Monaco</option>
+                            <option value="Optima">Optima</option>
+                            <option value="Perpetua">Perpetua</option>
+                            <option value="Rockwell">Rockwell</option>
+                            <option value="Segoe UI">Segoe UI</option>
+                        </select>
+                    </div>
+                    <div>
+                        <span>Font Color </span>
+                        <input type="color" value={fontColor} onChange={(e) => setFontColor(e.target.value)} className="bg-color-picker ms-2" />
+                    </div>
+                    <div>
+                        <span>Heading Color </span>
+                        <input type="color" value={headingColor} onChange={(e) => setHeadingColor(e.target.value)} className="bg-color-picker ms-2" />
+                    </div>
                 </div>
-            </div>
+                </div>
             );
 };
 

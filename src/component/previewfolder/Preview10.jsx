@@ -125,7 +125,15 @@ const Preview10 = () => {
                             </div>
                             <div className='d-flex'>
                                 <div className='me-2' style={{ backgroundColor: 'yellow', borderBottomLeftRadius: '5px', borderBottomRightRadius: '5px' }}><i class="bi bi-linkedin me-2 p-1"></i></div>
-                                <div><p> {sMedia[0].linkedin}</p></div>
+                                <div className="mt-2 me-3">
+                        <b>
+                            {sMedia?.[0]?.linkedin && (
+                                <>
+                                    <i className="bi bi-linkedin" /> {sMedia[0].linkedin}
+                                </>
+                            )}
+                        </b>
+                    </div>
                             </div>
                         </div>
 

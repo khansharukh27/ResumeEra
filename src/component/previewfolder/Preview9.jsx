@@ -85,7 +85,7 @@ const Preview9 = () => {
                             </div>
                             <div className='d-flex'>
                                 <div className='me-2' style={{ backgroundColor: 'yellow', borderBottomLeftRadius: '50%', borderBottomRightRadius: '50%' }}><i class="bi bi-linkedin me-2 p-1"></i></div>
-                                <div><p style={{color:fontColor}}> {sMedia[0].linkedin}</p></div>
+                                <div><p style={{color:fontColor}}> {sMedia?.[0]?.linkedin || ''}</p></div>
                             </div>
                         </div>
                         <p className="heading9" style={{color:headingColor}}  >EDUCATION_</p>

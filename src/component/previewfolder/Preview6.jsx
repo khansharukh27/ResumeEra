@@ -14,13 +14,14 @@ const Preview6 = () => {
 
 
     const navigate = useNavigate();
-    const personalInfo = useSelector((state) => state.reducer.personalInfo[0]);
-    const education = useSelector((state) => [state.reducer.education[0]]);
-    const LLanguage = useSelector((state) => [state.reducer.addLanguage[0]]);
-    const Hobbies = useSelector((state) => [state.reducer.addHobies[0]]);
-    const keyskills = useSelector((state) => [state.reducer.keySkills[0]]);
-    const work = useSelector((state) => [state.reducer.workExperience[0]]);
-    const sMedia = useSelector((state) => [state.reducer.socialMediaLink[0]])
+    const personalInfo = useSelector((state) => state.reducer?.personalInfo?.[0] || null);
+    const education = useSelector((state) => state.reducer?.education?.[0] ? [state.reducer.education[0]] : []);
+    const LLanguage = useSelector((state) => state.reducer?.addLanguage?.[0] ? [state.reducer.addLanguage[0]] : []);
+    const Hobbies = useSelector((state) => state.reducer?.addHobies?.[0] ? [state.reducer.addHobies[0]] : []);
+    const keyskills = useSelector((state) => state.reducer?.keySkills?.[0] ? [state.reducer.keySkills[0]] : []);
+    const work = useSelector((state) => state.reducer?.workExperience?.[0] ? [state.reducer.workExperience[0]] : []);
+    const sMedia = useSelector((state) => state.reducer?.socialMediaLink?.[0] ? [state.reducer.socialMediaLink[0]] : []);
+
     const result = useSelector((state) => [state.reducer])
     console.log('reducer:-', result)
 
@@ -31,28 +32,28 @@ const Preview6 = () => {
         try {
             const scale = 5; // Increase the scale for better resolution
             const canvas = await html2canvas(element, {
-                scale: scale, 
+                scale: scale,
                 useCORS: true, // Allows cross-origin images to be rendered correctly
                 logging: true, // Enable logging for debugging
             });
-    
+
             const pdf = new jsPDF('p', 'mm', 'a4');
             const imgData = canvas.toDataURL('image/png');
-    
+
             // Calculate the aspect ratio to fit A4
             const imgWidth = 210; // A4 width in mm
             const imgHeight = (canvas.height * imgWidth) / canvas.width;
-    
+
             pdf.addImage(imgData, 'PNG', 0, 0, imgWidth, imgHeight, undefined, 'FAST');
-    
+
             const fileName = `${inputFields}.pdf`;
             pdf.save(fileName);
-    
+
             // Store the image data URL in localStorage
             const savedResumes = JSON.parse(localStorage.getItem('savedResumes')) || [];
             savedResumes.push(imgData);
             localStorage.setItem('savedResumes', JSON.stringify(savedResumes));
-    
+
             alert('Your Resume is downloaded');
             navigate('/myresume');
         } catch (error) {
@@ -61,7 +62,7 @@ const Preview6 = () => {
     };
     return (
         <div className='preview6-main'>
-            <div className="resume-preview6" style={{ color:fontColor,backgroundColor: bgColor, fontFamily: fontStyle }} id="Alisha_mirza">
+            <div className="resume-preview6" style={{ color: fontColor, backgroundColor: bgColor, fontFamily: fontStyle }} id="Alisha_mirza">
 
                 <div className='name-div'>
                     <h5 style={{ color: headingColor }} className="pt-5 ms-5"><b>{personalInfo.firstName} {personalInfo.lastName}</b></h5>
@@ -69,7 +70,7 @@ const Preview6 = () => {
                         {work[0][0].jobtitle}
                     </p>
                 </div>
-                <div className="information-section6 ms-5" style={{color:'grey'}}>
+                <div className="information-section6 ms-5" style={{ color: 'grey' }}>
                     <div className='d-flex inner-information6' >
                         <div className="mt-2 me-3"><b> <i className="bi bi-telephone-forward-fill"></i>{personalInfo.mobileNumber}</b> </div>
                         <div className="mt-2 me-3"><b><i className="bi bi-geo-alt-fill "></i> {personalInfo.city} {personalInfo.state} </b></div>
@@ -77,7 +78,15 @@ const Preview6 = () => {
                     </div>
                     <div className='d-flex justify-content-between inner-information6'>
                         <div className=" mt-2 me-3" style={{ whiteSpace: 'nowrap' }}> <b><i className="bi bi-envelope-at"></i>{personalInfo.email}</b></div>
-                        <div className=" mt-2 me-3"> <b><i className="bi bi-linkedin "></i>{sMedia[0].linkedin}</b></div>
+                        <div className="mt-2 me-3">
+                            <b>
+                                {sMedia?.[0]?.linkedin && (
+                                    <>
+                                        <i className="bi bi-linkedin" /> {sMedia[0].linkedin}
+                                    </>
+                                )}
+                            </b>
+                        </div>
                     </div>
                 </div>
                 <div className="job-experience6 mt-4 ms-5">

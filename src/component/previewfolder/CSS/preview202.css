@@ -1,0 +1,21 @@
+.preview-container202{
+    margin: 50px;
+    padding: 25px;
+    display: flex;
+    justify-content: space-between;
+}
+.preview202{
+    padding: 15px;
+    width: 50%;
+    margin-right: 20px;
+    /* width: 50%; */
+    box-shadow: 0px 0px 5px 0px grey;
+    /* border-radius: 15px; */
+    height:max-content;
+}
+.your-object-202{
+    width: 90%;
+}
+.resume-download-section{
+    width: 40%;
+}
