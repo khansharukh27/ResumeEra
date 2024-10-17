@@ -1,23 +1,18 @@
-
-/* Container class for the Home component */
+/* Optimized Container class for the Home component */
 .home-container {
     margin-left: 0;
     margin-right: 0;
     padding: 20px; /* Optional: Adds some space inside the container */
-
-    background: linear-gradient(145deg, white); /* Dark gradient background */
-    
-    filter: contrast(85%) brightness(75%); /* Reduces brightness and increases contrast for a moody look */
+    background-color: white; /* Simplify background */
     color: #e0e0e0; /* Light gray text color for readability */
+    /* Removed background gradient and filters for better performance */
 }
-.home-container p,ul{
+
+.home-container p, ul {
     font-weight: 200;
-
 }
 
-
-
-.home_div{
+.home_div {
     display: flex;
     justify-content: space-between;
     margin-top: 20px;
@@ -30,43 +25,37 @@
     object-fit: cover;
 }
 
-/* Add rotation animation to the logo */
+/* Removed rotation animation to optimize LCP */
 .home-logo img {
-    width: 120px; /* Adjust as needed */
+    width: 120px;
     height: 120px;
     border: 2px solid black;
     border-radius: 50%;
 }
 
-
 .home-welcome {
     margin-top: 25px;
     text-align: justify;
-
-    
-}
-.home-welcome h4{
-    font-size: 0px;
-            font-weight: bold;   
-            color: black;
-            margin-left: 40px;
 }
 
-.home-welcome h4 a{
+.home-welcome h4 {
+    font-size: 16px; /* Adjust font size */
+    font-weight: bold;
+    color: black;
+    margin-left: 20px;
+}
+
+.home-welcome h4 a {
     text-decoration: none;
     font-size: medium;
     margin-top: 40px;
 }
 
-.home-link {
-}
+.home-link {}
 
 /* Carousel container */
 .home-carousel {
-    margin-right: 0px;
-    margin-left: 0px;
     width: 100%;
-    /* border: 5px solid green; */
 }
 
 /* Description of the ResumeEra platform */
@@ -76,13 +65,12 @@
 }
 
 /* Section for how to create a resume */
-.home-how-to {    
+.home-how-to {
     text-align: center;
     font-size: 30px;
-            font-weight: bold;
-            color: black;
-            margin-left: 20px;
-
+    font-weight: bold;
+    color: black;
+    margin-left: 20px;
 }
 
 /* Steps for creating a resume */
@@ -90,6 +78,7 @@
     display: flex;
     justify-content: space-around;
 }
+
 .home-step p {
     font-size: medium;
     font-weight: 200;
@@ -99,22 +88,13 @@
     width: 200px;
 }
 
-/* Divider line */
-.home-divider {
-}
-
 /* Section for changing CV */
 .home-change-cv {
     display: flex;
     justify-content: space-around;
 }
 
-.home-change-cv-image {
-    margin: 5px;
-    padding: 5px;
-   
-}
-.home-change-cv-image img{
+.home-change-cv-image img {
     width: 250px;
     height: 250px;
 }
@@ -123,17 +103,18 @@
     margin-left: 15px;
     padding: 5px;
     margin-top: 45px;
-    /* font-size: 30px; */
-            /* font-weight: bold; */
-           color:black
+    color: black;
 }
-.home-change-cv-info h4{
+
+.home-change-cv-info h4 {
     font-weight: 700;
 }
-.home-change-cv-info p{
+
+.home-change-cv-info p {
     font-weight: 200;
 }
-.home-change-cv-info p a{
+
+.home-change-cv-info p a {
     border: 3px solid black;
     text-decoration: none;
     border-radius: 8px;
@@ -141,11 +122,7 @@
     padding: 15px;
     text-align: center;
     font-size: 20px;
-            font-weight: bold;
-            /* background: linear-gradient(90deg, red, orange, yellow, green, blue, indigo, violet);
-            -webkit-background-clip: text;
-            color: transparent; */
-    
+    font-weight: bold;
 }
 
 /* Features of the resume builder */
@@ -157,40 +134,26 @@
     display: flex;
     justify-content: space-around;
 }
-.home-resume-builder h4{
+
+.home-resume-builder h4 {
     font-weight: 700;
     color: black;
 }
-.home-resume-builder p{
+
+.home-resume-builder p {
     font-weight: 200;
     color: black;
 }
 
-.home-feature {
-    margin: 15px;
-    padding: 5px;
-    text-align: justify;
-}
-.home-feature h5{
- color:black;
- font-weight: 900;
-}
-.home-feature p{
-    
-            color: black;
-}
-
-
 /* Section for creating a professional story */
 .home-professional-story {
     text-align: center;
-    /* display: flex; */
     border: 2px solid grey;
     border-radius: 8px;
     padding: 10px;
-    /* background-color:whitesmoke; */
-    color:black
+    color: black;
 }
+
 .home-professional-story h2 {
     color: black;
     font-weight: 700;
@@ -200,10 +163,11 @@
     color: black;
     font-weight: 200;
 }
-.home-story-feature-main{
+
+.home-story-feature-main {
     display: flex;
-    
 }
+
 .home-story-feature {
     border: 1px solid black;
     border-radius: 8px;
@@ -211,34 +175,30 @@
     text-align: justify;
     margin: 5px;
 }
-.home-story-feature h3{
-    background: linear-gradient(145deg, orange, violet);
-    -webkit-background-clip: text;
-    color: transparent;
 
+.home-story-feature h3 {
+    color: black; /* Removed gradient text */
 }
 
 /* Section for cover letter */
 .home-cover-letter h2 {
     text-align: center;
-   font-weight: 700;
+    font-weight: 700;
     color: black;
-    
 }
-.home-cover-letter p{
+
+.home-cover-letter p {
     text-align: justify;
     color: black;
     font-weight: 200;
 }
 
-.home-cover-letter-carousel {
-}
+/* Removed animation on carousel */
+.home-cover-letter-carousel {}
 
+/* Responsive media queries */
 
-/* For devices with max width of 425px */
 @media (max-width: 768px) {
-    /* home.css */
-
     .home-container {
         margin-left: 0px;
         margin-right: 0px;
@@ -251,20 +211,10 @@
         margin-top: 20px;
     }
 
-    .home-logo {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
     .home-logo img {
-        width: 100px; /* Adjust as needed */
+        width: 100px;
         height: 100px;
-        animation: rotate 3s linear infinite;
-        border: 2px solid transparent;
     }
-
-    
 
     .home-welcome {
         margin-top: 25px;
@@ -274,7 +224,6 @@
     .home-welcome h4 {
         font-size: 30px;
         font-weight: bold;
-        
         color: black;
         margin-left: 20px;
     }
@@ -285,7 +234,6 @@
     }
 
     .home-how-to,
-    .home-how-to p,
     .home-step {
         text-align: center;
         font-size: 30px;
@@ -295,17 +243,7 @@
     }
 
     .home-steps {
-        display: flex;
         flex-direction: column;
-    }
-
-    .home-step p {
-        font-size: medium;
-        font-weight: 200;
-    }
-
-    .home-step h4 {
-        font-weight: 700;
     }
 
     .home-step img {
@@ -313,7 +251,6 @@
     }
 
     .home-change-cv {
-        display: flex;
         flex-direction: column;
     }
 
@@ -322,195 +259,17 @@
         height: 250px;
     }
 
-    .home-change-cv-info h4,
-    .home-change-cv-info ul {
-        font-weight: 700;
-        color: black;
-    }
-
     .home-change-cv-info p a {
-        border: 3px solid black;
-        text-decoration: none;
-        border-radius: 8px;
-        background-color: aqua;
-        padding: 15px;
-        text-align: center;
-        font-size: 20px;
-        font-weight: bold;
         margin-left: 35px;
         margin-top: 10px;
     }
 
-    .home-resume-builder h4,
-    .home-resume-builder p {
-        text-align: center;
-        color: black;
-    }
-
     .home-resume-features {
-        display: flex;
-        flex-direction: column;
-        color: black;
-    }
-
-    .home-feature {
-        margin: 5px;
-        padding: 5px;
-        text-align: justify;
-    }
-
-    .home-professional-story {
-        background-color: whitesmoke;
-    }
-    .home-story-feature-main{
-        display: flex;
         flex-direction: column;
     }
 }
 
-
-/* For devices with max width of 425px */
 @media (max-width: 425px) {
-    /* home.css */
-
-    .home-container {
-        margin-left: 0px;
-        margin-right: 0px;
-    }
-
-    .home_div {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        margin-top: 20px;
-    }
-
-    .home-logo {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .home-logo img {
-        width: 100px; /* Adjust as needed */
-        height: 100px;
-        /* animation: rotate 3s linear infinite; */
-        border: 2px solid transparent;
-    }
-
-    
-
-    .home-welcome {
-        margin-top: 25px;
-        text-align: center;
-    }
-
-    .home-welcome h4 {
-        font-size: 30px;
-        font-weight: bold;
-        background: linear-gradient(90deg, white);
-        -webkit-background-clip: text;
-        color: transparent;
-        margin-left: 20px;
-    }
-
-    .home-description {
-        text-align: justify;
-        margin: 5px;
-    }
-
-    .home-how-to,
-    .home-how-to p,
-    .home-step {
-        text-align: center;
-        font-size: 30px;
-        font-weight: bold;
-        color: black;
-        margin-left: 20px;
-    }
-
-    .home-steps {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .home-step p {
-        font-size: medium;
-        font-weight: 200;
-    }
-
-    .home-step h4 {
-        font-weight: 700;
-    }
-
-    .home-step img {
-        width: 200px;
-    }
-
-    .home-change-cv {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .home-change-cv-image img {
-        width: 250px;
-        height: 250px;
-    }
-
-    .home-change-cv-info h4,
-    .home-change-cv-info ul {
-        font-weight: 700;
-        color: black;
-    }
-
-    .home-change-cv-info p a {
-        border: 3px solid black;
-        text-decoration: none;
-        border-radius: 8px;
-        background-color: aqua;
-        padding: 15px;
-        text-align: center;
-        font-size: 20px;
-        font-weight: bold;
-        margin-left: 35px;
-        margin-top: 10px;
-    }
-
-    .home-resume-builder h4,
-    .home-resume-builder p {
-        text-align: center;
-        color: black;
-    }
-
-    .home-resume-features {
-        display: flex;
-        flex-direction: column;
-        color: black;
-    }
-
-    .home-feature {
-        margin: 5px;
-        padding: 5px;
-        text-align: justify;
-    }
-
-    .home-professional-story {
-        background-color: whitesmoke;
-    }
-    .home-story-feature-main{
-        display: flex;
-        flex-direction: column;
-    }
-}
-
-/* For devices with max width of 375px */
-@media (max-width: 375px) {
-    /* Similar styles as above but specific to this width */
-    .home-container {
-        width: 100%;
-    }
-
-    /* Adjust other styles as needed */
     .home-logo img {
         width: 90px;
         height: 90px;
@@ -519,14 +278,12 @@
     .home-step img {
         width: 180px;
     }
+    .home-story-feature-main {
+        display: flex;
+    }
 }
 
-/* For devices with max width of 320px */
 @media (max-width: 320px) {
-    .home-container {
-        width: 100%;
-    }
-
     .home-logo img {
         width: 80px;
         height: 80px;
@@ -535,9 +292,8 @@
     .home-step img {
         width: 160px;
     }
-    .home-story-feature-main{
+    .home-story-feature-main {
         display: flex;
         flex-direction: column;
-        width: 260px;
     }
 }

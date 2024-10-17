@@ -41,6 +41,7 @@ const NormalResume = (props) => {
                                 className="template-image"
                                 src={image.src}
                                 alt={image.alt}
+                                loading="lazy"
                             />
                             {hoveredImage === image.id && (
                                 <a
@@ -51,6 +52,7 @@ const NormalResume = (props) => {
                                     Go To  Resume
                                 </a>
                             )}
+                            <div style={{textAlign:'center',color:'black'}}>{image.alt}</div>
                         </div>
                     )) : (
                         <p>No templates available.</p>

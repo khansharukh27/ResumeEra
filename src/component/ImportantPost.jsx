@@ -20,6 +20,9 @@ const ImportantPost = () => {
                     </Link>
                 </li>
                 <li>
+                <NewAds/>
+                </li>
+                <li>
                     <Link to="/how-to-create-a-professional-resume">
                         How to Create a Professional Resume
                     </Link>
@@ -28,6 +31,9 @@ const ImportantPost = () => {
                     <Link to="/tips-for-writing-a-cover-letter" >
                         Tips for Writing a Cover Letter
                     </Link>
+                </li>
+                <li>
+                <NewAds/>
                 </li>
                 <li>
                     <Link to="/why-soft-skills-matter" >
@@ -40,6 +46,9 @@ const ImportantPost = () => {
                     </Link>
                 </li>
                 <li>
+                <NewAds/>
+                </li>
+                <li>
                     <Link to="/common-mistakes-to-avoid-on-your-resume" >
                         Common Mistakes to Avoid on Your Resume
                     </Link>
@@ -50,9 +59,15 @@ const ImportantPost = () => {
                     </Link>
                 </li>
                 <li>
+                <NewAds/>
+                </li>
+                <li>
                     <Link to="/creating-a-resume-for-your-first-job" >
                         Creating a Resume for Your First Job
                     </Link>
+                </li>
+                <li>
+                <NewAds/>
                 </li>
                 <li>
                     <Link to="/how-to-highlight-achievements-in-a-resume" >
@@ -65,9 +80,20 @@ const ImportantPost = () => {
                     </Link>
                 </li>
                 <li>
+                <NewAds/>
+                </li>
+                <li>
                     <Link to="/crafting-a-modern-resume" >
                         Crafting a Modern Resume
                     </Link>
+                </li>
+                <li>
+                    <Link to="/tip_for_interview" >
+                    Tip For Interview
+                    </Link>
+                </li>
+                <li>
+                <NewAds/>
                 </li>
                 <li>
                     <Link to="/how-to-format-a-resume-correctly" >
@@ -80,6 +106,9 @@ const ImportantPost = () => {
                     </Link>
                 </li>
                 <li>
+                <NewAds/>
+                </li>
+                <li>
                     <Link to="/how-to-use-keywords-in-a-resume" >
                         How to Use Keywords in a Resume
                     </Link>
@@ -88,6 +117,9 @@ const ImportantPost = () => {
                     <Link to="/improving-your-resume-with-action-verbs" >
                         Improving Your Resume with Action Verbs
                     </Link>
+                </li>
+                <li>
+                <NewAds/>
                 </li>
                 <li>
                     <Link to="/how-to-create-a-resume-for-international-jobs" >
@@ -100,6 +132,9 @@ const ImportantPost = () => {
                     </Link>
                 </li>
                 <li>
+                <NewAds/>
+                </li>
+                <li>
                     <Link to="/how-to-showcase-your-education-in-a-resume" >
                         How to Showcase Your Education in a Resume
                     </Link>
@@ -110,6 +145,9 @@ const ImportantPost = () => {
                     </Link>
                 </li>
                 <li>
+                <NewAds/>
+                </li>
+                <li>
                     <Link to="/how-to-write-a-resume-for-career-change" >
                         How to Write a Resume for Career Change
                     </Link>
@@ -118,6 +156,9 @@ const ImportantPost = () => {
                     <Link to="/resume-writing-tips-for-remote-jobs" >
                         Resume Writing Tips for Remote Jobs
                     </Link>
+                </li>
+                <li>
+                <NewAds/>
                 </li>
                 <li>
                     <Link to="/resume-tip-component" >
@@ -134,6 +175,9 @@ const ImportantPost = () => {
 
                 </li>
                 <li>
+                <NewAds/>
+                </li>
+                <li>
                     <Link to='/Things_To_Remove_From_Your_Cv'>
                         Things to Remove from Your CV - Resume Tips:ResumeEra</Link>
                 </li>
@@ -142,8 +186,24 @@ const ImportantPost = () => {
                         Tip for Interview:ResumeEra</Link>
                 </li>
                 <li>
+                <NewAds/>
+                </li>
+                <li>
                     <Link to='/AnupamKher_resume'>
                         Anupam kher Resume wit ResumeEra:ResumeEra</Link>
+                </li>
+
+                <li>
+                <NewAds/>
+                </li>
+                <li>
+                    <Link to='/free_resumesites_component'>
+                    What Resume Site is Actually Free </Link>
+                </li>
+                <li>
+                    <Link to='/tailor-resume-job-description-chatgpt'>
+                    ResumeEra: How to Tailor Your Resume to a Job Description with ChatGPTt
+                    </Link>
                 </li>
             </ul>
             </div>

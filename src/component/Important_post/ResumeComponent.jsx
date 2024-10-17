@@ -79,6 +79,7 @@ const ResumeComponent = () => {
           src={skill_image} 
           alt="Skills in a Resume" 
           className="resume-image"
+          loading="lazy"
         />
 
         <p>
@@ -130,6 +131,7 @@ const ResumeComponent = () => {
           src={cv_image} 
           alt="Curriculum Vitae Layout" 
           className="resume-image"
+          loading="lazy"
         />
 
         <p>

@@ -69,6 +69,7 @@ const HowToCreateResume = () => {
                 src="https://img.freepik.com/free-photo/handsome-young-man-working-laptop-smiling-while-sitting-sidewalk-cafe_231208-12079.jpg" 
                 alt="Resume creation example" 
                 className="resume-guide-image"
+                loading="lazy"
             />
 
             <h2 className="resume-guide-section-title">1. Choose the Right Resume Format</h2>

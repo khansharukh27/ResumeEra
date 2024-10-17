@@ -62,6 +62,15 @@ const KeySkills = () => {
       { value: 105, path: '/preview105' },
       { value: 106, path: '/preview106' },
       { value: 107, path: '/preview107' },
+      { value: 108, path: '/preview108' },
+      { value: 109, path: '/preview109' },
+      { value: 110, path: '/preview110' },
+      { value: 111, path: '/preview111' },
+      { value: 112, path: '/preview112' },
+      { value: 113, path: '/preview113' },
+      { value: 114, path: '/preview114' },
+      { value: 115, path: '/preview115' },
+      { value: 116, path: '/preview11' },
     ];
 
     const resultMapping = resultMappings.find(mapping => mapping.value === result);

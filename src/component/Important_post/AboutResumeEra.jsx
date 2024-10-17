@@ -204,7 +204,7 @@ const AboutResumeEra= () => {
                     </tbody>
                 </table>
                 <p>Avoiding resume mistakes like vague language and buzzwords makes your resume stand out. Remember, your resume is your first chance to make a good impression. Make it count.</p>
-                <img src={download_2} alt="avoiding_resume_mistake" />
+                <img src={download_2} loading="lazy" alt="avoiding_resume_mistake" />
                 <h3>Design and Formatting Essentials</h3>
                 <p>In today's job market, how your resume looks matters a lot. A good resume design and formatting can make you stand out. It leaves a strong impression on hiring managers.</p>
                 <p>To make your resume look good and easy to read, focus on these key points:</p>

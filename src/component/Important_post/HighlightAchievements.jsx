@@ -67,7 +67,7 @@ const HighlightAchievements = () => {
       <h2 className="highlight-achievements-title">How to Highlight Achievements in a Resume :ResumeEra</h2>
       <p>Looking at a blank document, I felt overwhelmed. I had given my all to my work, but how to show my achievements? It was a challenge I had to face if I wanted my dream job.</p>
       <p>In this article, we'll look at ways to highlight your achievements. These tips will help you make your resume stand out. Whether you're starting from scratch or updating an old one, these strategies will showcase your value and successes.</p>
-      <img src={highlight_image} alt="highlight_image_resumeera" />
+      <img src={highlight_image} alt="highlight_image_resumeera" loading="lazy"/>
       <h3>Key Takeaways</h3>
       <p>
         <ul>

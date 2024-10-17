@@ -86,7 +86,7 @@ const Home = ({ images }) => {
             </div>
 
             <div className="home-carousel">
-                <Carousel images={images} />
+                <Carousel images={images}  />
             </div>
             <div className="home-description">
                 <p>

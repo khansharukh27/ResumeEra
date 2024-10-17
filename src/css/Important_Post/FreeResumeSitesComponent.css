@@ -1,0 +1,11 @@
+.freesection{
+    box-shadow: 0px 0px 5px 2px palegreen;
+    border-radius: 8px;
+    padding: 15px;
+}
+.freesection img{
+    box-shadow: 0px 0px 5px 2px palegreen,
+    5px 0px 5px 2px rgb(152, 251, 238),
+    10px 0px 5px 2px rgb(236, 251, 152);
+
+}

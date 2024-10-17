@@ -64,7 +64,7 @@ const CommonMistakesToAvoid = () => {
     AI resume review tool free'/>
             </Helmet>
             <h1 className="common-mistakes-title">Common Mistakes to Avoid on Your Resume with ResumeEra</h1>
-            <img src={common_mistake} alt="common_mistake" />
+            <img src={common_mistake} alt="common_mistake" loading="lazy"/>
             <p className="common-mistakes-intro">
                 Crafting a resume can be challenging, and it's easy to make mistakes that could hurt your chances of landing an interview. Here are some common resume mistakes to avoid to ensure your resume makes a positive impression.
             </p>

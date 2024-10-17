@@ -37,6 +37,7 @@ import Preview12 from './component/previewfolder/Preview12';
 import Preview13 from './component/previewfolder/Preview13';
 import Preview14 from './component/previewfolder/Preview14';
 import Home from './component/Home';
+// technical resume
 import profetional_resume_3 from '../src/image/technical_Image/profetional_resume_3.jpg'
 import profetional_resume_1 from '../src/image/technical_Image/profetional_resume_1.jpg'
 import profetional_resume_2 from '../src/image/technical_Image/profetional_resume_2.jpg'
@@ -44,7 +45,15 @@ import profetional_resume_4 from '../src/image/technical_Image/profetional_resum
 import profetional_resume_5 from '../src/image/technical_Image/profetional_resume_5.jpg'
 import profetional_resume_6 from '../src/image/technical_Image/profetional_resume_6.jpg'
 import profetional_resume_7 from '../src/image/technical_Image/profetional_resume_7.jpg'
-
+import Basic_Ats_Resume_Template from '../src/image/technical_Image/Basic_Ats_Resume_Template.png'
+import Creative_ATS_Resume_Template from '../src/image/technical_Image/Creative-ATS-Resume-Template.png'
+import Executive_ATS_Resume_Template from '../src/image/technical_Image/Executive-ATS-Resume-Template.png'
+import Functional_ATS_Resume_Template from '../src/image/technical_Image/Functional-ATS-Resume-Template.png'
+import Minimalist_ATS_Resume_Template from '../src/image/technical_Image/Minimalist-ATS-Resume-Template.png'
+import Modern_ATS_Resume_Template from '../src/image/technical_Image/Minimalist-ATS-Resume-Template.png'
+import Simple_ATS_Resume_Template from '../src/image/technical_Image/Simple-ATS-Resume-Template.png'
+import Tech_ATS_Resume_Template from '../src/image/technical_Image/Tech-ATS-Resume-Template.png'
+import Traditional_ATS_Resume_Template from '../src/image/technical_Image/Traditional-ATS-Resume-Template.png'
 import Preview103 from './component/previewfolder/Preview103';
 import Preview101 from './component/previewfolder/Preview101';
 import Preview102 from './component/previewfolder/Preview102';
@@ -106,17 +115,36 @@ import SalaryNegotiationComponent from './component/blogandcareer/SalaryNegotiat
 import BestOnlineCVBuilder from './component/blogandcareer/BestOnlineCVBuilder';
 import BestAIResumeBuilder from './component/blogandcareer/BestAIResumeBuilder';
 import FreeOnlineResumeMaker from './component/blogandcareer/FreeOnlineResumeMaker';
+import FreeResumeSitesComponent from './component/Important_post/FreeResumeSitesComponent';
+import Preview114 from './component/previewfolder/Preview114';
+import Preview113 from './component/previewfolder/Preview113';
+import Preview112 from './component/previewfolder/Preview112';
+import Preview111 from './component/previewfolder/Preview111';
+import Preview110 from './component/previewfolder/Preview110';
+import Preview109 from './component/previewfolder/Preview109';
+import Preview108 from './component/previewfolder/Preview108';
+import Preview115 from './component/previewfolder/Preview115';
+import Preview116 from './component/previewfolder/Preview116';
+import TailorResumeComponent from './component/Important_post/TailorResumeComponent';
 // import CoverLetterInput from './component/CoverLetterInput';
 // import CoverComponent from './component/CoverComponent';
 var images = [
-  { id: 1, src: resum1, alt: 'image1' },{ id: 2, src: resume2, alt: 'image2' },{ id: 3, src: resume3, alt: 'image3' },
-  { id: 4, src: resume4, alt: 'image4' },
-  // { id: 5, src: resume5, alt: 'image5' },
-  { id: 6, src: resume6, alt : 'image6'},
-  { id: 7, src: resume7, alt : 'image7'},{ id: 8, src: resume8, alt: 'image8'}, { id: 9, src: resume9, alt : 'image9'},
-  { id: 10, src: resume10, alt: 'image10'},{id:11,src: resume11, alt: 'image11'},{id:12, src: resume12, alt : 'image12'},
-  { id: 13, src: resume13, alt: 'image13'},{id:14, src: resume14, alt: 'image14'}, 
-]
+  { id: 1, src: resum1, alt: 'Professional Resume Template 1' },
+  { id: 2, src: resume2, alt: 'Modern Resume Design 2' },
+  { id: 3, src: resume3, alt: 'Creative Resume Layout 3' },
+  { id: 4, src: resume4, alt: 'Elegant Resume Example 4' },
+  // { id: 5, src: resume5, alt: 'Minimalist Resume Style 5' }, // Uncomment if used
+  { id: 6, src: resume6, alt: 'Corporate Resume Format 6' },
+  { id: 7, src: resume7, alt: 'Academic Resume Sample 7' },
+  { id: 8, src: resume8, alt: 'Infographic Resume Design 8' },
+  { id: 9, src: resume9, alt: 'Simple Resume Template 9' },
+  { id: 10, src: resume10, alt: 'Stylish Resume Example 10' },
+  { id: 11, src: resume11, alt: 'Functional Resume Format 11' },
+  { id: 12, src: resume12, alt: 'Colorful Resume Design 12' },
+  { id: 13, src: resume13, alt: 'Executive Resume Template 13' },
+  { id: 14, src: resume14, alt: 'Digital Resume Layout 14' },
+];
+
 var techImages = [
   {id:101, src: profetional_resume_1, alt : 'auto cade resume'},
   {id:103, src: profetional_resume_3, alt : 'image3'},
@@ -125,6 +153,15 @@ var techImages = [
   ,{id:105, src: profetional_resume_5, alt : 'hospital resume'}
   ,{id:106, src: profetional_resume_6, alt : 'hospital resume'}
   ,{id:107, src: profetional_resume_7, alt : 'hospital resume'}
+  ,{id:108, src: Basic_Ats_Resume_Template, alt : 'Basic Ats Resume Template'}
+  ,{id:109, src: Creative_ATS_Resume_Template, alt : 'Creative ATS Resume Template'}
+  ,{id:110, src: Executive_ATS_Resume_Template, alt : 'Executive ATS Resume Template'}
+  ,{id:111, src: Functional_ATS_Resume_Template, alt : 'Functional ATS Resume Template'}
+  ,{id:112, src: Minimalist_ATS_Resume_Template, alt : 'Minimalist-ATS-Resume-Template'}
+  ,{id:113, src: Modern_ATS_Resume_Template, alt : 'Modern Ats Resume template'}
+  ,{id:114, src: Simple_ATS_Resume_Template, alt : 'Simple-ATS-Resume-Template'}
+  ,{id:115, src: Tech_ATS_Resume_Template, alt : 'Tech-ATS-Resume-Template'}
+  ,{id:116, src: Traditional_ATS_Resume_Template, alt : 'Traditional-ATS-Resume-Template'}
 ]
 
 const CoverImage = [
@@ -197,6 +234,8 @@ function App() {
         <Route path='/Things_To_Remove_From_Your_Cv' element={<ThingsToRemoveFromYourCV/>}/>
         <Route path='/Tip_for_Interview' element={<Tip_For_Interview/>}/>
         <Route path='/AnupamKher_resume' element={<AnupamKher_resume/>}/>
+        <Route path='/free_resumesites_component' element={<FreeResumeSitesComponent/>}/>
+        <Route path='/tailor-resume-job-description-chatgpt' element={<TailorResumeComponent/>}/>
 
         {/* job and carier blog component */}
         
@@ -224,6 +263,7 @@ function App() {
         <Route path='/preview11' element={<Preview11 />}/>
         <Route path='/preview12' element={<Preview12/>}/>
         <Route path='/preview13' element={<Preview13/>}/>
+        {/* Technical resume link */}
         <Route path='/preview14' element={<Preview14/>}/>
         <Route path='/preview101' element={<Preview101/>}/>
         <Route path='/preview102' element={<Preview102/>}/>
@@ -232,6 +272,17 @@ function App() {
         <Route path='/preview105' element={<Preview105/>}/>
         <Route path='/preview106' element={<Preview106/>}/>
         <Route path='/preview107' element={<Preview107/>}/>
+        <Route path='/preview108' element={<Preview108/>}/>
+        <Route path='/preview109' element={<Preview109/>}/>
+        <Route path='/preview110' element={<Preview110/>}/>
+        <Route path='/preview111' element={<Preview111/>}/>
+        <Route path='/preview112' element={<Preview112/>}/>
+        <Route path='/preview113' element={<Preview113/>}/>
+        <Route path='/preview114' element={<Preview114/>}/>
+        <Route path='/preview115' element={<Preview115/>}/>
+        <Route path='/preview116' element={<Preview116/>}/>
+
+        {/* CoverLetter Link */}
         <Route path='/preview/201' element={<Preview201/>}/>
         <Route path='/preview/202' element={<Preview202/>}/>
        

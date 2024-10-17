@@ -70,6 +70,7 @@ const Carousel = ({ images }) => {
                                 className="carousel-image"
                                 src={image.src}
                                 alt={image.alt}
+                                loading="lazy"
                             />
                             {hoveredImage === image.id && (
                                 <button

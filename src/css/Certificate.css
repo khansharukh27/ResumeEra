@@ -1,0 +1,121 @@
+/* Container and Form */
+form {
+    width: 100%;
+    margin: 20px auto;
+  }
+  
+  .profetional-detail {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .multicolor-heading {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #2c3e50;
+    background: -webkit-linear-gradient(45deg, #ff6b6b, #feca57, #48dbfb);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  input,
+  textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+  }
+  
+  input:focus,
+  textarea:focus {
+    border-color: #2980b9;
+    outline: none;
+  }
+  
+  textarea {
+    resize: vertical;
+  }
+  
+  /* Buttons */
+  .button1 {
+    background-color: #2980b9;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin: 10px;
+  }
+  
+  .button1:hover {
+    background-color: #1abc9c;
+  }
+  
+  .text {
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  
+  /* Add More Button */
+  .d-flex.justify-content-center .button1 {
+    width: 200px;
+  }
+  
+  hr {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: 0;
+    border-top: 1px solid #ddd;
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 768px) {
+    .d-sm-flex {
+      display: block;
+    }
+  
+    .input {
+      width: 100%;
+      margin-bottom: 10px;
+    }
+  
+    .textarea {
+      width: 100%;
+      margin-bottom: 10px;
+    }
+  }
+  
+  /* Form Sections */
+  .d-sm-flex.one {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+  }
+  
+  .second {
+    margin-top: 10px;
+  }
+  
+  h1 {
+    color: #333;
+    font-size: 1.5rem;
+  }
+  
+  h1.centered {
+    text-align: center;
+    color: white;
+  }
+  
+  /* Delete Button */
+  .button1[type="button"] {
+    background-color: #e74c3c;
+  }
+  
+  .button1[type="button"]:hover {
+    background-color: #c0392b;
+  }
+  

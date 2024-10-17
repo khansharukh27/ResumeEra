@@ -1,0 +1,27 @@
+
+.id {
+    display: flex;
+    margin-left:20px;
+    /* margin-right: 150px; */
+    width: 100%;
+    box-shadow: 0px 0px 25px 1px palegreen;
+
+
+}
+
+.id img{
+    width: 100%;
+    height: 250px;
+    border-radius: 25px;
+    margin: 10px;
+    box-shadow: 0px 0px 25px 1px palegreen;
+
+}
+.paradiv{
+    height: 100%;
+    width: 50%;
+}
+.imgdiv{
+    height: 100%;
+    width: 50%;
+}

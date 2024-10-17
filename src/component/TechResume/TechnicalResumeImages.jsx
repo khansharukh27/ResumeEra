@@ -42,6 +42,7 @@ const TechnicalResumeImages = (props) => {
                                 className="template-image"
                                 src={image.src}
                                 alt={image.alt}
+                                loading="lazy"
                             />
                             {hoveredImage === image.id && (
                                 <a

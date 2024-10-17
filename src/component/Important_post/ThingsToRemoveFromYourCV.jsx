@@ -103,7 +103,7 @@ const ThingsToRemoveFromYourCV = () => {
 
         <section>
           <h2>1. Irrelevant Work Experience</h2>
-          <img src={Irrelevant_Work_Experience} alt="Irrelevant Work Experience" />
+          <img src={Irrelevant_Work_Experience} alt="Irrelevant Work Experience" loading="lazy" />
           <p>
             While it may be tempting to include every job you've ever had, doing so can overwhelm
             the reader. Instead, focus on work experience that is directly relevant to the position
@@ -114,7 +114,7 @@ const ThingsToRemoveFromYourCV = () => {
 
         <section>
           <h2>2. Objective Statements</h2>
-          <img src={Objective_Statements} alt="Objective Statements" />
+          <img src={Objective_Statements} alt="Objective Statements" loading="lazy"/>
           <p>
             Objective statements have become outdated in modern resumes. Employers know you’re
             looking for a job. Instead of stating your career goals, use that space to showcase your
@@ -124,7 +124,7 @@ const ThingsToRemoveFromYourCV = () => {
 
         <section>
           <h2>3. Personal Information</h2>
-          <img src={Personal_Information} alt="Personal Information" />
+          <img src={Personal_Information} alt="Personal Information" loading="lazy"/>
           <p>
             There’s no need to include personal details like your age, marital status, religion, or
             photograph unless the job application explicitly requests it. Employers focus on your
@@ -135,7 +135,7 @@ const ThingsToRemoveFromYourCV = () => {
 
         <section>
           <h2>4. Outdated or Irrelevant Skills</h2>
-          <img src={Outdated_or_Irrelevant_Skills} alt="Outdated or Irrelevant Skills" />
+          <img src={Outdated_or_Irrelevant_Skills} alt="Outdated or Irrelevant Skills" loading="lazy"/>
           <p>
             Ensure that the skills you list are up-to-date and relevant to the job you're applying
             for. Listing outdated skills, such as software that is no longer in use, can make your
@@ -146,7 +146,7 @@ const ThingsToRemoveFromYourCV = () => {
 
         <section>
           <h2>5. Unprofessional Email Address</h2>
-          <img src={Unprofessional_Email_Address} alt="Unprofessional Email Address" />
+          <img src={Unprofessional_Email_Address} alt="Unprofessional Email Address" loading="lazy"/>
           <p>
             Make sure your email address is professional. Avoid using nicknames or something
             unprofessional. Ideally, your email should consist of your name (e.g.,
@@ -157,7 +157,7 @@ const ThingsToRemoveFromYourCV = () => {
 
         <section>
           <h2>6. Unnecessary References</h2>
-          <img src={Unnecessary_References} alt="Unnecessary References" />
+          <img src={Unnecessary_References} alt="Unnecessary References" loading="lazy"/>
           <p>
             "References available upon request" is an outdated phrase that no longer needs to appear
             on your CV. Employers know that you’ll provide references if they request them, so save
@@ -186,7 +186,7 @@ const ThingsToRemoveFromYourCV = () => {
 
         <section>
           <h2>9. Hobbies (Unless Relevant)</h2>
-          <img src={Unless_Hobbies} alt="Unless Hobbies" />
+          <img src={Unless_Hobbies} alt="Unless Hobbies" loading="lazy"/>
           <p>
             Unless your hobbies are directly related to the job you’re applying for, it’s best to
             leave them off your CV. Employers are more interested in your professional capabilities
@@ -197,7 +197,7 @@ const ThingsToRemoveFromYourCV = () => {
 
         <section>
           <h2>10. Jargon and Buzzwords</h2>
-          <img src={Jargon_and_Buzzwords} alt="Jargon and Buzzwords" />
+          <img src={Jargon_and_Buzzwords} alt="Jargon and Buzzwords" loading="lazy"/>
           <p>
             Avoid using overused buzzwords such as “hard-working” or “team player” without context.
             Instead, back up these traits with specific examples from your work history. Let your
@@ -207,7 +207,7 @@ const ThingsToRemoveFromYourCV = () => {
 
         <section>
           <h2>11. Lengthy Descriptions</h2>
-          <img src={Lengthy_Descriptions} alt="Lengthy Descriptions" />
+          <img src={Lengthy_Descriptions} alt="Lengthy Descriptions" loading="lazy"/>
           <p>
             Be concise in your CV. Long paragraphs can make your resume hard to scan, and recruiters
             typically spend only a few seconds reviewing each one. Use bullet points to keep your
