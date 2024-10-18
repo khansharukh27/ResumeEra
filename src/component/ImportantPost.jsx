@@ -205,6 +205,10 @@ const ImportantPost = () => {
                     ResumeEra: How to Tailor Your Resume to a Job Description with ChatGPTt
                     </Link>
                 </li>
+                <li>
+                    <Link to='/free-resume-builder'>
+                    Online Resume Maker Free PDF | ResumeEra - Create Free Resumes for Freshers                    </Link>
+                </li>
             </ul>
             </div>
             <div>

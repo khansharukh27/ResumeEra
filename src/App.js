@@ -126,6 +126,7 @@ import Preview108 from './component/previewfolder/Preview108';
 import Preview115 from './component/previewfolder/Preview115';
 import Preview116 from './component/previewfolder/Preview116';
 import TailorResumeComponent from './component/Important_post/TailorResumeComponent';
+import FreeResumeBuilder from './component/Important_post/FreeResumeBuilder';
 // import CoverLetterInput from './component/CoverLetterInput';
 // import CoverComponent from './component/CoverComponent';
 var images = [
@@ -249,6 +250,8 @@ function App() {
         <Route path='/Best_Online_CV_Builder' element={<BestOnlineCVBuilder/>}/>
         <Route path='/Best_AI_Resume_Builder' element={<BestAIResumeBuilder/>}/>
         <Route path='/free-online-resume-maker' element={<FreeOnlineResumeMaker/>}/>
+        <Route path='/free-resume-builder' element={<FreeResumeBuilder/>}/>
+
 
         <Route path='/preview' element={<Preview />} />
         <Route path='/preview2' element={<Preview2 />}/>

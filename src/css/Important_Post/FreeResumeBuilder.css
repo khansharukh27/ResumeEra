@@ -1,0 +1,27 @@
+.resume-builder-container {
+    width: 90%;
+    padding: 25px;
+    margin-top: 50px;
+    border-radius: 25px;
+    /* height: 350px; */
+    /* border-image-repeat: round; */
+    box-shadow: 5px 5px 20px 5px rgb(166, 235, 156);
+    margin-left: 100px;
+    margin-right: 150px;
+}
+.imgdiv{
+    box-shadow: 5px 5px 20px 5px purple;
+width: inherit;
+/* width: 350px; */
+height: 350px;
+border-radius: 25px;
+}
+.imgdiv img{
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 20px auto;
+}
+.resume-builder-container h1{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}

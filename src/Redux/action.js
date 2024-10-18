@@ -85,3 +85,10 @@ export const addReferences = (data)  => {
         payload:data
     }
 }
+
+export const certificateData = (data) => {
+    return{
+        type:'certificate_Data',
+        payload:data
+    }
+}

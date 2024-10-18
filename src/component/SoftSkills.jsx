@@ -6,6 +6,7 @@ import SocialMedia from "./SocialMedia";
 // import { useLocation } from "react-router-dom";
 // import KeySkills from "./KeySkill";
 import HonorAndAward from "./HonorAndAward";
+import Certificate from "./Certificate";
 
 const SoftSkills = () => {
   const [input, setInput] = useState(() => {
@@ -17,6 +18,7 @@ const SoftSkills = () => {
   const [showSoftSkill, setShowSoftSkill] = useState(true);
   const [showSocialMedia, setShowSocialMedia] = useState(false);
   const [showHonor,setShowHonor] = useState(false);
+  const [showCertificate,setShowCertificate] = useState(false)
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -46,7 +48,8 @@ const SoftSkills = () => {
   const handleClickBack = () => {
     setShowHonor(false);
     setShowSoftSkill(false);
-    setShowSocialMedia(true);
+    // setShowSocialMedia(true);
+    setShowCertificate(true)
   };
 
   const handleChange = (e, index) => {
@@ -121,6 +124,7 @@ const SoftSkills = () => {
       {showSocialMedia && <SocialMedia />}
       {/* {showSoftSkill && <SoftSkill />} */}
       {showHonor && <HonorAndAward />}
+      {showCertificate && (<Certificate/>)}
     </form>
   );
 };

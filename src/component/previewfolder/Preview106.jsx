@@ -92,22 +92,22 @@ const Preview106 = () => {
                             ))}
                         </div>
                         <div className="education-section106 mt-3">
-                        <h6 className="details-title106" style={{ color: headingColor }}>Education</h6>
-                        {education[0].map((edu, index) => (
-                            <div key={index} className="education-item106">
-                                <div className="">
-                                    <p className="employment-detail106">{edu.degree}</p>
-                                    <p className="employment-detail106">{edu.univercity}</p>
-                                    <p className="employment-detail106">{edu.startYear} - {edu.endYear},{edu.city}</p>
+                            <h6 className="details-title106" style={{ color: headingColor }}>Education</h6>
+                            {education[0].map((edu, index) => (
+                                <div key={index} className="education-item106">
+                                    <div className="">
+                                        <p className="employment-detail106">{edu.degree}</p>
+                                        <p className="employment-detail106">{edu.univercity}</p>
+                                        <p className="employment-detail106">{edu.startYear} - {edu.endYear},{edu.city}</p>
+                                    </div>
+                                    <div className="education-details106">
+                                        <span><b></b></span>
+                                    </div>
                                 </div>
-                                <div className="education-details106">
-                                    <span><b></b></span>
-                                </div>
-                            </div>
-                        ))}
+                            ))}
+                        </div>
                     </div>
-                    </div>
-                    
+
                     <div className="inner106-2">
                         <div>
                             <h6 style={{ color: headingColor }}>Profile</h6>
@@ -132,12 +132,12 @@ const Preview106 = () => {
                                 TECHNICAL SKILL</h6>
                             {keyskills[0].map((keys, index) => (
                                 <div key={index} className="technical-skill-item106">
-                                    <p>{keys.keyskills}</p>     
+                                    <p>{keys.keyskills}</p>
                                 </div>
                             ))}
                         </div>
                     </div>
-                    
+
                 </div>
             </div>
             <div className="resume-download-section">

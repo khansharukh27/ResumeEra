@@ -1,0 +1,51 @@
+.popUpStyle {
+    position: fixed;
+    bottom: 50%;
+    right: 30%;
+    background-color: powderblue;
+    color: white;
+    padding: 20px 40px;
+    border-radius: 10px;
+    z-index: 1000;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    font-size: 1.5rem;
+    text-align: center;
+    overflow: visible; /* Allows the stars to overflow */
+  }
+  
+  .popUpStyle .stars {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 0;
+    pointer-events: none; /* Stars are purely decorative */
+  }
+  
+  .star {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: yellow;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(255, 255, 0, 0.8);
+    animation: scatter 2s ease-out forwards;
+  }
+  
+  @keyframes scatter {
+    0% {
+      transform: scale(0) translate(0, 0);
+      opacity: 1;
+    }
+    100% {
+      transform: scale(1) translate(calc(-200px + 400px * random()), calc(-200px + 400px * random()));
+      opacity: 0;
+    }
+  }
+  
+  /* Helper function to randomize */
+  @function random() {
+    @return random(0, 1);
+  }
+  

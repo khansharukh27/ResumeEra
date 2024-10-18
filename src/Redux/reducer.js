@@ -1,6 +1,6 @@
 // import { templatePage } from "./action";
 
-import { addReferences, coverletters } from "./action";
+import { addReferences, certificateData, coverletters } from "./action";
 
 // import { addSoftSkills } from "./action";
 
@@ -16,7 +16,8 @@ const initialState = {
   socialMediaLink:[],
   honorAndaward:[],
   addReference:[],
-  coverletterss:[]
+  coverletterss:[],
+  certificateData:[]
 };
 
 const reducer = (state = initialState, action) => {
@@ -86,6 +87,12 @@ const reducer = (state = initialState, action) => {
         return{
           ...state,
           coverletterss:[action.payload]
+        } 
+        case 'certificate_Data':
+          
+        return{
+          ...state,
+          certificateData:[action.payload]
         }  
     default:
       return state;

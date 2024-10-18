@@ -4,6 +4,8 @@ import Hobbies from "./Hobbies";
 import { useDispatch } from "react-redux";
 import { socialMediaLink } from "../Redux/action";
 import SoftSkills from "./SoftSkills";
+import { useLocation } from "react-router-dom";
+import Certificate from "./Certificate";
 
 const SocialMedia = () => {
     const [textInput, setTextInput] = useState(() => {
@@ -15,7 +17,10 @@ const SocialMedia = () => {
     const [showHobbies, setShowHobbies] = useState(false);
     const [showSoftSkills, setShowSoftSkills] = useState(false);
     const [showSocialMedia, setShowSocialMedia] = useState(true);
+    const [certificate, setShowCertificate] = useState(false);
     const dispatch = useDispatch();
+
+    const path = useLocation();
 
     useEffect(() => {
         // Save social media links to local storage whenever they change
@@ -31,17 +36,35 @@ const SocialMedia = () => {
     };
 
     const handleClickBack = () => {
-        setShowHobbies(true);
+        if(path.pathname === '/techmain/108'){
+            setShowHobbies(true);
+            setShowSoftSkills(false);
+            setShowSocialMedia(false);
+            setShowCertificate(false);
+        }else{
+setShowHobbies(true);
         setShowSoftSkills(false);
         setShowSocialMedia(false);
+        }
+        
     };
-
+    
+    // console.log()
     const handleClickNext = (e) => {
-        e.preventDefault()
+        if(path.pathname === '/techmain/108'){
+            e.preventDefault()
+            setShowHobbies(false);
+            setShowCertificate(true)
+            setShowSocialMedia(false)
+            dispatch(socialMediaLink(textInput));   
+        }else{
+            e.preventDefault()
         setShowHobbies(false);
         setShowSoftSkills(true);
         setShowSocialMedia(false);
         dispatch(socialMediaLink(textInput));
+        }
+        
     };
 
     const handleSubmit = (e) => {
@@ -127,6 +150,7 @@ const SocialMedia = () => {
             )}
             {showHobbies && (<Hobbies />)}
             {showSoftSkills && (<SoftSkills />)}
+            {certificate && (<Certificate/>)}
         </form>
     );
 };

@@ -4,11 +4,13 @@ import { keyskillsData } from "../Redux/action";
 import { useLocation, useNavigate } from "react-router-dom";
 import Hobbies from "./Hobbies";
 import References from "./Refrences";
+import Certificate from "./SocialMedia";
 
 const KeySkills = () => {
   const [showKeySkills, setShowKeySkills] = useState(true);
   const [showHobbies, setShowHobbies] = useState(false);
   const [showReferences, setShowReferences] = useState(false);
+  const [showCertificate,setShowCertificate] = useState(false)
   const [inputFields, setInputFields] = useState(() => {
     const savedKeySkills = localStorage.getItem("keySkills");
     return savedKeySkills ? JSON.parse(savedKeySkills) : [{ keyskills: '', rating: 1 }];
@@ -29,7 +31,13 @@ const KeySkills = () => {
       setShowHobbies(false);
       setShowKeySkills(false);
       setShowReferences(true);
-    } else {
+    } else if(location.pathname === '/techmain/108'){
+      setShowCertificate(true)
+      setShowHobbies(false);
+      setShowReferences(false);
+
+    }
+    else {
       setShowHobbies(true);
       setShowKeySkills(false);
       setShowReferences(false);
@@ -180,6 +188,7 @@ const KeySkills = () => {
       )}
       {showHobbies && (<Hobbies />)}
       {showReferences && (<References />)}
+      {showCertificate && (<Certificate/>)}
     </form>
   );
 };
