@@ -213,6 +213,10 @@ const ImportantPost = () => {
                     <Link to='/resume-trends-2024'>
                     10 free Resume Trends In 2024: What You Need To Know To Stand Out</Link>
                 </li>
+                <li>
+                    <Link to='/remote-work-experience'>
+                    Remote Work Experience | Customized Resumes for Each Application</Link>
+                </li>
                
             </ul>
             </div>

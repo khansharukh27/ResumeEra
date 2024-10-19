@@ -13,7 +13,7 @@ const ResumeTrends2024 = () => {
                 <meta name="keywords" content="Resume trends 2024, how to make resume stand out, free resume builder, online resume, resume tips, resume writing trends" />
                 <link rel="canonical" href="https://resumeera.xyz/resume-trends-2024" />
             </Helmet>
-            <div className=''>
+            <div className='resumeTrendsMain'>
             <h1>10 Resume Trends In 2024: What You Need To Know To Stand Out</h1>
             <p>At <a href="https://resumeera.xyz" target="_blank" rel="noopener noreferrer">ResumeEra</a>, we understand that crafting a resume that captures an employer's attention is critical for job seekers in 2024. With ever-changing job market dynamics, it's crucial to stay on top of the latest trends to stand out in a crowded field. Below are the top 10 resume trends for 2024, tailored for professionals who want to make an impact.</p>
             <img src={Stand_out} alt="Need To Know To Stand Out" />

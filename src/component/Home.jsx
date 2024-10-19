@@ -76,12 +76,12 @@ const Home = ({ images }) => {
                     <img src={best_logo} alt="logo" />
                 </div>
                 <div className="home-welcome " style={{color:'orange'}}>
-                    <h4 style={{color:'black'}}>
+                    <h1 style={{color:'black'}}>
                         
                         <Link className="home-link" to="/template">Welcome to ResumeEra! Please Click
-                        PERSONALLIZED TEMPLATES FOR EVERY INDUSTRY  to make a resume.</Link>
+                        PERSONALLIZED TEMPLATES FOR EVERY INDUSTRY  to make a Free Resume.</Link>
                        
-                    </h4>
+                    </h1>
                 </div>
             </div>
 
@@ -96,7 +96,7 @@ const Home = ({ images }) => {
                     create a professional-looking free resume.
                 </p>
             </div>
-            <hr />
+            <hr style={{width:'100%'}}/>
             <div className="home-how-to">
                 <h1>HOW TO CREATE FREE RESUME</h1>
                 <div className="home-steps">
@@ -118,7 +118,7 @@ const Home = ({ images }) => {
                 </div>
 
             </div>
-            <hr className="home-divider" />
+            <hr className="home-divider"style={{width:'100%'}} />
             <div className="home-change-cv">
                 <div className="home-change-cv-image">
                     <img src={changeCV_image} alt="changeCV_image" />
@@ -140,30 +140,30 @@ const Home = ({ images }) => {
                 <p>Create an awesome free resume in minutes, without leaving your web browser.</p>
                 <div className="home-resume-features ">
                     <div className="home-feature">
-                        <h5><i className='bi bi-buildings'></i> Your data is safe</h5>
+                        <h5 style={{color:'black',fontWeight:900}}><i className='bi bi-buildings' ></i> Your data is safe</h5>
                         <p>We do not save your data right now.</p>
                     </div>
                     <div className="home-feature" style={{color:'black'}}>
-                        <h5 style={{color:'black',fontWeight:'700'}}><i className='bi bi-newspaper'></i> Approved templates</h5>
-                        <p style={{color:'black',fontWeight:'200'}}>Professionally-designed free resume templates and examples.
+                        <h5 style={{color:'black',fontWeight:900}}><i className='bi bi-newspaper'></i> Approved templates</h5>
+                        <p style={{color:'black',fontWeight:200}}>Professionally-designed free resume templates and examples.
                             Just edit and download in 5 minutes.</p>
                     </div>
                     <div className="home-feature">
-                        <h5 style={{color:'black',fontWeight:'700'}}><i className='bi bi-option me-3 rotating-icon'></i> PDF free resume options</h5>
+                        <h5 style={{color:'black',fontWeight:900}}><i className='bi bi-option me-3 rotating-icon'></i> PDF free resume options</h5>
                         <p style={{color:'black',fontWeight:'200'}}>Save your perfect free resume in PDF with a single click.</p>
                     </div>
                     <div className="home-feature">
-                        <h5 style={{color:'black',fontWeight:'700'}}><i className='bi bi-card-text me-3 rotating-icon'></i> Cover letters</h5>
+                        <h5 style={{color:'black',fontWeight:900}}><i className='bi bi-card-text me-3 rotating-icon'></i> Cover letters</h5>
                         <p style={{color:'black',fontWeight:'200'}}>Our cover letter builder works with the same ease and use of elegant
                             templates as the free resume creator.</p>
                     </div>
                 </div>
             </div>
-            <hr />
-            <div className="home-professional-story" style={{backgroundColor:'white'}}>
+            <hr style={{width:'100%'}} />
+            <div className="home-professional-story " style={{backgroundColor:'white'}}>
                 <h2>Use the best free resume maker as your guide</h2>
                 <p>Getting that dream job can seem like an impossible task. We're here to change that. Give yourself a real advantage with the best online free resume maker: created by experts, improved by data, trusted by millions of professionals.</p>
-                <div className='home-story-feature-main'>
+                <div className='home-story-feature-main d-sm-flex'>
                     <div className="home-story-feature">
                         <h3><i className="bi bi-trophy-fill"></i>Make a free resume that wins interviews</h3>
                         <p>Use our free resume maker with its advanced creation tools to tell a professional story that engages recruiters, hiring managers, and even CEOs.</p>
@@ -181,7 +181,7 @@ const Home = ({ images }) => {
                 </div>
 
             </div>
-            <hr />
+            <hr style={{width:'100%'}}/>
             <div className="home-cover-letter">
                 <h2>Create a professional story in minutes. Use our cover letter maker.</h2>
                 <p>Tired of struggling with free cover letters? Our free cover letter maker transforms hours

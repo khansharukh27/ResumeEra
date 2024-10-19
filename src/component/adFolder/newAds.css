@@ -1,0 +1,12 @@
+.ad-container {
+    width: 100%;
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.adsbygoogle {
+    width: 100%;
+    max-width: 100%;
+    height: auto !important;  /* Ensures it adjusts according to the available space */
+}

@@ -128,6 +128,7 @@ import Preview116 from './component/previewfolder/Preview116';
 import TailorResumeComponent from './component/Important_post/TailorResumeComponent';
 import FreeResumeBuilder from './component/Important_post/FreeResumeBuilder';
 import ResumeTrends2024 from './component/Important_post/ResumeTrends2024';
+import RemoteWorkExperience from './component/Important_post/RemoteWorkExperience';
 // import CoverLetterInput from './component/CoverLetterInput';
 // import CoverComponent from './component/CoverComponent';
 var images = [
@@ -239,6 +240,7 @@ function App() {
         <Route path='/free_resumesites_component' element={<FreeResumeSitesComponent/>}/>
         <Route path='/tailor-resume-job-description-chatgpt' element={<TailorResumeComponent/>}/>
         <Route path='/resume-trends-2024' element={<ResumeTrends2024/>}/>
+        <Route path='/remote-work-experience' element={<RemoteWorkExperience/>}/>
 
         {/* job and carier blog component */}
         
