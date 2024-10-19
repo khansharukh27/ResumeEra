@@ -207,8 +207,13 @@ const ImportantPost = () => {
                 </li>
                 <li>
                     <Link to='/free-resume-builder'>
-                    Online Resume Maker Free PDF | ResumeEra - Create Free Resumes for Freshers                    </Link>
+                    Online Resume Maker Free PDF | ResumeEra - Create Free Resumes for Freshers </Link>
                 </li>
+                <li>
+                    <Link to='/resume-trends-2024'>
+                    10 free Resume Trends In 2024: What You Need To Know To Stand Out</Link>
+                </li>
+               
             </ul>
             </div>
             <div>

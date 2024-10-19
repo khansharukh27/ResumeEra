@@ -127,6 +127,7 @@ import Preview115 from './component/previewfolder/Preview115';
 import Preview116 from './component/previewfolder/Preview116';
 import TailorResumeComponent from './component/Important_post/TailorResumeComponent';
 import FreeResumeBuilder from './component/Important_post/FreeResumeBuilder';
+import ResumeTrends2024 from './component/Important_post/ResumeTrends2024';
 // import CoverLetterInput from './component/CoverLetterInput';
 // import CoverComponent from './component/CoverComponent';
 var images = [
@@ -237,6 +238,7 @@ function App() {
         <Route path='/AnupamKher_resume' element={<AnupamKher_resume/>}/>
         <Route path='/free_resumesites_component' element={<FreeResumeSitesComponent/>}/>
         <Route path='/tailor-resume-job-description-chatgpt' element={<TailorResumeComponent/>}/>
+        <Route path='/resume-trends-2024' element={<ResumeTrends2024/>}/>
 
         {/* job and carier blog component */}
         
