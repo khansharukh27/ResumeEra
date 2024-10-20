@@ -129,6 +129,7 @@ import TailorResumeComponent from './component/Important_post/TailorResumeCompon
 import FreeResumeBuilder from './component/Important_post/FreeResumeBuilder';
 import ResumeTrends2024 from './component/Important_post/ResumeTrends2024';
 import RemoteWorkExperience from './component/Important_post/RemoteWorkExperience';
+import HowToWriteAResume from './component/Important_post/HowToWriteAResume';
 // import CoverLetterInput from './component/CoverLetterInput';
 // import CoverComponent from './component/CoverComponent';
 var images = [
@@ -241,6 +242,7 @@ function App() {
         <Route path='/tailor-resume-job-description-chatgpt' element={<TailorResumeComponent/>}/>
         <Route path='/resume-trends-2024' element={<ResumeTrends2024/>}/>
         <Route path='/remote-work-experience' element={<RemoteWorkExperience/>}/>
+        <Route path='/how-to-write-a-resume-in-7-easy-steps' element={<HowToWriteAResume/>}/>
 
         {/* job and carier blog component */}
         

@@ -1,0 +1,28 @@
+.HowToWriteAResumemain{
+    display: flex;
+    justify-content: space-around;
+}
+.HowToWriteAResumemain h1{
+    font-family: cursive;
+    font-weight: 900;
+}
+.content{
+    width: 50%;
+}
+.addinner{
+
+}
+@media(min-width:601){
+   .addinner{
+    display: none;
+   } 
+   
+}
+@media (max-width:600px){
+    .content{
+        width: 100%;
+    }    
+    .add1,.add2{
+        display: none;
+    }
+}

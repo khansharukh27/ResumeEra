@@ -217,7 +217,10 @@ const ImportantPost = () => {
                     <Link to='/remote-work-experience'>
                     Remote Work Experience | Customized Resumes for Each Application</Link>
                 </li>
-               
+                <li>
+                    <Link to='/how-to-write-a-resume-in-7-easy-steps'>
+                    How To Write A Resume In 7 Easy Steps</Link>
+                </li>
             </ul>
             </div>
             <div>
