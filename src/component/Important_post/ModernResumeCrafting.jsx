@@ -1,15 +1,16 @@
 import React from 'react';
 import '../../css/Important_Post/ModernResumeCrafting.css'; // Assuming you prefer to keep styles separate
 import { Helmet } from 'react-helmet';
+import { Link } from 'react-router-dom';
 
 const ModernResumeCrafting = () => {
   return (
     <div className="aboutResumeEra">
-       <Helmet>
-      <link rel="canonical" href="https://resumeera.xyz/crafting-a-modern-resume" />
-      <title>Crafting a Modern Resume</title>
-            <meta name="description" content="A modern resume is more than a list of jobs and skills. It’s a visual and professional reflection of your career, designed to capture the attention of recruiters. Here are the key elements you need to craft a resume that stands out in today's job market." />
-            <meta name='keyword' content='ResumeEra,Resume Era, Free Resume, how to create free resume online,free resume creator,free resume creator online ,Create Resume Online,Free Resume Builder,free resume maker ,Professional Resume, 
+      <Helmet>
+        <link rel="canonical" href="https://resumeera.xyz/crafting-a-modern-resume" />
+        <title>Crafting a Modern Resume</title>
+        <meta name="description" content="A modern resume is more than a list of jobs and skills. It’s a visual and professional reflection of your career, designed to capture the attention of recruiters. Here are the key elements you need to craft a resume that stands out in today's job market." />
+        <meta name='keyword' content='ResumeEra,Resume Era, Free Resume, how to create free resume online,free resume creator,free resume creator online ,Create Resume Online,Free Resume Builder,free resume maker ,Professional Resume, 
     Online Resume Builder, Job Application, CV Maker, Resume Templates, Career, 
     Employment, Resume, Curriculum Vitae, Job Seeker, Resume Writing, Cover Letter, 
     Job Interview, Career Development, Job Search, Online CV, Job Market, Job Board, 
@@ -59,7 +60,7 @@ const ModernResumeCrafting = () => {
     AI resume insights free, AI resume analysis tool free, Free AI resume builder online, 
     AI resume creation app free, Free AI resume tools, AI resume generation free, 
     AI resume review tool free'/>
-            </Helmet>
+      </Helmet>
       <h1 className="modern-resume-crafting-title">Crafting a Modern Resume</h1>
       <p className="modern-resume-crafting-intro">
         A modern resume is more than a list of jobs and skills. It’s a visual and professional reflection of your career, designed to capture the attention of recruiters. Here are the key elements you need to craft a resume that stands out in today's job market.
@@ -99,7 +100,11 @@ const ModernResumeCrafting = () => {
         <p className="modern-resume-crafting-summary">
           A modern resume combines clean design, professional fonts, and measurable achievements to showcase your value. Focus on readability, concise content, and the right keywords to make your resume stand out.
         </p>
-        <a href="/modern-resume-templates" className="modern-resume-crafting-link">Explore Modern Resume Templates</a>
+        <div className='btn'>
+          <Link className='.button' to='/resume-tips-for-experienced-professionals'>Last Post</Link>
+          <Link className='.button' to='https://resumeera.xyz'>Home Page</Link>
+          <Link className='.button' to='/tip_for_interview'>Next Post</Link>
+        </div>
       </div>
     </div>
   );

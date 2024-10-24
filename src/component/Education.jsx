@@ -1,9 +1,9 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
 import WorkExperience from "./WorkExperience";
 import { useDispatch } from "react-redux";
 import { educationData } from "../Redux/action";
 import Language from "./Language";
-import debounce from "./debounce";
+// import debounce from "./debounce";
 
 const Education = ()=> {
   const [showEducation, setShowEducation] = useState(true);
@@ -28,6 +28,9 @@ const Education = ()=> {
   const dispatch = useDispatch();
 
   useEffect(() => {
+    
+      window.scrollTo(0, 0);
+   
     // Save education data to local storage whenever it changes
     localStorage.setItem("educationData", JSON.stringify(education));
   }, [education]);

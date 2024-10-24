@@ -1,12 +1,15 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import {Helmet} from 'react-helmet'
 import '../css/templates.css';
 import NormalResume from './NormalResume';
 import TechnicalResumeImages from './TechResume/TechnicalResumeImages';
-import CoverLetter from './CoverLetter';
+// import CoverLetter from './CoverLetter';
 const TemplatePage = (props) => {
     const { images ,techImages,CoverImage} = props;
     console.log('coverimage in template:-',CoverImage)
+    useEffect(() => {
+        window.scrollTo(0, 0);
+      }, []);
 
     return (
         <div className='template-page-container'>

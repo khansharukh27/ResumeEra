@@ -6,11 +6,11 @@ import { Link } from 'react-router-dom';
 const HowToCreateResume = () => {
     return (
         <div className="aboutResumeEra">
-             <Helmet>
-      <link rel="canonical" href="https://resumeera.xyz/how-to-create-a-professional-resume" />
-      <title>How to Create a Professional Resume</title>
-            <meta name="description" content=" how to create resume is crucial question to making a great first impression on potential employers. Follow these essential steps to build a resume that stands out and effectively highlights your qualifications and experience." />
-            <meta name='keyword' content='ResumeEra,Resume Era, Free Resume, how to create free resume online,free resume creator,free resume creator online ,Create Resume Online,Free Resume Builder,free resume maker ,Professional Resume, 
+            <Helmet>
+                <link rel="canonical" href="https://resumeera.xyz/how-to-create-a-professional-resume" />
+                <title>How to Create a Professional Resume</title>
+                <meta name="description" content=" how to create resume is crucial question to making a great first impression on potential employers. Follow these essential steps to build a resume that stands out and effectively highlights your qualifications and experience." />
+                <meta name='keyword' content='ResumeEra,Resume Era, Free Resume, how to create free resume online,free resume creator,free resume creator online ,Create Resume Online,Free Resume Builder,free resume maker ,Professional Resume, 
     Online Resume Builder, Job Application, CV Maker, Resume Templates, Career, 
     Employment, Resume, Curriculum Vitae, Job Seeker, Resume Writing, Cover Letter, 
     Job Interview, Career Development, Job Search, Online CV, Job Market, Job Board, 
@@ -65,9 +65,9 @@ const HowToCreateResume = () => {
             <p className="resume-guide-intro">
                 Crafting a professional resume is crucial to making a great first impression on potential employers. Follow these essential steps to build a resume that stands out and effectively highlights your qualifications and experience.
             </p>
-            <img 
-                src="https://img.freepik.com/free-photo/handsome-young-man-working-laptop-smiling-while-sitting-sidewalk-cafe_231208-12079.jpg" 
-                alt="Resume creation example" 
+            <img
+                src="https://img.freepik.com/free-photo/handsome-young-man-working-laptop-smiling-while-sitting-sidewalk-cafe_231208-12079.jpg"
+                alt="Resume creation example"
                 className="resume-guide-image"
                 loading="lazy"
             />
@@ -75,18 +75,18 @@ const HowToCreateResume = () => {
             <h2 className="resume-guide-section-title">1. Choose the Right Resume Format</h2>
             <div className='resume-guide-image_div'>
                 <div>
-                <img src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/5wmEECloDc1OMWAMEamsQ8/edb1da18b9ce2e661d227312c7d61805/GettyImages-1203940958.jpg" 
-                alt="choose the right resume format" 
-                className="resume-guide-image"
-                />
+                    <img src="https://d3njjcbhbojbot.cloudfront.net/api/utilities/v1/imageproxy/https://images.ctfassets.net/wp1lcwdav1p1/5wmEECloDc1OMWAMEamsQ8/edb1da18b9ce2e661d227312c7d61805/GettyImages-1203940958.jpg"
+                        alt="choose the right resume format"
+                        className="resume-guide-image"
+                    />
                 </div>
                 <div>
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROg697jrLnez0P-sqrIwEv8PAXEjUjVU7dbnh-H3yVPh_aVG2gV0mvagvFRLZGIBFIXLU&usqp=CAU" 
-                alt="Choose the Right Resume Format"
-                className="resume-guide-image"
-                 />
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcROg697jrLnez0P-sqrIwEv8PAXEjUjVU7dbnh-H3yVPh_aVG2gV0mvagvFRLZGIBFIXLU&usqp=CAU"
+                        alt="Choose the Right Resume Format"
+                        className="resume-guide-image"
+                    />
                 </div>
-                
+
             </div>
             <p className="resume-guide-content">
                 Select a resume format that best suits your career stage and the job you are applying for. The three most common formats are chronological, functional, and combination. Chronological focuses on your work history, functional highlights skills and abilities, and combination merges both approaches.
@@ -116,10 +116,10 @@ const HowToCreateResume = () => {
                 Ensure your resume is free from grammatical errors and typos. Consider having a friend or mentor review your resume for additional feedback. A polished resume reflects your attention to detail and professionalism.
             </p>
             <div className='btn'>
-  <Link className='.button' to='/creating-a-resume-for-your-first-job'>Last Post</Link>
-  <Link className='.button' to='https://resumeera.xyz'>Home Page</Link>
-  <Link className='.button' to='/resume-tips-for-experienced-professionals'>Next Post</Link>
-</div>
+                <Link className='.button' to='/creating-a-resume-for-your-first-job'>Last Post</Link>
+                <Link className='.button' to='https://resumeera.xyz'>Home Page</Link>
+                <Link className='.button' to='/resume-tips-for-experienced-professionals'>Next Post</Link>
+            </div>
         </div>
     );
 };

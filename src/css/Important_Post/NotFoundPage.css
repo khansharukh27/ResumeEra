@@ -9,7 +9,10 @@
   }
   
   p {
-    font-size: 20px;
+    /* font-size: 50px; */
+    font-family: cursive;
+    font-size: xx-large;
+
   }
   
   .not-found-container a {
@@ -23,6 +26,7 @@
   }
   
   a:hover {
-    background-color: #0056b3;
+    background-color: palegreen;
+    color: black;
   }
   

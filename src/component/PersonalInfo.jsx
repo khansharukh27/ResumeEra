@@ -24,6 +24,9 @@ const PersonalInfo = ({coverImage}) => {
         nationality: '',
         dateofbirth: ''
     });
+    useEffect(() => {
+        window.scrollTo(0, 0);
+      }, []);
 const result2 = coverImage
 console.log('result2:-',result2)
     const dispatch = useDispatch();

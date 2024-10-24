@@ -22,6 +22,10 @@ const WorkExperience = () => {
     ];
   });
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   const dispatch = useDispatch();
 
   useEffect(() => {

@@ -2,15 +2,16 @@ import React from 'react';
 import '../../css/Important_Post/TipsForWritingCoverLetter.css';
 import { Helmet } from 'react-helmet';
 import download_4 from '../../image/image_for_link/download_4.jpg'
+import { Link } from 'react-router-dom';
 
 const TipsForWritingCoverLetter = () => {
-    return (
-        <div className="aboutResumeEra">
-            <Helmet>
-      <link rel="canonical" href="https://resumeera.xyz/tips-for-writing-a-cover-letter" />
-      <title>Tips for Writing a Cover Letter</title>
-            <meta name="description" content="A well-crafted cover letter can significantly boost your job application. Here are some key tips to help you write a cover letter that grabs the attention of hiring managers and sets you apart from other candidates." />
-            <meta name='keyword' content='ResumeEra,Resume Era, Free Resume, how to create free resume online,free resume creator,free resume creator online ,Create Resume Online,Free Resume Builder,free resume maker ,Professional Resume, 
+  return (
+    <div className="aboutResumeEra">
+      <Helmet>
+        <link rel="canonical" href="https://resumeera.xyz/tips-for-writing-a-cover-letter" />
+        <title>Tips for Writing a Cover Letter</title>
+        <meta name="description" content="A well-crafted cover letter can significantly boost your job application. Here are some key tips to help you write a cover letter that grabs the attention of hiring managers and sets you apart from other candidates." />
+        <meta name='keyword' content='ResumeEra,Resume Era, Free Resume, how to create free resume online,free resume creator,free resume creator online ,Create Resume Online,Free Resume Builder,free resume maker ,Professional Resume, 
     Online Resume Builder, Job Application, CV Maker, Resume Templates, Career, 
     Employment, Resume, Curriculum Vitae, Job Seeker, Resume Writing, Cover Letter, 
     Job Interview, Career Development, Job Search, Online CV, Job Market, Job Board, 
@@ -60,8 +61,8 @@ const TipsForWritingCoverLetter = () => {
     AI resume insights free, AI resume analysis tool free, Free AI resume builder online, 
     AI resume creation app free, Free AI resume tools, AI resume generation free, 
     AI resume review tool free'/>
-            </Helmet>
-            <h1>Tips for Writing a Cover Letter</h1>
+      </Helmet>
+      <h1>Tips for Writing a Cover Letter</h1>
       <p>
         Writing a cover letter is an essential step in the job application process. While many candidates focus solely on their resumes, a well-crafted cover letter can significantly enhance your chances of landing an interview. It allows you to introduce yourself, explain your interest in the position, and demonstrate how your skills and experiences align with the company's needs. At <a href="https://resumeera.xyz" target="_blank" rel="noopener noreferrer">ResumeEra</a>, we understand the importance of a compelling cover letter and offer various tools to assist you in creating professional documents that capture your unique strengths.
       </p>
@@ -75,7 +76,7 @@ const TipsForWritingCoverLetter = () => {
         <li><strong>Highlighting Skills:</strong> You can highlight key skills and experiences that directly relate to the job, making it easier for hiring managers to see your fit for the role.</li>
         <li><strong>Setting the Tone:</strong> A cover letter can set a positive tone for your application, showcasing your enthusiasm and professionalism.</li>
       </ul>
-      
+
       <h2>2. Research the Company and Position</h2>
       <p>
         Before you start writing, take the time to research the company and the specific position you’re applying for. Understanding the company culture, values, and job requirements is crucial for tailoring your cover letter effectively. Here’s how to conduct your research:
@@ -173,8 +174,13 @@ const TipsForWritingCoverLetter = () => {
       <p>
         A well-written cover letter is crucial in the job application process. It not only provides a chance to express your qualifications but also allows you to showcase your personality and enthusiasm. By implementing the tips outlined in this guide, you can create a compelling cover letter that stands out to hiring managers. We invite you to visit <a href="https://resumeera.xyz" target="_blank" rel="noopener noreferrer">ResumeEra</a> for more tools and resources to support your job search journey.
       </p>
-        </div>
-    );
+      <div className='btn'>
+        <Link className='.button' to='/how-to-create-a-professional-resume'>Previous Page</Link>
+        <Link className='.button' to='https://resumeera.xyz'>Home Page</Link>
+        <Link className='.button' to='/why-soft-skills-matter'>Next Post</Link>
+      </div>
+    </div>
+  );
 };
 
 export default TipsForWritingCoverLetter;

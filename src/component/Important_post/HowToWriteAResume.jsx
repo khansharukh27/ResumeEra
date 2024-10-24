@@ -1,8 +1,16 @@
 import React from "react";
 import { Helmet } from "react-helmet";
 import NewAds from "../adFolder/NewAds";
-import ImportantPost from "../ImportantPost";
+// import ImportantPost from "../ImportantPost";
 import '../../css/Important_Post/HowToWriteAResume.css'
+import Avoid_Common_Mistakes from '../../image/image_for_link/Avoid_Common_Mistakes.jpeg'
+import Bullet_Best from '../../image/image_for_link/Bullet_Best.jpeg'
+// import Focus_Relevant_Experience from '../../image/image_for_link/Avoid_Common_mistake.jpeg'
+import Hard_Skills from '../../image/image_for_link/Hard_Skills.jpeg'
+import Proofread_Edit_Thoroughly from '../../image/image_for_link/Proofread_Edit_Thoroughly.jpeg'
+import Relevant_Keywords from '../../image/image_for_link/Relevant_Keywords.jpeg'
+import Soft_Skills from '../../image/image_for_link/Soft_Skills.jpeg'
+import ImportantPost from "../ImportantPost";
 const HowToWriteAResume = () => {
     return (
         <div className="HowToWriteAResume2024">
@@ -17,11 +25,11 @@ const HowToWriteAResume = () => {
             </Helmet>
             <div className="HowToWriteAResumemain">
                 <div className="add1">
-                    <h1>div 1</h1>
+                    
                     <NewAds />
                 </div>
                 <div className="content">
-                <h1>How To Write A Resume In 7 Easy Steps</h1>
+                <h1 style={{backgroundColor:'palegoldenrod'}}>How To Write A Resume In 7 Easy Steps</h1>
                 <p>
                     Crafting an impressive resume is essential to getting noticed in today’s competitive job market.
                     Whether you are a fresher or an experienced professional, your resume acts as a personal marketing tool,
@@ -46,7 +54,7 @@ const HowToWriteAResume = () => {
                     For instance, if you’re applying for a marketing position, emphasize campaigns you led, marketing tools you used,
                     and measurable outcomes like "Increased social media engagement by 30% in 3 months."
                 </p>
-
+                <img src={Relevant_Keywords} alt="Relevant Keyword" />
                 <h2>2. Make the First Bullet Your Best</h2>
                 <div className="addinner">
                     <NewAds/>
@@ -65,7 +73,7 @@ const HowToWriteAResume = () => {
                     </ul>
                     The more specific you are, the better your resume will resonate with potential employers.
                 </p>
-
+                <img src={Bullet_Best} alt="Make the First Bullet Your Best" />
                 <h2>3. Demonstrate Your Soft Skills</h2>
                 <div className="addinner">
                     <NewAds/>
@@ -83,7 +91,7 @@ const HowToWriteAResume = () => {
                     </ul>
                     By showing how your soft skills contributed to your success, you're giving potential employers a reason to consider you for the role.
                 </p>
-
+<img src={Soft_Skills} alt="Demonstrate Your Soft Skills" />
                 <h2>4. Highlight Your Hard Skills</h2>
                 <div className="addinner">
                     <NewAds/>
@@ -100,6 +108,7 @@ const HowToWriteAResume = () => {
                     Pro Tip: Consider placing your "Skills" or "Technical Expertise" section higher on the page if the role you’re applying for is highly technical,
                     such as a software developer or data scientist. This helps recruiters quickly see your core competencies.
                 </p>
+                <img src={Hard_Skills} alt="Highlight Your Hard Skills" />
 
                 <h2>5. Use Relevant Keywords</h2>
                 <p>
@@ -114,6 +123,7 @@ const HowToWriteAResume = () => {
                 <p>
                     Additionally, always upload your resume in Word format when applying online, as ATS systems often reject PDFs.
                 </p>
+                <img src={Relevant_Keywords} alt="Use Relevant Keywords" />
 
                 <h2>6. Proofread and Edit Thoroughly</h2>
                 <div className="addinner">
@@ -128,7 +138,7 @@ const HowToWriteAResume = () => {
                     use of bullet points, and punctuation), and ensure that it looks clean and professional. Avoid fonts that are hard to read,
                     and stick with classics like Arial, Times New Roman, or Calibri in size 11 or 12.
                 </p>
-
+                        <img src={Proofread_Edit_Thoroughly} alt="Proofread and Edit Thoroughly" />
                 <h2>7. Avoid Common Mistakes</h2>
                 <div className="addinner">
                     <NewAds/>
@@ -141,7 +151,7 @@ const HowToWriteAResume = () => {
                     Instead, focus on keeping the format simple and clean. When applying, ensure you have a professional LinkedIn profile picture,
                     as 87% of recruiters use LinkedIn to vet applicants. Your resume and LinkedIn profile should complement each other.
                 </p>
-
+<img src={Avoid_Common_Mistakes} alt="Avoid Common Mistake" />
                 <h3>Maximizing Your Resume with AI Tools</h3>
                 <p>
                     Today, technology can assist in resume optimization. Tools like ChatGPT allow you to improve your resume by generating suggestions based on your job description and resume content.
@@ -155,7 +165,7 @@ const HowToWriteAResume = () => {
                 </p>
                 </div>
                 <div className="add2">
-                    <h2>div2</h2>
+                    
                     <NewAds />
                 </div>
             </div>

@@ -55,8 +55,11 @@ const Footer = () => {
             <li><Link to="/terms-of-service">Terms of Service</Link></li>
             <li><Link to="/important_post">Important Post</Link></li>
             <li><Link to="/Blog_or_Career_Tips_Page">Blog or Career Tips Page</Link></li>
+            <li><Link to="/Interview_Question_Post">Interview Question Post</Link></li>
+
           </ul>
         </div>
+        
       </div>
       <div className="footer-bottom">
         <p>&copy; {new Date().getFullYear()} ResumeEra. All rights reserved.</p>

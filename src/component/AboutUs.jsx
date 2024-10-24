@@ -1,8 +1,12 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import '../css/aboutme.css'; // Assuming you'll add your custom styling here
 import { Helmet } from 'react-helmet';
 
 const AboutUs = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div className="aboutResumeEra">
       <Helmet>

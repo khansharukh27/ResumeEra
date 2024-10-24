@@ -14,6 +14,9 @@ import '../css/covercomponent.css'
 const CoverLetter = (props) => {
     const CoverImage = props; // Assuming CoverImage is passed as a prop
     const [hoveredImage, setHoveredImage] = useState(null);
+    useEffect(() => {
+        window.scrollTo(0, 0);
+      }, []);
     
     const dispatch = useDispatch();
     const navigate = useNavigate();

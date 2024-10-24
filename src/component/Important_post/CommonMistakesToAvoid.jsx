@@ -7,12 +7,12 @@ const CommonMistakesToAvoid = () => {
     return (
         <div className="aboutResumeEra">
             <Helmet>
-      <link rel="canonical" href="https://resumeera.xyz/common-mistakes-to-avoid-on-your-resume" />
-      <title>Common Mistakes to Avoid on Your Resume with ResumeEra</title>
-            <meta name="description" content="Crafting a resume can be challenging, and it's easy to make mistakes 
+                <link rel="canonical" href="https://resumeera.xyz/common-mistakes-to-avoid-on-your-resume" />
+                <title>Common Mistakes to Avoid on Your Resume with ResumeEra</title>
+                <meta name="description" content="Crafting a resume can be challenging, and it's easy to make mistakes 
             that could hurt your chances of landing an interview. Here are some common resume mistakes to avoid to 
             ensure your resume makes a positive impression." />
-            <meta name='keyword' content='ResumeEra,Resume Era, Free Resume, how to create free resume online,free resume creator,free resume creator online ,Create Resume Online,Free Resume Builder,free resume maker ,Professional Resume, 
+                <meta name='keyword' content='ResumeEra,Resume Era, Free Resume, how to create free resume online,free resume creator,free resume creator online ,Create Resume Online,Free Resume Builder,free resume maker ,Professional Resume, 
     Online Resume Builder, Job Application, CV Maker, Resume Templates, Career, 
     Employment, Resume, Curriculum Vitae, Job Seeker, Resume Writing, Cover Letter, 
     Job Interview, Career Development, Job Search, Online CV, Job Market, Job Board, 
@@ -64,7 +64,7 @@ const CommonMistakesToAvoid = () => {
     AI resume review tool free'/>
             </Helmet>
             <h1 className="common-mistakes-title">Common Mistakes to Avoid on Your Resume with ResumeEra</h1>
-            <img src={common_mistake} alt="common_mistake" loading="lazy"/>
+            <img src={common_mistake} alt="common_mistake" loading="lazy" />
             <p className="common-mistakes-intro">
                 Crafting a resume can be challenging, and it's easy to make mistakes that could hurt your chances of landing an interview. Here are some common resume mistakes to avoid to ensure your resume makes a positive impression.
             </p>
@@ -109,10 +109,10 @@ const CommonMistakesToAvoid = () => {
                 Focusing solely on job duties without mentioning specific achievements can make your resume less impactful. Include quantifiable accomplishments to demonstrate your value and contributions in previous roles.
             </p>
             <div className='btn'>
-  <Link className='.button' to='/top-resume-templates-for-2024'>Last Post</Link>
-  <Link className='.button' to='https://resumeera.xyz'>Home Page</Link>
-  <Link className='.button' to='/how-to-choose-the-right-resume-template'>Next Post</Link>
-</div>
+                <Link className='.button' to='/top-resume-templates-for-2024'>Last Post</Link>
+                <Link className='.button' to='https://resumeera.xyz'>Home Page</Link>
+                <Link className='.button' to='/how-to-choose-the-right-resume-template'>Next Post</Link>
+            </div>
         </div>
     );
 };

@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Slider from 'react-slick';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -49,7 +49,10 @@ const CoverLetterCrousel = ({ images }) => {
             }
         ]
     };
-
+    useEffect(() => {
+        window.scrollTo(0, 0);
+      }, []);
+    
     const handleClick = (e, imageId) => {
         e.preventDefault();
         const path = `/mainpage/${imageId}`;

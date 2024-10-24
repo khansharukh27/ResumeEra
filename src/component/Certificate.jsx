@@ -10,7 +10,10 @@ const Certificate = () => {
   const [showSocialMedia, setShowSocialMedia] = useState(false);
   const [showCertificate, setShowCertificate] = useState(true);
   const [showSoftSkill, setShowSoftSkill] = useState(false);
-  
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   const [certificates, setCertificates] = useState(() => {
     const savedCertificates = localStorage.getItem("certificates");
     return savedCertificates

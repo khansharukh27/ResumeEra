@@ -7,8 +7,6 @@ import '../css/mainpage.css';
 const CoverComponent = ({ CoverImage }) => {
     const [selectImage, setSelectImage] = useState(null);
     // const result = useSelector((state) =>state.reducer)
-    
-
     const [inputData, setInputData] = useState({
         image: null,
         fullname: "",
@@ -28,7 +26,10 @@ const CoverComponent = ({ CoverImage }) => {
         nationality: '',
         dateofbirth: ''
     });
-
+    useEffect(() => {
+        window.scrollTo(0, 0);
+      }, []);
+    
     const result2 = CoverImage;
     const dispatch = useDispatch();
     const navigate = useNavigate();

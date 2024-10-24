@@ -1,6 +1,7 @@
 import React from 'react';
 import '../../css/Important_Post/TopResumeTemplates2024.css';
 import { Helmet } from 'react-helmet';
+import { Link } from 'react-router-dom';
 
 const TopResumeTemplates2024 = () => {
     return (
@@ -92,6 +93,11 @@ const TopResumeTemplates2024 = () => {
             <p className="resume-templates-content">
                 A timeless template that highlights your career progression in reverse chronological order. It’s perfect for traditional job applications where showcasing your work history in detail is crucial.
             </p>
+            <div className='btn'>
+                <Link className='.button' to='/why-soft-skills-matter'>Previous Page</Link>
+                <Link className='.button' to='https://resumeera.xyz'>Home Page</Link>
+                <Link className='.button' to='/common-mistakes-to-avoid-on-your-resume'>Next Post</Link>
+            </div>
         </div>
     );
 };

@@ -7,10 +7,10 @@ const WhySoftSkillsMatter = () => {
     return (
         <div className="aboutResumeEra">
             <Helmet>
-      <link rel="canonical" href="https://resumeera.xyz/why-soft-skills-matter" />
-      <title>Why Soft Skills Matter in Your Resume</title>
-            <meta name="description" content="While technical skills and qualifications are essential, soft skills play a crucial role in determining your overall suitability for a job. Here’s why incorporating soft skills into your resume can significantly enhance your candidacy." />
-            <meta name='keyword' content='ResumeEra,Resume Era, Free Resume, how to create free resume online,free resume creator,free resume creator online ,Create Resume Online,Free Resume Builder,free resume maker ,Professional Resume, 
+                <link rel="canonical" href="https://resumeera.xyz/why-soft-skills-matter" />
+                <title>Why Soft Skills Matter in Your Resume</title>
+                <meta name="description" content="While technical skills and qualifications are essential, soft skills play a crucial role in determining your overall suitability for a job. Here’s why incorporating soft skills into your resume can significantly enhance your candidacy." />
+                <meta name='keyword' content='ResumeEra,Resume Era, Free Resume, how to create free resume online,free resume creator,free resume creator online ,Create Resume Online,Free Resume Builder,free resume maker ,Professional Resume, 
     Online Resume Builder, Job Application, CV Maker, Resume Templates, Career, 
     Employment, Resume, Curriculum Vitae, Job Seeker, Resume Writing, Cover Letter, 
     Job Interview, Career Development, Job Search, Online CV, Job Market, Job Board, 
@@ -224,6 +224,11 @@ const WhySoftSkillsMatter = () => {
                         Anupam kher Resume wit ResumeEra:ResumeEra</Link>
                 </li>
             </ul>
+            <div className='btn'>
+                <Link className='.button' to='/tips-for-writing-a-cover-letter'>Previous Page</Link>
+                <Link className='.button' to='https://resumeera.xyz'>Home Page</Link>
+                <Link className='.button' to='/top-resume-templates-for-2024'>Next Post</Link>
+            </div>
         </div>
     );
 };

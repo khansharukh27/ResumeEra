@@ -2,6 +2,7 @@ import { Helmet } from 'react-helmet';
 import '../../css/Important_Post/Tip_for_Interview.css'
 import tip_for_interview from '../../image/image_for_link/tip_for_interview.jpeg'
 import Research_the_Company_Thoroughly from '../../image/image_for_link/Research_the_Company_Thoroughly.jpeg'
+import { Link } from 'react-router-dom';
 
 const Tip_For_Interview = () => {
     return (
@@ -15,16 +16,16 @@ const Tip_For_Interview = () => {
                     we'll cover essential tips to help you stand out in your interview, 
                     regardless of the role or industry.</p>
            " />
-                        <meta name="keywords" content="free resume builder, free resume download, free resume templates, best resume site, online resume builder" />
+                <meta name="keywords" content="free resume builder, free resume download, free resume templates, best resume site, online resume builder" />
 
             </Helmet>
             <header>
                 <h1>Tip for Interview:ResumeEra</h1>
                 <p>Preparing for an interview requires a blend of research, practice, and mental preparation.
                     In this comprehensive 2200-word guide,
-                    we'll cover essential tips to help you stand out in your interview, regardless of the role or 
+                    we'll cover essential tips to help you stand out in your interview, regardless of the role or
                     industry.</p>
-                    <img src={tip_for_interview} alt="tip for interview" />
+                <img src={tip_for_interview} alt="tip for interview" />
             </header>
             <section>
                 <div>
@@ -226,6 +227,11 @@ const Tip_For_Interview = () => {
                     </p>
                 </div>
             </section>
+            <div className='btn'>
+                <Link className='.button' to='/crafting-a-modern-resume'>Last Post</Link>
+                <Link className='.button' to='https://resumeera.xyz'>Home Page</Link>
+                <Link className='.button' to='/how-to-format-a-resume-correctly'>Next Post</Link>
+            </div>
         </div>
     )
 }

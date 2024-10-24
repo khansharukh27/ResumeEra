@@ -130,6 +130,13 @@ import FreeResumeBuilder from './component/Important_post/FreeResumeBuilder';
 import ResumeTrends2024 from './component/Important_post/ResumeTrends2024';
 import RemoteWorkExperience from './component/Important_post/RemoteWorkExperience';
 import HowToWriteAResume from './component/Important_post/HowToWriteAResume';
+import WhyWorkHere from './component/blog/WhyWorkHere';
+import InterviewQuestionPost from './component/InterviewQuestionPost';
+import TellUsAboutYourself from './component/blog/TellUsAboutYourself';
+import WhyShouldWeHireYou from './component/blog/WhyShouldWeHireYou';
+import WhyDoYouWantToWork from './component/blog/WhyDoYouWantToWork';
+import ATS2024 from './component/blogandcareer/ATS2024';
+import TailorResume from './component/blogandcareer/TailorResume';
 // import CoverLetterInput from './component/CoverLetterInput';
 // import CoverComponent from './component/CoverComponent';
 var images = [
@@ -210,6 +217,7 @@ function App() {
         <Route path='/contact' element={<Contact/>} />
         <Route path='/terms-of-service' element={<TermsAndServices />} />
         <Route path='/AboutUs' element={<AboutUs />} />
+        <Route path='/Interview_Question_Post' element={<InterviewQuestionPost/>}/>
         <Route path='/important_post' element={<ImportantPost/>} />
         <Route path='/about-resumeera' element={<AboutResumeEra/>} />
         <Route path='/how-to-create-a-professional-resume' element={<HowToCreateResume/>} />
@@ -244,6 +252,15 @@ function App() {
         <Route path='/remote-work-experience' element={<RemoteWorkExperience/>}/>
         <Route path='/how-to-write-a-resume-in-7-easy-steps' element={<HowToWriteAResume/>}/>
 
+        {/* interview quation and answer*/}
+
+        <Route path='/Why_Work_Here' element={<WhyWorkHere/>}/>
+        <Route path='/tell-us-about-yourself' element={<TellUsAboutYourself/>}/>
+        <Route path='/why-should-we-hire-you' element={<WhyShouldWeHireYou/>}/>
+        <Route path='/why_do_you_want_to_work' element={<WhyDoYouWantToWork/>}/>
+
+
+
         {/* job and carier blog component */}
         
         <Route path='/Blog_or_Career_Tips_Page' element={<Blog_Career/>}/>
@@ -257,6 +274,9 @@ function App() {
         <Route path='/Best_AI_Resume_Builder' element={<BestAIResumeBuilder/>}/>
         <Route path='/free-online-resume-maker' element={<FreeOnlineResumeMaker/>}/>
         <Route path='/free-resume-builder' element={<FreeResumeBuilder/>}/>
+        <Route path='/9-things-you-need-to-know-about-ATS-in-2024' element={<ATS2024/>}/>
+        <Route path='/tailor-resume-to-job-description' element={<TailorResume/>}/>
+
 
 
         <Route path='/preview' element={<Preview />} />

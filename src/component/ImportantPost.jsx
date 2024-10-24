@@ -1,7 +1,8 @@
 import { Link } from 'react-router-dom';
 import '../css/importantpost.css'
 import { Helmet } from 'react-helmet';
-import NewAds from './adFolder/NewAds';
+// import NewAds from './adFolder/NewAds';
+import GoogleAd from './adFolder/GoogleAd';
 
 const ImportantPost = () => {
     return (
@@ -20,7 +21,7 @@ const ImportantPost = () => {
                     </Link>
                 </li>
                 <li>
-                <NewAds/>
+                <GoogleAd/>
                 </li>
                 <li>
                     <Link to="/how-to-create-a-professional-resume">
@@ -33,7 +34,7 @@ const ImportantPost = () => {
                     </Link>
                 </li>
                 <li>
-                <NewAds/>
+                <GoogleAd/>
                 </li>
                 <li>
                     <Link to="/why-soft-skills-matter" >
@@ -46,7 +47,7 @@ const ImportantPost = () => {
                     </Link>
                 </li>
                 <li>
-                <NewAds/>
+                <GoogleAd/>
                 </li>
                 <li>
                     <Link to="/common-mistakes-to-avoid-on-your-resume" >
@@ -59,7 +60,7 @@ const ImportantPost = () => {
                     </Link>
                 </li>
                 <li>
-                <NewAds/>
+                <GoogleAd/>
                 </li>
                 <li>
                     <Link to="/creating-a-resume-for-your-first-job" >
@@ -67,7 +68,7 @@ const ImportantPost = () => {
                     </Link>
                 </li>
                 <li>
-                <NewAds/>
+                <GoogleAd/>
                 </li>
                 <li>
                     <Link to="/how-to-highlight-achievements-in-a-resume" >
@@ -80,7 +81,7 @@ const ImportantPost = () => {
                     </Link>
                 </li>
                 <li>
-                <NewAds/>
+                <GoogleAd/>
                 </li>
                 <li>
                     <Link to="/crafting-a-modern-resume" >
@@ -93,7 +94,7 @@ const ImportantPost = () => {
                     </Link>
                 </li>
                 <li>
-                <NewAds/>
+                <GoogleAd/>
                 </li>
                 <li>
                     <Link to="/how-to-format-a-resume-correctly" >
@@ -106,7 +107,7 @@ const ImportantPost = () => {
                     </Link>
                 </li>
                 <li>
-                <NewAds/>
+                <GoogleAd/>
                 </li>
                 <li>
                     <Link to="/how-to-use-keywords-in-a-resume" >
@@ -119,7 +120,7 @@ const ImportantPost = () => {
                     </Link>
                 </li>
                 <li>
-                <NewAds/>
+                <GoogleAd/>
                 </li>
                 <li>
                     <Link to="/how-to-create-a-resume-for-international-jobs" >
@@ -132,7 +133,7 @@ const ImportantPost = () => {
                     </Link>
                 </li>
                 <li>
-                <NewAds/>
+                <GoogleAd/>
                 </li>
                 <li>
                     <Link to="/how-to-showcase-your-education-in-a-resume" >
@@ -145,7 +146,7 @@ const ImportantPost = () => {
                     </Link>
                 </li>
                 <li>
-                <NewAds/>
+                <GoogleAd/>
                 </li>
                 <li>
                     <Link to="/how-to-write-a-resume-for-career-change" >
@@ -158,7 +159,7 @@ const ImportantPost = () => {
                     </Link>
                 </li>
                 <li>
-                <NewAds/>
+                <GoogleAd/>
                 </li>
                 <li>
                     <Link to="/resume-tip-component" >
@@ -175,7 +176,7 @@ const ImportantPost = () => {
 
                 </li>
                 <li>
-                <NewAds/>
+                <GoogleAd/>
                 </li>
                 <li>
                     <Link to='/Things_To_Remove_From_Your_Cv'>
@@ -186,7 +187,7 @@ const ImportantPost = () => {
                         Tip for Interview:ResumeEra</Link>
                 </li>
                 <li>
-                <NewAds/>
+                <GoogleAd/>
                 </li>
                 <li>
                     <Link to='/AnupamKher_resume'>
@@ -194,7 +195,7 @@ const ImportantPost = () => {
                 </li>
 
                 <li>
-                <NewAds/>
+                <GoogleAd/>
                 </li>
                 <li>
                     <Link to='/free_resumesites_component'>
@@ -224,7 +225,7 @@ const ImportantPost = () => {
             </ul>
             </div>
             <div>
-                <NewAds/>
+                <GoogleAd/>
             </div>
         </div>
     );

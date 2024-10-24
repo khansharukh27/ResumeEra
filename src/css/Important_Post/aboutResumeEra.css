@@ -3,14 +3,22 @@
     padding: 40px;
     font-family: Arial, sans-serif;
     color: #333;
-    box-shadow: 0 4px 100px rgba(223, 137, 9, 0.1);
-    width: 70%;
+    box-shadow: 0px 0px 30px -7px purple,
+    0px 0px 20px -10px palegreen;
+    width: 50%;
     margin-top: 50px;
     border-radius: 25px;
     /* background-image: linear-gradient(145deg, magenta, aqua, pink, purple); */
     margin-left: auto;
     margin-right: auto;
     color: black;
+}
+.aboutResumeEra .h1{
+    border: 1px solid black;
+    border-radius: 15px;
+    box-shadow: inherit;
+    padding: 50px;
+    background-color: forestgreen;
 }
 .aboutResumeEra p,.aboutResumeEra h1,.aboutResumeEra h3{
     color: black;
@@ -73,6 +81,8 @@ img {
     height: auto;
     display: block;
     margin: 20px auto;
+    box-shadow: 0px 0px 30px -7px purple,
+    0px 0px 20px -10px palegreen
 }
 
 /* Quotes */

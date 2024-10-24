@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import '../css/contact.css'; // Import custom CSS
 import { Helmet } from 'react-helmet';
 
@@ -10,6 +10,10 @@ const Contact = () => {
     subject: '',
     message: ''
   });
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
 
   // Handle input changes
   const handleChange = (e) => {
