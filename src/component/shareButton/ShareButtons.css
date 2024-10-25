@@ -1,0 +1,77 @@
+/* Sticky Note Style for Share Buttons */
+.stickyShare {
+    position: fixed; /* This makes the element stick to a certain position on the screen */
+    top: 160px;       /* Distance from the top of the viewport */
+    right: 0px;     /* Distance from the right of the viewport */
+    background-color: #f1f1f1;
+    padding: 10px;
+    padding-left: 40px;
+    padding-right: 150px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;   /* Ensures the sticky note stays above other elements */
+    width: 60px;     /* Adjust width as needed */
+    text-align: center;
+    height: 24rem;
+    
+  }
+  .stickyShare a{
+    margin-top: -150px;
+    /* padding: auto; */
+  }
+  .stickyShare h3{
+    margin-top: -5px;
+  }
+  
+  /* Style for Share Buttons Inside Sticky */
+  @media (max-width:425px){
+    .stickyShare {
+      position: fixed; /* This makes the element stick to a certain position on the screen */
+      top: 160px;       /* Distance from the top of the viewport */
+      right: 0px;     /* Distance from the right of the viewport */
+      padding: 10px;
+      padding-left: 10px;
+      padding-right: 10px;
+     height: 12rem;
+     box-shadow: 0 4px 8px white;
+     background-color: whitesmoke;
+
+    }
+    .stickyShare h3{
+      font-size: 1rem;
+    }
+  }
+
+
+
+
+  @media (max-width:375px){
+    .stickyShare {
+      position: fixed; /* This makes the element stick to a certain position on the screen */
+      top: 160px;       /* Distance from the top of the viewport */
+      right: 0px;     /* Distance from the right of the viewport */
+      padding: 10px;
+      padding-left: 10px;
+      padding-right: 10px;
+     
+    }
+    .stickyShare h3{
+      font-size: small;
+    }
+  }
+
+
+  @media (max-width:320px){
+    .stickyShare {
+      position: fixed; /* This makes the element stick to a certain position on the screen */
+      top: 160px;       /* Distance from the top of the viewport */
+      right: 0px;     /* Distance from the right of the viewport */
+      padding: 10px;
+      padding-left: 10px;
+      padding-right: 10px;
+     
+    }
+    .stickyShare h3{
+      font-size: small;
+    }
+  }

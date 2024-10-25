@@ -89,6 +89,7 @@
 
 .home-step img {
     width: 200px;
+    border-radius: 15px;
 }
 
 /* Section for changing CV */
@@ -100,6 +101,7 @@
 .home-change-cv-image img {
     width: 250px;
     height: 250px;
+    border-radius: 15px;
 }
 
 .home-change-cv-info {
@@ -160,7 +162,7 @@
 /* Section for creating a professional story */
 .home-professional-story {
     text-align: center;
-    border: 2px solid grey;
+    /* border: 2px solid grey; */
     border-radius: 8px;
     padding: 10px;
     color: black;

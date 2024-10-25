@@ -6,11 +6,14 @@ import Common_Mistakes_Resume from '../../image/image_for_link/How_to_Tailor_You
 import Why_Tailoring_Your_Resume_Is_Essential from '../../image/image_for_link/Why_Tailoring_Your_Resume_Is_Essential.jpeg'
 import How_ChatGPT_Simplifies_Resume_Customization from '../../image/image_for_link/How_ChatGPT_Simplifies_Resume_Customization.jpeg'
 import Guide_to_Tailoring_Your_Resume_with_ChatGPT from '../../image/image_for_link/Guide_to_Tailoring_Your_Resume_with_ChatGPT.jpeg'
-import NewAds from '../adFolder/NewAds';
-import ImportantPost from '../ImportantPost';
+
+import GoogleAd from '../adFolder/GoogleAd';
+import ShareButtons from '../shareButton/ShareButtons';
 const TailorResumeComponent = () => {
+  const articleUrl = "https://resumeera.xyz/tailor-resume-job-description-chatgpt"
+  const articleTitle = "How to Tailor Your Resume to a Job Description with ChatGPT"
   return (
-    <div className='aboutResumeEra id'>
+    <div className='aboutResumeEra'>
       <Helmet>
         <title>How to Tailor Your Resume to a Job Description with ChatGPT</title>
         <meta name="description" content="Learn how to tailor your resume to a job description using ChatGPT's advanced AI capabilities. Get detailed guidance and tips for creating a perfectly targeted resume." />
@@ -31,7 +34,7 @@ const TailorResumeComponent = () => {
 
         </section>
         <div>
-        <NewAds/>
+        <GoogleAd/>
       </div>
         <section>
           <div>
@@ -49,7 +52,7 @@ const TailorResumeComponent = () => {
 
         </section>
         <div>
-        <NewAds/>
+        <GoogleAd/>
       </div>
         <section>
           <div>
@@ -67,7 +70,7 @@ const TailorResumeComponent = () => {
           </div>
         </section>
         <div>
-        <NewAds/>
+        <GoogleAd/>
       </div>
         <section>
           <div>
@@ -130,7 +133,7 @@ const TailorResumeComponent = () => {
           <img src={Guide_to_Tailoring_Your_Resume_with_ChatGPT} alt="Step-by-Step Guide to Tailoring Your Resume with ChatGPT" />
         </section>
         <div>
-        <NewAds/>
+        <GoogleAd/>
       </div>
         <section>
           <h2>Common Mistakes to Avoid When Tailoring Your Resume</h2>
@@ -160,7 +163,7 @@ const TailorResumeComponent = () => {
           <img src={Common_Mistakes_Resume} alt="Common Mistakes Resume" />
         </section>
         <div>
-        <NewAds/>
+        <GoogleAd/>
       </div>
         <section>
 
@@ -185,12 +188,12 @@ const TailorResumeComponent = () => {
           </p>
         </section>
         <div>
-        <NewAds/>
+        <GoogleAd/>
       </div>
       </div>
-      <div>
-        <ImportantPost/>
-      </div>
+      <div className='stickyShare'>
+     <ShareButtons url={articleUrl} title={articleTitle} />
+     </div>
 
 
 

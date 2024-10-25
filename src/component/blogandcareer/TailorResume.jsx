@@ -1,9 +1,13 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
+import ShareButtons from '../shareButton/ShareButtons';
 
 const TailorResume = () => {
+  const articleUrl = "https://www.resumeera.xyz/tailor-resume-to-job-description";
+  const articleTitle = "How to Tailor Your free Resume to a Job Description with ChatGPT:ResumeEra 2024";
+
   return (
-    <div className='aboutResumeEra'>
+    <div className=' d-sm-flex justify-content-around'>
       <Helmet>
         <title>How to Tailor Your Resume to a Job Description with ChatGPT</title>
         <meta name="description" content="Discover how to tailor your resume to a job description using ChatGPT. This comprehensive guide helps you optimize your resume for ATS and hiring managers." />
@@ -11,8 +15,11 @@ const TailorResume = () => {
         <link rel="canonical" href="https://www.resumeera.xyz/tailor-resume-to-job-description" />
       </Helmet>
 
-      
-        <h1>How to Tailor Your free Resume to a Job Description with ChatGPT:ResumeEra 2024</h1>
+      <div className='aboutResumeEra'>
+        <div className='.h1'>
+        <h1 className=''>How to Tailor Your free Resume to a Job Description with ChatGPT:ResumeEra 2024</h1>
+        </div>
+        
         <p>
           In the ever-competitive job market of 2024, sending out generic resumes isn’t enough. 
           To stand out, you need to customize each resume you send for every specific job you apply to. 
@@ -173,7 +180,10 @@ const TailorResume = () => {
           By following the steps outlined in this guide, and leveraging the power of AI tools like ChatGPT, you can stay ahead of the competition and land your next role with ease. 
           For more tips on resume building, visit <a href="https://www.resumeera.xyz">ResumeEra</a> and check out our free resume builder tools and templates to enhance your job search process.
         </p>
-     
+        </div>
+     <div className='stickyShare'>
+     <ShareButtons url={articleUrl} title={articleTitle} />
+     </div>
     </div>
   );
 };

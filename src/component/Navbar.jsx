@@ -3,7 +3,7 @@ import '../css/navbar.css'; // Import the new CSS file
 
 function Navbar() {
     return (
-        <div className="navbar-content">
+        <div className="navbar-content ">
             <div className="navbar-brand">
                 <Link className="navbar-link-brand" to="/"> <span class="star">★</span>
         {/* <span class="star">★</span> */}

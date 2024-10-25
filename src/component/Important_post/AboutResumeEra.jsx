@@ -4,11 +4,15 @@ import download_1 from '../../image/image_for_link/download_1.jpg'
 import download_2 from '../../image/image_for_link/download_2.jpg'
 import '../../css/Important_Post/aboutResumeEra.css'
 import { Link } from "react-router-dom";
+import ShareButtons from "../shareButton/ShareButtons";
 const AboutResumeEra= () => {
+    const articleUrl = 'https://resumeera.xyz/improving-your-resume-with-action-verbs'
+    const articleTitle = 'ResumeEra: Craft Your Perfect and free Resume Today'
     return (
         <div>
             <Helmet>
                 <title>ResumeEra: Craft Your Perfect and free Resume Today</title>
+                <link rel="canonical" href="https://resumeera.xyz/improving-your-resume-with-action-verbs" />
                 <meta name="description" content="Create your standout resume effortlessly with ResumeEra. 
                     Our free online tools and expert tips help you craft a professional CV that lands interviews. 
                         Start your job search strong today!" />
@@ -18,6 +22,7 @@ const AboutResumeEra= () => {
                 <meta property="og:description" content="Join ResumeEra to create stunning professional resumes without any cost. Customize, download, and share your resume instantly." />
                 <meta property="og:url" content="https://resumeera.xyz/about" />
                 <meta property="og:type" content="website" />
+               
 
             </Helmet>
             <div className="aboutResumeEra">
@@ -259,6 +264,9 @@ const AboutResumeEra= () => {
                     <Link className='.button' to='https://resumeera.xyz'>Home Page</Link>
                     <Link className='.button' to='/how-to-create-a-professional-resume'>Next Post</Link>
                 </div>
+            </div>
+            <div>
+            <ShareButtons url={articleUrl} title={articleTitle} />
             </div>
         </div>
     )

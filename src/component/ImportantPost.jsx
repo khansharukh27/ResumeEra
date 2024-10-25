@@ -5,6 +5,7 @@ import { Helmet } from 'react-helmet';
 import GoogleAd from './adFolder/GoogleAd';
 
 const ImportantPost = () => {
+    
     return (
         <div className="important-posts">
             <Helmet>

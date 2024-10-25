@@ -42,4 +42,24 @@
     text-decoration: none;
    
   }
-  
+  @media (max-width:320px){
+    .important-posts ul {
+      padding-left: 0px;
+      padding-right: 0px;
+      list-style-type: none;
+      width: 80%;
+    } 
+    .important-posts {
+     
+      margin: 0px;
+      padding: 0px;
+      
+    }
+    .important-posts li {
+      margin-bottom: 10px;
+      border: 1px solid green;
+      padding: 15px;
+      margin: 10px;
+      width: 100%;
+    }
+  }
