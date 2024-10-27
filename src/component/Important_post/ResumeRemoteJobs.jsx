@@ -1,6 +1,7 @@
 import React from "react";
 import '../../css/Important_Post/ResumeRemoteJobs.css';
 import { Helmet } from "react-helmet";
+import ShareButtons from "../shareButton/ShareButtons";
 
 const ResumeRemoteJobs = () => {
   return (
@@ -60,6 +61,9 @@ const ResumeRemoteJobs = () => {
     AI resume creation app free, Free AI resume tools, AI resume generation free, 
     AI resume review tool free'/>
             </Helmet>
+            <div>
+    <ShareButtons/>
+</div>
       <h1 className="remote-jobs-title">Resume Writing Tips for Remote Jobs</h1>
       <p className="remote-jobs-intro">
         Applying for remote jobs requires a slightly different approach to resume writing. Here are some tips to help you tailor your resume for remote positions and stand out as a top candidate.

@@ -2,6 +2,7 @@ import React from 'react';
 import '../../css/Important_Post/ModernResumeCrafting.css'; // Assuming you prefer to keep styles separate
 import { Helmet } from 'react-helmet';
 import { Link } from 'react-router-dom';
+import ShareButtons from '../shareButton/ShareButtons';
 
 const ModernResumeCrafting = () => {
   return (
@@ -105,6 +106,9 @@ const ModernResumeCrafting = () => {
           <Link className='.button' to='https://resumeera.xyz'>Home Page</Link>
           <Link className='.button' to='/tip_for_interview'>Next Post</Link>
         </div>
+        <div>
+    <ShareButtons/>
+</div>
       </div>
     </div>
   );

@@ -3,6 +3,7 @@ import '../../css/Important_Post/ResumeComponent.css'; // External CSS for styli
 import skill_image from '../../image/image_for_link/skill_image.jpg'
 import cv_image from '../../image/image_for_link/cv_image.png'
 import { Helmet } from 'react-helmet';
+import ShareButtons from '../shareButton/ShareButtons';
 
 const ResumeComponent = () => {
   return (
@@ -62,6 +63,9 @@ const ResumeComponent = () => {
     AI resume creation app free, Free AI resume tools, AI resume generation free, 
     AI resume review tool free'/>
             </Helmet>
+            <div>
+    <ShareButtons/>
+</div>
       <h1>Create a Professional Resume with Free Templates and Showcase Your Skills</h1>
       
       {/* Section 1 */}

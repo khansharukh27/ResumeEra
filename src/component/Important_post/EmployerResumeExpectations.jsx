@@ -2,6 +2,7 @@ import React from 'react';
 import '../../css/Important_Post/EmployerResumeExpectations.css'; // Assuming you prefer to keep styles separate
 import { Helmet } from 'react-helmet';
 import { Link } from 'react-router-dom';
+import ShareButtons from '../shareButton/ShareButtons';
 
 const EmployerResumeExpectations = () => {
   return (
@@ -62,6 +63,9 @@ const EmployerResumeExpectations = () => {
     AI resume creation app free, Free AI resume tools, AI resume generation free, 
     AI resume review tool free'/>
             </Helmet>
+            <div>
+    <ShareButtons/>
+</div>
       <h2 className="employer-resume-expectations-title">What Employers Look for in a Resume</h2>
       <p className="employer-resume-expectations-intro">
         Employers receive countless resumes, so it's crucial to understand what stands out to them. Here’s what hiring managers are looking for when they review your resume.

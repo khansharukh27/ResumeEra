@@ -1,6 +1,7 @@
 import React from "react";
 import '../../css/Important_Post/ResumeNoExperience.css';
 import { Helmet } from "react-helmet";
+import ShareButtons from "../shareButton/ShareButtons";
 
 const ResumeNoExperience = () => {
   return (
@@ -60,6 +61,9 @@ const ResumeNoExperience = () => {
     AI resume creation app free, Free AI resume tools, AI resume generation free, 
     AI resume review tool free'/>
             </Helmet>
+            <div>
+    <ShareButtons/>
+</div>
       <h1 className="resume-no-exp-title">Creating a Resume with No Experience</h1>
       <p className="resume-no-exp-intro">
         Writing a resume with no work experience can be challenging, but there are ways to showcase your strengths and potential. Here’s how you can build an impressive resume even without professional experience.

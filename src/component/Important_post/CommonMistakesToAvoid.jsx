@@ -3,6 +3,7 @@ import '../../css/Important_Post/CommonMistakesToAvoid.css';
 import { Helmet } from 'react-helmet';
 import common_mistake from '../../image/image_for_link/common_mistake.jpg'
 import { Link } from 'react-router-dom';
+import ShareButtons from '../shareButton/ShareButtons';
 const CommonMistakesToAvoid = () => {
     return (
         <div className="aboutResumeEra">
@@ -63,6 +64,9 @@ const CommonMistakesToAvoid = () => {
     AI resume creation app free, Free AI resume tools, AI resume generation free, 
     AI resume review tool free'/>
             </Helmet>
+            <div>
+    <ShareButtons/>
+</div>
             <h1 className="common-mistakes-title">Common Mistakes to Avoid on Your Resume with ResumeEra</h1>
             <img src={common_mistake} alt="common_mistake" loading="lazy" />
             <p className="common-mistakes-intro">

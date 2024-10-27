@@ -3,6 +3,7 @@ import '../../css/Important_Post/ChooseTemplate.css'; // Assuming you prefer to 
 import { Helmet } from 'react-helmet';
 import Choose_temp from '../../image/image_for_link/choose_temp.jpg'
 import { Link } from 'react-router-dom';
+import ShareButtons from '../shareButton/ShareButtons';
 const ChooseTemplate = () => {
   return (
     <div className="aboutResumeEra">
@@ -62,6 +63,9 @@ const ChooseTemplate = () => {
     AI resume creation app free, Free AI resume tools, AI resume generation free, 
     AI resume review tool free'/>
             </Helmet>
+            <div>
+    <ShareButtons/>
+</div>
       <h2 className="choose-template-title">How to Choose the Right Resume Template</h2>
       <img src={Choose_temp} alt="choose template" />
       <p className="choose-template-intro">

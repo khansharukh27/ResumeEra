@@ -1,6 +1,7 @@
 import React from 'react';
 import '../../css/Important_Post/InternationalResume.css'; // Assuming you prefer to keep styles separate
 import { Helmet } from 'react-helmet';
+import ShareButtons from '../shareButton/ShareButtons';
 
 const InternationalResume = () => {
   return (
@@ -60,6 +61,9 @@ const InternationalResume = () => {
     AI resume creation app free, Free AI resume tools, AI resume generation free, 
     AI resume review tool free'/>
             </Helmet>
+            <div>
+    <ShareButtons/>
+</div>
       <h2 className="international-resume-title">How to Create a Resume for International Jobs</h2>
       <p className="international-resume-intro">
         Applying for international jobs requires careful consideration of various factors like cultural differences, resume formats, and language. Here’s how to create an impressive resume that meets international standards.

@@ -158,20 +158,25 @@
   <loc>https://resumeera.xyz/Best_AI_Resume_Builder</loc>
   <priority>.08</priority>
   </url>
+  <url>
   <loc>https://resumeera.xyz/free-online-resume-maker</loc>
   <priority>.08</priority>
   </url>
   
-  </url>
+  <url>
   <loc>https://resumeera.xyz/resume-trends-2024</loc>
   <priority>.08</priority>
   </url>
-  </url>
+  <url>
   <loc>https://resumeera.xyz/9-things-you-need-to-know-about-ATS-in-2024</loc>
   <priority>.08</priority>
   </url>
-  </url>
+  <url>
   <loc>https://resumeera.xyz/tailor-resume-to-job-description</loc>
+  <priority>.08</priority>
+  </url>
+  <url>
+  <loc>https://resumeera.xyz/what-are-your-strengths</loc>
   <priority>.08</priority>
   </url>
 </urlset>

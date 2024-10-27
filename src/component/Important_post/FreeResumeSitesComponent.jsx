@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom'; // Assuming internal routing
 import best_logo from '../../image/image_for_link/best_logo.895bb22edf6c08600c86.webp'
 import freeResumeBuilder from '../../image/image_for_link/freeResumeBuilder.jpeg'
 import '../../css/Important_Post/FreeResumeSitesComponent.css'
+import ShareButtons from '../shareButton/ShareButtons';
 const FreeResumeSitesComponent = () => {
   return (
     <div className='aboutResumeEra'>
@@ -16,6 +17,9 @@ const FreeResumeSitesComponent = () => {
       </Helmet>
 
       {/* Main Content */}
+      <div>
+    <ShareButtons/>
+</div>
       <section className='freesection'>
         <div className='d-flex ' style={{ textAlign: '' }}>
           <img src={best_logo} alt="ResumeEra logo" className='me-2' style={{ width: "100px", height: '100px', borderRadius: '50%' }} />

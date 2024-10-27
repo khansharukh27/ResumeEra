@@ -1,6 +1,8 @@
 import React, { useEffect } from 'react';
 import { Helmet } from 'react-helmet';
 import NewAds from '../adFolder/NewAds';
+import { Link } from 'react-router-dom';
+import ShareButtons from '../shareButton/ShareButtons';
 
 const WhyDoYouWantToWork = () => {
   useEffect(() => {
@@ -19,11 +21,11 @@ const WhyDoYouWantToWork = () => {
       </Helmet>
 
       <div className="aboutResumeEra">
-        
-<div style={{backgroundColor:'transparent',padding:'50px' ,borderRadius:'15px',border:'1px solid black',boxShadow:'inherit'}}>
-<h1 >Why Do You Want to Work in This Field:- ResumeEra?</h1>
 
-</div>
+        <div style={{ backgroundColor: 'transparent', padding: '50px', borderRadius: '15px', border: '1px solid black', boxShadow: 'inherit' }}>
+          <h1 >Why Do You Want to Work in This Field:- ResumeEra?</h1>
+
+        </div>
         <section className="introduction">
           <p>
             The question “Why do you want to work in this field?” is one of the most common and critical questions asked during job interviews. It’s an opportunity to showcase your passion, understanding of the industry, and how your skills align with the job you’re applying for.
@@ -128,7 +130,16 @@ const WhyDoYouWantToWork = () => {
             For more career tips, guidance, and the best tools to build a winning resume, explore <a href="https://resumeera.xyz">ResumeEra</a> today.
           </p>
         </section>
+        <section>
+                <ShareButtons />
+            </section>
+        <div className='btn mb-3'>
+        <Link className=".button" to='https://resumeera.xyz/why-should-we-hire-you'>Back For Post</Link>
+        <Link className='.button' to='https://resumeera.xyz'>Home Page</Link>
+        <Link className='.button' to='https://resumeera.xyz/why_do_you_want_to_work'>Next Post</Link>
       </div>
+      </div>
+      
     </div>
   );
 };

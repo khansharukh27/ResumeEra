@@ -2,6 +2,7 @@ import React from 'react';
 import '../../css/Important_Post/CorrectResumeFormatting.css'; // Assuming you prefer to keep styles separate
 import { Helmet } from 'react-helmet';
 import { Link } from 'react-router-dom';
+import ShareButtons from '../shareButton/ShareButtons';
 
 const CorrectResumeFormatting = () => {
   return (
@@ -61,6 +62,9 @@ const CorrectResumeFormatting = () => {
     AI resume creation app free, Free AI resume tools, AI resume generation free, 
     AI resume review tool free'/>
       </Helmet>
+      <div>
+    <ShareButtons/>
+</div>
       <h1 className="correct-resume-formatting-title">How to Format a Resume Correctly</h1>
       <p className="correct-resume-formatting-intro">
         A well-formatted resume ensures that your qualifications are easily understood by both hiring managers and Applicant Tracking Systems (ATS). Follow these tips to make sure your resume is formatted correctly.

@@ -9,6 +9,7 @@ import The_ResumeEra_Advantage from '../../image/image_for_link/The_ResumeEra_Ad
 import Using_ResumeEra from '../../image/image_for_link/Using_ResumeEra.jpeg'
 import best_logo from '../../image/image_for_link/best_logo.895bb22edf6c08600c86.webp'
 import ImportantPost from "../ImportantPost";
+import ShareButtons from "../shareButton/ShareButtons";
 const FreeResumeBuilder = () => {
     return (
         <div className="resume-builder-container d-sm-flex justify-content-between ">
@@ -24,6 +25,9 @@ const FreeResumeBuilder = () => {
                 />
                 <link rel="canonical" href="https://resumeera.xyz/free-resume-builder" />
             </Helmet>
+            <div>
+    <ShareButtons/>
+</div>
             <div  className="me-4">
             <header>
                 <h1>Online Resume Maker Free PDF - ResumeEra</h1>

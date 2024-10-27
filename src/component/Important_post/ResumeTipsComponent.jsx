@@ -1,6 +1,7 @@
 import React from 'react';
 import '../../css/Important_Post/ResumeTipsComponent.css'
 import { Helmet } from 'react-helmet';
+import ShareButtons from '../shareButton/ShareButtons';
 
 const ResumeTipsComponent = () => {
   return (
@@ -61,6 +62,9 @@ const ResumeTipsComponent = () => {
     AI resume creation app free, Free AI resume tools, AI resume generation free, 
     AI resume review tool free'/>
             </Helmet>
+            <div>
+    <ShareButtons/>
+</div>
       <h1>Resume कैसे बनाएं जो नियोक्ता को प्रभावित कर सके?</h1>
       
       <h3>1. बुनियादी जानकारी:</h3>

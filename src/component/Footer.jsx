@@ -8,7 +8,7 @@ const Footer = () => {
     <footer className="footer">
       <div className="footer-content">
         <div className="footer-social">
-          <h3>Follow Us</h3>
+          <h3 style={{ color: 'green' }}>Follow Us</h3>
           <ul className="social-links">
             <li>
               <Link to="https://www.facebook.com/shahrukh.mirza.123276" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
@@ -31,35 +31,38 @@ const Footer = () => {
               </Link>
             </li>
           </ul>
-          
+
           <ul className="social-links">
             <li>
-            <Link to="https://www.reddit.com/user/shahrukhmirza888/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+              <Link to="https://www.reddit.com/user/shahrukhmirza888/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
                 <FaReddit />
               </Link>
             </li>
             <li>
-            <Link to="https://www.quora.com/profile/Shahrukh-Mirza-18" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+              <Link to="https://www.quora.com/profile/Shahrukh-Mirza-18" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
                 <FaQuora />
               </Link>
             </li>
           </ul>
         </div>
-       
+
         <div className="footer-links">
-          <h3>Quick Links</h3>
+          <h3 style={{ color: 'green' }}>Quick Links</h3>
           <ul>
             <li><Link to="/AboutUs">About</Link></li>
             <li><Link to="/contact">Contact</Link></li>
             <li><Link to="/privacypolicy">Privacy Policy</Link></li>
             <li><Link to="/terms-of-service">Terms of Service</Link></li>
+          </ul>
+        </div>
+        <div className="footer-links">
+          <h3  style={{ color: 'green' }}>Learn</h3>
+          <ul>
             <li><Link to="/important_post">Important Post</Link></li>
             <li><Link to="/Blog_or_Career_Tips_Page">Blog or Career Tips Page</Link></li>
             <li><Link to="/Interview_Question_Post">Interview Question Post</Link></li>
-
           </ul>
         </div>
-        
       </div>
       <div className="footer-bottom">
         <p>&copy; {new Date().getFullYear()} ResumeEra. All rights reserved.</p>

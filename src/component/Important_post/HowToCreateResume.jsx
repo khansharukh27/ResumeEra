@@ -2,6 +2,7 @@ import React from 'react';
 import '../../css/Important_Post/HowToCreateResume.css';
 import { Helmet } from 'react-helmet';
 import { Link } from 'react-router-dom';
+import ShareButtons from '../shareButton/ShareButtons';
 
 const HowToCreateResume = () => {
     return (
@@ -61,6 +62,9 @@ const HowToCreateResume = () => {
     AI resume creation app free, Free AI resume tools, AI resume generation free, 
     AI resume review tool free'/>
             </Helmet>
+            <div>
+    <ShareButtons/>
+</div>
             <h1 className="resume-guide-title">How to Create a Resume</h1>
             <p className="resume-guide-intro">
                 Crafting a professional resume is crucial to making a great first impression on potential employers. Follow these essential steps to build a resume that stands out and effectively highlights your qualifications and experience.

@@ -11,6 +11,7 @@ import Proofread_Edit_Thoroughly from '../../image/image_for_link/Proofread_Edit
 import Relevant_Keywords from '../../image/image_for_link/Relevant_Keywords.jpeg'
 import Soft_Skills from '../../image/image_for_link/Soft_Skills.jpeg'
 import ImportantPost from "../ImportantPost";
+import ShareButtons from "../shareButton/ShareButtons";
 const HowToWriteAResume = () => {
     return (
         <div className="HowToWriteAResume2024">
@@ -23,6 +24,9 @@ const HowToWriteAResume = () => {
                 how to write resume, resume guide, resume builder" />
                 <link rel="canonical" href="https://resumeera.xyz/how-to-write-a-resume-in-7-easy-steps" />
             </Helmet>
+            <div>
+    <ShareButtons/>
+</div>
             <div className="HowToWriteAResumemain">
                 <div className="add1">
                     

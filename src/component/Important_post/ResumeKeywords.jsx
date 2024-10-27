@@ -1,6 +1,7 @@
 import React from 'react';
 import '../../css/Important_Post/ResumeKeywords.css'; // Assuming you prefer to keep styles separate
 import { Helmet } from 'react-helmet';
+import ShareButtons from '../shareButton/ShareButtons';
 
 const ResumeKeywords = () => {
   return (
@@ -60,6 +61,9 @@ const ResumeKeywords = () => {
     AI resume creation app free, Free AI resume tools, AI resume generation free, 
     AI resume review tool free'/>
             </Helmet>
+            <div>
+    <ShareButtons/>
+</div>
       <h1 className="resume-keywords-title">How to Use Keywords in a Resume</h1>
       <p className="resume-keywords-intro">
         Including the right keywords in your resume is critical for passing Applicant Tracking Systems (ATS) and catching the attention of hiring managers. Here’s how to effectively use keywords in your resume.

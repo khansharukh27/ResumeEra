@@ -1,6 +1,7 @@
 import React from "react";
 import '../../css/Important_Post/ResumeCareerChange.css';
 import { Helmet } from "react-helmet";
+import ShareButtons from "../shareButton/ShareButtons";
 
 const ResumeCareerChange = () => {
   return (
@@ -60,6 +61,9 @@ const ResumeCareerChange = () => {
     AI resume creation app free, Free AI resume tools, AI resume generation free, 
     AI resume review tool free'/>
             </Helmet>
+            <div>
+    <ShareButtons/>
+</div>
       <h1 className="career-change-title">How to Write a Resume for Career Change</h1>
       <p className="career-change-intro">
         Changing careers can be an exciting but challenging process, especially when it comes to writing a resume. Here are some tips to help you craft a resume that highlights your transferable skills and sets you up for success in your new field.

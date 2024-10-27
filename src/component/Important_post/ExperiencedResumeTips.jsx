@@ -2,6 +2,7 @@ import React from 'react';
 import '../../css/Important_Post/ExperiencedResumeTips.css'; // Assuming you prefer to keep styles separate
 import { Helmet } from 'react-helmet';
 import { Link } from 'react-router-dom';
+import ShareButtons from '../shareButton/ShareButtons';
 
 const ExperiencedResumeTips = () => {
   return (
@@ -61,6 +62,9 @@ const ExperiencedResumeTips = () => {
     AI resume creation app free, Free AI resume tools, AI resume generation free, 
     AI resume review tool free'/>
       </Helmet>
+      <div>
+    <ShareButtons/>
+</div>
       <h1 className="experienced-resume-tips-title">Resume Tips for Experienced Professionals</h1>
       <p className="experienced-resume-tips-intro">
         As an experienced professional, your resume needs to highlight your accomplishments and showcase your expertise. Here are some key tips to ensure your resume stands out.

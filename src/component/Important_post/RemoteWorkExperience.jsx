@@ -3,6 +3,7 @@ import { Helmet } from 'react-helmet';
 import '../../css/Important_Post/RemoteWorkExperience.css';
 import ImportantPost from '../ImportantPost';
 import NewAds from '../adFolder/NewAds';
+import ShareButtons from '../shareButton/ShareButtons';
 
 const RemoteWorkExperience = () => {
     return (
@@ -13,6 +14,9 @@ const RemoteWorkExperience = () => {
                 <meta name="keywords" content="remote work experience, customized resumes for each application in resume, customized resume maker, customized resume, remote job experience" />
                 <link rel="canonical" href="https://resumeera.xyz/remote-work-experience" />
             </Helmet>
+            <div>
+    <ShareButtons/>
+</div>
             <div className='resumeTrendsMain'>
 
             <h1>Showcasing Your Remote Work Experience on Your Resume</h1>

@@ -3,6 +3,7 @@ import '../../css/Important_Post/FirstJobResume.css'; // Assuming you prefer to 
 import { Helmet } from 'react-helmet';
 import job_resume from '../../image/image_for_link/job_resume.jpg'
 import { Link } from 'react-router-dom';
+import ShareButtons from '../shareButton/ShareButtons';
 const FirstJobResume = () => {
   return (
     <div className="aboutResumeEra">
@@ -61,6 +62,9 @@ const FirstJobResume = () => {
     AI resume creation app free, Free AI resume tools, AI resume generation free, 
     AI resume review tool free'/>
             </Helmet>
+            <div>
+    <ShareButtons/>
+</div>
       <h2 className="first-job-resume-title">Creating a Resume for Your First Job</h2>
       <img src={job_resume} alt="first job resume" loading="lazy"/>
       <p className="first-job-resume-intro">

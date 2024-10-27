@@ -137,6 +137,7 @@ import WhyShouldWeHireYou from './component/blog/WhyShouldWeHireYou';
 import WhyDoYouWantToWork from './component/blog/WhyDoYouWantToWork';
 import ATS2024 from './component/blogandcareer/ATS2024';
 import TailorResume from './component/blogandcareer/TailorResume';
+import WhatAreYourStrengths from './component/blog/WhatAreYourStrengths';
 // import CoverLetterInput from './component/CoverLetterInput';
 // import CoverComponent from './component/CoverComponent';
 var images = [
@@ -251,6 +252,8 @@ function App() {
         <Route path='/resume-trends-2024' element={<ResumeTrends2024/>}/>
         <Route path='/remote-work-experience' element={<RemoteWorkExperience/>}/>
         <Route path='/how-to-write-a-resume-in-7-easy-steps' element={<HowToWriteAResume/>}/>
+        <Route path='/what-are-your-strengths' element={<WhatAreYourStrengths/>}/>
+
 
         {/* interview quation and answer*/}
 

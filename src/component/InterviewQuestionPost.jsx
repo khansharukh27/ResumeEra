@@ -16,6 +16,9 @@ const InterviewQuestionPost = () => {
                     <li><Link to="/Why_Work_Here">How to Answer "Why Do You Want to Work Here?" | Resumeera</Link></li>
                     <li><Link to="/why-should-we-hire-you">Why Should We Hire You? Best Answers for Job Interviews - ResumeEra</Link></li>
                     <li><Link to="/why_do_you_want_to_work">Why Do You Want to Work in This Field? - ResumeEra</Link></li>
+                    <li>
+                    <Link to='/what-are-your-strengths'>What Are Your Strengths? | Resume Tips by ResumeEra</Link>
+                </li>
 
                 </ul>
                 <div>

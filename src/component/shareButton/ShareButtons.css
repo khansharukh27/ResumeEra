@@ -3,7 +3,7 @@
     position: fixed; /* This makes the element stick to a certain position on the screen */
     top: 160px;       /* Distance from the top of the viewport */
     right: 0px;     /* Distance from the right of the viewport */
-    background-color: #f1f1f1;
+    background-color: transparent;
     padding: 10px;
     padding-left: 40px;
     padding-right: 150px;
