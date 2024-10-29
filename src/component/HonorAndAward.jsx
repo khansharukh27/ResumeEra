@@ -7,6 +7,7 @@ import SoftSkills from "./SoftSkills";
 import KeySkills from "./KeySkill";
 import References from "./Refrences";
 import { useLocation } from "react-router-dom";
+import GoogleAd from "./adFolder/GoogleAd";
 
 const HonorAndAward = () => {
     const [showSoftSkill, setShowSoftSkill] = useState(false);
@@ -114,6 +115,9 @@ const location = useLocation();
               <span className="text">ADD MORE</span>
             </button>
           </div>
+          <div>
+  <GoogleAd/>
+</div>
           <div className="d-flex justify-content-around">
             <button onClick={handleClickBack} className="button1">
               <span className="text">BACK</span>

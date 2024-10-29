@@ -138,6 +138,11 @@ import WhyDoYouWantToWork from './component/blog/WhyDoYouWantToWork';
 import ATS2024 from './component/blogandcareer/ATS2024';
 import TailorResume from './component/blogandcareer/TailorResume';
 import WhatAreYourStrengths from './component/blog/WhatAreYourStrengths';
+import HowEmployerDescribeYou from './component/blog/HowEmployerDescribeYou';
+import GreatestWeakness from './component/blog/GreatestWeakness';
+import HobbiesInterests from './component/blog/HobbiesInterests';
+import WhatDoesSuccessLookLikeToYou from './component/blog/WhatDoesSuccessLookLikeToYou';
+import WhyAreYouQualifiedForThisPosition from './component/blog/WhyAreYouQualifiedForThisPosition';
 // import CoverLetterInput from './component/CoverLetterInput';
 // import CoverComponent from './component/CoverComponent';
 var images = [
@@ -261,7 +266,11 @@ function App() {
         <Route path='/tell-us-about-yourself' element={<TellUsAboutYourself/>}/>
         <Route path='/why-should-we-hire-you' element={<WhyShouldWeHireYou/>}/>
         <Route path='/why_do_you_want_to_work' element={<WhyDoYouWantToWork/>}/>
-
+        <Route path='/how-employer-describe' element={<HowEmployerDescribeYou/>}/>
+        <Route path='/greatest-weakness' element={<GreatestWeakness/>}/>
+        <Route path='/hobbies-interests' element={<HobbiesInterests/>}/>
+        <Route path='/what-does-success-look-like-to-you' element={<WhatDoesSuccessLookLikeToYou/>}/>
+        <Route path='/why-are-you-qualified-for-this-position' element={<WhyAreYouQualifiedForThisPosition/>}/>
 
 
         {/* job and carier blog component */}

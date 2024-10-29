@@ -5,6 +5,7 @@ import '../css/Certificate.css';
 // import KeySkills from "./KeySkill";
 import SocialMedia from "./SocialMedia";
 import SoftSkills from "./SoftSkills";
+import GoogleAd from "./adFolder/GoogleAd";
 
 const Certificate = () => {
   const [showSocialMedia, setShowSocialMedia] = useState(false);
@@ -19,13 +20,13 @@ const Certificate = () => {
     return savedCertificates
       ? JSON.parse(savedCertificates)
       : [
-          {
-            certificateName: '',
-            organization: '',
-            issueDate: '',
-            description: ''
-          }
-        ];
+        {
+          certificateName: '',
+          organization: '',
+          issueDate: '',
+          description: ''
+        }
+      ];
   });
 
   const dispatch = useDispatch();
@@ -92,7 +93,7 @@ const Certificate = () => {
           <div className="profetional-detail">
             <h1 className="multicolor-heading">Your Certificates</h1>
             <p>
-              Adding certificates to your resume showcases additional skills and achievements, 
+              Adding certificates to your resume showcases additional skills and achievements,
               making you stand out to potential employers. Provide the details of your certifications below.
             </p>
           </div>
@@ -107,7 +108,7 @@ const Certificate = () => {
                   type="text"
                   placeholder="Certificate Name"
                   name="certificateName"
-                  value={certificate? certificate.certificateName : ""}
+                  value={certificate ? certificate.certificateName : ""}
                 />
                 <input
                   className="input mb-2"
@@ -115,7 +116,7 @@ const Certificate = () => {
                   type="text"
                   placeholder="Organization"
                   name="organization"
-                  value={certificate? certificate.organization : ""}
+                  value={certificate ? certificate.organization : ""}
                 />
               </div>
               <div className="d-sm-flex one">
@@ -125,7 +126,7 @@ const Certificate = () => {
                   onChange={(e) => handleChange(e, index)}
                   placeholder="Issue Date"
                   name="issueDate"
-                  value={certificate? certificate.issueDate : ""}
+                  value={certificate ? certificate.issueDate : ""}
                 />
               </div>
               <div className="second">
@@ -137,7 +138,7 @@ const Certificate = () => {
                   name="description"
                   cols="200"
                   rows="5"
-                  value={certificate? certificate.description : ""}
+                  value={certificate ? certificate.description : ""}
                 ></textarea>
               </div>
               <div className="d-flex justify-content-center m-2">
@@ -153,6 +154,9 @@ const Certificate = () => {
               <span className="text">ADD MORE</span>
             </button>
           </div>
+          <div>
+  <GoogleAd/>
+</div>
           <div className="d-flex justify-content-around">
             <button onClick={handleClickBack} className="button1">
               <span className="text">BACK</span>

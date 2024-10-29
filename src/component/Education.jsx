@@ -3,9 +3,10 @@ import WorkExperience from "./WorkExperience";
 import { useDispatch } from "react-redux";
 import { educationData } from "../Redux/action";
 import Language from "./Language";
+import GoogleAd from "./adFolder/GoogleAd";
 // import debounce from "./debounce";
 
-const Education = ()=> {
+const Education = () => {
   const [showEducation, setShowEducation] = useState(true);
   const [showWorkExperience, setShowWorkExperience] = useState(false);
   const [showLanguage, setShowLanguage] = useState(false);
@@ -15,22 +16,22 @@ const Education = ()=> {
     return savedEducation
       ? JSON.parse(savedEducation)
       : [
-          {
-            type: "",
-            univercity: "",
-            degree: "",
-            startYear: "",
-            endYear: "",
-          },
-        ];
+        {
+          type: "",
+          univercity: "",
+          degree: "",
+          startYear: "",
+          endYear: "",
+        },
+      ];
   });
 
   const dispatch = useDispatch();
 
   useEffect(() => {
-    
-      window.scrollTo(0, 0);
-   
+
+    window.scrollTo(0, 0);
+
     // Save education data to local storage whenever it changes
     localStorage.setItem("educationData", JSON.stringify(education));
   }, [education]);
@@ -190,6 +191,7 @@ const Education = ()=> {
               <span className="text">ADD MORE</span>
             </button>
           </div>
+          <GoogleAd />
           <div className="d-flex justify-content-around m-2">
             <button
               className="button1"

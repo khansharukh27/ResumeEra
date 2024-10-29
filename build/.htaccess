@@ -1,7 +1,0 @@
-RewriteEngine On
-RewriteBase /
-
-# Agar koi file ya directory exist nahi karti toh redirect to index.html
-RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule ^(.*)$ /index.html [L]

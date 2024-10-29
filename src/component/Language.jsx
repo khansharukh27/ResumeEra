@@ -3,6 +3,7 @@ import { useDispatch } from "react-redux";
 import { addLanguage } from "../Redux/action";
 import Education from "./Education";
 import Hobbies from "./Hobbies";
+import GoogleAd from "./adFolder/GoogleAd";
 // import { float } from "html2canvas/dist/types/css/property-descriptors/float";
 
 const Language = () => {
@@ -147,7 +148,9 @@ const Language = () => {
               <span className="text">ADD MORE</span>
             </button>
           </div>
-
+<div>
+  <GoogleAd/>
+</div>
           <div className="d-flex justify-content-around mt-2">
             <button className="button1" type="button" onClick={handleClickBack}>
               <span className="text">BACK</span>

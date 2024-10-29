@@ -6,6 +6,7 @@ import Language from "./Language";
 import SocialMedia from "./SocialMedia";
 import { useLocation } from "react-router-dom";
 import KeySkills from "./KeySkill";
+import GoogleAd from "./adFolder/GoogleAd";
 
 const Hobbies = () => {
   const [input, setInput] = useState(() => {
@@ -125,7 +126,9 @@ console.log(location)
               <span className="text">ADD MORE</span>
             </button>
           </div>
-         
+          <div>
+  <GoogleAd/>
+</div>
           <div className="d-flex justify-content-around">
             <button
               className="button1"

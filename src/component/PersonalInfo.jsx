@@ -4,7 +4,8 @@ import { personalInfoData } from "../Redux/action";
 import WorkExperience from "./WorkExperience";
 import { useLocation, useNavigate } from "react-router-dom";
 import '../css/personalinfo.css';
-
+// import '../component/adFolder/GoogleAd.jsx'
+import GoogleAd from "../component/adFolder/GoogleAd.jsx";
 const PersonalInfo = ({coverImage}) => {
     const [selectImage, setSelectImage] = useState(null);
     const [showPersonalInfo, setShowPersonalInfo] = useState(true);
@@ -164,6 +165,9 @@ console.log('result2:-',result2)
                             <textarea className="input m-2" type="text" placeholder="date of birth" name="dateofbirth" value={inputData.dateofbirth} onChange={handleChange} style={{ width: '100%' }} />
 
                         </div>
+                    </div>
+                    <div>
+                        <GoogleAd/>
                     </div>
                     <div className="d-sm-flex justify-content-around m-2 button-div">
                         <button onClick={handleClickBack} className="button1">

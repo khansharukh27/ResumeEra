@@ -3,6 +3,7 @@ import Education from "./Education";
 import { useState, useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { workExData } from "../Redux/action";
+import GoogleAd from "./adFolder/GoogleAd";
 
 const WorkExperience = () => {
   const [showPersonalInfo, setShowPersonalInfo] = useState(false);
@@ -113,6 +114,9 @@ const WorkExperience = () => {
             <button className="button1" type="button" onClick={handleAddMore}>
               <span className="text">ADD MORE</span>
             </button>
+          </div>
+          <div>
+            <GoogleAd/>
           </div>
           <div className="d-flex justify-content-around">
             <button onClick={handleClickBack} className="button1">

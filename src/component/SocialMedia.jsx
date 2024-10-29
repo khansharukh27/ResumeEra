@@ -6,6 +6,7 @@ import { socialMediaLink } from "../Redux/action";
 import SoftSkills from "./SoftSkills";
 import { useLocation } from "react-router-dom";
 import Certificate from "./Certificate";
+import GoogleAd from "./adFolder/GoogleAd";
 
 const SocialMedia = () => {
     const [textInput, setTextInput] = useState(() => {
@@ -138,6 +139,9 @@ setShowHobbies(true);
 
                     </div>
                     <hr className="mb-5" />
+                    <div>
+  <GoogleAd/>
+</div>
                     <div className="d-flex justify-content-around" style={{}}>
                         <button className="button1" onClick={handleClickBack}>
                             <span className="text">BACK</span>

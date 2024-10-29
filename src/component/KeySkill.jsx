@@ -5,6 +5,7 @@ import { useLocation, useNavigate } from "react-router-dom";
 import Hobbies from "./Hobbies";
 import References from "./Refrences";
 import Certificate from "./SocialMedia";
+import GoogleAd from "./adFolder/GoogleAd";
 
 const KeySkills = () => {
   const [showKeySkills, setShowKeySkills] = useState(true);
@@ -176,6 +177,9 @@ const KeySkills = () => {
             </button>
           </div>
           <hr className="m-2" />
+          <div>
+  <GoogleAd/>
+</div>
           <div style={{ display: 'flex', justifyContent: 'space-around' }}>
             <button className="button1" onClick={handleClickBack} type="button">
               <span className="text">BACK</span>

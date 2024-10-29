@@ -7,6 +7,7 @@ import SocialMedia from "./SocialMedia";
 // import KeySkills from "./KeySkill";
 import HonorAndAward from "./HonorAndAward";
 import Certificate from "./Certificate";
+import GoogleAd from "./adFolder/GoogleAd";
 
 const SoftSkills = () => {
   const [input, setInput] = useState(() => {
@@ -111,6 +112,9 @@ const SoftSkills = () => {
               <span className="text">ADD MORE</span>
             </button>
           </div>
+          <div>
+  <GoogleAd/>
+</div>
           <div className="d-flex justify-content-around">
             <button className="button1" type="button" onClick={handleClickBack}>
               <span className="text">BACK</span>

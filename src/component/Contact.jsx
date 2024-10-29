@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import '../css/contact.css'; // Import custom CSS
 import { Helmet } from 'react-helmet';
+import GoogleAd from './adFolder/GoogleAd';
 
 const Contact = () => {
   // State to handle form data
@@ -98,7 +99,12 @@ const Contact = () => {
             value={formData.message}
             onChange={handleChange}
             required
-          ></textarea>
+          >
+
+          </textarea>
+          <div>
+  <GoogleAd/>
+</div>
         </div>
 
         <button type="submit" className="submit-btn">Send Message</button>
