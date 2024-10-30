@@ -73,7 +73,7 @@ const ImportantPostLink = () => {
                         {/* Insert an ad after every 4 cards */}
                         {(index + 1) % 3 === 0 && (
                             <div style={{ gridColumn: '1 / -1', textAlign: 'center', padding: '1rem' }}>
-                                <div className="ad-container">
+                                <div className="ad-container" style={{width:'100%',height:'300px'}}>
                                     <GoogleAd />
                                 </div>
                             </div>

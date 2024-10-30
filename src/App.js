@@ -143,6 +143,9 @@ import GreatestWeakness from './component/blog/GreatestWeakness';
 import HobbiesInterests from './component/blog/HobbiesInterests';
 import WhatDoesSuccessLookLikeToYou from './component/blog/WhatDoesSuccessLookLikeToYou';
 import WhyAreYouQualifiedForThisPosition from './component/blog/WhyAreYouQualifiedForThisPosition';
+import SkillsForSuccess from './component/blog/SkillsForSuccess';
+import WorkPreference from './component/blog/WorkPreference';
+import DifficultCustomerExample from './component/blog/DifficultCustomerExample';
 // import CoverLetterInput from './component/CoverLetterInput';
 // import CoverComponent from './component/CoverComponent';
 var images = [
@@ -271,6 +274,10 @@ function App() {
         <Route path='/hobbies-interests' element={<HobbiesInterests/>}/>
         <Route path='/what-does-success-look-like-to-you' element={<WhatDoesSuccessLookLikeToYou/>}/>
         <Route path='/why-are-you-qualified-for-this-position' element={<WhyAreYouQualifiedForThisPosition/>}/>
+        <Route path='/skills-for-success-in-role' element={<SkillsForSuccess/>}/>
+        <Route path='/work-alone-or-group-preference' element={<WorkPreference/>}/>
+        <Route path='/dealing-with-difficult-customers' element={<DifficultCustomerExample/>}/>
+
 
 
         {/* job and carier blog component */}

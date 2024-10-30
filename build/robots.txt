@@ -1,0 +1,4 @@
+# https://www.robotstxt.org/robotstxt.html
+User-agent: Googlebot
+Disallow:
+Sitemap: https://resumeera.xyz/sitemap.xml

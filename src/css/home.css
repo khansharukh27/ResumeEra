@@ -23,7 +23,8 @@
     justify-content: center;
     align-items: center;
     object-fit: cover;
-    width: 120px;
+    margin-top: 40px;
+    width: 250px;
     height: 120px;
     border-radius: 50%;
 }
@@ -69,7 +70,7 @@
 
 /* Section for how to create a resume */
 .home-how-to {
-    text-align: center;
+    text-align: start;
     font-size: 30px;
     font-weight: bold;
     color: black;
@@ -80,11 +81,14 @@
 .home-steps {
     display: flex;
     justify-content: space-around;
+    text-align: center;
+    margin-right: 40px;
 }
 
 .home-step p {
     font-size: medium;
     font-weight: 200;
+    margin-right: 60px;
 }
 
 .home-step img {
@@ -117,6 +121,7 @@
 
 .home-change-cv-info p {
     font-weight: 200;
+    
 }
 
 .home-change-cv-info p a {

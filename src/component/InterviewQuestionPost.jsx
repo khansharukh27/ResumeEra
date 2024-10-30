@@ -22,6 +22,9 @@ const InterviewQuestionPost = () => {
                     <li><Link to='/hobbies-interests'>What are Your Hobbies or Interests? | ResumeEra</Link></li>
                     <li><Link to='/what-does-success-look-like-to-you'>What Does Success Look Like to You? - Interview Prep Guide</Link></li>
                     <li><Link to='/why-are-you-qualified-for-this-position'>What Makes You Qualified for This Position?</Link></li>
+                    <li><Link to='/skills-for-success-in-role'>Answering 'What Skills Make You Successful?' for Interviews | ResumeEra</Link></li>
+                    <li><Link to='/work-alone-or-group-preference'>Do You Prefer Working Alone or in a Group? - ResumeEra</Link></li>
+                    <li><Link to='/dealing-with-difficult-customers'>How to Handle Difficult Customers | ResumeEra</Link></li>
 
                 </ul>
                 <div>

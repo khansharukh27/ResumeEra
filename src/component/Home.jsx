@@ -72,14 +72,14 @@ const Home = ({ images }) => {
     AI resume review tool free'/>
             </Helmet>
             <div className='home_div'>
-                <div className="home-logo m-2 p-2">
-                    <img src={best_logo} alt="logo" />
+                <div className="home-logo">
+                    <img src={best_logo} alt="ResumeEra logo" />
                 </div>
                 <div className="home-welcome " style={{color:'orange'}}>
-                    <h1 style={{color:'black'}}>
+                    <h1 style={{color:'black',textAlign:'justify',marginRight:'10px',marginLeft:'40px'}}>
                         
-                        <Link className="home-link" to="/template">Welcome to ResumeEra! Please Click
-                        PERSONALLIZED TEMPLATES FOR EVERY INDUSTRY  to make a resume.</Link>
+                        <Link className="home-link" to="/template">WELCOME TO RESUMEERA! PLEASE CLICK
+                        PERSONALLIZED TEMPLATE FOR EVERY INDUSTRY  TO MAKE A FREE RESUME.</Link>
                        
                     </h1>
                 </div>
@@ -131,7 +131,7 @@ const Home = ({ images }) => {
                         <li>Blow away recruiters with sleek designs.</li>
                         <li>Let employers see your true self—the best candidate for the job.</li>
                     </ul>
-                    <p><a href="/template">Create Free CV</a></p>
+                    <p style={{textAlign:'center'}}><a href="/template">Create Free CV</a></p>
                 </div>
             </div>
             <hr className="home-divider" />

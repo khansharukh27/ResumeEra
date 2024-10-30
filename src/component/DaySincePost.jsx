@@ -19,7 +19,7 @@ const DaysSincePost = ({ postDate }) => {
 
   return (
     <div>
-      <p>This post is {daysSince} days old.</p>
+      <p>This post is {isNaN(daysSince) ? '0' : daysSince} days old.</p>
     </div>
   );
 };
