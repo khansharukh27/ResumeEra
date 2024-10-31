@@ -1,7 +1,7 @@
-import { useEffect } from "react";
+// import {} from "react";
 
 const GoogleAd = () => {
-  useEffect(() => {
+  
     const loadAds = () => {
       // Push the ad display once the script has been loaded
       try {
@@ -29,7 +29,7 @@ const GoogleAd = () => {
       // Script already loaded, just push ads
       loadAds();
     }
-  }, []);
+;
 
   return (
     <div>

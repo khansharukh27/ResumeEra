@@ -1,27 +1,25 @@
-import PersonalInfo from "./PersonalInfo";
-import Education from "./Education";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { useDispatch } from "react-redux";
 import { workExData } from "../Redux/action";
+import PersonalInfo from "./PersonalInfo";
+import Education from "./Education";
 import GoogleAd from "./adFolder/GoogleAd";
 
 const WorkExperience = () => {
   const [showPersonalInfo, setShowPersonalInfo] = useState(false);
   const [showWorkExperience, setShowWorkExperience] = useState(true);
   const [showEducation, setShowEducation] = useState(false);
+
+  // Initialize workExperiences with localStorage data or default structure
   const [workExperiences, setWorkExperiences] = useState(() => {
-    // Get the saved work experiences from local storage, or set the initial state
     const savedWorkExperiences = localStorage.getItem("workExperiences");
     return savedWorkExperiences ? JSON.parse(savedWorkExperiences) : [
-      {
-        jobtitle: '',
-        organization: '',
-        startYear: '',
-        endYear: '',
-        aboutexperience: ''
-      }
+      { jobtitle: '', organization: '', startYear: '', endYear: '', aboutexperience: '' }
     ];
   });
+
+  // Refs to focus on empty fields
+  const inputRefs = useRef([]);
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -47,7 +45,10 @@ const WorkExperience = () => {
   };
 
   const handleAddMore = () => {
-    setWorkExperiences([...workExperiences, { jobtitle: '', organization: '', startYear: '', endYear: '', aboutexperience: '' }]);
+    setWorkExperiences([
+      ...workExperiences, 
+      { jobtitle: '', organization: '', startYear: '', endYear: '', aboutexperience: '' }
+    ]);
   };
 
   const handleClickBack = (e) => {
@@ -58,6 +59,27 @@ const WorkExperience = () => {
 
   const handleClickNext = (e) => {
     e.preventDefault();
+    
+    // Check for any empty fields and find the first one
+    const firstEmptyIndex = workExperiences.findIndex((experience) =>
+      !experience.jobtitle || !experience.organization || !experience.startYear || !experience.endYear || !experience.aboutexperience
+    );
+
+    if (firstEmptyIndex !== -1) {
+      alert("Your input is blank. Please fill in all fields.");
+      
+      // Focus on the first empty field
+      const fieldNames = ["jobtitle", "organization", "startYear", "endYear", "aboutexperience"];
+      for (let fieldName of fieldNames) {
+        if (!workExperiences[firstEmptyIndex][fieldName]) {
+          inputRefs.current[firstEmptyIndex][fieldName].focus();
+          break;
+        }
+      }
+      return; // Stop here if any field is blank
+    }
+
+    // Proceed if all fields are filled
     setShowEducation(true);
     setShowWorkExperience(false);
     dispatch(workExData(workExperiences));
@@ -79,28 +101,67 @@ const WorkExperience = () => {
   return (
     <form onSubmit={handleSubmit}>
       {showWorkExperience && (
-        <div className="">
+        <div>
           <div className="profetional-detail">
             <h1 className="multicolor-heading">Your Work Experience</h1>
-            <p>Work experience is a crucial component of a resume as it provides tangible 
-              evidence of a candidate's skills, abilities, and accomplishments. It offers 
-              potential employers a clear understanding of a candidate's professional journey, 
-              including the roles they've held, responsibilities undertaken, and results achieved.</p>
+            <p>Work experience is a crucial component of a resume...</p>
           </div>
           {workExperiences.map((experience, index) => (
             <div key={index}>
               <h1 style={{ color: 'white', textAlign: 'center' }}>Work Experience {index + 1}</h1>
               <hr />
               <div className="d-sm-flex one">
-                <input className="input mb-2" onChange={(e) => handleChange(e, index)} type="text" placeholder='Job Title' name="jobtitle" value={experience.jobtitle} />
-                <input className="input mb-2" onChange={(e) => handleChange(e, index)} type="text" placeholder='Organization Name' name="organization" value={experience.organization} />
+                <input 
+                  ref={(el) => (inputRefs.current[index] = { ...inputRefs.current[index], jobtitle: el })}
+                  className="input mb-2" 
+                  onChange={(e) => handleChange(e, index)} 
+                  type="text" 
+                  placeholder='Job Title' 
+                  name="jobtitle" 
+                  value={experience.jobtitle} 
+                />
+                <input 
+                  ref={(el) => (inputRefs.current[index] = { ...inputRefs.current[index], organization: el })}
+                  className="input mb-2" 
+                  onChange={(e) => handleChange(e, index)} 
+                  type="text" 
+                  placeholder='Organization Name' 
+                  name="organization" 
+                  value={experience.organization} 
+                />
               </div>
               <div className="d-sm-flex one">
-                <input type="text" className="input mb-2" onChange={(e) => handleChange(e, index)} placeholder="Start Year" name="startYear" value={experience.startYear} />
-                <input type="text" className="input mb-2" onChange={(e) => handleChange(e, index)} placeholder="End Year" name="endYear" value={experience.endYear} />
+                <input 
+                  ref={(el) => (inputRefs.current[index] = { ...inputRefs.current[index], startYear: el })}
+                  type="text" 
+                  className="input mb-2" 
+                  onChange={(e) => handleChange(e, index)} 
+                  placeholder="Start Year" 
+                  name="startYear" 
+                  value={experience.startYear} 
+                />
+                <input 
+                  ref={(el) => (inputRefs.current[index] = { ...inputRefs.current[index], endYear: el })}
+                  type="text" 
+                  className="input mb-2" 
+                  onChange={(e) => handleChange(e, index)} 
+                  placeholder="End Year" 
+                  name="endYear" 
+                  value={experience.endYear} 
+                />
               </div>
               <div className="second">
-                <textarea type='text' className="textarea mb-2" onChange={(e) => handleChange(e, index)} placeholder="about work" name="aboutexperience" cols="200" rows="5" value={experience.aboutexperience}></textarea>
+                <textarea 
+                  ref={(el) => (inputRefs.current[index] = { ...inputRefs.current[index], aboutexperience: el })}
+                  type="text" 
+                  className="textarea mb-2" 
+                  onChange={(e) => handleChange(e, index)} 
+                  placeholder="About Work" 
+                  name="aboutexperience" 
+                  cols="200" 
+                  rows="5" 
+                  value={experience.aboutexperience}
+                ></textarea>
               </div>
               <div className="d-flex justify-content-center m-2">
                 <button className="button1" type="button" onClick={() => handleDelete(index)}>
@@ -116,13 +177,15 @@ const WorkExperience = () => {
             </button>
           </div>
           <div>
-            <GoogleAd/>
+            <GoogleAd />
           </div>
           <div className="d-flex justify-content-around">
             <button onClick={handleClickBack} className="button1">
               <span className="text">BACK</span>
             </button>
-            <button onClick={handleClickNext} type="submit" className="button1"><span className="text">NEXT</span></button>
+            <button onClick={handleClickNext} type="submit" className="button1">
+              <span className="text">NEXT</span>
+            </button>
           </div>
         </div>
       )}

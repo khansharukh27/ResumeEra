@@ -1,0 +1,26 @@
+.main109{
+    display: flex;
+    justify-content: space-between;
+    margin-right: 10px;
+    margin-left: 10px;
+    margin-top: 20px;
+}
+.preview109{
+    width: 75%;
+    /* padding: 10px; */
+    margin-top: 30px;
+    margin-right: 15px;
+}
+.firstdiv109{
+    padding: 20px;
+}
+.seconddiv109{
+    display: flex;
+    justify-content: space-between;
+    padding-left: 5px;
+    padding-right: 5px;
+}
+
+.resume-download-section{
+    width: 25%;
+}

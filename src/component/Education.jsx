@@ -4,56 +4,54 @@ import { useDispatch } from "react-redux";
 import { educationData } from "../Redux/action";
 import Language from "./Language";
 import GoogleAd from "./adFolder/GoogleAd";
-// import debounce from "./debounce";
 
 const Education = () => {
   const [showEducation, setShowEducation] = useState(true);
   const [showWorkExperience, setShowWorkExperience] = useState(false);
   const [showLanguage, setShowLanguage] = useState(false);
   const [education, setEducation] = useState(() => {
-    // Get the saved education data from local storage, or set the initial state
     const savedEducation = localStorage.getItem("educationData");
-    return savedEducation
-      ? JSON.parse(savedEducation)
-      : [
-        {
-          type: "",
-          univercity: "",
-          degree: "",
-          startYear: "",
-          endYear: "",
-        },
-      ];
+    return savedEducation ? JSON.parse(savedEducation) : [{
+      type: "",
+      university: "",
+      degree: "",
+      startYear: "",
+      endYear: "",
+    }];
   });
 
   const dispatch = useDispatch();
 
   useEffect(() => {
-
     window.scrollTo(0, 0);
-
-    // Save education data to local storage whenever it changes
     localStorage.setItem("educationData", JSON.stringify(education));
   }, [education]);
 
   const handleChange = (e, index) => {
     const { name, value } = e.target;
-    setEducation((prev) => {
-      const updateEducation = [...prev];
-      updateEducation[index] = {
-        ...updateEducation[index],
+    setEducation(prev => {
+      const updatedEducation = [...prev];
+      updatedEducation[index] = {
+        ...updatedEducation[index],
         [name]: value.toUpperCase(),
       };
-      return updateEducation;
+      return updatedEducation;
     });
-  }; // 500ms delay
+  };
 
-  useEffect(() => {
-    console.log('Debounced education update:', education);
-  }, [education]);
+  const validateFields = () => {
+    const emptyFields = education.some(edu => 
+      !edu.type || !edu.university || !edu.degree || !edu.startYear || !edu.endYear
+    );
 
-  const handleClickBack = (e) => {
-    e.preventDefault();
+    if (emptyFields) {
+      alert(`Please fill in ${education.name}  fields`);
+      return false; // Prevent proceeding if there are empty fields
+    }
+    return true; // Proceed if all fields are filled
+  };
+
+  const handleClickBack = () => {
     setShowWorkExperience(true);
     setShowEducation(false);
     setShowLanguage(false);
@@ -61,35 +59,37 @@ const Education = () => {
 
   const handleClickNext = (e) => {
     e.preventDefault();
-    setShowWorkExperience(false);
-    setShowEducation(false);
-    setShowLanguage(true);
-    dispatch(educationData(education));
-    console.log("education in education:-", education);
+    if (validateFields()) {
+      dispatch(educationData(education));
+      setShowWorkExperience(false);
+      setShowEducation(false);
+      setShowLanguage(true);
+    }
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    dispatch(educationData(education));
-    console.log("education in education:-", education);
+    if (validateFields()) {
+      dispatch(educationData(education));
+    }
   };
 
   const handleAddMore = () => {
-    setEducation([
-      ...education,
-      { type: "", univercity: "", degree: "", startYear: "", endYear: "" },
+    setEducation(prev => [
+      ...prev,
+      { type: "", university: "", degree: "", startYear: "", endYear: "" },
     ]);
   };
 
   const handleDelete = (index) => {
-    setEducation((prev) => prev.filter((_, i) => i !== index));
+    setEducation(prev => prev.filter((_, i) => i !== index));
   };
 
   return (
-    <form onSubmit={handleSubmit} >
+    <form onSubmit={handleSubmit}>
       {showEducation && (
         <div>
-          <div className="profetional-detail">
+          <div className="professional-detail">
             <h1 className="multicolor-heading">Your Education Detail</h1>
             <p>
               Including education details in a resume is essential because it
@@ -111,26 +111,18 @@ const Education = () => {
                 Education {index + 1}
               </h1>
               <hr className="m-3" />
-              <div
-                className="one"
-                style={{
-                  display: "flex",
-                  justifyContent: "center",
-                  textAlign: "center",
-                }}
-              >
+              <div className="one" style={{ display: "flex", justifyContent: "center", textAlign: "center" }}>
                 <select
                   className="input"
                   style={{ color: "black" }}
                   onChange={(e) => handleChange(e, index)}
-                  aria-label="Default select example"
                   name="type"
                   value={edu.type || ''}
                 >
-                  <option Value="B.sc">Education Type</option>
-                  <option value="B.sc">B.sc</option>
+                  <option value="">Education Type</option>
+                  <option value="B.Sc">B.Sc</option>
                   <option value="Post Graduate">Post Graduate</option>
-                  <option value="another">another</option>
+                  <option value="Other">Other</option>
                 </select>
               </div>
 
@@ -139,9 +131,9 @@ const Education = () => {
                   className="input m-2"
                   onChange={(e) => handleChange(e, index)}
                   type="text"
-                  placeholder="Univercity"
-                  name="univercity"
-                  value={edu.univercity}
+                  placeholder="University"
+                  name="university"
+                  value={edu.university}
                 />
                 <input
                   className="input m-2"
@@ -157,7 +149,7 @@ const Education = () => {
                   className="input m-2"
                   onChange={(e) => handleChange(e, index)}
                   type="text"
-                  placeholder="startYear"
+                  placeholder="Start Year"
                   name="startYear"
                   value={edu.startYear}
                 />
@@ -165,46 +157,34 @@ const Education = () => {
                   className="input m-2"
                   onChange={(e) => handleChange(e, index)}
                   type="text"
-                  placeholder="endYear"
+                  placeholder="End Year"
                   name="endYear"
                   value={edu.endYear}
                 />
               </div>
-              <div className="d-flex justify-content-between one ">
+              <div className="d-flex justify-content-between one">
                 <button
                   className="button1 m-2"
                   type="button"
                   onClick={() => handleDelete(index)}
                 >
-                  <span className="text">delete</span>
+                  <span className="text">Delete</span>
                 </button>
               </div>
             </div>
           ))}
           <hr />
           <div className="d-flex justify-content-center m-2">
-            <button
-              className="button1"
-              type="button"
-              onClick={handleAddMore}
-            >
+            <button className="button1" type="button" onClick={handleAddMore}>
               <span className="text">ADD MORE</span>
             </button>
           </div>
           <GoogleAd />
           <div className="d-flex justify-content-around m-2">
-            <button
-              className="button1"
-              onClick={handleClickBack}
-              type="button"
-            >
+            <button className="button1" onClick={handleClickBack} type="button">
               <span className="text">BACK</span>
             </button>
-            <button
-              className="button1"
-              onClick={handleClickNext}
-              type="submit"
-            >
+            <button className="button1" onClick={handleClickNext} type="submit">
               <span className="text">NEXT</span>
             </button>
           </div>

@@ -95,6 +95,16 @@ console.log('result2:-',result2)
 
     const handleClickNext = (e) => {
         e.preventDefault();
+
+        const emptyFields = Object.entries(inputData).filter(([key, value]) => !value);
+    if (emptyFields.length > 0) {
+        alert("Please fill in all fields.");
+        
+        // Focus on the first empty input
+        const firstEmptyField = emptyFields[0][0]; // Get the key of the first empty field
+        document.getElementsByName(firstEmptyField)[0].focus(); // Focus the first empty input
+        return; // Prevent proceeding to the next step
+    }
         
         localStorage.setItem('personalInfoData', JSON.stringify(inputData)); // Save data to local storage
         dispatch(personalInfoData(inputData));
