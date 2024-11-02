@@ -28,14 +28,15 @@ const Language = () => {
 
   const handleClick = (e) => {
     e.preventDefault();
-    const emptyFields = Object.entries(inputLanguage).filter(([key, value]) => !value);
+    const emptyFields = inputLanguage
+      .map((entry, index) => ({ ...entry, index }))
+      .filter((entry) => !entry.language || entry.rating === 0);
+
     if (emptyFields.length > 0) {
-        alert("Please fill in all fields.");
-        
-        // Focus on the first empty input
-        const firstEmptyField = emptyFields[0][0]; // Get the key of the first empty field
-        document.getElementsByName(firstEmptyField)[0].focus(); // Focus the first empty input
-        return; // Prevent proceeding to the next step
+      alert("Please fill in all fields.");
+      const firstEmptyFieldIndex = emptyFields[0].index;
+      document.getElementsByName("language")[firstEmptyFieldIndex].focus();
+      return;
     }
     setShowHobbies(true);
     setShowEducation(false);

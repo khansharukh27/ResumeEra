@@ -40,6 +40,18 @@ const SoftSkills = () => {
 
   const handleClick = (e) => {
     e.preventDefault();
+
+    const emptyFields = input
+      .map((entry, index) => ({ ...entry, index }))
+      .filter((entry) => !entry.softSkill );
+
+    if(emptyFields.length>0){
+      alert(`some field are empty`);
+      const firstEmptyField = emptyFields[0].index;
+      document.getElementsByClassName('input')[firstEmptyField].focus()
+      return;
+    }
+
       setShowSocialMedia(false);
       setShowSoftSkill(false);
       setShowHonor(true);

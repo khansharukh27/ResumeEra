@@ -146,6 +146,8 @@ import WhyAreYouQualifiedForThisPosition from './component/blog/WhyAreYouQualifi
 import SkillsForSuccess from './component/blog/SkillsForSuccess';
 import WorkPreference from './component/blog/WorkPreference';
 import DifficultCustomerExample from './component/blog/DifficultCustomerExample';
+import ResumeGuide from './component/blogandcareer/ResumeGuide';
+import EditablePage from './component/editablePage/EditablePage';
 // import CoverLetterInput from './component/CoverLetterInput';
 // import CoverComponent from './component/CoverComponent';
 var images = [
@@ -295,6 +297,7 @@ function App() {
         <Route path='/free-resume-builder' element={<FreeResumeBuilder/>}/>
         <Route path='/9-things-you-need-to-know-about-ATS-in-2024' element={<ATS2024/>}/>
         <Route path='/tailor-resume-to-job-description' element={<TailorResume/>}/>
+        <Route path='/recruiters-guide-writing-resume' element={<ResumeGuide/>}/>
 
 
 
@@ -333,7 +336,8 @@ function App() {
         {/* CoverLetter Link */}
         <Route path='/preview/201' element={<Preview201/>}/>
         <Route path='/preview/202' element={<Preview202/>}/>
-       
+        <Route path='/EditablePage' element={<EditablePage/>}/>
+
       </Routes>
       <Footer/>
     </Router>

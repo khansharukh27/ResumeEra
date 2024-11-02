@@ -12,7 +12,7 @@ const SocialMedia = () => {
     const [textInput, setTextInput] = useState(() => {
         // Load social media links from local storage if available
         const savedLinks = localStorage.getItem("socialMediaLinks");
-        return savedLinks ? JSON.parse(savedLinks) : { linkedin: '', github: '', twitter: '' };
+        return savedLinks ? JSON.parse(savedLinks) : [{ linkedin: '', github: '', twitter: '' }];
     });
 
     const [showHobbies, setShowHobbies] = useState(false);
@@ -52,14 +52,23 @@ setShowHobbies(true);
     
     // console.log()
     const handleClickNext = (e) => {
+        e.preventDefault()
+        const emptyFields = Object.entries(textInput).filter(([key,value])=> !value);
+        if(emptyFields.length>0){
+            alert('some feild are empty please fill')
+            const firstEmptyField = emptyFields[0][0]
+            document.getElementsByName(firstEmptyField)[0].focus(); // Focus the first empty input
+        return; // Prevent proceeding to the next step
+        }
+
         if(path.pathname === '/techmain/108'){
-            e.preventDefault()
+           
             setShowHobbies(false);
             setShowCertificate(true)
             setShowSocialMedia(false)
             dispatch(socialMediaLink(textInput));   
         }else{
-            e.preventDefault()
+          
         setShowHobbies(false);
         setShowSoftSkills(true);
         setShowSocialMedia(false);

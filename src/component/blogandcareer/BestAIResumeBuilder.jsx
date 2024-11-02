@@ -7,6 +7,7 @@ import Advantages_of_Using_AI_for_Resume_Building from '../../image/image_for_li
 import The_Best_AI_Resume_Builders_in_the_Market from '../../image/image_for_link/The_Best_AI_Resume_Builders_in_the_Market.jpeg'
 import How_to_Choose_the_Best_AI_Resume_Builder from '../../image/image_for_link/How_to_Choose_the_Best_AI_Resume_Builder.jpeg'
 import best_logo from '../../image/image_for_link/best_logo.895bb22edf6c08600c86.webp'
+import GoogleAd from "../adFolder/GoogleAd";
 const BestAIResumeBuilder = () => {
   return (
     <div className="SalaryNegotiationComponent"> 
@@ -60,7 +61,9 @@ const BestAIResumeBuilder = () => {
           <img src={What_is_an_AI_Resume_Builder} alt="AI Suggestions" />
         </div>
       </section>
-
+      <div>
+  <GoogleAd/>
+</div>
       {/* Advantages of Using AI for Resume Building */}
       <section id="advantages">
         <div>
@@ -91,7 +94,9 @@ const BestAIResumeBuilder = () => {
           <img src={Advantages_of_Using_AI_for_Resume_Building} alt="Advantages of AI" />
         </div>
       </section>
-
+      <div>
+  <GoogleAd/>
+</div>
       {/* Best AI Resume Builders in the Market */}
       <section id="best-ai-resume-builders">
         <div>
@@ -141,7 +146,9 @@ const BestAIResumeBuilder = () => {
           <img src={The_Best_AI_Resume_Builders_in_the_Market} alt="Best AI Builders" />
         </div>
       </section>
-
+      <div>
+  <GoogleAd/>
+</div>
       {/* How to Choose the Best AI Resume Builder */}
       <section id="how-to-choose">
         <div>
@@ -170,7 +177,9 @@ const BestAIResumeBuilder = () => {
           <img src={How_to_Choose_the_Best_AI_Resume_Builder} alt="Choosing the Best Builder" />
         </div>
       </section>
-
+      <div>
+  <GoogleAd/>
+</div>
       {/* Conclusion */}
       <section id="conclusion">
         <div>
@@ -186,6 +195,9 @@ const BestAIResumeBuilder = () => {
           <img src={best_logo} alt="resumeera log" />
         </div>
       </section>
+      <div>
+  <GoogleAd/>
+</div>
     </div>
   );
 };

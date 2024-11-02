@@ -1,7 +1,11 @@
 import React from "react";
 import { Helmet } from "react-helmet";
+import ShareButtons from "../shareButton/ShareButtons";
+import GoogleAd from "../adFolder/GoogleAd";
 
 const ATS2024 = () => {
+  const ArticleUrl = 'https://resumeera.xyz/9-things-you-need-to-know-about-ATS-in-2024'
+  const ArticleTitle = '9 Things You Need to Know About ATS in 2024 - ResumeEra || Free Resume '
   return (
     <div className="aboutResumeEra">
       <Helmet>
@@ -25,7 +29,9 @@ const ATS2024 = () => {
       <p>
         In this comprehensive guide, we will explore the nine critical things you need to know about ATS in 2024. This knowledge will equip you with the tools to tailor your resume and increase your chances of making it past the initial screening. Whether you're just entering the workforce or are a seasoned professional, learning how ATS functions can help ensure your application isn't discarded before reaching a human hiring manager.
       </p>
-
+<div>
+  <GoogleAd/>
+</div>
       <h2>1. What Exactly Is an Applicant Tracking System?</h2>
       <p>
         An Applicant Tracking System (ATS) is software used by employers to manage the recruitment process. At its core, ATS is designed to streamline hiring by automating the sorting, ranking, and filtering of job applications. Instead of manually reviewing each resume, ATS parses the information to find candidates who best match the job requirements. Large companies with high application volumes almost exclusively use ATS to manage recruitment.
@@ -33,7 +39,9 @@ const ATS2024 = () => {
       <p>
         Typically, an ATS scans resumes for keywords, qualifications, experience levels, and education. It then assigns a score to each resume based on how well it matches the job description. The resumes that score highest are more likely to be forwarded to a hiring manager for review. However, resumes that don't meet certain criteria, such as lacking essential keywords, may never be seen by human eyes.
       </p>
-
+      <div>
+  <GoogleAd/>
+</div>
       <h2>2. How Does an ATS Work?</h2>
       <p>
         Understanding the inner workings of ATS is crucial if you want to optimize your resume. The primary function of an ATS is to scan resumes for relevant keywords and phrases that align with the job description. Here’s a breakdown of how the system operates:
@@ -80,7 +88,9 @@ const ATS2024 = () => {
           <strong>Include Both Hard and Soft Skills:</strong> ATS scans for both technical skills (e.g., proficiency in specific software) and soft skills (e.g., communication, teamwork). Make sure to highlight both types of skills in your resume.
         </li>
       </ol>
-
+      <div>
+  <GoogleAd/>
+</div>
       <h2>4. The ATS Resume Format: Why Simplicity Is Key</h2>
       <p>
         One of the biggest mistakes job seekers make is using creative or highly stylized resume formats that ATS systems can’t process properly. While a visually unique resume might appeal to a human recruiter, it could be unreadable to an ATS. This can lead to your application being rejected even if you are a strong candidate.
@@ -105,7 +115,9 @@ const ATS2024 = () => {
           <strong>Save Your Resume in an ATS-Friendly Format:</strong> The most common ATS-friendly formats are .docx and .pdf, but check the job posting for any specific requirements.
         </li>
       </ol>
-
+      <div>
+  <GoogleAd/>
+</div>
       <h2>5. How to Avoid Common ATS Pitfalls</h2>
       <p>
         While optimizing your resume for ATS is important, it’s easy to fall into certain traps that can hurt your chances of getting through the system. Here are some common mistakes to avoid:
@@ -121,7 +133,9 @@ const ATS2024 = () => {
           <strong>Failing to Customize Your Resume:</strong> Each job posting will have its own set of requirements and keywords. Submitting a generic resume for multiple jobs may reduce your chances of getting noticed by ATS. Tailoring your resume to each job application is crucial for success.
         </li>
       </ol>
-
+      <div>
+  <GoogleAd/>
+</div>
       <h2>6. The Rise of AI in ATS: What It Means for Job Seekers</h2>
       <p>
         In 2024, artificial intelligence (AI) is playing an increasingly significant role in Applicant Tracking Systems. AI-powered ATS can do more than just scan resumes for keywords – they can also analyze the content for context and relevance. This means that AI-driven ATS can recognize synonyms, assess the overall tone of your resume, and even evaluate your social media profiles as part of the screening process.
@@ -208,6 +222,9 @@ const ATS2024 = () => {
       <p>
         If you're looking for more resources to help you craft an ATS-friendly resume, <a href="https://resumeera.xyz">ResumeEra</a> offers tools and templates designed to get your resume noticed. Whether you're a recent graduate or a seasoned professional, we have the expertise to help you succeed in your job search.
       </p>
+      <div>
+        <ShareButtons url={ArticleUrl} title={ArticleTitle}/>
+      </div>
     </div>
   );
 };

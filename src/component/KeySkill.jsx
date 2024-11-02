@@ -47,6 +47,19 @@ const KeySkills = () => {
 
   const handleClickNext = (e) => {
     e.preventDefault();
+
+    const emptyFields = inputFields
+    .map((entry, index) => ({ ...entry, index }))
+    .filter((entry) => !entry.keyskills || entry.rating === 0);
+
+  if (emptyFields.length > 0) {
+    alert("Please fill in all fields.");
+    const firstEmptyFieldIndex = emptyFields[0].index;
+    document.getElementsByClassName("input")[firstEmptyFieldIndex].focus();
+    return;
+  }
+
+
     dispatch(keyskillsData(inputFields));
     const resultMappings = [
       { value: 1, path: '/preview' },

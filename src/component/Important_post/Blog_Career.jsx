@@ -27,6 +27,7 @@ const Blog_Career = () => {
                     <li><Link to="/free-online-resume-maker">Free Online Resume Maker - Create Professional Resumes for Free | ResumeEra That A Best Ai Resume Builder</Link></li>
                     <li><Link to="/9-things-you-need-to-know-about-ATS-in-2024">9 Things You Need to Know About ATS in 2024 - ResumeEra That A Free Resume Maker</Link></li>
                     <li><Link to="/tailor-resume-to-job-description">How to Tailor Your free Resume to a Job Description with ChatGPT:ResumeEra 2024</Link></li>
+                    <li><Link to="/recruiters-guide-writing-resume">A Recruiter’s Guide To Writing A Resume || Free Resume With ResumeEra</Link></li>
 
                 </ul>
             </section>
