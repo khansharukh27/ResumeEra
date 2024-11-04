@@ -1,7 +1,15 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
 import What_Makes_You_Qualified from '../../image/image_for_link/What_Makes_You_Qualified.jpeg'
+import GoogleAd from '../adFolder/GoogleAd';
+import ShareButtons from '../shareButton/ShareButtons';
+import { useEffect } from 'react';
 const WhyAreYouQualifiedForThisPosition = () => {
+    const ArticleUrl = 'https://resumeera.xyz/why-are-you-qualified-for-this-position'
+    const ArticleTitle = 'What Makes You Qualified for This Position? - Interview Guide | ResumeEra'
+    useEffect(()=>{
+        window.scrollTo(0,0)
+    },[])
     return (
         <div className='aboutResumeEra'>
             {/* SEO and Meta Tags */}
@@ -62,12 +70,16 @@ const WhyAreYouQualifiedForThisPosition = () => {
                 <p>Prepare an impactful answer to this question with structured examples, key strategies, and tips that highlight your unique qualifications.</p>
             <img src={What_Makes_You_Qualified} alt="What Makes You Qualified for This Position" loading='lazy' />
             </header>
-
+<div>
+    <GoogleAd/>
+</div>
             <section>
                 <h2>Why Interviewers Ask This Question</h2>
                 <p>Employers want to understand how your skills, experience, and mindset align with the position’s requirements. A well-structured answer demonstrates your suitability, highlights your understanding of the role, and shows confidence in your abilities.</p>
             </section>
-
+            <div>
+    <GoogleAd/>
+</div>
             <section>
                 <h2>How to Structure Your Answer</h2>
                 <p>To create a strong response, follow this structure:</p>
@@ -77,7 +89,9 @@ const WhyAreYouQualifiedForThisPosition = () => {
                     <li><strong>Relate to Company Goals:</strong> Explain how your skills can help the company achieve its objectives.</li>
                 </ul>
             </section>
-
+            <div>
+    <GoogleAd/>
+</div>
             <section>
                 <h2>Sample Answers to "What Makes You Qualified for This Position?"</h2>
                 
@@ -98,7 +112,9 @@ const WhyAreYouQualifiedForThisPosition = () => {
                     </blockquote>
                     <p>This answer is tailored to a marketing role, emphasizing quantifiable successes and how the candidate's skills align with the company's goals.</p>
                 </div>
-
+                <div>
+    <GoogleAd/>
+</div>
                 {/* Example 3 */}
                 <div>
                     <h3>Example 3: Software Development Role</h3>
@@ -107,7 +123,9 @@ const WhyAreYouQualifiedForThisPosition = () => {
                     </blockquote>
                     <p>This example effectively showcases relevant technical skills and a direct impact on user satisfaction, making it ideal for a software development role.</p>
                 </div>
-
+                <div>
+    <GoogleAd/>
+</div>
                 {/* Example 4 */}
                 <div>
                     <h3>Example 4: Customer Service Role</h3>
@@ -117,7 +135,9 @@ const WhyAreYouQualifiedForThisPosition = () => {
                     <p>This answer highlights customer service skills with quantifiable achievements, making it well-suited for a customer service role.</p>
                 </div>
             </section>
-
+            <div>
+    <GoogleAd/>
+</div>
             <section>
                 <h2>Tips for Crafting an Effective Answer</h2>
                 <ul>
@@ -127,7 +147,9 @@ const WhyAreYouQualifiedForThisPosition = () => {
                     <li><strong>Customize Your Response:</strong> Tailor your answer based on the specific requirements and values of the company.</li>
                 </ul>
             </section>
-
+            <div>
+    <GoogleAd/>
+</div>
             <section>
                 <h2>Common Mistakes to Avoid</h2>
                 <ul>
@@ -136,7 +158,9 @@ const WhyAreYouQualifiedForThisPosition = () => {
                     <li><strong>Neglecting Company Fit:</strong> Don’t just talk about your skills; explain how they benefit the company and align with its goals.</li>
                 </ul>
             </section>
-
+            <div>
+    <GoogleAd/>
+</div>
             <section>
                 <h2>FAQs</h2>
                 <div>
@@ -147,6 +171,12 @@ const WhyAreYouQualifiedForThisPosition = () => {
                     <p>If you lack direct experience, focus on transferable skills and past achievements that demonstrate your ability to succeed in similar scenarios.</p>
                 </div>
             </section>
+            <div>
+                <div>
+                    <ShareButtons url={ArticleUrl} title={ArticleTitle}/>
+                </div>
+    <GoogleAd/>
+</div>
         </div>
     );
 };

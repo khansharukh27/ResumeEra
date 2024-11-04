@@ -1,11 +1,12 @@
-.main101{
-    /* display: flex;
-    flex-direction: row; */
+.mains101{
+   width: 100%;
     display: flex;
+
 }
 
 .preview101{
     display: flex;
+    width: 100%;
 
 }
 .preview101-1{
@@ -150,6 +151,41 @@
 .skill-section101 .inner-101-1{
 margin-left: 15px;
 }
+.resume-download-section{
+    display: flex;
+}
+
+
+@media (min-width: 1024px) {
+    .main101 {
+        display: flex;
+        /* flex-direction: col; */
+        font-size: 0.75rem; /* Slightly more universal sizing */
+    }
+    .main101 h5, .main101 h6 {
+        font-size: 0.875rem; /* Small font size */
+        font-weight: 900;
+    }
+    .image101 {
+        width: 120px;
+        height: 120px;
+    }
+    .preview101-1 {
+        width: 35%;
+        background-color: rgb(61, 60, 60);
+        color: white;
+        margin-left: -5px;
+    }
+    .preview101-2 {
+        width: 35%;
+        margin-left: 5px;
+    }
+    #preview101{
+       width: 70%;
+    }
+}
+
+/* Styles for tablets and smaller desktops */
 
 /* General styles for larger screens */
 @media (max-width: 768px) {
@@ -235,14 +271,21 @@ margin-left: 15px;
 
 /* Styles for ultra-small mobile devices (width up to 320px) */
 @media (min-width: 320px) {
-    .main101 {
+    .mains101 {
         display: flex;
         flex-direction: column;
-        font-size: 0.5rem;
+        /* font-size: 0.2rem; */
+        width: 320px;
     }
-    .main101 h5, .main101 h6 {
-        font-size: 0.625rem;
+    .mains101 h5, .mains101 h6 {
+        font-size: 0.8rem;
         font-weight: 900;
+    }
+    .mains101 p{
+        font-size: xx-small;
+    }
+    .mains101 span{
+        font-size: xx-small;
     }
     #Alish_mirza101 {
         width: 100%;
@@ -253,7 +296,25 @@ margin-left: 15px;
         height: 30px;
     }
     .preview101-1, .preview101-2 {
-        width: 100%;
+        width: 160px;
         margin: 0;
+    }
+    .resume-download-section{
+        width: 100%;
+        margin-left: 0px;
+    }
+    .bg-color-picker{
+        width: 100%;
+    }
+    .star101{
+        font-size: .4rem;
+        margin-bottom: 5px;
+        
+    }
+    .star-rating{
+        margin-bottom: 5px;
+    }
+    .technical-skill-item101{
+        margin-bottom: -10px;
     }
 }

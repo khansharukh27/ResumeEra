@@ -1,16 +1,18 @@
 import React, { useEffect } from 'react';
 import { Helmet } from 'react-helmet';
-import NewAds from '../adFolder/NewAds';
+import GoogleAd from '../adFolder/GoogleAd';
 import { Link } from 'react-router-dom';
 import ShareButtons from '../shareButton/ShareButtons';
 
 const WhyDoYouWantToWork = () => {
+  const ArticleUrl = 'https://resumeera.xyz/why_do_you_want_to_work'
+  const ArticleTitle = 'Why Do You Want to Work in This Field? - ResumeEra'
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
   return (
-    <div className="why-work-field">
+    <div className="">
       <Helmet>
         <title>Why Do You Want to Work in This Field? - ResumeEra</title>
         <meta
@@ -19,9 +21,6 @@ const WhyDoYouWantToWork = () => {
         />
         <link rel="canonical" href="https://resumeera.xyz/why_do_you_want_to_work" />
       </Helmet>
-
-      <div className="aboutResumeEra">
-
         <div style={{ backgroundColor: 'transparent', padding: '50px', borderRadius: '15px', border: '1px solid black', boxShadow: 'inherit' }}>
           <h1 >Why Do You Want to Work in This Field:- ResumeEra?</h1>
 
@@ -35,7 +34,7 @@ const WhyDoYouWantToWork = () => {
           </p>
         </section>
         <div>
-          <NewAds />
+          <GoogleAd />
         </div>
         <section className="research-field">
           <h2>1. Research the Field and Its Relevance</h2>
@@ -54,7 +53,7 @@ const WhyDoYouWantToWork = () => {
           </p>
         </section>
         <div>
-          <NewAds />
+          <GoogleAd/>
         </div>
         <section className="connect-skills-passion">
           <h2>2. Connect Your Skills and Passion</h2>
@@ -69,7 +68,9 @@ const WhyDoYouWantToWork = () => {
             "My passion for digital marketing stems from my deep understanding of consumer behavior and my ability to translate data into actionable marketing strategies. I've worked on several projects that required me to analyze data trends and create tailored marketing campaigns, which resulted in significant business growth. I believe this field offers endless opportunities for innovation, and I’m excited to bring my skills to a company like yours that values creativity and results-driven marketing."
           </p>
         </section>
-
+        <div>
+          <GoogleAd/>
+        </div>
         <section className="long-term-commitment">
           <h2>3. Emphasize Long-term Commitment and Career Growth</h2>
           <p>
@@ -87,7 +88,7 @@ const WhyDoYouWantToWork = () => {
           </p>
         </section>
         <div>
-          <NewAds />
+          <GoogleAd />
         </div>
         <section className="show-genuine-interest">
           <h2>4. Show Genuine Interest in the Company</h2>
@@ -103,7 +104,7 @@ const WhyDoYouWantToWork = () => {
           </p>
         </section>
         <div>
-          <NewAds />
+          <GoogleAd />
         </div>
         <section className="examples-when-switching-fields">
           <h2>5. For Career Changers: Why Transition to This Field?</h2>
@@ -119,7 +120,7 @@ const WhyDoYouWantToWork = () => {
           </p>
         </section>
         <div className=''>
-          <NewAds />
+          <GoogleAd />
         </div>
         <section className="conclusion">
           <h2>Conclusion</h2>
@@ -131,14 +132,14 @@ const WhyDoYouWantToWork = () => {
           </p>
         </section>
         <section>
-                <ShareButtons />
+                <ShareButtons url={ArticleUrl} title={ArticleTitle}/>
             </section>
         <div className='btn mb-3'>
         <Link className=".button" to='https://resumeera.xyz/why-should-we-hire-you'>Back For Post</Link>
         <Link className='.button' to='https://resumeera.xyz'>Home Page</Link>
         <Link className='.button' to='https://resumeera.xyz/why_do_you_want_to_work'>Next Post</Link>
       </div>
-      </div>
+   
       
     </div>
   );

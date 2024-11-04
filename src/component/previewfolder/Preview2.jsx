@@ -11,6 +11,9 @@ const Preview2 = () => {
     const [fontStyle, setFontStyle] = useState('Arial'); // Default font style
     const [fontColor, setFontColor] = useState('black')
     const [headingColor, setHeadingColor] = useState('black')
+    const [fontSize, setFontSize] = useState(16); // Initial font size
+    const [fontSizeheading, setFontSizeheading] = useState(16); // Initial font size
+
 
     const navigate = useNavigate();
     const personalInfo = useSelector((state) => state.reducer.personalInfo[0]);
@@ -20,6 +23,18 @@ const Preview2 = () => {
     const LLanguage = useSelector((state) => state.reducer.addLanguage);
     const Hobbies = useSelector((state) => state.reducer.addHobbies);
     
+    const increaseFontSize = () => {
+        setFontSize((prevSize) => prevSize+1); // Increase font size by 2px
+    };
+    const decreaseFontSize = () => {
+        setFontSize((prevSize) =>prevSize-1)
+    }
+    const increaseFontSizeHeading = () => {
+        setFontSizeheading((prevSize) => prevSize+1); // Increase font size by 2px
+    };
+    const decreaseFontSizeHeading = () => {
+        setFontSizeheading((prevSize) =>prevSize-1)
+    }
 
     const handleDownloadPDF = async () => {
         const element = document.getElementById('Alisha_mirza');
@@ -61,54 +76,54 @@ const Preview2 = () => {
             <div className=" main" id="Alisha_mirza" style={{ color:fontColor,backgroundColor: bgColor, fontFamily: fontStyle }}>
                 <div className="main1">
                     <div className="maininner1">
-                        <h3 className="pt-5" style={{ color: headingColor }}>{personalInfo.firstName} {personalInfo.lastName}</h3>
-                        <p>{work[0][0].jobtitle}</p>
+                        <h3 className="pt-5" style={{ color: headingColor,fontSize:`${fontSize}px` }}>{personalInfo.firstName} {personalInfo.lastName}</h3>
+                        <p  style={{color:fontColor,fontSize:`${fontSize}px`}}>{work[0][0].jobtitle}</p>
                         <div className="maininner2 p-2">
                             <img src={personalInfo.image} alt="Selected" />
                         </div>
                     </div>
                     <div className="maininner3">
-                        <h1 style={{ color: headingColor }}><i className="bi bi-person-lines-fill" />Contact</h1>
-                        <p><i className="bi bi-telephone-fill me-2"></i>{personalInfo.mobileNumber}</p>
-                        <p><i className="bi bi-envelope me-2"></i>{personalInfo.email}</p>
-                        <p><i className="bi bi-geo-alt-fill me-2"></i>{personalInfo.address} {personalInfo.city} {personalInfo.state} {personalInfo.postalCode}</p>
+                        <h3 style={{color:headingColor,fontSize:`${fontSizeheading}px`}}><i className="bi bi-person-lines-fill" />Contact</h3>
+                        <p style={{color:fontColor,fontSize:`${fontSize}px`}}><i className="bi bi-telephone-fill me-2"></i>{personalInfo.mobileNumber}</p>
+                        <p style={{color:fontColor,fontSize:`${fontSize}px`}}><i className="bi bi-envelope me-2"></i>{personalInfo.email}</p>
+                        <p style={{color:fontColor,fontSize:`${fontSize}px`}}><i className="bi bi-geo-alt-fill me-2"></i>{personalInfo.address} {personalInfo.city} {personalInfo.state} {personalInfo.postalCode}</p>
                     </div>
                     <div className="maininner4">
-                        <h1 className="mt-5" style={{ color: headingColor }}>Education</h1>
+                        <h3 className="mt-5" style={{color:headingColor,fontSize:`${fontSizeheading}px`}}>Education</h3>
                         {education[0].map((edu, index) => (
                             <div key={index}>
-                                <p><b>{edu.univercity}</b></p>
-                                <p>{edu.type}</p>
-                                <p>{edu.startYear} - {edu.endYear}</p>
+                                <p style={{color:fontColor,fontSize:`${fontSize}px`}}><b>{edu.univercity}</b></p>
+                                <p style={{color:fontColor,fontSize:`${fontSize}px`}}>{edu.type}</p>
+                                <p style={{color:fontColor,fontSize:`${fontSize}px`}}>{edu.startYear} - {edu.endYear}</p>
                             </div>
                         ))}
                     </div>
                 </div>
                 <div className="main2">
                     <div className="about">
-                        <h1 style={{ color: headingColor }}><i className="bi bi-file-person-fill me-2"></i>About</h1>
-                        <p>{personalInfo.object}</p>
+                        <h3 style={{color:headingColor,fontSize:`${fontSizeheading}px`}}><i className="bi bi-file-person-fill me-2"></i>About</h3>
+                        <p style={{color:fontColor,fontSize:`${fontSize}px`}}>{personalInfo.object}</p>
                         <div className="jobExperience">
-                            <h1 style={{ color: headingColor }}><i className="bi bi-briefcase-fill me-2"></i>Job Experience</h1>
+                            <h3 style={{color:headingColor,fontSize:`${fontSizeheading}px`}}><i className="bi bi-briefcase-fill me-2"></i>Job Experience</h3>
                             {work[0].map((works, index) => (
                                 <div key={index}>
-                                    <p><b>{works.jobtitle}</b></p><p>{works.startYear}-{works.endYear}</p>
-                                    <p>{works.organization}</p>
+                                    <p style={{color:fontColor,fontSize:`${fontSize}px`}}>{works.jobtitle}</p><p style={{color:fontColor,fontSize:`${fontSize}px`}}>{works.startYear}-{works.endYear}</p>
+                                    <p style={{color:fontColor,fontSize:`${fontSize}px`}}>{works.organization}</p>
                                 </div>
                             ))}
                         </div>
                         <div className="skill-section">
-                            <h1 style={{ color: headingColor }}><i className="bi bi-mortarboard me-2"></i>Skills</h1>
+                            <h3 style={{color:headingColor,fontSize:`${fontSizeheading}px`}}><i className="bi bi-mortarboard me-2"></i>Skills</h3>
                             {keyskills[0].map((keys, index) => (
                                 <div key={index}>
-                                    {keys.keyskills}
+                                    <p style={{color:fontColor,fontSize:`${fontSize}px`,textAlign:'center'}}>{keys.keyskills}</p>
                                     <hr style={{ height: '2px' }} />
                                 </div>
                             ))}
                         </div>
                         <div className="d-sm-flex justify-content-between">
                             <div className="language-section">
-                                <h1 style={{ color: headingColor }}><i className="bi bi-translate me-2" />Language</h1>
+                                <h3 style={{color:headingColor,fontSize:`${fontSizeheading}px`}}><i className="bi bi-translate me-2" />Language</h3>
                                 {LLanguage && LLanguage[0].map((lan, index) => (
                                     <div key={index}>
                                         <ul>
@@ -118,7 +133,7 @@ const Preview2 = () => {
                                 ))}
                             </div>
                             <div className="hobbies-section">
-                                <h1 style={{ color: headingColor }}><i className="bi bi-joystick me-2" />Hobbies</h1>
+                                <h3 style={{color:headingColor,fontSize:`${fontSizeheading}px`}}><i className="bi bi-joystick me-2" />Hobbies</h3>
                                 {Hobbies && Hobbies[0].map((hobb, index) => (
                                     <div key={index}>
                                         <ul>
@@ -132,7 +147,7 @@ const Preview2 = () => {
                     </div>
                 </div>
             </div>
-            <div className="resume-download-section">
+            <div className="resume-download-section2">
                 <div className='d-flex'>
                     <input type="text" placeholder="Enter your resume name" className="resume-name-input" style={{ borderRadius: '5px', padding: '10px' }} onChange={(e) => setInputFields(e.target.value)} />
                     <button onClick={handleDownloadPDF} type="btn" className="btn btn-primary ms-2 download-button">Download</button>
@@ -181,6 +196,14 @@ const Preview2 = () => {
                     <span>Heading Color </span>
                     <input type="color" value={headingColor} onChange={(e) => setHeadingColor(e.target.value)} className="bg-color-picker ms-2" />
                 </div>
+                <div>
+                    
+                    <button onClick={increaseFontSize} className="ms-2"><i class="bi bi-plus-circle">increase text</i></button>
+                    <button onClick={decreaseFontSize} className="ms-2"><i class="bi bi-dash-circle">decrease text</i></button>
+                    <button onClick={increaseFontSizeHeading} className="ms-2"><i class="bi bi-plus-circle">increase heading</i></button>
+                    <button onClick={decreaseFontSizeHeading} className="ms-2"><i class="bi bi-dash-circle">decrease heading</i></button>
+
+            </div>
             </div>
         </div>
     );

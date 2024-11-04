@@ -6,9 +6,14 @@ import problem_solving_skill from '../../image/image_for_link/problem_solving_sk
 import Teamwork_Collaboration from '../../image/image_for_link/Teamwork_Collaboration.jpeg'
 import Active_Listening from '../../image/image_for_link/Active_Listening.webp'
 import ShareButtons from '../shareButton/ShareButtons';
+import GoogleAd from '../adFolder/GoogleAd';
+import { useEffect } from 'react';
 const SkillsForSuccess = () => {
     const ArticleUrl = 'https://resumeera.xyz/skills-for-success-in-role'
     const ArticleTitle = 'Answering What Skills Make You Successful? for Interviews | ResumeEra'
+    useEffect(()=>{
+        window.scrollTo(0,0)
+      },[])
     return (
         <div className='aboutResumeEra'>
             <Helmet>
@@ -50,7 +55,9 @@ const SkillsForSuccess = () => {
                 <img src={What_Skills_Help_You_Succeed} alt="What Skills Help You Succeed" loading='lazy' />
             </div>
 
-
+            <div>
+                <GoogleAd />
+            </div>
             {/* Skill Sections */}
             <section>
                 <h2>1. Problem-Solving Skills</h2>
@@ -76,7 +83,9 @@ const SkillsForSuccess = () => {
                 </div>
 
             </section>
-
+            <div>
+                <GoogleAd />
+            </div>
             <section>
                 <h2>2. Effective Communication</h2>
                 <p>
@@ -100,7 +109,9 @@ const SkillsForSuccess = () => {
                         I’m confident this skill will help me build strong relationships and drive positive results here."                    </blockquote>
                 </div>
             </section>
-
+            <div>
+                <GoogleAd />
+            </div>
             <section>
                 <h2>3. Teamwork and Collaboration</h2>
                 <p>
@@ -123,6 +134,9 @@ const SkillsForSuccess = () => {
                     </blockquote>
                 </div>
                 <div>
+                    <GoogleAd />
+                </div>
+                <div>
                     <h3>Example</h3>
                     <blockquote>
                         "I bring excellent communication skills to the table. Whether it’s with
@@ -133,7 +147,9 @@ const SkillsForSuccess = () => {
                         I’m confident this skill will help me build strong relationships and drive positive results here."                    </blockquote>
                 </div>
             </section>
-
+            <div>
+                <GoogleAd />
+            </div>
             <section>
                 <h2>4. Active Listening</h2>
                 <p>
@@ -148,16 +164,18 @@ const SkillsForSuccess = () => {
                 <img src={Active_Listening} alt="Active Listening" />
                 <div>
                     <blockquote>
-                    "Adaptability is one of my core strengths, and I find that it has 
-                    been essential in handling the rapid changes common in our industry. 
-                    For example, during a company-wide software transition, I quickly adjusted to the 
-                    new system, became proficient, and helped train my team to ease the transition. 
-                    I am always open to learning new approaches and adapting to change, 
-                    which I believe would help me thrive in this role."
+                        "Adaptability is one of my core strengths, and I find that it has
+                        been essential in handling the rapid changes common in our industry.
+                        For example, during a company-wide software transition, I quickly adjusted to the
+                        new system, became proficient, and helped train my team to ease the transition.
+                        I am always open to learning new approaches and adapting to change,
+                        which I believe would help me thrive in this role."
                     </blockquote>
                 </div>
             </section>
-
+            <div>
+                <GoogleAd />
+            </div>
             {/* Additional Skills in Similar Detailed Format */}
             {/* Adaptability, Critical Thinking, Negotiation Skills */}
 
@@ -169,8 +187,11 @@ const SkillsForSuccess = () => {
                 </p>
             </section>
             <div>
-            <ShareButtons url={ArticleUrl} title={ArticleUrl}/>
+                <ShareButtons url={ArticleUrl} title={ArticleTitle} />
 
+            </div>
+            <div>
+                <GoogleAd />
             </div>
         </div>
     );

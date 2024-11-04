@@ -4,6 +4,7 @@ import { workExData } from "../Redux/action";
 import PersonalInfo from "./PersonalInfo";
 import Education from "./Education";
 import GoogleAd from "./adFolder/GoogleAd";
+import Blank from "./Blank";
 
 const WorkExperience = () => {
   const [showPersonalInfo, setShowPersonalInfo] = useState(false);
@@ -84,6 +85,7 @@ const WorkExperience = () => {
     setShowWorkExperience(false);
     dispatch(workExData(workExperiences));
     console.log('Work Experiences:', workExperiences);
+    
   };
 
   const handleSubmit = (e) => {
@@ -102,6 +104,7 @@ const WorkExperience = () => {
     <form onSubmit={handleSubmit}>
       {showWorkExperience && (
         <div>
+          <Blank/>
           <div className="profetional-detail">
             <h1 className="multicolor-heading">Your Work Experience</h1>
             <p>Work experience is a crucial component of a resume...</p>
@@ -109,7 +112,7 @@ const WorkExperience = () => {
           {workExperiences.map((experience, index) => (
             <div key={index}>
               <h1 style={{ color: 'white', textAlign: 'center' }}>Work Experience {index + 1}</h1>
-              <hr />
+              <hr style={{width:'inherit'}}/>
               <div className="d-sm-flex one">
                 <input 
                   ref={(el) => (inputRefs.current[index] = { ...inputRefs.current[index], jobtitle: el })}
@@ -168,7 +171,7 @@ const WorkExperience = () => {
                   <span className="text">DELETE</span>
                 </button>
               </div>
-              <hr className="m-2" />
+              <hr className="m-2" style={{width:'inherit'}} />
             </div>
           ))}
           <div className="d-flex justify-content-center m-2">

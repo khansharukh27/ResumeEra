@@ -1,6 +1,6 @@
 import React from "react";
 import { Helmet } from "react-helmet";
-import NewAds from "../adFolder/NewAds";
+import GoogleAd from "../adFolder/GoogleAd";
 import '../../css/blog/WhyShouldHireYou.css'
 import understand_the_purpose from '../../image/image_for_link/understand_the_purpose.avif'
 import Why_Should_We_Hire_You from '../../image/image_for_link/Why_Should_We_Hire_You.jpeg'
@@ -8,10 +8,18 @@ import Example_Answers_for_Different_Roles from '../../image/image_for_link/Exam
 import Build_the_Perfect_Resume_for_Your_Job_Application from '../../image/image_for_link/Build_the_Perfect_Resume_for_Your_Job_Application.jpeg'
 import { Link } from "react-router-dom";
 import DaysSincePost from "../DaySincePost";
+import ShareButtons from "../shareButton/ShareButtons";
+import { useEffect } from "react";
 const WhyShouldWeHireYou = () => {
+    const ArticleUrl = 'https://resumeera.xyz/why-should-we-hire-you'
+    const ArticleTitle = 'Why Should We Hire You? Best Answers for Job Interviews - ResumeEra'
     const postDate = '2024-10-22';
+    useEffect(()=>{
+        window.scrollTo(0,0)
+
+    },[])
     return (
-        <div>
+        <div className="aboutResumeEra">
 
             {/* SEO Optimization */}
             <Helmet>
@@ -22,7 +30,7 @@ const WhyShouldWeHireYou = () => {
             </Helmet>
             <div className="HowToWriteAResumemain">
                 <div>
-                    <NewAds />
+                    <GoogleAd />
                 </div>
                 {/* Main Content */}
                 <section className='content'>
@@ -121,7 +129,10 @@ const WhyShouldWeHireYou = () => {
                     </div>
                 </section>
                 <div>
-                    <NewAds />
+                    <ShareButtons url={ArticleUrl} title={ArticleTitle}/>
+                </div>
+                <div>
+                    <GoogleAd />
                 </div>
             </div>
         </div>

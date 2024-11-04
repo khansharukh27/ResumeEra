@@ -1,9 +1,10 @@
 import html2canvas from "html2canvas";
 import jsPDF from "jspdf";
-import { useState } from "react";
+import {  useState } from "react";
 import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import './CSS/preview101.css'
+// import DownloadSection from "../DownloadSection";
 
 const Preview101 = () => {
     const [inputFields, setInputFields] = useState('resume.pdf');
@@ -12,14 +13,14 @@ const Preview101 = () => {
     const [fontColor, setFontColor] = useState('#rrggbb')
     const [headingColor, setHeadingColor] = useState('#rrggbb')
     const navigate = useNavigate();
-    const personalInfo = useSelector((state) => state.reducer.personalInfo[0]);
+    const personalInfo = useSelector((state) => state.reducer.personalInfo);
     const education = useSelector((state) => [state.reducer.education[0]]);
     const keyskills = useSelector((state) => [state.reducer.keySkills[0]]);
     const work = useSelector((state) => [state.reducer.workExperience[0]]);
     const Honor = useSelector((state) => [state.reducer.honorAndaward[0]]);
     const Refrence = useSelector((state) => [state.reducer.addReference[0]])
     const SoftSkill = useSelector((state) => [state.reducer.addSoftSkills[0]])
-    console.log('refrences:-', Refrence)
+    console.log('refrences:-', personalInfo)
     console.log('honorand award:-', Honor)
     const handleDownloadPDF = async () => {
         const element = document.getElementById('Alisha_mirza101');
@@ -50,38 +51,39 @@ const Preview101 = () => {
             console.error('Error downloading PDF:', error);
         }
     };
+    
     return (
-        <div className="main101">
+        <div className="mains101">
             <div id="Alisha_mirza101" className="preview101"
-             style={{ color:fontColor,fontFamily:fontStyle, backgroundColor:bgColor}}>
+                style={{ color: fontColor, fontFamily: fontStyle, backgroundColor: bgColor }}>
                 <div className="preview101-1">
                     <div className="imagediv101">
-                        <img className="image101" src={personalInfo.image} alt="Selected" />
-                        <h1 className="personal-name101" style={{ color: headingColor }}>{personalInfo.firstName} <br />{personalInfo.lastName}</h1>
-                        <p>{work[0][0].jobtitle}</p>
+                        <img className="image101" src={personalInfo ? personalInfo.image : null} alt="Selected" />
+                        <h1 className="personal-name101" style={{ color: headingColor, }}>{personalInfo.firstName} <br />{personalInfo.lastName}</h1>
+                        <p>{work.jobtitle}</p>
                     </div>
                     <div className="profile-summary-section101">
                         <h5 className="profile-summary-title101" style={{ color: headingColor }}>
-                            <i class="bi bi-person-circle me-3"/>PROFILE SUMMARY
+                            <i class="bi bi-person-circle me-3" />PROFILE SUMMARY
                         </h5>
                         <p className="profile-summary-content101">{personalInfo.object}</p>
                     </div>
                     <div className="contact101">
-                        <h5 style={{color: headingColor }}><i className="bi bi-person-lines-fill me-3" />Contact</h5>
+                        <h5 style={{ color: headingColor }}><i className="bi bi-person-lines-fill me-3" />Contact</h5>
                         <p><i className="bi bi-geo-alt-fill me-2"></i>{personalInfo.address} {personalInfo.city} {personalInfo.state} {personalInfo.postalCode}</p>
                         <p><i className="bi bi-telephone-fill me-2"></i>{personalInfo.mobileNumber}</p>
-                        <p style={{wordBreak:"break-all"}}><i className="bi bi-envelope me-2" ></i>{personalInfo.email}</p>
+                        <p style={{ wordBreak: "break-all" }}><i className="bi bi-envelope me-2" ></i>{personalInfo.email}</p>
                     </div>
                     <div className="reference101">
-                        <h5 style={{color: headingColor }}><i class="bi bi-person-fill-gear me-3"/>REFERENCE</h5>
+                        <h5 style={{ color: headingColor }}><i class="bi bi-person-fill-gear me-3" />REFERENCE</h5>
                         {
-                            Refrence[0].map((ref, index) => (
+                            Refrence.map((ref, index) => (
                                 <div key={index}>
                                     <div className="mbk-2">
-                                    <p className="" style={{ textAlign: 'center' }}><b>{ref.name}</b></p>
-                                    <p style={{ textAlign: 'center' }}>{ref.position}</p>
+                                        <p className="" style={{ textAlign: 'center' }}><b>{ref.name}</b></p>
+                                        <p style={{ textAlign: 'center' }}>{ref.position}</p>
                                     </div>
-                                    
+
                                     <p className="ms-4"><i className="bi bi-telephone-fill me-2"></i>{ref.contact}</p>
                                     <p className="ms-4"><i className="bi bi-envelope me-2"></i>{ref.email}</p>
                                 </div>
@@ -91,9 +93,9 @@ const Preview101 = () => {
                 </div>
                 <div className="preview101-2">
                     <div className="experience-section101">
-                        <h5 className="details-title101" style={{ color: headingColor }}>
-                            <i class="bi bi-person-workspace me-3"></i>WORK EXPERIENCE</h5>
-                        {work[0].map((works, index) => (
+                        <h5 className="details-title101" style={{ color: headingColor,wordBreak:'none' }}>
+                            <i class="bi bi-person-workspace me-3" style={{}}></i>WORK-EXPERIENCE</h5>
+                        {work.map((works, index) => (
                             <div key={index} className="employment-history101 ms-4">
                                 <div className="exp-inner101">
                                     <p className="employment-duration101">{works.startYear} - {works.endYear}</p>
@@ -106,11 +108,11 @@ const Preview101 = () => {
                     </div>
                     <div className="education-section101">
                         <h5 className="details-title101" style={{ color: headingColor }}><i class="bi bi-book me-3"></i>EDUCATION</h5>
-                        {education[0].map((edu, index) => (
+                        {education.map((edu, index) => (
                             <div key={index} className="education-item101 ms-4">
                                 <div className="education-degree101">
                                     <span className="education-duration101">{edu.startYear} - {edu.endYear}</span>
-                                    <span>{edu.degree} <br />{edu.univercity}</span>
+                                    <span>{edu.degree} <br /><br />{edu.univercity}</span>
                                 </div>
                                 <div className="education-details101">
                                     <span><b></b></span>
@@ -123,15 +125,15 @@ const Preview101 = () => {
                         <div className="inner-101-1 ms-4">
                             <h6 className="technical-skills-title101" style={{ color: headingColor }}>
                                 <i class="bi bi-person-fill-gear"></i>TECHNICAL SKILL</h6>
-                            {keyskills[0].map((keys, index) => (
+                            {keyskills.map((keys, index) => (
                                 <div key={index} className="technical-skill-item101 d-flex justify-content-between">
-                                    <p>{keys.keyskills}</p>
+                                    <p style={{marginTop:'10px'}}>{keys.keyskills}</p>
                                     {/* 5-star rating system */}
                                     <div className="star-rating ms-3 w-50">
                                         {[...Array(5)].map((_, i) => (
                                             <i
                                                 key={i}
-                                                className={`bi bi-star${i < keys.rating ? '-fill' : ''}`}
+                                                className={`bi bi-star${i < keys.rating ? '-fill' : ''} star101`}
                                                 style={{ color: i < keys.rating ? '#ffc150' : 'grey' }} // Filled stars are gold, others are gray
                                             />
                                         ))}
@@ -143,7 +145,7 @@ const Preview101 = () => {
                         <div className="row inner-101-1">
                             <h6 className="soft-skills-title101" style={{ color: headingColor }}>
                                 <i class="bi bi-person-fill-gear"></i>SOFT SKILL</h6>
-                            {SoftSkill[0].map((soft, index) => (
+                            {SoftSkill.map((soft, index) => (
                                 <div className="col-4 ms-2">
                                     <p>{soft.softSkill}</p>
                                 </div>
@@ -153,15 +155,15 @@ const Preview101 = () => {
                     </div>
                 </div>
             </div>
-
             <div className="resume-download-section">
                 <div className='d-flex'>
                     <input type="text" placeholder="Enter your resume name" className="resume-name-input" style={{ borderRadius: '5px', padding: '10px' }} onChange={(e) => setInputFields(e.target.value)} />
                     <button onClick={handleDownloadPDF} type="btn" className="btn btn-primary ms-2 download-button">Download</button>
                 </div>
+
                 {/* Color Picker for Background Color */}
                 <div className='d-flex border' style={{ marginTop: '5px', display: 'flex', flexDirection: 'row', justifyContent: 'center' }}>
-                    <input type="color" value={bgColor} onChange={(e) => setBgColor(e.target.value)} className="bg-color-picker ms-2" />
+                    <input type="color" placeholder='bg color changer' value={bgColor} onChange={(e) => setBgColor(e.target.value)} className="bg-color-picker ms-2" />
                     {/* Font Style Selector */}
                     <select value={fontStyle} onChange={(e) => setFontStyle(e.target.value)} className="font-style-selector ms-2">
                         <option value="Arial">Arial</option>

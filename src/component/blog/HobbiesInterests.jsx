@@ -1,8 +1,16 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
 import { Link } from 'react-router-dom';
+import GoogleAd from '../adFolder/GoogleAd';
+import { useEffect } from 'react';
+import ShareButtons from '../shareButton/ShareButtons';
 
 const HobbiesInterests = () => {
+  const ArticleUrl = 'https://resumeera.xyz/hobbies-interests'
+  const ArticleTitle = 'What are Your Hobbies or Interests? | ResumeEra'
+  useEffect(()=>{
+window.scrollTo(0,0)
+  },[])
   return (
     <div className="aboutResumeEra hobbies-interests">
       <Helmet>
@@ -13,12 +21,16 @@ const HobbiesInterests = () => {
 
       <h1>What are Your Hobbies or Interests?</h1>
       <p>Discussing your hobbies and interests in an interview provides insight into your personality, soft skills, and how you could fit into the company culture. While it may seem unrelated to your qualifications, sharing the right interests can showcase valuable qualities.</p>
-
+      <div>
+        <GoogleAd/>
+      </div>
       <section>
         <h2>Why Employers Ask About Hobbies and Interests</h2>
         <p>Employers ask this question to see if your personality aligns with their team culture. They’re interested in well-rounded individuals who bring unique skills and perspectives. Your response can subtly highlight skills that complement your professional abilities.</p>
       </section>
-
+      <div>
+        <GoogleAd/>
+      </div>
       <section>
         <h2>How to Choose Hobbies That Reflect Positively</h2>
         <p>Choose hobbies that genuinely interest you but also highlight traits relevant to the job. For instance, activities that demonstrate teamwork, problem-solving, creativity, or self-discipline can be advantageous.</p>
@@ -28,7 +40,9 @@ const HobbiesInterests = () => {
           <li><strong>Consider the Company Culture</strong> – If the company values innovation and creativity, for example, a hobby like painting or blogging may be ideal.</li>
         </ul>
       </section>
-
+      <div>
+        <GoogleAd/>
+      </div>
       <section>
         <h2>Examples of Hobbies and How to Relate Them to Your Career</h2>
         
@@ -47,7 +61,9 @@ const HobbiesInterests = () => {
         <h3>5. Blogging or Content Creation</h3>
         <p>“In my free time, I run a blog on sustainable living. This hobby has taught me skills in content creation, research, and audience engagement.”</p>
       </section>
-
+      <div>
+        <GoogleAd/>
+      </div>
       <section>
         <h2>Do’s and Don’ts When Discussing Hobbies</h2>
         <ul>
@@ -57,7 +73,9 @@ const HobbiesInterests = () => {
           <li><strong>Don’t:</strong> Avoid saying “I don’t have any hobbies,” as this might suggest a lack of balance.</li>
         </ul>
       </section>
-
+      <div>
+        <GoogleAd/>
+      </div>
       <section>
         <h2>Sample Responses for Different Roles</h2>
         <blockquote>
@@ -67,7 +85,9 @@ const HobbiesInterests = () => {
           “Photography is a hobby I am passionate about. It has helped me develop a keen eye for detail, which is essential in my work as a quality control specialist.”
         </blockquote>
       </section>
-
+      <div>
+        <GoogleAd/>
+      </div>
       <section>
         <h2>Frequently Asked Questions (FAQ)</h2>
         
@@ -83,7 +103,9 @@ const HobbiesInterests = () => {
         <h3>Q4: How can I make my hobbies sound more professional?</h3>
         <p><strong>Answer:</strong> Describe the skills and traits your hobbies have helped you develop, such as leadership from volunteering or problem-solving from playing strategy games.</p>
       </section>
-
+      <div>
+        <GoogleAd/>
+      </div>
       <section>
         <h2>Related Resources on ResumeEra</h2>
         <p>For more interview preparation tips, check out these articles on ResumeEra:</p>
@@ -93,10 +115,15 @@ const HobbiesInterests = () => {
           <li><Link to="/cover_letter">Cover Letter Tips for an Impressive First Impression</Link></li>
         </ul>
       </section>
-      
+      <div>
+        <GoogleAd/>
+      </div>
       <footer>
         <p>Visit <Link to="/">ResumeEra</Link> for top resume tips, templates, and career guides.</p>
       </footer>
+      <div>
+        <ShareButtons url={ArticleUrl} title={ArticleTitle}/> 
+      </div>
     </div>
   );
 };

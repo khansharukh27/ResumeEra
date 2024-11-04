@@ -11,7 +11,7 @@ const PersonalInfo = ({coverImage}) => {
     const [showPersonalInfo, setShowPersonalInfo] = useState(true);
     const [showWorkExperience, setShowWorkExperience] = useState(false);
     const [inputData, setInputData] = useState({
-        image: null,
+        image: 'https://via.placeholder.com/150', // Default image URL
         firstName: "",
         lastName: "",
         email: "",
@@ -25,20 +25,22 @@ const PersonalInfo = ({coverImage}) => {
         nationality: '',
         dateofbirth: ''
     });
-    useEffect(() => {
-        window.scrollTo(0, 0);
-      }, []);
-const result2 = coverImage
-console.log('result2:-',result2)
+    
+    // const [setSelectImage] = useState(null); // For file preview
+
     const dispatch = useDispatch();
     const navigate = useNavigate();
+
+    // Scroll to top on mount
+    useEffect(() => {
+        window.scrollTo(0, 0);
+    }, []);
 
     // Load data from local storage when the component mounts
     useEffect(() => {
         const savedData = JSON.parse(localStorage.getItem('personalInfoData'));
         if (savedData) {
             setInputData(savedData);
-
         }
     }, []);
 
@@ -50,23 +52,26 @@ console.log('result2:-',result2)
         }));
     };
 
+    // Convert file to Base64 and update inputData.image
     const convertFileToBase64 = (file) => {
         const reader = new FileReader();
         reader.onloadend = () => {
             setInputData((prevData) => ({
                 ...prevData,
-                image: reader.result
+                image: reader.result // Set base64 string as image source
             }));
         };
         reader.readAsDataURL(file);
     };
 
+    // Handle image selection and preview
     const handleImageChange = (event) => {
         const file = event.target.files[0];
-        setSelectImage(file);
-        convertFileToBase64(file);
+        if (file) {
+            setSelectImage(file);
+            convertFileToBase64(file); // Convert to base64 and set in inputData
+        }
     };
-
     const handleSubmit = (e) => {
         e.preventDefault();
         localStorage.setItem('personalInfoData', JSON.stringify(inputData)); // Save data to local storage
@@ -130,24 +135,25 @@ console.log('result2:-',result2)
                             hiring process.</p>
                     </header>
                     <div className="personal-profile">
-                        <input
-                            type="file"
-                            id="image"
-                            name="image"
-                            className="profile-input"
-                            onChange={handleImageChange}
-                        />
-                        {selectImage && (
-                            <img
-                                onClick={() => document.getElementById('image').click()}
-                                src={URL.createObjectURL(selectImage)}
-                                alt="selected"
-                                name="image1"
-                                className="profile-imgs"
-                            />
-                        )}
-                    </div>
-                    <div className="m-2 input-div">
+            <input
+                type="file"
+                id="image"
+                name="image"
+                className="profile-input"
+                onChange={handleImageChange}
+                style={{ display: 'none' }} // Hide file input field
+            />
+
+            {/* Display default or selected image */}
+            <img
+                onClick={() => document.getElementById('image').click()} // Trigger file input on click
+                src={selectImage ? URL.createObjectURL(selectImage) : inputData.image} // Display selected image or default
+                alt="profile"
+                className="profile-imgs"
+                style={{ width: '150px', height: '150px', cursor: 'pointer' }}
+            />
+        </div>
+                    <div className="mt-5 input-div">
                         <div className="d-sm-flex one">
                             <input className="input m-2" type="text" placeholder="first name" name="firstName" value={inputData.firstName} onChange={handleChange} />
                             <input className="input m-2" type="text" placeholder="last name" name="lastName" value={inputData.lastName} onChange={handleChange} />
@@ -176,7 +182,7 @@ console.log('result2:-',result2)
 
                         </div>
                     </div>
-                    <div>
+                    <div style={{marginLeft:'0px',width:'100%'}} className="GoogleAd">
                         <GoogleAd/>
                     </div>
                     <div className="d-sm-flex justify-content-around m-2 button-div">

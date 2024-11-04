@@ -36,7 +36,7 @@ color: black;
     width: 100px;
     border-radius: 50%;
     border: 1px solid grey;
-    left: 50%;
+    left: 40%;
     position: absolute;
     text-transform: uppercase;
 }
@@ -47,6 +47,7 @@ color: black;
     border-radius: 50%;
     position: absolute;
     left: 50%;
+    top: -20%;
     cursor: pointer;
 }
 .button-div{
@@ -58,6 +59,8 @@ color: black;
     flex-direction: column;
     align-items: center;
     /* margin-left: 50px; */
+    margin-top: 200px;
+    /* margin-left: ; */
 }
 
 .button1{
@@ -125,7 +128,7 @@ transform: scale(0.9);
     .personal-profile{
         position: relative;
         margin-bottom: 100px;
-        width: 50%;
+        width: 90%;
     }
     .profile-input{
         height: 150px;
@@ -177,14 +180,14 @@ transform: scale(0.9);
     .personal-profile{
         position: relative;
         margin-bottom: 100px;
-        width: 50%;
+        width: 75%;
     }
     .profile-input{
         height: 100px;
         width: 100px;
         border-radius: 50%;
         border: 1px solid grey;
-        left: 51%;
+        left: 50%;
         top: -0px;
         position: absolute;
         margin-top: 0px;
@@ -201,7 +204,7 @@ transform: scale(0.9);
         cursor: pointer;
     }
     .one{
-        margin-left: 100px;
+        margin-left: 10px;
     }
  .button-div{
     width: 100%;
@@ -251,7 +254,7 @@ transform: scale(0.9);
         cursor: pointer;
     }
     .one{
-        margin-left: 100px;
+        margin-left: 10px;
     }
  .button-div{
     width: 100%;
@@ -292,7 +295,7 @@ transform: scale(0.9);
         width: 100px;
         border-radius: 50%;
         border: 1px solid grey;
-        left: 51%;
+        left: 80%;
         top: -0px;
         position: absolute;
         margin-top: 0px;
@@ -309,22 +312,29 @@ transform: scale(0.9);
         cursor: pointer;
     }
     .one{
-        margin-left: 100px;
+        margin-left: 10px;
+    }
+    .input-div{
+        margin-left: 5px;
     }
  .button-div{
     width: 100%;
     display: flex;
- }      
+ }    
+
 }
 
 
-@media only screen and (width:320px) {
+@media (max-width:320px) {
     .profetional-main{
         width: 100%;
         border: 1px solid red;
     }
     .profetional-detail h1{
         font-size: large;
+    }
+    .input-div{
+        margin-left: 10px;
     }
     /* .profetional-detail p{
     text-align: justify;
@@ -338,8 +348,9 @@ transform: scale(0.9);
     } */
     .personal-profile{
         position: relative;
-        margin-bottom: 100px;
+        margin-bottom: 0px;
         width: 50%;
+
     }
     .profile-input{
         height: 100px;
@@ -347,29 +358,35 @@ transform: scale(0.9);
         border-radius: 50%;
         border: 1px solid grey;
         left: 20%;
-        top: -0px;
+        top: -100px;
         position: absolute;
         margin-top: 0px;
 
     }
     
     .profile-imgs{
-        height: 100px;
-        width: 100px;
+        height: 80px;
+        width: 80px;
         border-radius: 50%;
         position: absolute;
         left: 51%;
-        top: 400;
+        top: 300;
         cursor: pointer;
     }
     .one{
-        margin-left: 55px;
+        margin-left: 5px;
     }
  .button-div{
     width: 100%;
     display: flex;
  } 
  .profile-input{
-    margin-left: 50px;
+    margin-left: 10px;
+ }
+ .GoogleAd{
+    width: 320px;
+    margin-left: 0px;
+    border: 1px slid red;
  }     
+ 
  }

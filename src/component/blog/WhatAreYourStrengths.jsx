@@ -3,8 +3,14 @@ import Helmet from 'react-helmet';
 import ShareButtons from '../shareButton/ShareButtons';
 import GoogleAd from '../adFolder/GoogleAd';
 import { Link } from 'react-router-dom';
+import { useEffect } from 'react';
 
 const WhatAreYourStrengths = () => {
+    const ArticleUrl = 'https://resumeera.xyz/what-are-your-strengths'
+    const ArticleTitle = 'What Are Your Strengths? | Resume Tips by ResumeEra'
+    useEffect(()=>{
+        window.scrollTo(0,0)
+      },[])
     return (
         <div className='aboutResumeEra'>
             <Helmet>
@@ -24,7 +30,9 @@ const WhatAreYourStrengths = () => {
                     confidently. This approach enhances your resume, aligns with the requirements of Applicant Tracking
                     Systems (ATS), and leaves a memorable impression.</p>
             </section>
-
+<div>
+    <GoogleAd/>
+</div>
             {/* Keyword-rich sections */}
             <section>
                 <h2>Identifying Your Core Strengths</h2>
@@ -105,7 +113,7 @@ const WhatAreYourStrengths = () => {
                     <a href="/resume-tips-for-experienced-professionals">resume tips for professionals</a>.</p>
             </section>
             <section>
-                <ShareButtons />
+                <ShareButtons url={ArticleUrl} title={ArticleTitle}/>
             </section>
             <div className='btn mb-3'>
                         <Link className=".button" to='https://resumeera.xyz/why_do_you_want_to_work'>Back For Post</Link>

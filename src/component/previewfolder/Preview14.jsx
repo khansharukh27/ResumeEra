@@ -89,8 +89,8 @@ const Preview14 = () => {
                             
                             </div>
                             <div className=''>
-                                <h1 className="" style={{ lineHeight: '.5', whiteSpace: 'nowrap', fontWeight: '500' }}>{personalInfo.firstName}  </h1>
-                                <h1 style={{ fontWeight: '800' }}>{personalInfo.lastName}</h1>
+                                <h3 className="" style={{ lineHeight: '.5', whiteSpace: 'nowrap', fontWeight: '500' }}>{personalInfo.firstName}  </h3>
+                                <h3 style={{ fontWeight: '800' }}>{personalInfo.lastName}</h3>
                                 <p className=''>
                                     {work[0][0].jobtitle}
                                 </p>

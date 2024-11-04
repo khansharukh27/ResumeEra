@@ -23,7 +23,7 @@ const Education = () => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    window.scrollTo(0, 0);
+    // window.scrollTo(0, 0);
     localStorage.setItem("educationData", JSON.stringify(education));
   }, [education]);
 
@@ -110,7 +110,7 @@ const Education = () => {
               <h1 style={{ color: "white", textAlign: "center" }}>
                 Education {index + 1}
               </h1>
-              <hr className="m-3" />
+              <hr className="m-3" style={{width:'inherit'}}/>
               <div className="one" style={{ display: "flex", justifyContent: "center", textAlign: "center" }}>
                 <select
                   className="input"
@@ -173,7 +173,7 @@ const Education = () => {
               </div>
             </div>
           ))}
-          <hr />
+          <hr style={{width:'inherit'}} />
           <div className="d-flex justify-content-center m-2">
             <button className="button1" type="button" onClick={handleAddMore}>
               <span className="text">ADD MORE</span>

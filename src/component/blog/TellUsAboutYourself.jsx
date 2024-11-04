@@ -1,13 +1,20 @@
 import React from 'react';
 import { Helmet } from 'react-helmet';
-import NewAds from '../adFolder/NewAds';
+import GoogleAd from '../adFolder/GoogleAd';
 import { Link } from 'react-router-dom';
 import DaysSincePost from '../DaySincePost';
+import ShareButtons from '../shareButton/ShareButtons';
+import { useEffect } from 'react';
 
 const TellUsAboutYourself = () => {
+  const ArticleUrl = 'https://resumeera.xyz/tell-us-about-yourself'
+  const ArticleTitle = 'Tell Us About Yourself: Best Answers for Job Interviews | ResumeEra'
   const postDate = '2024-10-20';
+  useEffect(()=>{
+    window.scrollTo(0,0)
+  },[])
   return (
-    <div>
+    <div className=''>
       {/* SEO Meta Tags */}
       <Helmet>
         <title>Tell Us About Yourself: Best Answers for Job Interviews | ResumeEra</title>
@@ -19,7 +26,7 @@ const TellUsAboutYourself = () => {
       {/* Main Content */}
       <div className='HowToWriteAResumemain'>
         
-      <section className='content'>
+      <section className='aboutResumeEra'>
         <h1>Tell Us About Yourself: Best Answers for Job Interviews</h1>
         <div className='m-5'>
           <DaysSincePost postDate={postDate}/>
@@ -39,7 +46,7 @@ const TellUsAboutYourself = () => {
           At ResumeEra, we recommend using the <strong>"Tell us about yourself"</strong> question as a chance to highlight your key accomplishments and skills. Your answer should set the tone for the rest of the interview, showing why you’re the ideal candidate for the job.
         </p>
         <div>
-            <NewAds/>
+            <GoogleAd/>
         </div>
 
         <h2>How to Structure Your Answer for "Tell Us About Yourself"</h2>
@@ -71,7 +78,7 @@ const TellUsAboutYourself = () => {
           Example: "I am excited about this opportunity because I believe it will allow me to further develop my skills in user interface design, which aligns perfectly with my career goal of becoming a lead front-end developer."
         </p>
         <div>
-            <NewAds/>
+            <GoogleAd/>
         </div>
         <h2>Common Mistakes to Avoid When Answering "Tell Us About Yourself"</h2>
         <p>
@@ -98,7 +105,7 @@ const TellUsAboutYourself = () => {
           Your answer should be tailored to the job you’re applying for. If you give a generic answer, it may come across as uninspired or unprepared. Instead, take the time to connect your skills and experiences to the specific responsibilities of the role.
         </p>
         <div>
-            <NewAds/>
+            <GoogleAd/>
         </div>
         <h2>Sample Answers for Different Job Roles</h2>
         <p>
@@ -120,7 +127,7 @@ const TellUsAboutYourself = () => {
           "As a recent graduate in Computer Science, I’m eager to start my career in software development. I’ve completed internships where I worked on several projects, including a web application that tracks customer orders in real-time. I’m particularly excited about this opportunity because it aligns with my passion for problem-solving and my desire to develop innovative software solutions."
         </p>
         <div>
-            <NewAds/>
+            <GoogleAd/>
         </div>
         <h2>Adapting Your Answer Based on Your Experience Level</h2>
         <p>
@@ -145,7 +152,7 @@ const TellUsAboutYourself = () => {
           Senior professionals should highlight their leadership, strategic thinking, and ability to drive results. Discuss how your extensive experience has shaped your approach to problem-solving and team management.
         </p>
         <div>
-            <NewAds/>
+            <GoogleAd/>
         </div>
         <h2>How to Align Your Answer with Your Resume</h2>
         <p>
@@ -155,14 +162,14 @@ const TellUsAboutYourself = () => {
           At ResumeEra, we emphasize the importance of having a strong, well-organized resume that supports your interview answers. Your resume should highlight your achievements and quantify your success, making it easy for the interviewer to see the connection between your skills and the job requirements.
         </p>
         <div>
-            <NewAds/>
+            <GoogleAd/>
         </div>
         <h2>How to Keep Your Answer Concise</h2>
         <p>
           While it’s important to be thorough, brevity is crucial. Aim to keep your answer within 2-3 minutes. Practice beforehand so you can stay on track and ensure you’re hitting the most important points.
         </p>
         <div>
-            <NewAds/>
+            <GoogleAd/>
         </div>
         <h2>Conclusion: Why This Question is Crucial</h2>
         <p>
@@ -177,7 +184,7 @@ const TellUsAboutYourself = () => {
           Want more tips on how to ace job interviews? Check out our comprehensive guide on <a href="https://resumeera.xyz/tips-for-writing-a-cover-letter">how to write a cover letter</a> to complete your job application package.
         </p>
         <div>
-            <NewAds/>
+            <GoogleAd/>
         </div>
         <div className='btn mb-3'>
 
@@ -185,6 +192,9 @@ const TellUsAboutYourself = () => {
                     <Link className='.button' to='/Why_Work_Here'>Next Post</Link>
                 </div>
       </section>
+      </div>
+      <div>
+        <ShareButtons url={ArticleUrl} title={ArticleTitle}/>
       </div>
     </div>
   );

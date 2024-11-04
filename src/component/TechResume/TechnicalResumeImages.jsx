@@ -15,6 +15,7 @@ const TechnicalResumeImages = (props) => {
             const path = `/techmain/${hoveredImage}`;
             navigate(path);
             dispatch(templatePage(hoveredImage));
+            // window.location.reload();
         }
     };
     

@@ -3,7 +3,14 @@ import { Helmet } from 'react-helmet';
 import GoogleAd from '../adFolder/GoogleAd';
 import What_Does_Successto_You from '../../image/image_for_link/What_Does_Successto_You.jpeg'
 import ShareButtons from '../shareButton/ShareButtons';
+import { useEffect } from 'react';
 const WhatDoesSuccessLookLikeToYou = () => {
+    const ArticleUrl = 'https://resumeera.xyz/what-does-success-look-like-to-you'
+    const ArticleTitle = 'What Does Success Look Like to You? - Interview Prep | ResumeEra- free resume builder'
+
+    useEffect(()=>{
+        window.scrollTo(0,0)
+    },[])
     return (
         <div className='aboutResumeEra'>
             {/* Technical SEO and Meta Tags */}
@@ -122,11 +129,12 @@ const WhatDoesSuccessLookLikeToYou = () => {
                 </ul>
             </section>
             <div>
-                <ShareButtons/>
+                <ShareButtons url={ArticleUrl} title={ArticleTitle}/>
             </div>
             <div>
                     <GoogleAd/>
                 </div>
+
         </div>
     );
 };

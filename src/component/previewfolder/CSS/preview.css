@@ -80,7 +80,7 @@
 
 /* Skipping empty classes for brevity */
 
-.resume-download-section {
+.resume-download-section0 {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -90,6 +90,7 @@
     background-color: #f9f9f9;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
 }
 
 .resume-name-input {

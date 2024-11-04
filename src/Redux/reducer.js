@@ -1,32 +1,34 @@
 // import { templatePage } from "./action";
 
-import { addReferences, certificateData, coverletters } from "./action";
+// import { addReferences, certificateData, coverletters } from "./action";
 
 // import { addSoftSkills } from "./action";
 
 const initialState = {
-  personalInfo: [],
-  workExperience: [],
-  education: [],
-  keySkills: [],
-  templatePage:[],
-  addHobies:[],
-  addSoftSkills:[],
-  addLanguage:[],
-  socialMediaLink:[],
-  honorAndaward:[],
-  addReference:[],
-  coverletterss:[],
-  certificateData:[]
+  personalInfo:JSON.parse(localStorage.getItem("personalInfoData")) || [],
+  workExperience: JSON.parse(localStorage.getItem("workExperiences")) || [],
+  education: JSON.parse(localStorage.getItem("educationData")) || [],
+  keySkills: JSON.parse(localStorage.getItem("keySkills")) || [],
+  templatePage:JSON.parse(localStorage.getItem("templatePage")) || [],
+  addHobies:JSON.parse(localStorage.getItem("hobbiesData")) || [],
+  addSoftSkills:JSON.parse(localStorage.getItem("softSkillsData")) || [],
+  addLanguage:JSON.parse(localStorage.getItem("inputLanguageData")) || [],
+  socialMediaLink:JSON.parse(localStorage.getItem("socialMediaLinkData")) || [],
+  honorAndaward:JSON.parse(localStorage.getItem("honorAndAwardData")) || [],
+  addReference:JSON.parse(localStorage.getItem("referencesData")) || [],
+  coverletterss: [],
+  certificateData: [],
 };
 
 const reducer = (state = initialState, action) => {
   switch (action.type) {
     case 'personalinfo_data':
-      console.log('Updating state with personal info data:', action.payload);
+      const updatedPersonalInfo = action.payload || JSON.parse(localStorage.getItem("personalInfoData"));
+      // Save to localStorage whenever there's an update
+      localStorage.setItem("personalInfoData", JSON.stringify(updatedPersonalInfo));
       return {
         ...state,
-        personalInfo: [ action.payload],
+        personalInfo: updatedPersonalInfo,
       };
     case 'workEx_data':
       console.log('Updating state with work experience data:', action.payload);

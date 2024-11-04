@@ -1,0 +1,7 @@
+.ad-container {
+    display: flex;
+    justify-content: center;
+    max-width: 100%;
+    overflow: hidden;
+    margin-left: 0px;
+}

@@ -13,7 +13,7 @@ const Preview = () => {
     const [headingColor, setHeadingColor] = useState('black')
 
     const navigate = useNavigate();
-    const personalInfo = useSelector((state) => state.reducer.personalInfo[0]);
+    const personalInfo = useSelector((state) => state.reducer.personalInfo);
     const education = useSelector((state) => [state.reducer.education[0]]);
     const keyskills = useSelector((state) => [state.reducer.keySkills[0]]);
     const work = useSelector((state) => [state.reducer.workExperience[0]]);
@@ -63,7 +63,7 @@ const Preview = () => {
                         <h1 className="preview-name" style={{ color: headingColor }}>{personalInfo.firstName} {personalInfo.lastName}</h1>
                     </div>
                     <span className="preview-address">
-                        {work[0].map((works, index) => (
+                        {work.map((works, index) => (
                             <div key={index} className="preview-job-title">
                                 {works.jobtitle}
                             </div>
@@ -91,13 +91,13 @@ const Preview = () => {
                             <div className='emptydiv'></div>
                         </div>
 
-                        {keyskills[0].map((keys, index) => (
+                        {keyskills.map((keys, index) => (
                             <div key={index} className="skill-item">
                                 {keys.keyskills}
                                 <hr className="skill-divider" style={{ height: '5px', color: 'black', backgroundColor: '' }} />
                             </div>
                         ))}
-                        {education[0].map((edu, index) => (
+                        {education.map((edu, index) => (
                             <div key={index} className="education-item">
                                 <div className='d-flex outer'>
                                     <div className='emptydiv'></div>
@@ -115,7 +115,7 @@ const Preview = () => {
 
                         <span className="profile-description">{personalInfo.object}</span>
                         <h6 className="details-title" style={{color:headingColor}}>Employment History</h6>
-                        {work[0].map((works, index) => (
+                        {work.map((works, index) => (
                             <div key={index} className="employment-history">
                                 <span className="employment-detail" style={{ fontWeight: '500' }}>{works.organization} {works.jobtitle}</span>
                                 <br />
@@ -126,7 +126,7 @@ const Preview = () => {
                     </div>
                 </div>
             </div>
-            <div className="resume-download-section">
+            <div className="resume-download-section0">
                 <div className='d-flex'>
                     <input type="text" placeholder="Enter your resume name" className="resume-name-input" style={{ borderRadius: '5px', padding: '10px' }} onChange={(e) => setInputFields(e.target.value)} />
                     <button onClick={handleDownloadPDF} type="btn" className="btn btn-primary ms-2 download-button">Download</button>

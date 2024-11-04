@@ -3,12 +3,15 @@ import { Helmet } from 'react-helmet';
 import ShareButtons from '../shareButton/ShareButtons';
 import DaysSincePost from '../DaySincePost';
 import GoogleAd from '../adFolder/GoogleAd';
+import { useEffect } from 'react';
 
 const WorkPreference = () => {
   const ArticleUrl = 'https://resumeera.xyz/work-alone-or-group-preference'
   const ArticleTitle = 'Do You Prefer Working Alone or in a Group? - ResumeEra'
   const postDate = '24-10-30'
-
+  useEffect(()=>{
+window.scrollTo(0,0)
+  },[])
   return(
     <div className="work-preference aboutResumeEra">
       <Helmet>

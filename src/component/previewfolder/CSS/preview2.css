@@ -2,7 +2,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-
+    width: 100%;
 }
 /* Main container */
 
@@ -14,6 +14,7 @@
     display: flex;
     width: fit-content;
     text-align: justify;
+    width: 80%;
 }
 
 /* Left side - Personal info and education */
@@ -55,7 +56,7 @@
     margin-top: 16px;
 }
 
-.maininner3 h1, .maininner4 h1 {
+.maininner3 h3, .maininner4 h3 {
     font-size: 24px;
 }
 
@@ -81,7 +82,7 @@
     margin-top: 16px;
 }
 
-.about h1, .jobExperience h1 {
+.about h3, .jobExperience h3 {
     font-size: 24px;
     margin-bottom: 16px;
 }
@@ -93,11 +94,11 @@
 }
 
 /* Languages and Hobbies */
-.d-sm-flex.justify-content-between {
+/* .d-sm-flex.justify-content-between {
     display: flex;
     justify-content: space-between;
     margin-top: 16px;
-}
+} */
 
 .language-section, .hobbies-section {
     margin-bottom: 16px;
@@ -111,6 +112,10 @@
 /* Resume download section */
 .resume-download-section {
     margin-top: 16px;
+    width: 40%;
+    /* margin-left: 15px; */
+    padding: 20px;
+    margin: 20px;
 }
 
 .resume-name-input {
@@ -167,26 +172,75 @@
     text-align: center;
 }
 
-
-@media(min-width:320px) {
+@media (min-width:1024px) {
     .preview2{
-        width: 320px;
+        width: 1024px;
         display: flex;
-        flex-direction: column;
-        font-size: xx-small;
-        /* margin-left: 15px; */
-        /* margin: auto; */
+        flex-direction: row;
+        justify-content: space-between;
+        font-size: large;
+        margin-left: 15px;
+        padding: 10px;
+    }
+    .preview2 h3{
+        font-size: x-large;
     }
     .main1 {
         display: flex;
         flex-direction: column;
-        margin-top: -50px;
+        margin-top: -110px;
         margin-left: 5px;
         justify-content: center;
-        /* width: 170px; */
+        width: 372px;
     }
     .main2{
-        width:140px;
+        width:370px;
+    }
+    .main {
+        /* border: 1px solid #ccc; */
+        /* margin-top:1px; */
+        display: flex;
+        width: fit-content;
+        padding: 10px;
+    }
+    .font-style-selector{
+        height: fit-content;
+    }
+    .maininner1{
+        width: 250px;
+    }
+    .maininner2 img{
+        width: 150px;
+        height: 150px;
+    }
+    .maininner3{
+        width: 150px;
+    }
+    .maininner4{
+        width: 250px;
+    }
+    
+
+}
+
+@media (max-width:768px) {
+    .preview2{
+        width: 768px;
+        display: flex;
+        flex-direction: column;
+        font-size: large;
+        margin-left: 0px;
+    }
+    .main1 {
+        display: flex;
+        flex-direction: column;
+        margin-top: -100px;
+        margin-left: 5px;
+        justify-content: center;
+        width: 372px;
+    }
+    .main2{
+        width:370px;
     }
     .main {
         border: 1px solid #ccc;
@@ -194,81 +248,28 @@
         display: flex;
         width: fit-content;
     }
-    .main h1{
-     font-size: small;
-     font-weight: 700;   
-    }
     .font-style-selector{
         height: fit-content;
     }
     .maininner1{
-        width: 150px;
-    }
-    .maininner1 h3{
-        font-size: xx-small;
+        width: 250px;
     }
     .maininner2 img{
-        width: 80px;
-        height: 80px;
+        width: 150px;
+        height: 150px;
     }
     .maininner3{
-        width: 110px;
+        width: 150px;
     }
     .maininner4{
-        width: 150px;
-
+        width: 250px;
     }
     
 
 }
-@media (width:375px) {
-    .preview2{
-        width: 375px;
-        display: flex;
-        flex-direction: column;
-        font-size: x-small;
-        /* margin-left: 5px; */
-    }
-    .main1 {
-        display: flex;
-        flex-direction: column;
-        margin-top: -0px;
-        margin-left: 5px;
-        justify-content: center;
-        /* width: 170px; */
-    }
-    .main2{
-        width:170px;
-    }
-    .main {
-        border: 1px solid #ccc;
-        /* margin-top:1px; */
-        display: flex;
-        width: fit-content;
-    }
-    .font-style-selector{
-        height: fit-content;
-    }
-    .maininner1{
-        width: 170px;
-    }
-    .maininner1 h3{
-        font-size: xx-small;
-    }
-    .maininner2 img{
-        width: 80px;
-        height: 80px;
-    }
-    .maininner3{
-        width: 170px;
-    }
-    .maininner4{
-        width: 170px;
-    }
-    
 
-}
-@media (width:425px) {
+
+@media (max-width:425px) {
     .preview2{
         width: 425px;
         display: flex;
@@ -279,7 +280,7 @@
     .main1 {
         display: flex;
         flex-direction: column;
-        margin-top: -0px;
+        margin-top: -240px;
         margin-left: 5px;
         justify-content: center;
         /* width: 170px; */
@@ -316,24 +317,25 @@
     
 
 }
-@media (width:768px) {
+
+@media (max-width:375px) {
     .preview2{
-        width: 768px;
+        width: 375px;
         display: flex;
         flex-direction: column;
-        font-size: large;
-        margin-left: 0px;
+        font-size: x-small;
+        /* margin-left: 5px; */
     }
     .main1 {
         display: flex;
         flex-direction: column;
-        margin-top: -0px;
+        margin-top: -380px;
         margin-left: 5px;
         justify-content: center;
-        width: 372px;
+        /* width: 170px; */
     }
     .main2{
-        width:370px;
+        width:170px;
     }
     .main {
         border: 1px solid #ccc;
@@ -345,68 +347,85 @@
         height: fit-content;
     }
     .maininner1{
-        width: 250px;
+        width: 170px;
+    }
+    .maininner1 h3{
+        font-size: xx-small;
     }
     .maininner2 img{
-        width: 150px;
-        height: 150px;
+        width: 80px;
+        height: 80px;
     }
     .maininner3{
-        width: 150px;
+        width: 170px;
     }
     .maininner4{
-        width: 250px;
+        width: 170px;
     }
     
 
 }
-@media (min-width:1024px) {
+
+@media(max-width:320px) {
     .preview2{
-        width: 1024px;
+        width: 320px;
         display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        font-size: large;
-        margin-left: 15px;
-        padding: 10px;
-    }
-    .preview2 h1{
-        font-size: x-large;
+        flex-direction: column;
+        font-size: xx-small;
+        /* margin-left: 15px; */
+        /* margin: auto; */
     }
     .main1 {
         display: flex;
         flex-direction: column;
-        margin-top: -0px;
+        margin-top: -410px;
         margin-left: 5px;
         justify-content: center;
-        width: 372px;
+        /* width: 170px; */
     }
     .main2{
-        width:370px;
+        width:140px;
     }
     .main {
-        /* border: 1px solid #ccc; */
+        border: 1px solid #ccc;
         /* margin-top:1px; */
         display: flex;
         width: fit-content;
-        padding: 10px;
+    }
+    .main h3{
+     font-size: small;
+     font-weight: 700; 
+       
+    }
+    .main p{
+        font-size: .5rem;
     }
     .font-style-selector{
         height: fit-content;
     }
     .maininner1{
-        width: 250px;
+        width: 150px;
+    }
+    .maininner1 h3{
+        font-size: xx-small;
     }
     .maininner2 img{
-        width: 150px;
-        height: 150px;
+        width: 80px;
+        height: 80px;
     }
     .maininner3{
-        width: 150px;
+        width: 110px;
     }
     .maininner4{
-        width: 250px;
+        width: 150px;
+
+    }
+    .resume-download-section2{
+        width: 90%;
+       
     }
     
 
 }
+
+

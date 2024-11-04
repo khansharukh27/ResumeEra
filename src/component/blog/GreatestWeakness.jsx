@@ -1,8 +1,16 @@
 import React from 'react';
 import { Helmet } from 'react-helmet'; 
 import { Link } from 'react-router-dom';
+import GoogleAd from '../adFolder/GoogleAd';
+import ShareButtons from '../shareButton/ShareButtons';
+import { useEffect } from 'react';
 
 const GreatestWeakness = () => {
+  const ArticleUrl = 'https://resumeera.xyz/greatest-weakness'
+  const ArticleTitle = 'Whats Your Greatest Weakness? | ResumeEra'
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <div className="aboutResumeEra">
       <Helmet>
@@ -13,12 +21,16 @@ const GreatestWeakness = () => {
 
       <h1>What's Your Greatest Weakness?</h1>
       <p>Answering the question “What’s your greatest weakness?” can be challenging, but it’s an excellent opportunity to showcase self-awareness, growth, and a proactive approach to improvement. This guide will help you prepare a response that highlights your ability to reflect and improve.</p>
-
+    <div>
+      <GoogleAd/>
+    </div>
       <section>
         <h2>Why Employers Ask About Weaknesses</h2>
         <p>Hiring managers ask this question to gauge your self-awareness, honesty, and commitment to personal development. They’re not looking for perfection but want to see how you handle areas of improvement and whether you’re actively working on them.</p>
       </section>
-
+      <div>
+      <GoogleAd/>
+    </div>
       <section>
         <h2>Strategies for Answering This Question</h2>
         <p>Follow these tips to create a compelling answer:</p>
@@ -29,7 +41,9 @@ const GreatestWeakness = () => {
           <li><strong>Keep it relevant</strong> – Choose a weakness that doesn’t directly impact your ability to perform the job.</li>
         </ul>
       </section>
-
+      <div>
+      <GoogleAd/>
+    </div>
       <section>
         <h2>Examples of Weaknesses and How to Present Them</h2>
         
@@ -41,14 +55,18 @@ const GreatestWeakness = () => {
 
         <h3>3. Delegation</h3>
         <p>“In the past, I found it challenging to delegate tasks, as I often felt I needed to manage everything myself. However, I’ve worked on building trust with my team and assigning tasks that play to each person’s strengths, which has improved both my productivity and team morale.”</p>
-
+        <div>
+      <GoogleAd/>
+    </div>
         <h3>4. Impatience with Slow Processes</h3>
         <p>“I tend to get impatient when projects move slower than expected, especially with administrative processes. To address this, I’ve focused on understanding the value of each step in a project and have found ways to keep myself engaged, ensuring I stay positive and focused.”</p>
 
         <h3>5. Balancing Multiple Projects</h3>
         <p>“Managing multiple projects was initially a challenge for me. I’ve since adopted a project management tool and have worked on improving my prioritization skills, which has helped me manage my workload more effectively.”</p>
       </section>
-
+      <div>
+      <GoogleAd/>
+    </div>
       <section>
         <h2>Do’s and Don’ts for Answering the Weakness Question</h2>
         <ul>
@@ -58,13 +76,17 @@ const GreatestWeakness = () => {
           <li><strong>Don’t:</strong> Choose a weakness that could jeopardize your ability to perform essential job functions.</li>
         </ul>
       </section>
-
+      <div>
+      <GoogleAd/>
+    </div>
       <section>
         <h2>Aligning Your Weakness with Job Requirements</h2>
         <p>Choose a weakness that doesn’t directly conflict with the core responsibilities of the position. For example, if the job requires strong presentation skills, avoid mentioning public speaking as your weakness.</p>
         <p>For more insights on aligning your answers with job roles, explore our guide on <Link to="/strengths">highlighting your strengths</Link> effectively in interviews.</p>
       </section>
-
+      <div>
+      <GoogleAd/>
+    </div>
       <section>
         <h2>Sample Scripts for Practice</h2>
         <p>Practicing your answer helps ensure you respond naturally during an interview. Here’s a sample response:</p>
@@ -72,7 +94,9 @@ const GreatestWeakness = () => {
           “One area I’ve been working on is my tendency to take on too many tasks at once. While I enjoy staying busy, I realized it was affecting my productivity. I’ve since started using time-blocking techniques to structure my day, which has helped me stay focused and productive without feeling overwhelmed.”
         </blockquote>
       </section>
-
+      <div>
+      <GoogleAd/>
+    </div>
       <section>
         <h2>Frequently Asked Questions (FAQ)</h2>
         
@@ -81,14 +105,18 @@ const GreatestWeakness = () => {
         
         <h3>Q2: What if I can’t think of a genuine weakness?</h3>
         <p><strong>Answer:</strong> Everyone has areas they can improve. Reflect on past feedback from managers or moments of difficulty in previous roles to identify a suitable example.</p>
-        
+        <div>
+      <GoogleAd/>
+    </div>
         <h3>Q3: Is it okay to mention weaknesses in technical skills?</h3>
         <p><strong>Answer:</strong> Yes, as long as it’s not a skill critical to the job. For example, mentioning you’re improving your proficiency in a secondary software or skill can show initiative and growth.</p>
 
         <h3>Q4: Should I ever discuss personal weaknesses?</h3>
         <p><strong>Answer:</strong> Keep your answer professional. It’s best to stick with a work-related weakness rather than discussing personal traits.</p>
       </section>
-
+      <div>
+      <GoogleAd/>
+    </div>
       <section>
         <h2>Additional Resources on ResumeEra</h2>
         <p>For more interview tips and strategies, check out these related articles on ResumeEra:</p>
@@ -98,10 +126,15 @@ const GreatestWeakness = () => {
           <li><Link to="/why-should-we-hire-you">Why Should We Hire You?</Link></li>
         </ul>
       </section>
-      
+      <div>
+      <GoogleAd/>
+    </div>
       <footer>
         <p>Visit <Link to="/">ResumeEra</Link> for tools, guides, and resources to enhance your career and interview preparation.</p>
       </footer>
+      <div>
+        <ShareButtons url = {ArticleUrl} title={ArticleTitle} />
+      </div>
     </div>
   );
 };

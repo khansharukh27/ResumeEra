@@ -2,12 +2,17 @@ import React from 'react';
 import { Helmet } from 'react-helmet';
 import ShareButtons from '../shareButton/ShareButtons';
 import DaysSincePost from '../DaySincePost';
+import GoogleAd from '../adFolder/GoogleAd';
+import { useEffect } from 'react';
 // import './DifficultCustomerExample.css';
 
 const DifficultCustomerExample = () => {
     const ArticleUrl = 'https://resumeera.xyz/dealing-with-difficult-customers'
     const ArticleTitle = 'How to Handle Difficult Customers | ResumeEra'
     const postDate = '24-10-30'
+    useEffect(() => {
+        window.scrollTo(0, 0);
+      }, []);
     return (
         <div className='aboutResumeEra'>
             <Helmet>
@@ -60,7 +65,9 @@ const DifficultCustomerExample = () => {
                     A job interview is an important opportunity to tell a hiring manager more about yourself, your skills and your experience. If you work in a field where you deal directly with customers, you may want to prepare to answer interview questions about how you would handle a difficult customer.
                     In this article, we discuss why interviewers ask how we deal with a difficult customer and how to answer this question, and we provide tips and examples to help you prepare your own answer.  </p>
             </section>
-
+            <div>
+                            <GoogleAd/>
+                        </div>
             <section>
                 <h2>What Interviewers Look for in an Answer</h2>
                 <p>
@@ -94,7 +101,9 @@ const DifficultCustomerExample = () => {
                 </ul>
 
             </section>
-
+            <div>
+                            <GoogleAd/>
+                        </div>
             <section>
                 <h2>How to Structure Your Answer Using the STAR Method</h2>
                 <ol>
@@ -108,7 +117,9 @@ const DifficultCustomerExample = () => {
                     demonstrates your effectiveness in real-world scenarios.
                 </p>
             </section>
-
+            <div>
+                            <GoogleAd/>
+                        </div>
             <section>
                 <h2>Tips for Answering Questions About Difficult Customers</h2>
                 <ul>
@@ -130,7 +141,9 @@ const DifficultCustomerExample = () => {
                         </li>
                 </ul>
             </section>
-
+            <div>
+                            <GoogleAd/>
+                        </div>
             <section>
                 <h2>Sample Answers</h2>
                 <p><strong>Example 1:</strong> <em>Situation:</em> ""I recently worked as a customer service representative
@@ -166,7 +179,9 @@ const DifficultCustomerExample = () => {
                     more money because they found new items they loved!"
                 </p>
             </section>
-
+                        <div>
+                            <GoogleAd/>
+                        </div>
             <section>
                 <h2>Conclusion</h2>
                 <p>

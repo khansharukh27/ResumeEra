@@ -3,6 +3,7 @@ import {Helmet} from 'react-helmet'
 import '../css/templates.css';
 import NormalResume from './NormalResume';
 import TechnicalResumeImages from './TechResume/TechnicalResumeImages';
+import GoogleAd from './adFolder/GoogleAd';
 // import CoverLetter from './CoverLetter';
 const TemplatePage = (props) => {
     const { images ,techImages,CoverImage} = props;
@@ -27,11 +28,13 @@ const TemplatePage = (props) => {
                 </p>
                 
             </section>
+            <GoogleAd/>
 
             {/* Template Grid */}
             <NormalResume images = {images}/>
+            <GoogleAd/>
             <TechnicalResumeImages techImages = {techImages}/>
-            
+            <GoogleAd/>
             {/* Footer */}
             
         </div>

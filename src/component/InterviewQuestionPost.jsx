@@ -39,6 +39,8 @@ const InterviewQuestionPost = () => {
                     <li><Link to='/work-alone-or-group-preference'>Do You Prefer Working Alone or in a Group? - ResumeEra</Link></li>
                     <div><NewAds/></div>
                     <li><Link to='/dealing-with-difficult-customers'>How to Handle Difficult Customers | ResumeEra</Link></li>
+                    <div><NewAds/></div>
+                    <li><Link to="/why-do-you-have-a-gap-in-your-job-history">Why Do You Have a Gap in Your Job History? | ResumeEra</Link></li>
 
                 </ul>
                 <div>
