@@ -22,35 +22,35 @@ const ShareButtons = ({ url, title }) => {
 
             {/* Facebook Share */}
             <a href={facebookShareUrl} target="_blank" rel="noopener noreferrer">
-                <h3><i class="bi bi-facebook"></i></h3>
+                <h3><i style={{color:'green'}} class="bi bi-facebook"></i></h3>
             </a>
 
             {/* Twitter Share */}
             <a href={twitterShareUrl} target="_blank" rel="noopener noreferrer">
-                <h3><i class="bi bi-twitter-x"></i></h3>      </a>
+                <h3><i style={{color:'green'}} class="bi bi-twitter-x"></i></h3>      </a>
 
             {/* LinkedIn Share */}
             <a href={linkedInShareUrl} target="_blank" rel="noopener noreferrer">
-                <h3><i class="bi bi-linkedin"></i></h3>      </a>
+                <h3><i style={{color:'green'}} class="bi bi-linkedin"></i></h3>      </a>
 
             {/* WhatsApp Share */}
             <a href={whatsappShareUrl} target="_blank" rel="noopener noreferrer">
-                <h3><i class="bi bi-whatsapp"></i></h3>
+                <h3><i style={{color:'green'}} class="bi bi-whatsapp"></i></h3>
             </a>
 
             {/* Reddit Share */}
             <a href={redditShareUrl} target="_blank" rel="noopener noreferrer">
-                <h3><i class="bi bi-reddit"></i></h3>
+                <h3><i style={{color:'green'}} class="bi bi-reddit"></i></h3>
             </a>
 
             {/* Email Share */}
             <a href={emailShareUrl} target="_blank" rel="noopener noreferrer">
-                <h3><i class="bi bi-envelope"></i></h3>
+                <h3><i style={{color:'green'}} class="bi bi-envelope"></i></h3>
             </a>
 
             {/* Copy to Clipboard */}
             <a onClick={copyToClipboard}>
-                <h3><i class="bi bi-clipboard-fill"></i></h3></a>
+                <h3><i style={{color:'green'}} class="bi bi-clipboard-fill"></i></h3></a>
         </div>
     );
 };

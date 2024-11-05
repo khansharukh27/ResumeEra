@@ -174,50 +174,78 @@
 
 @media (min-width:1024px) {
     .preview2{
-        width: 1024px;
+        width: 768px;
         display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        font-size: large;
-        margin-left: 15px;
-        padding: 10px;
-    }
-    .preview2 h3{
-        font-size: x-large;
+        /* flex-direction: column; */
+        font-size: xx-small;
+        
     }
     .main1 {
         display: flex;
         flex-direction: column;
-        margin-top: -110px;
+        margin-top: -410px;
         margin-left: 5px;
         justify-content: center;
-        width: 372px;
+        width: fit-content;
+        /* position: absolute; */
     }
     .main2{
-        width:370px;
+        margin-top: -15px;
+        width:fit-content;
+        padding-right: 5px;
     }
     .main {
-        /* border: 1px solid #ccc; */
+        border: 1px solid #ccc;
         /* margin-top:1px; */
         display: flex;
-        width: fit-content;
-        padding: 10px;
+        position: relative;
+        width: 768px;
+        margin-right: 5px;
+    }
+    .main p{
+        font-size: xx-small;
+    }
+    .main h3{
+     font-size: small;
+     font-weight: 700; 
+       
+    }
+    .main p{
+        font-size: .5rem;
+        position: relative;
     }
     .font-style-selector{
         height: fit-content;
     }
     .maininner1{
-        width: 250px;
+        width: 150px;
+        /* top: 50px; */
+        position: absolute;
+    top: 0px;
+    }
+    .maininner2{
+        /* margin-top: 150px; */
+    }
+    .maininner1 h3{
+        font-size: xx-small;
+        top: 100px;
     }
     .maininner2 img{
-        width: 150px;
-        height: 150px;
+        width: 80px;
+        height: 80px;
     }
     .maininner3{
-        width: 150px;
+        width: 110px;
+        margin-top: 700px;
     }
     .maininner4{
-        width: 250px;
+        width: 150px;
+
+    }
+    .resume-download-section2{
+        width: 70%;
+        margin-top: 15px;
+       padding: 15px;
     }
     
 
@@ -227,43 +255,78 @@
     .preview2{
         width: 768px;
         display: flex;
-        flex-direction: column;
-        font-size: large;
-        margin-left: 0px;
+        /* flex-direction: column; */
+        font-size: xx-small;
+        
     }
     .main1 {
         display: flex;
         flex-direction: column;
-        margin-top: -100px;
+        margin-top: -410px;
         margin-left: 5px;
         justify-content: center;
-        width: 372px;
+        width: fit-content;
+        /* position: absolute; */
     }
     .main2{
-        width:370px;
+        margin-top: -15px;
+        width:fit-content;
+        padding-right: 5px;
     }
     .main {
         border: 1px solid #ccc;
         /* margin-top:1px; */
         display: flex;
-        width: fit-content;
+        position: relative;
+        width: 768px;
+        margin-right: 5px;
+    }
+    .main p{
+        font-size: xx-small;
+    }
+    .main h3{
+     font-size: small;
+     font-weight: 700; 
+       
+    }
+    .main p{
+        font-size: .5rem;
+        position: relative;
     }
     .font-style-selector{
         height: fit-content;
     }
     .maininner1{
-        width: 250px;
+        width: 150px;
+        /* top: 50px; */
+        position: absolute;
+    top: 0px;
+    }
+    .maininner2{
+        /* margin-top: 150px; */
+    }
+    .maininner1 h3{
+        font-size: xx-small;
+        top: 100px;
     }
     .maininner2 img{
-        width: 150px;
-        height: 150px;
+        width: 80px;
+        height: 80px;
     }
     .maininner3{
-        width: 150px;
+        width: 110px;
+        margin-top: 700px;
     }
     .maininner4{
-        width: 250px;
+        width: 150px;
+
     }
+    .resume-download-section2{
+        width: 70%;
+        margin-top: 15px;
+       padding: 15px;
+    }
+    
     
 
 }
@@ -274,45 +337,74 @@
         width: 425px;
         display: flex;
         flex-direction: column;
-        font-size: x-small;
-        /* margin-left: px; */
+        font-size: xx-small;
+        
     }
     .main1 {
         display: flex;
         flex-direction: column;
-        margin-top: -240px;
+        margin-top: -410px;
         margin-left: 5px;
         justify-content: center;
-        /* width: 170px; */
+        width: fit-content;
+        /* position: absolute; */
     }
     .main2{
-        width:220px;
+        margin-top: -15px;
+        width:fit-content;
+        padding-right: 5px;
     }
     .main {
         border: 1px solid #ccc;
         /* margin-top:1px; */
         display: flex;
-        width: fit-content;
+        position: relative;
+        width: 425px;
     }
-    
+    .main p{
+        font-size: xx-small;
+    }
+    .main h3{
+     font-size: small;
+     font-weight: 700; 
+       
+    }
+    .main p{
+        font-size: .5rem;
+        position: relative;
+    }
     .font-style-selector{
         height: fit-content;
     }
     .maininner1{
-        width: 180px;
+        width: 150px;
+        /* top: 50px; */
+        position: absolute;
+    top: 0px;
+    }
+    .maininner2{
+        /* margin-top: 150px; */
     }
     .maininner1 h3{
-        font-size: small;
+        font-size: xx-small;
+        top: 100px;
     }
     .maininner2 img{
-        width: 100px;
-        height: 100px;
+        width: 80px;
+        height: 80px;
     }
     .maininner3{
-        width: 180px;
+        width: 110px;
+        margin-top: 700px;
     }
     .maininner4{
-        width: 180px;
+        width: 150px;
+
+    }
+    .resume-download-section2{
+        width: 80%;
+        margin-top: 15px;
+       
     }
     
 
@@ -323,44 +415,75 @@
         width: 375px;
         display: flex;
         flex-direction: column;
-        font-size: x-small;
-        /* margin-left: 5px; */
+        font-size: xx-small;
+        /* margin-right: 0px; */
+        
     }
     .main1 {
         display: flex;
         flex-direction: column;
-        margin-top: -380px;
-        margin-left: 5px;
+        margin-top: -410px;
+        /* margin-left: 5px; */
         justify-content: center;
-        /* width: 170px; */
+        width: 375px;
+        /* position: absolute; */
     }
     .main2{
-        width:170px;
+        margin-top: -15px;
+        width:140px;
+        padding-right: 5px;
     }
     .main {
         border: 1px solid #ccc;
         /* margin-top:1px; */
         display: flex;
-        width: fit-content;
+        position: relative;
+        width: 320px;
+    }
+    .main p{
+        font-size: xx-small;
+    }
+    .main h3{
+     font-size: small;
+     font-weight: 700; 
+       
+    }
+    .main p{
+        font-size: .5rem;
+        position: relative;
     }
     .font-style-selector{
         height: fit-content;
     }
     .maininner1{
-        width: 170px;
+        width: 150px;
+        /* top: 50px; */
+        position: absolute;
+    top: 0px;
+    }
+    .maininner2{
+        /* margin-top: 450px; */
     }
     .maininner1 h3{
         font-size: xx-small;
+        top: 100px;
     }
     .maininner2 img{
         width: 80px;
         height: 80px;
     }
     .maininner3{
-        width: 170px;
+        width: 110px;
+        margin-top: 550px;
     }
     .maininner4{
-        width: 170px;
+        width: 150px;
+
+    }
+    .resume-download-section2{
+        width: 80%;
+        margin-top: 15px;
+       
     }
     
 
@@ -372,8 +495,7 @@
         display: flex;
         flex-direction: column;
         font-size: xx-small;
-        /* margin-left: 15px; */
-        /* margin: auto; */
+        
     }
     .main1 {
         display: flex;
@@ -382,15 +504,22 @@
         margin-left: 5px;
         justify-content: center;
         /* width: 170px; */
+        /* position: absolute; */
     }
     .main2{
+        margin-top: -15px;
         width:140px;
+        padding-right: 5px;
     }
     .main {
         border: 1px solid #ccc;
         /* margin-top:1px; */
         display: flex;
-        width: fit-content;
+        position: relative;
+        width: 320px;
+    }
+    .main p{
+        font-size: xx-small;
     }
     .main h3{
      font-size: small;
@@ -399,15 +528,23 @@
     }
     .main p{
         font-size: .5rem;
+        position: relative;
     }
     .font-style-selector{
         height: fit-content;
     }
     .maininner1{
         width: 150px;
+        /* top: 50px; */
+        position: absolute;
+    top: 0px;
+    }
+    .maininner2{
+        /* margin-top: 150px; */
     }
     .maininner1 h3{
         font-size: xx-small;
+        top: 100px;
     }
     .maininner2 img{
         width: 80px;
@@ -415,13 +552,15 @@
     }
     .maininner3{
         width: 110px;
+        margin-top: 450px;
     }
     .maininner4{
         width: 150px;
 
     }
     .resume-download-section2{
-        width: 90%;
+        width: 80%;
+        margin-top: 15px;
        
     }
     

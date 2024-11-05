@@ -16,10 +16,10 @@ const Preview2 = () => {
 
 
     const navigate = useNavigate();
-    const personalInfo = useSelector((state) => state.reducer.personalInfo[0]);
-    const education = useSelector((state) => [state.reducer.education[0]]);
-    const keyskills = useSelector((state) => [state.reducer.keySkills[0]]);
-    const work = useSelector((state) => [state.reducer.workExperience[0]]);
+    const personalInfo = useSelector((state) => state.reducer.personalInfo);
+    const education = useSelector((state) => [state.reducer.education]);
+    const keyskills = useSelector((state) => [state.reducer.keySkills]);
+    const work = useSelector((state) => [state.reducer.workExperience]);
     const LLanguage = useSelector((state) => state.reducer.addLanguage);
     const Hobbies = useSelector((state) => state.reducer.addHobbies);
     
@@ -77,24 +77,24 @@ const Preview2 = () => {
                 <div className="main1">
                     <div className="maininner1">
                         <h3 className="pt-5" style={{ color: headingColor,fontSize:`${fontSize}px` }}>{personalInfo.firstName} {personalInfo.lastName}</h3>
-                        <p  style={{color:fontColor,fontSize:`${fontSize}px`}}>{work[0][0].jobtitle}</p>
+                        <p  style={{fontFamily: fontStyle ,color:fontColor,fontSize:`${fontSize}px`}}>{work[0][0].jobtitle}</p>
                         <div className="maininner2 p-2">
                             <img src={personalInfo.image} alt="Selected" />
                         </div>
                     </div>
                     <div className="maininner3">
                         <h3 style={{color:headingColor,fontSize:`${fontSizeheading}px`}}><i className="bi bi-person-lines-fill" />Contact</h3>
-                        <p style={{color:fontColor,fontSize:`${fontSize}px`}}><i className="bi bi-telephone-fill me-2"></i>{personalInfo.mobileNumber}</p>
-                        <p style={{color:fontColor,fontSize:`${fontSize}px`}}><i className="bi bi-envelope me-2"></i>{personalInfo.email}</p>
-                        <p style={{color:fontColor,fontSize:`${fontSize}px`}}><i className="bi bi-geo-alt-fill me-2"></i>{personalInfo.address} {personalInfo.city} {personalInfo.state} {personalInfo.postalCode}</p>
+                        <p style={{fontFamily: fontStyle ,color:fontColor,fontSize:`${fontSize}px`}}><i className="bi bi-telephone-fill me-2"></i>{personalInfo.mobileNumber}</p>
+                        <p style={{fontFamily: fontStyle ,color:fontColor,fontSize:`${fontSize}px`,wordBreak:'break-all'}}><i className="bi bi-envelope me-2"></i>{personalInfo.email}</p>
+                        <p style={{fontFamily: fontStyle ,color:fontColor,fontSize:`${fontSize}px`}}><i className="bi bi-geo-alt-fill me-2"></i>{personalInfo.address} {personalInfo.city} {personalInfo.state} {personalInfo.postalCode}</p>
                     </div>
                     <div className="maininner4">
                         <h3 className="mt-5" style={{color:headingColor,fontSize:`${fontSizeheading}px`}}>Education</h3>
                         {education[0].map((edu, index) => (
                             <div key={index}>
-                                <p style={{color:fontColor,fontSize:`${fontSize}px`}}><b>{edu.univercity}</b></p>
-                                <p style={{color:fontColor,fontSize:`${fontSize}px`}}>{edu.type}</p>
-                                <p style={{color:fontColor,fontSize:`${fontSize}px`}}>{edu.startYear} - {edu.endYear}</p>
+                                <p style={{fontFamily: fontStyle ,color:fontColor,fontSize:`${fontSize}px`}}><b>{edu.univercity}</b></p>
+                                <p style={{fontFamily: fontStyle ,color:fontColor,fontSize:`${fontSize}px`}}>{edu.type}</p>
+                                <p style={{fontFamily: fontStyle ,color:fontColor,fontSize:`${fontSize}px`}}>{edu.startYear} - {edu.endYear}</p>
                             </div>
                         ))}
                     </div>
@@ -102,13 +102,13 @@ const Preview2 = () => {
                 <div className="main2">
                     <div className="about">
                         <h3 style={{color:headingColor,fontSize:`${fontSizeheading}px`}}><i className="bi bi-file-person-fill me-2"></i>About</h3>
-                        <p style={{color:fontColor,fontSize:`${fontSize}px`}}>{personalInfo.object}</p>
+                        <p style={{fontFamily: fontStyle ,color:fontColor,fontSize:`${fontSize}px`}}>{personalInfo.object}</p>
                         <div className="jobExperience">
                             <h3 style={{color:headingColor,fontSize:`${fontSizeheading}px`}}><i className="bi bi-briefcase-fill me-2"></i>Job Experience</h3>
                             {work[0].map((works, index) => (
                                 <div key={index}>
-                                    <p style={{color:fontColor,fontSize:`${fontSize}px`}}>{works.jobtitle}</p><p style={{color:fontColor,fontSize:`${fontSize}px`}}>{works.startYear}-{works.endYear}</p>
-                                    <p style={{color:fontColor,fontSize:`${fontSize}px`}}>{works.organization}</p>
+                                    <p style={{fontFamily: fontStyle ,color:fontColor,fontSize:`${fontSize}px`}}>{works.jobtitle}</p><p style={{color:fontColor,fontSize:`${fontSize}px`}}>{works.startYear}-{works.endYear}</p>
+                                    <p style={{fontFamily: fontStyle ,color:fontColor,fontSize:`${fontSize}px`}}>{works.organization}</p>
                                 </div>
                             ))}
                         </div>
@@ -116,7 +116,7 @@ const Preview2 = () => {
                             <h3 style={{color:headingColor,fontSize:`${fontSizeheading}px`}}><i className="bi bi-mortarboard me-2"></i>Skills</h3>
                             {keyskills[0].map((keys, index) => (
                                 <div key={index}>
-                                    <p style={{color:fontColor,fontSize:`${fontSize}px`,textAlign:'center'}}>{keys.keyskills}</p>
+                                    <p style={{fontFamily: fontStyle ,color:fontColor,fontSize:`${fontSize}px`,textAlign:'center'}}>{keys.keyskills}</p>
                                     <hr style={{ height: '2px' }} />
                                 </div>
                             ))}
@@ -124,7 +124,7 @@ const Preview2 = () => {
                         <div className="d-sm-flex justify-content-between">
                             <div className="language-section">
                                 <h3 style={{color:headingColor,fontSize:`${fontSizeheading}px`}}><i className="bi bi-translate me-2" />Language</h3>
-                                {LLanguage && LLanguage[0].map((lan, index) => (
+                                {LLanguage.map((lan, index) => (
                                     <div key={index}>
                                         <ul>
                                             <li>{lan.language}</li>

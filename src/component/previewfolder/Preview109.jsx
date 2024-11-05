@@ -14,7 +14,7 @@ const Preview109 = () => {
   const [isDownloaded, setIsDownloaded] = useState(false);
 
   const navigate = useNavigate();
-  const personalInfo = useSelector((state) => state.reducer.personalInfo[0]);
+  const personalInfo = useSelector((state) => state.reducer.personalInfo);
   const education = useSelector((state) => [state.reducer.education[0]]);
   const keyskills = useSelector((state) => [state.reducer.keySkills[0]]);
   const work = useSelector((state) => [state.reducer.workExperience[0]]);

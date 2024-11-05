@@ -14,13 +14,13 @@ const Preview6 = () => {
 
 
     const navigate = useNavigate();
-    const personalInfo = useSelector((state) => state.reducer?.personalInfo?.[0] || null);
-    const education = useSelector((state) => state.reducer?.education?.[0] ? [state.reducer.education[0]] : []);
-    const LLanguage = useSelector((state) => state.reducer?.addLanguage?.[0] ? [state.reducer.addLanguage[0]] : []);
-    const Hobbies = useSelector((state) => state.reducer?.addHobies?.[0] ? [state.reducer.addHobies[0]] : []);
-    const keyskills = useSelector((state) => state.reducer?.keySkills?.[0] ? [state.reducer.keySkills[0]] : []);
-    const work = useSelector((state) => state.reducer?.workExperience?.[0] ? [state.reducer.workExperience[0]] : []);
-    const sMedia = useSelector((state) => state.reducer?.socialMediaLink?.[0] ? [state.reducer.socialMediaLink[0]] : []);
+    const personalInfo = useSelector((state) => state.reducer.personalInfo);
+    const education = useSelector((state) =>  [state.reducer.education]);
+    const LLanguage = useSelector((state) =>[state.reducer.addLanguage] );
+    const Hobbies = useSelector((state) => [state.reducer.addHobies]);
+    const keyskills = useSelector((state) => [state.reducer.keySkills]);
+    const work = useSelector((state) =>[state.reducer.workExperience]);
+    const sMedia = useSelector((state) => [state.reducer.socialMediaLink]);
 
     const result = useSelector((state) => [state.reducer])
     console.log('reducer:-', result)
@@ -67,7 +67,11 @@ const Preview6 = () => {
                 <div className='name-div'>
                     <h5 style={{ color: headingColor }} className="pt-5 ms-5"><b>{personalInfo.firstName} {personalInfo.lastName}</b></h5>
                     <p className='ms-5 '>
-                        {work[0][0].jobtitle}
+                        {work.map((works,index)=>(
+                            <div key={index}>
+                                <p>{works[0].jobtitle}</p>
+                            </div>
+                        ))}
                     </p>
                 </div>
                 <div className="information-section6 ms-5" style={{ color: 'grey' }}>
@@ -92,13 +96,13 @@ const Preview6 = () => {
                 <div className="job-experience6 mt-4 ms-5">
                     <h5 style={{ color: headingColor }} className='job-heading6'> JOB EXPERIENCE</h5>
                     <hr />
-                    {work[0].map((works, index) => (
+                    {work.map((works, index) => (
                         <div key={index} >
                             <ul>
                                 <li>
-                                    <p>{works.jobtitle}</p>  <p>{works.startYear}-{works.endYear}</p>
-                                    <p style={{}}>{works.organization} </p>
-                                    <p>{works.aboutexperience}</p>
+                                    <p>{works[0].jobtitle}</p>  <p>{works.startYear}-{works[0].endYear}</p>
+                                    <p style={{}}>{works[0].organization} </p>
+                                    <p>{works[0].aboutexperience}</p>
                                 </li>
                             </ul>
                         </div>

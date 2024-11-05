@@ -13,12 +13,12 @@ const Preview4 = () => {
     const [fontColor, setFontColor] = useState('black')
 
     const navigate = useNavigate();
-    const personalInfo = useSelector((state) => state.reducer.personalInfo[0]);
-    const education = useSelector((state) => [state.reducer.education[0]]);
-    const keyskills = useSelector((state) => [state.reducer.keySkills[0]]);
-    const work = useSelector((state) => [state.reducer.workExperience[0]]);
-    const LLanguage = useSelector((state) => [state.reducer.addLanguage[0]]);
-    const Hobbies = useSelector((state) => [state.reducer.addHobies[0]]);
+    const personalInfo = useSelector((state) => state.reducer.personalInfo);
+    const education = useSelector((state) => [state.reducer.education]);
+    const keyskills = useSelector((state) => [state.reducer.keySkills]);
+    const work = useSelector((state) => [state.reducer.workExperience]);
+    const LLanguage = useSelector((state) => [state.reducer.addLanguage]);
+    const Hobbies = useSelector((state) => [state.reducer.addHobies]);
 
     const handleDownloadPDF = async () => {
         const element = document.getElementById('Alisha_mirza');

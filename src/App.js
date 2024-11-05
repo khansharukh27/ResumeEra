@@ -149,6 +149,7 @@ import DifficultCustomerExample from './component/blog/DifficultCustomerExample'
 import ResumeGuide from './component/blogandcareer/ResumeGuide';
 import EditablePage from './component/editablePage/EditablePage';
 import JobGapExplanation from './component/blog/JobGapExplanation';
+import BuildRelationshipsWithCoworkers from './component/blog/BuildRelationshipsWithCoworkers';
 // import CoverLetterInput from './component/CoverLetterInput';
 // import CoverComponent from './component/CoverComponent';
 var images = [
@@ -300,6 +301,8 @@ function App() {
         <Route path='/tailor-resume-to-job-description' element={<TailorResume/>}/>
         <Route path='/recruiters-guide-writing-resume' element={<ResumeGuide/>}/>
         <Route path='/why-do-you-have-a-gap-in-your-job-history' element={<JobGapExplanation/>}/>
+        <Route path='/how-to-build-relationships-with-your-coworkers' element={<BuildRelationshipsWithCoworkers/>}/>
+
 
 
 

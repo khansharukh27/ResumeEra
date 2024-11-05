@@ -12,11 +12,11 @@ const Preview101 = () => {
     const [fontColor, setFontColor] = useState('#rrggbb')
     const [headingColor, setHeadingColor] = useState('#rrggbb')
     const navigate = useNavigate();
-    const personalInfo = useSelector((state) => state.reducer.personalInfo[0]);
-    const education = useSelector((state) => [state.reducer.education[0]]);
-    const keyskills = useSelector((state) => [state.reducer.keySkills[0]]);
-    const work = useSelector((state) => [state.reducer.workExperience[0]]);
-    const Honor = useSelector((state) => [state.reducer.honorAndaward[0]]);
+    const personalInfo = useSelector((state) => state.reducer.personalInfo);
+    const education = useSelector((state) => [state.reducer.education]);
+    const keyskills = useSelector((state) => [state.reducer.keySkills]);
+    const work = useSelector((state) => [state.reducer.workExperience]);
+    const Honor = useSelector((state) => [state.reducer.honorAndaward]);
     console.log('honorand award:-', Honor)
     const handleDownloadPDF = async () => {
         const element = document.getElementById('Alisha_mirza101');

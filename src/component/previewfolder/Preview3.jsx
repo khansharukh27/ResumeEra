@@ -13,12 +13,12 @@ const Preview3 = () => {
     const [fontColor, setFontColor] = useState('black')
 
     const navigate = useNavigate();
-    const personalInfo = useSelector((state) => state.reducer.personalInfo[0]);
-    const education = useSelector((state) => [state.reducer.education[0]]);
-    const keyskills = useSelector((state) => [state.reducer.keySkills[0]]);
-    const work = useSelector((state) => [state.reducer.workExperience[0]]);
-    const LLanguage = useSelector((state) => [state.reducer.addLanguage[0]]);
-    const Hobbies = useSelector((state) => [state.reducer.addHobies[0]]);
+    const personalInfo = useSelector((state) => state.reducer.personalInfo);
+    const education = useSelector((state) => [state.reducer.education]);
+    const keyskills = useSelector((state) => [state.reducer.keySkills]);
+    const work = useSelector((state) => [state.reducer.workExperience]);
+    const LLanguage = useSelector((state) => [state.reducer.addLanguage]);
+    const Hobbies = useSelector((state) => [state.reducer.addHobies]);
 
     const handleDownloadPDF = async () => {
         const element = document.getElementById('Alish_mirza');
@@ -66,7 +66,7 @@ const Preview3 = () => {
                         <hr />
                         
                         <p style={{color:fontColor}}><i className="bi bi-telephone-forward-fill icon" /> {personalInfo.mobileNumber}</p>
-                        <p className='email' style={{color:fontColor}}><i className="bi bi-envelope-at-fill icon" /> {personalInfo.email}</p>
+                        <p className='email' style={{color:fontColor,wordBreak:'break-all'}}><i className="bi bi-envelope-at-fill icon" /> {personalInfo.email}</p>
                         <p style={{color:fontColor}}><i className="bi bi-geo-alt-fill icon" /> {personalInfo.state} {personalInfo.city} {personalInfo.postalCode}</p>
 
                         <h6 style={{ color: headingColor }} className='section-title'>Education</h6>

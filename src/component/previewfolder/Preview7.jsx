@@ -12,7 +12,7 @@ const Preview7 = () => {
     const [fontColor, setFontColor] = useState('black')
 
     const navigate = useNavigate();
-    const personalInfo = useSelector((state) => state.reducer.personalInfo[0]);
+    const personalInfo = useSelector((state) => state.reducer.personalInfo);
     const education = useSelector((state) => [state.reducer.education[0]]);
     const LLanguage = useSelector((state) => [state.reducer.addLanguage[0]]);
     const Hobbies = useSelector((state) => [state.reducer.addHobies[0]]);

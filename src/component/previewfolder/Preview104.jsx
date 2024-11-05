@@ -15,16 +15,16 @@ const Preview104 = () => {
     const [fontColor, setFontColor] = useState('#rrggbb')
     const [headingColor, setHeadingColor] = useState('#rrggbb')
     const navigate = useNavigate();
-    const personalInfo = useSelector((state) => state.reducer.personalInfo[0]);
-    const education = useSelector((state) => [state.reducer.education[0]]);
-    const keyskills = useSelector((state) => [state.reducer.keySkills[0]]);
-    const work = useSelector((state) => [state.reducer.workExperience[0]]);
-    const Honor = useSelector((state) => [state.reducer.honorAndaward[0]]);
-    const Refrence = useSelector((state) => [state.reducer.addReference[0]]);
-    const SoftSkill = useSelector((state) => [state.reducer.addSoftSkills[0]]);
-    const socialMediaLink = useSelector((state) => [state.reducer.socialMediaLink[0]]);
-    const languages = useSelector((state) => [state.reducer.addLanguage[0]]);
-    const Hobbies = useSelector((state)=>[state.reducer.addHobies[0]])
+    const personalInfo = useSelector((state) => state.reducer.personalInfo);
+    const education = useSelector((state) => [state.reducer.education]);
+    const keyskills = useSelector((state) => [state.reducer.keySkills]);
+    const work = useSelector((state) => [state.reducer.workExperience]);
+    const Honor = useSelector((state) => [state.reducer.honorAndaward]);
+    const Refrence = useSelector((state) => [state.reducer.addReference]);
+    const SoftSkill = useSelector((state) => [state.reducer.addSoftSkills]);
+    const socialMediaLink = useSelector((state) => [state.reducer.socialMediaLink]);
+    const languages = useSelector((state) => [state.reducer.addLanguage]);
+    const Hobbies = useSelector((state)=>[state.reducer.addHobies])
     console.log('hobbies:-',Hobbies)
     console.log('refrences:-', Refrence)
     console.log('honorand award:-', Honor)
