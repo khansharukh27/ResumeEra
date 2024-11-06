@@ -97,7 +97,7 @@ const Preview5 = () => {
                     ))}
                 </div>
                 <div className='ms-5 ps-5 pe-5 pb-5'>
-                    <h1 className="">{personalInfo?personalInfo.fullname:''} {personalInfo.lastName}</h1>
+                    <h1 className="">{personalInfo.firstName} {personalInfo.lastName}</h1>
                     <p >
 
                         {work[0][0].jobtitle}

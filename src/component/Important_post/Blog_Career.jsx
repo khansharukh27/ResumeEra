@@ -2,7 +2,11 @@ import { Helmet } from "react-helmet";
 import { Link } from "react-router-dom";
 import NewAds from '../../component/adFolder/NewAds'
 import GoogleAd from "../adFolder/GoogleAd";
+import { useEffect } from "react";
 const Blog_Career = () => {
+    useEffect(()=>{
+        window.scrollTo(0,0)
+    },[])
     return (
         <div className="important-posts aboutResumeEra" >
             <Helmet>
@@ -41,7 +45,8 @@ const Blog_Career = () => {
                     <GoogleAd/>
                     <li><Link to="/recruiters-guide-writing-resume">A Recruiter’s Guide To Writing A Resume || Free Resume With ResumeEra</Link></li>
                     <GoogleAd/>
-
+                    <li><Link to="/5-mistake-to-getting-job">काबिल होने के बावजूद नहीं मिलेगी जॉब, मत कर देना ये 5 गलतियां - ResumeEra|| Free Resume With ResumeEra</Link></li>
+                        <GoogleAd/>
                 </ul>
             </section>
             <div>

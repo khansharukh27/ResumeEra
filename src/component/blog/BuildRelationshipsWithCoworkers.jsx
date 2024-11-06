@@ -38,12 +38,20 @@ const BuildRelationshipsWithCoworkers = () => {
             "logo": {
               "@type": "ImageObject",
               "url": "https://resumeera.xyz/logo.png"
+            },
+            "Image":{
+              "@type": "ImageObject",
+  "contentUrl": "https://yourwebsite.com/path/to/relationship.jpg",
+  "description": "Effective strategies on how to build relationships with your coworkers for a positive workplace.",
+  "name": "How to Build Relationships with Your Coworkers",
+  "thumbnailUrl": "https://yourwebsite.com/path/to/relationship-thumbnail.jpg",
+  "uploadDate": "2024-11-05"
             }
+
           },
           "datePublished": "2024-11-05",
         })}
       </script>
-
       <h1>How to Build Relationships with Your Coworkers</h1>
 
       {/* Main Content Sections */}

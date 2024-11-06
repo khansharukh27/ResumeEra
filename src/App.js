@@ -150,6 +150,7 @@ import ResumeGuide from './component/blogandcareer/ResumeGuide';
 import EditablePage from './component/editablePage/EditablePage';
 import JobGapExplanation from './component/blog/JobGapExplanation';
 import BuildRelationshipsWithCoworkers from './component/blog/BuildRelationshipsWithCoworkers';
+import ResumeMistakes from './component/blogandcareer/ResumeMistakes';
 // import CoverLetterInput from './component/CoverLetterInput';
 // import CoverComponent from './component/CoverComponent';
 var images = [
@@ -302,6 +303,7 @@ function App() {
         <Route path='/recruiters-guide-writing-resume' element={<ResumeGuide/>}/>
         <Route path='/why-do-you-have-a-gap-in-your-job-history' element={<JobGapExplanation/>}/>
         <Route path='/how-to-build-relationships-with-your-coworkers' element={<BuildRelationshipsWithCoworkers/>}/>
+        <Route path='/5-mistake-to-getting-job' element={<ResumeMistakes/>}/>
 
 
 
