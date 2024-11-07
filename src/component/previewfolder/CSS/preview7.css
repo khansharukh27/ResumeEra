@@ -6,17 +6,21 @@
     padding: 20px;
     box-sizing: border-box;
     /* padding-right: -50px-; */
+    font-size: xx-small;
 }
 
 /* Resume Preview Section */
 .resume-preview7 {
     background-color: inherit;
     font-family: inherit;
-    width: 100%;
+    width: 50%;
     max-width: 800px;
-    margin: 0 auto;
+    /* margin: 0 auto; */
+    font-size: xx-small;
 }
-
+.text-end{
+    padding-right: 10px;
+}
 /* Inner Sections */
 .name-div7, 
 .contact-div7, 
@@ -45,7 +49,9 @@
     font-weight: 700;
     
 }
-
+.job-experience7{
+    padding-left: 10px;
+}
 /* Responsive Styles */
 
 @media (min-width: 769px) and (max-width: 1024px) {
@@ -56,6 +62,7 @@
     .name-div7 h1 {
         font-size: 2rem;
     }
+
 }
 
 @media (min-width: 1025px) {

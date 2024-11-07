@@ -13,34 +13,36 @@ const Preview7 = () => {
 
     const navigate = useNavigate();
     const personalInfo = useSelector((state) => state.reducer.personalInfo);
-    const education = useSelector((state) => [state.reducer.education[0]]);
-    const LLanguage = useSelector((state) => [state.reducer.addLanguage[0]]);
-    const Hobbies = useSelector((state) => [state.reducer.addHobies[0]]);
-    const keyskills = useSelector((state) => [state.reducer.keySkills[0]]);
-    const work = useSelector((state) => [state.reducer.workExperience[0]]);
+    const education = useSelector((state) => [state.reducer.education]);
+    const LLanguage = useSelector((state) => [state.reducer.addLanguage]);
+    const Hobbies = useSelector((state) => [state.reducer.addHobies]);
+    const keyskills = useSelector((state) => [state.reducer.keySkills]);
+    const work = useSelector((state) => [state.reducer.workExperience]);
     const result = useSelector((state) => [state.reducer])
     console.log('reducer:-', result)
 
 
     const handleDownloadPDF = async () => {
-        const element = document.getElementById('Alisha_mirza');
-
+        const element = document.getElementById('Alish_mirza1');
         try {
-            const scale = 5; // Increase the scale for better resolution
+            const scale = 4; // Slightly higher resolution without excessive file size
             const canvas = await html2canvas(element, {
-                scale: scale, 
-                useCORS: true, // Allows cross-origin images to be rendered correctly
-                logging: true, // Enable logging for debugging
+                scale: scale,
+                useCORS: true,
+                logging: true,
             });
     
             const pdf = new jsPDF('p', 'mm', 'a4');
-            const imgData = canvas.toDataURL('image/png');
+            const imgData = canvas.toDataURL('image/jpeg', 0.75); // Use JPEG format with 75% quality for compression
     
-            // Calculate the aspect ratio to fit A4
-            const imgWidth = 210; // A4 width in mm
-            const imgHeight = (canvas.height * imgWidth) / canvas.width;
+            const a4Width = 210; // A4 width in mm
+        const a4Height = 297;
+            const imgHeight = (canvas.height * a4Width) / canvas.width;
+            // let position = 0;
     
-            pdf.addImage(imgData, 'PNG', 0, 0, imgWidth, imgHeight, undefined, 'FAST');
+            // Check if the image height is greater than a single page height
+            pdf.addImage(imgData, 'JPEG', 0, 0, a4Width, imgHeight > a4Height ? a4Height : imgHeight, undefined, 'FAST');
+
     
             const fileName = `${inputFields}.pdf`;
             pdf.save(fileName);
@@ -55,14 +57,14 @@ const Preview7 = () => {
         } catch (error) {
             console.error('Error downloading PDF:', error);
         }
-    };
+    };    
     return (
         <div className='preview-main7 '>
-            <div className="resume-preview7" style={{ color:fontColor,backgroundColor: bgColor, fontFamily: fontStyle }} id="Alisha_mirza">
+            <div className="resume-preview7" style={{ color:fontColor,backgroundColor: bgColor, fontFamily: fontStyle }} id="Alish_mirza1">
                 <div className='name-div7'>
-                    <h1 className="pt-5" style={{color:headingColor}}>{personalInfo.firstName} {personalInfo.lastName}</h1>
+                    <h3 className="pt-5" style={{color:headingColor}}>{personalInfo.firstName} {personalInfo.lastName}</h3>
                     <p>
-                        {work[0][0].jobtitle}
+                        {work[0].jobtitle}
                     </p>
                 </div>
                 <div className='d-flex justify-content-between contact-div7'>
@@ -145,7 +147,7 @@ const Preview7 = () => {
                     </div>
                 </div>
             </div>
-            <div className="resume-download-section">
+            <div className="resume-download-section0">
                 <div className='d-flex'>
                     <input type="text" placeholder="Enter your resume name" className="resume-name-input" style={{ borderRadius: '5px', padding: '10px' }} onChange={(e) => setInputFields(e.target.value)} />
                     <button onClick={handleDownloadPDF} type="btn" className="btn btn-primary ms-2 download-button">Download</button>

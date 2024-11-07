@@ -90,7 +90,7 @@
     background-color: #f9f9f9;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    width: 100%;
+    width: 50%;
 }
 
 .resume-name-input {
@@ -238,6 +238,9 @@
         padding: 5px;
         font-size: 12px;
     }
+    .resume-download-section0{
+        width: 100%;
+    }
 }
 
 /* Media query for extra small screens (max-width: 320px) */
@@ -307,5 +310,8 @@
 
     .employment-history {
         padding: 5px; /* Adjusted padding for small screens */
+    }
+    .resume-download-section0{
+        width: 100%;
     }
 }

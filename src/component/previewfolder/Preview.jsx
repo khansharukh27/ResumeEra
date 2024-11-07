@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import './CSS/preview.css';
+import GoogleAd from '../adFolder/GoogleAd';
 
 const Preview = () => {
     const [inputFields, setInputFields] = useState('resume.pdf');
@@ -18,40 +19,44 @@ const Preview = () => {
     const keyskills = useSelector((state) => [state.reducer.keySkills[0]]);
     const work = useSelector((state) => [state.reducer.workExperience[0]]);
 
+    
     const handleDownloadPDF = async () => {
-        const element = document.getElementById('Alisha_mirza1');
+        const element = document.getElementById('Alish_mirza1');
         try {
-            const scale = 5; // Increase the scale for better resolution
+            const scale = 4; // Slightly higher resolution without excessive file size
             const canvas = await html2canvas(element, {
                 scale: scale,
-                useCORS: true, // Allows cross-origin images to be rendered correctly
-                logging: true, // Enable logging for debugging
+                useCORS: true,
+                logging: true,
             });
-
+    
             const pdf = new jsPDF('p', 'mm', 'a4');
-            const imgData = canvas.toDataURL('image/png');
+            const imgData = canvas.toDataURL('image/jpeg', 0.75); // Use JPEG format with 75% quality for compression
+    
+            const a4Width = 210; // A4 width in mm
+        const a4Height = 297;
+            const imgHeight = (canvas.height * a4Width) / canvas.width;
+            // let position = 0;
+    
+            // Check if the image height is greater than a single page height
+            pdf.addImage(imgData, 'JPEG', 0, 0, a4Width, imgHeight > a4Height ? a4Height : imgHeight, undefined, 'FAST');
 
-            // Calculate the aspect ratio to fit A4
-            const imgWidth = 210; // A4 width in mm
-            const imgHeight = (canvas.height * imgWidth) / canvas.width;
-
-            pdf.addImage(imgData, 'PNG', 0, 0, imgWidth, imgHeight, undefined, 'FAST');
-
+    
             const fileName = `${inputFields}.pdf`;
             pdf.save(fileName);
-
+    
             // Store the image data URL in localStorage
             const savedResumes = JSON.parse(localStorage.getItem('savedResumes')) || [];
             savedResumes.push(imgData);
             localStorage.setItem('savedResumes', JSON.stringify(savedResumes));
-
+    
             alert('Your Resume is downloaded');
             navigate('/myresume');
         } catch (error) {
             console.error('Error downloading PDF:', error);
         }
     };
-
+    
     return (
         <div className="preview-container d-sm-flex" style={{ position: 'relative' }}>
             <div className="preview-page" id="Alisha_mirza1" style={{ color: fontColor, backgroundColor: bgColor, fontFamily: fontStyle }}>
@@ -60,7 +65,7 @@ const Preview = () => {
                 </div>
                 <div className="text-center preview-text">
                     <div>
-                        <h1 className="preview-name" style={{ color: headingColor }}>{personalInfo.firstName} {personalInfo.lastName}</h1>
+                        <h3 className="preview-name" style={{ color: headingColor }}>{personalInfo.firstName} {personalInfo.lastName}</h3>
                     </div>
                     <span className="preview-address">
                         {work.map((works, index) => (
@@ -125,6 +130,9 @@ const Preview = () => {
                         ))}
                     </div>
                 </div>
+            </div>
+            <div>
+                <GoogleAd/>
             </div>
             <div className="resume-download-section0">
                 <div className='d-flex'>

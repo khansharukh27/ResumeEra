@@ -36,25 +36,28 @@ const Preview2 = () => {
         setFontSizeheading((prevSize) =>prevSize-1)
     }
 
+    
     const handleDownloadPDF = async () => {
-        const element = document.getElementById('Alisha_mirza');
-
+        const element = document.getElementById('Alish_mirza1');
         try {
-            const scale = 5; // Increase the scale for better resolution
+            const scale = 4; // Slightly higher resolution without excessive file size
             const canvas = await html2canvas(element, {
-                scale: scale, 
-                useCORS: true, // Allows cross-origin images to be rendered correctly
-                logging: true, // Enable logging for debugging
+                scale: scale,
+                useCORS: true,
+                logging: true,
             });
     
             const pdf = new jsPDF('p', 'mm', 'a4');
-            const imgData = canvas.toDataURL('image/png');
+            const imgData = canvas.toDataURL('image/jpeg', 0.75); // Use JPEG format with 75% quality for compression
     
-            // Calculate the aspect ratio to fit A4
-            const imgWidth = 210; // A4 width in mm
-            const imgHeight = (canvas.height * imgWidth) / canvas.width;
+            const a4Width = 210; // A4 width in mm
+        const a4Height = 297;
+            const imgHeight = (canvas.height * a4Width) / canvas.width;
+            // let position = 0;
     
-            pdf.addImage(imgData, 'PNG', 0, 0, imgWidth, imgHeight, undefined, 'FAST');
+            // Check if the image height is greater than a single page height
+            pdf.addImage(imgData, 'JPEG', 0, 0, a4Width, imgHeight > a4Height ? a4Height : imgHeight, undefined, 'FAST');
+
     
             const fileName = `${inputFields}.pdf`;
             pdf.save(fileName);
@@ -70,10 +73,11 @@ const Preview2 = () => {
             console.error('Error downloading PDF:', error);
         }
     };
+    
 
     return (
         <div className="preview2" >
-            <div className=" main" id="Alisha_mirza" style={{ color:fontColor,backgroundColor: bgColor, fontFamily: fontStyle }}>
+            <div className=" main" id="Alish_mirza1" style={{ color:fontColor,backgroundColor: bgColor, fontFamily: fontStyle }}>
                 <div className="main1">
                     <div className="maininner1">
                         <h3 className="pt-5" style={{ color: headingColor,fontSize:`${fontSize}px` }}>{personalInfo.firstName} {personalInfo.lastName}</h3>
@@ -147,7 +151,7 @@ const Preview2 = () => {
                     </div>
                 </div>
             </div>
-            <div className="resume-download-section2">
+            <div className="resume-download-section0">
                 <div className='d-flex'>
                     <input type="text" placeholder="Enter your resume name" className="resume-name-input" style={{ borderRadius: '5px', padding: '10px' }} onChange={(e) => setInputFields(e.target.value)} />
                     <button onClick={handleDownloadPDF} type="btn" className="btn btn-primary ms-2 download-button">Download</button>

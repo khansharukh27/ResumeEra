@@ -23,48 +23,43 @@ const Preview14 = () => {
     const result = useSelector((state) => [state.reducer])
     console.log('reducer:-', result)
 
+
     const handleDownloadPDF = async () => {
-        const element = document.getElementById('Alisha_mirza14');
-
+        const element = document.getElementById('Alish_mirza1');
         try {
-            const scale = 5; // Increase the scale for better resolution
-            console.log('Rendering element with id:', element.id);
-
+            const scale = 4; // Slightly higher resolution without excessive file size
             const canvas = await html2canvas(element, {
                 scale: scale,
                 useCORS: true,
                 logging: true,
-                backgroundColor: null,
             });
-
-            console.log('Canvas rendered:', canvas);
-
+    
             const pdf = new jsPDF('p', 'mm', 'a4');
-            const imgData = canvas.toDataURL('image/png');
-            console.log('Image data URL:', imgData);
+            const imgData = canvas.toDataURL('image/jpeg', 0.75); // Use JPEG format with 75% quality for compression
+    
+            const a4Width = 210; // A4 width in mm
+        const a4Height = 297;
+            const imgHeight = (canvas.height * a4Width) / canvas.width;
+            // let position = 0;
+    
+            // Check if the image height is greater than a single page height
+            pdf.addImage(imgData, 'JPEG', 0, 0, a4Width, imgHeight > a4Height ? a4Height : imgHeight, undefined, 'FAST');
 
-            const imgWidth = 210;
-            const imgHeight = (canvas.height * imgWidth) / canvas.width;
-
-            pdf.addImage(imgData, 'PNG', 0, 0, imgWidth, imgHeight, undefined, 'FAST');
-
-            const fileName = `${inputFields || 'resume'}.pdf`;
-            console.log('Saving PDF with filename:', fileName);
+    
+            const fileName = `${inputFields}.pdf`;
             pdf.save(fileName);
-
+    
+            // Store the image data URL in localStorage
             const savedResumes = JSON.parse(localStorage.getItem('savedResumes')) || [];
             savedResumes.push(imgData);
             localStorage.setItem('savedResumes', JSON.stringify(savedResumes));
-
+    
             alert('Your Resume is downloaded');
             navigate('/myresume');
-
         } catch (error) {
             console.error('Error downloading PDF:', error);
-            alert('An error occurred while downloading your resume.');
         }
-    };
-
+    };    
     const lineStyle = {
         height: '5px',
         width: '75%',
@@ -76,7 +71,7 @@ const Preview14 = () => {
 
     return (
         <div className=' d-sm-flex justify-content-between main14'>
-            <div className='' id='Alisha_mirza14' style={{ color: fontColor, backgroundColor: bgColor, fontFamily: fontStyle }}>
+            <div className='' id='Alish_mirza1' style={{ color: fontColor, backgroundColor: bgColor, fontFamily: fontStyle }}>
                 <div className='d-flex justify-content-between faltu14'>
                     <div className='main1-14 '>
                         <div className='d-flex images14 mt-2 ms-2' style={{}}>

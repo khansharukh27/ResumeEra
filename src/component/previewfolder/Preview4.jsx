@@ -21,24 +21,26 @@ const Preview4 = () => {
     const Hobbies = useSelector((state) => [state.reducer.addHobies]);
 
     const handleDownloadPDF = async () => {
-        const element = document.getElementById('Alisha_mirza');
-
+        const element = document.getElementById('Alish_mirza1');
         try {
-            const scale = 5; // Increase the scale for better resolution
+            const scale = 4; // Slightly higher resolution without excessive file size
             const canvas = await html2canvas(element, {
-                scale: scale, 
-                useCORS: true, // Allows cross-origin images to be rendered correctly
-                logging: true, // Enable logging for debugging
+                scale: scale,
+                useCORS: true,
+                logging: true,
             });
     
             const pdf = new jsPDF('p', 'mm', 'a4');
-            const imgData = canvas.toDataURL('image/png');
+            const imgData = canvas.toDataURL('image/jpeg', 0.75); // Use JPEG format with 75% quality for compression
     
-            // Calculate the aspect ratio to fit A4
-            const imgWidth = 210; // A4 width in mm
-            const imgHeight = (canvas.height * imgWidth) / canvas.width;
+            const a4Width = 210; // A4 width in mm
+        const a4Height = 297;
+            const imgHeight = (canvas.height * a4Width) / canvas.width;
+            // let position = 0;
     
-            pdf.addImage(imgData, 'PNG', 0, 0, imgWidth, imgHeight, undefined, 'FAST');
+            // Check if the image height is greater than a single page height
+            pdf.addImage(imgData, 'JPEG', 0, 0, a4Width, imgHeight > a4Height ? a4Height : imgHeight, undefined, 'FAST');
+
     
             const fileName = `${inputFields}.pdf`;
             pdf.save(fileName);
@@ -54,11 +56,13 @@ const Preview4 = () => {
             console.error('Error downloading PDF:', error);
         }
     };
-   
+    
+    
 
     return (
         <div className="preview-container4 d-sm-flex justify-content-between">
-            <div className="resume-preview4 mb w-100" style={{color:fontColor, backgroundColor: bgColor, fontFamily: fontStyle }} id="Alisha_mirza">
+            <div className="resume-preview4 mb w-100" 
+            style={{color:fontColor, backgroundColor: bgColor, fontFamily: fontStyle }} id="Alish_mirza1">
                 <div>
                     <div className="resume-header4" style={{ width: '100%', position: 'relative' }}>
                         <div className="header-shapes4 d-flex justify-content-between " style={{ width: '100%' }}>
@@ -68,8 +72,8 @@ const Preview4 = () => {
 
                         <div className="personal-info mt-5" style={{ position: 'absolute', top: '20px', left: '20px' }}>
                             <img src={personalInfo.image} className="personal-image" alt="Selected" style={{ width: '150px', height: '150px', borderRadius: '50%', border: '5px solid white' }} />
-                            <h1 className="first-name" style={{color:headingColor ,position: 'absolute', top: '20px', left: '150px', stroke: 'HighlightText' }}>{personalInfo.firstName}</h1>
-                            <h1 className="last-name" style={{ color:headingColor,position: 'absolute', top: '50px', left: '250px' }}>{personalInfo.lastName}</h1>
+                            <h3 className="first-name" style={{color:headingColor ,position: 'absolute', top: '20px', left: '150px', stroke: 'HighlightText' }}>{personalInfo.firstName}</h3>
+                            <h3 className="last-name" style={{ color:headingColor,position: 'absolute', top: '50px', left: '250px' }}>{personalInfo.lastName}</h3>
                             <p className="job-title" style={{ position: 'absolute', top: '90px', left: '150px' }}>
                                 {work[0].map((i, index) => (
                                     <div key={index}  style={{color:fontColor}}>
@@ -154,7 +158,7 @@ const Preview4 = () => {
                 </div>
             </div>
 
-            <div className="resume-download-section">
+            <div className="resume-download-section0">
                 <div className='d-flex'>
                     <input type="text" placeholder="Enter your resume name" className="resume-name-input" style={{ borderRadius: '5px', padding: '10px' }} onChange={(e) => setInputFields(e.target.value)} />
                     <button onClick={handleDownloadPDF} type="btn" className="btn btn-primary ms-2 download-button">Download</button>

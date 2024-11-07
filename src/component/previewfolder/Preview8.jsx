@@ -24,42 +24,45 @@ const Preview8 = () => {
 
 
     const handleDownloadPDF = async () => {
-        const element = document.getElementById('Alisha_mirza');
-
+        const element = document.getElementById('Alish_mirza1');
         try {
-            const scale = 5; // Increase the scale for better resolution
+            const scale = 4; // Slightly higher resolution without excessive file size
             const canvas = await html2canvas(element, {
                 scale: scale,
-                useCORS: true, // Allows cross-origin images to be rendered correctly
-                logging: true, // Enable logging for debugging
+                useCORS: true,
+                logging: true,
             });
-
+    
             const pdf = new jsPDF('p', 'mm', 'a4');
-            const imgData = canvas.toDataURL('image/png');
+            const imgData = canvas.toDataURL('image/jpeg', 0.75); // Use JPEG format with 75% quality for compression
+    
+            const a4Width = 210; // A4 width in mm
+        const a4Height = 297;
+            const imgHeight = (canvas.height * a4Width) / canvas.width;
+            // let position = 0;
+    
+            // Check if the image height is greater than a single page height
+            pdf.addImage(imgData, 'JPEG', 0, 0, a4Width, imgHeight > a4Height ? a4Height : imgHeight, undefined, 'FAST');
 
-            // Calculate the aspect ratio to fit A4
-            const imgWidth = 210; // A4 width in mm
-            const imgHeight = (canvas.height * imgWidth) / canvas.width;
-
-            pdf.addImage(imgData, 'PNG', 0, 0, imgWidth, imgHeight, undefined, 'FAST');
-
+    
             const fileName = `${inputFields}.pdf`;
             pdf.save(fileName);
-
+    
             // Store the image data URL in localStorage
             const savedResumes = JSON.parse(localStorage.getItem('savedResumes')) || [];
             savedResumes.push(imgData);
             localStorage.setItem('savedResumes', JSON.stringify(savedResumes));
-
+    
             alert('Your Resume is downloaded');
             navigate('/myresume');
         } catch (error) {
             console.error('Error downloading PDF:', error);
         }
     };
+    
     return (
         <div className="preview-main8">
-            <div className="resume-preview8 " style={{ color: fontColor, backgroundColor: bgColor, fontFamily: fontStyle }} id="Alisha_mirza">
+            <div className="resume-preview8 " style={{ color: fontColor, backgroundColor: bgColor, fontFamily: fontStyle }} id="Alish_mirza1">
                 <div className='main1-8' style={{ backgroundColor: '#c9bca4' }}>
                     <img src={personalInfo.image} className="mb-3 " alt="Selected" style={{ width: '100px', height: '100px', borderRadius: '50%' }} />
                     <h5 style={{ backgroundColor: 'black', color: headingColor, padding: '3px' }}> CONTACT</h5>
@@ -142,7 +145,7 @@ const Preview8 = () => {
 
             </div>
 
-            <div className="resume-download-section">
+            <div className="resume-download-section0">
                 <div className='d-flex'>
                     <input type="text" placeholder="Enter your resume name" className="resume-name-input" style={{ borderRadius: '5px', padding: '10px' }} onChange={(e) => setInputFields(e.target.value)} />
                     <button onClick={handleDownloadPDF} type="btn" className="btn btn-primary ms-2 download-button">Download</button>

@@ -238,11 +238,11 @@
     }
     .last-name{
         font-size:x-large;
-        margin-left: -30px;
-        margin-top: -10px;
+        margin-left: -20px;
+        margin-top: 20px;
     }
     .job-title{
-        margin-top: -25px;
+        margin-top: 0px;
     }
     .objective{
         margin-bottom: -150px;
@@ -270,10 +270,10 @@
     .last-name{
         font-size:large;
         margin-left: -30px;
-        margin-top: -10px;
+        margin-top: 14px;
     }
     .job-title{
-        margin-top: -25px;
+        margin-top: -5px;
     }
     .objective{
         margin-bottom: -120px;
@@ -302,10 +302,10 @@
     .last-name{
         font-size:small;
         margin-left: -50px;
-        margin-top: -15px;
+        margin-top: 10px;
     }
     .job-title{
-        margin-top: -40px;
+        margin-top: -20px;
     }
     .objective{
         margin-bottom: -150px;
@@ -337,10 +337,11 @@
     .last-name{
         font-size:medium;
         margin-left: -50px;
-        margin-top: -15px;
+        margin-top: 15px;
     }
     .job-title{
-        margin-top: -20px;
+        margin-top: -5px;
+        margin-left: 10px;
     }
     .objective{
         margin-bottom: -150px;
