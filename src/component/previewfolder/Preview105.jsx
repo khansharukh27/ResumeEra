@@ -19,7 +19,7 @@ const Preview105 = () => {
     const work = useSelector((state) => [state.reducer.workExperience]);
     const Honor = useSelector((state) => [state.reducer.honorAndaward]);
     const Refrence = useSelector((state) => [state.reducer.addReference])
-    const SoftSkill = useSelector((state) => [state.reducer.addSoftSkills])
+    // const SoftSkill = useSelector((state) => [state.reducer.addSoftSkills])
     const socialMediaLink = useSelector((state) => [state.reducer.socialMediaLink]);
     const languages = useSelector((state) => [state.reducer.addLanguage]);
     console.log('refrences:-', Refrence)
@@ -74,7 +74,7 @@ const Preview105 = () => {
                 </div>
                 <div className="d-flex justify-content-between mt-4">
                     <div className="inner105-1 w-50">
-                        <h6 style={{ color: headingColor }}>Profile</h6>
+                        <h6 style={{ color: headingColor,fontFamily:fontStyle }}>Profile</h6>
                         <p>{personalInfo.object}</p>
                         <div className=" ">
                             <h6 style={{ color: headingColor }}>Language</h6>

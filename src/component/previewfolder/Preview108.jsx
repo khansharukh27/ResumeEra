@@ -3,7 +3,7 @@ import html2canvas from 'html2canvas';
 import jsPDF from 'jspdf';
 import React, { useState } from 'react';
 import { useSelector } from 'react-redux';
-import { useNavigate } from 'react-router-dom';
+// import { useNavigate } from 'react-router-dom';
 import '../previewfolder/CSS/preview108.css'
 import DownloadPopUp from '../DownloadPopUp';
 const Preview108 = () => {
@@ -14,14 +14,14 @@ const Preview108 = () => {
   const [headingColor, setHeadingColor] = useState('#rrggbb')
   const [isDownloaded, setIsDownloaded] = useState(false);
 
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
   const personalInfo = useSelector((state) => state.reducer.personalInfo);
   const education = useSelector((state) => [state.reducer.education[0]]);
   const keyskills = useSelector((state) => [state.reducer.keySkills[0]]);
   const work = useSelector((state) => [state.reducer.workExperience[0]]);
   const Honor = useSelector((state) => [state.reducer.honorAndaward[0]]);
-  const Refrence = useSelector((state) => [state.reducer.addReference[0]])
-  const SoftSkill = useSelector((state) => [state.reducer.addSoftSkills[0]])
+  // const Refrence = useSelector((state) => [state.reducer.addReference[0]])
+  // const SoftSkill = useSelector((state) => [state.reducer.addSoftSkills[0]])
   const socialMediaLink = useSelector((state) => [state.reducer.socialMediaLink[0]]);
   const languages = useSelector((state) => [state.reducer.addLanguage[0]]);
   const Certificate = useSelector((state) => [state.reducer.certificateData[0][0]])

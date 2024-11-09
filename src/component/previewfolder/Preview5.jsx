@@ -21,7 +21,7 @@ const Preview5 = () => {
     const LLanguage = useSelector((state) => [state.reducer.addLanguage]);
     const Hobbies = useSelector((state) => [state.reducer.addHobies]);
 
-    
+
     const handleDownloadPDF = async () => {
         const element = document.getElementById('Alish_mirza1');
         try {
@@ -31,27 +31,27 @@ const Preview5 = () => {
                 useCORS: true,
                 logging: true,
             });
-    
+
             const pdf = new jsPDF('p', 'mm', 'a4');
             const imgData = canvas.toDataURL('image/jpeg', 0.75); // Use JPEG format with 75% quality for compression
-    
+
             const a4Width = 210; // A4 width in mm
-        const a4Height = 297;
+            const a4Height = 297;
             const imgHeight = (canvas.height * a4Width) / canvas.width;
             // let position = 0;
-    
+
             // Check if the image height is greater than a single page height
             pdf.addImage(imgData, 'JPEG', 0, 0, a4Width, imgHeight > a4Height ? a4Height : imgHeight, undefined, 'FAST');
 
-    
+
             const fileName = `${inputFields}.pdf`;
             pdf.save(fileName);
-    
+
             // Store the image data URL in localStorage
             const savedResumes = JSON.parse(localStorage.getItem('savedResumes')) || [];
             savedResumes.push(imgData);
             localStorage.setItem('savedResumes', JSON.stringify(savedResumes));
-    
+
             alert('Your Resume is downloaded');
             navigate('/myresume');
         } catch (error) {
@@ -59,29 +59,29 @@ const Preview5 = () => {
         }
     };
     return (
-        <div className=' justify-content-between w-100'>
-            <div className='p-1 d-sm-flex' style={{ color:fontColor,backgroundColor: bgColor, fontStyle: fontStyle }} id="Alish_mirza1">
-                <div className='p-5' style={{ backgroundColor: 'grey' }}>
+        <div className='d-md-flex'>
+            <div className='preview05' id="Alish_mirza1">
+                <div className='contact05' style={{ backgroundColor: 'grey', }}>
                     <img src={personalInfo.image} className="" alt="Selected" style={{ width: '100px', height: '100px', borderRadius: '50%', border: '3px solid grey' }} />
-                    <h3 style={{ color: headingColor }}> Contact</h3>
+                    <h3 style={{ color: headingColor,fontFamily:fontStyle }}> Contact</h3>
                     <hr />
-                    <p><i class="bi bi-telephone-fill me-2"></i>{personalInfo.mobileNumber}</p>
-                    <p><i class="bi bi-envelope me-2"></i>{personalInfo.email}</p>
-                    <p><i class="bi bi-geo-alt-fill me-2" ></i>{personalInfo.address} {personalInfo.city} {personalInfo.state} {personalInfo.postalCode}</p>
+                    <p style={{ color:fontColor,fontFamily:fontStyle }}><i class="bi bi-telephone-fill me-2"></i>{personalInfo.mobileNumber}</p>
+                    <p style={{ color:fontColor,fontFamily:fontStyle }}><i class="bi bi-envelope me-2"></i>{personalInfo.email}</p>
+                    <p style={{ color:fontColor,fontFamily:fontStyle }}><i class="bi bi-geo-alt-fill me-2" ></i>{personalInfo.address} {personalInfo.city} {personalInfo.state} {personalInfo.postalCode}</p>
                     <h3 style={{ color: headingColor }} className="mt-5 " >Education</h3>
                     <hr />
                     {education[0].map((edu, index) => (
                         <div key={index} className="">
-                            <p ><b> {edu.univercity}</b></p>
-                            <p>{edu.type}</p>
-                            <p>{edu.startYear} - {edu.endYear}</p>
+                            <p style={{ color:fontColor,fontFamily:fontStyle }} ><b> {edu.univercity}</b></p>
+                            <p style={{ color:fontColor,fontFamily:fontStyle }}>{edu.type}</p>
+                            <p style={{ color:fontColor,fontFamily:fontStyle }}>{edu.startYear} - {edu.endYear}</p>
                         </div>
                     ))}
                     <h3 style={{ color: headingColor }}>Skills</h3>
                     <hr />
                     {keyskills[0].map((keys, index) => (
                         <div key={index} className="text-center">
-                            {keys.keyskills}
+                            <p style={{ color:fontColor,fontFamily:fontStyle }}>{keys.keyskills}</p>
 
                             <hr style={{ height: '2px' }} />
                         </div>
@@ -92,32 +92,32 @@ const Preview5 = () => {
                         <div key={index}>
                             <ul>
                                 <li>
-                                    {lan.language}
+                                    <p style={{ color:fontColor,fontFamily:fontStyle }}>{lan.language}</p>
                                 </li>
                             </ul>
                         </div>
                     ))}
                 </div>
-                <div className='ms-5 ps-5 pe-5 pb-5'>
-                    <h1 className="">{personalInfo.firstName} {personalInfo.lastName}</h1>
-                    <p >
+                <div className='second05'>
+                    <h3 className="" style={{color:headingColor,fontFamily:fontStyle}}>{personalInfo.firstName} {personalInfo.lastName}</h3>
+                    <p style={{ color:fontColor,fontFamily:fontStyle }} >
 
                         {work[0][0].jobtitle}
                     </p>
-                    <p className='mt-4'>{personalInfo.object}</p>
+                    <p style={{ color:fontColor,fontFamily:fontStyle }} className='mt-4'>{personalInfo.object}</p>
 
                     <h3 style={{ color: headingColor }} className='mt-4'>Job Experience</h3>
                     <hr />
                     {work[0].map((works, index) => (
                         <div key={index}>
                             <ul>
-                                <li className="work-item">
-                                    <div className="line"></div>
+                                <li className="work-item05">
+                                    <div className="lines"></div>
                                     <div className="circle"></div>
-                                    <div className="content">
-                                        <p><b>{works.jobtitle}</b></p>
-                                        <p>{works.startYear}-{works.endYear}</p>
-                                        <p>{works.organization}</p>
+                                    <div className="content05">
+                                        <p style={{ color:fontColor,fontFamily:fontStyle }}><b>{works.jobtitle}</b></p>
+                                        <p style={{ color:fontColor,fontFamily:fontStyle }}>{works.startYear}-{works.endYear}</p>
+                                        <p style={{ color:fontColor,fontFamily:fontStyle }}>{works.organization}</p>
                                     </div>
                                     <div className="circle"></div>
                                 </li>
@@ -130,21 +130,21 @@ const Preview5 = () => {
                             <div key={index}>
                                 <ul>
                                     <li>
-                                        {hobb.hobbies}
+                                       <p style={{ color:fontColor,fontFamily:fontStyle }}> {hobb.hobbies}</p>
                                     </li>
                                 </ul>
                             </div>
                         ))}
                     </div>
                 </div>
-                <div className="resume-download-section0">
-                <div className='d-flex'>
+            </div>
+            <div className="resume-download-section0">
+                <div className='downloadbuttondiv'>
                     <input type="text" placeholder="Enter your resume name" className="resume-name-input" style={{ borderRadius: '5px', padding: '10px' }} onChange={(e) => setInputFields(e.target.value)} />
                     <button onClick={handleDownloadPDF} type="btn" className="btn btn-primary ms-2 download-button">Download</button>
                 </div>
-
                 {/* Color Picker for Background Color */}
-                <div className='d-flex border' style={{ marginTop: '5px', display: 'flex', flexDirection: 'row', justifyContent: 'center' }}>
+                <div className='d-flex border fontfamilydiv' style={{ marginTop: '5px', display: 'flex', flexDirection: 'row', justifyContent: 'center' }}>
                     <input type="color" value={bgColor} onChange={(e) => setBgColor(e.target.value)} className="bg-color-picker ms-2" />
                     {/* Font Style Selector */}
                     <select value={fontStyle} onChange={(e) => setFontStyle(e.target.value)} className="font-style-selector ms-2">
@@ -178,17 +178,17 @@ const Preview5 = () => {
                         <option value="Segoe UI">Segoe UI</option>
                     </select>
                 </div>
-                <div>
-                    <span>Font Color </span>
-                    <input type="color" value={fontColor} onChange={(e) => setFontColor(e.target.value)} className="bg-color-picker ms-2" />
-                </div>
-                <div>
-                    <span>Heading Color </span>
-                    <input type="color" value={headingColor} onChange={(e) => setHeadingColor(e.target.value)} className="bg-color-picker ms-2" />
+                <div className='colordiv'>
+                    <div>
+                        <span>Font Color </span>
+                        <input type="color" value={fontColor} onChange={(e) => setFontColor(e.target.value)} className="bg-color-picker ms-2" />
+                    </div>
+                    <div>
+                        <span>Heading Color </span>
+                        <input type="color" value={headingColor} onChange={(e) => setHeadingColor(e.target.value)} className="bg-color-picker ms-2" />
+                    </div>
                 </div>
             </div>
-            </div>
-            
         </div>
     )
 }

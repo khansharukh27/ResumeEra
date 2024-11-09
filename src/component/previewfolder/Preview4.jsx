@@ -63,14 +63,14 @@ const Preview4 = () => {
         <div className="preview-container4 d-sm-flex justify-content-between">
             <div className="resume-preview4 mb w-100" 
             style={{color:fontColor, backgroundColor: bgColor, fontFamily: fontStyle }} id="Alish_mirza1">
-                <div>
-                    <div className="resume-header4" style={{ width: '100%', position: 'relative' }}>
+                <div className=''>
+                    <div className="resume-header4 " style={{ width: '100%', position: 'relative' }}>
                         <div className="header-shapes4 d-flex justify-content-between " style={{ width: '100%' }}>
                             <div className="shape-left4" style={{ backgroundColor: '#100129', width: '100px', height: '100px' }}></div>
                             <div className="shape-right4" style={{}}></div>
                         </div>
 
-                        <div className="personal-info mt-5" style={{ position: 'absolute', top: '20px', left: '20px' }}>
+                        <div className="personal-info mt-5 " style={{ position: 'absolute', top: '20px', left: '20px' }}>
                             <img src={personalInfo.image} className="personal-image" alt="Selected" style={{ width: '150px', height: '150px', borderRadius: '50%', border: '5px solid white' }} />
                             <h3 className="first-name" style={{color:headingColor ,position: 'absolute', top: '20px', left: '150px', stroke: 'HighlightText' }}>{personalInfo.firstName}</h3>
                             <h3 className="last-name" style={{ color:headingColor,position: 'absolute', top: '50px', left: '250px' }}>{personalInfo.lastName}</h3>
@@ -84,8 +84,8 @@ const Preview4 = () => {
                         </div>
                     </div>
 
-                    <div className="resume-body d-flex mt-3 justify-content-between w-100">
-                        <div className="left-column ms-2 me-2 w-50" style={{ marginTop: '110px' }}>
+                    <div className="resume-body d-flex mt-3 justify-content-between w-100 ">
+                        <div className="left-column me-4 w-50" style={{ marginTop: '110px' }}>
                             <h4 style={{ color: headingColor }} className="section-title about-title w-100 text-center">About</h4>
                             <div className="about-content ms-3" >
                                 <p style={{color:fontColor}} className="objective ms-2 ">{personalInfo.object}</p>
@@ -94,7 +94,7 @@ const Preview4 = () => {
                                 <p style={{color:fontColor}} className="address"><i className="bi bi-geo-alt-fill" style={{ fontSize: '' }}></i>{personalInfo.state} {personalInfo.city} {personalInfo.postalCode}</p>
                             </div>
 
-                            <h4 className="section-title language-title text-center" style={{ color: 'white', backgroundColor: '#100129',color:headingColor }}>Language</h4>
+                            <h4 className="section-title language-title text-center" style={{  backgroundColor: '#100129',color:headingColor }}>Language</h4>
                             <div className="language-content">
                                 {LLanguage[0].map((lan, index) => (
                                     <ul key={index}>
@@ -113,7 +113,7 @@ const Preview4 = () => {
                             </div>
                         </div>
 
-                        <div className="right-column w-50" style={{ marginTop: '70px', marginRight: '40px' }}>
+                        <div className="right-column w-50" style={{ marginTop: '70px', marginRight: '' }}>
                             <h4  className="section-title experience-title mt-3 text-center" style={{ color: headingColor, backgroundColor: '#100129' }}>Experience</h4>
                             <div className="experience-content">
                                 {work[0].map((i, index) => (
@@ -157,15 +157,13 @@ const Preview4 = () => {
 
                 </div>
             </div>
-
             <div className="resume-download-section0">
-                <div className='d-flex'>
+                <div className='downloadbuttondiv'>
                     <input type="text" placeholder="Enter your resume name" className="resume-name-input" style={{ borderRadius: '5px', padding: '10px' }} onChange={(e) => setInputFields(e.target.value)} />
                     <button onClick={handleDownloadPDF} type="btn" className="btn btn-primary ms-2 download-button">Download</button>
                 </div>
-
                 {/* Color Picker for Background Color */}
-                <div className='d-flex border' style={{ marginTop: '5px', display: 'flex', flexDirection: 'row', justifyContent: 'center' }}>
+                <div className='d-flex border fontfamilydiv' style={{ marginTop: '5px', display: 'flex', flexDirection: 'row', justifyContent: 'center' }}>
                     <input type="color" value={bgColor} onChange={(e) => setBgColor(e.target.value)} className="bg-color-picker ms-2" />
                     {/* Font Style Selector */}
                     <select value={fontStyle} onChange={(e) => setFontStyle(e.target.value)} className="font-style-selector ms-2">
@@ -199,13 +197,15 @@ const Preview4 = () => {
                         <option value="Segoe UI">Segoe UI</option>
                     </select>
                 </div>
-                <div>
-                    <span>Font Color </span>
-                    <input type="color" value={fontColor} onChange={(e) => setFontColor(e.target.value)} className="bg-color-picker ms-2" />
-                </div>
-                <div>
-                    <span>Heading Color </span>
-                    <input type="color" value={headingColor} onChange={(e) => setHeadingColor(e.target.value)} className="bg-color-picker ms-2" />
+                <div className='colordiv'>
+                    <div>
+                        <span>Font Color </span>
+                        <input type="color" value={fontColor} onChange={(e) => setFontColor(e.target.value)} className="bg-color-picker ms-2" />
+                    </div>
+                    <div>
+                        <span>Heading Color </span>
+                        <input type="color" value={headingColor} onChange={(e) => setHeadingColor(e.target.value)} className="bg-color-picker ms-2" />
+                    </div>
                 </div>
             </div>
         </div>

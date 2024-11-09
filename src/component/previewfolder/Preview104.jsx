@@ -4,7 +4,7 @@ import { useState } from "react";
 import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import './CSS/preview104.css'
-import Hobbies from "../Hobbies";
+// import Hobbies from "../Hobbies";
 // import { socialMediaLink } from "../../Redux/action";
 
 
@@ -24,8 +24,8 @@ const Preview104 = () => {
     const SoftSkill = useSelector((state) => [state.reducer.addSoftSkills]);
     const socialMediaLink = useSelector((state) => [state.reducer.socialMediaLink]);
     const languages = useSelector((state) => [state.reducer.addLanguage]);
-    const Hobbies = useSelector((state)=>[state.reducer.addHobies])
-    console.log('hobbies:-',Hobbies)
+    const Hobbies = useSelector((state)=>[state.reducer.addHobies[0]])
+    // console.log('hobbies:-',Hobbies)
     console.log('refrences:-', Refrence)
     console.log('honorand award:-', Honor)
     const handleDownloadPDF = async () => {
@@ -59,7 +59,7 @@ const Preview104 = () => {
     };
     return (
         <div className="main104">
-            <div className="alisha104">
+            <div className="alisha104" id="Alisha_mirza101">
                 <div className="personalinfo104">
                     <div className="imagediv104">
                         <img src={personalInfo.image} alt="hospital resume" />
@@ -157,14 +157,14 @@ const Preview104 = () => {
                     <h5 className="details-title101" style={{ color: headingColor }}>
                         INTEREST</h5>
                         <hr />
-                    {Hobbies[0].map((works, index) => (
+                    {Hobbies.map((works, index) => (
                         <div key={index} className="employment-history104 ms-4 ">     
                              <p className="employment-duration101">{works.hobbies}</p>
                         </div>
                     ))}
                 </div>
             </div>
-            <div className="resume-download-section">
+            <div className="resume-download-section0 border">
                 <div className='d-flex'>
                     <input type="text" placeholder="Enter your resume name" className="resume-name-input" style={{ borderRadius: '5px', padding: '10px' }} onChange={(e) => setInputFields(e.target.value)} />
                     <button onClick={handleDownloadPDF} type="btn" className="btn btn-primary ms-2 download-button">Download</button>

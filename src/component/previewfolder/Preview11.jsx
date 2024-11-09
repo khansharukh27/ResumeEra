@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import '../previewfolder/CSS/preview11.css'
+import GoogleAd from '../adFolder/GoogleAd';
 const Preview11 = () => {
     const [inputFields, setInputFields] = useState('resume.pdf');
     const [bgColor, setBgColor] = useState('#F5DEB3'); // Default background color (wheat)
@@ -31,33 +32,33 @@ const Preview11 = () => {
                 useCORS: true,
                 logging: true,
             });
-    
+
             const pdf = new jsPDF('p', 'mm', 'a4');
             const imgData = canvas.toDataURL('image/jpeg', 0.75); // Use JPEG format with 75% quality for compression
-    
+
             const a4Width = 210; // A4 width in mm
-        const a4Height = 297;
+            const a4Height = 297;
             const imgHeight = (canvas.height * a4Width) / canvas.width;
             // let position = 0;
-    
+
             // Check if the image height is greater than a single page height
             pdf.addImage(imgData, 'JPEG', 0, 0, a4Width, imgHeight > a4Height ? a4Height : imgHeight, undefined, 'FAST');
 
-    
+
             const fileName = `${inputFields}.pdf`;
             pdf.save(fileName);
-    
+
             // Store the image data URL in localStorage
             const savedResumes = JSON.parse(localStorage.getItem('savedResumes')) || [];
             savedResumes.push(imgData);
             localStorage.setItem('savedResumes', JSON.stringify(savedResumes));
-    
+
             alert('Your Resume is downloaded');
             navigate('/myresume');
         } catch (error) {
             console.error('Error downloading PDF:', error);
         }
-    };    
+    };
     const lineStyle = {
         height: '5px',
         width: '75%',
@@ -67,31 +68,37 @@ const Preview11 = () => {
     };
 
     return (
-        <div className="main11">
-            <div className="resume-container" 
-            style={{ color:fontColor,fontFamily: fontStyle, backgroundColor: bgColor }} id='Alish_mirza1'>
+        <div >
+            <div><GoogleAd/></div>
+            <div className="main11">
+                
+            <div className="resume-container"
+                style={{ color: fontColor, fontFamily: fontStyle, backgroundColor: bgColor }} id='Alish_mirza1'>
                 <div className="left-section" >
                     <div className="profile">
-                        <h1 style={{color:headingColor}}>{personalInfo.firstName} {personalInfo.lastName}</h1>
+                        <h3 style={{ color: headingColor }}>{personalInfo.firstName} {personalInfo.lastName}</h3>
                         <p>{work[0].map((wor, index) => (
                             <div key={index}>
                                 <p>{wor.jobtitle}</p>
                             </div>
                         ))}</p>
-                        <img src={personalInfo.image} alt="Profile Image" className="profile-img" />
+                        <img src={personalInfo.image} alt="Profile" className="profile-img" />
                     </div>
 
                     <div className="contact-info">
-                        <div className="contact"><i class="bi bi-person-circle me-2 "></i><h3 style={{color:headingColor}}>CONTACT ME</h3></div>
-                        
+                        <div className="contact d-flex">
+                            <div><i class="bi bi-person-circle me-2 "></i></div>
+                            <div><h3 style={{ color: headingColor,fontFamily:fontStyle }}>CONTACT ME</h3></div>
+                        </div>
+
                         <p><i className="bi bi-telephone-fill"></i>{personalInfo.mobileNumber}</p>
-                        <p><i className="bi bi-envelope-fill"></i> {personalInfo.email}</p>
+                        <p style={{wordBreak:'break-all'}}><i className="bi bi-envelope-fill"></i> {personalInfo.email}</p>
                         <p><i className="bi bi-geo-alt-fill"></i> {personalInfo.city} {personalInfo.state}</p>
                     </div>
                     <hr />
                     <div className="education">
-                    <div className="contact"><i class="bi bi-backpack me-2 "></i><h3 style={{color:headingColor}}>EDUCATION</h3></div>
-                    {education[0].map((edu, index) => (
+                        <div className="contact"><i class="bi bi-backpack me-2 "></i><h3 style={{ color: headingColor }}>EDUCATION</h3></div>
+                        {education[0].map((edu, index) => (
                             <div key={index} className="">
                                 <p lassName='work-title10'>{edu.degree}</p>
                                 <p className='work-title10'> {edu.univercity}</p>
@@ -102,7 +109,7 @@ const Preview11 = () => {
                     </div>
                     <hr />
                     <div className="references">
-                    <div className="contact"><i class="bi bi-translate me-2 "></i><h3 style={{color:headingColor}}>LANGUAGE</h3></div>
+                        <div className="contact"><i class="bi bi-translate me-2 "></i><h3 style={{ color: headingColor }}>LANGUAGE</h3></div>
                         {LLanguage[0].map((lan, index) => (
                             <div key={index}>
                                 <ul>
@@ -116,12 +123,12 @@ const Preview11 = () => {
                 </div>
                 <div className="right-section">
                     <div className="about-me">
-                    <div className="contact"><i class="bi bi-vector-pen me-2"></i><h3 style={{color:headingColor}}>OBJECT</h3></div>
+                        <div className="contact"><i class="bi bi-vector-pen me-2"></i><h3 style={{ color: headingColor }}>OBJECT</h3></div>
                         <p>{personalInfo.object}</p>
                     </div>
                     <hr />
                     <div className="job-experience">
-                    <div className="contact"><i class="bi bi-person-workspace me-2 "></i><h3 style={{color:headingColor}}>JOB EXPERIENCE</h3></div>
+                        <div className="contact"><i class="bi bi-person-workspace me-2 "></i><h3 style={{ color: headingColor }}>JOB EXPERIENCE</h3></div>
                         {work[0].map((works, index) => (
                             <div key={index} className='d-flex justify-content-around mt-2 job-experience'>
                                 <div>
@@ -135,7 +142,7 @@ const Preview11 = () => {
                     </div>
                     <hr />
                     <div className="skills">
-                    <div className="contact"><i class="bi bi-gear me-2 "></i><h3 style={{color:headingColor}}>SKILLS</h3></div>
+                        <div className="contact"><i class="bi bi-gear me-2 "></i><h3 style={{ color: headingColor }}>SKILLS</h3></div>
                         {keyskills[0].map((keys, index) => (
 
                             <div className='d-flex justify-content-around ' key={index}>
@@ -148,7 +155,7 @@ const Preview11 = () => {
 
                     <div className="language-hobbies">
                         <hr />
-                        <div className="contact"><i class="bi bi-dice-4-fill me-2 "></i><h3 style={{color:headingColor}}>HOBBIES</h3></div>
+                        <div className="contact"><i class="bi bi-dice-4-fill me-2 "></i><h3 style={{ color: headingColor }}>HOBBIES</h3></div>
                         {Hobbies[0].map((hobb, index) => (
                             <div key={index}>
                                 <p lassName='work-title10'>{hobb.hobbies}</p>
@@ -158,14 +165,14 @@ const Preview11 = () => {
                 </div>
             </div>
             <div className="resume-download-section0">
-                <div className='d-flex'>
+            <GoogleAd/>
+                <div className='downloadbuttondiv'>
                     <input type="text" placeholder="Enter your resume name" className="resume-name-input" style={{ borderRadius: '5px', padding: '10px' }} onChange={(e) => setInputFields(e.target.value)} />
                     <button onClick={handleDownloadPDF} type="btn" className="btn btn-primary ms-2 download-button">Download</button>
                 </div>
-
                 {/* Color Picker for Background Color */}
-                <div className='d-flex border' style={{ marginTop: '5px', display: 'flex', flexDirection: 'row', justifyContent: 'center' }}>
-                    <input type="color" placeholder='bg color changer' value={bgColor} onChange={(e) => setBgColor(e.target.value)} className="bg-color-picker ms-2" />
+                <div className='d-flex border fontfamilydiv' style={{ marginTop: '5px', display: 'flex', flexDirection: 'row', justifyContent: 'center' }}>
+                    <input type="color" value={bgColor} onChange={(e) => setBgColor(e.target.value)} className="bg-color-picker ms-2" />
                     {/* Font Style Selector */}
                     <select value={fontStyle} onChange={(e) => setFontStyle(e.target.value)} className="font-style-selector ms-2">
                         <option value="Arial">Arial</option>
@@ -198,15 +205,20 @@ const Preview11 = () => {
                         <option value="Segoe UI">Segoe UI</option>
                     </select>
                 </div>
-                <div>
-                    <span>Font Color </span>
-                    <input type="color" value={fontColor} onChange={(e) => setFontColor(e.target.value)} className="bg-color-picker ms-2" />
+                <div className='colordiv'>
+                    <div>
+                        <span>Font Color </span>
+                        <input type="color" value={fontColor} onChange={(e) => setFontColor(e.target.value)} className="bg-color-picker ms-2" />
+                    </div>
+                    <div>
+                        <span>Heading Color </span>
+                        <input type="color" value={headingColor} onChange={(e) => setHeadingColor(e.target.value)} className="bg-color-picker ms-2" />
+                    </div>
                 </div>
-                <div>
-                    <span>Heading Color </span>
-                    <input type="color" value={headingColor} onChange={(e) => setHeadingColor(e.target.value)} className="bg-color-picker ms-2" />
-                </div>
+                        <GoogleAd/>
             </div>
+            </div>
+            <GoogleAd/>
         </div>
     )
 }

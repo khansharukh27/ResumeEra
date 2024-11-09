@@ -20,7 +20,7 @@ const Preview106 = () => {
     const work = useSelector((state) => [state.reducer.workExperience]);
     const Honor = useSelector((state) => [state.reducer.honorAndaward]);
     const Refrence = useSelector((state) => [state.reducer.addReference])
-    const SoftSkill = useSelector((state) => [state.reducer.addSoftSkills])
+    // const SoftSkill = useSelector((state) => [state.reducer.addSoftSkills])
     const socialMediaLink = useSelector((state) => [state.reducer.socialMediaLink]);
     const languages = useSelector((state) => [state.reducer.addLanguage]);
     console.log('refrences:-', Refrence)

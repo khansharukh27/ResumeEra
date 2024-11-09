@@ -3,7 +3,6 @@
   "name": "ResumeEra",
   "version": "0.1.0",
   "private": true,
- 
   "dependencies": {
     "@reduxjs/toolkit": "^2.0.1",
     "@testing-library/jest-dom": "^5.17.0",
@@ -16,6 +15,7 @@
     "html2canvas": "^1.4.1",
     "html2pdf.js": "^0.10.1",
     "jspdf": "^2.5.1",
+    "prerender-node": "^3.8.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-helmet": "^6.1.0",
@@ -32,7 +32,6 @@
     "thunk": "^0.0.1",
     "web-vitals": "^2.1.4"
   },
- 
   "scripts": {
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
@@ -61,8 +60,5 @@
   },
   "devDependencies": {
     "gh-pages": "^6.1.1"
-    
   }
-  
-  
 }

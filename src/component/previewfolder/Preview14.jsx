@@ -60,14 +60,7 @@ const Preview14 = () => {
             console.error('Error downloading PDF:', error);
         }
     };    
-    const lineStyle = {
-        height: '5px',
-        width: '75%',
-        background: 'linear-gradient(to right, darkgrey 75%, white 75%)',
-        margin: '20px auto',
-        borderRadius: '5px',
-        border: '1px solid grey'
-    };
+    
 
     return (
         <div className=' d-sm-flex justify-content-between main14'>

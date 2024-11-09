@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import html2canvas from "html2canvas";
 import jsPDF from "jspdf";
 import '../css/myresume.css'
-import Footer from "./Footer";
+// import Footer from "./Footer";
 const MyResume = () => {
   const [savedImages, setSavedImages] = useState([]);
 

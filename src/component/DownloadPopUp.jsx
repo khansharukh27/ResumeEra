@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import '../css/DownloadPopUp.css'
 // import { color } from 'html2canvas/dist/types/css/types/color';
 const DownloadPopUp = ({ isDownloaded }) => {

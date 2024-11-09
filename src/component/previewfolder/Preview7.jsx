@@ -62,9 +62,9 @@ const Preview7 = () => {
         <div className='preview-main7 '>
             <div className="resume-preview7" style={{ color:fontColor,backgroundColor: bgColor, fontFamily: fontStyle }} id="Alish_mirza1">
                 <div className='name-div7'>
-                    <h3 className="pt-5" style={{color:headingColor}}>{personalInfo.firstName} {personalInfo.lastName}</h3>
+                    <h3 className="pt-5 " style={{color:headingColor,fontFamily:fontStyle,fontWeight:700}}>{personalInfo.firstName} {personalInfo.lastName}</h3>
                     <p>
-                        {work[0].jobtitle}
+                        {work[0][0].jobtitle}
                     </p>
                 </div>
                 <div className='d-flex justify-content-between contact-div7'>
@@ -73,7 +73,7 @@ const Preview7 = () => {
                             <h5 style={{ color: headingColor }} className='heading7'> CONTACT</h5>
                             <hr />
                             <p><i class="bi bi-telephone-fill me-2"></i>{personalInfo.mobileNumber}</p>
-                            <p><i class="bi bi-envelope me-2"></i>{personalInfo.email}</p>
+                            <p style={{wordBreak:'break-all'}}><i class="bi bi-envelope me-2"></i>{personalInfo.email}</p>
                             <p><i class="bi bi-geo-alt-fill me-2" ></i>{personalInfo.address} {personalInfo.city} {personalInfo.state} {personalInfo.postalCode}</p>
 
                         </div>
@@ -148,14 +148,13 @@ const Preview7 = () => {
                 </div>
             </div>
             <div className="resume-download-section0">
-                <div className='d-flex'>
+                <div className='downloadbuttondiv'>
                     <input type="text" placeholder="Enter your resume name" className="resume-name-input" style={{ borderRadius: '5px', padding: '10px' }} onChange={(e) => setInputFields(e.target.value)} />
                     <button onClick={handleDownloadPDF} type="btn" className="btn btn-primary ms-2 download-button">Download</button>
                 </div>
-
                 {/* Color Picker for Background Color */}
-                <div className='d-flex border' style={{ marginTop: '5px', display: 'flex', flexDirection: 'row', justifyContent: 'center' }}>
-                    <input type="color" placeholder='bg color changer' value={bgColor} onChange={(e) => setBgColor(e.target.value)} className="bg-color-picker ms-2" />
+                <div className='d-flex border fontfamilydiv' style={{ marginTop: '5px', display: 'flex', flexDirection: 'row', justifyContent: 'center' }}>
+                    <input type="color" value={bgColor} onChange={(e) => setBgColor(e.target.value)} className="bg-color-picker ms-2" />
                     {/* Font Style Selector */}
                     <select value={fontStyle} onChange={(e) => setFontStyle(e.target.value)} className="font-style-selector ms-2">
                         <option value="Arial">Arial</option>
@@ -188,13 +187,15 @@ const Preview7 = () => {
                         <option value="Segoe UI">Segoe UI</option>
                     </select>
                 </div>
-                <div>
-                    <span>Font Color </span>
-                    <input type="color" value={fontColor} onChange={(e) => setFontColor(e.target.value)} className="bg-color-picker ms-2" />
-                </div>
-                <div>
-                    <span>Heading Color </span>
-                    <input type="color" value={headingColor} onChange={(e) => setHeadingColor(e.target.value)} className="bg-color-picker ms-2" />
+                <div className='colordiv'>
+                    <div>
+                        <span>Font Color </span>
+                        <input type="color" value={fontColor} onChange={(e) => setFontColor(e.target.value)} className="bg-color-picker ms-2" />
+                    </div>
+                    <div>
+                        <span>Heading Color </span>
+                        <input type="color" value={headingColor} onChange={(e) => setHeadingColor(e.target.value)} className="bg-color-picker ms-2" />
+                    </div>
                 </div>
             </div>
         </div>

@@ -29,16 +29,17 @@
   .profile {
     text-align: center;
     margin-bottom: 20px;
-    white-space: nowrap;
+    /* white-space: nowrap; */
     /* margin-bottom: 50px; */
+
   }
   
   .profile-img {
-    width: 120px;
-    height: 120px;
+    width: 150px;
+    height: 150px;
     border-radius: 50%;
     border: 5px solid white;
-    margin-left: -450px;
+    margin-left: 0px;
     /* margin-bottom: 50px; */
   }
   
@@ -53,6 +54,7 @@
   
   .contact-info, .education, .references, .about-me, .job-experience, .skills, .language-hobbies {
     margin-bottom: 20px;
+    margin-top: 0px;
   }
   
   h3 {
@@ -124,6 +126,8 @@
         margin-bottom: 20px;
         white-space: nowrap;
         position: relative;
+        width: 120px;
+        height: 120px;
       }
       
       .profile-img {
@@ -133,7 +137,7 @@
         border: 5px solid white;
         position: absolute;
         margin-top: 40px;
-        margin-left: 150px;
+        margin-left: 0px;
         left: 0px;
         top: 15px;
       }
@@ -142,9 +146,13 @@
         color: #3112b9;
         /* margin-bottom: 100px; */
       }
+      .contact-info{
+        margin-top: 100px;
+      }
       .contact h3{
         color: black;
         font-size:medium ;
+        margin-top: 3px;
       }
       .contact i{
         font-size: small;
@@ -208,7 +216,7 @@
         border: 5px solid white;
         position: absolute;
         margin-top: 40px;
-        margin-left: 150px;
+        margin-left: 0px;
         left: 0px;
         top: 15px;
       }
@@ -217,19 +225,18 @@
         color: #3112b9;
         /* margin-bottom: 100px; */
       }
+      .contact-info{
+        margin-top: 100px;
+      }
       .contact h3{
         color: black;
         font-size:x-small ;
+        margin-top: 3px;
       }
       .contact i{
         font-size: small;
       }
-      .resume-download-section{
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        justify-content: center;
-      }   
+       
   } 
 
   @media (max-width:425px){
@@ -288,6 +295,9 @@
         left: 0px;
         top: 15px;
       }
+      .contact-info{
+        margin-top: 50px;
+      }
       .contact{
         display: flex;
         color: #3112b9;
@@ -296,6 +306,7 @@
       .contact h3{
         color: black;
         font-size:x-small ;
+        margin-top: 3px;
       }
       .contact i{
         font-size: small;
@@ -310,11 +321,14 @@
         border: 5px solid #12aeb9;
         font-size: xx-small;
       }
-      .resume-container h1{
-        font-size: small;
+      .resume-container p{
+        font-size: xx-small;
+
       }
+     
       .resume-container h3{
         font-size: small;
+        font-weight: 900;
       }
       .main11{
         display: flex;
@@ -353,18 +367,23 @@
         border: 5px solid white;
         position: absolute;
         margin-top: 40px;
-        margin-left: 20px;
+        margin-left: 0px;
         left: 0px;
         top: 15px;
+      }
+      .contact-info{
+        margin-top: 50px;
       }
       .contact{
         display: flex;
         color: #3112b9;
         /* margin-bottom: 100px; */
+        /* margin-top: -3px; */
       }
       .contact h3{
         color: black;
         font-size:x-small ;
+        margin-top: 3px;
       }
       .contact i{
         font-size: small;
@@ -377,13 +396,15 @@
         font-family: Arial, sans-serif;
         width: 100%;
         border: 5px solid #12aeb9;
+        
+      }
+      .resume-container p{
         font-size: xx-small;
       }
-      .resume-container h1{
-        font-size: small;
-      }
+      
       .resume-container h3{
         font-size: small;
+        font-weight: 900;
       }
       .main11{
         display: flex;
@@ -420,19 +441,24 @@
         border-radius: 50%;
         border: 5px solid white;
         position: absolute;
-        margin-top: 40px;
-        margin-left: 20px;
+        margin-top: 60px;
+        margin-left: 0px;
         left: 0px;
         top: 15px;
       }
       .contact{
         display: flex;
         color: #3112b9;
+        /* flex-direction: column; */
         /* margin-bottom: 100px; */
+      }
+      .contact-info{
+        margin-top: -50px;
       }
       .contact h3{
         color: black;
-        font-size:x-small ;
+        font-size:small ;
+        margin-top: 3px;
       }
       .contact i{
         font-size: small;

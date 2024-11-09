@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+
 import GoogleAd from './adFolder/GoogleAd';
 import '../css/ImportantPostLink.css'
 

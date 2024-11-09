@@ -58,7 +58,7 @@ const Footer = () => {
         <div className="footer-links">
           <h3  style={{ color: 'green' }}>Learn</h3>
           <ul>
-            <li><Link to="/important_post">Important Post</Link></li>
+            <li><Link to="/importantPost">Important Post</Link></li>
             <li><Link to="/Blog_or_Career_Tips_Page">Blog or Career Tips Page</Link></li>
             <li><Link to="/Interview_Question_Post">Interview Question Post</Link></li>
           </ul>

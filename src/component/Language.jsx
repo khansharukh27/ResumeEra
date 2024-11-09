@@ -21,10 +21,10 @@ const Language = () => {
     localStorage.setItem("inputLanguageData", JSON.stringify(inputLanguage));
   }, [inputLanguage]);
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    dispatch(addLanguage(inputLanguage));
-  };
+  // const handleSubmit = (e) => {
+  //   e.preventDefault();
+  //   dispatch(addLanguage(inputLanguage));
+  // };
 
   const handleClick = (e) => {
     e.preventDefault();

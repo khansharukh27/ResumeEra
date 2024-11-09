@@ -1,6 +1,6 @@
 import { useDispatch } from 'react-redux';
 import '../css/coverletter/coverletter.css';
-import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { Link,  useNavigate } from 'react-router-dom';
 import { coverletters } from '../Redux/action';
 import { useState, useEffect } from 'react';
 import what_is_cover from '../image/image_for_link/what_is_cover.jpg'
@@ -28,7 +28,6 @@ const CoverLetter = (props) => {
         }
     }, [CoverImage]); // Log whenever CoverImage changes
 
-    const location = useLocation()
     const handleClick = (e) => {
         e.preventDefault();
         if (hoveredImage !== null) {

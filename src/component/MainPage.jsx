@@ -1,14 +1,14 @@
 import { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 import PersonalInfo from "./PersonalInfo";
-import WorkExperience from "./WorkExperience";
+// import WorkExperience from "./WorkExperience";
 import '../css/mainpage.css';
-import CoverComponent from "./CoverComponent";
+// import CoverComponent from "./CoverComponent";
 
 const MainPage = (props) => {
     // Using array destructuring for useState hooks
     const [personalInfo, setPersonalInfo] = useState(true);
-    const [workExperience, setWorkExperience] = useState(false);
+    const [ setWorkExperience] = useState(false);
     
     const { hoveredImage, CoverImage } = props;
     
@@ -28,7 +28,7 @@ const MainPage = (props) => {
             setPersonalInfo(true);
             setWorkExperience(false);
         }
-    }, [location.pathname, hoveredImage, result]);
+    },[location.pathname, hoveredImage, result]);
 
     return (
         <div className="mt-2 mainpage" data-aos="flip-left" data-aos-duration="2000">

@@ -49,8 +49,8 @@ const ShareButtons = ({ url, title }) => {
             </a>
 
             {/* Copy to Clipboard */}
-            <a onClick={copyToClipboard}>
-                <h3><i style={{color:'green'}} Class="bi bi-clipboard-fill"></i></h3></a>
+            <button onClick={copyToClipboard}>
+                <h3><i style={{color:'green'}} Class="bi bi-clipboard-fill"></i></h3></button>
         </div>
     );
 };

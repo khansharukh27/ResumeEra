@@ -8,7 +8,9 @@
     filter: contrast(85%) brightness(75%);
     color: #e0e0e0;
 }
-
+.template-grid-divider{
+width: inherit;
+}
 /* Large Desktops */
 @media (min-width: 1200px) {
     .template-page-container {
@@ -201,7 +203,7 @@
         border: 1px solid gray;
         padding: 10px;
         top: 50%;
-        left: 20%;
+        left: 22%;
         position: absolute;
         border-radius: 8px;
         background: linear-gradient(145deg, rgb(56, 100, 91), rgb(62, 100, 62), rgb(112, 112, 62), magenta);

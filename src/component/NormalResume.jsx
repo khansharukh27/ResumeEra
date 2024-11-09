@@ -27,7 +27,7 @@ const NormalResume = (props) => {
                     Browse our collection of professional resume templates and find the one that suits your needs.
                 </p>
                 <hr className="template-grid-divider" />
-                <div className="template-grid row m-3">
+                <div className="template-grid row m-3 ">
                     {images.length > 0 ? images.map((image) => (
                         <div
                             data-aos="flip-left"

@@ -1,3 +1,61 @@
-.resume-download-section{
-    /* height: 500px; */
+.mains05{
+    display: flex;
+    flex-direction: row;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+.preview05{
+    display: flex;
+}
+.preview05 p{
+    font-size: xx-small;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.preview05 h3{
+    font-size: small;
+    font-weight: 700;
+}
+.contact05{
+    padding-right: 5px;
+    padding-left: 10px;
+}
+.second05{
+    padding-right: 10px;
+    padding-left: 10px;
+}
+.work-item05{
+    display: flex;
+}
+
+@media (max-width:320px){
+    .mains05{
+        display: flex;
+        flex-direction: column;
+        padding-right: 10px;
+        padding-left: 10px;
+        width: 100%;
+    }
+    .preview05{
+        display: flex;
+        width: 320px;
+    }
+    .preview05 p{
+        font-size: xx-small;
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+    .preview05 h3{
+        font-size: x-small;
+    }
+    .inner105-1{
+        margin-left: 0px;
+    }
+    .second05{
+        /* padding-right: 10px; */
+    }
+    .work-item05{
+        display: flex;
+        margin-left: -50px;
+    }
 }

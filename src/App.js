@@ -67,55 +67,55 @@ import PrivacyPolicy from './component/PrivacyPolicy';
 import TermsAndServices from './component/TermsAndServices';
 import Contact from './component/Contact';
 import ImportantPost from './component/ImportantPost';
-import HowToCreateResume from './component/Important_post/HowToCreateResume';
-import TipsForWritingCoverLetter from './component/Important_post/TipsForWritingCoverLetter';
-import WhySoftSkillsMatter from './component/Important_post/WhySoftSkillsMatter';
-import TopResumeTemplates2024 from './component/Important_post/TopResumeTemplates2024';
-import CommonMistakesToAvoid from './component/Important_post/CommonMistakesToAvoid';
-import ChooseTemplate from './component/Important_post/ChooseTemplate';
-import FirstJobResume from './component/Important_post/FirstJobResume';
-import HighlightAchievements from './component/Important_post/HighlightAchievements';
-import ExperiencedResumeTips from './component/Important_post/ExperiencedResumeTips';
-import ModernResumeCrafting from './component/Important_post/ModernResumeCrafting';
-import CorrectResumeFormatting from './component/Important_post/CorrectResumeFormatting';
-import EmployerResumeExpectations from './component/Important_post/EmployerResumeExpectations';
-import ResumeKeywords from './component/Important_post/ResumeKeywords';
-import ActionVerbsResume from './component/Important_post/ActionVerbsResume';
-import InternationalResume from './component/Important_post/InternationalResume';
-import ResumeVsCV from './component/Important_post/ResumeVsCV';
-import ShowcaseEducation from './component/Important_post/ShowcaseEducation';
-import ResumeNoExperience from './component/Important_post/ResumeNoExperience';
-import ResumeCareerChange from './component/Important_post/ResumeCareerChange';
-import ResumeRemoteJobs from './component/Important_post/ResumeRemoteJobs';
-import ResumeTipsComponent from './component/Important_post/ResumeTipsComponent';
-import XYZFormula from './component/Important_post/XYZFormula';
+import HowToCreateResume from './component/ImportantPost/HowToCreateResume';
+import TipsForWritingCoverLetter from './component/ImportantPost/TipsForWritingCoverLetter';
+import WhySoftSkillsMatter from './component/ImportantPost/WhySoftSkillsMatter';
+import TopResumeTemplates2024 from './component/ImportantPost/TopResumeTemplates2024';
+import CommonMistakesToAvoid from './component/ImportantPost/CommonMistakesToAvoid';
+import ChooseTemplate from './component/ImportantPost/ChooseTemplate';
+import FirstJobResume from './component/ImportantPost/FirstJobResume';
+import HighlightAchievements from './component/ImportantPost/HighlightAchievements';
+import ExperiencedResumeTips from './component/ImportantPost/ExperiencedResumeTips';
+import ModernResumeCrafting from './component/ImportantPost/ModernResumeCrafting';
+import CorrectResumeFormatting from './component/ImportantPost/CorrectResumeFormatting';
+import EmployerResumeExpectations from './component/ImportantPost/EmployerResumeExpectations';
+import ResumeKeywords from './component/ImportantPost/ResumeKeywords';
+import ActionVerbsResume from './component/ImportantPost/ActionVerbsResume';
+import InternationalResume from './component/ImportantPost/InternationalResume';
+import ResumeVsCV from './component/ImportantPost/ResumeVsCV';
+import ShowcaseEducation from './component/ImportantPost/ShowcaseEducation';
+import ResumeNoExperience from './component/ImportantPost/ResumeNoExperience';
+import ResumeCareerChange from './component/ImportantPost/ResumeCareerChange';
+import ResumeRemoteJobs from './component/ImportantPost/ResumeRemoteJobs';
+import ResumeTipsComponent from './component/ImportantPost/ResumeTipsComponent';
+import XYZFormula from './component/ImportantPost/XYZFormula';
 import GoogleForm from './component/GoogleForm';
-import NotFoundPage from './component/Important_post/NotFoundPage';
-import AboutResumeEra from './component/Important_post/AboutResumeEra';
+import NotFoundPage from './component/ImportantPost/NotFoundPage';
+import AboutResumeEra from './component/ImportantPost/AboutResumeEra';
 import CoverLetter from './component/CoverLetter';
 import cover_letter_1 from '../src/image/CoverImage/cover_letter_1.png'
 import cover_letter_2 from '../src/image/CoverImage/cover_letter_2.webp'
 import cover_letter_3 from '../src/image/CoverImage/cover_letter_3.webp'
 
-import ResumeComponent from './component/Important_post/ResumeComponent';
-import ThingsToRemoveFromYourCV from './component/Important_post/ThingsToRemoveFromYourCV';
-import Tip_For_Interview from './component/Important_post/Tip_For_Interview';
-import AnupamKher_resume from './component/Important_post/AnupamKher_resume';
-import Blog_Career from './component/Important_post/Blog_Career';
+import ResumeComponent from './component/ImportantPost/ResumeComponent';
+import ThingsToRemoveFromYourCV from './component/ImportantPost/ThingsToRemoveFromYourCV';
+import TipForInterview from './component/ImportantPost/TipForInterview';
+import AnupamKherResume from './component/ImportantPost/AnupamKherResume';
+import BlogCareer  from './component/ImportantPost/BlogCareer';
 import DreamJob2024 from './component/blogandcareer/DreamJob2024';
 import TopJobSearchWebsites from './component/blogandcareer/TopJobSearchWebsites';
 import CoverComponent from './component/CoverComponent';
-import Networking_tips from './component/blogandcareer/Networking_tips';
+import NetworkingTips from './component/blogandcareer/NetworkingTips';
 import LinkedInJobHunting from './component/blogandcareer/LinkedInJobHunting';
 import Preview201 from './component/coverletterFolder/Preview201';
-import Follow_Up_After_A_Job_Interview from './component/blogandcareer/Follow_Up_After_A_Job_Interview';
+import FollowUpAfterAJobInterview from './component/blogandcareer/FollowUpAfterAJobInterview';
 import Preview202 from './component/coverletterFolder/Preview202';
 import CoverLettermain from './component/CoverLettermain';
 import SalaryNegotiationComponent from './component/blogandcareer/SalaryNegotiation';
 import BestOnlineCVBuilder from './component/blogandcareer/BestOnlineCVBuilder';
 import BestAIResumeBuilder from './component/blogandcareer/BestAIResumeBuilder';
 import FreeOnlineResumeMaker from './component/blogandcareer/FreeOnlineResumeMaker';
-import FreeResumeSitesComponent from './component/Important_post/FreeResumeSitesComponent';
+import FreeResumeSitesComponent from './component/ImportantPost/FreeResumeSitesComponent';
 import Preview114 from './component/previewfolder/Preview114';
 import Preview113 from './component/previewfolder/Preview113';
 import Preview112 from './component/previewfolder/Preview112';
@@ -125,11 +125,11 @@ import Preview109 from './component/previewfolder/Preview109';
 import Preview108 from './component/previewfolder/Preview108';
 import Preview115 from './component/previewfolder/Preview115';
 import Preview116 from './component/previewfolder/Preview116';
-import TailorResumeComponent from './component/Important_post/TailorResumeComponent';
-import FreeResumeBuilder from './component/Important_post/FreeResumeBuilder';
-import ResumeTrends2024 from './component/Important_post/ResumeTrends2024';
-import RemoteWorkExperience from './component/Important_post/RemoteWorkExperience';
-import HowToWriteAResume from './component/Important_post/HowToWriteAResume';
+import TailorResumeComponent from './component/ImportantPost/TailorResumeComponent';
+import FreeResumeBuilder from './component/ImportantPost/FreeResumeBuilder';
+import ResumeTrends2024 from './component/ImportantPost/ResumeTrends2024';
+import RemoteWorkExperience from './component/ImportantPost/RemoteWorkExperience';
+import HowToWriteAResume from './component/ImportantPost/HowToWriteAResume';
 import WhyWorkHere from './component/blog/WhyWorkHere';
 import InterviewQuestionPost from './component/InterviewQuestionPost';
 import TellUsAboutYourself from './component/blog/TellUsAboutYourself';
@@ -151,6 +151,7 @@ import EditablePage from './component/editablePage/EditablePage';
 import JobGapExplanation from './component/blog/JobGapExplanation';
 import BuildRelationshipsWithCoworkers from './component/blog/BuildRelationshipsWithCoworkers';
 import ResumeMistakes from './component/blogandcareer/ResumeMistakes';
+import RejectionReasonsComponent from './component/blogandcareer/RejectionReasonsComponent';
 // import CoverLetterInput from './component/CoverLetterInput';
 // import CoverComponent from './component/CoverComponent';
 var images = [
@@ -232,7 +233,7 @@ function App() {
         <Route path='/terms-of-service' element={<TermsAndServices />} />
         <Route path='/AboutUs' element={<AboutUs />} />
         <Route path='/Interview_Question_Post' element={<InterviewQuestionPost/>}/>
-        <Route path='/important_post' element={<ImportantPost/>} />
+        <Route path='/ImportantPost' element={<ImportantPost/>} />
         <Route path='/about-resumeera' element={<AboutResumeEra/>} />
         <Route path='/how-to-create-a-professional-resume' element={<HowToCreateResume/>} />
         <Route path='/tips-for-writing-a-cover-letter' element={<TipsForWritingCoverLetter/>} />
@@ -258,8 +259,8 @@ function App() {
         <Route path='/xyz-formula-resume' element={<XYZFormula />} />
         <Route path='/resume_component' element={<ResumeComponent/>}/>
         <Route path='/Things_To_Remove_From_Your_Cv' element={<ThingsToRemoveFromYourCV/>}/>
-        <Route path='/Tip_for_Interview' element={<Tip_For_Interview/>}/>
-        <Route path='/AnupamKher_resume' element={<AnupamKher_resume/>}/>
+        <Route path='/Tip_for_Interview' element={<TipForInterview/>}/>
+        <Route path='/AnupamKher_resume' element={<AnupamKherResume/>}/>
         <Route path='/free_resumesites_component' element={<FreeResumeSitesComponent/>}/>
         <Route path='/tailor-resume-job-description-chatgpt' element={<TailorResumeComponent/>}/>
         <Route path='/resume-trends-2024' element={<ResumeTrends2024/>}/>
@@ -287,12 +288,12 @@ function App() {
 
         {/* job and carier blog component */}
         
-        <Route path='/Blog_or_Career_Tips_Page' element={<Blog_Career/>}/>
+        <Route path='/Blog_or_Career_Tips_Page' element={<BlogCareer />}/>
         <Route path='/how-to-land-your-dream-job' element={<DreamJob2024/>}/>
         <Route path='top-job-search-websites' element={<TopJobSearchWebsites/>}/>
-        <Route path='/networking-tips' element={<Networking_tips/>}/>
+        <Route path='/networking-tips' element={<NetworkingTips/>}/>
         <Route path='/linkedin-job-hunting' element={<LinkedInJobHunting/>}/>
-        <Route path='/follow-up-after-interview' element={<Follow_Up_After_A_Job_Interview/>}/>
+        <Route path='/follow-up-after-interview' element={<FollowUpAfterAJobInterview/>}/>
         <Route path='/Salary_Negotiation_Component' element={<SalaryNegotiationComponent/>}/>
         <Route path='/Best_Online_CV_Builder' element={<BestOnlineCVBuilder/>}/>
         <Route path='/Best_AI_Resume_Builder' element={<BestAIResumeBuilder/>}/>
@@ -304,6 +305,7 @@ function App() {
         <Route path='/why-do-you-have-a-gap-in-your-job-history' element={<JobGapExplanation/>}/>
         <Route path='/how-to-build-relationships-with-your-coworkers' element={<BuildRelationshipsWithCoworkers/>}/>
         <Route path='/5-mistake-to-getting-job' element={<ResumeMistakes/>}/>
+        <Route path='/8-reasons-for-interview-rejection' element={<RejectionReasonsComponent/>}/>
 
 
 

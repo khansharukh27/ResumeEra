@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { useLocation, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { personalInfoData } from "../Redux/action";
 import '../css/mainpage.css';
 
@@ -30,7 +30,6 @@ const CoverComponent = ({ CoverImage }) => {
         window.scrollTo(0, 0);
       }, []);
     
-    const result2 = CoverImage;
     const dispatch = useDispatch();
     const navigate = useNavigate();
 
@@ -68,7 +67,6 @@ const CoverComponent = ({ CoverImage }) => {
     };
 
     
-    const location = useLocation();
     const result = useSelector((state) => state.reducer.coverletterss);
     console.log('coverComponent hoverId:-',result)
 

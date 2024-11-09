@@ -5,6 +5,7 @@ import spell_check from '../../image/image_for_link/spell_check.jpeg'
 import dont_be_overqualified from '../../image/image_for_link/dont_be_overqualified.jpeg'
 import wront_formate from '../../image/image_for_link/wront_formate.jpeg'
 import unnecessary_knowledge from  '../../image/image_for_link/unnecessary_knowledge.jpeg'
+import _5_mistake from '../../image/image_for_link/_5_mistake.jpeg'
 import GoogleAd from '../adFolder/GoogleAd';
 import ShareButtons from '../shareButton/ShareButtons';
 const ResumeMistakes = () => {
@@ -25,6 +26,21 @@ const ResumeMistakes = () => {
       <article>
         <header>
           <h1>काबिल होने के बावजूद नहीं मिलेगी जॉब, मत कर देना ये 5 गलतियां</h1>
+          <figure style={{ textAlign: 'center' }}>
+      {/* SEO-Optimized Image */}
+      <img 
+        src={_5_mistake} 
+        alt="5 mistake" 
+        title="काबिल होने के बावजूद नहीं मिलेगी जॉब- ResumeEra" 
+        loading="lazy" 
+        decoding="async"
+      />
+      
+      {/* Caption below the image */}
+      <figcaption>
+        "गलत संपर्क जानकारी देना- <strong><a href="https://resumeera.xyz">ResumeEra</a></strong>
+      </figcaption>
+</figure>
           <p>अपने सपनों की नौकरी पाने में रिज्यूमे का बड़ा हाथ होता है। लेकिन कभी-कभी, 
             कुछ छोटी गलतियां आपको जॉब पाने से रोक सकती हैं। <a href="https://resumeera.xyz">ResumeEra</a> के साथ जानें, उन गलतियों से कैसे बचें।</p>
             <GoogleAd/>
@@ -281,14 +297,14 @@ const ResumeMistakes = () => {
           "@type": "BlogPosting",
           "headline": "काबिल होने के बावजूद नहीं मिलेगी जॉब, मत कर देना ये 5 गलतियां",
           "description": "जानिए 5 ऐसी गलतियां जो आपके काबिलियत के बावजूद आपके रिज्यूमे को रिजेक्ट करवा सकती हैं। ResumeEra के साथ इन गलतियों से बचें और सफल करियर पाएं।",
-          "image": "https://resumeera.xyz/path-to-image.jpg",
+          "image": "https://resumeera.xyz/static/media/_5_mistake.8606cd85f82f1e254f00.jpeg",
           "author": { "@type": "Person", "name": "ResumeEra-Team" },
           "publisher": {
             "@type": "Organization",
             "name": "ResumeEra",
             "logo": {
               "@type": "ImageObject",
-              "url": "https://resumeera.xyz/static/media/best_logo.895bb22edf6c08600c86.webp"
+              "url": "https://resumeera.xyz/static/media/_5_mistake.8606cd85f82f1e254f00.jpeg"
             }
           },
           "datePublished": "2024-11-06",

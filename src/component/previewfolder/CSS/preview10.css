@@ -1,10 +1,12 @@
 .preview10 {
     display: flex;
+    justify-content: space-between;
 }
 
 .resume-preview10 {
     display: flex;
 }
+
 
 .resume-header10 {
     background-color: grey;
@@ -236,12 +238,13 @@
         font-size: small;
     }
     .resume-preview10 h5{
-        font-size: x-large;
+        font-size: medium;
+        font-weight: 700;
     }
     .image10 {
-        width: 100px;
+        width: 120px;
         height: 160px;
-        margin-right: 30px;
+        margin-left: 10px;
     }
     .work-year10{
         font-size: xx-small;
@@ -272,31 +275,10 @@
     }
 
     .jobtite10 {
-        font-size: xx-small;
+       
         margin-top: 40px;
         padding-left: 5px;
         padding-right: 5px;
-    }
-
-    .education10, .work-year10, .work-title10 {
-        font-size: 16px;
-    }
-
-    .resume-download-section {
-        flex-direction: column;
-        justify-content: space-between;
-    }
-
-    .resume-name-input {
-        width: 60%;
-    }
-
-    .bg-color-picker, .font-style-selector {
-        width: auto;
-    }
-
-    .download-button {
-        width: auto;
     }
 }
 
@@ -318,12 +300,13 @@
         font-size: small;
     }
     .resume-preview10 h5{
-        font-size: x-large;
+        font-size: small;
+        font-weight: 700;
     }
     .image10 {
         width: 100px;
         height: 160px;
-        margin-right: 30px;
+        margin-left: 8px;
     }
     .work-year10{
         font-size: xx-small;
@@ -393,12 +376,13 @@
         font-size: small;
     }
     .resume-preview10 h5{
-        font-size: x-large;
+        font-size: small;
+        font-weight: 700;
     }
     .image10 {
         width: 100px;
         height: 160px;
-        margin-left: px;
+        margin-left: 7px;
     }
     .work-year10{
         font-size: xx-small;
@@ -461,15 +445,17 @@
 @media (max-width: 320px) {
     .resume-preview10 {
         padding: 3px;
-        font-size: xx-small;
-        margin: 0;
         width: 320px;
-    }cxc
+    }
     .resume-preview10 h1 {
         font-size: small;
     }
+    .resume-preview10 p{
+        font-size: xx-small;
+    }
     .resume-preview10 h5 {
-        font-size: .7rem;
+        font-size: small;
+        font-weight: 700;
     }
     .image10 {
         margin-left: 20px;
@@ -478,10 +464,7 @@
         height: 100px;
         
     }
-    .imagediv-inner10{}
-    .work-year10, .work-title10 {
-        font-size: xx-small;
-    }
+    
     .main10 {
         margin-right: 0px;
         width: 170px;
@@ -491,38 +474,6 @@
         margin-right: 0;
 
     }
-    .main1-div10 {
-        padding: 0;
-        margin: 0;
-        width: 100%;
-    }
-    .name-div10 p {
-        font-size: xx-small;
-    }
-    .name-div10 h1 {
-        font-size: small;
-    }
-    .jobtite10 {
-        font-size: xx-small;
-        margin-top: 30px;
-        padding-left: 5px;
-        padding-right: 5px;
-    }
-    .education10, .work-year10, .work-title10 {
-        font-size: 12px;
-    }
-    .resume-download-section {
-        flex-direction: column;
-        justify-content: space-between;
-        width: 320px;
-    }
-    .resume-name-input {
-        width: 100%;
-    }
-    .bg-color-picker, .font-style-selector {
-        width: 100%;
-    }
-    .download-button {
-        width: 100%;
-    }
+    
+    
 }

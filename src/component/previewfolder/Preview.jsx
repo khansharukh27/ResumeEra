@@ -19,7 +19,7 @@ const Preview = () => {
     const keyskills = useSelector((state) => [state.reducer.keySkills[0]]);
     const work = useSelector((state) => [state.reducer.workExperience[0]]);
 
-    
+
     const handleDownloadPDF = async () => {
         const element = document.getElementById('Alish_mirza1');
         try {
@@ -29,34 +29,34 @@ const Preview = () => {
                 useCORS: true,
                 logging: true,
             });
-    
+
             const pdf = new jsPDF('p', 'mm', 'a4');
             const imgData = canvas.toDataURL('image/jpeg', 0.75); // Use JPEG format with 75% quality for compression
-    
+
             const a4Width = 210; // A4 width in mm
-        const a4Height = 297;
+            const a4Height = 297;
             const imgHeight = (canvas.height * a4Width) / canvas.width;
             // let position = 0;
-    
+
             // Check if the image height is greater than a single page height
             pdf.addImage(imgData, 'JPEG', 0, 0, a4Width, imgHeight > a4Height ? a4Height : imgHeight, undefined, 'FAST');
 
-    
+
             const fileName = `${inputFields}.pdf`;
             pdf.save(fileName);
-    
+
             // Store the image data URL in localStorage
             const savedResumes = JSON.parse(localStorage.getItem('savedResumes')) || [];
             savedResumes.push(imgData);
             localStorage.setItem('savedResumes', JSON.stringify(savedResumes));
-    
+
             alert('Your Resume is downloaded');
             navigate('/myresume');
         } catch (error) {
             console.error('Error downloading PDF:', error);
         }
     };
-    
+
     return (
         <div className="preview-container d-sm-flex" style={{ position: 'relative' }}>
             <div className="preview-page" id="Alisha_mirza1" style={{ color: fontColor, backgroundColor: bgColor, fontFamily: fontStyle }}>
@@ -92,7 +92,7 @@ const Preview = () => {
                         <br />
                         <div className='d-flex outer'>
                             <div className='emptydiv'></div>
-                            <h6 className="details-title" style={{color:headingColor}}>Skills</h6>
+                            <h6 className="details-title" style={{ color: headingColor }}>Skills</h6>
                             <div className='emptydiv'></div>
                         </div>
 
@@ -106,7 +106,7 @@ const Preview = () => {
                             <div key={index} className="education-item">
                                 <div className='d-flex outer'>
                                     <div className='emptydiv'></div>
-                                    <h6 className="details-title" style={{color:headingColor}}>Education {index + 1}</h6
+                                    <h6 className="details-title" style={{ color: headingColor }}>Education {index + 1}</h6
                                     ><div className='emptydiv'></div>
                                 </div>
                                 <span className="education-duration">{edu.startYear} - {edu.endYear}</span>
@@ -116,10 +116,10 @@ const Preview = () => {
                     </div>
                     <div className="preview-profile-section">
 
-                        <h6 className="details-title" style={{color:headingColor}}>Profile</h6>
+                        <h6 className="details-title" style={{ color: headingColor }}>Profile</h6>
 
                         <span className="profile-description">{personalInfo.object}</span>
-                        <h6 className="details-title" style={{color:headingColor}}>Employment History</h6>
+                        <h6 className="details-title" style={{ color: headingColor }}>Employment History</h6>
                         {work.map((works, index) => (
                             <div key={index} className="employment-history">
                                 <span className="employment-detail" style={{ fontWeight: '500' }}>{works.organization} {works.jobtitle}</span>
@@ -132,15 +132,15 @@ const Preview = () => {
                 </div>
             </div>
             <div>
-                <GoogleAd/>
+                <GoogleAd />
             </div>
             <div className="resume-download-section0">
-                <div className='d-flex'>
+                <div className='downloadbuttondiv'>
                     <input type="text" placeholder="Enter your resume name" className="resume-name-input" style={{ borderRadius: '5px', padding: '10px' }} onChange={(e) => setInputFields(e.target.value)} />
                     <button onClick={handleDownloadPDF} type="btn" className="btn btn-primary ms-2 download-button">Download</button>
                 </div>
                 {/* Color Picker for Background Color */}
-                <div className='d-flex border' style={{ marginTop: '5px', display: 'flex', flexDirection: 'row', justifyContent: 'center' }}>
+                <div className='d-flex border fontfamilydiv' style={{ marginTop: '5px', display: 'flex', flexDirection: 'row', justifyContent: 'center' }}>
                     <input type="color" value={bgColor} onChange={(e) => setBgColor(e.target.value)} className="bg-color-picker ms-2" />
                     {/* Font Style Selector */}
                     <select value={fontStyle} onChange={(e) => setFontStyle(e.target.value)} className="font-style-selector ms-2">
@@ -174,14 +174,17 @@ const Preview = () => {
                         <option value="Segoe UI">Segoe UI</option>
                     </select>
                 </div>
-                <div>
-                    <span>Font Color </span>
-                    <input type="color" value={fontColor} onChange={(e) => setFontColor(e.target.value)} className="bg-color-picker ms-2" />
+                <div className='colordiv'>
+                    <div>
+                        <span>Font Color </span>
+                        <input type="color" value={fontColor} onChange={(e) => setFontColor(e.target.value)} className="bg-color-picker ms-2" />
+                    </div>
+                    <div>
+                        <span>Heading Color </span>
+                        <input type="color" value={headingColor} onChange={(e) => setHeadingColor(e.target.value)} className="bg-color-picker ms-2" />
+                    </div>
                 </div>
-                <div>
-                    <span>Heading Color </span>
-                    <input type="color" value={headingColor} onChange={(e) => setHeadingColor(e.target.value)} className="bg-color-picker ms-2" />
-                </div>
+
             </div>
         </div>
     );

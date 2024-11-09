@@ -1,4 +1,3 @@
-import { Link } from 'react-router-dom';
 import '../css/importantpost.css'
 import { Helmet } from 'react-helmet';
 // import NewAds from './adFolder/NewAds';
@@ -9,7 +8,7 @@ const ImportantPost = () => {
     return (
         <div className="important-posts">
             <Helmet>
-                <link rel="canonical" href="https://resumeera.xyz/important_post" />
+                <link rel="canonical" href="https://resumeera.xyz/ImportantPost" />
                 <title>Important Links</title>
                 <meta name="description" content="this page is releted to importannt link to show valuable things." />
             </Helmet>

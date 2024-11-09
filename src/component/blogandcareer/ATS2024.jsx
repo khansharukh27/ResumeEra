@@ -176,7 +176,7 @@ const ATS2024 = () => {
 
       <h2>8. The ATS-Friendly Resume Template: Why You Should Use One</h2>
       <p>
-        To ensure that your <a href="https://resumeera.xyz/template"></a> makes it through the ATS, consider using an ATS-friendly resume template. These templates are specifically designed to be easily parsed by ATS, with simple formatting, clear section headings, and no unnecessary graphics or columns. Many job seekers unknowingly use templates that hinder their chances by including elements that ATS systems can’t read.
+        To ensure that your <a href="https://resumeera.xyz/template">Resume</a> makes it through the ATS, consider using an ATS-friendly resume template. These templates are specifically designed to be easily parsed by ATS, with simple formatting, clear section headings, and no unnecessary graphics or columns. Many job seekers unknowingly use templates that hinder their chances by including elements that ATS systems can’t read.
       </p>
       <p>
         When choosing an ATS-friendly template, look for the following features:

@@ -68,7 +68,7 @@ const Preview8 = () => {
                     <h5 style={{ backgroundColor: 'black', color: headingColor, padding: '3px' }}> CONTACT</h5>
 
                     <p><i class="bi bi-telephone-fill me-2"></i>{personalInfo.mobileNumber}</p>
-                    <p><i class="bi bi-envelope me-2"></i>{personalInfo.email}</p>
+                    <p style={{wordBreak:'break-all'}}><i class="bi bi-envelope me-2"></i>{personalInfo.email}</p>
                     <p><i class="bi bi-geo-alt-fill me-2" ></i>{personalInfo.address} {personalInfo.city} {personalInfo.state} {personalInfo.postalCode}</p>
                     <div className="mt-2 me-3">
                         <b>
@@ -100,7 +100,7 @@ const Preview8 = () => {
                 </div>
                 <div className='.main2-8'>
                     <div className=' name-div8 '>
-                        <h1 className="pt-5" style={{ color: headingColor }}>{personalInfo.firstName} {personalInfo.lastName}</h1>
+                        <h3 className="pt-5" style={{ color: headingColor }}>{personalInfo.firstName} {personalInfo.lastName}</h3>
                         <p className='mb-5'>
                             {work[0][0].jobtitle}
                         </p>
@@ -146,14 +146,13 @@ const Preview8 = () => {
             </div>
 
             <div className="resume-download-section0">
-                <div className='d-flex'>
+                <div className='downloadbuttondiv'>
                     <input type="text" placeholder="Enter your resume name" className="resume-name-input" style={{ borderRadius: '5px', padding: '10px' }} onChange={(e) => setInputFields(e.target.value)} />
                     <button onClick={handleDownloadPDF} type="btn" className="btn btn-primary ms-2 download-button">Download</button>
                 </div>
-
                 {/* Color Picker for Background Color */}
-                <div className='d-flex border' style={{ marginTop: '5px', display: 'flex', flexDirection: 'row', justifyContent: 'center' }}>
-                    <input type="color" placeholder='bg color changer' value={bgColor} onChange={(e) => setBgColor(e.target.value)} className="bg-color-picker ms-2" />
+                <div className='d-flex border fontfamilydiv' style={{ marginTop: '5px', display: 'flex', flexDirection: 'row', justifyContent: 'center' }}>
+                    <input type="color" value={bgColor} onChange={(e) => setBgColor(e.target.value)} className="bg-color-picker ms-2" />
                     {/* Font Style Selector */}
                     <select value={fontStyle} onChange={(e) => setFontStyle(e.target.value)} className="font-style-selector ms-2">
                         <option value="Arial">Arial</option>
@@ -186,13 +185,15 @@ const Preview8 = () => {
                         <option value="Segoe UI">Segoe UI</option>
                     </select>
                 </div>
-                <div>
-                    <span>Font Color </span>
-                    <input type="color" value={fontColor} onChange={(e) => setFontColor(e.target.value)} className="bg-color-picker ms-2" />
-                </div>
-                <div>
-                    <span>Heading Color </span>
-                    <input type="color" value={headingColor} onChange={(e) => setHeadingColor(e.target.value)} className="bg-color-picker ms-2" />
+                <div className='colordiv'>
+                    <div>
+                        <span>Font Color </span>
+                        <input type="color" value={fontColor} onChange={(e) => setFontColor(e.target.value)} className="bg-color-picker ms-2" />
+                    </div>
+                    <div>
+                        <span>Heading Color </span>
+                        <input type="color" value={headingColor} onChange={(e) => setHeadingColor(e.target.value)} className="bg-color-picker ms-2" />
+                    </div>
                 </div>
             </div>
         </div>

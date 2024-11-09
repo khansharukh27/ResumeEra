@@ -307,6 +307,9 @@
         width: 320px;
         text-align: justify;
     }
+    .container {
+        font-size: xx-small;
+    }
 
     .resume-wrapper {
         display: flex;
@@ -316,7 +319,9 @@
         font-size: x-small;
         margin-left: 0;
     }
-
+.resume-wrapper p{
+    font-size: xx-small;
+}
     .imagediv3 {
         position: relative;
         width: 110px;
@@ -334,7 +339,7 @@
     }
 
     .contactdiv {
-        margin-top: 10px;
+        margin-top: 30px;
         width: 110px;
         padding-left: 15px;
         padding-right: 5px;
@@ -381,4 +386,5 @@
     .contactdiv h6{
         margin-bottom: -15px;
     }
+    
 }

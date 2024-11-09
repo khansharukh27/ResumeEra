@@ -21,6 +21,10 @@
 .text-end{
     padding-right: 10px;
 }
+.name-div7{
+    text-align: center;
+    
+}
 /* Inner Sections */
 .name-div7, 
 .contact-div7, 
@@ -33,6 +37,12 @@
     margin-bottom: 20px;
 }
 
+.contact-div7 p{
+    text-align: end;
+}
+.contact-div7 hr{
+    width: inherit;
+}
 /* Divider */
 .devider7 {
     width: 3px;
@@ -40,6 +50,7 @@
     /* margin-right: 20px; */
     /* margin-left: 20px; */
     height: 900px;
+    /* text-align: end; */
 }
 
 /* Headings */
@@ -51,6 +62,10 @@
 }
 .job-experience7{
     padding-left: 10px;
+
+}
+.job-experience7 p{
+    text-align: start;
 }
 /* Responsive Styles */
 
@@ -263,11 +278,15 @@
         margin: 0;
         padding-right: -00px;
         padding-left: 0px;
+        width: 100%;
     }
     .resume-preview7 {
-        width: 100%;
+        width: 320px;
         /* display: flex; */
         margin-right: 0px;
+    }
+    .resume-preview7 p{
+        font-size: xx-small;
     }
     .name-div7 h1 {
         font-size: large;

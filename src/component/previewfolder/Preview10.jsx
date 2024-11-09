@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import '../previewfolder/CSS/preview10.css'
+import GoogleAd from '../adFolder/GoogleAd';
 const Preview10 = () => {
     const [inputFields, setInputFields] = useState('resume.pdf');
     const [bgColor, setBgColor] = useState('#F5DEB3'); // Default background color (wheat)
@@ -68,7 +69,11 @@ const Preview10 = () => {
         borderRadius: '5px'
     };
     return (
-        <div className='d-sm-flex resume-10'>
+        <div >
+            <div>
+                <GoogleAd/>
+            </div>
+            <div className='d-sm-flex resume-10'>
             <div className="resume-preview10 " style={{ color:fontColor,backgroundColor: bgColor, 
                 fontFamily: fontStyle }} id="Alish_mirza1">
                 <div className='main10' style={{ backgroundColor: 'grey' }}>
@@ -145,7 +150,7 @@ const Preview10 = () => {
                 <div className='main2-10'>
 
                     <div className='  p-2 mb-3 name-div10' >
-                        <h1 className="pt-5">{personalInfo.firstName} {personalInfo.lastName}</h1>
+                        <h3 className="pt-5">{personalInfo.firstName} {personalInfo.lastName}</h3>
                         {/* <h1></h1> */}
                         <p className='mb-5' style={{}}>
                             <i className='p-1' style={{ backgroundColor: 'yellow', borderRadius: '5px' }}>{work[0][0].jobtitle}</i>
@@ -195,15 +200,17 @@ const Preview10 = () => {
                     ))}
                 </div>
             </div>
-            <div className="resume-download-section0">
-                <div className='d-flex'>
+            <div className="resume-download-section0 ms-2 ps-2">
+           
+                        <GoogleAd/>
+                   
+                <div className='downloadbuttondiv'>
                     <input type="text" placeholder="Enter your resume name" className="resume-name-input" style={{ borderRadius: '5px', padding: '10px' }} onChange={(e) => setInputFields(e.target.value)} />
                     <button onClick={handleDownloadPDF} type="btn" className="btn btn-primary ms-2 download-button">Download</button>
                 </div>
-
                 {/* Color Picker for Background Color */}
-                <div className='d-flex border' style={{ marginTop: '5px', display: 'flex', flexDirection: 'row', justifyContent: 'center' }}>
-                    <input type="color" placeholder='bg color changer' value={bgColor} onChange={(e) => setBgColor(e.target.value)} className="bg-color-picker ms-2" />
+                <div className='d-flex border fontfamilydiv' style={{ marginTop: '5px', display: 'flex', flexDirection: 'row', justifyContent: 'center' }}>
+                    <input type="color" value={bgColor} onChange={(e) => setBgColor(e.target.value)} className="bg-color-picker ms-2" />
                     {/* Font Style Selector */}
                     <select value={fontStyle} onChange={(e) => setFontStyle(e.target.value)} className="font-style-selector ms-2">
                         <option value="Arial">Arial</option>
@@ -236,16 +243,24 @@ const Preview10 = () => {
                         <option value="Segoe UI">Segoe UI</option>
                     </select>
                 </div>
-                <div>
-                    <span>Font Color </span>
-                    <input type="color" value={fontColor} onChange={(e) => setFontColor(e.target.value)} className="bg-color-picker ms-2" />
+                <div className='colordiv'>
+                    <div>
+                        <span>Font Color </span>
+                        <input type="color" value={fontColor} onChange={(e) => setFontColor(e.target.value)} className="bg-color-picker ms-2" />
+                    </div>
+                    <div>
+                        <span>Heading Color </span>
+                        <input type="color" value={headingColor} onChange={(e) => setHeadingColor(e.target.value)} className="bg-color-picker ms-2" />
+                    </div>
                 </div>
-                <div>
-                    <span>Heading Color </span>
-                    <input type="color" value={headingColor} onChange={(e) => setHeadingColor(e.target.value)} className="bg-color-picker ms-2" />
-                </div>
+                
+                        <GoogleAd/>
+                   
             </div>
-
+            </div>
+            <div>
+                <GoogleAd/>
+            </div>
         </div>
     )
 }
