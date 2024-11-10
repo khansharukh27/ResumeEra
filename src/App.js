@@ -152,6 +152,8 @@ import JobGapExplanation from './component/blog/JobGapExplanation';
 import BuildRelationshipsWithCoworkers from './component/blog/BuildRelationshipsWithCoworkers';
 import ResumeMistakes from './component/blogandcareer/ResumeMistakes';
 import RejectionReasonsComponent from './component/blogandcareer/RejectionReasonsComponent';
+// import CVWritingTipsComponent from './component/ImportantPost/CVWritingTipsComponent2';
+import CVWritingTipsComponent2 from './component/ImportantPost/CVWritingTipsComponent2';
 // import CoverLetterInput from './component/CoverLetterInput';
 // import CoverComponent from './component/CoverComponent';
 var images = [
@@ -267,6 +269,7 @@ function App() {
         <Route path='/remote-work-experience' element={<RemoteWorkExperience/>}/>
         <Route path='/how-to-write-a-resume-in-7-easy-steps' element={<HowToWriteAResume/>}/>
         <Route path='/what-are-your-strengths' element={<WhatAreYourStrengths/>}/>
+        <Route path='/Dont_Copy_Paste_On_Your_Cv' element={<CVWritingTipsComponent2/>}/>
 
 
         {/* interview quation and answer*/}

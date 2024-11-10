@@ -72,14 +72,14 @@ const Preview12 = () => {
     return (
         <div className='d-md-flex justify-content-between main12' style={{color:fontColor,backgroundColor: 'black',height: '100%'}}>
             <div className='me-4 resume-12' style={{
-                position: "relative",
+                // position: "relative",
                 borderRadius: '8px',
                 backgroundColor: bgColor,
                 fontFamily: fontStyle,
                 width: '100%' }} id='Alish_mirza1'>
                 <div className=' d-flex justify-content-between p-3 main12-1'
-                    style={{ backgroundColor: "lightgray" }}>
-                    <div className=' objective-div12 me-2'>
+                    style={{  }}>
+                    <div className=' objective-div12 me-2 mb-4'>
                         <h5 style={{color:headingColor,textAlign: 'start'}} className='' >
                             <i class="bi bi-file-person-fill "></i>OBJECT CARRIER</h5>
                         <p className='' style={{ textAlign: 'justify' }}>{personalInfo.object}</p>
@@ -161,11 +161,12 @@ const Preview12 = () => {
                         </div>
 
                     </div>
-                    <div >
-                        <div className='d-flex image-profile-div12' style={{ backgroundColor: 'yellow', border: '10px solid white', }}>
-                            <img src={personalInfo.image} className=" image-profile12" alt="Selected" style={{}} />
+                    <div className='blank12' style={{}}>
+                    <div className='image-profile-div12' style={{ backgroundColor: 'yellow', border: '10px solid white', }}>
+                            <img src={personalInfo.image}  className=" image-profile12" alt="Selected" style={{}} />
                         </div>
                         <div className=' contact-card12'
+
                             style={{ backgroundColor: 'black', color: 'white', borderRadius: '8px' }}>
                             <p>.</p>
                             <h5 style={{color:headingColor}} className='mt-5'><i class="bi bi-person-lines-fill"></i> CONTACT</h5>
@@ -207,15 +208,14 @@ const Preview12 = () => {
                     </div>
                 </div>
             </div>
-            <div className="resume-download-section0 me-4">
-                <div className='d-flex'>
+            <div className="resume-download-section0">
+                <div className='downloadbuttondiv'>
                     <input type="text" placeholder="Enter your resume name" className="resume-name-input" style={{ borderRadius: '5px', padding: '10px' }} onChange={(e) => setInputFields(e.target.value)} />
                     <button onClick={handleDownloadPDF} type="btn" className="btn btn-primary ms-2 download-button">Download</button>
                 </div>
-
                 {/* Color Picker for Background Color */}
-                <div className='d-flex border' style={{ marginTop: '5px', display: 'flex', flexDirection: 'row', justifyContent: 'center' }}>
-                    <input type="color" placeholder='bg color changer' value={bgColor} onChange={(e) => setBgColor(e.target.value)} className="bg-color-picker ms-2" />
+                <div className='d-flex border fontfamilydiv' style={{ marginTop: '5px', display: 'flex', flexDirection: 'row', justifyContent: 'center' }}>
+                    <input type="color" value={bgColor} onChange={(e) => setBgColor(e.target.value)} className="bg-color-picker ms-2" />
                     {/* Font Style Selector */}
                     <select value={fontStyle} onChange={(e) => setFontStyle(e.target.value)} className="font-style-selector ms-2">
                         <option value="Arial">Arial</option>
@@ -248,16 +248,18 @@ const Preview12 = () => {
                         <option value="Segoe UI">Segoe UI</option>
                     </select>
                 </div>
-                <div>
-                    <span>Font Color </span>
-                    <input type="color" value={fontColor} onChange={(e) => setFontColor(e.target.value)} className="bg-color-picker ms-2" />
+                <div className='colordiv'>
+                    <div>
+                        <span>Font Color </span>
+                        <input type="color" value={fontColor} onChange={(e) => setFontColor(e.target.value)} className="bg-color-picker ms-2" />
+                    </div>
+                    <div>
+                        <span>Heading Color </span>
+                        <input type="color" value={headingColor} onChange={(e) => setHeadingColor(e.target.value)} className="bg-color-picker ms-2" />
+                    </div>
                 </div>
-                <div>
-                    <span>Heading Color </span>
-                    <input type="color" value={headingColor} onChange={(e) => setHeadingColor(e.target.value)} className="bg-color-picker ms-2" />
-                </div>
-            </div>
-        </div>
+
+            </div>        </div>
     )
 }
 export default Preview12;

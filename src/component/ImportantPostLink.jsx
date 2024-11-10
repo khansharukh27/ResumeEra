@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 
 import GoogleAd from './adFolder/GoogleAd';
 import '../css/ImportantPostLink.css'
-
+import Copy_Past_Cv from '../image/image_for_link/Copy_Past_Cv.jpeg'
 const ImportantPostLink = () => {
     const [searchTerm, setSearchTerm] = useState('');
 
@@ -36,12 +36,14 @@ const ImportantPostLink = () => {
         { path: '/Things_To_Remove_From_Your_Cv', title: 'Things to Remove from Your CV - Resume Tips: ResumeEra', src: 'https://img.freepik.com/free-photo/human-resources-interview_23-2149050143.jpg', alt: 'Things to remove from CV' },
         { path: '/Tip_for_Interview', title: 'Tip for Interview: ResumeEra', src: 'https://img.freepik.com/free-photo/business-interview_23-2149122432.jpg', alt: 'Interview tips by ResumeEra' },
         { path: '/AnupamKher_resume', title: 'Anupam Kher Resume with ResumeEra', src: 'https://img.freepik.com/free-photo/actor-anupam-kher-speaking-microphone_23-2148998417.jpg', alt: 'Anupam Kher Resume' },
-        { path: '/free_resumesites_component', title: 'What Resume Site is Actually Free', src: 'https://img.freepik.com/free-photo/searching-free-resume-template_23-2149122524.jpg', alt: 'Free resume sites' },
+        { path: '/free_resumesites_component', title: 'What Resume Site is Actually Free', src: 'https://resumeera.xyz/static/media/best_logo.895bb22edf6c08600c86.webp', alt: 'Free resume sites' },
         { path: '/tailor-resume-job-description-chatgpt', title: 'ResumeEra: How to Tailor Your Resume to a Job Description with ChatGPT', src: 'https://img.freepik.com/free-photo/man-using-laptop_23-2149011460.jpg', alt: 'Tailoring resume with ChatGPT' },
         { path: '/free-resume-builder', title: 'Online Resume Maker Free PDF | ResumeEra - Create Free Resumes for Freshers', src: 'https://img.freepik.com/free-photo/student-using-free-resume-builder_23-2149122257.jpg', alt: 'Free online resume maker' },
-        { path: '/resume-trends-2024', title: '10 Free Resume Trends In 2024: What You Need To Know To Stand Out', src: 'https://img.freepik.com/free-photo/person-reviewing-trendy-resume_23-2148998421.jpg', alt: '2024 Resume Trends' },
+        { path: '/resume-trends-2024', title: '10 Free Resume Trends In 2024: What You Need To Know To Stand Out', src: 'https://resumeera.xyz/static/media/Stand_Out.abcb740fe3c10ba62b11.jpeg', alt: '2024 Resume Trends' },
         { path: '/remote-work-experience', title: 'Remote Work Experience | Customized Resumes for Each Application', src: 'https://img.freepik.com/free-photo/person-working-remote-resume_23-2149050343.jpg', alt: 'Remote work experience resume' },
         { path: '/how-to-write-a-resume-in-7-easy-steps', title: 'How To Write A Resume In 7 Easy Steps', src: 'https://img.freepik.com/free-photo/easy-resume-steps_23-2148998418.jpg', alt: 'Resume writing steps' },
+        { path: '/Dont_Copy_Paste_On_Your_Cv', title: 'CV Writing Tips: क्या आप भी कॉपी-पेस्ट कर बनाते हैं सीवी?', src: 'https://resumeera.xyz/static/media/Proofread_Edit_Thoroughly.39720e0319743c16a794.jpeg', alt: 'Dont Copy Past On Your Cv' },
+
     ];
 
 
