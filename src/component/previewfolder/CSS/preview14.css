@@ -1,4 +1,8 @@
-
+.Resume14{
+  overflow: hidden;
+  width: 100%;
+  padding-right: 15px;
+}
 .main14 {
     width: 100%;
     height: fit-content;   
@@ -138,6 +142,9 @@
       flex-direction: column;
       font-size: xx-small;
       color: grey;
+  }
+  .Resume14 p{
+    font-size: xx-small;
   }
   .main14 h1{
     font-size: small;

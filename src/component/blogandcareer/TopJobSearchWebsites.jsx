@@ -7,6 +7,7 @@ import zipper_job_serches from '../../image/image_for_link/zipper_job_serches.jp
 import simply_hired from '../../image/image_for_link/simply_hired.png'
 import { Link } from 'react-router-dom'
 import { Helmet } from 'react-helmet'
+import Top_Job_Search_Websites from '../../image/carrierTips/Top_Job_Search_Websites.jpg'
 
 const TopJobSearchWebsites = () =>{
     return(
@@ -23,6 +24,12 @@ const TopJobSearchWebsites = () =>{
             </Helmet>
             <div itemScope>
                 <h1 itemprop="name">Top Job Search Websites to Explore for Your Next Career Move : Resumeera</h1>
+                <figure>
+                    <img src={Top_Job_Search_Websites} alt="Top Job Search Websites to Explore for Your Next Career Move" loading='lazy'
+                    title='Top Job Search Websites to Explore for Your Next Career Move'
+                     />
+                     <figcaption>Top Job Search <a href="https://resumeera.xyz">Websites to Explore </a>for Your Next Career Move</figcaption>
+                </figure>
                 <p><a href="https://resumeera.xyz">ResumeEra</a> tell you Searching for a job can often feel like a daunting task, but thanks to numerous online platforms, 
                     the process has become much more streamlined and efficient. Whether you are a recent graduate, 
                     looking to make a career change, or in search of remote work opportunities, the right job search 

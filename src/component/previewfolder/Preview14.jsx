@@ -5,6 +5,7 @@ import { useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import './CSS/preview14.css'
 import imagepng from './imagepng.png'
+import GoogleAd from '../adFolder/GoogleAd';
 const Preview14 = () => {
     const [inputFields, setInputFields] = useState('resume.pdf');
     const [bgColor, setBgColor] = useState('#F5DEB3'); // Default background color (wheat)
@@ -63,8 +64,13 @@ const Preview14 = () => {
     
 
     return (
+        <div>
+             <div style={{width:'100%'}}>
+                                    <GoogleAd/>
+                                </div>
+
         <div className=' d-sm-flex justify-content-between main14'>
-            <div className='' id='Alish_mirza1' style={{ color: fontColor, backgroundColor: bgColor, fontFamily: fontStyle }}>
+            <div className='Resume14' id='Alish_mirza1' style={{ color: fontColor, backgroundColor: bgColor, fontFamily: fontStyle }}>
                 <div className='d-flex justify-content-between faltu14'>
                     <div className='main1-14 '>
                         <div className='d-flex images14 mt-2 ms-2' style={{}}>
@@ -79,7 +85,7 @@ const Preview14 = () => {
                             <div className=''>
                                 <h3 className="" style={{ lineHeight: '.5', whiteSpace: 'nowrap', fontWeight: '500' }}>{personalInfo.firstName}  </h3>
                                 <h3 style={{ fontWeight: '800' }}>{personalInfo.lastName}</h3>
-                                <p className=''>
+                                <p style={{ color: fontColor, fontFamily: fontStyle }}className=''>
                                     {work[0][0].jobtitle}
                                 </p>
                             </div>
@@ -96,15 +102,15 @@ const Preview14 = () => {
                                 <div>
                                     <div className='d-flex' style={{ height: "" }}>
                                         <div className='me-1 ' style={{ backgroundColor: '', borderBottomLeftRadius: '50%', borderBottomRightRadius: '50%' }}><i class="bi bi-telephone-fill "></i></div>
-                                        <div><p>{personalInfo.mobileNumber}</p></div>
+                                        <div><p  style={{ color: fontColor, fontFamily: fontStyle }}>{personalInfo.mobileNumber}</p></div>
                                     </div>
                                     <div className='d-flex '>
                                         <div className='me-1' style={{}}><i class="bi bi-envelope"></i></div>
-                                        <div style={{width:'inherit',wordBreak:'break-word'}}><p style={{ marginRight: '' }}>{personalInfo.email}</p></div>
+                                        <div style={{width:'inherit',wordBreak:'break-word'}}><p style={{ color: fontColor, fontFamily: fontStyle }}>{personalInfo.email}</p></div>
                                     </div>
                                     <div className='d-flex'>
                                         <div className='me-1' style={{}}><i class="bi bi-geo-alt-fill " ></i></div>
-                                        <div><p> {personalInfo.city} {personalInfo.state}</p></div>
+                                        <div><p  style={{ color: fontColor, fontFamily: fontStyle }}> {personalInfo.city} {personalInfo.state}</p></div>
                                     </div>
                                     {/* <div className='d-flex'> */}
                                     {/* <div className='me-1' style={{}}><i class="bi bi-linkedin "></i></div> */}
@@ -123,7 +129,7 @@ const Preview14 = () => {
                                 <h5 style={{ color: headingColor }} className=' heading14'><i class="bi bi-translate me-1"></i>LANGUAGE</h5>
                                 {LLanguage[0].map((keys, index) => (
                                     <div key={index} className=" d-flex  justify-content-between">
-                                        <div>  <p>{keys.language}</p></div>
+                                        <div>  <p  style={{ color: fontColor, fontFamily: fontStyle }}>{keys.language}</p></div>
                                         <div className="star-rating ms-3 w-50">
                                             {[...Array(5)].map((_, i) => (
                                                 <i
@@ -147,7 +153,7 @@ const Preview14 = () => {
                                 <h5 style={{ color: headingColor }} className=' heading14' > <i class="bi bi-controller me-1"></i>HOBBIES</h5>
                                 {Hobbies[0].map((keys, index) => (
                                     <div key={index} className=" d-flex justify-content-between">
-                                        <div ><p>{keys.hobbies}</p> </div>
+                                        <div ><p  style={{ color: fontColor, fontFamily: fontStyle }}>{keys.hobbies}</p> </div>
                                     </div>
                                 ))}
                             </div>
@@ -160,9 +166,9 @@ const Preview14 = () => {
                             <div className='' style={{ width: '50px', height: '4px', backgroundColor: 'yellow' }}></div>
                             <div className=' row'>
                                 <div className=' d-sm-flex justify-content-between'>
-                                    <div className=''><i>Date of Birth:-</i> <p >{personalInfo.dateofbirth}</p><hr style={{ height: '5px', backgroundColor: 'grey' }} /></div>
-                                    <div className=''><i>Marital Status:-</i> <p> {personalInfo.maritalstatus}</p><hr style={{ height: '5px', backgroundColor: 'grey' }} /></div>
-                                    <div className=' '><i>Nationality:-</i> <p>{personalInfo.nationality}</p><hr style={{ height: '5px', backgroundColor: 'grey' }} /></div>
+                                    <div className=''><i>Date of Birth:-</i> <p style={{ color: fontColor, fontFamily: fontStyle }}>{personalInfo.dateofbirth}</p><hr style={{ height: '5px', backgroundColor: 'grey' }} /></div>
+                                    <div className=''><i>Marital Status:-</i> <p style={{ color: fontColor, fontFamily: fontStyle }}> {personalInfo.maritalstatus}</p><hr style={{ height: '5px', backgroundColor: 'grey' }} /></div>
+                                    <div className=' '><i>Nationality:-</i> <p  style={{ color: fontColor, fontFamily: fontStyle }}>{personalInfo.nationality}</p><hr style={{ height: '5px', backgroundColor: 'grey' }} /></div>
                                 </div>
                             </div>
                         </div>
@@ -170,9 +176,9 @@ const Preview14 = () => {
                             <h5 style={{ color: headingColor }} className="mt-2 heading14"  > <i class="bi bi-journal-code me-1"></i>EDUCATION</h5>
                             {education[0].map((edu, index) => (
                                 <div key={index} className="">
-                                    <p style={{ lineHeight: '.5' }}><b> {edu.univercity}</b></p>
-                                    <p style={{ lineHeight: '.5' }}>{edu.type}</p>
-                                    <p style={{ lineHeight: '.5' }} className=''>{edu.startYear} - {edu.endYear}</p>
+                                    <p style={{ color: fontColor, fontFamily: fontStyle, lineHeight: '.5' }}><b> {edu.univercity}</b></p>
+                                    <p style={{ color: fontColor, fontFamily: fontStyle,lineHeight: '.5' }}>{edu.type}</p>
+                                    <p style={{ color: fontColor, fontFamily: fontStyle,lineHeight: '.5' }} className=''>{edu.startYear} - {edu.endYear}</p>
                                 </div>
                             ))}
                         </div>
@@ -180,14 +186,14 @@ const Preview14 = () => {
                             <h5 style={{ color: headingColor }} className=' heading14'><i class="bi bi-person-workspace me-1"></i> JOB EXPERIENCE</h5>
                             {work[0].map((works, index) => (
                                 <div key={index} className='d-flex justify-content-between mt-2'>
-                                    <div style={{ lineHeight: '' }}><p style={{}}><b>{works.jobtitle}</b></p>
-                                        <p >{works.organization} </p></div>
-                                    <div><p>{works.startYear}-{works.endYear}</p></div>
+                                    <div style={{ lineHeight: '' }}><p style={{ color: fontColor, fontFamily: fontStyle }}><b>{works.jobtitle}</b></p>
+                                        <p style={{ color: fontColor, fontFamily: fontStyle }}>{works.organization} </p></div>
+                                    <div><p  style={{ color: fontColor, fontFamily: fontStyle }}>{works.startYear}-{works.endYear}</p></div>
                                 </div>
                             ))}
                         </div>
                         <div className="skill14">
-                            <h5 style={{ color: headingColor }} className='heading14'><i class="bi bi-mortarboard-fill me-1" style={{ color: '#082f36cc' }}></i>SKILLS</h5>
+                            <h5 style={{ color: fontColor, fontFamily: fontStyle }} className='heading14'><i   class="bi bi-mortarboard-fill me-1" style={{ color: '#082f36cc' }}></i>SKILLS</h5>
                             <div className='row'>
                                 {keyskills[0].map((keys, index) => (
                                     <div key={index} className="col-12 d-sm-flex justify-content-around">
@@ -208,15 +214,17 @@ const Preview14 = () => {
                     </div>
                 </div>
             </div>
-            <div className="resume-download-section">
-                <div className='d-flex'>
+            <div className="resume-download-section0">
+            <div style={{width:'100%'}}>
+                                    <GoogleAd/>
+                                </div>
+                <div className='downloadbuttondiv'>
                     <input type="text" placeholder="Enter your resume name" className="resume-name-input" style={{ borderRadius: '5px', padding: '10px' }} onChange={(e) => setInputFields(e.target.value)} />
                     <button onClick={handleDownloadPDF} type="btn" className="btn btn-primary ms-2 download-button">Download</button>
                 </div>
-
                 {/* Color Picker for Background Color */}
-                <div className='d-flex border' style={{ marginTop: '5px', display: 'flex', flexDirection: 'row', justifyContent: 'center' }}>
-                    <input type="color" placeholder='bg color changer' value={bgColor} onChange={(e) => setBgColor(e.target.value)} className="bg-color-picker ms-2" />
+                <div className='d-flex border fontfamilydiv' style={{ marginTop: '5px', display: 'flex', flexDirection: 'row', justifyContent: 'center' }}>
+                    <input type="color" value={bgColor} onChange={(e) => setBgColor(e.target.value)} className="bg-color-picker ms-2" />
                     {/* Font Style Selector */}
                     <select value={fontStyle} onChange={(e) => setFontStyle(e.target.value)} className="font-style-selector ms-2">
                         <option value="Arial">Arial</option>
@@ -249,15 +257,21 @@ const Preview14 = () => {
                         <option value="Segoe UI">Segoe UI</option>
                     </select>
                 </div>
-                <div>
-                    <span>Font Color </span>
-                    <input type="color" value={fontColor} onChange={(e) => setFontColor(e.target.value)} className="bg-color-picker ms-2" />
+                <div className='colordiv'>
+                    <div>
+                        <span>Font Color </span>
+                        <input type="color" value={fontColor} onChange={(e) => setFontColor(e.target.value)} className="bg-color-picker ms-2" />
+                    </div>
+                    <div>
+                        <span>Heading Color </span>
+                        <input type="color" value={headingColor} onChange={(e) => setHeadingColor(e.target.value)} className="bg-color-picker ms-2" />
+                    </div>
                 </div>
-                <div>
-                    <span>Heading Color </span>
-                    <input type="color" value={headingColor} onChange={(e) => setHeadingColor(e.target.value)} className="bg-color-picker ms-2" />
-                </div>
+                                <div style={{width:'100%'}}>
+                                    <GoogleAd/>
+                                </div>
             </div>
+        </div>
         </div>
     )
 }

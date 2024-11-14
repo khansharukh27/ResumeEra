@@ -3,7 +3,7 @@ import '../../component/shareButton/ShareButtons.css'
 const ShareButtons = ({ url, title }) => {
     // URLs for social media sharing
     const facebookShareUrl = `https://www.facebook.com/sharer/sharer.php?u=${url}`;
-    const twitterShareUrl = `https://twitter.com/intent/tweet?url=${url}&text=${title}`;
+    const twitterShareUrl = `https://twitter.com/intent/tweet?url=${url}`;
     const linkedInShareUrl = `https://www.linkedin.com/shareArticle?mini=true&url=${url}&title=${title}`;
     const whatsappShareUrl = `https://api.whatsapp.com/send?text=${title} ${url}`;
     const redditShareUrl = `https://www.reddit.com/submit?url=${url}&title=${title}`;

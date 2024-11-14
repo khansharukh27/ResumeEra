@@ -16,8 +16,8 @@ const initialState = {
   socialMediaLink:JSON.parse(localStorage.getItem("socialMediaLinkData")) || [],
   honorAndaward:JSON.parse(localStorage.getItem("honorAndAwardData")) || [],
   addReference:JSON.parse(localStorage.getItem("referencesData")) || [],
-  coverletterss: [],
-  certificateData: [],
+  coverletterss: JSON.parse(localStorage.getItem("coverletterss")) || [],
+  certificateData: JSON.parse(localStorage.getItem("certificateData")) || [],
 };
 
 const reducer = (state = initialState, action) => {

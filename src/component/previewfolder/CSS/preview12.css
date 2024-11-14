@@ -5,20 +5,20 @@
     font-weight: 700;
 }
 .image-profile-div12{
-    width: 220px;
-    height: 220px;
+    width: 110px;
+    height: 110px;
     border-radius: 50%;
-    position: absolute;
-    top: 280px;
-    left: 500px;
-    /* margin-right: 15px; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+    margin-right: 100px;
 }
 .image-profile12{
-    width: 200px;
-    height: 200px;
+    width: 110px;
+    height: 110px;
     border-radius: 50%;
-    position: absolute;
-    bottom: -20px;
+    margin-bottom: 50px;
     
 }
 .workTitle-div12{
@@ -34,12 +34,18 @@
 .objective-div12{
     font-size: small;
 }
+.objective-div12 p{
+    text-align: justify;
+}
 .contact-card12{
     margin-left: 8px;
-    margin-right: 0px;
+    margin-right: 120px;
     padding-left: 8px;
     padding-right: 8px;
     margin-top: 130px;
+    width: 250px;
+    margin-bottom: 50px;
+    /* position: relative; */
 }
 .skill12 .row .col-6{
     display: flex;
@@ -51,12 +57,13 @@
 .main12-1{
     height: fit-content;
     background-color: lightslategray;
+    position: relative;
 }
 .blank12{
     margin-top: 15px;
 }
 /* Styles for smaller screens */
-@media  (min-width: 1440px) {
+@media  (min-width: 1024px) {
     .main12 {
         flex-direction: row;
         height: auto;
@@ -91,8 +98,8 @@
         width: 250px;
         height: 250px;
         border-radius: 50%;
-        top: 250px;
-        left: 800px;
+        top: 380px;
+        left: 580px;
     }
     .image-profile12{
         width: 230px;
@@ -146,6 +153,7 @@
     .objective-div12 {
         width: 100%;
         text-align: center;
+        height: fit-content;
     }
 
     .workTitle-div12 {
@@ -162,21 +170,22 @@
         width: 250px;
         height: 250px;
         border-radius: 50%;
-        top: 380px;
-        left: 440px;
+       
     }
     .image-profile12{
         width: 230px;
         height: 230px;
         margin-top: 50px;
-        top: -50px;
-        left: -0px;
+       
     }
 
     .main12 .resume-download-section {
         flex-direction: column;
         align-items: center;
         margin-top: 2rem;
+    }
+    .contact-card12{
+        margin-right: 40px;
     }
 }
 
@@ -216,19 +225,18 @@
         width: 200px;
         height: 200px;
         border-radius: 50%;
-        top: 390px;
-        left: 526px;
+        margin-top: 150px;
+        margin-left: 100px;
     }
     .contact-card12{
         width: 300px;
-        margin-right: 5px;
+        margin-right: 50px;
     }
     .image-profile12{
         width: 180px;
         height: 180px;
         margin-top: 50px;
-        top: -50px;
-        left: -0px;
+      
     }
 
     .main12 .resume-download-section {
@@ -269,15 +277,15 @@
         /* margin-bottom: 40px; */
     }
     .image-profile-div12{
-        width: 120px;
-        height: 120px;
+        width: 160px;
+        height: 160px;
         border-radius: 50%;
-        top: 400px;
-        left: 260px;
+       margin-top: 150px;
+       margin-right: 0px;
     }
     .image-profile12{
-        width: 100px;
-        height: 100px;
+        width: 140px;
+        height: 140px;
         margin-top: 50px;
         top: -50px;
         left: -0px;
@@ -346,16 +354,19 @@ font-size: x-small;
         height: 300px;
         /* margin-bottom: 40px; */
     }
+    .blank12{
+        /* border: 1px solid red; */
+    }
     .image-profile-div12{
-        width: 100px;
-        height: 100px;
+        width: 110px;
+        height: 110px;
         border-radius: 50%;
-        top: 400px;
-        left: 220px;
+       margin-top: 180px;
+       margin-right: 20px;
     }
     .image-profile12{
-        width: 80px;
-        height: 80px;
+        width: 100px;
+        height: 100px;
         margin-top: 50px;
         top: -50px;
         left: -0px;
@@ -372,11 +383,11 @@ font-size: x-small;
     .contact-card12{
         margin-top: 30px;
         /* margin-left: 0px; */
-    margin-right: px;
+    margin-right: 10px;
     padding-left: 0px;
     padding-right: 0px;
     /* margin-top: 130px; */
-    width: 150px;
+    width: 170px;
     }
     .skill12 .row .col-6{
         display: flex;
@@ -402,7 +413,7 @@ font-size: x-small;
 @media (max-width: 320px),(min-widt:321px) {
     .resume-12 {
         display: none;
-        position: relative;
+        /* position: relati                 ve; */
     }
 
     .resume-12::before {
@@ -410,7 +421,7 @@ font-size: x-small;
         display: block;
         font-size: medium;
         text-align: center;
-        color: red;
+        /* color: red; */
         padding: 20px;
     }
 }

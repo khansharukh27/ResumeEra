@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 import DaysSincePost from '../DaySincePost';
 import ShareButtons from '../shareButton/ShareButtons';
 import { useEffect } from 'react';
+import about_Your_self from '../../image/interview_image/about_Your_self.jpeg'
 
 const TellUsAboutYourself = () => {
   const ArticleUrl = 'https://resumeera.xyz/tell-us-about-yourself'
@@ -17,21 +18,40 @@ const TellUsAboutYourself = () => {
     <div className=''>
       {/* SEO Meta Tags */}
       <Helmet>
-        <title>Tell Us About Yourself: Best Answers for Job Interviews | ResumeEra</title>
-        <meta name="description" content="Learn how to answer the tough 'Tell us about yourself' interview question with best tips, examples, and career-specific advice. Get insights from ResumeEra." />
-        <meta name="keywords" content="Tell us about yourself, how to introduce yourself in an interview, interview questions, personal introduction, job interview tips" />
-        <link rel="canonical" href="https://resumeera.xyz/tell-us-about-yourself" />
-      </Helmet>
+  <title>Tell Us About Yourself: Best Interview Answers for Freshers, Experienced, and Experts | ResumeEra</title>
+  <meta name="description" content="Ace the 'Tell us about yourself' question with tailored tips for freshers, experienced professionals, and experts. ResumeEra guides you to make a memorable first impression in job interviews." />
+  <meta name="keywords" content="Tell us about yourself, interview self-introduction, job interview tips, fresher introduction, experienced interview tips, career advice" />
+  <meta property="og:title" content="Tell Us About Yourself - Tailored Interview Tips for Every Level | ResumeEra" />
+  <meta property="og:description" content="ResumeEra offers strategies for 'Tell us about yourself,' with tailored advice for freshers, experienced professionals, and experts. Learn how to make a positive impact." />
+  <meta property="og:image" content="https://resumeera.xyz/static/media/about_Your_self.0bd45fdb0e10cf87a4e9.jpeg" />
+  <meta property="og:url" content="https://resumeera.xyz/tell-us-about-yourself" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Best 'Tell Us About Yourself' Interview Tips | ResumeEra" />
+  <meta name="twitter:description" content="Nail the interview with ResumeEra's expert tips on answering 'Tell us about yourself.' Personalized advice for freshers, experienced, and experts." />
+  <meta name="twitter:image" content="https://resumeera.xyz/static/media/about_Your_self.0bd45fdb0e10cf87a4e9.jpeg" />
+  <link rel="canonical" href="https://resumeera.xyz/tell-us-about-yourself" />
+</Helmet>
 
       {/* Main Content */}
       <div className='HowToWriteAResumemain'>
         
       <section className='aboutResumeEra'>
         <h1>Tell Us About Yourself: Best Answers for Job Interviews</h1>
+
         <div className='m-5'>
           <DaysSincePost postDate={postDate}/>
         </div>
-        <p>
+        <figure>
+  <img 
+    src={about_Your_self} 
+    alt="Professional representing the topic 'Tell Us About Yourself' for interview preparation"
+    title="Effective guide to answering 'Tell Us About Yourself' in interviews" 
+    loading="lazy" 
+  />
+  <figcaption>
+    Tips and strategies for crafting an impactful 'Tell Us About Yourself' response in interviews.
+  </figcaption>
+</figure>        <p>
           The question, <strong>"Tell us about yourself"</strong>, is perhaps the most common question you will encounter in a job interview. It may seem simple, but your response plays a significant role in setting the tone for the rest of the conversation. Whether you're a fresher looking for your first job or a senior professional aiming for a higher position, learning how to answer <strong>"Tell us about yourself"</strong> effectively is essential for a successful interview.
         </p>
         <p>
@@ -193,7 +213,7 @@ const TellUsAboutYourself = () => {
                 </div>
       </section>
       </div>
-      <div>
+      <div className='stickyShare' >
         <ShareButtons url={ArticleUrl} title={ArticleTitle}/>
       </div>
     </div>

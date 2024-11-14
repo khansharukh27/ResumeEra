@@ -1,0 +1,46 @@
+.container {
+    font-family: Arial, sans-serif;
+    color: #333;
+    padding: 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.6;
+  }
+  
+  .heading {
+    font-size: 2em;
+    color: #2c3e50;
+    text-align: center;
+    margin: 20px 0;
+  }
+  
+  .subheading {
+    font-size: 1.5em;
+    color: #2980b9;
+    margin: 20px 0 10px;
+  }
+  
+  .paragraph {
+    font-size: 1.1em;
+    margin-bottom: 15px;
+  }
+  
+  .list {
+    padding-left: 20px;
+    margin-bottom: 20px;
+    list-style-type: disc;
+  }
+  
+  .exampleBox {
+    background-color: #f4f4f4;
+    padding: 15px;
+    margin: 20px 0;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .exampleTitle {
+    font-size: 1.3em;
+    color: #e74c3c;
+    margin-bottom: 10px;
+  }

@@ -8,6 +8,13 @@
     width: 50%;
     padding: 20px;
 }
+.Alisha p{
+    font-size: small;
+}
+.Alisha h4{
+    font-size: medium;
+    font-weight: 900;
+}
 .name108{
 text-align: center;
 }
@@ -77,10 +84,11 @@ justify-content: space-around; */
         margin-right: 5px;
         height: fit-content;
     }
-    .contact108 p{
-        font-size: .6rem;
-        
+    .Alisha h4{
+        font-size: small;
+        font-weight: 900;
     }
+    
     .main108 .resume-download-section{
         width: 100%;
     }
@@ -102,9 +110,12 @@ justify-content: space-around; */
         width: 100%;
         padding: 2px;
     }
-    .contact108 p{
-        font-size: .6rem;
-        
+    .Alisha p{
+        font-size: small;
+    }
+    .Alisha h4{
+        font-size: small;
+        font-weight: 900;
     }
     .main108 .resume-download-section{
         width: 100%;
@@ -127,9 +138,12 @@ justify-content: space-around; */
         width: 100%;
         padding: 2px;
     }
-    .contact108 p{
-        font-size: .6rem;
-        
+    .Alisha p{
+        font-size: xx-small;
+    }
+    .Alisha h4{
+        font-size: x-small;
+        font-weight: 900;
     }
     .main108 .resume-download-section{
         width: 100%;
@@ -151,11 +165,16 @@ justify-content: space-around; */
     .Alisha{
         width: 100%;
         padding: 2px;
-    }
-    .contact108 p{
-        font-size: .5rem;
         
     }
+    .Alisha p{
+        font-size: xx-small;
+    }
+    .Alisha h4{
+        font-size: x-small;
+        font-weight: 900;
+    }
+    
     .main108 .resume-download-section{
         width: 100%;
     }

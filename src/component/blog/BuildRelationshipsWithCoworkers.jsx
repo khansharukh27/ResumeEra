@@ -1,7 +1,9 @@
 import React, { useEffect } from 'react';
 import { Helmet } from 'react-helmet';
 import ShareButtons from '../shareButton/ShareButtons';
-import reletionship from '../../image/image_for_link/reletionship.jpeg'
+// import reletionship from '../../image/image_for_link/reletionship.jpeg'
+import Build_Relationships from '../../image/interview_image/Build_Relationships.jpeg' 
+import GoogleAd from '../adFolder/GoogleAd';
 const BuildRelationshipsWithCoworkers = () => {
     const ArticleUrl = 'https://resumeera.xyz/how-to-build-relationships-with-your-coworkers'
     const ArticleTitle = 'How to Build Relationships with Your Coworkers | ResumeEra'
@@ -54,20 +56,18 @@ const BuildRelationshipsWithCoworkers = () => {
       </script>
       <h1>How to Build Relationships with Your Coworkers</h1>
 
-      {/* Main Content Sections */}
-
+        <figure>
+          <img src={Build_Relationships} alt="How to Build Relationships with Your Coworkers" 
+          title='How to Build Relationships with Your Coworkers' loading='lazy' />
+          <figcaption>Effective strategies on how to build relationships with your coworkers for a positive workplace.</figcaption>
+        </figure>
       {/* Section 1: Importance of Workplace Relationships */}
       <section>
         <h2>Why Building Relationships at Work is Important</h2>
         <p>Building relationships in the workplace is crucial for creating a supportive environment that fosters collaboration and innovation. Studies show that employees who have strong work relationships tend to be more productive and satisfied with their jobs. A cohesive team also improves morale, which benefits the entire organization.</p>
         <p>Strong relationships help build trust, reduce conflicts, and improve communication. Coworkers who connect well are more likely to work together effectively, leading to a more harmonious and efficient workplace.</p>
-        <figure style={{border:'1px solid green', borderRadius:'15px ',padding:'15px'}}>
-  <img src={reletionship} alt="Effective strategies on how to build relationships with your coworkers" 
-  title="Build Relationships with Coworkers" loading="lazy" />
-  <figcaption>Learn practical ways to build relationships with your coworkers and foster a positive team environment.</figcaption>
-</figure>      
 </section>
-
+<div><GoogleAd/></div>
       {/* Section 2: Strategies for Building Relationships */}
       <section>
         <h2>Strategies for Building Relationships</h2>
@@ -79,7 +79,7 @@ const BuildRelationshipsWithCoworkers = () => {
           <li><strong>Empathy and Respect</strong>: Practice empathy by understanding coworkers’ emotions and perspectives. Treat everyone with respect, regardless of their role or background.</li>
         </ul>
       </section>
-
+      <div><GoogleAd/></div>
       {/* Section 3: Do's and Don'ts */}
       <section>
         <h2>Do's and Don'ts for Building Workplace Relationships</h2>
@@ -89,7 +89,7 @@ const BuildRelationshipsWithCoworkers = () => {
           <li><strong>Don't:</strong> Avoid gossiping, complaining excessively, or intruding on personal boundaries.</li>
         </ul>
       </section>
-
+      <div><GoogleAd/></div>
       {/* Section 4: Overcoming Challenges */}
       <section>
         <h2>Common Challenges in Building Relationships and How to Overcome Them</h2>
@@ -99,13 +99,13 @@ const BuildRelationshipsWithCoworkers = () => {
           <li><strong>Communication Barriers:</strong> Adjust your communication style if needed. Being flexible and patient helps bridge gaps.</li>
         </ul>
       </section>
-
+      <div><GoogleAd/></div>
       {/* Section 5: Benefits of Building Strong Workplace Connections */}
       <section>
         <h2>Benefits of Building Strong Workplace Connections</h2>
         <p>Strong workplace relationships enhance productivity, boost morale, and provide a support network that helps in times of stress. Employees who feel connected to their coworkers often experience higher job satisfaction and perform better overall.</p>
       </section>
-
+      <div><GoogleAd/></div>
       {/* Section 6: Example Answers for Interview Preparation */}
       <section>
         <h2>Example Answers: How to Explain Your Relationship-Building Skills in an Interview</h2>
@@ -144,12 +144,12 @@ const BuildRelationshipsWithCoworkers = () => {
         </ul>
           
       </section>
-
+        <div><GoogleAd/></div>
       {/* Call to Action */}
       <div>
         <p>Looking to advance your career? Visit <a href="https://resumeera.xyz">ResumeEra</a> for free resume resources and tips!</p>
       </div>
-      <div>
+      <div className='stickyShare'>
         <ShareButtons url={ArticleUrl} title={ArticleTitle}/>
       </div>
     </div>

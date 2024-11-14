@@ -154,6 +154,10 @@ import ResumeMistakes from './component/blogandcareer/ResumeMistakes';
 import RejectionReasonsComponent from './component/blogandcareer/RejectionReasonsComponent';
 // import CVWritingTipsComponent from './component/ImportantPost/CVWritingTipsComponent2';
 import CVWritingTipsComponent2 from './component/ImportantPost/CVWritingTipsComponent2';
+import HowDoYouHandleStressAndPressure from './component/blog/HowDoYouHandleStressAndPressure';
+import FiveYearPlanComponent from './component/blog/FiveYearPlanComponent';
+import MotivationToDoBestWork from './component/blog/MotivationToDoBestWork';
+import HandleFeedbackAndCriticism from './component/blog/HandleFeedbackAndCriticism';
 // import CoverLetterInput from './component/CoverLetterInput';
 // import CoverComponent from './component/CoverComponent';
 var images = [
@@ -286,6 +290,10 @@ function App() {
         <Route path='/skills-for-success-in-role' element={<SkillsForSuccess/>}/>
         <Route path='/work-alone-or-group-preference' element={<WorkPreference/>}/>
         <Route path='/dealing-with-difficult-customers' element={<DifficultCustomerExample/>}/>
+        <Route path='/Interview_Question_Post/How_Do_You_Handle_Stress_and_Pressure' element={<HowDoYouHandleStressAndPressure/>}/>
+        <Route path='/where-do-you-see-yourself-in-five-years' element={<FiveYearPlanComponent/>}/>
+        <Route path='/what-motivates-you-to-do-your-best-work' element={<MotivationToDoBestWork/>}/>
+        <Route path='/how-do-you-handle-feedback-and-criticism' element={<HandleFeedbackAndCriticism/>}/>
 
 
 

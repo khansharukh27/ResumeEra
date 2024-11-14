@@ -1,13 +1,18 @@
 .main13{
     display: flex;
 }
+.Resume
+.resume-13 hr{
+    width: inherit;
+}
+
 .image13{
     width: 150px;
     height: 150px;
     border-radius: 50%;
 }
 .resume-main-2-1{
-    width: 40%;
+    width: 50%;
 }
 .resume-main-2-2{
     width: 60%;
@@ -27,7 +32,9 @@
 .main13{
     color: grey;
 }
+.resume-13 p{
 
+}
 
 @media (max-width:1440px) {
     .main13{
@@ -194,6 +201,10 @@
         display: flex;
         flex-direction: column;
     }
+    .resume-13 p{
+        font-size: small;
+    }
+    
 }
 
 
@@ -236,12 +247,18 @@
         display: flex;
         flex-direction: column;
     }
+    .resume-13 p{
+        font-size: xx-small;
+    }
 }
 
 @media (max-width:320px) {
     .main13{
         display: flex;
         flex-direction: column;
+        font-size: xx-small;
+    }
+    .resume-13 p{
         font-size: xx-small;
     }
     .main13 h1{

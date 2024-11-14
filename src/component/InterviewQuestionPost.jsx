@@ -1,8 +1,12 @@
 import { Helmet } from "react-helmet";
 import { Link } from "react-router-dom"
 import GoogleAd from "./adFolder/GoogleAd";
+import { useEffect } from "react";
 
 const InterviewQuestionPost = () => {
+    useEffect(() =>{
+        window.scrollTo(0,0)
+    },[])
     return (
         <div className="important-posts">
             <Helmet>
@@ -45,6 +49,19 @@ const InterviewQuestionPost = () => {
                         <GoogleAd/>
                     </div>
                     <li><Link to="/how-to-build-relationships-with-your-coworkers">How to Build Relationships with Your Coworkers | ResumeEra</Link></li>
+                    <div>
+                        <GoogleAd/>
+                    </div>
+                    <li><Link to="/Interview_Question_Post/How_Do_You_Handle_Stress_and_Pressure">How Do You Handle Stress and Pressure?</Link></li>
+                    <div>
+                        <GoogleAd/>
+                    </div>
+                    <li><Link to="/where-do-you-see-yourself-in-five-years">Where Do You See Yourself in Five Years? - Career Guide</Link></li>
+                    <div>
+                        <GoogleAd/>
+                    </div>
+                    <li><Link to="/what-motivates-you-to-do-your-best-work">What Motivates You to Do Your Best Work? | ResumeEra</Link></li>
+                    <li><Link to="/how-do-you-handle-feedback-and-criticism">How Do You Handle Feedback and Criticism? | ResumeEra</Link></li>
 
                 </ul>
                 <div>

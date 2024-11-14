@@ -7,8 +7,10 @@
     text-align: justify;
     margin-bottom: 20px;
     margin: 20px;
-    filter: drop-shadow(10px 0px 10px  rgb(192, 142, 68));
    
+}
+.preview105 h3,.preview105 h6{
+    font-weight: 700;
 }
 .personalinfo105{
     display: flex;
@@ -36,6 +38,8 @@
     margin-bottom: -12px;
     padding: 5px;
 }
+
+    
 .namediv105 h2{
     margin-bottom: -15px;
 }
@@ -43,6 +47,9 @@
     text-align: end;
     margin-bottom: 10px;
     margin-right: px;
+    padding-right: 5px;
+    padding-left: 5px;
+
 }
 .education-section105 p{
     margin-bottom: -5px;
@@ -74,12 +81,19 @@
     height: inherit;
     background-color: #131212;
     color: grey; 
+    margin-right: 5px;
+    margin-right: 7px;
   }
   .resume-download-section{
     width: 30%;
   }
+  .inner105-2{
+    padding-right: 5px;
+    padding-left: 5px;
 
-  @media (min-width:768px){
+  }
+
+  @media (max-width:768px){
     .main105{
         display: flex;
         flex-direction: row;
@@ -164,11 +178,19 @@
         font-size: x-small;
         width: 100%;
     }
-    .main105 h6,.main105 h2{
-        font-size: xx-small;
+    .main105 h6,.main105 h3{
+        font-size: medium;
+        margin: 5px;
+        font-weight: 700;
+    }
+    .preview105 p{
+        font-size: small;
     }
     .preview105{
         width: 100%;
+        margin-left: 0px;
+        padding-right: 5px;
+        padding-left: 5px;
     }
     .imagediv105{
         width: 80px;
@@ -202,11 +224,18 @@
         font-size: xx-small;
         width: 100%;
     }
-    .main105 h6,.main105 h2{
+    .main105 h6,.main105 h3{
+        font-size: xx-small;
+        margin: 5px;
+    }
+    .preview105 p{
         font-size: xx-small;
     }
     .preview105{
         width: 100%;
+        margin-left: 0px;
+        padding-right: 5px;
+        padding-left: 5px;
     }
     .imagediv105{
         width: 60px;
@@ -240,11 +269,19 @@
         font-size: xx-small;
         width: 100%;
     }
-    .main105 h6,.main105 h2{
+    .main105 h6,.main105 h3{
+        font-size: xx-small;
+        font-weight: 900;
+        margin: 5px;
+    }
+    .preview105 p{
         font-size: xx-small;
     }
     .preview105{
         width: 100%;
+        margin-left: 0px;
+        padding-right: 5px;
+        padding-left: 5px;
     }
     .imagediv105{
         width: 60px;
@@ -266,45 +303,6 @@
         height: 5px;/* Set the height of the line */
         margin-left: 70px;
       }
-      .resume-download-section{
-        width: 100%;
-      }
+     
   }
 
-  @media (min-width:768px){
-    .main105{
-        display: flex;
-        flex-direction: row;
-        font-size: xx-small;
-        width: 100%;
-    }
-    .main105 h6,.main105 h2{
-        font-size: xx-small;
-    }
-    .preview105{
-        width: 100%;
-    }
-    .imagediv105{
-        width: 60px;
-        height: 60px;
-    }
-    .imagediv105 img{
-        width: 60px;
-        height: 60px;
-    }
-    .inner105-1{
-        margin-right: 10px;
-    }
-    .inner105-2{
-        margin-left: 10px;
-    }
-    .line-container{
-        display: flex;
-        width: 50%;
-        height: 5px;/* Set the height of the line */
-        margin-left: 70px;
-      }
-      .resume-download-section{
-        width: 100%;
-      }
-  }

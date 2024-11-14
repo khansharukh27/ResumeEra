@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import '../previewfolder/CSS/preview13.css'
+import GoogleAd from '../adFolder/GoogleAd';
 // import { color } from 'html2canvas/dist/types/css/types/color';
 
 const Preview13 = () => {
@@ -72,12 +73,16 @@ const Preview13 = () => {
         border: '1px solid grey'
     };
     return (
+        <div>
+            <div>
+                <GoogleAd/>
+            </div>
         <div className=' main13'>
             <div className='me-4 resume-13' 
             style={{ color:fontColor,backgroundColor: bgColor, fontFamily: fontStyle, width: '100%' }} id='Alish_mirza1'>
                 <div className='d-flex justify-content-around resume-namediv13'>
                     <div className='text-center name-div13'>
-                        <h1 className="pt-5" style={{color:headingColor, lineHeight: '.5', whiteSpace: 'nowrap', fontWeight: '800', textAlign: 'end' }}>{personalInfo.firstName} {personalInfo.lastName} </h1>
+                        <h3 className="pt-5" style={{color:headingColor, lineHeight: '.5', whiteSpace: 'nowrap', fontWeight: '800', textAlign: 'end' }}>{personalInfo.firstName} {personalInfo.lastName} </h3>
                         <p className=''>
                             {work[0][0].jobtitle}
                         </p>
@@ -98,7 +103,7 @@ const Preview13 = () => {
                             </div>
                             <div className='d-flex '>
                                 <div className='me-2 div1' style={{}}><i class="bi bi-envelope "></i></div>
-                                <div><p>{personalInfo.email}</p></div>
+                                <div><p style={{wordBreak:'break-all'}}>{personalInfo.email}</p></div>
                             </div>
                             <div className='d-flex'>
                                 <div className='me-2 div1' style={{}}><i class="bi bi-geo-alt-fill" ></i></div>
@@ -196,14 +201,16 @@ const Preview13 = () => {
                 </div>
             </div>
             <div className="resume-download-section0">
-                <div className='d-flex'>
+                <div style={{width:'100%'}}>
+                    <GoogleAd/>
+                </div>
+                <div className='downloadbuttondiv'>
                     <input type="text" placeholder="Enter your resume name" className="resume-name-input" style={{ borderRadius: '5px', padding: '10px' }} onChange={(e) => setInputFields(e.target.value)} />
                     <button onClick={handleDownloadPDF} type="btn" className="btn btn-primary ms-2 download-button">Download</button>
                 </div>
-
                 {/* Color Picker for Background Color */}
-                <div className='d-flex border' style={{ marginTop: '5px', display: 'flex', flexDirection: 'row', justifyContent: 'center' }}>
-                    <input type="color" placeholder='bg color changer' value={bgColor} onChange={(e) => setBgColor(e.target.value)} className="bg-color-picker ms-2" />
+                <div className='d-flex border fontfamilydiv' style={{ marginTop: '5px', display: 'flex', flexDirection: 'row', justifyContent: 'center' }}>
+                    <input type="color" value={bgColor} onChange={(e) => setBgColor(e.target.value)} className="bg-color-picker ms-2" />
                     {/* Font Style Selector */}
                     <select value={fontStyle} onChange={(e) => setFontStyle(e.target.value)} className="font-style-selector ms-2">
                         <option value="Arial">Arial</option>
@@ -236,15 +243,22 @@ const Preview13 = () => {
                         <option value="Segoe UI">Segoe UI</option>
                     </select>
                 </div>
-                <div>
-                    <span>Font Color </span>
-                    <input type="color" value={fontColor} onChange={(e) => setFontColor(e.target.value)} className="bg-color-picker ms-2" />
+                <div className='colordiv'>
+                    <div>
+                        <span>Font Color </span>
+                        <input type="color" value={fontColor} onChange={(e) => setFontColor(e.target.value)} className="bg-color-picker ms-2" />
+                    </div>
+                    <div>
+                        <span>Heading Color </span>
+                        <input type="color" value={headingColor} onChange={(e) => setHeadingColor(e.target.value)} className="bg-color-picker ms-2" />
+                    </div>
                 </div>
-                <div>
-                    <span>Heading Color </span>
-                    <input type="color" value={headingColor} onChange={(e) => setHeadingColor(e.target.value)} className="bg-color-picker ms-2" />
+                <div style={{width:'100%'}}>
+                    <GoogleAd/>
                 </div>
             </div>
+        </div>
+        <GoogleAd/>
         </div>
     )
 }
