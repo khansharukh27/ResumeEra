@@ -17,7 +17,7 @@ const initialState = {
   honorAndaward:JSON.parse(localStorage.getItem("honorAndAwardData")) || [],
   addReference:JSON.parse(localStorage.getItem("referencesData")) || [],
   coverletterss: JSON.parse(localStorage.getItem("coverletterss")) || [],
-  certificateData: JSON.parse(localStorage.getItem("certificateData")) || [],
+  certificateData: JSON.parse(localStorage.getItem("certificateData")) || []
 };
 
 const reducer = (state = initialState, action) => {
@@ -90,8 +90,7 @@ const reducer = (state = initialState, action) => {
           ...state,
           coverletterss:[action.payload]
         } 
-        case 'certificate_Data':
-          
+        case 'certificate_Data':  
         return{
           ...state,
           certificateData:[action.payload]

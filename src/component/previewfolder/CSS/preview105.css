@@ -7,10 +7,14 @@
     text-align: justify;
     margin-bottom: 20px;
     margin: 20px;
-   
+   height: fit-content;
 }
 .preview105 h3,.preview105 h6{
     font-weight: 700;
+}
+.jobtitle105f{
+    font-size: small;
+    margin-top: -20px;
 }
 .personalinfo105{
     display: flex;

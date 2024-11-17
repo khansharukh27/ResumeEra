@@ -8,6 +8,7 @@ import SocialMedia from "./SocialMedia";
 import HonorAndAward from "./HonorAndAward";
 import Certificate from "./Certificate";
 import GoogleAd from "./adFolder/GoogleAd";
+import { useLocation } from "react-router-dom";
 
 const SoftSkills = () => {
   const [input, setInput] = useState(() => {
@@ -20,6 +21,7 @@ const SoftSkills = () => {
   const [showSocialMedia, setShowSocialMedia] = useState(false);
   const [showHonor,setShowHonor] = useState(false);
   const [showCertificate,setShowCertificate] = useState(false)
+  // const [certificate,setShowCertificate]
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -36,7 +38,7 @@ const SoftSkills = () => {
     setInput((prev) => [...prev, { softSkill: "" }]);
   };
 
-//   const location = useLocation();
+  const location = useLocation();
 
   const handleClick = (e) => {
     e.preventDefault();
@@ -50,12 +52,16 @@ const SoftSkills = () => {
       const firstEmptyField = emptyFields[0].index;
       document.getElementsByClassName('input')[firstEmptyField].focus()
       return;
-    }
-
+    }else if(location.pathname === '/techmain/107'){
+      setShowCertificate(true)
       setShowSocialMedia(false);
       setShowSoftSkill(false);
-      setShowHonor(true);
+      setShowHonor(false);
       dispatch(addSoftSkills(input));
+    }
+
+      
+      
   };
 
   const handleClickBack = () => {

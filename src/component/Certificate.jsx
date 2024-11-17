@@ -6,11 +6,14 @@ import '../css/Certificate.css';
 import SocialMedia from "./SocialMedia";
 import SoftSkills from "./SoftSkills";
 import GoogleAd from "./adFolder/GoogleAd";
+import { useLocation } from "react-router-dom";
+import KeySkills from "./KeySkill";
 
 const Certificate = () => {
   const [showSocialMedia, setShowSocialMedia] = useState(false);
   const [showCertificate, setShowCertificate] = useState(true);
   const [showSoftSkill, setShowSoftSkill] = useState(false);
+  const [hardSkill,setShowHardSkill] = useState(false)
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -28,7 +31,7 @@ const Certificate = () => {
         }
       ];
   });
-
+  const location = useLocation()
   const dispatch = useDispatch();
 
   // Save certificates to local storage whenever they change
@@ -61,33 +64,62 @@ const Certificate = () => {
   };
 
   const handleClickBack = (e) => {
-    e.preventDefault();
-    setShowSocialMedia(true);
-    setShowCertificate(false);
-    setShowSoftSkill(false);
+    if(location.pathname === '/techmain/107'){
+      e.preventDefault();
+      setShowSocialMedia(false);
+      setShowCertificate(false);
+      setShowSoftSkill(true);
+    }
+    
   };
 
   const handleClickNext = (e) => {
     e.preventDefault();
-    setShowSocialMedia(false);
-    setShowSoftSkill(true);
-    setShowCertificate(false); // Do not set `certificates` to false
-    dispatch(certificateData(certificates));
-    console.log('Certificates:', certificates);
+  
+    // Check for empty fields in certificates
+    const emptyFieldIndex = certificates.findIndex(
+      (certificate) =>
+        !certificate.certificateName ||
+        !certificate.organization ||
+        !certificate.issueDate ||
+        !certificate.description
+    );
+  
+    if (emptyFieldIndex !== -1) {
+      alert('Some fields are empty');
+      
+      // Focus on the first empty input field
+      const emptyInput = document.querySelectorAll('.certificate-input')[emptyFieldIndex * 4];
+      if (emptyInput) {
+        emptyInput.focus();
+      }
+      return;
+    }
+  
+    // Navigation logic
+    if (location.pathname === '/techmain/107') {
+      setShowSocialMedia(false);
+      setShowHardSkill(true);
+      setShowCertificate(false); 
+      dispatch(certificateData(certificates));
+      console.log('Certificates:', certificates);
+    } else {
+      setShowSocialMedia(false);
+      setShowSoftSkill(true);
+      setShowCertificate(false); 
+      dispatch(certificateData(certificates));
+      console.log('Certificates:', certificates);
+    }
   };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    dispatch(certificateData(certificates));
-    console.log('Certificates:', certificates);
-  };
+  
+  
 
   const handleDelete = (index) => {
     setCertificates((prev) => prev.filter((_, i) => i !== index));
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form >
       {showCertificate && (
         <div>
           <div className="profetional-detail">
@@ -103,7 +135,7 @@ const Certificate = () => {
               <hr />
               <div className="d-sm-flex one">
                 <input
-                  className="input mb-2"
+                  className="input mb-2 .certificate-input"
                   onChange={(e) => handleChange(e, index)}
                   type="text"
                   placeholder="Certificate Name"
@@ -111,7 +143,7 @@ const Certificate = () => {
                   value={certificate ? certificate.certificateName : ""}
                 />
                 <input
-                  className="input mb-2"
+                  className="input mb-2 .certificate-input"
                   onChange={(e) => handleChange(e, index)}
                   type="text"
                   placeholder="Organization"
@@ -122,7 +154,7 @@ const Certificate = () => {
               <div className="d-sm-flex one">
                 <input
                   type="text"
-                  className="input mb-2"
+                  className="input mb-2 .certificate-input"
                   onChange={(e) => handleChange(e, index)}
                   placeholder="Issue Date"
                   name="issueDate"
@@ -132,7 +164,7 @@ const Certificate = () => {
               <div className="second">
                 <textarea
                   type="text"
-                  className="textarea mb-2"
+                  className="textarea mb-2 .certificate-input"
                   onChange={(e) => handleChange(e, index)}
                   placeholder="Description (Optional)"
                   name="description"
@@ -169,6 +201,7 @@ const Certificate = () => {
       )}
       {showSoftSkill && <SoftSkills />}
       {showSocialMedia && <SocialMedia />}
+      {hardSkill && <KeySkills/>}
     </form>
   );
 };

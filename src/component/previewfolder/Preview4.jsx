@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { useSelector } from 'react-redux';
 import '../previewfolder/CSS/preview4.css'
 import { useNavigate } from 'react-router-dom';
+import GoogleAd from '../adFolder/GoogleAd';
 
 const Preview4 = () => {
     const [inputFields, setInputFields] = useState('resume.pdf');
@@ -57,9 +58,20 @@ const Preview4 = () => {
         }
     };
     
-    
-
     return (
+        <div>
+            <header style={{ paddingLeft: '10px', paddingRight: '10px', textAlign: 'center' }}>
+                <h1>Congratulations on Creating a Winning Resume!</h1>
+                <small style={{ textAlign: 'center' }}> <i style={{ color: 'white', backgroundColor: 'red' }}> warning </i>: if resume dont show your data in resume , please refresh the page</small>
+
+                <p>Your journey towards your dream job starts here! By crafting a professional resume with ResumeEra, you've taken the first step in showcasing your skills, experiences, and aspirations effectively. A well-structured resume is more than just a document—it's your story, your voice, and your opportunity to shine.
+
+                    Whether you're a fresher stepping into the professional world or an experienced professional climbing the career ladder, a compelling resume can make all the difference. Our platform ensures your resume is not only visually appealing but also tailored to meet industry standards.
+
+                    Take a moment to review your resume. Remember, the right opportunity is just around the corner. Stand out, stay confident, and let ResumeEra be your trusted partner in achieving your career goals!"
+                </p>
+            </header>
+            <div style={{width:'100%'}}><GoogleAd/></div>
         <div className="preview-container4 d-sm-flex justify-content-between">
             <div className="resume-preview4 mb w-100" 
             style={{color:fontColor, backgroundColor: bgColor, fontFamily: fontStyle }} id="Alish_mirza1">
@@ -74,7 +86,7 @@ const Preview4 = () => {
                             <img src={personalInfo.image} className="personal-image" alt="Selected" style={{ width: '150px', height: '150px', borderRadius: '50%', border: '5px solid white' }} />
                             <h3 className="first-name" style={{color:headingColor ,position: 'absolute', top: '20px', left: '150px', stroke: 'HighlightText' }}>{personalInfo.firstName}</h3>
                             <h3 className="last-name" style={{ color:headingColor,position: 'absolute', top: '50px', left: '250px' }}>{personalInfo.lastName}</h3>
-                            <p className="job-title" style={{ position: 'absolute', top: '90px', left: '150px' }}>
+                            <p className="job-title" style={{ position: 'absolute', top: '100px', left: '150px' }}>
                                 {work[0].map((i, index) => (
                                     <div key={index}  style={{color:fontColor}}>
                                         {i.jobtitle}
@@ -87,7 +99,7 @@ const Preview4 = () => {
                     <div className="resume-body d-flex mt-3 justify-content-between w-100 ">
                         <div className="left-column me-4 w-50" style={{ marginTop: '110px' }}>
                             <h4 style={{ color: headingColor }} className="section-title about-title w-100 text-center">About</h4>
-                            <div className="about-content ms-3" >
+                            <div className="about-content" >
                                 <p style={{color:fontColor}} className="objective ms-2 ">{personalInfo.object}</p>
                                 <p style={{color:fontColor}} className="contact-info"><i className="bi bi-telephone-forward-fill me-2" style={{ }} />{personalInfo.mobileNumber}</p>
                                 <p  className="email" style={{ wordWrap: 'break-word',color:fontColor }}><i className="bi bi-envelope-at-fill" style={{  }}></i>{personalInfo.email}</p>
@@ -104,7 +116,7 @@ const Preview4 = () => {
                             </div>
 
                             <h4  className="section-title skills-title mt-3  text-center" style={{ color: headingColor, backgroundColor: '#100129' }}>Skills</h4>
-                            <div className="skills-content ms-5">
+                            <div className="skills-content ">
                                 {keyskills[0].map((skill, index) => (
                                     <ul key={index}>
                                         <li>{skill.keyskills}</li>
@@ -136,7 +148,6 @@ const Preview4 = () => {
                                     </div>
                                 ))}
                             </div>
-
                             <h4 className="section-title hobbies-title mt-3 text-center" style={{ color: headingColor, backgroundColor: '#100129' }}>Hobbies</h4>
                             <div className="hobbies-content">
                                 {Hobbies[0].map((hobb, index) => (
@@ -146,10 +157,7 @@ const Preview4 = () => {
                                 ))}
                             </div>
                         </div>
-
                     </div>
-
-
                 </div>
                 <div className='underdiv'>
                     <div className="shape-bottom-left4" style={{}}></div>
@@ -158,6 +166,7 @@ const Preview4 = () => {
                 </div>
             </div>
             <div className="resume-download-section0">
+            <div style={{width:'100%'}}><GoogleAd/></div>
                 <div className='downloadbuttondiv'>
                     <input type="text" placeholder="Enter your resume name" className="resume-name-input" style={{ borderRadius: '5px', padding: '10px' }} onChange={(e) => setInputFields(e.target.value)} />
                     <button onClick={handleDownloadPDF} type="btn" className="btn btn-primary ms-2 download-button">Download</button>
@@ -207,7 +216,10 @@ const Preview4 = () => {
                         <input type="color" value={headingColor} onChange={(e) => setHeadingColor(e.target.value)} className="bg-color-picker ms-2" />
                     </div>
                 </div>
+                <div style={{width:'100%'}}><GoogleAd/></div>
             </div>
+        </div>
+        <div style={{width:'100%'}}><GoogleAd/></div>
         </div>
     )
 }

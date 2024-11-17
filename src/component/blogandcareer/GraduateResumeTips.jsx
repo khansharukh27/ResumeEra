@@ -169,6 +169,4 @@ const GraduateResumeTips = () => {
     </div>
   );
 };
-
-
 export default GraduateResumeTips;

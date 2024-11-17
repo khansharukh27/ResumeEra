@@ -1,0 +1,36 @@
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
+  }
+  
+  .card {
+    flex: 1 1 calc(100% - 2rem); /* Full-width on small screens */
+    max-width: calc(33.333% - 2rem); /* 3 cards per row on large screens */
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  
+  .card-img {
+    width: 100%;
+    height: auto;
+  }
+  
+  .card-body {
+    padding: 1rem;
+  }
+  
+  .ad-container {
+    flex: 1 1 100%;
+    text-align: center;
+    padding: 1rem;
+    border: 1px dashed #ccc;
+    margin-top: 1rem;
+  }
+  

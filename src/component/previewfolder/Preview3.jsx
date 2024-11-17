@@ -4,6 +4,7 @@ import { useState } from 'react';
 import { useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import '../previewfolder/CSS/Preview3.css';  // Import the CSS file
+import GoogleAd from '../adFolder/GoogleAd';
 
 const Preview3 = () => {
     const [inputFields, setInputFields] = useState('resume.pdf');
@@ -58,7 +59,21 @@ const Preview3 = () => {
         }
     };
     return (
+        <div>
+            <header style={{ paddingLeft: '10px', paddingRight: '10px', textAlign: 'center' }}>
+                <h1>Congratulations on Creating a Winning Resume!</h1>
+                <small style={{ textAlign: 'center' }}> <i style={{ color: 'white', backgroundColor: 'red' }}> warning </i>: if resume dont show your data in resume , please refresh the page</small>
+
+                <p>Your journey towards your dream job starts here! By crafting a professional resume with ResumeEra, you've taken the first step in showcasing your skills, experiences, and aspirations effectively. A well-structured resume is more than just a document—it's your story, your voice, and your opportunity to shine.
+
+                    Whether you're a fresher stepping into the professional world or an experienced professional climbing the career ladder, a compelling resume can make all the difference. Our platform ensures your resume is not only visually appealing but also tailored to meet industry standards.
+
+                    Take a moment to review your resume. Remember, the right opportunity is just around the corner. Stand out, stay confident, and let ResumeEra be your trusted partner in achieving your career goals!"
+                </p>
+            </header>
+            <div style={{width:'100%'}}><GoogleAd/></div>
         <div className='container3'>
+            
             <div className='resume-wrapper' id='Alish_mirza1' style={{color:fontColor, backgroundColor: bgColor, fontFamily: fontStyle }}>
                 <div className='sidebar'>
                     <div className='imagediv3'>
@@ -134,6 +149,7 @@ const Preview3 = () => {
                 </div>
             </div>
             <div className="resume-download-section0">
+            <div style={{width:'100%'}}><GoogleAd/></div>
                 <div className='downloadbuttondiv'>
                     <input type="text" placeholder="Enter your resume name" className="resume-name-input" style={{ borderRadius: '5px', padding: '10px' }} onChange={(e) => setInputFields(e.target.value)} />
                     <button onClick={handleDownloadPDF} type="btn" className="btn btn-primary ms-2 download-button">Download</button>
@@ -183,8 +199,10 @@ const Preview3 = () => {
                         <input type="color" value={headingColor} onChange={(e) => setHeadingColor(e.target.value)} className="bg-color-picker ms-2" />
                     </div>
                 </div>
-
+                <div style={{width:'100%'}}><GoogleAd/></div>
             </div>
+        </div>
+        <div style={{width:'100%'}}><GoogleAd/></div>
         </div>
     );
 }

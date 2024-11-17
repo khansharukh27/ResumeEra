@@ -8,6 +8,9 @@
     margin-bottom: -10px;
     color: rgb(179, 177, 177);
 }
+.information-section6 p{
+    font-size: xx-small;
+}
 .information-section6{
     margin-top: -20px;
 }
@@ -39,6 +42,9 @@
     .information-section6 .mt-2 {
         font-size: 12px;
     }
+    .information-section6 p{
+        font-size: xx-small;
+    }
 
     .job-experience6 h5,
     .education-section6 h5,
@@ -58,9 +64,8 @@
         font-size: 12px;
     }
 
-    .resume-download-section {
-        flex-direction: column;
-        align-items: stretch;
+    .resume-download-section0 {
+       width: 50%;
     }
 
     .resume-download-section input,

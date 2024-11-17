@@ -2,18 +2,19 @@
 .preview-main7 {
     display: flex;
     justify-content: space-between;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
     padding: 20px;
     box-sizing: border-box;
     /* padding-right: -50px-; */
     font-size: xx-small;
+    height: fit-content;
 }
 
 /* Resume Preview Section */
-.resume-preview7 {
+.resume-previeww7 {
     background-color: inherit;
     font-family: inherit;
-    width: 50%;
+    /* width: 50%; */
     max-width: 800px;
     /* margin: 0 auto; */
     font-size: xx-small;
@@ -47,9 +48,8 @@
 .devider7 {
     width: 3px;
     background-color: grey;
-    /* margin-right: 20px; */
-    /* margin-left: 20px; */
-    height: 900px;
+    
+    height: inherit;
     /* text-align: end; */
 }
 
@@ -69,18 +69,12 @@
 }
 /* Responsive Styles */
 
-@media (min-width: 769px) and (max-width: 1024px) {
-    .resume-preview7 {
-        padding: 20px;
-        max-width: 90%;
-    }
-    .name-div7 h1 {
-        font-size: 2rem;
-    }
 
-}
 
 @media (min-width: 1025px) {
+    .preview-main7{
+        display: flex;
+    }
     .resume-preview7 {
         max-width: 80%;
         padding: 20px;

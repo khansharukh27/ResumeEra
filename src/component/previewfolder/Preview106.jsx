@@ -4,6 +4,7 @@ import { useState } from "react";
 import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import './CSS/preview106.css'
+import GoogleAd from "../adFolder/GoogleAd";
 
 
 const Preview106 = () => {
@@ -57,12 +58,24 @@ const Preview106 = () => {
 
 
     return (
+        <div>
+            <header style={{ paddingLeft: '10px', paddingRight: '10px', textAlign: 'center' }}>
+                <h1>Congratulations on Creating a Winning Resume!</h1>
+                <small style={{ textAlign: 'center' }}> <i style={{ color: 'white', backgroundColor: 'red' }}> warning </i>: if resume dont show your data in resume , please refresh the page</small>
+
+                <p>Your journey towards your dream job starts here! By crafting a professional resume with ResumeEra, you've taken the first step in showcasing your skills, experiences, and aspirations effectively. A well-structured resume is more than just a document—it's your story, your voice, and your opportunity to shine.
+
+                    Whether you're a fresher stepping into the professional world or an experienced professional climbing the career ladder, a compelling resume can make all the difference. Our platform ensures your resume is not only visually appealing but also tailored to meet industry standards.
+
+                    Take a moment to review your resume. Remember, the right opportunity is just around the corner. Stand out, stay confident, and let ResumeEra be your trusted partner in achieving your career goals!"
+                </p>
+            </header>
+            <div style={{width:'100%'}}><GoogleAd/></div>
         <div className="main106">
-            <h1>coming soon best version</h1>
             <div className="preview106" id="Alisha_mirza106" style={{ fontFamily: fontStyle, color: fontColor, backgroundColor: bgColor }}>
                 <div className="headermain106">
                     <header className="header106-1 ">
-                        <div className="profile106">
+                        <div className="profile106" style={{textAlign:'start'}}>
                             <h6 className="personal-name106" style={{ color: headingColor }}>{personalInfo.firstName} <br /> {personalInfo.lastName}</h6>
                             <p style={{ color: 'lightgray' }}>{work[0][0].jobtitle}</p>
                         </div>
@@ -70,11 +83,11 @@ const Preview106 = () => {
                             <img src={personalInfo.image} alt="doctore resume" />
                         </div>
                     </header>
-                    <header className="header106-2 ">
-                        <p className="mt-3">{personalInfo.address} {personalInfo.city} {personalInfo.state} {personalInfo.postalCode}<i className="bi bi-geo-alt-fill me-2 ms-2" /></p>
-                        <p>{personalInfo.mobileNumber}<i className="bi bi-telephone-fill me-2 ms-2" /></p>
-                        <p style={{ wordBreak: "break-all" }}>{personalInfo.email}<i className="bi bi-envelope me-2 ms-2" /></p>
-                        <p>{socialMediaLink.github}<i class="bi bi-github ms-2 me-2" /></p>
+                    <header className="header106-2 " style={{textAlign:'end'}}>
+                        <p className="mt-3" style={{textAlign:'end',wordBreak:'break-all'}}> {personalInfo.city} {personalInfo.state} {personalInfo.postalCode}<i className="bi bi-geo-alt-fill me-2 ms-2" /></p>
+                        <p style={{textAlign:'end'}}>{personalInfo.mobileNumber}<i className="bi bi-telephone-fill me-2 ms-2" /></p>
+                        <p style={{ textAlign:'end' ,wordBreak:'break-all'}}>{personalInfo.email}<i className="bi bi-envelope me-2 ms-2" /></p>
+                        <p style={{textAlign:'end'}}>{socialMediaLink.github}<i class="bi bi-github ms-2 me-2" /></p>
                     </header>
                 </div>
                 <div className="previewinner106 mt-5">
@@ -141,13 +154,14 @@ const Preview106 = () => {
 
                 </div>
             </div>
-            <div className="resume-download-section">
-                <div className='d-flex'>
+            <div className="resume-download-section0">
+            <div style={{width:'100%'}}><GoogleAd/></div>
+                <div className='downloadbuttondiv'>
                     <input type="text" placeholder="Enter your resume name" className="resume-name-input" style={{ borderRadius: '5px', padding: '10px' }} onChange={(e) => setInputFields(e.target.value)} />
                     <button onClick={handleDownloadPDF} type="btn" className="btn btn-primary ms-2 download-button">Download</button>
                 </div>
                 {/* Color Picker for Background Color */}
-                <div className='d-flex border' style={{ marginTop: '5px', display: 'flex', flexDirection: 'row', justifyContent: 'center' }}>
+                <div className='d-flex border fontfamilydiv' style={{ marginTop: '5px', display: 'flex', flexDirection: 'row', justifyContent: 'center' }}>
                     <input type="color" value={bgColor} onChange={(e) => setBgColor(e.target.value)} className="bg-color-picker ms-2" />
                     {/* Font Style Selector */}
                     <select value={fontStyle} onChange={(e) => setFontStyle(e.target.value)} className="font-style-selector ms-2">
@@ -181,14 +195,19 @@ const Preview106 = () => {
                         <option value="Segoe UI">Segoe UI</option>
                     </select>
                 </div>
-                <div>
-                    <span>Font Color </span>
-                    <input type="color" value={fontColor} onChange={(e) => setFontColor(e.target.value)} className="bg-color-picker ms-2" />
+                <div className='colordiv'>
+                    <div>
+                        <span>Font Color </span>
+                        <input type="color" value={fontColor} onChange={(e) => setFontColor(e.target.value)} className="bg-color-picker ms-2" />
+                    </div>
+                    <div>
+                        <span>Heading Color </span>
+                        <input type="color" value={headingColor} onChange={(e) => setHeadingColor(e.target.value)} className="bg-color-picker ms-2" />
+                    </div>
                 </div>
-                <div>
-                    <span>Heading Color </span>
-                    <input type="color" value={headingColor} onChange={(e) => setHeadingColor(e.target.value)} className="bg-color-picker ms-2" />
-                </div>
+                            <div style={{width:'100%'}}><GoogleAd/></div>
+            </div>
+            <div style={{width:'100%'}}><GoogleAd/></div>
             </div>
         </div>
     )

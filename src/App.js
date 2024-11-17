@@ -158,6 +158,9 @@ import HowDoYouHandleStressAndPressure from './component/blog/HowDoYouHandleStre
 import FiveYearPlanComponent from './component/blog/FiveYearPlanComponent';
 import MotivationToDoBestWork from './component/blog/MotivationToDoBestWork';
 import HandleFeedbackAndCriticism from './component/blog/HandleFeedbackAndCriticism';
+import JobHunting from './component/Job hunting/JobHunting';
+import JobIntrovertComponent from './component/Job hunting/JobIntrovertComponent';
+import JobHoppingAsset from './component/Job hunting/JobHoppingAsset';
 // import CoverLetterInput from './component/CoverLetterInput';
 // import CoverComponent from './component/CoverComponent';
 var images = [
@@ -239,6 +242,7 @@ function App() {
         <Route path='/terms-of-service' element={<TermsAndServices />} />
         <Route path='/AboutUs' element={<AboutUs />} />
         <Route path='/Interview_Question_Post' element={<InterviewQuestionPost/>}/>
+        <Route path='/job_hunting' element={<JobHunting/>} />
         <Route path='/ImportantPost' element={<ImportantPost/>} />
         <Route path='/about-resumeera' element={<AboutResumeEra/>} />
         <Route path='/how-to-create-a-professional-resume' element={<HowToCreateResume/>} />
@@ -318,9 +322,11 @@ function App() {
         <Route path='/5-mistake-to-getting-job' element={<ResumeMistakes/>}/>
         <Route path='/8-reasons-for-interview-rejection' element={<RejectionReasonsComponent/>}/>
 
+          {/* job hunting */}
+          <Route path='/top-careers-for-introverts' element={<JobIntrovertComponent/>}/>
+          <Route path='/how-to-spin-job-hopping-as-an-asset' element={<JobHoppingAsset/>}/>
 
-
-
+{/* preview resume path */}
         <Route path='/preview' element={<Preview />} />
         <Route path='/preview2' element={<Preview2 />}/>
         <Route path='/preview3' element={<Preview3/>}/>
