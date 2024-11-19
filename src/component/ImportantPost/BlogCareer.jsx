@@ -15,7 +15,7 @@ import best_logo from "../../image/best_logo.webp";
 import _Things from "../../image/carrierTips/_Things.jpg";
 import How_to_Tailor_Your_Resume from "../../image/carrierTips/How_to_Tailor_Your_Resume.jpg";
 import A_Recruiters_Guide from "../../image/carrierTips/A_Recruiters_Guide.jpg";
-
+import Brutal_Career_Traps  from '../../image/carrierTips/Brutal_Career_Traps.jpg'
 const BlogCareer = () => {
     const [searchTerm, setSearchTerm] = useState("");
     const [filteredTips, setFilteredTips] = useState([]);
@@ -35,6 +35,8 @@ const BlogCareer = () => {
         { title: "A Recruiter’s Guide To Writing A Resume", path: "/recruiters-guide-writing-resume", src: A_Recruiters_Guide, alt: 'A Recruiter’s Guide To Writing A Resume' },
         { title: "काबिल होने के बावजूद नहीं मिलेगी जॉब", path: "/5-mistake-to-getting-job", src: kabil, alt: 'काबिल होने के बावजूद नहीं मिलेगी जॉब' },
         { title: "8 Reasons for Interview Rejection", path: "/8-reasons-for-interview-rejection", src: Interview_Rejection, alt: '8 Reasons for Interview Rejection' },
+        { title: "10 Brutal Career Traps and How to Avoid Them - ResumeEra", path: "/10-brutal-career-traps", src: Brutal_Career_Traps, alt: '10 Brutal Career Traps' },
+
     ];
 
     useEffect(() => {

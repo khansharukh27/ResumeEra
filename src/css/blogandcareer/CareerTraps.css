@@ -1,0 +1,62 @@
+.how-to-avoid {
+    margin-top: 20px;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 15px;
+    border-radius: 8px;
+    color: #ffffff;
+    width: 100%;
+  }
+  
+  .how-to-avoid h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: white;
+  }
+  
+  .how-to-avoid ul {
+    list-style: inside square;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .how-to-avoid li {
+    font-size: 0.9rem;
+    line-height: 1.5;
+  }
+  
+  .trap-overlay {
+    border: 1px solid red;
+    margin-bottom: 5px;
+    padding: 15px;
+    border-radius: 15px;
+    color: white;
+    background: linear-gradient(135deg, #3d2b1f, #5a3a28, #4b3225, #3d2b1f);
+    background-size: 100% 100%;
+    background-blend-mode: multiply;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.8);
+    text-shadow: 2px 2px 5px black;
+    /* font-family: 'Creepster', cursive; Optional horror-themed font */
+    background-image: 
+      repeating-linear-gradient(90deg, rgba(0, 0, 0, 0.2) 0px, rgba(0, 0, 0, 0.1) 5px, transparent 10px),
+      repeating-linear-gradient(180deg, rgba(0, 0, 0, 0.2) 0px, rgba(0, 0, 0, 0.1) 7px, transparent 14px),
+      linear-gradient(135deg, #3d2b1f, #5a3a28, #4b3225, #3d2b1f);
+  }
+  
+  /* Optional additional texture animation */
+  @keyframes grainEffect {
+    0% {
+      background-position: 0 0, 0 0, 0 0;
+    }
+    50% {
+      background-position: 10px 10px, -10px -10px, 0 0;
+    }
+    100% {
+      background-position: 0 0, 0 0, 0 0;
+    }
+  }
+  
+  .trap-overlay:hover {
+    animation: grainEffect 5s infinite;
+  }
+  

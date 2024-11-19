@@ -62,6 +62,7 @@ const InterviewQuestionPost = () => {
                     </div>
                     <li><Link to="/what-motivates-you-to-do-your-best-work">What Motivates You to Do Your Best Work? | ResumeEra</Link></li>
                     <li><Link to="/how-do-you-handle-feedback-and-criticism">How Do You Handle Feedback and Criticism? | ResumeEra</Link></li>
+                    <li><Link to="/what-accomplishment-are-you-most-proud-of">What Accomplishment Are You Most Proud Of? | ResumeEra</Link></li>
 
                 </ul>
                 <div>

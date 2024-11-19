@@ -161,6 +161,19 @@ import HandleFeedbackAndCriticism from './component/blog/HandleFeedbackAndCritic
 import JobHunting from './component/Job hunting/JobHunting';
 import JobIntrovertComponent from './component/Job hunting/JobIntrovertComponent';
 import JobHoppingAsset from './component/Job hunting/JobHoppingAsset';
+import CareerTraps from './component/blogandcareer/CareerTraps';
+import WorkExperience from './component/WorkExperience';
+import SoftSkills from './component/SoftSkills';
+import SocialMedia from './component/SocialMedia';
+import References from './component/Refrences';
+import PersonalInfo from './component/PersonalInfo';
+import Language from './component/Language';
+import KeySkills from './component/KeySkill';
+import HonorAndAward from './component/HonorAndAward';
+import Hobbies from './component/Hobbies';
+import Education from './component/Education';
+import Certificate from './component/Certificate';
+import AccomplishmentQuestion from './component/blog/AccomplishmentQuestion';
 // import CoverLetterInput from './component/CoverLetterInput';
 // import CoverComponent from './component/CoverComponent';
 var images = [
@@ -236,11 +249,29 @@ function App() {
         <Route path='/myresume' element={<MyResume />} />
         <Route path='/cover_letter' element={<CoverLetter CoverImage={CoverImage}/>}/>
         <Route path='/coverletter_component' element={<CoverComponent CoverImage={CoverImage}/>}/>
+
         {/* <Route path=`/cover_lett` element={<CoverLetterInput CoverImage={CoverImage}/>}/> */}
-        <Route path='/privacypolicy' element={<PrivacyPolicy />} />
+
+
+        <Route path='/privacypolicy' element={<PrivacyPolicy images={images} techImages = {techImages} CoverImage = {CoverImage}/>} />
         <Route path='/contact' element={<Contact/>} />
         <Route path='/terms-of-service' element={<TermsAndServices />} />
         <Route path='/AboutUs' element={<AboutUs />} />
+        <Route path='/work_experience' element={<WorkExperience/>}/>
+        <Route path='/soft_skills' element={<SoftSkills/>}/>
+        <Route path='/social_media' element={<SocialMedia/>}/>
+        <Route path='/refrences' element={<References/>}/>
+        <Route path='/work_experience' element={<WorkExperience/>}/>
+        <Route path='/personal_info' element={<PersonalInfo/>}/>
+        <Route path='/language' element={<Language/>}/>
+        <Route path='/key_skill' element={<KeySkills/>}/>
+        <Route path='/honor_and_award' element={<HonorAndAward/>}/>
+        <Route path='/hobbies' element={<Hobbies/>}/>
+        <Route path='/education' element={<Education/>}/>
+        <Route path='/certificate' element={<Certificate/>}/>
+
+{/* interview question post link */}
+
         <Route path='/Interview_Question_Post' element={<InterviewQuestionPost/>}/>
         <Route path='/job_hunting' element={<JobHunting/>} />
         <Route path='/ImportantPost' element={<ImportantPost/>} />
@@ -298,6 +329,7 @@ function App() {
         <Route path='/where-do-you-see-yourself-in-five-years' element={<FiveYearPlanComponent/>}/>
         <Route path='/what-motivates-you-to-do-your-best-work' element={<MotivationToDoBestWork/>}/>
         <Route path='/how-do-you-handle-feedback-and-criticism' element={<HandleFeedbackAndCriticism/>}/>
+        <Route path='/what-accomplishment-are-you-most-proud-of' element={<AccomplishmentQuestion/>}/>
 
 
 
@@ -321,6 +353,7 @@ function App() {
         <Route path='/how-to-build-relationships-with-your-coworkers' element={<BuildRelationshipsWithCoworkers/>}/>
         <Route path='/5-mistake-to-getting-job' element={<ResumeMistakes/>}/>
         <Route path='/8-reasons-for-interview-rejection' element={<RejectionReasonsComponent/>}/>
+        <Route path='/10-brutal-career-traps' element={<CareerTraps/>}/>
 
           {/* job hunting */}
           <Route path='/top-careers-for-introverts' element={<JobIntrovertComponent/>}/>

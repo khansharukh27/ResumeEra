@@ -59,7 +59,12 @@ const SoftSkills = () => {
       setShowHonor(false);
       dispatch(addSoftSkills(input));
     }
-
+    else {
+      setShowCertificate(false);
+      setShowSocialMedia(false);
+      setShowSoftSkill(false);
+      setShowHonor(true);
+    }
       
       
   };
