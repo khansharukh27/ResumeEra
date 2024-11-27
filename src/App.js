@@ -174,8 +174,12 @@ import Hobbies from './component/Hobbies';
 import Education from './component/Education';
 import Certificate from './component/Certificate';
 import AccomplishmentQuestion from './component/blog/AccomplishmentQuestion';
-// import CoverLetterInput from './component/CoverLetterInput';
-// import CoverComponent from './component/CoverComponent';
+import QuestionsForUs from './component/blog/QuestionsForUs';
+import MotivationLink from './component/MotivationLink';
+import TypesOfLaziness from './component/MOTIVATIONAL/TypesOfLaziness';
+import Pictures8 from './component/MOTIVATIONAL/Pictures8';
+import ResumeHacks from './component/blogandcareer/ResumeHacks_10';
+
 var images = [
   { id: 1, src: resum1, alt: 'Professional Resume Template 1' },
   { id: 2, src: resume2, alt: 'Modern Resume Design 2' },
@@ -330,7 +334,7 @@ function App() {
         <Route path='/what-motivates-you-to-do-your-best-work' element={<MotivationToDoBestWork/>}/>
         <Route path='/how-do-you-handle-feedback-and-criticism' element={<HandleFeedbackAndCriticism/>}/>
         <Route path='/what-accomplishment-are-you-most-proud-of' element={<AccomplishmentQuestion/>}/>
-
+        <Route path='/do-you-have-any-questions-for-us' element={<QuestionsForUs/>}/>
 
 
         {/* job and carier blog component */}
@@ -354,10 +358,17 @@ function App() {
         <Route path='/5-mistake-to-getting-job' element={<ResumeMistakes/>}/>
         <Route path='/8-reasons-for-interview-rejection' element={<RejectionReasonsComponent/>}/>
         <Route path='/10-brutal-career-traps' element={<CareerTraps/>}/>
+        <Route path='/10-resume-hacks' element={<ResumeHacks/>}/>
+
 
           {/* job hunting */}
           <Route path='/top-careers-for-introverts' element={<JobIntrovertComponent/>}/>
           <Route path='/how-to-spin-job-hopping-as-an-asset' element={<JobHoppingAsset/>}/>
+
+          {/* Motivational Link */}
+          <Route path='/motivation-link' element={<MotivationLink/>}/>
+          <Route path='/types-of-laziness' element={<TypesOfLaziness/>}/>
+          <Route path='/pictures8' element={<Pictures8/>}/>
 
 {/* preview resume path */}
         <Route path='/preview' element={<Preview />} />

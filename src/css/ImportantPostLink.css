@@ -7,7 +7,7 @@
 }
 
 /* Card Styles */
-.card {
+.cards {
     width: 100%;
     height: 380px;
     border: 1px solid #ddd;
@@ -37,10 +37,12 @@
     font-size: 1.25rem;
     margin-top: -10px;
     font-weight: 600;
+
 }
 
 .btn-primary {
     margin-top: 1rem;
+    color: black;
 }
 
 /* Ad Container */

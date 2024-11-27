@@ -62,6 +62,7 @@ const Footer = () => {
             <li><Link to="/Blog_or_Career_Tips_Page">Career Tips </Link></li>
             <li><Link to="/Interview_Question_Post">Interview Question Post</Link></li>
             <li><Link to="/job_hunting">Job-hunting</Link></li>
+            <li><Link to="/motivation-link">Motivational Link</Link></li>
           </ul>
         </div>
       </div>

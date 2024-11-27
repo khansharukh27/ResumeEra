@@ -101,3 +101,11 @@ export const certificateData = (data) => {
         payload: data,
     };
 };
+
+export const ProjectData = (data) => {
+    localStorage.setItem('ProjectData', JSON.stringify(data));
+    return {
+        type: 'Project_Data',
+        payload: data,
+    };
+};

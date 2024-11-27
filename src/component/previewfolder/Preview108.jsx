@@ -63,16 +63,16 @@ const Preview108 = () => {
   return (
     <div >
       <header style={{ paddingLeft: '10px', paddingRight: '10px', textAlign: 'center' }}>
-                <h1>Congratulations on Creating a Winning Resume!</h1>
-                <small style={{ textAlign: 'center' }}> <i style={{ color: 'white', backgroundColor: 'red' }}> warning </i>: if resume dont show your data in resume , please refresh the page</small>
+        <h1>Congratulations on Creating a Winning Resume!</h1>
+        <small style={{ textAlign: 'center' }}> <i style={{ color: 'white', backgroundColor: 'red' }}> warning </i>: if resume dont show your data in resume , please refresh the page</small>
 
-                <p>Your journey towards your dream job starts here! By crafting a professional resume with ResumeEra, you've taken the first step in showcasing your skills, experiences, and aspirations effectively. A well-structured resume is more than just a document—it's your story, your voice, and your opportunity to shine.
+        <p>Your journey towards your dream job starts here! By crafting a professional resume with ResumeEra, you've taken the first step in showcasing your skills, experiences, and aspirations effectively. A well-structured resume is more than just a document—it's your story, your voice, and your opportunity to shine.
 
-                    Whether you're a fresher stepping into the professional world or an experienced professional climbing the career ladder, a compelling resume can make all the difference. Our platform ensures your resume is not only visually appealing but also tailored to meet industry standards.
+          Whether you're a fresher stepping into the professional world or an experienced professional climbing the career ladder, a compelling resume can make all the difference. Our platform ensures your resume is not only visually appealing but also tailored to meet industry standards.
 
-                    Take a moment to review your resume. Remember, the right opportunity is just around the corner. Stand out, stay confident, and let ResumeEra be your trusted partner in achieving your career goals!"
-                </p>
-            </header>
+          Take a moment to review your resume. Remember, the right opportunity is just around the corner. Stand out, stay confident, and let ResumeEra be your trusted partner in achieving your career goals!"
+        </p>
+      </header>
       <div>
         <GoogleAd />
       </div>
@@ -82,27 +82,27 @@ const Preview108 = () => {
         <div className='Alisha' id='Alisha_mirza108' style={{ backgroundColor: bgColor, fontFamily: fontStyle }}>
           <div className='name108'>
             <h3 style={{ color: headingColor }}>{personalInfo.firstName} {personalInfo.lastName}</h3>
-            <p style={{ color: fontColor ,fontFamily:fontStyle}}>{work[0][0].jobtitle}</p>
-            <p style={{ color: fontColor ,fontFamily:fontStyle}}>{personalInfo.object}</p>
+            <p style={{ color: fontColor, fontFamily: fontStyle }}>{work[0][0].jobtitle}</p>
+            <p style={{ color: fontColor, fontFamily: fontStyle }}>{personalInfo.object}</p>
           </div>
           <hr className='hrtop' />
           <div className='contact108 '>
             <p style={{ color: fontColor, wordBreak: "break-all" }}><i className="bi bi-envelope me-2 me-2" />{personalInfo.email}</p>
-            <p style={{ color: fontColor ,fontFamily:fontStyle}}><i className="bi bi-telephone-fill me-2 ms-2" />{personalInfo.mobileNumber}</p>
-            <p style={{ color: fontColor ,fontFamily:fontStyle}} className=""><i className="bi bi-geo-alt-fill me-2 ms-2" /> {personalInfo.city} {personalInfo.state} {personalInfo.country} </p>
-            <p style={{ color: fontColor ,fontFamily:fontStyle}}><i className="bi bi-linkedin me-2 ms-2" />{socialMediaLink[0].linkedin}</p>
+            <p style={{ color: fontColor, fontFamily: fontStyle }}><i className="bi bi-telephone-fill me-2 ms-2" />{personalInfo.mobileNumber}</p>
+            <p style={{ color: fontColor, fontFamily: fontStyle }} className=""><i className="bi bi-geo-alt-fill me-2 ms-2" /> {personalInfo.city} {personalInfo.state} {personalInfo.country} </p>
+            <p style={{ color: fontColor, fontFamily: fontStyle }}><i className="bi bi-linkedin me-2 ms-2" />{socialMediaLink[0].linkedin}</p>
           </div>
           <hr className='hrbottom' />
-          <div className='d-flex justify-content-around'>
+          <div className='d-flex justify-content-around' style={{backgroundColor:bgColor}}>
             <div className="experience-section108">
               <h4 className="details-title108" style={{ color: headingColor, }}>
                 WORK EXPERIENCE</h4>
               {work[0].map((works, index) => (
                 <div key={index} className="employment-history108">
                   <div className="exp-inner108">
-                    <p style={{ color: fontColor ,fontFamily:fontStyle}} className="employment-detail108"><b style={{ fontWeight: 500, color: fontColor }}>{works.jobtitle}</b><br />{works.organization}{work.city}</p>
-                    <p style={{ color: fontColor ,fontFamily:fontStyle}} className="employment-detail108"><i>{works.startYear} - {works.endYear}</i></p>
-                    <p style={{ color: fontColor ,fontFamily:fontStyle}} className='employment-detail108'>{works.aboutexperience}</p>
+                    <p style={{ color: fontColor, fontFamily: fontStyle }} className="employment-detail108"><b style={{ fontWeight: 500, color: fontColor }}>{works.jobtitle}</b><br />{works.organization}{work.city}</p>
+                    <p style={{ color: fontColor, fontFamily: fontStyle }} className="employment-detail108"><i>{works.startYear} - {works.endYear}</i></p>
+                    <p style={{ color: fontColor, fontFamily: fontStyle }} className='employment-detail108'>{works.aboutexperience}</p>
                   </div>
                 </div>
               ))}
@@ -113,7 +113,7 @@ const Preview108 = () => {
                   SKILL</h4>
                 {keyskills[0].map((keys, index) => (
                   <div key={index} className="technical-skill-item108">
-                    <p style={{ color: fontColor ,fontFamily:fontStyle}}>{keys.keyskills}</p>
+                    <p style={{ color: fontColor, fontFamily: fontStyle }}>{keys.keyskills}</p>
                   </div>
                 ))}
               </div>
@@ -123,7 +123,7 @@ const Preview108 = () => {
                   CERTIFICATES</h4>
                 {Certificate[0].map((keys, index) => (
                   <div key={index} className="certificate-item108">
-                    <p style={{ color: fontColor ,fontFamily:fontStyle}}> <b>{keys.certificateName}</b></p>
+                    <p style={{ color: fontColor, fontFamily: fontStyle }}> <b>{keys.certificateName}</b></p>
                     <p style={{ color: fontColor, fontSize: 'xx-small' }}>{keys.organization}</p>
                   </div>
                 ))}
@@ -133,9 +133,9 @@ const Preview108 = () => {
                 {education[0].map((edu, index) => (
                   <div key={index} className="education-item108">
                     <div className="certificate-item108">
-                      <p style={{ color: fontColor ,fontFamily:fontStyle}} className="employment-detail108">{edu.degree}</p>
-                      <p style={{ color: fontColor ,fontFamily:fontStyle}} className="employment-detail108">{edu.univercity}</p>
-                      <p style={{ color: fontColor ,fontFamily:fontStyle}} className="employment-detail108">{edu.startYear} - {edu.endYear},{edu.city}</p>
+                      <p style={{ color: fontColor, fontFamily: fontStyle }} className="employment-detail108">{edu.degree}</p>
+                      <p style={{ color: fontColor, fontFamily: fontStyle }} className="employment-detail108">{edu.univercity}</p>
+                      <p style={{ color: fontColor, fontFamily: fontStyle }} className="employment-detail108">{edu.startYear} - {edu.endYear},{edu.city}</p>
                     </div>
                     <div className="education-details108">
                       <span><b></b></span>

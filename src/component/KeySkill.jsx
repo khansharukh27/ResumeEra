@@ -6,12 +6,14 @@ import Hobbies from "./Hobbies";
 import References from "./Refrences";
 import Certificate from "./SocialMedia";
 import GoogleAd from "./adFolder/GoogleAd";
+import Project from "./Project";
 
 const KeySkills = () => {
   const [showKeySkills, setShowKeySkills] = useState(true);
   const [showHobbies, setShowHobbies] = useState(false);
   const [showReferences, setShowReferences] = useState(false);
   const [showCertificate,setShowCertificate] = useState(false)
+  const [showProject,setShowProject] = useState(false)
   const [inputFields, setInputFields] = useState(() => {
     const savedKeySkills = localStorage.getItem("keySkills");
     return savedKeySkills ? JSON.parse(savedKeySkills) : [{ keyskills: '', rating: 1 }];
@@ -28,15 +30,18 @@ const KeySkills = () => {
 
   const handleClickBack = (e) => {
     e.preventDefault();
-    if (location.pathname === `/techmain/${result}`) {
-      setShowHobbies(false);
-      setShowKeySkills(false);
-      setShowReferences(true);
-    } else if(location.pathname === '/techmain/108'){
+     if(location.pathname === '/techmain/108'){
       setShowCertificate(true)
       setShowHobbies(false);
       setShowReferences(false);
+      setShowKeySkills(false)
 
+    }else if(location.pathname === '/techmain/109'){
+      setShowCertificate(false);
+      setShowHobbies(false);
+      setShowReferences(false);
+      setShowProject(true)
+      setShowKeySkills(false)
     }
     else {
       setShowHobbies(true);
@@ -135,14 +140,14 @@ const KeySkills = () => {
     <form onSubmit={handleSubmit} style={{}}>
       {showKeySkills && (
         <div>
-          <div className="profetional-detail">
-            <h1 className="multicolor-heading">KEY SKILLS</h1>
-            <p>
-              Including key skills in a resume is essential because it quickly
-              communicates your core competencies and expertise to potential employers.
-            </p>
-          </div>
+          <div className="project-detail">
+    <h1 className="multicolor-heading">PROJECT HIGHLIGHTS</h1>
+    <p>
+      Showcasing your project experience in a resume is crucial as it demonstrates your practical application of skills, problem-solving abilities, and hands-on experience with real-world scenarios.
+    </p>
+</div>
 
+<hr style={{width:'inherit'}}/>
           {inputFields.map((field, index) => (
             <div key={index} style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
               <div>
@@ -206,6 +211,7 @@ const KeySkills = () => {
       {showHobbies && (<Hobbies />)}
       {showReferences && (<References />)}
       {showCertificate && (<Certificate/>)}
+      {showProject && (<Project/>)}
     </form>
   );
 };

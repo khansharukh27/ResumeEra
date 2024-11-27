@@ -17,6 +17,29 @@ const JobHoppingAsset = () => {
                     name="description"
                     content="Learn how to frame job hopping positively in your career, including tips for interviews, strategic transitions, and maintaining professional relationships."
                 />
+                
+                {/* Open Graph Meta Tags */}
+                <meta property="og:type" content="article" />
+                <meta property="og:title" content="How to Spin Job Hopping as an Asset to Your Career" />
+                <meta property="og:description" content="Learn how to frame job hopping positively in interviews and on your resume. Tips, FAQs, and strategies included." />
+                <meta property="og:url" content="https://resumeera.xyz/spin-job-hopping-as-an-asset" />
+                <meta property="og:image" content="https://resumeera.xyz/assets/images/job-hopping-guide.jpg" />
+                <meta property="og:image:alt" content="Guide on spinning job hopping as a career asset" />
+                <meta property="og:site_name" content="ResumeEra" />
+                <meta property="article:published_time" content="2024-11-17T00:00:00+00:00" />
+                <meta property="article:modified_time" content="2024-11-17T00:00:00+00:00" />
+                <meta property="article:author" content="ResumeEra Career Experts" />
+
+                {/* Twitter Card Meta Tags */}
+                <meta name="twitter:card" content="summary_large_image" />
+                <meta name="twitter:title" content="How to Spin Job Hopping as an Asset to Your Career" />
+                <meta name="twitter:description" content="Find out how to turn job hopping into a strength. Use our expert tips to present your career changes as strategic moves." />
+                <meta name="twitter:image" content="https://resumeera.xyz/assets/images/job-hopping-guide.jpg" />
+                <meta name="twitter:image:alt" content="Guide on spinning job hopping as a career asset" />
+                <meta name="twitter:site" content="@ResumeEra" />
+                <meta name="twitter:creator" content="@ResumeEra" />
+
+
                 <link rel="canonical" href="https://resumeera.xyz/how-to-spin-job-hopping-as-an-asset" />
                 <script type="application/ld+json">
                     {JSON.stringify({
@@ -273,7 +296,7 @@ const JobHoppingAsset = () => {
                 </p>
             </article>
             <div className="stickyShare">
-                <ShareButtons />
+                <ShareButtons url={ArticleUrl} title={ArticleTitle}/>
             </div>
         </div>
     );

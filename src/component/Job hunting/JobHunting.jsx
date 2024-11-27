@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import GoogleAd from "../adFolder/GoogleAd";
 import Crafting_Career_Path from '../../image/jobHuntingImage/Crafting_Career_Path.jpeg';
 import Top_Careers_Introverts from '../../image/jobHuntingImage/Top_Careers_Introverts.jpeg';
@@ -6,7 +6,7 @@ import Spin_Job_Hopping from '../../image/jobHuntingImage/Spin_Job_Hopping.jpeg'
 import './jobHuntingcss.css'
 const JobHunting = () => {
   const [searchTerm, setSearchTerm] = useState("");
-
+  
   const posts = [
     { path: "/top-careers-for-introverts", title: "Top Careers For Introverts", src: Top_Careers_Introverts, alt: "Top Careers For Introverts" },
     { path: "/how-to-spin-job-hopping-as-an-asset", title: "How to Spin Job Hopping as an Asset to Your Career", src: Spin_Job_Hopping, alt: "How to Spin Job Hopping as an Asset to Your Career" },
@@ -16,20 +16,23 @@ const JobHunting = () => {
     post.title.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
+   useEffect(()=>{
+    window.scrollTo(0,0)
+   },[])
   return (
-    <div className="ps-md-5 pe-md-5">
+    <div className="ps-md-5 pe-md-5 aboutResumeEra">
       <h1>The Genius Career Blog</h1>
       <header style={{ display: "flex", flexWrap: "wrap", gap: "1rem" }}>
-        <div className="pe-md-3">
+        
           <img
             src={Crafting_Career_Path}
             alt="Crafting Your Career Path"
             loading="lazy"
-            style={{ borderRadius: "5px", maxWidth: "100%" }}
+            // style={{ borderRadius: "5px", width: "inherit",maxHeight:'' }}
           />
-        </div>
+        
         <div>
-          <h3 style={{ fontWeight: 900,color:'white' }}>
+          <h3 style={{ fontWeight: 900,color:'black' }}>
             Crafting Your Career Path: A Step-by-Step Guide
           </h3>
           <p>
@@ -63,11 +66,15 @@ const JobHunting = () => {
               className="card-img"
             />
             <div className="card-body">
-              <h3 className="card-title">{post.title}</h3>
-              <a href={post.path} className="btn btn-primary">
-                Read
-              </a>
-            </div>
+  <h3 className="card-title">
+    {post.title.split(" ").slice(0, 3).join(" ")}{/* First 10 words */}
+    {post.title.split(" ").length > 10 && " ... See More"}{/* Add "See More" if words exceed 10 */}
+  </h3>
+  <a href={post.path} className="btn btn-primary">
+    Read
+  </a>
+</div>
+
 
             {/* Insert an ad after every third card */}
             {(index + 1) % 3 === 0 && (

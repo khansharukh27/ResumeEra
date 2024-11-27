@@ -6,6 +6,7 @@ import KeySkills from "./KeySkill";
 import References from "./Refrences";
 import { useLocation } from "react-router-dom";
 import GoogleAd from "./adFolder/GoogleAd";
+import Project from "./Project";
 
 const HonorAndAward = () => {
   const dispatch = useDispatch();
@@ -15,7 +16,7 @@ const HonorAndAward = () => {
   const [showHonorAndAward, setShowHonorAndAward] = useState(true);
   const [showKeySkills, setShowKeySkills] = useState(false);
   const [showReferences, setShowReferences] = useState(false);
-
+  const [showProject,setShowProject] = useState(false)
   const [honorsAndAwards, setHonorsAndAwards] = useState(() => {
     const savedHonorsAndAwards = localStorage.getItem("honorsAndAwards");
     return savedHonorsAndAwards
@@ -73,7 +74,13 @@ const HonorAndAward = () => {
       setShowHonorAndAward(false);
       setShowSoftSkill(false);
       setShowReferences(true);
-    } else {
+    }else if(location.pathname === '/techmain/109'){
+      setShowHonorAndAward(false);
+      setShowSoftSkill(false);
+      setShowReferences(false);
+      setShowProject(true)
+    } 
+    else {
       setShowHonorAndAward(false);
       setShowSoftSkill(false);
       setShowKeySkills(true);
@@ -168,6 +175,7 @@ const HonorAndAward = () => {
       {showSoftSkill && <SoftSkills />}
       {showReferences && <References />}
       {showKeySkills && <KeySkills />}
+      {showProject && <Project/>}
     </form>
   );
 };

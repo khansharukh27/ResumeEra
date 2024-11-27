@@ -2,12 +2,12 @@
     display: flex;
     flex-wrap: wrap;
     gap: 1.5rem;
-    justify-content: center;
+    justify-content: space-around;
   }
   
   .card {
     flex: 1 1 calc(100% - 2rem); /* Full-width on small screens */
-    max-width: calc(33.333% - 2rem); /* 3 cards per row on large screens */
+    max-width: calc(44.333% - 2rem); /* 3 cards per row on large screens */
     display: flex;
     flex-direction: column;
     border: 1px solid #ddd;
@@ -18,12 +18,15 @@
   }
   
   .card-img {
-    width: 100%;
+    width: 90%;
     height: auto;
   }
   
   .card-body {
     padding: 1rem;
+  }
+  .card-body .card-title{
+    color: white;
   }
   
   .ad-container {

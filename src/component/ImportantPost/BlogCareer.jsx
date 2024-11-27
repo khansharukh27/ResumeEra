@@ -16,6 +16,7 @@ import _Things from "../../image/carrierTips/_Things.jpg";
 import How_to_Tailor_Your_Resume from "../../image/carrierTips/How_to_Tailor_Your_Resume.jpg";
 import A_Recruiters_Guide from "../../image/carrierTips/A_Recruiters_Guide.jpg";
 import Brutal_Career_Traps  from '../../image/carrierTips/Brutal_Career_Traps.jpg'
+import Resume_Hacks from '../../image/carrierTips/Resume_Hacks.jpg'
 const BlogCareer = () => {
     const [searchTerm, setSearchTerm] = useState("");
     const [filteredTips, setFilteredTips] = useState([]);
@@ -36,6 +37,8 @@ const BlogCareer = () => {
         { title: "काबिल होने के बावजूद नहीं मिलेगी जॉब", path: "/5-mistake-to-getting-job", src: kabil, alt: 'काबिल होने के बावजूद नहीं मिलेगी जॉब' },
         { title: "8 Reasons for Interview Rejection", path: "/8-reasons-for-interview-rejection", src: Interview_Rejection, alt: '8 Reasons for Interview Rejection' },
         { title: "10 Brutal Career Traps and How to Avoid Them - ResumeEra", path: "/10-brutal-career-traps", src: Brutal_Career_Traps, alt: '10 Brutal Career Traps' },
+        { title: "10 Resume Hacks to Secure Your Dream Internship", path: "/10-resume-hacks", src: Resume_Hacks, alt: '10 Resume Hacks to Secure Your Dream Internship' },
+
 
     ];
 

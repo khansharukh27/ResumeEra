@@ -1,5 +1,7 @@
 // import { templatePage } from "./action";
 
+// import { ProjectData } from "./action";
+
 // import { addReferences, certificateData, coverletters } from "./action";
 
 // import { addSoftSkills } from "./action";
@@ -17,7 +19,8 @@ const initialState = {
   honorAndaward:JSON.parse(localStorage.getItem("honorAndAwardData")) || [],
   addReference:JSON.parse(localStorage.getItem("referencesData")) || [],
   coverletterss: JSON.parse(localStorage.getItem("coverletterss")) || [],
-  certificateData: JSON.parse(localStorage.getItem("certificateData")) || []
+  certificateData: JSON.parse(localStorage.getItem("certificateData")) || [],
+  projectData: JSON.parse(localStorage.getItem("ProjectData")) || []
 };
 
 const reducer = (state = initialState, action) => {
@@ -94,6 +97,11 @@ const reducer = (state = initialState, action) => {
         return{
           ...state,
           certificateData:[action.payload]
+        }
+        case 'Project_Data':  
+        return{
+          ...state,
+          projectData:[action.payload]
         }  
     default:
       return state;
