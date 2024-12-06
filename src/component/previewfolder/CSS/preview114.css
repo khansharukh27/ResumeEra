@@ -1,0 +1,119 @@
+.main114{
+    display: flex;
+    justify-content: space-between;
+    
+    margin-top: 320px;
+}
+.preview114{
+    width: 60%;
+    /* padding: 10px; */
+    margin-top: 30px;
+    margin-right: 15px;
+}
+.preview114 p{
+font-size: small;
+}
+.preview114 h4{
+    font-size: small;
+    font-weight: 900;
+}
+.personalInfo{
+    background-color: lightgray;
+    padding: 15px;
+}
+.personalInfo h3{
+    font-weight: 900;
+    font-size: xx-large;
+    color: white;
+}
+.personalInfo .jobtitle{
+    color: black;
+}
+.personalInfo .object{
+    color: white;
+}
+.contact114{
+    display: flex;
+    justify-content: space-around;
+    background-color: gray;
+    padding: 15px;
+}
+.contact114 p{
+    font-size: xx-small;
+}
+.firstdiv114{
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+@media (max-width:425px){
+    .main114{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+       
+    }
+    .preview114{
+        width: 100%;
+        /* padding: 10px; */
+        margin-top: 30px;
+        /* margin-right: 15px; */
+    }
+    .preview114 h4{
+        font-size: small;
+    }
+    .preview114 p{
+        font-size: xx-small;
+    }
+    .firstdiv114{
+        padding: 2px;
+    }  
+}
+@media (max-width:375px){
+    .main114{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+       
+    }
+    .preview114{
+        width: 100%;
+        /* padding: 10px; */
+        margin-top: 30px;
+        /* margin-right: 15px; */
+    }
+    .preview114 h4{
+        font-size: small;
+    }
+    .preview114 p{
+        font-size: xx-small;
+    }
+    .firstdiv114{
+        padding: 2px;
+    }  
+}
+
+@media (max-width:320px){
+    .main114{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+       
+    }
+    .preview114{
+        width: 100%;
+        /* padding: 10px; */
+        margin-top: 30px;
+        /* margin-right: 15px; */
+    }
+    .preview114 h4{
+        font-size: small;
+    }
+    .preview114 p{
+        font-size: xx-small;
+    }
+    .firstdiv114{
+        padding: 2px;
+    }  
+}

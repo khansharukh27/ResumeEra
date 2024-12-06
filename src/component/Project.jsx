@@ -17,8 +17,8 @@ const Project = () => {
     // Handle input changes
     const handleInputChange = (index, field, value) => {
         const updatedProjects = [...projects];
-        updatedProjects[index][field] = value;
-        setProjects(updatedProjects);
+        updatedProjects[index][field] = value.toUpperCase();
+        setProjects(updatedProjects.toUpperCase());
     };
 
     // Add more project input fields

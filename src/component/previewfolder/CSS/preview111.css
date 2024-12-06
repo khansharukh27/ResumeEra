@@ -1,0 +1,99 @@
+@media (min-width:768px){
+
+
+.main111{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    /* margin: 20px; */
+}
+.preview111{
+    padding: 5px;
+    width: 60%;
+    margin: 20px;
+}
+.preview111 p{
+    font-size: small;
+}
+
+.preview111 h6{
+    font-weight: 900;
+    color: #5a1d36;
+}
+.about111{
+    padding-left: 5px;
+    padding-right: 5px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin: 5px;
+    background-color: #6a213f;
+}
+.contact111{
+    width: 30%;
+}
+.work111{
+    width: 70%;
+}
+.contactinnerdiv111 p{
+    margin-top: -10px;
+}
+.contactinnerdiv111 .bi{
+    color: #6e2041;
+}
+.technical-skill-item111{
+    background-color: #b2909f;
+    padding: 10px;
+    border-radius: 10px;
+}
+.preview111 .language{
+    background-color: #b2909f;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+
+}
+
+
+@media (max-width:768px){
+    
+    .main111{
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+        flex-direction: column;
+    }
+    .main111 p{
+        font-size: xx-small;
+    }
+    .main111 h1{
+        font-size: xx-small;
+    }
+    .preview111{
+        padding: 5px;
+        width: 100%;
+    }
+    .preview111 p{
+        font-size: xx-small;
+    }
+    .preview111 h6{
+        font-weight: 900;
+        color: #5a1d36;
+        font-size: xx-small;
+    }
+    .about111{
+        padding: 5px;
+        margin: 0px;
+        background-color: #6a213f;
+    }
+    .contact111{
+        width: 40%;
+    }
+    .work111{
+        width: 60%;
+    }
+    
+    .resume-download-section0{
+        width: 100%;
+    }
+}

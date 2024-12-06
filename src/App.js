@@ -179,6 +179,9 @@ import MotivationLink from './component/MotivationLink';
 import TypesOfLaziness from './component/MOTIVATIONAL/TypesOfLaziness';
 import Pictures8 from './component/MOTIVATIONAL/Pictures8';
 import ResumeHacks from './component/blogandcareer/ResumeHacks_10';
+import Linkedin from './indeedRssFeed/sociableLinkedin/Linkedin';
+import MotivationalCareerQuotes from './component/MOTIVATIONAL/MotivationalCareerQuotes';
+import Login from './component/signupAndLogin/Login';
 
 var images = [
   { id: 1, src: resum1, alt: 'Professional Resume Template 1' },
@@ -224,16 +227,21 @@ const CoverImage = [
 console.log('images:=',images)
 console.log(images[0].id)
 const path = 'mainpage'
+// import { useAuth0 } from "@auth0/auth0-react";
 
 function App() {
+  // const {isAuthenticated} = useAuth0();
+
   useEffect(() => {
     AOS.init()
   }, [])
   return (
+    
     <Router style={{ backgroundColor: 'black',width:'100%' }}>
-      <Navbar />
+     
+      <Navbar/>
       <Routes style={{ width:'100%' }}>
-        <Route path='/login_form' element={<GoogleForm/>}/>
+        <Route path='https://sharukhmirza88.us.auth0.com/u/login?state=hKFo2SBrSmlGbld4Mkh5N2JoMUJVaVJSTUNzei1KRDZlVkxUVqFur3VuaXZlcnNhbC1sb2dpbqN0aWTZIDZEX1o5bHVra21hRXNpdVFjSTY2YlRpQ1FPLW5VWnBHo2NpZNkgWFFGODVGVFlJODdQOXRYNHoxOE5sdzFucHkxTjhCbng' element={<Login/>}/>
         <Route path='/' element={<Home images = {images}/>}/>
         <Route path="*" element={<NotFoundPage />} />
         <Route path='/template' exact element={<TemplatePage images={images} techImages = {techImages} CoverImage = {CoverImage}/>} />
@@ -369,6 +377,11 @@ function App() {
           <Route path='/motivation-link' element={<MotivationLink/>}/>
           <Route path='/types-of-laziness' element={<TypesOfLaziness/>}/>
           <Route path='/pictures8' element={<Pictures8/>}/>
+
+          <Route path='/linkedIn_post' element={<Linkedin/>}/>
+          <Route path='/35-career-quotes-to-motivate' element={<MotivationalCareerQuotes/>}/>
+
+
 
 {/* preview resume path */}
         <Route path='/preview' element={<Preview />} />

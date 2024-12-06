@@ -471,8 +471,8 @@ hr {
         flex-direction: row;
         /* justify-content: ; */
     }
-    .jobtitlen{
-        white-space:none;
+    .jobtitles9{
+        /* word-break: keep-all; */
     }
    
     .name-div9{
@@ -528,6 +528,7 @@ hr {
     .jobtitles9{
         /* margin-left: 50px; */
         margin-top: -15px;
+        word-wrap: normal;
     }
 }
 

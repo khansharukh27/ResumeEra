@@ -66,7 +66,7 @@ const Preview104 = () => {
                 <h1>Congratulations on Creating a Winning Resume!</h1>
                 <small style={{ textAlign: 'center' }}> <i style={{ color: 'white', backgroundColor: 'red' }}> warning </i>: if resume dont show your data in resume , please refresh the page</small>
 
-                <p>Your journey towards your dream job starts here! By crafting a professional resume with ResumeEra, you've taken the first step in showcasing your skills, experiences, and aspirations effectively. A well-structured resume is more than just a document—it's your story, your voice, and your opportunity to shine.
+                <p style={{color:fontColor,fontFamily:fontStyle,}}>Your journey towards your dream job starts here! By crafting a professional resume with ResumeEra, you've taken the first step in showcasing your skills, experiences, and aspirations effectively. A well-structured resume is more than just a document—it's your story, your voice, and your opportunity to shine.
 
                     Whether you're a fresher stepping into the professional world or an experienced professional climbing the career ladder, a compelling resume can make all the difference. Our platform ensures your resume is not only visually appealing but also tailored to meet industry standards.
 
@@ -83,19 +83,19 @@ const Preview104 = () => {
                         <img src={personalInfo.image} alt="hospital resume" />
                     </div>
                     <div className="namediv104">
-                        <p>{personalInfo.firstName}</p>
-                        <p>{personalInfo.lastName}</p>
-                        <p style={{ color: 'lightgray' }}>{work[0][0].jobtitle}</p>
+                        <p style={{color:fontColor,fontFamily:fontStyle,}}>{personalInfo.firstName}</p>
+                        <p style={{color:fontColor,fontFamily:fontStyle,}}>{personalInfo.lastName}</p>
+                        <p style={{ color: 'lightgray',fontSize:'xx-small',whiteSpace:'none' }}>{work[0][0].jobtitle}</p>
                     </div>
                     <div className="contactdiv104">
-                        <p>{personalInfo.address} {personalInfo.city} {personalInfo.state} {personalInfo.postalCode}<i className="bi bi-geo-alt-fill me-2 ms-2" /></p>
-                        <p>{personalInfo.mobileNumber}<i className="bi bi-telephone-fill me-2 ms-2" /></p>
+                        <p style={{color:fontColor,fontFamily:fontStyle,}}>{personalInfo.address} {personalInfo.city} {personalInfo.state} {personalInfo.postalCode}<i className="bi bi-geo-alt-fill me-2 ms-2" /></p>
+                        <p style={{color:fontColor,fontFamily:fontStyle,}}>{personalInfo.mobileNumber}<i className="bi bi-telephone-fill me-2 ms-2" /></p>
                         <p style={{ wordBreak: "break-all" }}>{personalInfo.email}<i className="bi bi-envelope me-2 ms-2" /></p>
-                        <p>{socialMediaLink.github}<i class="bi bi-github ms-2" /></p>
+                        <p style={{color:fontColor,fontFamily:fontStyle,}}>{socialMediaLink.github}<i class="bi bi-github ms-2" /></p>
                     </div>
                 </div>
                 <div className="aboutme104" >
-                    <p><b>aoutme.</b>{personalInfo.object}</p>
+                    <p style={{color:fontColor,fontFamily:fontStyle,}}><b>AboutMe.</b>{personalInfo.object}</p>
                 </div>
                 <div>
                     <h5>SKILL</h5>
@@ -105,9 +105,8 @@ const Preview104 = () => {
                     <div className="inner-104-1 me-4">
                         {keyskills[0].map((keys, index) => (
                             <div key={index} className="technical-skill-item104 d-flex justify-content-between">
-                                <p>{keys.keyskills}</p>
+                                <p style={{color:fontColor,fontFamily:fontStyle,}}>{keys.keyskills}</p>
                                 {/* 5-star rating system */}
-
                             </div>
                         ))}
                     </div>
@@ -115,7 +114,7 @@ const Preview104 = () => {
                         {languages[0].map((keys, index) => (
                             <div key={index} className="col-6 ms-2 d-flex justify-content-between me-5">
                                 <div>
-                                <p>{keys.language}</p>
+                                <p style={{color:fontColor,fontFamily:fontStyle,}}>{keys.language}</p>
                                 </div>
                                 <div className="star-rating ms-3 w-50 d-flex">
                                     {[...Array(5)].map((_, i) => (
@@ -132,7 +131,7 @@ const Preview104 = () => {
                     <div className="row inner-104-1">
                         {SoftSkill[0].map((soft, index) => (
                             <div className="col-4 ms-2">
-                                <p>{soft.softSkill}</p>
+                                <p style={{color:fontColor,fontFamily:fontStyle,}}>{soft.softSkill}</p>
                             </div>
                         ))}
                     </div>
@@ -146,11 +145,11 @@ const Preview104 = () => {
                         <div key={index} className="education-item101 ms-4">
                             <div className="education-degree104">
                                 <p className="education-duration104">{edu.startYear} - {edu.endYear}</p>
-                                <p>{edu.univercity},{edu.city}</p>
+                                <p style={{color:fontColor,fontFamily:fontStyle,}}>{edu.univercity},{edu.city}</p>
                             </div>
                             <div className="education-details104">
-                                <p>{edu.degree}</p>
-                                <p>{edu.univercity}</p>
+                                <p style={{color:fontColor,fontFamily:fontStyle,}}>{edu.degree}</p>
+                                <p style={{color:fontColor,fontFamily:fontStyle,}}>{edu.univercity}</p>
                             </div>
                         </div>
                     ))}
@@ -162,11 +161,11 @@ const Preview104 = () => {
                     {work[0].map((works, index) => (
                         <div key={index} className="employment-history101 ms-4 d-flex justify-content-between">
                             <div className="exp-inner104">
-                                <p className="employment-duration104">{works.startYear} - {works.endYear}</p>
+                                <p className="employment-duration104" style={{whiteSpace:'none'}}>{works.startYear} - {works.endYear}</p>
                             </div>
                             <div>
                             <p className="employment-detail104"><b>{works.organization}</b><br />{works.jobtitle}</p>
-                                <p className='aboutexperience104'>{works.aboutexperience}</p>
+                                <p className='aboutexperience104' style={{fontSize:'medium'}}>{works.aboutexperience}</p>
                             </div>
                         </div>
                     ))}
@@ -241,7 +240,6 @@ const Preview104 = () => {
                     <div style={{ width: '100%' }}>
                         <GoogleAd/>
                     </div>
-
                 </div>
                 </div>
         </div>

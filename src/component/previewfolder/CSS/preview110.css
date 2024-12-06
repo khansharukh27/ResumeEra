@@ -1,0 +1,115 @@
+.main110{
+    display: flex;
+    justify-content: space-between;
+    
+    margin-top: 320px;
+}
+.preview110{
+    width: 60%;
+    /* padding: 10px; */
+    margin-top: 30px;
+    margin-right: 15px;
+}
+.personalInfo110{
+    /* background-color: lightgray; */
+    padding: 15px;
+}
+.personalInfo110 h3{
+    font-weight: 900;
+    font-size: xx-large;
+    color: white;
+}
+.personalInfo110 .jobtitle{
+    color: black;
+}
+.personalInfo110 .object{
+    color: white;
+}
+.contact110{
+    display: flex;
+    justify-content: space-around;
+    background-color: gray;
+    padding: 15px;
+}
+.contact110 p{
+    font-size: xx-small;
+}
+.firstdiv110{
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+.certificate-item110{
+    font-size: small;
+}
+
+@media (max-width:425px){
+    .main110{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+       
+    }
+    .preview110{
+        width: 100%;
+        /* padding: 10px; */
+        margin-top: 30px;
+        /* margin-right: 15px; */
+    }
+    .preview110 h4{
+        font-size: small;
+    }
+    .preview110 p{
+        font-size: xx-small;
+    }
+    .firstdiv110{
+        padding: 2px;
+    }  
+}
+@media (max-width:375px){
+    .main110{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+       
+    }
+    .preview110{
+        width: 100%;
+        /* padding: 10px; */
+        margin-top: 30px;
+        /* margin-right: 15px; */
+    }
+    .preview110 h4{
+        font-size: small;
+    }
+    .preview110 p{
+        font-size: xx-small;
+    }
+    .firstdiv110{
+        padding: 2px;
+    }  
+}
+
+@media (max-width:320px){
+    .main110{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+       
+    }
+    .preview110{
+        width: 100%;
+        /* padding: 10px; */
+        margin-top: 30px;
+        /* margin-right: 15px; */
+    }
+    .preview110 h4{
+        font-size: small;
+    }
+    .preview110 p{
+        font-size: xx-small;
+    }
+    .firstdiv110{
+        padding: 2px;
+    }  
+}

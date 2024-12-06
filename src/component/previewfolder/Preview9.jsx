@@ -90,32 +90,32 @@ const Preview9 = () => {
                         <div style={{color:fontColor}} >
                             <div className='d-flex' style={{ height: "70px",color:fontColor }}>
                                 <div className='me-2 mb-3 ' style={{ backgroundColor: 'yellow', borderBottomLeftRadius: '50%', borderBottomRightRadius: '50%' }}><i class="bi bi-telephone-fill me-2 p-1 "></i></div>
-                                <p style={{color:fontColor}}>{personalInfo.mobileNumber}</p>
+                                <p style={{color:fontColor,fontFamily:fontStyle}}>{personalInfo.mobileNumber}</p>
                             </div>
                             <div className='d-flex '>
                                 <div className='me-2' style={{ backgroundColor: 'yellow' }}><i class="bi bi-envelope me-2 p-1"></i></div>
-                                <div><p style={{color:fontColor,wordBreak:'break-all'}}>{personalInfo.email}</p></div>
+                                <div><p style={{color:fontColor,wordBreak:'break-all',fontFamily:fontStyle}}>{personalInfo.email}</p></div>
                             </div>
                             <div className='d-flex'>
                                 <div className='me-2' style={{ backgroundColor: 'yellow' }}><i class="bi bi-geo-alt-fill me-2 p-1" ></i></div>
-                                <div><p style={{color:fontColor}}>{personalInfo.address} {personalInfo.city} {personalInfo.state} {personalInfo.postalCode}</p></div>
+                                <div><p style={{color:fontColor,fontFamily:fontStyle}}>{personalInfo.address} {personalInfo.city} {personalInfo.state} {personalInfo.postalCode}</p></div>
                             </div>
                             <div className='d-flex'>
                                 <div className='me-2' style={{ backgroundColor: 'yellow', borderBottomLeftRadius: '50%', borderBottomRightRadius: '50%' }}><i class="bi bi-linkedin me-2 p-1"></i></div>
-                                <div><p style={{color:fontColor}}> {sMedia?.[0]?.linkedin || ''}</p></div>
+                                <div><p style={{color:fontColor,fontFamily:fontStyle}}> {sMedia?.[0]?.linkedin || ''}</p></div>
                             </div>
                         </div>
-                        <h3 className="heading9" style={{color:headingColor,fontWeight:900}}  >EDUCATION_</h3>
+                        <h3 className="heading9" style={{color:headingColor,fontWeight:900,fontFamily:fontStyle}}  >EDUCATION_</h3>
                         {education[0].map((edu, index) => (
                             <div key={index} className="education-inner9">
-                                <p style={{color:fontColor}}>{edu.degree}</p>
-                                <p style={{color:fontColor}}><b> {edu.univercity}</b></p>
-                                <p style={{color:fontColor}}>{edu.type}</p>
-                                <p style={{color:fontColor}}>{edu.startYear} - {edu.endYear}</p>
+                                <p style={{color:fontColor,fontFamily:fontStyle}}>{edu.degree}</p>
+                                <p style={{color:fontColor,fontFamily:fontStyle}}><b> {edu.univercity}</b></p>
+                                <p style={{color:fontColor,fontFamily:fontStyle}}>{edu.type}</p>
+                                <p style={{color:fontColor,fontFamily:fontStyle}}>{edu.startYear} - {edu.endYear}</p>
                             </div>
                         ))}
 
-                        <h3 className='heading9' style={{color:headingColor,fontWeight:900}} >ABOUT ME_</h3>
+                        <h3 className='heading9' style={{color:headingColor,fontWeight:900,fontFamily:fontStyle}} >ABOUT ME_</h3>
                         <hr />
                         <div className='d-flex justify-content-between'>
                             <div><b>Date of Birth:- </b><p style={{color:fontColor}}>{personalInfo.dateofbirth}</p><hr style={{ height: '5px' }} /></div>
@@ -124,13 +124,13 @@ const Preview9 = () => {
                         </div>
 
                         <h3 className='heading9' style={{color:headingColor,fontWeight:900}}>OBJECT CARRIERE_</h3>
-                        <p style={{textAlign:'justify',color:fontColor}}>{personalInfo.object}</p>
+                        <p style={{textAlign:'justify',color:fontColor,fontFamily:fontStyle}}>{personalInfo.object}</p>
                     </div>
                 </div>
                 <div className='main2-9'>
                     <div className='name-div9' > 
-                            <h3 className="pt-5"  style={{fontWeight:900}}>{personalInfo.firstName} {personalInfo.lastName}</h3>
-                        <p className='mb-5 jobtitles9 ms-5' style={{whiteSpace:'',color:fontColor}}>
+                            <h3 className="pt-5"  style={{fontWeight:900,color:headingColor}}>{personalInfo.firstName} {personalInfo.lastName}</h3>
+                        <p className='mb-5 jobtitles9' style={{ color:fontColor,fontFamily:fontStyle}}>
                             {work[0][0].jobtitle}
                         </p>
                     </div>
@@ -140,24 +140,24 @@ const Preview9 = () => {
                         <div key={index} className='d-flex justify-content-around mt-2 work-div9'>
                             <div style={{ height: '100px', width: '3px', backgroundColor: 'yellow'}}> </div>
                             <div className='work-inner-div9' >
-                                <p className='jobtitle9' style={{color:fontColor}}>{works.jobtitle}</p>
-                                <p className='job-year9' style={{color:fontColor}}>{works.startYear}-{works.endYear}</p>
-                                <p className='job-organization9' style={{color:fontColor}} >{works.organization} </p></div>
+                                <p className='jobtitle9' style={{color:fontColor,fontFamily:fontStyle}}>{works.jobtitle}</p>
+                                <p className='job-year9' style={{color:fontColor,fontFamily:fontStyle}}>{works.startYear}-{works.endYear}</p>
+                                <p className='job-organization9' style={{color:fontColor,fontFamily:fontStyle}} >{works.organization} </p></div>
                         </div>
                     ))}
 
-                    <div><h3 className='heading9' style={{color:headingColor,fontWeight:900}}>HOBBIES_</h3></div>
+                    <div><h3 className='heading9' style={{color:headingColor,fontWeight:900,fontFamily:fontStyle}}>HOBBIES_</h3></div>
                     {Hobbies[0].map((hobb, index) => (
                         <div key={index}>
-                            <p className='hobbiesp9' style={{color:fontColor}}>{hobb.hobbies}</p>
+                            <p className='hobbiesp9' style={{color:fontColor,fontFamily:fontStyle}}>{hobb.hobbies}</p>
                         </div>
                     ))}
                     <div className='row'>
-                        <h3 className='heading9' style={{color:headingColor,fontWeight:900}} >SKILLS_</h3>
+                        <h3 className='heading9' style={{color:headingColor,fontWeight:900,fontFamily:fontStyle}} >SKILLS_</h3>
                         {keyskills[0].map((keys, index) => (
                             
                                 <div className='skills9'>
-                                    <div ><p style={{color:fontColor}}>{keys.keyskills}</p> <hr style={{ height: '5px', backgroundColor: 'darkgoldenrod' }} /></div>
+                                    <div ><p style={{color:fontColor,fontFamily:fontStyle}}>{keys.keyskills}</p> <hr style={{ height: '5px', backgroundColor: 'darkgoldenrod' }} /></div>
                                
                             </div>
                         ))}

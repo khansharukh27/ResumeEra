@@ -23,7 +23,7 @@ const Preview107 = () => {
     const socialMediaLink = useSelector((state) => [state.reducer.socialMediaLink]);
     const languages = useSelector((state) => [state.reducer.addLanguage]);
     const hobbies = useSelector((state) => [state.reducer.addHobies])
-    const certi = useSelector((state)=>[state.reducer.certificateData[0]])
+    const certi = useSelector((state) => [state.reducer.certificateData[0]])
     console.log('certificate:-', certi);
     console.log('softskill:-', SoftSkill);
     const handleDownloadPDF = async () => {
@@ -69,7 +69,7 @@ const Preview107 = () => {
                     Take a moment to review your resume. Remember, the right opportunity is just around the corner. Stand out, stay confident, and let ResumeEra be your trusted partner in achieving your career goals!"
                 </p>
             </header>
-            <div style={{ width: '100%' }}><GoogleAd/></div>
+            <div style={{ width: '100%' }}><GoogleAd /></div>
             <div className="main107">
                 <div className="preview107">
                     <div className="header107 " style={{}}>
@@ -77,7 +77,7 @@ const Preview107 = () => {
                             <img className="image107" src={personalInfo.image} style={{}} alt="doctore resume" />
                         </div>
                         <div className="profilediv107">
-                            <h3 style={{ whiteSpace: 'none',  }}>{personalInfo.firstName} {personalInfo.lastName}</h3>
+                            <h3 style={{ whiteSpace: 'none', }}>{personalInfo.firstName} {personalInfo.lastName}</h3>
                             <p style={{ color: 'lightgray', whiteSpace: 'none', fontWeight: 600, }}>{work[0][0].jobtitle}</p>
                             <p style={{ fontSize: '' }}>{personalInfo.object}</p>
                         </div>
@@ -102,28 +102,24 @@ const Preview107 = () => {
                     </div>
                     <div className="d-flex mt-4" >
                         <div style={{ width: '50%' }} className="me-4">
-                            
-                                <h6 className='heading107'>SOFT SKILLS <br /><hr style={{width:'inherite'}} /></h6>
-
-                                <ul className="custom-list" style={{ listStyleType: 'none' }}>
-                                    {SoftSkill && SoftSkill.length > 0 && SoftSkill[0].map((soft, index) => (
-                                        <li key={index} className="d-flex " style={{marginLeft:'-50px'}}>
-                                            <div><span style={{ color: "green", marginRight: "8px" }}>✔</span></div>
-                                            <div>{soft.softSkill}</div>
-                                        </li>
-                                    ))}
-                                </ul>
-
-
+                            <h6 className='heading107'>SOFT SKILLS <br /><hr style={{ width: 'inherite' }} /></h6>
+                            <ul className="custom-list" style={{ listStyleType: 'none' }}>
+                                {SoftSkill && SoftSkill.length > 0 && SoftSkill[0].map((soft, index) => (
+                                    <li key={index} className="d-flex " style={{ marginLeft: '-50px' }}>
+                                        <div><span style={{ color: "green", marginRight: "8px" }}>✔</span></div>
+                                        <div>{soft.softSkill}</div>
+                                    </li>
+                                ))}
+                            </ul>
                             <div>
-                                <h6 className='heading107'>HARD SKILLS <br /><hr style={{width:'inherite'}} /></h6>
+                                <h6 className='heading107'>HARD SKILLS <br /><hr style={{ width: 'inherite' }} /></h6>
 
                                 <ul className="custom-list" style={{ listStyleType: 'none' }}>
                                     {keyskills && keyskills.length > 0 && keyskills[0].map((hard, index) => (
-                                        <li key={index} className="d-flex " style={{marginLeft:'-50px'}}>
+                                        <li key={index} className="d-flex " style={{ marginLeft: '-50px' }}>
                                             <div><span style={{ color: "green", marginRight: "8px" }}>✔</span></div>
                                             <div>{hard.keyskills}</div>
-                                            
+
                                         </li>
                                     ))}
                                 </ul>
@@ -131,7 +127,7 @@ const Preview107 = () => {
 
 
                             <div>
-                                <h6 className="heading107">LANGUAGE <br /><hr style={{width:'inherite'}} /></h6>
+                                <h6 className="heading107">LANGUAGE <br /><hr style={{ width: 'inherite' }} /></h6>
 
                                 <ul className="custom-list" style={{ listStyleType: 'none', padding: 0 }}>
                                     {languages && languages.length > 0 && languages[0].map((hard, index) => (
@@ -162,25 +158,22 @@ const Preview107 = () => {
                                     ))}
                                 </ul>
                             </div>
-
-
                             <div>
-                                <h6 className='heading107'>INTEREST <br /><hr style={{width:'inherite'}} /></h6>
+                                <h6 className='heading107'>INTEREST <br /><hr style={{ width: 'inherite' }} /></h6>
 
                                 <ul className="custom-list" style={{ listStyleType: 'none' }}>
                                     {hobbies && hobbies.length > 0 && hobbies[0].map((hard, index) => (
-                                        <li key={index} className="d-flex " style={{marginLeft:'-50px'}}>
+                                        <li key={index} className="d-flex " style={{ marginLeft: '-50px' }}>
                                             <div><span style={{ color: "green", marginRight: "10px" }}>✔</span></div>
-                                            <div>{hard.hobbies}</div>  
+                                            <div>{hard.hobbies}</div>
                                         </li>
                                     ))}
                                 </ul>
                             </div>
                         </div>
-
-                        <div style={{ width: '50%'  }} className="">
+                        <div style={{ width: '50%' }} className="">
                             <div className=" ">
-                                <h6 className='heading107'>EDUCATION <br /><hr style={{width:'100%'}} /></h6>
+                                <h6 className='heading107'>EDUCATION <br /><hr style={{ width: '100%' }} /></h6>
                                 {education[0].map((edu, index) => (
                                     <div key={index} className="education-item107">
                                         <div className="d-flex justify-content-between">
@@ -198,7 +191,7 @@ const Preview107 = () => {
                             </div>
 
                             <div className=" ">
-                                <h6 className='heading107'>CERTIFICATION <br /><hr style={{width:'inherite'}} /></h6>
+                                <h6 className='heading107'>CERTIFICATION <br /><hr style={{ width: 'inherite' }} /></h6>
                                 {certi.map((edu, index) => (
                                     <div key={index} className="">
                                         <div className="d-flex justify-content-between">
@@ -214,7 +207,6 @@ const Preview107 = () => {
                                     </div>
                                 ))}
                             </div>
-
                         </div>
                     </div>
                 </div>

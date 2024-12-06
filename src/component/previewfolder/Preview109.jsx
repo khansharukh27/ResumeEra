@@ -115,7 +115,7 @@ const Preview109 = () => {
               <h4 style={{ color: headingColor,fontFamily:fontStyle  }}>LANGUAGE <hr  style={{width:'100%'}} /></h4>
               {languages[0].map((keys, index) => (
                 <div key={index} className="language-item109">
-                  <p style={{ color: fontColor }}>{keys.language}</p>
+                  <p style={{ color: fontColor ,marginBottom:'-5px'}}>{keys.language}</p>
                 </div>
               ))}
             </div>

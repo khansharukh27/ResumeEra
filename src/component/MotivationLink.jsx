@@ -2,12 +2,15 @@ import { useState } from "react";
 import GoogleAd from "./adFolder/GoogleAd";
 import type_lazyness from '../image/motivational_image/type_lazyness.webp'
 import pic_1 from '../image/motivational_image/pic_1.png'
+import Career_qoutes from '../image/motivational_image/Career_qoutes.jpg'
+
 const MotivationLink = () => {
     const [searchTerm, setSearchTerm] = useState('');
 
     const posts = [
         { path: '/types-of-laziness', title: 'आलस के 7 प्रकार: कारण और समाधान | ResumeEra', src:type_lazyness, alt: 'आलस के 7 प्रकार and कारण और समाधान ' },
         { path: '/pictures8', title: '8 Pictures That Change the Way You Think - ResumeEra', src:pic_1, alt: '8 Pictures That Change the Way You Think - ResumeEra ' },
+        { path: '/35-career-quotes-to-motivate', title: '35 Career Quotes To Motivate You While Making a free Resume', src:Career_qoutes, alt: '35 Career Quotes To Motivate You While Making a Resume ' },
 
     ]
     const filteredPosts = posts.filter(post =>

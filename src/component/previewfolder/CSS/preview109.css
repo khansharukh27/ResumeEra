@@ -10,6 +10,13 @@
     margin-top: 30px;
     margin-right: 15px;
 }
+.preview109 p{
+    font-size: small;
+}
+.preview109 h4{
+    font-size: small;
+    font-weight: 900;
+}
 .personalInfo{
     background-color: lightgray;
     padding: 15px;
