@@ -7,25 +7,23 @@
     background-color:whitesmoke;
     padding: 10px 20px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
-    width: 100%; /* Use width 100% instead of fit-content for better responsiveness */
+    width: inherit; /* Use width 100% instead of fit-content for better responsiveness */
     /* top: 15px; Position the navbar 15px below the top */
     z-index: 1000;
 }
 
 .navbar-brand {
-    margin-left: 1rem;
+    /* margin-left: 1rem; */
+    /* margin-bottom: 15px; */
 }
-
 
 .navbar-link-brand {
     text-decoration: none;
     font-size: 2.5rem;
     font-weight: bold;
-    
     -webkit-background-clip: text;
     color: black;
     animation: shine 1.5s infinite alternate;
-    
 
 }
 

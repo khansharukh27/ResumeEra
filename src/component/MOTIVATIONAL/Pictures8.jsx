@@ -7,9 +7,16 @@ import pic_5 from '../../image/motivational_image/pic_5.png'
 import pic_6 from '../../image/motivational_image/pic_6.png'
 import pic_7 from '../../image/motivational_image/pic_7.png'
 import pic_8 from '../../image/motivational_image/pic_8.png'
-
-
+import GoogleAd from '../adFolder/GoogleAd'
+import ShareButtons from "../shareButton/ShareButtons";
+import CallToAction from '../CallToAction'
+import { useEffect } from 'react'
 const Pictures8 = () => {
+    const ArticleUrl="https://resumeera.xyz/pictures8"
+    const Articletitle = "8 Pictures That Change the Way You Think - ResumeEra"
+    useEffect(()=>{
+        window.scrollTo(0,0)
+    },[])
     return (
         <div className="aboutResumeEra">
             <Helmet>
@@ -82,6 +89,7 @@ const Pictures8 = () => {
                     impossible possible by believing in “I can.” Trust yourself; every effort is a step closer to success.
                     Replace “I can’t” with “I’ll try,” and watch how obstacles turn into opportunities.</p>
             </section>
+            <div><GoogleAd/></div>
             <section>
                 <h2>What You Give Comes Back to You</h2>
                 <figure style={{ textAlign: 'center' }}>
@@ -92,6 +100,7 @@ const Pictures8 = () => {
                     Life works in a cycle—what you put into the world often finds its way back to you. Acts of kindness, generosity, and positivity can lead to fulfillment and joy, while negativity and harm may return as challenges. By giving your best to others, you invite goodness into your own life. Remember, every action has a reaction, and the energy you share shapes the path ahead.
                 </p>
             </section>
+            <div><GoogleAd/></div>
             <section>
                 <h2>Loyalty Is Rare. If You Find It, Keep It</h2>
                 <figure style={{ textAlign: 'center' }}>
@@ -102,6 +111,7 @@ const Pictures8 = () => {
                     Loyalty is one of the most valuable traits in any relationship, yet it is becoming increasingly rare in today’s world. When you encounter someone who is genuinely loyal, hold onto them. Loyalty goes beyond words; it’s about consistency, trust, and standing by each other through thick and thin. Recognize it, appreciate it, and never take it for granted—because true loyalty is priceless.
                 </p>
             </section>
+            <div><GoogleAd/></div>
             <section>
                 <h2>Don’t Give Up. You Are Closer Than You Think</h2>
                 <figure style={{ textAlign: 'center' }}>
@@ -112,6 +122,7 @@ const Pictures8 = () => {
                     In moments of doubt, it’s easy to feel like giving up is the only option. But often, you are closer to success than you realize. The challenges you face today are just stepping stones toward your goals. Don’t let frustration or setbacks discourage you. Every small effort is a step forward, and persistence is the key to turning your dreams into reality. Stay strong—you’re almost there.
                 </p>
             </section>
+            <div><GoogleAd/></div>
             <section>
                 <h2>Be Obsessed with Freedom, Not Money</h2>
                 <figure style={{ textAlign: 'center' }}>
@@ -122,6 +133,7 @@ const Pictures8 = () => {
                     While money is important, it should never be your sole focus. True fulfillment comes from having the freedom to pursue your passions, make choices that align with your values, and live life without being chained to materialism. When you prioritize freedom, you open doors to personal growth, happiness, and true success. Obsess over freedom, and the rest will follow.
                 </p>
             </section>
+            <div><GoogleAd/></div>
             <section>
                 <h2>Being Late Does Not Mean Failure</h2>
                 <figure style={{ textAlign: 'center' }}>
@@ -132,6 +144,7 @@ const Pictures8 = () => {
                     Being late doesn't define your potential for success. Life isn’t a race, and everyone’s journey has its own pace. Delays, setbacks, and detours don’t equate to failure—they’re simply part of the process. What's important is your commitment to continue moving forward, learning, and growing. Success is about perseverance, not the timing of your arrival.
                 </p>
             </section>
+            <div><GoogleAd/></div>
             <section>
                 <h2>Don’t Burn Your Opportunities for Your Temporary Comfort</h2>
                 <figure style={{ textAlign: 'center' }}>
@@ -142,7 +155,11 @@ const Pictures8 = () => {
                     It's easy to choose comfort in the moment, but sacrificing long-term opportunities for temporary ease can hold you back. Every decision you make today shapes your future, and sometimes, growth requires stepping out of your comfort zone. Don’t let short-term satisfaction rob you of the bigger opportunities waiting for you. Remember, true progress often comes from pushing past comfort.
                 </p>
             </section>
-
+            <div><GoogleAd/></div>
+            <section>
+                <CallToAction/>
+            </section>
+            <div className="stickyShare"><ShareButtons url={ArticleUrl} title={Articletitle}/></div>
         </div>
     )
 }

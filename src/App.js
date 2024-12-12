@@ -1,4 +1,7 @@
 import React, { useEffect } from 'react';
+import { Auth0Provider } from '@auth0/auth0-react';
+import AuthWrapper from '../src/component/signupAndLogin/AuthWrapper';
+
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import './App.css';
@@ -89,7 +92,6 @@ import ResumeCareerChange from './component/ImportantPost/ResumeCareerChange';
 import ResumeRemoteJobs from './component/ImportantPost/ResumeRemoteJobs';
 import ResumeTipsComponent from './component/ImportantPost/ResumeTipsComponent';
 import XYZFormula from './component/ImportantPost/XYZFormula';
-import GoogleForm from './component/GoogleForm';
 import NotFoundPage from './component/ImportantPost/NotFoundPage';
 import AboutResumeEra from './component/ImportantPost/AboutResumeEra';
 import CoverLetter from './component/CoverLetter';
@@ -182,6 +184,10 @@ import ResumeHacks from './component/blogandcareer/ResumeHacks_10';
 import Linkedin from './indeedRssFeed/sociableLinkedin/Linkedin';
 import MotivationalCareerQuotes from './component/MOTIVATIONAL/MotivationalCareerQuotes';
 import Login from './component/signupAndLogin/Login';
+import MotivateToStudy from './component/MOTIVATIONAL/MotivateToStudy';
+import RemoveBadHabits from './component/MOTIVATIONAL/RemoveBadHabits';
+import { loadCoverImages, loadImages, loadTechImages } from './Redux/action';
+import { useDispatch, useSelector } from 'react-redux';
 
 var images = [
   { id: 1, src: resum1, alt: 'Professional Resume Template 1' },
@@ -227,19 +233,33 @@ const CoverImage = [
 console.log('images:=',images)
 console.log(images[0].id)
 const path = 'mainpage'
-// import { useAuth0 } from "@auth0/auth0-react";
 
 function App() {
-  // const {isAuthenticated} = useAuth0();
+  const dispatch = useDispatch();
 
+    useEffect(() => {
+        dispatch(loadImages(images)); // Replace with your actual data
+        dispatch(loadTechImages(techImages));
+        dispatch(loadCoverImages(CoverImage));
+    }, [dispatch]);
+// const result = useSelector((state) =>state.reducer)
+// console.log('image data:-',result)
   useEffect(() => {
     AOS.init()
   }, [])
   return (
     
     <Router style={{ backgroundColor: 'black',width:'100%' }}>
-     
-      <Navbar/>
+     <Auth0Provider
+    domain="sharukhmirza88.us.auth0.com"
+    clientId="XQF85FTYI87P9tX4z18Nlw1npy1N8Bnx"
+    authorizationParams={{
+      redirect_uri: window.location.origin
+    }}
+  >
+    <AuthWrapper><Navbar/></AuthWrapper>
+</Auth0Provider>
+      
       <Routes style={{ width:'100%' }}>
         <Route path='https://sharukhmirza88.us.auth0.com/u/login?state=hKFo2SBrSmlGbld4Mkh5N2JoMUJVaVJSTUNzei1KRDZlVkxUVqFur3VuaXZlcnNhbC1sb2dpbqN0aWTZIDZEX1o5bHVra21hRXNpdVFjSTY2YlRpQ1FPLW5VWnBHo2NpZNkgWFFGODVGVFlJODdQOXRYNHoxOE5sdzFucHkxTjhCbng' element={<Login/>}/>
         <Route path='/' element={<Home images = {images}/>}/>
@@ -257,7 +277,6 @@ function App() {
           <Route key={image.id} path={`/cover_letter/${image.id}`} 
           element={<CoverLettermain path={`/${path}/${image.id}`} CoverImage={CoverImage} />}/>
         ))}
-                
         <Route path='/myresume' element={<MyResume />} />
         <Route path='/cover_letter' element={<CoverLetter CoverImage={CoverImage}/>}/>
         <Route path='/coverletter_component' element={<CoverComponent CoverImage={CoverImage}/>}/>
@@ -281,7 +300,6 @@ function App() {
         <Route path='/hobbies' element={<Hobbies/>}/>
         <Route path='/education' element={<Education/>}/>
         <Route path='/certificate' element={<Certificate/>}/>
-
 {/* interview question post link */}
 
         <Route path='/Interview_Question_Post' element={<InterviewQuestionPost/>}/>
@@ -321,8 +339,6 @@ function App() {
         <Route path='/how-to-write-a-resume-in-7-easy-steps' element={<HowToWriteAResume/>}/>
         <Route path='/what-are-your-strengths' element={<WhatAreYourStrengths/>}/>
         <Route path='/Dont_Copy_Paste_On_Your_Cv' element={<CVWritingTipsComponent2/>}/>
-
-
         {/* interview quation and answer*/}
 
         <Route path='/Why_Work_Here' element={<WhyWorkHere/>}/>
@@ -368,7 +384,6 @@ function App() {
         <Route path='/10-brutal-career-traps' element={<CareerTraps/>}/>
         <Route path='/10-resume-hacks' element={<ResumeHacks/>}/>
 
-
           {/* job hunting */}
           <Route path='/top-careers-for-introverts' element={<JobIntrovertComponent/>}/>
           <Route path='/how-to-spin-job-hopping-as-an-asset' element={<JobHoppingAsset/>}/>
@@ -377,12 +392,10 @@ function App() {
           <Route path='/motivation-link' element={<MotivationLink/>}/>
           <Route path='/types-of-laziness' element={<TypesOfLaziness/>}/>
           <Route path='/pictures8' element={<Pictures8/>}/>
-
+          <Route path='/motivate-yourself-to-study' element={<MotivateToStudy/>}/>
+          <Route path='/remove-bad-habits' element={<RemoveBadHabits/>}/>
           <Route path='/linkedIn_post' element={<Linkedin/>}/>
           <Route path='/35-career-quotes-to-motivate' element={<MotivationalCareerQuotes/>}/>
-
-
-
 {/* preview resume path */}
         <Route path='/preview' element={<Preview />} />
         <Route path='/preview2' element={<Preview2 />}/>

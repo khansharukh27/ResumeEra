@@ -3,7 +3,8 @@ import GoogleAd from "./adFolder/GoogleAd";
 import type_lazyness from '../image/motivational_image/type_lazyness.webp'
 import pic_1 from '../image/motivational_image/pic_1.png'
 import Career_qoutes from '../image/motivational_image/Career_qoutes.jpg'
-
+import creative_image from '../image/motivational_image/creative_image.jpg'
+import Be_A_Topper from '../image/motivational_image/Be_A_Topper.jpeg'
 const MotivationLink = () => {
     const [searchTerm, setSearchTerm] = useState('');
 
@@ -11,6 +12,8 @@ const MotivationLink = () => {
         { path: '/types-of-laziness', title: 'आलस के 7 प्रकार: कारण और समाधान | ResumeEra', src:type_lazyness, alt: 'आलस के 7 प्रकार and कारण और समाधान ' },
         { path: '/pictures8', title: '8 Pictures That Change the Way You Think - ResumeEra', src:pic_1, alt: '8 Pictures That Change the Way You Think - ResumeEra ' },
         { path: '/35-career-quotes-to-motivate', title: '35 Career Quotes To Motivate You While Making a free Resume', src:Career_qoutes, alt: '35 Career Quotes To Motivate You While Making a Resume ' },
+        { path: '/motivate-yourself-to-study', title: '8 Creative Ways to Motivate Yourself When You Dont Feel Like Studying', src:creative_image, alt: '8 Creative Ways to Motivate Yourself' },
+        { path: '/remove-bad-habits', title: 'Remove 10 Habits to Become a Topper in Your Organization | ResumeEra', src:Be_A_Topper, alt: 'Remove 10 Habits to Become a Topper in Your Organization' },
 
     ]
     const filteredPosts = posts.filter(post =>

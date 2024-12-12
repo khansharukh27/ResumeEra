@@ -109,3 +109,19 @@ export const ProjectData = (data) => {
         payload: data,
     };
 };
+
+export const loadImages = (images) => ({
+    type: 'LOAD_IMAGES',
+    payload: images,
+});
+
+export const loadTechImages = (techImages) =>({
+    type:'TECH_IMAGES',
+    payload:techImages
+});
+
+export const loadCoverImages = (CoverImage) =>({
+    type:'COVER_IMAGE',
+    payload:CoverImage
+});
+

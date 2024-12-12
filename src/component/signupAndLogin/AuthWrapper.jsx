@@ -1,20 +1,17 @@
 import React from 'react';
 import { useAuth0 } from '@auth0/auth0-react';
 import Login from './Login';
-import Profile from './ProfilePage';
-
+import Profile_byDefault_image from '../../image/Profile_byDefault_image.png' 
 const AuthWrapper = ({ children }) => {
-    const { isAuthenticated, loginWithRedirect, logout, user } = useAuth0();
-
+    const { isAuthenticated, logout, user } = useAuth0();
     if (!isAuthenticated) {
         return (
-            <div style={{ textAlign: 'center', marginTop: '50px' }}>
+            <div style={{  textAlign:'center'}}>
                 <h1>Login to Access the App</h1>
                 <Login />
             </div>
         );
     }
-
     return (
         <div>
             <div style={{
@@ -26,15 +23,14 @@ const AuthWrapper = ({ children }) => {
                 cursor: 'pointer',
                 color: 'white',
                 border: 'none',
-                borderRadius: '5px',
-                width: '100%',
+                borderRadius: '15px',
+                width: '99%',
                 height: '80px',
                 backgroundColor: 'goldenrod',
-
+                marginTop:'20px'
             }}>
-                <img style={{ width: '40px', height: '60px', borderRadius: '5px', marginLeft: '0px' }} src={user.picture} alt={user.name} />
+                <img style={{ width: '60px', height: '60px', borderRadius: '50%', marginTop:'10px',marginLeft:'5px' }} src={user.picture?user.picture: Profile_byDefault_image.png} alt={user.name} />
             </div>
-
             <button
                 onClick={() =>
                     logout({ returnTo: window.location.origin })
@@ -58,5 +54,4 @@ const AuthWrapper = ({ children }) => {
         </div>
     );
 };
-
 export default AuthWrapper;

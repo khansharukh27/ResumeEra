@@ -1,3 +1,4 @@
+import { useAuth0 } from '@auth0/auth0-react';
 // import logo from '../image/logo.png';
 import Carousel from './Crousel';
 import step1 from '../image/step1.png';
@@ -11,6 +12,8 @@ import best_logo from '../image/best_logo.webp'
 import { Helmet } from 'react-helmet';
 
 const Home = ({ images }) => {
+    const { isAuthenticated,loginWithRedirect} = useAuth0();
+
     return (
         <div className="home-container">
              <Helmet>
@@ -75,14 +78,24 @@ const Home = ({ images }) => {
                 <div className="home-logo">
                     <img src={best_logo} alt="ResumeEra logo" />
                 </div>
-                <div className="home-welcome " style={{color:'orange'}}>
-                    <h1 style={{color:'black',textAlign:'justify',marginRight:'10px',marginLeft:'40px'}}>
-                        
-                        <Link className="home-link" to="/template">WELCOME TO RESUMEERA! PLEASE CLICK
-                        PERSONALLIZED TEMPLATE FOR EVERY INDUSTRY  TO MAKE A FREE RESUME.</Link>
-                       
-                    </h1>
-                </div>
+                <div className="home-welcome" style={{ color: 'orange' }}>
+            <h1 style={{ color: 'black', textAlign: 'justify', margin: '0 10px 0 40px' }}>
+                {isAuthenticated ? (
+                    <Link className="home-link" to="/template">
+                        WELCOME TO RESUMEERA! PLEASE CLICK PERSONALLIZED TEMPLATE FOR EVERY INDUSTRY TO MAKE A FREE RESUME.
+                    </Link>
+                ) : (
+                    <span
+                        style={{ cursor: 'pointer', textDecoration: 'underline' }}
+                        onClick={() => loginWithRedirect()}
+                    >
+                        PLEASE LOGIN TO ACCESS PERSONALLIZED TEMPLATES FOR EVERY INDUSTRY TO MAKE A FREE RESUME.
+                    </span>
+                )}
+            </h1>
+        </div>
+                
+                
             </div>
 
             <div className="home-carousel">
@@ -131,7 +144,13 @@ const Home = ({ images }) => {
                         <li>Blow away recruiters with sleek designs.</li>
                         <li>Let employers see your true self—the best candidate for the job.</li>
                     </ul>
-                    <p style={{textAlign:'center'}}><a href="/template">Create Free CV</a></p>
+                    {isAuthenticated ?(
+                        <p style={{textAlign:'center'}}><a href="/template">Create Free CV</a></p>
+                    ):(
+                        <p style={{textAlign:'center'}}>
+                            <span onClick={()=>loginWithRedirect()} style={{border:'1px solid grey',borderRadius:'10px',padding:'5px',backgroundColor:'blue',color:'white'}} >Create Free CV</span>
+                        </p>
+                    )}
                 </div>
             </div>
             <hr className="home-divider" />
@@ -141,7 +160,9 @@ const Home = ({ images }) => {
                 <div className="home-resume-features ">
                     <div className="home-feature">
                         <h5 style={{color:'black',fontWeight:900}}><i className='bi bi-buildings' ></i> Your data is safe</h5>
-                        <p>We do not save your data right now.</p>
+                        <p>At ResumeEra, your privacy is our top priority. We collect only the information needed to provide you with a personalized resume-building experience.
+                            to learn more ,You can click this link... <a href='/template'>Privacy policy</a>
+                        </p>
                     </div>
                     <div className="home-feature" style={{color:'black'}}>
                         <h5 style={{color:'black',fontWeight:900}}><i className='bi bi-newspaper'></i> Approved templates</h5>

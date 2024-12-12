@@ -1,5 +1,7 @@
 // import { templatePage } from "./action";
 
+// import { coverletters, techImages } from "./action";
+
 // import { ProjectData } from "./action";
 
 // import { addReferences, certificateData, coverletters } from "./action";
@@ -20,7 +22,10 @@ const initialState = {
   addReference:JSON.parse(localStorage.getItem("referencesData")) || [],
   coverletterss: JSON.parse(localStorage.getItem("coverletterss")) || [],
   certificateData: JSON.parse(localStorage.getItem("certificateData")) || [],
-  projectData: JSON.parse(localStorage.getItem("ProjectData")) || []
+  projectData: JSON.parse(localStorage.getItem("ProjectData")) || [],
+  images: [],
+    techImages: [],
+    coverImages: [],
 };
 
 const reducer = (state = initialState, action) => {
@@ -102,6 +107,21 @@ const reducer = (state = initialState, action) => {
         return{
           ...state,
           projectData:[action.payload]
+        }
+        case 'LOAD_IMAGES':  
+        return{
+          ...state,
+          images:[action.payload]
+        }
+        case 'TECH_IMAGES':  
+        return{
+          ...state,
+          techImages:[action.payload]
+        }
+        case 'COVER_IMAGE':  
+        return{
+          ...state,
+          coverletters:[action.payload]
         }  
     default:
       return state;

@@ -17,8 +17,8 @@ const Preview107 = () => {
     const education = useSelector((state) => [state.reducer.education]);
     const keyskills = useSelector((state) => [state.reducer.keySkills]);
     const work = useSelector((state) => [state.reducer.workExperience]);
-    const Honor = useSelector((state) => [state.reducer.honorAndaward]);
-    const Refrence = useSelector((state) => [state.reducer.addReference]);
+    // const Honor = useSelector((state) => [state.reducer.honorAndaward]);
+    // const Refrence = useSelector((state) => [state.reducer.addReference]);
     const SoftSkill = useSelector((state) => [state.reducer.addSoftSkills]);
     const socialMediaLink = useSelector((state) => [state.reducer.socialMediaLink]);
     const languages = useSelector((state) => [state.reducer.addLanguage]);

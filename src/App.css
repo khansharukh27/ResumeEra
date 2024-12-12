@@ -3,6 +3,7 @@
 }
 
 .input {
+  /* width: fit-content; */
     max-width: 190px;
     border: 1px solid transparent;
     border-color: #00DDEB;

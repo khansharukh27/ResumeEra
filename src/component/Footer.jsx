@@ -1,9 +1,13 @@
+
 import React from 'react';
+import { useAuth0 } from '@auth0/auth0-react';
 import { FaFacebook, FaTwitter, FaLinkedin, FaInstagram, FaReddit, FaQuora } from 'react-icons/fa';
 import '../css/footer.css'; // Custom CSS file for footer styling
 import { Link } from 'react-router-dom';
 
 const Footer = () => {
+  // const { isAuthenticated,loginWithRedirect } = useAuth0();
+
   return (
     <footer className="footer">
       <div className="footer-content">
@@ -57,7 +61,7 @@ const Footer = () => {
         </div>
         <div className="footer-links">
           <h3  style={{ color: 'green' }}>Learn</h3>
-          <ul>
+            <ul>
             <li><Link to="/importantPost">Post To Learn</Link></li>
             <li><Link to="/Blog_or_Career_Tips_Page">Career Tips </Link></li>
             <li><Link to="/Interview_Question_Post">Interview Question Post</Link></li>
