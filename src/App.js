@@ -188,6 +188,7 @@ import MotivateToStudy from './component/MOTIVATIONAL/MotivateToStudy';
 import RemoveBadHabits from './component/MOTIVATIONAL/RemoveBadHabits';
 import { loadCoverImages, loadImages, loadTechImages } from './Redux/action';
 import { useDispatch, useSelector } from 'react-redux';
+import CoverLetterGuide from './component/ImportantPost/CoverLetterGuide';
 
 var images = [
   { id: 1, src: resum1, alt: 'Professional Resume Template 1' },
@@ -301,7 +302,7 @@ function App() {
         <Route path='/education' element={<Education/>}/>
         <Route path='/certificate' element={<Certificate/>}/>
 {/* interview question post link */}
-
+<Route path='/how-to-write-a-cover-letter-guide-2024' element={<CoverLetterGuide/>}/>
         <Route path='/Interview_Question_Post' element={<InterviewQuestionPost/>}/>
         <Route path='/job_hunting' element={<JobHunting/>} />
         <Route path='/ImportantPost' element={<ImportantPost/>} />

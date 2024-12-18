@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/static/css/main.21bce3e0.css",
-    "main.js": "/static/js/main.d3380ff4.js",
+    "main.css": "/static/css/main.e9750f8b.css",
+    "main.js": "/static/js/main.c1c8fded.js",
     "static/js/213.4bcf3a1f.chunk.js": "/static/js/213.4bcf3a1f.chunk.js",
     "static/js/732.74f387fd.chunk.js": "/static/js/732.74f387fd.chunk.js",
     "static/js/453.43540b4d.chunk.js": "/static/js/453.43540b4d.chunk.js",
@@ -21,6 +21,7 @@
     "static/media/Community_Support.jpeg": "/static/media/Community_Support.045bb9af846b4ba493cf.jpeg",
     "static/media/Career_qoutes.jpg": "/static/media/Career_qoutes.0c419f0fb227b32ad1fd.jpg",
     "static/media/Unnecessary_References.jpg": "/static/media/Unnecessary_References.09bc0d0e3127988ca4d9.jpg",
+    "static/media/Be_A_Topper.jpeg": "/static/media/Be_A_Topper.c2e48a3ec4d3cf68d6db.jpeg",
     "static/media/linkedin_profile_img2.jpg": "/static/media/linkedin_profile_img2.9d3e6e96406c579ba4d7.jpg",
     "static/media/Outdated_or_Irrelevant _Skills.jpg": "/static/media/Outdated_or_Irrelevant _Skills.1dd3aecd707a38a6d9a3.jpg",
     "static/media/market_research.jpeg": "/static/media/market_research.bf526444b4e2cd8ff339.jpeg",
@@ -178,14 +179,14 @@
     "static/media/slick.eot": "/static/media/slick.a4e97f5a2a64f0ab1323.eot",
     "static/media/slick.ttf": "/static/media/slick.c94f7671dcc99dce43e2.ttf",
     "static/media/slick.woff": "/static/media/slick.295183786cd8a1389865.woff",
-    "main.21bce3e0.css.map": "/static/css/main.21bce3e0.css.map",
-    "main.d3380ff4.js.map": "/static/js/main.d3380ff4.js.map",
+    "main.e9750f8b.css.map": "/static/css/main.e9750f8b.css.map",
+    "main.c1c8fded.js.map": "/static/js/main.c1c8fded.js.map",
     "213.4bcf3a1f.chunk.js.map": "/static/js/213.4bcf3a1f.chunk.js.map",
     "732.74f387fd.chunk.js.map": "/static/js/732.74f387fd.chunk.js.map",
     "453.43540b4d.chunk.js.map": "/static/js/453.43540b4d.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.21bce3e0.css",
-    "static/js/main.d3380ff4.js"
+    "static/css/main.e9750f8b.css",
+    "static/js/main.c1c8fded.js"
   ]
 }

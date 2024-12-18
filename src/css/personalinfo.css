@@ -40,6 +40,20 @@ color: black;
     position: absolute;
     text-transform: uppercase;
 }
+.suggetion_to_object{
+    
+        /* position: fixed; */
+        max-width: 620px;
+        padding: 0;
+        margin: 5px 0;
+        border: 1px solid transparent;
+        border-color: rgb(164, 244, 250);
+        border-radius: 4px;
+        background-color: #ffffff; /* Add a background color */
+        max-height: 100%;
+        overflow-y: auto;
+        z-index: 10; /* Ensure it stays on top */
+}
 
 .profile-imgs{
     height: 100px;

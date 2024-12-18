@@ -46,6 +46,7 @@ const ImportantPostLink = () => {
     { path: '/remote-work-experience', title: 'Remote Work Experience | Customized Resumes for Each Application', src: 'https://img.freepik.com/free-photo/person-working-remote-resume_23-2149050343.jpg', alt: 'Remote work experience resume' },
     { path: '/how-to-write-a-resume-in-7-easy-steps', title: 'How To Write A Resume In 7 Easy Steps', src: 'https://img.freepik.com/free-photo/easy-resume-steps_23-2148998418.jpg', alt: 'Resume writing steps' },
     { path: '/Dont_Copy_Paste_On_Your_Cv', title: 'CV Writing Tips: क्या आप भी कॉपी-पेस्ट कर बनाते हैं सीवी?', src: 'https://resumeera.xyz/static/media/Proofread_Edit_Thoroughly.39720e0319743c16a794.jpeg', alt: 'Dont Copy Past On Your Cv' },
+    { path: '/how-to-write-a-cover-letter-guide-2024', title: 'How to Write a Cover Letter [Full Guide & Examples for 2024]', src: 'https://resumeera.xyz/static/media/Proofread_Edit_Thoroughly.39720e0319743c16a794.jpeg', alt: 'Dont Copy Past On Your Cv' },
 
 ];
 

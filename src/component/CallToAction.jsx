@@ -2,14 +2,12 @@ import React, { useState, useEffect } from "react";
 import { useSelector } from "react-redux";
 
 const CallToAction = () => {
-  const [randomImages, setRandomImages] = useState([]);
-const images = useSelector((state)=>state.reducer.images)
-const techImages = useSelector((state)=>state.reducer.techImages)
-console.log('techImages in callto action:-',techImages)
-
+const [randomImages, setRandomImages] = useState([]);
+const result = useSelector((state)=>state.reducer.techImages)
+console.log('image in calltoAction:-',result)
   useEffect(() => {
     const getRandomImages = () => {
-      const allImages = [...images, ...techImages]; // Combine both arrays
+      const allImages = [...result]; // Combine both arrays
       const selectedImages = [];
 
       if (allImages.length === 0) {
@@ -26,12 +24,11 @@ console.log('techImages in callto action:-',techImages)
           selectedImages.push(randomImage);
         }
       }
-
       setRandomImages(selectedImages);
     };
 
     getRandomImages();
-  }, [images, techImages]);
+  }, [result]);
 
   return (
     <div
@@ -57,10 +54,11 @@ console.log('techImages in callto action:-',techImages)
           justifyContent: "center",
           gap: "10px",
           marginBottom: "20px",
+          overflow:'hidden'
         }}
       >
         {randomImages.length > 0 ? (
-          randomImages.map((image) => (
+          randomImages[0].map((image) => (
             <img
               key={image.id}
               src={image.src}
@@ -80,7 +78,7 @@ console.log('techImages in callto action:-',techImages)
 
       {/* Call-to-Action Button */}
       <a
-        href="/free-resume-builder"
+        href="/"
         style={{
           display: "inline-block",
           backgroundColor: "#007BFF",
@@ -90,6 +88,7 @@ console.log('techImages in callto action:-',techImages)
           borderRadius: "5px",
           textDecoration: "none",
           transition: "background-color 0.3s ease",
+          overflow:'hidden'
         }}
         onMouseOver={(e) => (e.target.style.backgroundColor = "#0056b3")}
         onMouseOut={(e) => (e.target.style.backgroundColor = "#007BFF")}

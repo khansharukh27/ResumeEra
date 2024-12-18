@@ -3,6 +3,7 @@ import { Helmet } from "react-helmet";
 import type_lazyness from '../../image/motivational_image/type_lazyness.webp'
 import ShareButtons from "../shareButton/ShareButtons";
 import GoogleAd from "../adFolder/GoogleAd";
+import CallToAction from "../CallToAction";
 const TypesOfLaziness = () => {
   const ArticleUrl = 'https://resumeera.xyz/types-of-laziness'
   const ArticleTitle  = 'आलस के 7 प्रकार: कारण और समाधान | ResumeEra'
@@ -142,6 +143,9 @@ const TypesOfLaziness = () => {
         आलस एक अस्थायी समस्या है, जिसे सही दिशा, सोच और अभ्यास से दूर किया जा सकता है। हर प्रकार के आलस के पीछे एक कारण होता है, और जब आप उस कारण को समझकर समाधान अपनाते हैं, तो सफलता निश्चित है।
       </p>
       <blockquote>आलस को हराने का पहला कदम है इसे पहचानना और दूसरा है इसे हराने के लिए एक्शन लेना।</blockquote>
+      <div style={{overflow:'hidden'}}>
+          <CallToAction/>
+          </div>
       <div className="stickyShare">
         <ShareButtons url={ArticleUrl} title={ArticleTitle}/>
       </div>

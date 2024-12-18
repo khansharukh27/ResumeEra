@@ -5,134 +5,179 @@ import PersonalInfo from "./PersonalInfo";
 import Education from "./Education";
 import GoogleAd from "./adFolder/GoogleAd";
 import Blank from "./Blank";
+import { jobTitles } from "./suggetionList";
 
 const WorkExperience = () => {
   const [showPersonalInfo, setShowPersonalInfo] = useState(false);
   const [showWorkExperience, setShowWorkExperience] = useState(true);
   const [showEducation, setShowEducation] = useState(false);
+  const [filteredSuggestions, setFilteredSuggestions] = useState([]);
+  const [activeSuggestionIndex, setActiveSuggestionIndex] = useState(null);
 
-  // Initialize workExperiences with localStorage data or default structure
+  // Initialize work experiences from localStorage or default structure
   const [workExperiences, setWorkExperiences] = useState(() => {
-    const savedWorkExperiences = localStorage.getItem("workExperiences");
-    return savedWorkExperiences ? JSON.parse(savedWorkExperiences) : [
-      { jobtitle: '', organization: '', startYear: '', endYear: '', aboutexperience: '' }
-    ];
+    const saved = localStorage.getItem("workExperiences");
+    return saved
+      ? JSON.parse(saved)
+      : [{ jobtitle: "", organization: "", startYear: "", endYear: "", aboutexperience: "" }];
   });
 
-  // Refs to focus on empty fields
   const inputRefs = useRef([]);
+
+  const dispatch = useDispatch();
 
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
-  const dispatch = useDispatch();
-
   useEffect(() => {
-    // Save work experiences to local storage whenever they change
     localStorage.setItem("workExperiences", JSON.stringify(workExperiences));
   }, [workExperiences]);
 
   const handleChange = (e, index) => {
     const { name, value } = e.target;
-    setWorkExperiences((prev) => {
-      const updatedExperiences = [...prev];
-      updatedExperiences[index] = {
-        ...updatedExperiences[index],
-        [name]: value.toUpperCase()
-      };
-      return updatedExperiences;
-    });
+    if (name === "jobtitle") {
+      if (value) {
+        const filtered = jobTitles.filter((suggestion) =>
+          suggestion.toUpperCase().includes(value.toUpperCase())
+        );
+        setFilteredSuggestions(filtered);
+        setActiveSuggestionIndex(index); // Track which input is active for suggestions
+      } else {
+        setFilteredSuggestions([]);
+      }
+    }
+
+    setWorkExperiences((prev) =>
+      prev.map((experience, i) =>
+        i === index ? { ...experience, [name]: value } : experience
+      )
+    );
+  };
+
+  const handleSuggestionClick = (suggestion) => {
+    if (activeSuggestionIndex !== null) {
+      setWorkExperiences((prev) =>
+        prev.map((experience, i) =>
+          i === activeSuggestionIndex ? { ...experience, jobtitle: suggestion } : experience
+        )
+      );
+    }
+    setFilteredSuggestions([]); // Clear suggestions
+    setActiveSuggestionIndex(null);
   };
 
   const handleAddMore = () => {
     setWorkExperiences([
-      ...workExperiences, 
-      { jobtitle: '', organization: '', startYear: '', endYear: '', aboutexperience: '' }
+      ...workExperiences,
+      { jobtitle: "", organization: "", startYear: "", endYear: "", aboutexperience: "" },
     ]);
   };
 
-  const handleClickBack = (e) => {
-    e.preventDefault();
+  const handleDelete = (index) => {
+    setWorkExperiences((prev) => prev.filter((_, i) => i !== index));
+  };
+
+  const handleClickBack = () => {
     setShowPersonalInfo(true);
     setShowWorkExperience(false);
   };
 
   const handleClickNext = (e) => {
     e.preventDefault();
-    
-    // Check for any empty fields and find the first one
     const firstEmptyIndex = workExperiences.findIndex((experience) =>
       !experience.jobtitle || !experience.organization || !experience.startYear || !experience.endYear || !experience.aboutexperience
     );
 
     if (firstEmptyIndex !== -1) {
-      alert("Your input is blank. Please fill in all fields.");
-      
-      // Focus on the first empty field
+      alert("Please fill in all fields.");
       const fieldNames = ["jobtitle", "organization", "startYear", "endYear", "aboutexperience"];
-      for (let fieldName of fieldNames) {
-        if (!workExperiences[firstEmptyIndex][fieldName]) {
-          inputRefs.current[firstEmptyIndex][fieldName].focus();
-          break;
-        }
-      }
-      return; // Stop here if any field is blank
+      const emptyFieldName = fieldNames.find(
+        (field) => !workExperiences[firstEmptyIndex][field]
+      );
+      inputRefs.current[firstEmptyIndex]?.[emptyFieldName]?.focus();
+      return;
     }
-
-    // Proceed if all fields are filled
     setShowEducation(true);
     setShowWorkExperience(false);
     dispatch(workExData(workExperiences));
-    console.log('Work Experiences:', workExperiences);
-    
   };
 
   const handleSubmit = (e) => {
     e.preventDefault();
     dispatch(workExData(workExperiences));
-    console.log('Work Experiences:', workExperiences);
-  };
-
-  const handleDelete = (index) => {
-    setWorkExperiences((prev) => (
-      prev.filter((_, i) => i !== index)
-    ));
   };
 
   return (
     <form onSubmit={handleSubmit}>
       {showWorkExperience && (
         <div>
-          <Blank/>
+          <Blank />
           <div className="profetional-detail">
             <h1 className="multicolor-heading">Your Work Experience</h1>
-            <p>Work experience is a crucial component of a resume...</p>
+            <p>
+              Work experience is a crucial part of a resume that highlights your career journey, skills, and
+              achievements...
+            </p>
           </div>
           {workExperiences.map((experience, index) => (
             <div key={index}>
-              <h1 style={{ color: 'white', textAlign: 'center' }}>Work Experience {index + 1}</h1>
-              <hr style={{width:'inherit'}}/>
+              <h1 style={{ color: "white", textAlign: "center" }}>Work Experience {index + 1}</h1>
+              <hr style={{ width: "inherit" }} />
               <div className="d-sm-flex one">
-                <input 
+                <input
                   ref={(el) => (inputRefs.current[index] = { ...inputRefs.current[index], jobtitle: el })}
-                  className="input mb-2" 
-                  onChange={(e) => handleChange(e, index)} 
-                  type="text" 
-                  placeholder='Job Title' 
-                  name="jobtitle" 
-                  value={experience.jobtitle} 
+                  className="input mb-2"
+                  onChange={(e) => handleChange(e, index)}
+                  type="text"
+                  placeholder="Job Title"
+                  name="jobtitle"
+                  value={experience.jobtitle}
                 />
-                <input 
+              {filteredSuggestions.length > 0 && (
+                <ul
+                  style={{
+                    listStyleType: "none",
+                    padding: "0",
+                    margin: "5px 0",
+                    border: "1px solid transparent",
+                    
+                    borderRadius: "4px",
+                    backgroundColor: "white",
+                    maxHeight: "70px",
+                    overflowY: "auto",
+                  }}
+                >
+                  {filteredSuggestions.map((suggestion, index) => (
+                    <li
+                      key={index}
+                      onClick={() => handleSuggestionClick(suggestion)}
+                      style={{
+                        color:'black',
+                        padding: "10px",
+                        cursor: "pointer",
+                        borderBottom:
+                          index < filteredSuggestions.length - 1
+                            ? "1px solid #eee"
+                            : "none",
+                      }}
+                    >
+                      {suggestion}
+                    </li>
+                  ))}
+                </ul>
+              )}  
+                <input
                   ref={(el) => (inputRefs.current[index] = { ...inputRefs.current[index], organization: el })}
-                  className="input mb-2" 
-                  onChange={(e) => handleChange(e, index)} 
-                  type="text" 
-                  placeholder='Organization Name' 
-                  name="organization" 
-                  value={experience.organization} 
+                  className="input mb-2"
+                  onChange={(e) => handleChange(e, index)}
+                  type="text"
+                  placeholder="Organization Name"
+                  name="organization"
+                  value={experience.organization}
                 />
               </div>
+              
               <div className="d-sm-flex one">
                 <input 
                   ref={(el) => (inputRefs.current[index] = { ...inputRefs.current[index], startYear: el })}
@@ -166,29 +211,28 @@ const WorkExperience = () => {
                   value={experience.aboutexperience}
                 ></textarea>
               </div>
+              {/* Additional Fields */}
               <div className="d-flex justify-content-center m-2">
-                <button className="button1" type="button" onClick={() => handleDelete(index)}>
+                <button
+                  className="button1"
+                  type="button"
+                  onClick={() => handleDelete(index)}
+                >
                   <span className="text">DELETE</span>
                 </button>
               </div>
-              <hr className="m-2" style={{width:'inherit'}} />
+              <hr className="m-2" />
             </div>
           ))}
           <div className="d-flex justify-content-center m-2">
             <button className="button1" type="button" onClick={handleAddMore}>
-              <span className="text">ADD MORE</span>
+            <span className="text">ADD MORE</span>
             </button>
           </div>
-          <div>
-            <GoogleAd />
-          </div>
+          <GoogleAd />
           <div className="d-flex justify-content-around">
-            <button onClick={handleClickBack} className="button1">
-              <span className="text">BACK</span>
-            </button>
-            <button onClick={handleClickNext} type="submit" className="button1">
-              <span className="text">NEXT</span>
-            </button>
+            <button onClick={handleClickBack} className="button1"><span className="text">BACK</span></button>
+            <button onClick={handleClickNext} type="submit" className="button1"><span className="text">NEXT</span></button>
           </div>
         </div>
       )}

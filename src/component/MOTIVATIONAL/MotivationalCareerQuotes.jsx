@@ -3,6 +3,7 @@ import { Helmet } from "react-helmet";
 import Career_qoutes from '../../image/motivational_image/Career_qoutes.jpg'
 import ShareButtons from "../shareButton/ShareButtons";
 import GoogleAd from "../adFolder/GoogleAd";
+import CallToAction from "../CallToAction";
 const MotivationalCareerQuotes = () => {
     const ArticleUrl = 'https://resumeera.xyz/35-career-quotes-to-motivate'
     const ArticleTitle = '35 Career Quotes To Motivate You While Making a Resume'
@@ -158,6 +159,9 @@ const MotivationalCareerQuotes = () => {
           }
         })}
       </script>
+      <div style={{overflow:'hidden'}}>
+          <CallToAction/>
+          </div>
       <div className="stickyShare">
         <ShareButtons url={ArticleUrl} title={ArticleTitle}/>
       </div>

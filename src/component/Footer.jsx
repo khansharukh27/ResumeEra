@@ -6,7 +6,7 @@ import '../css/footer.css'; // Custom CSS file for footer styling
 import { Link } from 'react-router-dom';
 
 const Footer = () => {
-  // const { isAuthenticated,loginWithRedirect } = useAuth0();
+  const { isAuthenticated,loginWithRedirect } = useAuth0();
 
   return (
     <footer className="footer">
@@ -35,7 +35,6 @@ const Footer = () => {
               </Link>
             </li>
           </ul>
-
           <ul className="social-links">
             <li>
               <Link to="https://www.reddit.com/user/shahrukhmirza888/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
@@ -49,7 +48,6 @@ const Footer = () => {
             </li>
           </ul>
         </div>
-
         <div className="footer-links">
           <h3 style={{ color: 'green' }}>Quick Links</h3>
           <ul>
@@ -60,7 +58,7 @@ const Footer = () => {
           </ul>
         </div>
         <div className="footer-links">
-          <h3  style={{ color: 'green' }}>Learn</h3>
+          <h3  style={{ color: 'green' }}>Learn</h3>        
             <ul>
             <li><Link to="/importantPost">Post To Learn</Link></li>
             <li><Link to="/Blog_or_Career_Tips_Page">Career Tips </Link></li>

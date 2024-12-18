@@ -112,9 +112,9 @@ const MotivateToStudy = () => {
       <p>
         Studying doesn’t have to feel like a burden. By implementing these creative techniques, you can reignite your motivation and make learning an enjoyable part of your daily routine. Remember, every small effort counts toward your success.
       </p>
-        <div>
-            <CallToAction/>
-        </div>
+      <div style={{overflow:'hidden'}}>
+          <CallToAction/>
+          </div>
       <div style={{ marginTop: "30px", borderTop: "1px solid #ccc", paddingTop: "10px", fontSize: "14px", color: "gray" }}>
         <p>Author: ResumeEra Team</p>
         <p>Date: {currentDate}</p>
