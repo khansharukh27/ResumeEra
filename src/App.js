@@ -189,6 +189,9 @@ import RemoveBadHabits from './component/MOTIVATIONAL/RemoveBadHabits';
 import { loadCoverImages, loadImages, loadTechImages } from './Redux/action';
 import { useDispatch, useSelector } from 'react-redux';
 import CoverLetterGuide from './component/ImportantPost/CoverLetterGuide';
+import HowToMakeResume2024 from './component/ImportantPost/HowToMakeResume2024';
+import CareerTruths from './component/MOTIVATIONAL/CareerTruths';
+import WorkplaceStressGuide from './component/blogandcareer/WorkplaceStressManagement';
 
 var images = [
   { id: 1, src: resum1, alt: 'Professional Resume Template 1' },
@@ -302,6 +305,7 @@ function App() {
         <Route path='/education' element={<Education/>}/>
         <Route path='/certificate' element={<Certificate/>}/>
 {/* interview question post link */}
+<Route path='/how-to-make-a-resume-2024' element={<HowToMakeResume2024/>}/>
 <Route path='/how-to-write-a-cover-letter-guide-2024' element={<CoverLetterGuide/>}/>
         <Route path='/Interview_Question_Post' element={<InterviewQuestionPost/>}/>
         <Route path='/job_hunting' element={<JobHunting/>} />
@@ -384,7 +388,9 @@ function App() {
         <Route path='/8-reasons-for-interview-rejection' element={<RejectionReasonsComponent/>}/>
         <Route path='/10-brutal-career-traps' element={<CareerTraps/>}/>
         <Route path='/10-resume-hacks' element={<ResumeHacks/>}/>
+        <Route path='/workplace-stress-management' element={<WorkplaceStressGuide/>}/>
 
+        
           {/* job hunting */}
           <Route path='/top-careers-for-introverts' element={<JobIntrovertComponent/>}/>
           <Route path='/how-to-spin-job-hopping-as-an-asset' element={<JobHoppingAsset/>}/>
@@ -397,6 +403,9 @@ function App() {
           <Route path='/remove-bad-habits' element={<RemoveBadHabits/>}/>
           <Route path='/linkedIn_post' element={<Linkedin/>}/>
           <Route path='/35-career-quotes-to-motivate' element={<MotivationalCareerQuotes/>}/>
+          <Route path='/13-brutal-career-truths' element={<CareerTruths/>}/>
+
+
 {/* preview resume path */}
         <Route path='/preview' element={<Preview />} />
         <Route path='/preview2' element={<Preview2 />}/>

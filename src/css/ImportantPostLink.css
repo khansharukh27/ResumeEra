@@ -7,18 +7,18 @@
 }
 
 /* Card Styles */
-.cards {
+.cardss {
     width: 100%;
     height: 380px;
-    border: 1px solid #ddd;
+    /* border: 1px solid #ddd; */
     border-radius: 15px;
     overflow: hidden;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
+    /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+    /* transition: transform 0.3s ease; */
 }
 
 .card:hover {
-    transform: translateY(-5px);
+    transform: translateY(15px);
 }
 
 .card-img-top {
@@ -29,8 +29,9 @@
 }
 
 .card-body {
-    padding: 1rem;
+    /* padding: 1rem; */
     text-align: center;
+    height: fit-content;
 }
 
 .card-title {
@@ -65,9 +66,7 @@
     .card-title {
         font-size: 1rem;
     }
-    .btn-primary {
-        font-size: 0.9rem;
-    }
+    
 }
 
 /* Small Devices (up to 768px) */
