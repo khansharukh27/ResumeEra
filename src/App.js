@@ -192,6 +192,8 @@ import CoverLetterGuide from './component/ImportantPost/CoverLetterGuide';
 import HowToMakeResume2024 from './component/ImportantPost/HowToMakeResume2024';
 import CareerTruths from './component/MOTIVATIONAL/CareerTruths';
 import WorkplaceStressGuide from './component/blogandcareer/WorkplaceStressManagement';
+import AIBiasInHiring from './component/blogandcareer/AIBiasInHiring';
+import SleepAndProductivity from './component/blogandcareer/SleepAndProductivity';
 
 var images = [
   { id: 1, src: resum1, alt: 'Professional Resume Template 1' },
@@ -389,8 +391,11 @@ function App() {
         <Route path='/10-brutal-career-traps' element={<CareerTraps/>}/>
         <Route path='/10-resume-hacks' element={<ResumeHacks/>}/>
         <Route path='/workplace-stress-management' element={<WorkplaceStressGuide/>}/>
+        <Route path='/ai-bias-in-hiring' element={<AIBiasInHiring/>}/>
+        <Route path='/sleep-and-productivity' element={<SleepAndProductivity/>}/>
 
         
+
           {/* job hunting */}
           <Route path='/top-careers-for-introverts' element={<JobIntrovertComponent/>}/>
           <Route path='/how-to-spin-job-hopping-as-an-asset' element={<JobHoppingAsset/>}/>

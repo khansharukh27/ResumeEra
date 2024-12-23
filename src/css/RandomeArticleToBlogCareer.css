@@ -1,0 +1,15 @@
+.article{
+    display: flex;
+}
+.article ul{
+    display: flex;
+    justify-content: space-between;
+    height: 200px;
+}
+.ul li{
+    width: 30%;
+    /* display: flex; */
+}
+.article h1{
+    
+}

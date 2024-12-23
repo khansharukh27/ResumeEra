@@ -1,27 +1,27 @@
 import { Helmet } from "react-helmet";
 import { Link } from "react-router-dom";
-import GoogleAd from "../adFolder/GoogleAd";
+import GoogleAd from "../component/adFolder/GoogleAd";
 import { useEffect, useState } from "react";
-import Career_Tips from '../../image/carrierTips/Career_Tips.jpg';
-import images1 from '../../image/image_for_link/image1.jpg';
-import Top_Job_Search_Websites from '../../image/carrierTips/Top_Job_Search_Websites.jpg';
-import How_to_Use_LinkedIn from "../../image/carrierTips/How_to_Use_LinkedIn.jpg";
-import Networking_Tips from "../../image/carrierTips/Networking_Tips.jpg";
-import How_to_Follow from "../../image/carrierTips/How_to_Follow.jpg";
-import Salary_Negotiation_Tips from "../../image/carrierTips/Salary_Negotiation_Tips.jpg";
-import Interview_Rejection from "../../image/carrierTips/Interview_Rejection.jpg";
-import kabil from "../../image/carrierTips/kabil.jpg";
-import best_logo from "../../image/best_logo.webp";
-import _Things from "../../image/carrierTips/_Things.jpg";
-import How_to_Tailor_Your_Resume from "../../image/carrierTips/How_to_Tailor_Your_Resume.jpg";
-import A_Recruiters_Guide from "../../image/carrierTips/A_Recruiters_Guide.jpg";
-import Brutal_Career_Traps  from '../../image/carrierTips/Brutal_Career_Traps.jpg';
-import Resume_Hacks from '../../image/carrierTips/Resume_Hacks.jpg';
-import Manage_Workplace_Stress from '../../image/carrierTips/Manage Workplace Stress.jpg'
-import Hidden_Bias_in_AI_Driven_Hiring from '../../image/carrierTips/Hidden Bias in AI-Driven Hiring.jpg'
-import Your_Sleep_Might_Be_to_Blame from '../../image/carrierTips/Your Sleep Might Be to Blame.jpg'
-const BlogCareer = () => {
-    const [searchTerm, setSearchTerm] = useState("");
+import Career_Tips from '../image/carrierTips/Career_Tips.jpg';
+import images1 from '../image/image_for_link/image1.jpg';
+import Top_Job_Search_Websites from '../image/carrierTips/Top_Job_Search_Websites.jpg';
+import How_to_Use_LinkedIn from "../image/carrierTips/How_to_Use_LinkedIn.jpg";
+import Networking_Tips from "../image/carrierTips/Networking_Tips.jpg";
+import How_to_Follow from "../image/carrierTips/How_to_Follow.jpg";
+import Salary_Negotiation_Tips from "../image/carrierTips/Salary_Negotiation_Tips.jpg";
+import Interview_Rejection from "../image/carrierTips/Interview_Rejection.jpg";
+import kabil from "../image/carrierTips/kabil.jpg";
+import best_logo from "../image/best_logo.webp";
+import _Things from "../image/carrierTips/_Things.jpg";
+import How_to_Tailor_Your_Resume from "../image/carrierTips/How_to_Tailor_Your_Resume.jpg";
+import A_Recruiters_Guide from "../image/carrierTips/A_Recruiters_Guide.jpg";
+import Brutal_Career_Traps from '../image/carrierTips/Brutal_Career_Traps.jpg';
+import Resume_Hacks from '../image/carrierTips/Resume_Hacks.jpg';
+import Manage_Workplace_Stress from '../image/carrierTips/Manage Workplace Stress.jpg';
+import Hidden_Bias_in_AI_Driven_Hiring from '../image/carrierTips/Hidden Bias in AI-Driven Hiring.jpg';
+import Your_Sleep_Might_Be_to_Blame from '../image/carrierTips/Your Sleep Might Be to Blame.jpg';
+import  '../css/RandomeArticleToBlogCareer.css'
+const RandomeArticleToBlogCareer = () => {
     const [filteredTips, setFilteredTips] = useState([]);
 
     const tipsList = [
@@ -43,63 +43,47 @@ const BlogCareer = () => {
         { title: "10 Resume Hacks to Secure Your Dream Internship", path: "/10-resume-hacks", src: Resume_Hacks, alt: '10 Resume Hacks to Secure Your Dream Internship' },
         { title: "How to Manage Workplace Stress: Strategies, Insights, and Practical Tips", path: "/workplace-stress-management", src: Manage_Workplace_Stress, alt: 'Manage Workplace Stress' },
         { title: "Is There Hidden Bias in AI-Driven Hiring? Here is the Full Breakdown", path: "/ai-bias-in-hiring", src: Hidden_Bias_in_AI_Driven_Hiring, alt: 'Hidden Bias in AI-Driven Hiring' },
-        { title: "Struggling to Stay on Top of Your To-Do List? Your Sleep Might Be to Blame!", path: "/sleep-and-productivity", src:Your_Sleep_Might_Be_to_Blame, alt: 'Your Sleep Might Be to Blame' },
-
-        
+        { title: "Struggling to Stay on Top of Your To-Do List? Your Sleep Might Be to Blame!", path: "/sleep-and-productivity", src: Your_Sleep_Might_Be_to_Blame, alt: 'Your Sleep Might Be to Blame' },
     ];
 
     useEffect(() => {
         window.scrollTo(0, 0);
-        setFilteredTips(tipsList);
+        const randomTips = tipsList.sort(() => 0.5 - Math.random()).slice(0, 3);
+        setFilteredTips(randomTips);
     }, []);
 
-    const handleSearch = (event) => {
-        const searchValue = event.target.value.toLowerCase();
-        setSearchTerm(searchValue);
-
-        const filtered = tipsList.filter((tip) =>
-            tip.title.toLowerCase().includes(searchValue)
-        );
-        setFilteredTips(filtered);
+    const handleRefresh = () => {
+        const randomTips = tipsList.sort(() => 0.5 - Math.random()).slice(0, 3);
+        setFilteredTips(randomTips);
     };
 
     return (
-        <div className="important-posts aboutResumeEra">
+        <div className="important-posts">
             <Helmet>
                 <link rel="canonical" href="https://resumeera.xyz/Blog_or_Career_Tips_Page" />
                 <title>Blog or Career Tips Page</title>
                 <meta name="description" content="This page is related to Blog to show valuable things." />
             </Helmet>
             <header>
-                <h1>Career Tips</h1>
-                <p>Welcome to our Blog or Career Tips Page, your go-to source for expert advice, valuable insights, and practical tips...</p>
-                <figure>
-                    <img src={Career_Tips} alt="career tips" loading="lazy" title="career tips" />
-                    <figcaption><a href="https://resumeera.xyz">Career Tips</a></figcaption>
-                </figure>
+                <h1>Did you enjoy this article? Then the below might interest you.</h1>
+                <hr style={{width:'inherit'}}/>
             </header>
 
-            <div className="flex">
+            <div className="artcle">
                 <section>
-                    <input 
-                        type="text" 
-                        placeholder="Search career tips..." 
-                        value={searchTerm} 
-                        onChange={handleSearch} 
-                        style={{ marginBottom: "20px", padding: "8px", width: "100%" }}
-                    />
-                    
-                    <ul>
+                    <button onClick={handleRefresh} style={{ marginBottom: "20px", padding: "8px" }}>Refresh Tips</button>
+                    <ul className="ul d-flex" style={{height:'300px'}}>
                         {filteredTips.map((tip, index) => (
                             <li key={index}>
-                                <Link to={tip.path}><h1>{tip.title}</h1></Link>
+                                
                                 <figure>
                                     <Link to={tip.path}>
-                                        <img src={tip.src} alt={tip.alt} />
+                                        <img src={tip.src} alt={tip.alt} style={{height:'200px',width:'100%',borderRadius:'15px'}} />
                                         <figcaption>{tip.alt}</figcaption>
                                     </Link>
                                 </figure>
-                                <GoogleAd />
+                                <Link to={tip.path}><h1 style={{fontSize:'small',textAlign:'center'}}>{tip.title}</h1></Link>
+                                
                             </li>
                         ))}
                     </ul>
@@ -109,4 +93,4 @@ const BlogCareer = () => {
     );
 };
 
-export default BlogCareer;
+export default RandomeArticleToBlogCareer;
