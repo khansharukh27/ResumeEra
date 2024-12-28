@@ -8,8 +8,11 @@ import The_Best_AI_Resume_Builders_in_the_Market from '../../image/image_for_lin
 import How_to_Choose_the_Best_AI_Resume_Builder from '../../image/image_for_link/How_to_Choose_the_Best_AI_Resume_Builder.jpeg'
 import best_logo from '../../image/image_for_link/best_logo.895bb22edf6c08600c86.webp'
 import GoogleAd from "../adFolder/GoogleAd";
+import AuthorCard from "../AuthorCard";
+import RandomeArticleToBlogCareer from "../RandomeArticleToBlogCareer";
 const BestAIResumeBuilder = () => {
   return (
+    <div>
     <div className="SalaryNegotiationComponent"> 
       <Helmet>
         <title>Best AI Resume Builder - Build Your Free Resume Online | ResumeEra That A Best Ai Resume Builder</title>
@@ -199,6 +202,12 @@ const BestAIResumeBuilder = () => {
   <GoogleAd/>
 </div>
     </div>
+    <section>
+    <div>
+    <AuthorCard/>
+    <RandomeArticleToBlogCareer/></div>
+  </section>
+  </div>
   );
 };
 

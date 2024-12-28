@@ -3,6 +3,8 @@ import "../../css/blogandcareer/CareerTraps.css";
 import ShareButtons from '../../component/shareButton/ShareButtons'
 import { Helmet } from "react-helmet";
 import GoogleAd from "../adFolder/GoogleAd";
+import AuthorCard from "../AuthorCard";
+import RandomeArticleToBlogCareer from "../RandomeArticleToBlogCareer";
 const CareerTraps = () => {
     const ArticleUrl = 'https://resumeera.xyz/10-brutal-career-traps';
     const ArticleTitle = '10 Brutal Career Traps and How to Avoid Them - ResumeEra'
@@ -106,6 +108,7 @@ const CareerTraps = () => {
       ];
       
     return (
+      <div>
         <div className="aboutResumeEra">
             <Helmet>
                 {/* Primary Meta Tags */}
@@ -246,6 +249,12 @@ const CareerTraps = () => {
                 <ShareButtons url={ArticleUrl} title={ArticleTitle}/>
             </div>
         </div>
+        <section>
+        <div>
+        <AuthorCard/>
+        <RandomeArticleToBlogCareer/></div>
+      </section>
+      </div>
     );
 };
 

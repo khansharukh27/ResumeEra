@@ -1,8 +1,8 @@
 import { Helmet } from "react-helmet";
 import { Link } from "react-router-dom";
-import GoogleAd from "../component/adFolder/GoogleAd";
+// import GoogleAd from "../component/adFolder/GoogleAd";
 import { useEffect, useState } from "react";
-import Career_Tips from '../image/carrierTips/Career_Tips.jpg';
+// import Career_Tips from '../image/carrierTips/Career_Tips.jpg';
 import images1 from '../image/image_for_link/image1.jpg';
 import Top_Job_Search_Websites from '../image/carrierTips/Top_Job_Search_Websites.jpg';
 import How_to_Use_LinkedIn from "../image/carrierTips/How_to_Use_LinkedIn.jpg";
@@ -71,15 +71,15 @@ const RandomeArticleToBlogCareer = () => {
 
             <div className="artcle">
                 <section>
-                    <button onClick={handleRefresh} style={{ marginBottom: "20px", padding: "8px" }}>Refresh Tips</button>
-                    <ul className="ul d-flex" style={{height:'300px'}}>
+                    <button onClick={handleRefresh} style={{  }}>Refresh Tips</button>
+                    <ul className="ul d-sm-flex" style={{}}>
                         {filteredTips.map((tip, index) => (
-                            <li key={index}>
+                            <li key={index} style={{width:'100%'}}>
                                 
-                                <figure>
+                                <figure className="figure">
                                     <Link to={tip.path}>
                                         <img src={tip.src} alt={tip.alt} style={{height:'200px',width:'100%',borderRadius:'15px'}} />
-                                        <figcaption>{tip.alt}</figcaption>
+                                        
                                     </Link>
                                 </figure>
                                 <Link to={tip.path}><h1 style={{fontSize:'small',textAlign:'center'}}>{tip.title}</h1></Link>

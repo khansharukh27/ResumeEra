@@ -20,6 +20,9 @@ import Resume_Hacks from '../../image/carrierTips/Resume_Hacks.jpg';
 import Manage_Workplace_Stress from '../../image/carrierTips/Manage Workplace Stress.jpg'
 import Hidden_Bias_in_AI_Driven_Hiring from '../../image/carrierTips/Hidden Bias in AI-Driven Hiring.jpg'
 import Your_Sleep_Might_Be_to_Blame from '../../image/carrierTips/Your Sleep Might Be to Blame.jpg'
+import How_to_Research_Company from '../../image/carrierTips/How to Research a Company.jpg'
+import The_Growing_Gap_in_Soft_Skills from '../../image/carrierTips/The Growing Gap in Soft Skills.jpg'
+import Recruiting_in_Europe_Differs_from_the_US from '../../image/carrierTips/Recruiting in Europe Differs from the U.S.jpg'
 const BlogCareer = () => {
     const [searchTerm, setSearchTerm] = useState("");
     const [filteredTips, setFilteredTips] = useState([]);
@@ -44,6 +47,9 @@ const BlogCareer = () => {
         { title: "How to Manage Workplace Stress: Strategies, Insights, and Practical Tips", path: "/workplace-stress-management", src: Manage_Workplace_Stress, alt: 'Manage Workplace Stress' },
         { title: "Is There Hidden Bias in AI-Driven Hiring? Here is the Full Breakdown", path: "/ai-bias-in-hiring", src: Hidden_Bias_in_AI_Driven_Hiring, alt: 'Hidden Bias in AI-Driven Hiring' },
         { title: "Struggling to Stay on Top of Your To-Do List? Your Sleep Might Be to Blame!", path: "/sleep-and-productivity", src:Your_Sleep_Might_Be_to_Blame, alt: 'Your Sleep Might Be to Blame' },
+        { title: "How to Research a Company - Top 9 Tips for 2024", path: "/research-company-tips", src:How_to_Research_Company, alt: 'How to Research a Company ' },
+        { title: " The Growing Gap in Soft Skills: A Comprehensive Guide for 2024", path: "/Growing_Gap_in_Soft_Skills", src:The_Growing_Gap_in_Soft_Skills, alt: 'The_Growing_Gap_in_Soft_Skills ' },
+        { title: "How Recruiting in Europe Differs from the U.S.: 5 Key Insights", path: "/how-recruiting-in-europe-differs-from-us", src:Recruiting_in_Europe_Differs_from_the_US, alt: 'Recruiting in Europe Differs from the U.S.' },
 
         
     ];

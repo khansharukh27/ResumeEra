@@ -6,10 +6,26 @@ import Crafting_Modern_Resume from "../image/image_for_link/Crafting a Modern Re
 import Top_Resume_Templates_for_2024 from '../image/image_for_link/Top Resume Templates for 2024.jpg'
 import What_Employers_Look_for_in_a_Resume from '../image/image_for_link/What Employers Look for in a Resume.jpg'
 import How_to_Format_a_Resume_Correctly from '../image/image_for_link/How to Format a Resume Correctly.jpg'
-import Improving_Your_Resume_with_Action_Verbs from '../image/image_for_link/Improving Your Resume with Action Verbs.jpg'
+// import Improving_Your_Resume_with_Action_Verbs from '../image/image_for_link/Improving Your Resume with Action Verbs.jpg'
 import xyz_formula from '../image/image_for_link/XYZ Formula.jpg'
 import Resume_for_International_Jobs from '../image/image_for_link/Resume for International Jobs.jpg'
 import How_to_Showcase_Your_Education_in_a_Resume from '../image/image_for_link/Showcase Your Education in a Resume.jpg'
+import Crafting_Powerful_Cybersecurity_Resume from '../image/image_for_link/Crafting Powerful Cybersecurity Resume.jpg'
+import Tips_to_Get_Your_CV_Noticed from '../image/image_for_link/Tips to Get Your CV Noticed.jpg'
+import Difference_Between_CV_and_Resume from '../image/image_for_link/Difference Between CV and Resume.jpg'
+import freeResumeBuilders from '../image/image_for_link/freeResumeBuilders.jpeg.jpg'
+import ATS_Formatting_Mistakes from '../image/image_for_link/ATS Formatting Mistakes.jpg'
+import It_Cover_Letter from '../image/image_for_link/IT Cover Letter Tips.jpg'
+import Management_Cover_Letter_Example from '../image/image_for_link/Management Cover Letter Example.jpg'
+import Mechanical_Engineering_Cover_Letter from '../image/image_for_link/Mechanical Engineering Cover Letter Example.jpg'
+import action_verbs_resume_intro from '../image/image_for_link/action-verbs-resume-intro.jpg'
+import Administrative_Assistant_Cover_Letter from '../image/image_for_link/Administrative Assistant Cover Letter.jpg'
+import Lawyer_Cover_Letter_Example from '../image/image_for_link/Lawyer Cover Letter Example.jpg'
+import Resume_Formatting_Kya_Hai from '../image/image_for_link/Resume Formatting Kya Hai.jpg'
+import Fresher_Resume_Formatting from '../image/image_for_link/Fresher Ke Liye Resume Formatting Kaise Karein.webp'
+import Resume_Formatting_Tips_Entry_Level from '../image/image_for_link/Resume Formatting Tips for Entry-Level Jobs.jpg'
+import Resume_Formatting_Steps from '../image/image_for_link/Resume Formatting Tips for Entry-Level Jobs.jpg'
+import ATS_Friendly_Resume_Format_for_Beginners from '../image/image_for_link/ATS-Friendly Resume Format for Beginners.jpg'
 const ImportantPostLink = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const [visiblePosts, setVisiblePosts] = useState(9); // Initially display 9 posts
@@ -33,7 +49,8 @@ const ImportantPostLink = () => {
     },
     {
       path: "/tips-for-writing-a-cover-letter",
-      title: "Tips for Writing a Cover Letter",
+    
+        title: "Tips for Writing a Cover Letter",
       src: "https://img.freepik.com/free-photo/close-up-female-typing-laptop_23-2148889241.jpg",
       alt: "tips for writing cover letter",
     },
@@ -112,7 +129,7 @@ const ImportantPostLink = () => {
     {
       path: "/improving-your-resume-with-action-verbs",
       title: "Improving Your Resume with Action Verbs",
-      src: Improving_Your_Resume_with_Action_Verbs,
+      src: action_verbs_resume_intro,
       alt: "Using action verbs in resume",
     },
     {
@@ -247,8 +264,100 @@ const ImportantPostLink = () => {
       src: How_to_Make_a_Resume_2024,
       alt: "Dont Copy Past On Your Cv",
     },
+    {
+      path: "/cybersecurity-resume-tips",
+      title: "Crafting a Powerful Cybersecurity Resume",
+      src: Crafting_Powerful_Cybersecurity_Resume,
+      alt: "Cybersecurity Resume",
+    },
+    {
+      path: "/11-essential-cv-tips-2024",
+      title: "11 Essential Tips to Get Your CV Noticed in 2024",
+      src: Tips_to_Get_Your_CV_Noticed,
+      alt: "11 Essential Tips to Get Your CV Noticed in 2024",
+    },
+    {
+      path: "/difference-between-cv-and-resume",
+      title: "Difference Between CV and Resume | Comprehensive Guide",
+      src: Difference_Between_CV_and_Resume,
+      alt: "Difference Between CV and Resume ",
+    },
+    {
+      path: "/create-your-perfect-resume-for-free",
+      title: "Create Your Perfect Resume for Free || Free Resume Builder",
+      src: freeResumeBuilders,
+      alt: "Create Your Perfect Resume for Free || Free Resume Builder",
+    },
+    {
+      path: "/11-ats-formatting-mistakes-that-can-cost-you-a-job",
+      title: "11 ATS Formatting Mistakes That Can Cost You a Job",
+      src: ATS_Formatting_Mistakes,
+      alt: "Create Your Perfect Resume for Free || Free Resume Builder",
+    },
+    {
+      path: "/it-cover-letter-guide-2024",
+      title: "11 ATS Formatting Mistakes That Can Cost You a Job",
+      src: It_Cover_Letter,
+      alt: "IT Cover Letter Tips & Templates",
+    },
+    {
+      path: "/management-cover-letter-example",
+      title: "Management Cover Letter Example (With Full Guide for 2024)",
+      src: Management_Cover_Letter_Example,
+      alt: "Management Cover Letter Example",
+    },
+    {
+      path: "/mechanical-engineering-cover-letter-example/",
+      title: "Mechanical Engineering Cover Letter Example (With Templates & Tips for 2024)",
+      src: Mechanical_Engineering_Cover_Letter,
+      alt: "Mechanical Engineering Cover Letter Example (With Templates & Tips for 2024)",
+    },
+    {
+      path: "/administrative-assistant-cover-letter-example",
+      title: "Administrative Assistant Cover Letter Example (With Templates & Tips for 2024)",
+      src: Administrative_Assistant_Cover_Letter,
+      alt: "Administrative Assistant Cover Letter",
+    },
+    {
+      path: "/lawyer-cover-letter-example",
+      title: "Lawyer Cover Letter Example (w/ Templates & Tips for 2024)",
+      src: Lawyer_Cover_Letter_Example,
+      alt: "Lawyer Cover Letter Example",
+    },
+    {
+      path: "/guide/resume-formatting",
+      title: "Resume Formatting Kya Hai? A Complete Beginner's Guide",
+      src: Resume_Formatting_Kya_Hai,
+      alt: "Resume Formatting Kya Hai",
+    },
+    {
+      path: "/fresher-resume-formatting",
+      title: "Fresher Ke Liye Resume Formatting Kaise Karein",
+      src: Fresher_Resume_Formatting,
+      alt: "Fresher Ke Liye Resume Formatting Kaise Karein",
+    },
+    {
+      path: "/resume-formatting-entry-level",
+      title: "Resume Formatting Tips for Entry-Level Jobs",
+      src: Resume_Formatting_Tips_Entry_Level,
+      alt: "Resume Formatting Tips for Entry-Level Jobs",
+    },
+    {
+      path: "/Resume_Formatting_Steps_for_Freshers",
+      title: "Resume Formatting Steps for Freshers | ResumeEra",
+      src: Resume_Formatting_Steps,
+      alt: "Resume Formatting Steps for Freshers",
+    },
+    {
+      path: "/ats-friendly-resume-format-for-beginners",
+      title: "ATS-Friendly Resume Format for Beginners || ResumeEra",
+      src: ATS_Friendly_Resume_Format_for_Beginners,
+      alt: "ATS-Friendly Resume Format for Beginners",
+    },
+    
+    
   ];
-
+  
   // Filter posts based on search term
   const filteredPosts = posts.filter((post) =>
     post.title.toLowerCase().includes(searchTerm.toLowerCase())

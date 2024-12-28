@@ -4,6 +4,8 @@ import ShareButtons from "../shareButton/ShareButtons";
 import CallToAction from "../CallToAction";
 import Hidden_Bias_in_AI_Driven_Hiring from '../../image/carrierTips/Hidden Bias in AI-Driven Hiring.jpg'
 import GoogleAd from "../adFolder/GoogleAd";
+import AuthorCard from "../AuthorCard";
+import RandomeArticleToBlogCareer from "../RandomeArticleToBlogCareer";
 const AIBiasInHiring = () => {
     const ArticleUrl = 'https://resumeera.xyz/ai-bias-in-hiring'
     const Articletitle = 'Is There Hidden Bias in AI-Driven Hiring? Here is the Full Breakdown'
@@ -11,6 +13,7 @@ const AIBiasInHiring = () => {
         window.scrollTo(0,0)
     },[])
   return (
+    <div>
     <div className="aboutResumeEra">
       <Helmet>
         <title>Is There Hidden Bias in AI-Driven Hiring? Here's the Full Breakdown</title>
@@ -168,6 +171,13 @@ const AIBiasInHiring = () => {
         <div><GoogleAd/></div>
       </article>
     </div>
+    <section>
+    <div></div>
+    <div>
+    <AuthorCard/>
+      <RandomeArticleToBlogCareer/></div>
+  </section>
+  </div>
   );
 };
 

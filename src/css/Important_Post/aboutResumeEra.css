@@ -5,7 +5,7 @@
     color: #333;
     box-shadow: 0px 0px 30px -7px purple,
     0px 0px 20px -10px palegreen;
-    width: 50%;
+    width: 70%;
     margin-top: 50px;
     border-radius: 25px;
     /* background-image: linear-gradient(145deg, magenta, aqua, pink, purple); */
@@ -20,6 +20,35 @@
     padding: 50px;
     background-color: forestgreen;
 }
+.aboutResumeEra h2::before {
+    margin-bottom: -15px;
+    content: "";
+    display: inline-block;
+    width: 4%;
+    height: 4%;
+    height: 25px; /* Adjust the height as needed */
+    background-color: rgb(112, 228, 112); /* Green color */
+    margin-bottom: 10px; /* Optional: Adds space between the box and the heading */
+    border-radius:5px;
+  }
+
+  .aboutResumeEra h3::before {
+    margin-right: 15px;
+    margin-top: 15px;
+    content: "";
+    display: inline-block;
+    width: 4%;
+    height: 4%;
+    height: 25px; /* Adjust the height as needed */
+    border: 1px solid rgb(10, 10, 10); /* Green color */
+    margin-bottom: 10px; /* Optional: Adds space between the box and the heading */
+    border-radius:5px;
+  }
+  .aboutResumeEra h2{
+    margin-top: px;
+    font-weight: 900px;
+    color: black;
+  }
 .aboutResumeEra p,.aboutResumeEra h3{
     color: black;
 }
@@ -32,11 +61,12 @@
     height: 300px;
 }
 /* Headings */
-h1 {
+.aboutResumeEra h1 {
     font-size: 2.5em;
     margin-bottom: 20px;
     text-align: center;
     color: #4a90e2;
+    font-weight: 900;
 }
 
 h3 {
@@ -127,20 +157,24 @@ img {
 }
 
 
-
 @media (max-width: 768px) {
     .aboutResumeEra {
-        padding: 20px;
+        padding: 0px;
         width: 100%;
-        margin: 20px auto;
+        margin: 0px;
+        box-shadow: none;
+        margin-left:0px;
+        margin-right: 0px;
+        align-items: center;
+        text-align: center;
     }
 
-    h1 {
-        font-size: 2em;
+    .aboutResumeEra h1 {
+        font-size: 1.5rem;
     }
 
     h3 {
-        font-size: 1.5em;
+        font-size:1rem;
     }
 
     p, ul, ol {

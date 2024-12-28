@@ -2,11 +2,14 @@ import React from "react";
 import { Helmet } from "react-helmet";
 import ShareButtons from "../shareButton/ShareButtons";
 import GoogleAd from "../adFolder/GoogleAd";
+import RandomeArticleToBlogCareer from "../RandomeArticleToBlogCareer";
+import AuthorCard from "../AuthorCard";
 
 const ATS2024 = () => {
   const ArticleUrl = 'https://resumeera.xyz/9-things-you-need-to-know-about-ATS-in-2024'
   const ArticleTitle = '9 Things You Need to Know About ATS in 2024 - ResumeEra || Free Resume '
   return (
+    <div>
     <div className="aboutResumeEra">
       <Helmet>
         <title>9 Things You Need to Know About ATS in 2024 - ResumeEra</title>
@@ -226,6 +229,12 @@ const ATS2024 = () => {
         <ShareButtons url={ArticleUrl} title={ArticleTitle}/>
       </div>
     </div>
+    <section>
+    <div>
+    <AuthorCard/>
+    <RandomeArticleToBlogCareer/></div>
+  </section>
+  </div>
   );
 };
 

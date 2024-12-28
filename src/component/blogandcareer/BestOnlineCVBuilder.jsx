@@ -5,8 +5,11 @@ import best_online_cv from '../../image/image_for_link/best_online-cv.jpeg'
 import comparison from '../../image/image_for_link/comparision.jpeg'
 import resumeera from'../../image/image_for_link/resumeera.jpeg'
 import best_logo from '../../image/image_for_link/best_logo.895bb22edf6c08600c86.webp'
+import AuthorCard from '../AuthorCard';
+import RandomeArticleToBlogCareer from '../RandomeArticleToBlogCareer';
 const  BestOnlineCVBuilder = () => {
   return (
+    <div>
     <div className='bestonlinecvbuilder'>
       {/* SEO Tags */}
       <Helmet>
@@ -253,6 +256,12 @@ const  BestOnlineCVBuilder = () => {
         </div>
       </section>
     </div>
+    <section>
+    <div>
+    <AuthorCard/>
+    <RandomeArticleToBlogCareer/></div>
+  </section>
+  </div>
   );
 };
 

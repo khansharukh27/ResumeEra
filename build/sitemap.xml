@@ -8,11 +8,6 @@
     <loc>https://resumeera.xyz/template</loc>
     <priority>1.0</priority>
   </url>
-
-  <url>
-    <loc>https://resumeera.xyz/preview109</loc>
-    <priority>1.0</priority>
-  </url>
   <!-- Dynamically generated URLs for images -->
   <!-- Example for images -->
   <url>
@@ -132,6 +127,90 @@
     <priority>1.0</priority>
   </url>
   <url>
+    <loc>https://resumeera.xyz/AnupamKher_resume</loc>
+    <priority>1.0</priority>
+  </url>
+<url>
+    <loc>https://resumeera.xyz/free_resumesites_component</loc>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://resumeera.xyz/tailor-resume-job-description-chatgpt</loc>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://resumeera.xyz/resume-trends-2024</loc>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://resumeera.xyz/remote-work-experience</loc>
+    <priority>1.0</priority>
+  </url>
+  <!-- tommorrow -->
+  <url>
+    <loc>https://resumeera.xyz/how-to-write-a-resume-in-7-easy-steps</loc>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://resumeera.xyz/what-are-your-strengths</loc>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://resumeera.xyz/Dont_Copy_Paste_On_Your_Cv</loc>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://resumeera.xyz/cybersecurity-resume-tips</loc>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://resumeera.xyz/11-essential-cv-tips-2024</loc>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://resumeera.xyz/difference-between-cv-and-resume</loc>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://resumeera.xyz/create-your-perfect-resume-for-free</loc>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://resumeera.xyz/11-ats-formatting-mistakes-that-can-cost-you-a-job</loc>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://resumeera.xyz/management-cover-letter-example</loc>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://resumeera.xyz/mechanical-engineering-cover-letter-example/</loc>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://resumeera.xyz/administrative-assistant-cover-letter-example</loc>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://resumeera.xyz/lawyer-cover-letter-example</loc>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://resumeera.xyz/guide/resume-formatting</loc>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://resumeera.xyz/fresher-resume-formatting</loc>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://resumeera.xyz/resume-formatting-entry-level</loc>
+    <priority>1.0</priority>
+  </url>
+  
+  
+  <!-- bloag and career -->
+  <url>
   <loc>https://resumeera.xyz/Blog_or_Career_Tips_Page</loc>
   <priority>1.0</priority>
   </url>
@@ -147,6 +226,7 @@
   <loc>https://resumeera.xyz/linkedin-job-hunting</loc>
   <priority>1.0</priority>
   </url>
+  
   <url>
   <loc>https://resumeera.xyz/follow-up-after-interview</loc>
   <priority>1.0</priority>
@@ -155,6 +235,7 @@
   <loc>https://resumeera.xyz/Salary_Negotiation_Component</loc>
   <priority>1.0</priority>
   </url>
+  <!-- interview question and answer -->
   <url>
   <loc>https://resumeera.xyz/Best_Online_CV_Builder</loc>
   <priority>1.0</priority>
@@ -184,4 +265,145 @@
   <loc>https://resumeera.xyz/what-are-your-strengths</loc>
   <priority>1.0</priority>
   </url>
+  <url>
+  <loc>https://resumeera.xyz/Dont_Copy_Paste_On_Your_Cv</loc>
+  <priority>1.0</priority>
+  </url>
+  <url>
+  <loc>https://resumeera.xyz/cybersecurity-resume-tips</loc>
+  <priority>1.0</priority>
+  </url>
+  <url>
+  <loc>https://resumeera.xyz/11-essential-cv-tips-2024</loc>
+  <priority>1.0</priority>
+  </url>
+  <url>
+  <loc>https://resumeera.xyz/difference-between-cv-and-resume</loc>
+  <priority>1.0</priority>
+  </url>
+  <url>
+  <loc>https://resumeera.xyz/create-your-perfect-resume-for-free</loc>
+  <priority>1.0</priority>
+  </url>
+  <url>
+  <loc>https://resumeera.xyz/11-ats-formatting-mistakes-that-can-cost-you-a-job</loc>
+  <priority>1.0</priority>
+  </url>
+  <url>
+  <loc>https://resumeera.xyz/it-cover-letter-guide-2024</loc>
+  <priority>1.0</priority>
+  </url>
+  <url>
+  <loc>https://resumeera.xyz/management-cover-letter-example</loc>
+  <priority>1.0</priority>
+  </url>
+  <url>
+  <loc>https://resumeera.xyz/Why_Work_Here</loc>
+  <priority>1.0</priority>
+  </url>
+  <!-- interview question and answer -->
+  <url>
+  <loc>https://resumeera.xyz/tell-us-about-yourself</loc>
+  <priority>1.0</priority>
+  </url>
+  <url>
+  <loc>https://resumeera.xyz/why-should-we-hire-you</loc>
+  <priority>1.0</priority>
+  </url>
+  <url>
+  <loc>https://resumeera.xyz/why_do_you_want_to_work</loc>
+  <priority>1.0</priority>
+  </url>
+  <url>
+  <loc>https://resumeera.xyz/how-employer-describe</loc>
+  <priority>1.0</priority>
+  </url>
+  <url>
+  <loc>https://resumeera.xyz/greatest-weakness</loc>
+  <priority>1.0</priority>
+  </url>
+  <url>
+  <loc>https://resumeera.xyz/hobbies-interests</loc>
+  <priority>1.0</priority>
+  </url>
+  <url>
+  <loc>https://resumeera.xyz/what-does-success-look-like-to-you</loc>
+  <priority>1.0</priority>
+  </url>
+  <url>
+  <loc>https://resumeera.xyz/why-are-you-qualified-for-this-position</loc>
+  <priority>1.0</priority>
+  </url>
+  <url>
+  <loc>https://resumeera.xyz/skills-for-success-in-role</loc>
+  <priority>1.0</priority>
+  </url>
+  <url>
+  <loc>https://resumeera.xyz/work-alone-or-group-preference</loc>
+  <priority>1.0</priority>
+  </url>
+  <url>
+  <loc>https://resumeera.xyz/dealing-with-difficult-customers</loc>
+  <priority>1.0</priority>
+  </url>
+  <url>
+  <loc>https://resumeera.xyz/Interview_Question_Post/How_Do_You_Handle_Stress_and_Pressure</loc>
+  <priority>1.0</priority>
+  </url>
+  <url>
+  <loc>https://resumeera.xyz/where-do-you-see-yourself-in-five-years</loc>
+  <priority>1.0</priority>
+  </url>
+  <url>
+  <loc>https://resumeera.xyz/what-motivates-you-to-do-your-best-work</loc>
+  <priority>1.0</priority>
+  </url>
+  <url>
+  <loc>https://resumeera.xyz/how-do-you-handle-feedback-and-criticism</loc>
+  <priority>1.0</priority>
+  </url>
+  <url>
+  <loc>https://resumeera.xyz/what-accomplishment-are-you-most-proud-of</loc>
+  <priority>1.0</priority>
+  </url>
+  <url>
+  <loc>https://resumeera.xyz/do-you-have-any-questions-for-us</loc>
+  <priority>1.0</priority>
+  </url>
+  <!-- motivation webstory type content -->
+  <url>
+  <loc>https://resumeera.xyz/motivation-link</loc>
+  <priority>1.0</priority>
+  </url>
+  <url>
+  <loc>https://resumeera.xyz/types-of-laziness</loc>
+  <priority>1.0</priority>
+  </url>
+  <url>
+  <loc>https://resumeera.xyz/pictures8</loc>
+  <priority>1.0</priority>
+  </url>
+  <url>
+  <loc>https://resumeera.xyz/motivate-yourself-to-study</loc>
+  <priority>1.0</priority>
+  </url>
+  <url>
+  <loc>https://resumeera.xyz/remove-bad-habits</loc>
+  <priority>1.0</priority>
+  </url>
+  <url>
+  <loc>https://resumeera.xyz/linkedIn_post</loc>
+  <priority>1.0</priority>
+  </url>
+  <url>
+  <loc>https://resumeera.xyz/35-career-quotes-to-motivate</loc>
+  <priority>1.0</priority>
+  </url>
+  <url>
+  <loc>https://resumeera.xyz/13-brutal-career-truths</loc>
+  <priority>1.0</priority>
+  </url>
+
+  <url>
+  
 </urlset>

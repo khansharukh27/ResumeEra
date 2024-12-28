@@ -3,6 +3,9 @@ import { Helmet } from "react-helmet";
 import ShareButtons from "../shareButton/ShareButtons";
 import CallToAction from "../CallToAction";
 import How_to_Make_a_Resume_2024 from '../../image/How to Make a Resume 2024.jpg'
+import GoogleAd from "../adFolder/GoogleAd";
+import AuthorCard from "../AuthorCard";
+import RandomeArticleToBlogCareer from "../RandomeArticleToBlogCareer";
 const HowToMakeResume2024 = () => {
   const ArticleTitle = "How to Make a Resume in 2024 | Beginner's Guide";
   const ArticleUrl = "https://resumeera.xyz/how-to-make-a-resume-2024";
@@ -12,6 +15,7 @@ const HowToMakeResume2024 = () => {
   }, []);
 
   return (
+    <div>
     <div className="aboutResumeEra">
       <Helmet>
         <title>How to Make a Resume in 2024 | Beginner's Guide</title>
@@ -36,8 +40,8 @@ const HowToMakeResume2024 = () => {
           <img src={How_to_Make_a_Resume_2024} alt="How to Make a Resume" loading="lazy" />
           <figcaption style={{ textAlign: "center" }}>Learn how to create a resume in 2024 with step-by-step guidance.</figcaption>
         </figure>
-      </section>
-
+      </section><div><GoogleAd/></div>
+<div><GoogleAd/></div>
       <section>
         <h2>#1. Pick the Right Resume Format</h2>
         <p>Choosing the right resume format is crucial. Depending on your experience and career goals, select from chronological, functional, or combination formats.</p>
@@ -47,8 +51,8 @@ const HowToMakeResume2024 = () => {
 
         <h3>Want to Save Time? Use a (Free) Resume Template</h3>
         <p>Using a professional resume template can save time and give your resume a polished look. Ensure it matches the job requirements.</p>
-      </section>
-
+      </section><div><GoogleAd/></div>
+      <div><GoogleAd/></div>
       <section>
         <h2>#2. Add Your Contact Information</h2>
         <h3>What to Include in Your Resume’s Contact Information Section:</h3>
@@ -66,8 +70,8 @@ const HowToMakeResume2024 = () => {
           <li>Incorrect or outdated contact details</li>
           <li>Including personal details like age or marital status</li>
         </ul>
-      </section>
-
+      </section><div><GoogleAd/></div>
+      <div><GoogleAd/></div>
       <section>
         <h2>#3. Write a Resume Headline (Summary or Objective)</h2>
 
@@ -91,8 +95,8 @@ const HowToMakeResume2024 = () => {
         <blockquote>
           "Customer service professional transitioning into HR, leveraging excellent interpersonal skills and problem-solving abilities to enhance team engagement."
         </blockquote>
-      </section>
-
+      </section><div><GoogleAd/></div>
+      <div><GoogleAd/></div>
       <section>
         <h2>#4. Prioritize Your Work Experience</h2>
 
@@ -122,8 +126,8 @@ const HowToMakeResume2024 = () => {
           <li>Projects</li>
           <li>Extracurricular Activities</li>
         </ul>
-      </section>
-
+      </section><div><GoogleAd/></div>
+      <div><GoogleAd/></div>
       <section>
         <h2>#5. List Your Education</h2>
 
@@ -138,8 +142,8 @@ const HowToMakeResume2024 = () => {
 
         <h3>Resume Education Tips</h3>
         <p>Highlight academic achievements, scholarships, or special projects that align with the job description.</p>
-      </section>
-
+      </section><div><GoogleAd/></div>
+      <div><GoogleAd/></div>
       <section>
         <h2>#6. Emphasize Your Know-How in the Skills Section</h2>
 
@@ -171,8 +175,8 @@ const HowToMakeResume2024 = () => {
           <li>Analytical skills</li>
           <li>Creative skills</li>
         </ul>
-      </section>
-
+      </section><div><GoogleAd/></div>
+      <div><GoogleAd/></div>
       <section>
         <h2>#7. Leverage Optional Resume Sections</h2>
 
@@ -181,8 +185,8 @@ const HowToMakeResume2024 = () => {
 
         <h3>Hobbies and Interests</h3>
         <p>Include hobbies that showcase unique skills, creativity, or cultural fit with the company.</p>
-      </section>
-
+      </section><div><GoogleAd/></div>
+      <div><GoogleAd/></div>
       <section>
         <h2>6+ Expert Resume Tips</h2>
         <p>Here are some additional tips to make your resume stand out in 2024:</p>
@@ -195,13 +199,23 @@ const HowToMakeResume2024 = () => {
           <li>Include keywords relevant to the job description.</li>
           <li>Update your resume regularly to reflect new achievements.</li>
         </ul>
-      </section>
+      </section><div><GoogleAd/></div>
+      <div><GoogleAd/></div>
       <section>
         <CallToAction/>
-      </section>
+      </section><div><GoogleAd/></div>
+      <div><GoogleAd/></div>
       <section>
         <div className="stickyShare"><ShareButtons url={ArticleUrl} title={ArticleTitle}/></div>
-      </section>
+      </section><div><GoogleAd/></div>
+      
+    </div>
+    <section>
+        <div></div>
+        <div>
+        <AuthorCard/>
+          <RandomeArticleToBlogCareer/></div>
+      </section><div><GoogleAd/></div>
     </div>
   );
 };

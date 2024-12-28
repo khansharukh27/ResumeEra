@@ -30,7 +30,7 @@
     "react-redux": "^9.0.4",
     "react-router-dom": "^6.21.3",
     "react-scripts": "5.0.1",
-    "react-slick": "^0.30.2",
+    "react-slick": "^0.30.3",
     "redux": "^5.0.1",
     "redux-thunk": "^3.1.0",
     "rss-parser": "^3.13.0",
