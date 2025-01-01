@@ -19,6 +19,7 @@
     box-shadow: inherit;
     padding: 50px;
     background-color: forestgreen;
+    font-weight: 900;
 }
 .aboutResumeEra h2::before {
     margin-bottom: -15px;
@@ -46,7 +47,7 @@
   }
   .aboutResumeEra h2{
     margin-top: px;
-    font-weight: 900px;
+    font-weight: 900;
     color: black;
   }
 .aboutResumeEra p,.aboutResumeEra h3{
@@ -74,6 +75,7 @@ h3 {
     margin-top: 30px;
     margin-bottom: 10px;
     color: #333;
+    font-weight: 700;
 }
 
 /* Paragraphs */

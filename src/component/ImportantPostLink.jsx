@@ -26,6 +26,26 @@ import Fresher_Resume_Formatting from '../image/image_for_link/Fresher Ke Liye R
 import Resume_Formatting_Tips_Entry_Level from '../image/image_for_link/Resume Formatting Tips for Entry-Level Jobs.jpg'
 import Resume_Formatting_Steps from '../image/image_for_link/Resume Formatting Tips for Entry-Level Jobs.jpg'
 import ATS_Friendly_Resume_Format_for_Beginners from '../image/image_for_link/ATS-Friendly Resume Format for Beginners.jpg'
+import Simple_Resume_Formatting_Best_Practices from '../image/image_for_link/Simple Resume Formatting Best Practices.webp'
+import Fresher_Resume_Mistakes from '../image/image_for_link/Fresher Resume Mistakes.jpg'
+import College_Graduates_Perfect_Resumez_Formatting from '../image/image_for_link/College Graduates Perfect Resume Formatting.jpg'
+import Resume_Formatting_First_Time_Job_Seekers from '../image/image_for_link/Resume Formatting Tips for First-Time Job Seekers.jpg'
+import Fresher_Resume_Font_Aur_Layout from '../image/image_for_link/Fresher Resume Font Aur Layout.jpg'
+import Professional_Resume_Format_for_Experienced_Candidates from '../image/image_for_link/Professional Resume Format for Experienced Candidates.jpg'
+import Executive_Level_Resume_Formatting from '../image/image_for_link/Executive-Level Resume Formatting.jpg'
+import Career_Change_Resume_Formatting from '../image/image_for_link/Career Change ke Liye Resume Formatting Kaise Karein.jpg'
+import Chronological_Resume_Formatting from '../image/image_for_link/Experienced Candidates Ke Liye Chronological Resume Formatting Guide.webp'
+import Resume_Leadership_Jobs from '../image/image_for_link/Resume Leadership Jobs.webp'
+import Highlight_Achievements_Resume_Formatting from '../image/image_for_link/Highlight Achievements Resume Formatting.jpg'
+import Multi_Page_Resume_Formatting from '../image/image_for_link/Multi-Page Resume Formatting.jpg'
+import Job_Description from '../image/image_for_link/How to Tailor Your Resume to Match the Job Description Perfectly.jpg'
+import Functional_vs_Chronological_Resume_Formatting from '../image/image_for_link/Functional vs Chronological Resume Formatting.jpg'
+import It_Profetional_image from '../image/image_for_link/IT Professionals Ke Liye Resume Formatting Tipss.png'
+import HealthCare_images from '../image/image_for_link/Healthcare Industry Ke Liye Resume Formatting Guide.jpg'
+import Creative_Designer from '../image/image_for_link/Creative and Designers Resume Formatting Tips.jpg'
+
+
+
 const ImportantPostLink = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const [visiblePosts, setVisiblePosts] = useState(9); // Initially display 9 posts
@@ -354,8 +374,111 @@ const ImportantPostLink = () => {
       src: ATS_Friendly_Resume_Format_for_Beginners,
       alt: "ATS-Friendly Resume Format for Beginners",
     },
-    
-    
+    {
+      path: "/simple-resume-formatting-best-practices",
+      title: "Simple Resume Formatting Best Practices | ResumeEra",
+      src: Simple_Resume_Formatting_Best_Practices,
+      alt: "Simple Resume Formatting Best Practices",
+    },
+    {
+      path: "/fresher-resume-mistakes-you-should-avoid",
+      title: "Fresher Resume Mistakes You Should Avoid | ResumeEra",
+      src: Fresher_Resume_Mistakes,
+      alt: "Fresher Resume Mistakes You Should Avoid",
+    },
+    {
+      path: "/college-graduates-perfect-resume-formatting-tips",
+      title: "College Graduates Ke Liye Perfect Resume Formatting Tips | ResumeEra",
+      src: College_Graduates_Perfect_Resumez_Formatting,
+      alt: "College Graduates Ke Liye Perfect Resume Formatting Tips",
+    },
+    {
+      path: "/Resume-Formatting-First-Time-Job-Seekers",
+      title: "Resume Formatting Tips for First-Time Job Seekers | ResumeEra",
+      src: Resume_Formatting_First_Time_Job_Seekers,
+      alt: "Resume Formatting Tips for First-Time Job Seekers",
+    },
+    {
+      path: "/Fresher-Resume-Formatting-Font-Layout",
+      title: "Fresher Resume Formatting Ke Liye Best Font Aur Layout | ResumeEra",
+      src: Fresher_Resume_Font_Aur_Layout,
+      alt: "Fresher Resume Formatting Ke Liye Best Font Aur Layout",
+    },
+    {
+      path: "/Professional-Resume-Format-Experienced",
+      title: "Professional Resume Format for Experienced Candidates",
+      src: Professional_Resume_Format_for_Experienced_Candidates,
+      alt: "Professional Resume Format for Experienced Candidates",
+    },
+    {
+      path: " /executive-resume-formatting-tips",
+      title: "Executive-Level Resume Formatting: Tips for Senior Professionals",
+      src: Executive_Level_Resume_Formatting,
+      alt: "Executive-Level Resume Formatting: Tips for Senior Professionals",
+    },
+    {
+      path: " /career-change-resume-formatting",
+      title: "Career Change ke Liye Resume Formatting Kaise Karein",
+      src: Career_Change_Resume_Formatting,
+      alt: "Career Change ke Liye Resume Formatting Kaise Karein",
+    },
+    {
+      path: " /chronological-resume-formatting-experienced-candidates",
+      title: "Experienced Candidates Ke Liye Chronological Resume Formatting",
+      src:Chronological_Resume_Formatting,
+      alt: "Experienced Candidates Ke Liye Chronological Resume Formatting",
+    },
+    {
+      path: " /how-to-format-a-resume-for-leadership-jobs",
+      title: "How to Format a Resume for Leadership Jobs",
+      src:Resume_Leadership_Jobs,
+      alt: "How to Format a Resume for Leadership Jobs",
+    },
+    {
+      path: " /how-to-highlight-achievements-in-resume-formatting",
+      title: "How to Highlight Achievements in Resume Formatting",
+      src:Highlight_Achievements_Resume_Formatting,
+      alt: "How to Highlight Achievements in Resume Formatting",
+    },
+    {
+      path: " /multi-page-resume-formatting",
+      title: "Multi-Page Resume Formatting - Resumeera.xyz",
+      src:Multi_Page_Resume_Formatting,
+      alt: "Multi-Page Resume Formatting",
+    },
+    {
+      path: " /tailor-your-resume",
+      title: "How to Tailor Your Resume to Match the Job Description Perfectly",
+      src:Job_Description,
+      alt: "How to Tailor Your Resume to Match the Job Description Perfectly",
+    },
+    {
+      path: " /Functional_vs_Chronological_Resume_Formatting",
+      title: "Functional vs Chronological Resume Formatting for Experienced Professionals",
+      src:Functional_vs_Chronological_Resume_Formatting,
+      alt: "Functional vs Chronological Resume Formatting",
+    },
+    {
+      path: " /it-resume-formatting-tips",
+      title: "IT Professionals Ke Liye Resume Formatting Tips",
+      src:It_Profetional_image,
+      alt: "IT Professionals Ke Liye Resume Formatting Tips",
+    },
+    {
+      path: "/healthcare-industry-ke-liye-resume-formatting-guide",
+      title: "Healthcare Industry Ke Liye Resume Formatting Guide-ResumeEra",
+      src:HealthCare_images,
+      alt: "Healthcare Industry Ke Liye Resume Formatting Guide-ResumeEra",
+    },
+    {
+      path: "/creative-and-designer-resume-tips",
+      title: "Creative and Designer Resume Tips",
+      src:Creative_Designer,
+      alt: "Creative and Designer Resume Tips",
+    },
+   
+
+
   ];
   
   // Filter posts based on search term

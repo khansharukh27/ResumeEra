@@ -5,7 +5,7 @@ import AuthWrapper from "../src/component/signupAndLogin/AuthWrapper";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import "./App.css";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes, useLocation } from "react-router-dom";
 
 import Navbar from "../src/component/Navbar";
 import TemplatePage from "./component/TemplatePage";
@@ -212,6 +212,25 @@ import FresherResumeFormatting from "./component/ImportantPost/FresherResumeForm
 import ResumeFormatingForEntryLevel from "./component/ImportantPost/ResumeFormatingForEntryLevel";
 import ResumeFormattingStepsForFresher from "./component/ImportantPost/ResumeFormattingStepsForFresher";
 import ATS_Friendly_Resume_Format_for_Beginners from "./component/ImportantPost/ATS_Friendly_Resume_Format_for_Beginners";
+import Simple_Resume_Formatting from "./component/ImportantPost/Simple_Resume_Formatting";
+import FresherResumeMistakes from "./component/ImportantPost/FresherResumeMistakes";
+import ResumeTipuForCollegeGraduates from "./component/ImportantPost/ResumeTipuForCollegeGraduates";
+import ResumeFormattingFirstTimeJobSeekers from "./component/ImportantPost/ResumeFormattingFirstTimeJobSeekers";
+import FresherResumeFormattingComponentWithFontAndLayout from "./component/ImportantPost/FresherResumeFormattingComponentWithFontAndLayout";
+import ProfessionalResumeFormatforExperiencedCandidates from "./component/ImportantPost/ProfessionalResumeFormatforExperiencedCandidates";
+import ExecutiveLevelResumeFormatting from "./component/ImportantPost/Executive_Level_Resume_Formatting";
+import CareerChangeResumeFormatting from "./component/ImportantPost/CareerChangeResumeFormatting";
+import ChronologicalResumeGuide from "./component/ImportantPost/ChronologicalResumeGuide";
+import FormatResumeLeadershipJobs from "./component/ImportantPost/FormatResumeLeadershipJobs";
+import HighlightAchievementsForResume from "./component/ImportantPost/HighlightAchievementsForResume";
+import MultiPageResumeFormatting from "./component/ImportantPost/MultiPageResumeFormatting";
+import TailorResumeGuide from "./component/ImportantPost/TailorResumeGuide";
+import ResumeFormattingArticle from "./component/ImportantPost/ResumeFormattingArticle.jsx";
+import { Helmet } from "react-helmet";
+import GoogleAnalytics from "./component/GoogleAnalytics.jsx";
+import ITResumeTips from "./component/ImportantPost/ITResumeTips.jsx";
+import HealthcareResumeGuide from "./component/ImportantPost/HealthcareResumeGuide.jsx";
+import CreativeAndDesignerResumeTips from "./component/ImportantPost/CreativeAndDesignerResumeTips.jsx";
 
 var images = [
   { id: 1, src: resum1, alt: "Professional Resume Template 1" },
@@ -287,6 +306,7 @@ console.log(images[0].id);
 const path = "mainpage";
 
 function App() {
+  
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -299,8 +319,17 @@ function App() {
   useEffect(() => {
     AOS.init();
   }, []);
+  
+
+// Get the current route location
+
+  // Track pageview whenever location changes
+  
   return (
+    <div>
+      
     <Router style={{ backgroundColor: "black", width: "100%" }}>
+    <GoogleAnalytics/>
       <Auth0Provider
         domain="sharukhmirza88.us.auth0.com"
         clientId="XQF85FTYI87P9tX4z18Nlw1npy1N8Bnx"
@@ -312,6 +341,8 @@ function App() {
           <Navbar />
         </AuthWrapper>
       </Auth0Provider>
+      
+      
 
       <Routes style={{ width: "100%" }}>
         <Route
@@ -560,32 +591,90 @@ function App() {
         />
         <Route
           path="/administrative-assistant-cover-letter-example"
-          element={<AdministrativeAssistantCoverLetter/>}
+          element={<AdministrativeAssistantCoverLetter />}
         />
         <Route
           path="/lawyer-cover-letter-example"
-          element={<LawyerCoverLetter/>}
+          element={<LawyerCoverLetter />}
         />
-<Route
-          path="/guide/resume-formatting"
-          element={<FormattinResume/>}
-        />
-<Route
+        <Route path="/guide/resume-formatting" element={<FormattinResume />} />
+        <Route
           path="/fresher-resume-formatting"
-          element={<FresherResumeFormatting/>}
+          element={<FresherResumeFormatting />}
         />
-<Route
+        <Route
           path="/resume-formatting-entry-level"
-          element={<ResumeFormatingForEntryLevel/>}
+          element={<ResumeFormatingForEntryLevel />}
         />
-<Route
+        <Route
           path="/Resume_Formatting_Steps_for_Freshers"
-          element={<ResumeFormattingStepsForFresher/>}
+          element={<ResumeFormattingStepsForFresher />}
         />
         <Route
           path="/ats-friendly-resume-format-for-beginners"
-          element={<ATS_Friendly_Resume_Format_for_Beginners/>}
+          element={<ATS_Friendly_Resume_Format_for_Beginners />}
         />
+        <Route
+          path="/simple-resume-formatting-best-practices"
+          element={<Simple_Resume_Formatting />}
+        />
+        <Route
+          path="/fresher-resume-mistakes-you-should-avoid"
+          element={<FresherResumeMistakes />}
+        />
+        <Route
+          path="/college-graduates-perfect-resume-formatting-tips"
+          element={<ResumeTipuForCollegeGraduates />}
+        />
+        <Route
+          path="/Resume-Formatting-First-Time-Job-Seekers"
+          element={<ResumeFormattingFirstTimeJobSeekers />}
+        />
+        <Route
+          path="/Fresher-Resume-Formatting-Font-Layout"
+          element={<FresherResumeFormattingComponentWithFontAndLayout />}
+        />
+        <Route
+          path="/Professional-Resume-Format-Experienced"
+          element={<ProfessionalResumeFormatforExperiencedCandidates />}
+        />
+<Route
+          path="/executive-resume-formatting-tips"
+          element={<ExecutiveLevelResumeFormatting />}
+        />
+<Route
+          path="/career-change-resume-formatting"
+          element={<CareerChangeResumeFormatting />}
+        />
+<Route
+          path="/chronological-resume-formatting-experienced-candidates"
+          element={<ChronologicalResumeGuide />}
+        />
+        <Route
+          path="/how-to-format-a-resume-for-leadership-jobs"
+          element={<FormatResumeLeadershipJobs/>}
+        />
+ <Route
+          path="/how-to-highlight-achievements-in-resume-formatting"
+          element={<HighlightAchievementsForResume/>}
+        />
+        <Route
+          path="/multi-page-resume-formatting"
+          element={<MultiPageResumeFormatting/>}
+        />
+<Route
+          path="/it-resume-formatting-tips"
+          element={<ITResumeTips/>}
+        />
+        <Route
+          path="/healthcare-industry-ke-liye-resume-formatting-guide"
+          element={<HealthcareResumeGuide/>}
+        />
+        <Route
+          path="/creative-and-designer-resume-tips"
+          element={<CreativeAndDesignerResumeTips/>}
+        />
+
 
 
         {/* interview quation and answer*/}
@@ -653,6 +742,15 @@ function App() {
           path="/do-you-have-any-questions-for-us"
           element={<QuestionsForUs />}
         />
+<Route
+          path="/tailor-your-resume"
+          element={<TailorResumeGuide/>}
+        />
+        <Route
+          path="/Functional_vs_Chronological_Resume_Formatting"
+          element={<ResumeFormattingArticle/>}
+        />
+
 
         {/* job and carier blog component */}
 
@@ -799,6 +897,7 @@ function App() {
       </Routes>
       <Footer />
     </Router>
+    </div>
   );
 }
 
