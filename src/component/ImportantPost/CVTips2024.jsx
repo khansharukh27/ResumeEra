@@ -15,7 +15,7 @@ const CVTips2024 = () => {
   return (
     <div>
       <Helmet>
-        <title>11 Essential Tips to Get Your CV Noticed in 2024</title>
+        <title>11 Essential Tips to Get Your CV Noticed in 2024 | ResumeEra</title>
         <meta
           name="description"
           content="Learn 11 essential tips to craft a CV that stands out in 2024. Optimize for ATS and showcase your skills effectively to land your dream job."
@@ -500,6 +500,22 @@ const CVTips2024 = () => {
             CV noticed in 2024.
           </p>
         </section>
+        <section>
+          <h2>Frequently Asked Questions</h2>
+          <div>
+            <h3>How can I tailor my CV to a job in 2024?</h3>
+            <p>Customize your CV for each job application to highlight the most relevant skills and experiences.</p>
+          </div>
+          <div>
+            <h3>What is the best CV format for 2024?</h3>
+            <p>Choose a clean, easy-to-read layout that prioritizes clarity and structure.</p>
+          </div>
+          <div>
+            <h3>How do I optimize my CV for ATS?</h3>
+            <p>Use industry-specific keywords and avoid images or graphics that might confuse Applicant Tracking Systems.</p>
+          </div>
+        </section>
+        <RandomeArticleToBlogCareer />
         <div><GoogleAd/></div>
       </div>
       <section>
@@ -509,7 +525,7 @@ const CVTips2024 = () => {
         <div><GoogleAd/></div>
         <div>
           <AuthorCard />
-          <RandomeArticleToBlogCareer />
+          
           <CallToAction />
         </div>
         <div><GoogleAd/></div>

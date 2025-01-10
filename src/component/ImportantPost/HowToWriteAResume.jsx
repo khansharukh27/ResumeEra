@@ -1,37 +1,69 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Helmet } from "react-helmet";
-import NewAds from "../adFolder/NewAds";
-// import ImportantPost from "../ImportantPost";
 import '../../css/Important_Post/HowToWriteAResume.css'
-import Avoid_Common_Mistakes from '../../image/image_for_link/Avoid_Common_Mistakes.jpeg'
 import Bullet_Best from '../../image/image_for_link/Bullet_Best.jpeg'
-// import Focus_Relevant_Experience from '../../image/image_for_link/Avoid_Common_mistake.jpeg'
 import Hard_Skills from '../../image/image_for_link/Hard_Skills.jpeg'
 import Proofread_Edit_Thoroughly from '../../image/image_for_link/Proofread_Edit_Thoroughly.jpeg'
 import Relevant_Keywords from '../../image/image_for_link/Relevant_Keywords.jpeg'
-import Soft_Skills from '../../image/image_for_link/Soft_Skills.jpeg'
-import ImportantPost from "../ImportantPost";
 import ShareButtons from "../shareButton/ShareButtons";
+import GoogleAd from "../adFolder/GoogleAd";
+import CallToAction from "../CallToAction";
+import RandomeArticleToBlogCareer from "../RandomeArticleToBlogCareer";
+import AuthorCard from "../AuthorCard";
 const HowToWriteAResume = () => {
+    const ArticleUrl =
+                          "https://resumeera.xyz/how-to-write-a-resume-in-7-easy-steps";
+                        const ArticleTitle = "How to Write a Resume in 7 Easy Steps - ResumeEra";
+                        useEffect(() => {
+                          window.scrollTo(0, 0);
+                        }, []);
     return (
         <div className="HowToWriteAResume2024">
             <Helmet>
-                <title>How To Write A Resume In 7 Easy Steps | ResumeEra</title>
-                <meta name="description" content="Learn how to write a resume in 7 simple steps to 
-                impress recruiters and land your dream job. Follow these tips from ResumeEra to create a 
-                perfect resume." />
-                <meta name="keywords" content="write a resume, resume writing tips, resume for job, 
-                how to write resume, resume guide, resume builder" />
+                <title>How to Write a Resume in 7 Easy Steps - ResumeEra</title>
+                <meta name="description" content="Learn how to write a resume in 7 easy steps. Follow our expert tips to create a resume that stands out and improves your chances of getting hired." />
+                <meta name="keywords" content="resume writing, how to write a resume, resume tips, resume examples, resume format" />
                 <link rel="canonical" href="https://resumeera.xyz/how-to-write-a-resume-in-7-easy-steps" />
+                <meta property="og:title" content="How to Write a Resume in 7 Easy Steps - ResumeEra" />
+                <meta property="og:description" content="Learn how to write a resume in 7 easy steps. Follow our expert tips to create a resume that stands out and improves your chances of getting hired." />
+                <meta property="og:url" content="https://resumeera.xyz/how-to-write-a-resume-in-7-easy-steps" />
+                <meta property="og:type" content="article" />
+                <meta property="og:image" content={Hard_Skills} />
+                <meta name="twitter:card" content="summary_large_image" />
+                <meta name="twitter:title" content="How to Write a Resume in 7 Easy Steps - ResumeEra" />
+                <meta name="twitter:description" content="Learn how to write a resume in 7 easy steps. Follow our expert tips to create a resume that stands out and improves your chances of getting hired." />
+                <meta name="twitter:image" content={Hard_Skills} />
+                <script type="application/ld+json">
+                    {`
+                        {
+                            "@context": "https://schema.org",
+                            "@type": "Article",
+                            "headline": "How to Write a Resume in 7 Easy Steps - ResumeEra",
+                            "description": "Learn how to write a resume in 7 easy steps. Follow our expert tips to create a resume that stands out and improves your chances of getting hired.",
+                            "image": ${Hard_Skills},
+                            "author": {
+                                "@type": "Person",
+                                "name": "ResumeEra"
+                            },
+                            "publisher": {
+                                "@type": "Organization",
+                                "name": "ResumeEra",
+                                "logo": {
+                                    "@type": "ImageObject",
+                                    "url": ${Hard_Skills}
+                                }
+                            },
+                            "datePublished": "2023-10-01",
+                            "mainEntityOfPage": {
+                                "@type": "WebPage",
+                                "@id": "https://resumeera.xyz/how-to-write-a-resume-in-7-easy-ste</div>ps"
+                            }
+                        }
+                    `}
+                </script>
             </Helmet>
-            <div>
-    <ShareButtons/>
-</div>
             <div className="HowToWriteAResumemain">
-                <div className="add1">
-                    
-                    <NewAds />
-                </div>
+                
                 <div className="content">
                 <h1 style={{backgroundColor:'palegoldenrod'}}>How To Write A Resume In 7 Easy Steps</h1>
                 <p>
@@ -40,11 +72,9 @@ const HowToWriteAResume = () => {
                     helping you highlight your skills, experience, and qualifications effectively.
                     Follow these 7 steps to create a resume that stands out and improves your chances of getting hired.
                 </p>
-
+<section></section><div><GoogleAd/></div>
                 <h2>1. Focus on Your Relevant Experience</h2>
-                <div className="addinner">
-                    <NewAds/>
-                </div>
+                
                 <p>
                     When writing your resume, relevance is key. Too often, job seekers list every job they’ve ever had,
                     but your resume should focus on the experiences most applicable to the job you're applying for.
@@ -58,11 +88,9 @@ const HowToWriteAResume = () => {
                     For instance, if you’re applying for a marketing position, emphasize campaigns you led, marketing tools you used,
                     and measurable outcomes like "Increased social media engagement by 30% in 3 months."
                 </p>
-                <img src={Relevant_Keywords} alt="Relevant Keyword" />
+                <section></section><div><GoogleAd/></div>
                 <h2>2. Make the First Bullet Your Best</h2>
-                <div className="addinner">
-                    <NewAds/>
-                </div>
+                
                 <p>
                     Research shows that hiring managers spend an average of 6 seconds reviewing a resume.
                     In that brief time, the first bullet point under each job experience is likely the first thing they'll notice.
@@ -78,10 +106,9 @@ const HowToWriteAResume = () => {
                     The more specific you are, the better your resume will resonate with potential employers.
                 </p>
                 <img src={Bullet_Best} alt="Make the First Bullet Your Best" />
+                <section></section><div><GoogleAd/></div>
                 <h2>3. Demonstrate Your Soft Skills</h2>
-                <div className="addinner">
-                    <NewAds/>
-                </div>
+                
                 <p>
                     Employers are increasingly placing value on soft skills. A report from LinkedIn revealed that communication, leadership,
                     and time management are among the top soft skills recruiters seek.
@@ -95,11 +122,8 @@ const HowToWriteAResume = () => {
                     </ul>
                     By showing how your soft skills contributed to your success, you're giving potential employers a reason to consider you for the role.
                 </p>
-<img src={Soft_Skills} alt="Demonstrate Your Soft Skills" />
+                <section></section><div><GoogleAd/></div>
                 <h2>4. Highlight Your Hard Skills</h2>
-                <div className="addinner">
-                    <NewAds/>
-                </div>
                 <p>
                     In many roles, technical skills are just as important as soft skills. Employers expect candidates to be proficient in industry-specific tools and technologies.
                     When listing your hard skills, reference the job description to ensure you are aligning with what the employer is looking for.
@@ -113,7 +137,7 @@ const HowToWriteAResume = () => {
                     such as a software developer or data scientist. This helps recruiters quickly see your core competencies.
                 </p>
                 <img src={Hard_Skills} alt="Highlight Your Hard Skills" />
-
+                <section></section><div><GoogleAd/></div>
                 <h2>5. Use Relevant Keywords</h2>
                 <p>
                     Nearly 75% of large companies use Applicant Tracking Systems (ATS) to screen resumes before they even reach a human.
@@ -128,11 +152,9 @@ const HowToWriteAResume = () => {
                     Additionally, always upload your resume in Word format when applying online, as ATS systems often reject PDFs.
                 </p>
                 <img src={Relevant_Keywords} alt="Use Relevant Keywords" />
-
+                <section></section><div><GoogleAd/></div>
                 <h2>6. Proofread and Edit Thoroughly</h2>
-                <div className="addinner">
-                    <NewAds/>
-                </div>
+                
                 <p>
                     Mistakes on a resume can cost you an opportunity. According to a study, 77% of hiring managers will reject a resume with typos or grammar mistakes.
                     After drafting your resume, take the time to proofread it carefully.
@@ -143,10 +165,9 @@ const HowToWriteAResume = () => {
                     and stick with classics like Arial, Times New Roman, or Calibri in size 11 or 12.
                 </p>
                         <img src={Proofread_Edit_Thoroughly} alt="Proofread and Edit Thoroughly" />
+                        <section></section><div><GoogleAd/></div>
                 <h2>7. Avoid Common Mistakes</h2>
-                <div className="addinner">
-                    <NewAds/>
-                </div>
+                
                 <p>
                     One mistake job seekers often make is including a photo on their resume. In fact, 88% of resumes are rejected by ATS systems
                     for this reason alone. Avoid adding unnecessary elements like photos, graphics, or colors that may cause issues with readability.
@@ -155,27 +176,52 @@ const HowToWriteAResume = () => {
                     Instead, focus on keeping the format simple and clean. When applying, ensure you have a professional LinkedIn profile picture,
                     as 87% of recruiters use LinkedIn to vet applicants. Your resume and LinkedIn profile should complement each other.
                 </p>
-<img src={Avoid_Common_Mistakes} alt="Avoid Common Mistake" />
                 <h3>Maximizing Your Resume with AI Tools</h3>
                 <p>
                     Today, technology can assist in resume optimization. Tools like ChatGPT allow you to improve your resume by generating suggestions based on your job description and resume content.
                     You can prompt AI to help you add missing keywords, refine your bullet points, and even check for grammar and consistency.
                 </p>
+                <section>
+            <h2>Conclusion</h2>
+            <p>
+                Writing a resume that stands out is a crucial step in your job search journey. By focusing on relevant experience, making impactful bullet points, demonstrating both soft and hard skills, using relevant keywords, and thoroughly proofreading your document, you can create a resume that catches the eye of hiring managers. Avoid common mistakes and leverage AI tools to refine your resume further. With these tips, you'll be well on your way to landing your next job.
+            </p>
+            </section><div><GoogleAd/></div>
+            <section>
+                <h2>Frequently Asked Questions (FAQ)</h2>
+                <h3>Q1: How long should my resume be?</h3>
+                <p>A: Ideally, your resume should be one page long, especially if you have less than 10 years of experience. For more experienced professionals, a two-page resume is acceptable.</p>
 
-                <p>
-                    Ready to perfect your resume? Visit <a href="https://resumeera.xyz">ResumeEra</a>
-                    to access our free resume-building tools, professional templates, and expert advice to help
-                    you stand out in the hiring process.
-                </p>
+                <h3>Q2: Should I include a summary or objective statement?</h3>
+                <p>A: A summary statement is recommended as it provides a brief overview of your qualifications and career achievements. Objective statements are less common and often considered outdated.</p>
+
+                <h3>Q3: How do I handle employment gaps on my resume?</h3>
+                <p>A: Be honest about gaps in your employment. You can briefly mention the reason for the gap in your cover letter or during the interview. Focus on any skills or experiences you gained during that time.</p>
+
+                <h3>Q4: Is it necessary to include references on my resume?</h3>
+                <p>A: No, it is not necessary to include references on your resume. Instead, you can provide them upon request. This saves space and keeps the focus on your qualifications.</p>
+
+                <h3>Q5: How often should I update my resume?</h3>
+                <p>A: You should update your resume regularly, especially when you gain new skills, certifications, or job experiences. Keeping it current ensures you are always ready to apply for new opportunities.</p>
+            </section><div><GoogleAd/></div>
                 </div>
-                <div className="add2">
-                    
-                    <NewAds />
-                </div>
+                
+            </div>
+            <section>
+            <div>
+                <AuthorCard/>
             </div>
             <div>
-                <ImportantPost />
+                <RandomeArticleToBlogCareer />
             </div>
+            <div>
+                <CallToAction />
+            </div>
+            <div className="stickyShare">
+                <ShareButtons url={ArticleUrl} title={ArticleTitle} />
+            </div>
+       </section>
+            
         </div>
     );
 };

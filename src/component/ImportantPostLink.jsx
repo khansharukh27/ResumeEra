@@ -43,9 +43,82 @@ import Functional_vs_Chronological_Resume_Formatting from '../image/image_for_li
 import It_Profetional_image from '../image/image_for_link/IT Professionals Ke Liye Resume Formatting Tipss.png'
 import HealthCare_images from '../image/image_for_link/Healthcare Industry Ke Liye Resume Formatting Guide.jpg'
 import Creative_Designer from '../image/image_for_link/Creative and Designers Resume Formatting Tips.jpg'
-
-
-
+import Sales_Marketing from '../image/image_for_link/resume formatting for sales and marketing professionals.jpg'
+import teachers_Professors from '../image/image_for_link/Professional Resume Formatting for Teachers and Professors.jpg'
+import Resume_Formating_Engineering_Students from '../image/image_for_link/Resume Formatting Tips for Engineering Students.jpg'
+import resume_formate_freelancers_remote_workers from '../image/image_for_link/Resume Formatting for Freelancers and Remote Workers.jpg'
+import Government_Job_Applications from '../image/image_for_link/Ideal Resume Formatting Guide for Government Job Applications.jpg'
+import Hospitality_tourism from '../image/image_for_link/Resume Formatting Tips for Hospitality and Tourism Professionals.jpg'
+import Resume_Formatting_Real_Estate_Agents from '../image/image_for_link/Resume Formatting Tips for Real Estate Agents.jpg'
+import Free_Resume_Formatting_Tools_for_2025 from '../image/image_for_link/Best Free Resume Formatting Tools for 2024.jpg'
+import Resume_Writing_Tips_for_Remote_Jobs from '../image/image_for_link/Resume Writing Tips for Remote Jobs.jpg'
+import blank_page from '../image/image_for_link/blank page.jpg'
+import Infographic_Resume from '../image/image_for_link/Infographic Resume Formatting Tools_ A Creative Approach.jpg'
+import Resume_Formatting_Mistakes from '../image/image_for_link/20 Resume Formatting Mistakes You Should Avoid.jpg'
+import Resume_Formatting_Errors from '../image/image_for_link/Top 10 Resume Formatting Errors and How to Fix Them-2025.png'
+import ATS_Unfriendly_Formatting from '../image/image_for_link/ATS-Unfriendly Formatting.jpeg'
+import Avoid_OvwerDesign_Resume from '../image/image_for_link/overDesign image.jpeg'
+import Font_and_Size from '../image/image_for_link/Font and Size Selection Mistakes.jpeg'
+import Reflect_Career_Breaks from '../image/image_for_link/Reflect Career Breaks.jpeg'
+import Grammar_mistake from '../image/image_for_link/Grammar Mistakes.jpeg'
+import common_layout_mistake from '../image/image_for_link/Common Layout Mistakes.jpeg'
+import resum_Download_pdf from '../image/image_for_link/resume format PDF Download.jpeg'
+import pdf_vs_word from '../image/image_for_link/PDF vs. Word.jpg'
+import Chronological_vs_functional from '../image/image_for_link/Chronological vs. Functional Resume.jpeg'
+import Infographics_vs_traditional from '../image/image_for_link/infographic vs traditional resume.jpeg'
+import online_vs_manual from '../image/image_for_link/Online Resume Builder vs Manual Resume.jpeg'
+import onepage_vs_multipage from '../image/image_for_link/one page vs multi page resume.jpeg'
+import modern_vs_tradinal from '../image/image_for_link/modern vs tradinal image.jpeg'
+import ats_vs_creative from '../image/image_for_link/ats vs creative resume.jpeg'
+import minimalistvsgraphics from '../image/image_for_link/minimalist vs graphics resume.jpeg'
+import summaryvsobjective from '../image/image_for_link/Objective Statement Vs Summary Statement.jpeg'
+import resumeformatintrend from '../image/image_for_link/2025 Resume Formatting Trends.jpeg'
+import resumeformattingaidriver from '../image/motivational_image/resume formatting ai drivern.jpg'
+import Presenting_Personal_Branding from '../image/image_for_link/Presenting Personal Branding.jpeg'
+import Matches_Your_LinkedIn_Profile from '../image/image_for_link/Matches Your LinkedIn Profile.jpeg'
+import modern_resume from '../image/image_for_link/thoko.jpeg'
+import Data_Driven_Resume from '../image/image_for_link/Data-Driven Resume.jpeg'
+import SocialMediaInfluencer from '../image/image_for_link/SocialMediaInfluencer.jpeg'
+import CreateJobSpecificResume from '../image/image_for_link/Create Job-Specific Resume.webp'
+import FreelancersPortfolioResumeFormatting from '../image/image_for_link/FreelancersPortfolio Resume Formatting.jpeg'
+import RemoteResumeFormatting from '../image/image_for_link/Remote Resume Formatting.jpeg'
+import PersonalizedResumeFormatting from '../image/image_for_link/Personalized Resume Formatting International.jpeg'
+import ResumeFormatting from '../image/image_for_link/Resume Formatting Your Ultimate.png'
+import DownloadtheBestResumeFormatPDF from '../image/image_for_link/Download the Best Resume Format PDF.webp'
+import topResumeFormatepdfforjob from '../image/image_for_link/Top Resume Format PDF for Job Seekers.jpeg'
+import EffortlessResumeCreations from '../image/image_for_link/Effortless Resume Creation.jpeg'
+import ResumeFormatepdf from '../image/image_for_link/Resume Format PDF Guides.jpeg'
+import GetHiredFasters from "../image/image_for_link/Get Hired Faster.jpeg";
+import rightResumeFormat from '../image/image_for_link/Right Resume Format PDF.jpeg'
+import FreeResumeFormats from '../image/image_for_link/FreeResumeFormatPDF.jpeg'
+import CreateYourDreamJob from '../image/image_for_link/Create Your Dream Job Resume.jpeg'
+import StepbyStepResumeCreations from "../image/image_for_link/Step-by-Step Resume Creation.jpeg";
+import FreeResumeFormate from '../image/image_for_link/Free Resume Format PDFs.jpeg'
+import ACompleteGuide from '../image/image_for_link/A Complete Guide to Resume Format PDF.jpeg'
+import DownloadProfessional from '../image/image_for_link/DownloadaProfessionalResumeFormatPDF.jpeg'
+import ResumeGuides from '../image/image_for_link/Resume Format PDF Guides.jpeg'
+import TheUltimateCollectionofResumeFormatPDF from '../image/image_for_link/The Ultimate Collection of Resume Format PDF.jpeg'
+import MyTop10FreeResumeFormatPD from '../image/image_for_link/My Top 10 Free Resume Format PDF.jpeg'
+import DownloadYourFreeResumeFormat from '../image/image_for_link/Download Your Free Resume Format.jpeg'
+import FindtheRightResumeFormat from '../image/image_for_link/Find the Right Resume Format.jpeg'
+import LookingforaResumeFormat from '../image/image_for_link/Looking for a Resume Format.jpeg'
+import DownloadResumeFormatPDF from '../image/image_for_link/Download Resume Format PDF.jpeg'
+import Bestresumeformat from '../image/image_for_link/Best Resume Format PDF for.jpeg'
+import HowtoCreateaWinning from '../image/image_for_link/How to Create a Winning Resume Using.jpeg'
+import easytouse from '../image/image_for_link/easy to use.jpeg'
+import HighImpactResumes from '../image/image_for_link/High-Impact Resumes.jpeg'
+import freeresumeformat from '../image/image_for_link/Free Resume Format PDF Templates.jpeg'
+import HowtoCreateaStunning from '../image/image_for_link/How to Create a Stunning Resume.jpeg'
+import CraftthePerfectResume from '../image/image_for_link/Craft the Perfect Resume.jpeg'
+import freeresumeform from '../image/image_for_link/Free Resume Format PDF Templates.jpeg'
+import resumeformate from '../image/image_for_link/Resume Format.jpeg'
+import resumeformatpdf from '../image/image_for_link/Resume Format PDF Guides.jpeg'
+import resumeformatting from '../image/image_for_link/Resume Formatting Kya Hai.jpg'
+import professionalresumeformat from '../image/image_for_link/Professional Resume Format PDF.jpeg'
+import crafttheperfectresume from '../image/image_for_link/Craft the Perfect Resume pdf.jpeg'
+import YourStepbyStepGuidetoaProfessional from '../image/image_for_link/Your Step-by-Step Guide to a Professional.jpeg'
+import CreateresumeThatGets from '../image/image_for_link/Create a Resume That Gets Result.jpeg'
+import { Link } from "react-router-dom";
 const ImportantPostLink = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const [visiblePosts, setVisiblePosts] = useState(9); // Initially display 9 posts
@@ -185,7 +258,7 @@ const ImportantPostLink = () => {
     {
       path: "/resume-writing-tips-for-remote-jobs",
       title: "Resume Writing Tips for Remote Jobs",
-      src: "https://img.freepik.com/free-photo/person-using-laptop_23-2149034987.jpg",
+      src:{Resume_Writing_Tips_for_Remote_Jobs},
       alt: "Remote job resume tips",
     },
     {
@@ -476,10 +549,455 @@ const ImportantPostLink = () => {
       src:Creative_Designer,
       alt: "Creative and Designer Resume Tips",
     },
-   
-
-
+    {
+      path: "/best-resume-formatting-sales-marketing",
+      title: "Best Resume Formatting for Sales and Marketing Professionals",
+      src:Sales_Marketing,
+      alt: "Best Resume Formatting for Sales and Marketing Professionals",
+    },
+    {
+      path: "/resume_formatting_for_teachersAndProfessors",
+      title: "Professional Resume Formatting for Teachers and Professors",
+      src:teachers_Professors,
+      alt: "Professional Resume Formatting for Teachers and Professors",
+    },
+    {
+      path: "/resume-formatting-engineerig-students",
+      title: "Resume Formatting Tips for Engineering Students || ResumeEra",
+      src:Resume_Formating_Engineering_Students,
+      alt: "Resume Formatting Tips for Engineering Students || ResumeEra",
+    },
+    {
+      path: "/resume-formatting-for-freelancers-and-remote-workers",
+      title: "Resume Formatting for Freelancers and Remote Workers || ResumeEra",
+      src:resume_formate_freelancers_remote_workers,
+      alt: "Resume Formatting for Freelancers and Remote Workers || ResumeEra",
+    },
+    {
+      path: "/government-job-resume-guide",
+      title: "Ideal Resume Formatting Guide for Government Job Applications || ResumeEra",
+      src:Government_Job_Applications,
+      alt: "Ideal Resume Formatting Guide for Government Job Applications || ResumeEra",
+    },
+    {
+      path: "/hospitality-tourism-resume-tips",
+      title: "Resume Tips for Hospitality and Tourism Professionals || ResumeEra",
+      src:Hospitality_tourism,
+      alt: "Resume Tips for Hospitality and Tourism Professionals || ResumeEra",
+    },
+    {
+      path: "/Best-Resume-Formatting-Tips-for-Real-Estate-Agents",
+      title: "Best Resume Formatting Tips for Real Estate Agents || ResumeEra",
+      src:Resume_Formatting_Real_Estate_Agents,
+      alt: "Best Resume Formatting Tips for Real Estate Agents || ResumeEra",
+    },
+    {
+      path: "/best-free-resume-formatting-tools-for-2025",
+      title: "Best Free Resume Formatting Tools for 2025 || ResumeEra",
+      src:Free_Resume_Formatting_Tools_for_2025,
+      alt: "Best Free Resume Formatting Tools for 2025 || ResumeEra",
+    },
+    {
+      path: "/best-free-resume-formatting-tools-for-2025",
+      title: "8 Best Online Tools for Resume Formatting for 2025 || ResumeEra",
+      src:blank_page,
+      alt: "8 Best Online Tools for Resume Formatting for 2025 || ResumeEra",
+    },
+    {
+      path: "/infographic-resume-formatting",
+      title: "Infographic Resume Formatting Tools: A Creative Approach 2025 || ResumeEra",
+      src: Infographic_Resume,
+      alt: "Infographic Resume Formatting Tools: A Creative Approach 2025 || ResumeEra",
+    },
+    {
+      path: "/20-Resume-Formatting-Mistakes-You-Should-Avoid",
+      title: "20 Resume Formatting Mistakes You Should Avoid || ResumeEra",
+      src: Resume_Formatting_Mistakes,
+      alt: "20 Resume Formatting Mistakes You Should Avoid || ResumeEra",
+    },
+    {
+      path: "/top-10-resume-formatting-errors",
+      title: "Top 10 Resume Formatting Errors and How to Fix Them || ResumeEra",
+      src: Resume_Formatting_Errors,
+      alt: "Top 10 Resume Formatting Errors and How to Fix Them || ResumeEra",
+    },
+    {
+      path: "/why-ats-unfriendly-formatting-can-lead-to-resume-rejection",
+      title: "Why ATS-Unfriendly Formatting Can Lead to Resume Rejection | ResumeEra",
+      src: ATS_Unfriendly_Formatting,
+      alt: "ATS-Unfriendly Formatting",
+    },
+    {
+      path: "/how-to-avoid-over-designing-your-resume-formatting",
+      title: "How to Avoid Over-Designing Your Resume Formatting",
+      src: Avoid_OvwerDesign_Resume,
+      alt: "How to Avoid Over-Designing Your Resume Formatting ",
+    },
+    {
+      path: "/font-and-size-mistakes",
+      title: "Font and Size Selection Mistakes in Resume Formatting | ResumeEra",
+      src:Font_and_Size,
+      alt: "Font and Size Selection Mistakes in Resume Formatting | ResumeEra ",
+    },
+    {
+      path: "/Resume_Formatting_Errors_That_Fail_to_Reflect_Career_Breaks",
+      title: "Resume Formatting Errors That Fail to Reflect Career Breaks | ResumeEra",
+      src: Reflect_Career_Breaks,
+      alt: "Resume Formatting Errors That Fail to Reflect Career Breaks | ResumeEra ",
+    },
+    {
+      path: "/how-to-hide-spelling-and-grammar-mistakes-through-formatting-a-resume",
+      title: "How to Hide Spelling and Grammar Mistakes Through Formatting a Resume",
+      src: Grammar_mistake,
+      alt: "How to Hide Spelling and Grammar Mistakes Through Formatting a Resume ",
+    },
+    {
+      path: "/common-layout-mistakes-that-make-your-resume-unprofessional",
+      title: "Common Layout Mistakes That Make Your Resume Unprofessional",
+      src: common_layout_mistake,
+      alt: "Common Layout Mistakes That Make Your Resume Unprofessional",
+    },
+    {
+      path: "/professional-resume-format-pdf",
+      title: "Download Professional Resume Format PDF",
+      src: resum_Download_pdf,
+      alt: "Download Professional Resume Format PDF",
+    },
+    {
+      path: "/pdf-vs-word-resume",
+      title: "PDF vs. Word: Which Format is Best for Resume Formatting",
+      src:pdf_vs_word ,
+      alt: "PDF vs. Word: Which Format is Best for Resume Formatting",
+    },
+    {
+      path: "/chronological-vs-functional-resume-formatting",
+      title: "Chronological vs. Functional Resume Formatting: When and What to Choose",
+      src:Chronological_vs_functional ,
+      alt: "Chronological vs. Functional Resume Formatting: When and What to Choose",
+    },
+    {
+      path: "/infographic-resume-vs-traditional-resume-formatting",
+      title: "Infographic Resume vs. Traditional Resume Formatting: Pros and Cons | ResumeEra",
+      src: Infographics_vs_traditional ,
+      alt: "Infographic Resume vs. Traditional Resume Formatting: Pros and Cons ",
+    },
+    {
+      path: "/online-resume-builder-vs-manual-resume-builder-formatting",
+      title: "Online Resume Builder vs Manual Resume Formatting | ResumeEra",
+      src: online_vs_manual,
+      alt: "Online Resume Builder vs Manual Resume Formatting",
+    },
+    {
+      path: "/one-vs-multi-page-resume",
+      title: "/one-vs-multi-page-resume | ResumeEra",
+      src: onepage_vs_multipage,
+      alt: "/one-vs-multi-page-resume",
+    },
+    {
+      path: "/Modern-vs-traditiona-resume-formatting",
+      title: "Modern vs Traditional Resume Formatting | ResumeEra",
+      src: modern_vs_tradinal,
+      alt: "Modern vs Traditional Resume Formatting",
+    },
+    {
+      path: "/ats-friendly-vs-creative-resume-format",
+      title: "ATS-Friendly Resume Vs Creative Resume Formatting: What Employers Prefer | ResumeEra",
+      src: ats_vs_creative,
+      alt: "ATS-Friendly Resume Vs Creative Resume Formatting",
+    },
+    {
+      path: "/minimalist-vs-graphic-formatting",
+      title: "Minimalist Formatting Vs Graphic Formatting: What Employers Prefer | ResumeEra",
+      src: minimalistvsgraphics,
+      alt: "Minimalist Formatting Vs Graphic Formatting",
+    },
+    {
+      path: "/objective-vs-summary-statement-the-right-way-to-format-your-resume",
+      title: "Objective Statement vs Summary Statement: The Right Way to Format Your Resume | ResumeEra",
+      src: summaryvsobjective,
+      alt: "Objective Statement vs Summary Statement: The Right Way to Format Your Resume | ResumeEra",
+    },
+    {
+      path: "/2025-resume-formatting-trends",
+      title: "2025 Resume Formatting Trends You Need to Know | ResumeEra",
+      src: resumeformatintrend,
+      alt: "2025 Resume Formatting Trends You Need to Know | ResumeEra",
+    },
+    {
+      path: "/resume-formattin-for-ai-driven-application-tracking-system",
+      title: "Resume Formatting for AI-Driven Application Tracking Systems | ResumeEra",
+      src: resumeformattingaidriver,
+      alt: "Resume Formatting for AI-Driven Application Tracking Systems",
+    },
+    {
+      path: "/how-to-present-personal-branding-through-resume-formatting",
+      title: "How to Present Personal Branding Through Resume Formatting | ResumeEra",
+      src: Presenting_Personal_Branding,
+      alt: "How to Present Personal Branding Through Resume Formatting",
+    },
+    {
+      path: "/how-to-create-resume-formatting-that-matches-your-linkedin-profile",
+      title: "How to Create Resume Formatting That Matches Your LinkedIn Profile | ResumeEra",
+      src: Matches_Your_LinkedIn_Profile,
+      alt: "How to Create Resume Formatting That Matches Your LinkedIn Profile",
+    },
+    {
+      path: "/modern-resume-formatting-with-interactive-elements ",
+      title: "Modern Resume Formatting with Interactive Elements: The Ultimate Guide | ResumeEra",
+      src: modern_resume,
+      alt: "Modern Resume Formatting with Interactive Elemennt",
+    },
+    {
+      path: "/data-driven-resume-formatting-for-analytical-jobs-formatting-for-analytical-jobs",
+      title: "Data-Driven Resume formatting for Analytical Jobs | ResumeEra",
+      src: Data_Driven_Resume,
+      alt: "Data-Driven Resume formatting for Analytical Jobs",
+    },
+    {
+      path: "/social-media-influencer-resume-formatting",
+      title: "The Social Media Influencer's Resume formatting: Stand Out & Land Your Dream Brand Collaborations | ResumeEra",
+      src: SocialMediaInfluencer,
+      alt: "The Social Media Influencer's Resume formatting: Stand Out & Land Your Dream Brand Collaborations",
+    },
+    {
+      path: "/job-specific-resume-formatting",
+      title: "Job-Specific Resume Formatting: How to Tailor Your Resume for Success | ResumeEra",
+      src: CreateJobSpecificResume,
+      alt: "Job-Specific Resume Formatting: How to Tailor Your Resume for Success",
+    },
+    {
+      path: "/freelancers-portfolio-resume-formatting-tips",
+      title: "Freelancers' Portfolio Resume Formatting Tips | Stand Out and Attract Clients | ResumeEra",
+      src: FreelancersPortfolioResumeFormatting,
+      alt: "Freelancers' Portfolio Resume Formatting Tips",
+    },
+    {
+      path: "/remote-resume-formatting-crafting-a-standout-resume-for-remote-jobs",
+      title: "Remote Resume Formatting: Crafting a Standout Resume for Remote Jobs | ResumeEra",
+      src: RemoteResumeFormatting,
+      alt: "Remote Resume Formatting: Crafting a Standout Resume for Remote Jobs",
+    },
+    {
+      path: "/personalized-resume-formatting-for-international-jobs",
+      title: "Personalized Resume Formatting for International Jobs: A Comprehensive Guide | ResumeEra",
+      src: PersonalizedResumeFormatting,
+      alt: "Personalized Resume Formatting for International Jobs: A Comprehensive Guide",
+    },
+    {
+      path: "/resume-formatting-your-ultimate-guide-to-landing-more-interviews",
+      title: "Resume Formatting: Your Ultimate Guide to Landing More Interviews | ResumeEra",
+      src: ResumeFormatting,
+      alt: "Resume Formatting: Your Ultimate Guide to Landing More Interviews",
+    },
+    {
+      path: "/download-best-resume-format-pdf-create-perfect-resume",
+      title: "Download the Best Resume Format PDF: Create Your Perfect Resume Today | ResumeEra",
+      src: DownloadtheBestResumeFormatPDF,
+      alt: "Download the Best Resume Format PDF: Create Your Perfect Resume Today | ResumeEra",
+    },
+    {
+      path: "/top-resume-format-pdf-job-seekers-free-templates-get-hired-fast",
+      title: "Top Resume Format PDF for Job Seekers: Free Templates to Get Hired Fast | ResumeEra",
+      src: topResumeFormatepdfforjob,
+      alt: "Top Resume Format PDF for Job Seekers: Free Templates to Get Hired Fast",
+    },
+    {
+      path: "/effortless-resume-creation-download-professional-resume-format-pdf",
+      title: "Effortless Resume Creation: Download Professional Resume Format PDF | ResumeEra",
+      src: EffortlessResumeCreations,
+      alt: "Effortless Resume Creation: Download Professional Resume Format PDF",
+    },
+    {
+      path: "/resume-format-pdf-guide-perfect-templates-for-a-standout-cv",
+      title: "Resume Format PDF Guide: Perfect Templates for a Standout CV",
+      src: ResumeFormatepdf,
+      alt: "Resume Format PDF Guide: Perfect Templates for a Standout CV",
+    },
+    {
+      path: "  /get-hired-faster-the-ultimate-resume-format-pdf-for-your-career",
+      title: "Get Hired Faster: The Ultimate Resume Format PDF for Your Career",
+      src: GetHiredFasters,
+      alt: "Get Hired Faster: The Ultimate Resume Format PDF for Your Career",
+    },
+    {
+      path: "/how-to-choose-the-right-resume-format-pdf-free-templates-inside",
+      title: "How to Choose the Right Resume Format PDF: Free Templates Inside | ResumeEra",
+      src: rightResumeFormat,
+      alt: "How to Choose the Right Resume Format PDF: Free Templates Inside",
+    },
+    {
+      path: "/free-resume-format-pdf-simple-professional-and-ready-to-download",
+      title: "Free Resume Format PDF: Simple, Professional, and Ready to Download | ResumeEra",
+      src: FreeResumeFormats,
+      alt: "Free Resume Format PDF: Simple, Professional, and Ready to Download",
+    },
+    {
+      path: "/create-your-dream-job-resume-top-resume-format-pdf-templates-available",
+      title: "Create Your Dream Job Resume: Top Resume Format PDF Templates Available | ResumeEra",
+      src: CreateYourDreamJob,
+      alt: "Create Your Dream Job Resume: Top Resume Format PDF Templates Available | ResumeEra",
+    },
+    {
+      path: "/step-by-step-resume-creation-with-our-free-resume-format-pdf-templates",
+      title: "Step-by-Step Resume Creation with Our Free Resume Format PDF Templates | ResumeEra",
+      src: StepbyStepResumeCreations,
+      alt: "Step-by-Step Resume Creation with Our Free Resume Format PDF Templates",
+    },
+    {
+      path: "/free-resume-format-pdf-build-a-cv-that-stands-out",
+      title: "Free Resume Format PDF: Build a CV That Stands Out | ResumeEra",
+      src: FreeResumeFormate,
+      alt: "Free Resume Format PDF: Build a CV That Stands Out",
+    },
+    {
+      path: "/complete-guide-to-resume-format-pdf-your-key-to-landing-any-job",
+      title: "A Complete Guide to Resume Format PDF: Your Key to Landing Any Job | ResumeEra",
+      src: ACompleteGuide,
+      alt: "A Complete Guide to Resume Format PDF: Your Key to Landing Any Job",
+    },
+    {
+      path: "/download-a-professional-resume-format-pdf-simple-fast-effective",
+      title: "Download a Professional Resume Format PDF: Simple, Fast & Effective | ResumeEra",
+      src: DownloadProfessional,
+      alt: "Download a Professional Resume Format PDF: Simple, Fast & Effective",
+    },
+    {
+      path: "/how-to-build-the-perfect-resume-with-a-resume-format-pdf",
+      title: "How to Build the Perfect Resume with a Resume Format PDF | ResumeEra",
+      src: ResumeGuides,
+      alt: "How to Build the Perfect Resume with a Resume Format PDF | ResumeEra",
+    },
+    {
+      path: "/the-ultimate-collection-of-resume-format-pdfs-for-job-seekers",
+      title: "The Ultimate Collection of Resume Format PDFs for Job Seekers: Your Guide to Landing That Dream Job | ResumeEra",
+      src: TheUltimateCollectionofResumeFormatPDF,
+      alt: "The Ultimate Collection of Resume Format PDFs for Job Seekers",
+    },
+    {
+      path: "/my-top-10-free-resume-format-pdfs-for-landing-your-dream-job",
+      title: "My Top 10 Free Resume Format PDFs for Landing Your Dream Job | ResumeEra",
+      src: MyTop10FreeResumeFormatPD,
+      alt: "My Top 10 Free Resume Format PDFs for Landing Your Dream Job | ResumeEra",
+    },
+    {
+      path: "/download-your-free-resume-format-pdf-today-and-stand-out",
+      title: "Download Your Free Resume Format PDF Today and Stand Out | ResumeEra",
+      src: DownloadYourFreeResumeFormat,
+      alt: "Download Your Free Resume Format PDF Today and Stand Out",
+    },
+    {
+      path: "/find-the-right-resume-format-pdf-for-your-career-growth",
+      title: "Find the Right Resume Format PDF for Your Career Growth | ResumeEra",
+      src: FindtheRightResumeFormat,
+      alt: "Find the Right Resume Format PDF for Your Career Growth",
+    },
+    {
+      path: "/looking-for-resume-format-pdf-get-free-templates",
+      title: "Looking for a Resume Format PDF? Get Free Templates Now | ResumeEra",
+      src: LookingforaResumeFormat,
+      alt: "Looking for a Resume Format PDF? Get Free Templates Now",
+    },
+    {
+      path: "/download-resume-format-pdf-for-freshers-simple-and-effective",
+      title: "Download Resume Format PDF for Freshers: Simple and Effective",
+      src: DownloadResumeFormatPDF,
+      alt: "Download Resume Format PDF for Freshers: Simple and Effective",
+    },
+    {
+      path: "/best-resume-format-pdf-for-professionals-download-now",
+      title: "Best Resume Format PDF for Professionals: Download Now | ResumeEra",
+      src: Bestresumeformat,
+      alt: "Best Resume Format PDF for Professionals: Download Now | ResumeEra",
+    },
+    {
+      path: "/how-to-create-a-winning-resume-using-resume-format-pdf",
+      title: "How to Create a Winning Resume Using Resume Format PDF",
+      src: HowtoCreateaWinning,
+      alt: "How to Create a Winning Resume Using Resume Format PDF",
+    },
+    {
+      path: "/easy-to-use-resume-format-pdf-for-job-seekers",
+      title: "Easy-to-Use Resume Format PDF for Job Seekers of All Levels | ResumeEra",
+      src: easytouse,
+      alt: "Easy-to-Use Resume Format PDF for Job Seekers of All Levels",
+    },
+    {
+      path: "/top-resume-format-pdfs-for-high-impact-resumes",
+      title: "Top Resume Format PDFs for High-Impact Resumes | ResumeEra",
+      src: HighImpactResumes      ,
+      alt: "Top Resume Format PDFs for High-Impact Resumes | ResumeEra",
+    },
+    {
+      path: "/free-resume-format-pdf-templates-perfect-for-your-next-job",
+      title: "Free Resume Format PDF Templates: Perfect for Your Next Job | ResumeEra",
+      src: freeresumeformat,
+      alt: "Free Resume Format PDF Templates: Perfect for Your Next Job",
+    },
+    {
+      path: "/how-to-create-a-stunning-resume-using-a-resume-format-pdf",
+      title: "How to Create a Stunning Resume Using a Resume Format PDF | ResumeEra",
+      src: HowtoCreateaStunning,
+      alt: "How to Create a Stunning Resume Using a Resume Format PDF",
+    },
+    {
+      path: "/craft-the-perfect-resume-with-our-free-resume-format-pdf",
+      title: "Craft the Perfect Resume with Our Free Resume Format PDF | ResumeEra",
+      src: CraftthePerfectResume,
+      alt: "Craft the Perfect Resume with Our Free Resume Format PDF | ResumeEra",
+    },
+    {
+      path: "/free-resume-format-pdf-design-your-resume-in-minutes",
+      title: "Free Resume Format PDF: Design Your Resume in Minutes | ResumeEra",
+      src: freeresumeform,
+      alt: "Free Resume Format PDF: Design Your Resume in Minutes | ResumeEra",
+    },
+    {
+      path: "/resume-format",
+      title: "Resume Format | ResumeEra",
+      src:resumeformate,
+      alt: "resume formate",
+    },
+    {
+      path: "/resume-format-pdf",
+      title: "Resume Format PDF| ResumeEra",
+      src:  resumeformatpdf,
+      alt: "resume formate PDF",
+    },
+    {
+      path: "/resume-formatting",
+      title: "Resume Formatting | ResumeEra",
+      src:  resumeformatting,
+      alt: "resume formatting",
+    },
+    {
+      path: "/professional-resume-format-pdf-download",
+      title: "Professional Resume Format PDF: Download for Free | ResumeEra",
+      src:  professionalresumeformat,
+      alt: "Professional Resume Format PDF: Download for Free",
+    },
+    {
+      path: "/craft-perfect-resume-with-free-format-pdf",
+      title: "Craft the Perfect Resume with Our Free Resume Format PDF | ResumeEra",
+      src:  crafttheperfectresume,
+      alt: "Craft the Perfect Resume with Our Free Resume Format PDF",
+    },
+    {
+      path: "/your-step-by-step-guide-to-a-professional-resume-format-pdf",
+      title: "Your Step-by-Step Guide to a Professional Resume Format PDF | ResumeEra",
+      src:  YourStepbyStepGuidetoaProfessional,
+      alt: "Your Step-by-Step Guide to a Professional Resume Format PDF",
+    },
+    {
+      path: "/create-a-resume-that-gets-results-best-resume-format-pdfs",
+      title: "Create a Resume That Gets Results: Best Resume Format PDFs | ResumeEra",
+      src:  CreateresumeThatGets,
+      alt: "Create a Resume That Gets Results: Best Resume Format PDFs",
+    },
   ];
+  
+  
+
+   
   
   // Filter posts based on search term
   const filteredPosts = posts.filter((post) =>
@@ -521,8 +1039,8 @@ const ImportantPostLink = () => {
               }}
             >
               <div className="card-body" style={{}}>
-                <a
-                  href={post.path}
+                <Link
+                  to={post.path}
                   // className="btn btn-primary"
                   style={{ 
                     textAlign: "center", // Ensures proper alignment for inner elements
@@ -556,7 +1074,7 @@ const ImportantPostLink = () => {
                   >
                     {post.title}
                   </h3>
-                </a>
+                </Link>
               </div>
             </div>
 

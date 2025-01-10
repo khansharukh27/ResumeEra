@@ -4,11 +4,10 @@ import ShareButtons from "../shareButton/ShareButtons";
 import CallToAction from "../CallToAction";
 import RandomeArticleToBlogCareer from "../RandomeArticleToBlogCareer";
 import AuthorCard from "../AuthorCard";
-import Creative_Designer from '../../image/image_for_link/Creative and Designers Resume Formatting Tips.jpg'
+import Creative_Designer from "../../image/image_for_link/Creative and Designers Resume Formatting Tips.jpg";
 import GoogleAd from "../adFolder/GoogleAd";
 export default function CreativeAndDesignerResumeTips() {
-  const ArticleUrl =
-    "https://resumeera.xyz/creative-and-designer-resume-tips";
+  const ArticleUrl = "https://resumeera.xyz/creative-and-designer-resume-tips";
   const ArticleTitle = "Creative and Designer Resume Tips";
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -49,26 +48,31 @@ export default function CreativeAndDesignerResumeTips() {
           content="https://www.naukri.com/blog/wp-content/uploads/2021/07/creative-and-designer-resume-tips.jpg"
         />
       </Helmet>
-      <article className="aboutResumeEra"> 
+      <article className="aboutResumeEra">
         <h1>Creative and Designers Resume Formatting Tips</h1>
         <div className="date-author-container">
-            <img
-              src="https://resumeera.xyz/static/media/best_logo.895bb22edf6c08600c86.webp"
-              alt="ResumeEra Logo"
-              className="author-logo"
-              style={{ width: "50px", height: "50px" }}
-            />
-            <small className="author-details">
-              ✍️ By the <span className="author-highlight">ResumeEra Team</span>{" "}
-              | Published:{""}
-              <span className="author-highlight">December 30, 2024</span> | ⏱️{" "}
-              <span className="author-highlight">8 min read</span>
-            </small>
-          </div>
-          <figure>
-            <img style={{height:'auto'}} src={Creative_Designer} alt="Creative and Designers Resume Formatting Tips" loading="lazy" />
-            <figcaption>Creative and Designer Resume Tips</figcaption>
-          </figure>
+          <img
+            src="https://resumeera.xyz/static/media/best_logo.895bb22edf6c08600c86.webp"
+            alt="ResumeEra Logo"
+            className="author-logo"
+            style={{ width: "50px", height: "50px" }}
+          />
+          <small className="author-details">
+            ✍️ By the <span className="author-highlight">ResumeEra Team</span> |
+            Published:{""}
+            <span className="author-highlight">December 30, 2024</span> | ⏱️{" "}
+            <span className="author-highlight">8 min read</span>
+          </small>
+        </div>
+        <figure>
+          <img
+            style={{ height: "auto" }}
+            src={Creative_Designer}
+            alt="Creative and Designers Resume Formatting Tips"
+            loading="lazy"
+          />
+          <figcaption>Creative and Designer Resume Tips</figcaption>
+        </figure>
         <p>
           As a creative professional, your resume is more than just a list of
           qualifications—it’s a showcase of your skills and style. A
@@ -99,7 +103,10 @@ export default function CreativeAndDesignerResumeTips() {
               your personal branding.
             </li>
           </ul>
-        </section><div><GoogleAd/></div>
+        </section>
+        <div>
+          <GoogleAd />
+        </div>
         <section>
           <h2>2. Showcase Your Personal Brand</h2>
           <p>
@@ -119,7 +126,10 @@ export default function CreativeAndDesignerResumeTips() {
               minimalist for UX designers, bold for graphic designers).
             </li>
           </ul>
-        </section><div><GoogleAd/></div>
+        </section>
+        <div>
+          <GoogleAd />
+        </div>
         <section>
           <h2>3. Prioritize Content</h2>
           <p>
@@ -142,7 +152,10 @@ export default function CreativeAndDesignerResumeTips() {
               Use bullet points for achievements and avoid long paragraphs.
             </li>
           </ul>
-        </section><div><GoogleAd/></div>
+        </section>
+        <div>
+          <GoogleAd />
+        </div>
         <section>
           <h2>4. Highlight Key Skills</h2>
           <p>
@@ -160,7 +173,10 @@ export default function CreativeAndDesignerResumeTips() {
             <li>Use visuals sparingly—the content must remain scannable.</li>
             <li>Keep the list relevant and updated.</li>
           </ul>
-        </section><div><GoogleAd/></div>
+        </section>
+        <div>
+          <GoogleAd />
+        </div>
         <section>
           <h2>5. Incorporate Action-Oriented Language</h2>
           <p>
@@ -182,7 +198,10 @@ export default function CreativeAndDesignerResumeTips() {
               engagement."
             </li>
           </ul>
-        </section><div><GoogleAd/></div>
+        </section>
+        <div>
+          <GoogleAd />
+        </div>
         <section>
           <h2>6. Optimize for ATS and Humans</h2>
           <p>
@@ -201,7 +220,10 @@ export default function CreativeAndDesignerResumeTips() {
             </li>
             <li>Save your resume as a PDF to preserve formatting.</li>
           </ul>
-        </section><div><GoogleAd/></div>
+        </section>
+        <div>
+          <GoogleAd />
+        </div>
         <section>
           <h2>7. Embrace Visual Hierarchy</h2>
           <p>
@@ -219,7 +241,10 @@ export default function CreativeAndDesignerResumeTips() {
             </li>
             <li>Align text consistently for a polished look.</li>
           </ul>
-        </section><div><GoogleAd/></div>
+        </section>
+        <div>
+          <GoogleAd />
+        </div>
         <section>
           <h2>8. Include Portfolio Links</h2>
           <p>
@@ -233,7 +258,10 @@ export default function CreativeAndDesignerResumeTips() {
             <li>Ensure your portfolio is mobile-friendly.</li>
             <li>Highlight your most relevant projects upfront.</li>
           </ul>
-        </section><div><GoogleAd/></div>
+        </section>
+        <div>
+          <GoogleAd />
+        </div>
         <section>
           <h2>9. Proofread for Perfection</h2>
           <p>
@@ -246,7 +274,10 @@ export default function CreativeAndDesignerResumeTips() {
             <li>Ask a friend or mentor to review for clarity and accuracy.</li>
             <li>Print your resume to check for layout inconsistencies.</li>
           </ul>
-        </section><div><GoogleAd/></div>
+        </section>
+        <div>
+          <GoogleAd />
+        </div>
         <section>
           <h2>10. Test for Flexibility</h2>
           <p>
@@ -262,7 +293,10 @@ export default function CreativeAndDesignerResumeTips() {
             </li>
             <li>Ensure colors and fonts appear as intended across devices.</li>
           </ul>
-        </section><div><GoogleAd/></div>
+        </section>
+        <div>
+          <GoogleAd />
+        </div>
         <section>
           <h2>Closing Thoughts</h2>
           <p>
@@ -277,7 +311,10 @@ export default function CreativeAndDesignerResumeTips() {
             to iterate based on feedback. Good luck landing your next big
             opportunity! 🚀📋✨
           </p>
-        </section><div><GoogleAd/></div>
+        </section>
+        <div>
+          <GoogleAd />
+        </div>
       </article>
       <section>
         <div>
@@ -292,7 +329,10 @@ export default function CreativeAndDesignerResumeTips() {
         <div className="stickyShare">
           <ShareButtons url={ArticleUrl} title={ArticleTitle} />
         </div>
-      </section><div><GoogleAd/></div>
+      </section>
+      <div>
+        <GoogleAd />
+      </div>
     </div>
   );
 }

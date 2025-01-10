@@ -1,6 +1,7 @@
-import React from 'react';
+import React, { useState } from 'react';
 import '../../component/shareButton/ShareButtons.css'
 const ShareButtons = ({ url, title }) => {
+    const [expanded, setExpanded] = useState(false);
     // URLs for social media sharing
     const facebookShareUrl = `https://www.facebook.com/sharer/sharer.php?u=${url}`;
     const twitterShareUrl = `https://twitter.com/intent/tweet?url=${url}`;
@@ -17,9 +18,10 @@ const ShareButtons = ({ url, title }) => {
     };
 
     return (
-        <div ClassName='stickyShare'>
-            <h3>Share</h3>
+        <div className={`stickyShare ${expanded ? 'expanded' : ''}`}>
+                <div class="toggle-button">☰share</div> 
 
+                <div class="share-content">
             {/* Facebook Share */}
             <a href={facebookShareUrl} target="_blank" rel="noopener noreferrer">
                 <h3><i style={{color:'green'}} Class="bi bi-facebook"></i></h3>
@@ -51,6 +53,7 @@ const ShareButtons = ({ url, title }) => {
             {/* Copy to Clipboard */}
             <button onClick={copyToClipboard}>
                 <h3><i style={{color:'green'}} Class="bi bi-clipboard-fill"></i></h3></button>
+                </div>
         </div>
     );
 };

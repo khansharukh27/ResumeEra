@@ -10,6 +10,7 @@ import cover_letter_2 from '../image/image_for_link/cover_letter_2.png'
 
 import cover_letter_3 from '../image/image_for_link/cover_letter_3.jpg'
 import '../css/covercomponent.css'
+import { Helmet } from 'react-helmet';
 
 const CoverLetter = (props) => {
     const CoverImage = props; // Assuming CoverImage is passed as a prop
@@ -39,6 +40,71 @@ const CoverLetter = (props) => {
 
     return (
         <div className='aboutResumeEra'>
+            <Helmet>
+        <link rel="canonical" href="https://resumeera.xyz/cover_letter" />
+        <title>
+        Resume Formatting for 2024 | Free Resume Formatting | ResumeEra
+        </title>
+
+        <meta
+          name="description"
+          content="ResumeEra is a user-friendly And Resume Formatting PlateForm that allows you to create and customize your free resumes. Choose from a variety of templates to make your free resume stand out. Whether you're highlighting your work experience, education, skills, or personal information, ResumeEra as a resume builder makes it easy to create a professional-looking free resume."
+        />
+
+        <meta
+          name="keywords"
+          content="ResumeEra, Resume Era, Free Resume, how to create free resume online, free resume creator, free resume creator online, Create Resume Online, Free Resume Builder, free resume maker, Professional Resume, Online Resume Builder, Job Application, CV Maker, Resume Templates, Career, Employment, Resume, Curriculum Vitae, Job Seeker, Resume Writing, Cover Letter, Job Interview, Career Development, Job Search, Online CV, Job Market, Job Board, LinkedIn Resume, Job Portal"
+        />
+
+        <meta name="author" content="ResumeEra Team" />
+        <meta name="robots" content="index, follow" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+        <meta
+          property="og:title"
+          content="Resume Formatting for 2024 | Free Resume Formatting | ResumeEra"
+        />
+        <meta
+          property="og:description"
+          content="Create and customize professional resumes online with ResumeEra. Choose from free templates, showcase your skills, and build a standout resume effortlessly."
+        />
+        <meta property="og:url" content="https://resumeera.xyz/cover_letter" />
+        <meta property="og:type" content="website" />
+        <meta
+          property="og:image"
+          content="https://resumeera.xyz/static/media/best_logo.895bb22edf6c08600c86.webp"
+        />
+        <meta
+          property="og:image:alt"
+          content="Preview of ResumeEra's easy-to-use resume builder interface"
+        />
+
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta
+          name="twitter:title"
+          content="Resume Formatting for 2024 | Free Resume Formatting | ResumeEra"
+        />
+        <meta
+          name="twitter:description"
+          content="Easily create and customize your free resume with ResumeEra. Access professional templates and make your resume stand out."
+        />
+        <meta
+          name="twitter:image"
+          content="https://resumeera.xyz/static/media/best_logo.895bb22edf6c08600c86.webp"
+        />
+        <meta
+          name="twitter:image:alt"
+          content="Preview of ResumeEra's resume builder interface"
+        />
+
+        <link
+          rel="icon"
+          href="https://resumeera.xyz/favicon.ico"
+          type="image/x-icon"
+        />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      </Helmet>
+
             <div>
             <div className='covermain '>
                 <h1>How to Write an Effective Cover Letter with ResumeEra: A Complete Guide</h1>

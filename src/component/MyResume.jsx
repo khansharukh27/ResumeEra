@@ -35,7 +35,7 @@ const MyResume = () => {
   return (
     <div className="myresume">
       <h1>Your Saved Resumes</h1>
-      <div className="row row-cols-1 row-cols-md-4 g-4 " style={{width:'',height:'250px'}}>
+      <div className="row row-cols-1 row-cols-md-4 g-4 " style={{}}>
         {savedImages.map((image, index) => (
           <div key={index} className="col">
             <div className="card">
@@ -44,7 +44,6 @@ const MyResume = () => {
                 src={image}
                 className="card-img-top"
                 alt={`Saved Resume ${index + 1}`}
-                // style={{height:'250px'}}
               />
               <div className="card-body ">
                 <div className="d-lg-flex  justify-content-between">

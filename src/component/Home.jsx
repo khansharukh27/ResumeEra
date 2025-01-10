@@ -20,17 +20,17 @@ const Home = ({ images }) => {
       <Helmet>
         <link rel="canonical" href="https://resumeera.xyz" />
         <title>
-        Resume Builder for 2024 | Free Resume Builder | ResumeEra
+        Resume Formatting for 2025 | Free Resume Formatting | ResumeEra
         </title>
 
         <meta
           name="description"
-          content="ResumeEra is a user-friendly And Resume Builder that allows you to create and customize your free resumes. Choose from a variety of templates to make your free resume stand out. Whether you're highlighting your work experience, education, skills, or personal information, ResumeEra as a resume builder makes it easy to create a professional-looking free resume."
+          content="ResumeEra is a user-friendly resume formatting platform that helps you create professional free resumes effortlessly. Choose from various templates to showcase your work experience, skills, and education with polished resume formatting. Make your resume stand out and leave a lasting impression with ResumeEra!"
         />
 
         <meta
           name="keywords"
-          content="ResumeEra, Resume Era, Free Resume, how to create free resume online, free resume creator, free resume creator online, Create Resume Online, Free Resume Builder, free resume maker, Professional Resume, Online Resume Builder, Job Application, CV Maker, Resume Templates, Career, Employment, Resume, Curriculum Vitae, Job Seeker, Resume Writing, Cover Letter, Job Interview, Career Development, Job Search, Online CV, Job Market, Job Board, LinkedIn Resume, Job Portal"
+          content="ResumeEra, Resume Era, Free Resume,resume formatting,resume formate, how to create free resume online, free resume creator, free resume creator online, Create Resume Online, Free Resume Builder, free resume maker, Professional Resume, Online Resume Builder, Job Application, CV Maker, Resume Templates, Career, Employment, Resume, Curriculum Vitae, Job Seeker, Resume Writing, Cover Letter, Job Interview, Career Development, Job Search, Online CV, Job Market, Job Board, LinkedIn Resume, Job Portal"
         />
 
         <meta name="author" content="ResumeEra Team" />
@@ -39,7 +39,7 @@ const Home = ({ images }) => {
 
         <meta
           property="og:title"
-          content="Resume Era: How to Create Resumes Online, Professional and Free"
+          content="Resume Formatting for 2024 | Free Resume Formatting | ResumeEra"
         />
         <meta
           property="og:description"
@@ -59,7 +59,7 @@ const Home = ({ images }) => {
         <meta name="twitter:card" content="summary_large_image" />
         <meta
           name="twitter:title"
-          content="Resume Era: How to Create Resumes Online, Professional and Free"
+          content="Resume Formatting for 2024 | Free Resume Formatting | ResumeEra"
         />
         <meta
           name="twitter:description"

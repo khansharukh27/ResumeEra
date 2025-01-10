@@ -65,7 +65,7 @@ export default function FreeResumeBuilderForResumeEra() {
         />
         <meta
           name="twitter:image"
-          content="https://www.example.com/image.jpg"
+          content={freeResumeBuilders}
         />
         <meta name="twitter:creator" content="@YourTwitterHandle" />
       </Helmet>
@@ -342,7 +342,28 @@ export default function FreeResumeBuilderForResumeEra() {
             one step closer to your ideal job. Try our free resume builder today
             and stand out from the competition!
           </p>
-        </section><div><GoogleAd/></div>
+        </section>
+        <section>
+          <h2>Frequently Asked Questions (FAQ)</h2>
+          <dl>
+            <dt><strong>What is ResumeEra.xyz?</strong></dt>
+            <dd>ResumeEra.xyz is a free, online resume builder that helps users create professional resumes quickly and easily. Whether you’re a student, recent graduate, or experienced professional, our platform can help you craft a resume that impresses employers.</dd>
+
+            <dt><strong>Is it really free to use?</strong></dt>
+            <dd>Yes! ResumeEra.xyz is completely free to use. You can create, edit, and download your resume without paying a dime.</dd>
+
+            <dt><strong>Can I download my resume in different formats?</strong></dt>
+            <dd>Yes, you can download your resume in PDF, Word, or plain text format.</dd>
+
+            <dt><strong>Do I need any design skills to use ResumeEra.xyz?</strong></dt>
+            <dd>No! Our platform is designed for ease of use, even if you don’t have any design experience. Simply fill in your details, choose a template, and let our tool handle the rest.</dd>
+
+            <dt><strong>How do I make sure my resume is error-free?</strong></dt>
+            <dd>ResumeEra.xyz automatically formats your resume, checking for errors and inconsistencies. We also provide tips on how to make your resume more effective.</dd>
+          </dl>
+        </section>
+        <RandomeArticleToBlogCareer />
+        <div><GoogleAd/></div>
       </div>
       <section>
         <div className="stickyShare">
@@ -350,7 +371,7 @@ export default function FreeResumeBuilderForResumeEra() {
         </div>
         <div>
           <AuthorCard />
-          <RandomeArticleToBlogCareer />
+          
           <CallToAction />
         </div>
       </section><div><GoogleAd/></div>

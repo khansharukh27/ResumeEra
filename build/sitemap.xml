@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://resumeera.xyz/</loc> 
+    <loc>https://resumeera.xyz</loc> 
     <priority>1.0</priority>
   </url>
   <url>
@@ -122,6 +122,7 @@
     <loc>https://resumeera.xyz/Things_To_Remove_From_Your_Cv</loc>
     <priority>1.0</priority>
   </url>
+  
   <url>
     <loc>https://resumeera.xyz/how-to-land-your-dream-job</loc>
     <priority>1.0</priority>
@@ -195,7 +196,6 @@
     <loc>https://resumeera.xyz/lawyer-cover-letter-example</loc>
     <priority>1.0</priority>
   </url>
-  <!-- tommorrow -->
   <url>
     <loc>https://resumeera.xyz/guide/resume-formatting</loc>
     <priority>1.0</priority>
@@ -204,6 +204,7 @@
     <loc>https://resumeera.xyz/fresher-resume-formatting</loc>
     <priority>1.0</priority>
   </url>
+  
   <url>
     <loc>https://resumeera.xyz/resume-formatting-entry-level</loc>
     <priority>1.0</priority>
@@ -240,6 +241,52 @@
     <loc>https://resumeera.xyz/Professional-Resume-Format-Experienced</loc>
     <priority>1.0</priority>
   </url>
+  <url>
+    <loc>https://resumeera.xyz/executive-resume-formatting-tips</loc>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://resumeera.xyz/career-change-resume-formatting</loc>
+    <priority>1.0</priority>
+  </url>
+  <!-- wing upload -->
+  <url>
+    <loc>https://resumeera.xyz/chronological-resume-formatting-experienced-candidates</loc>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://resumeera.xyz/how-to-format-a-resume-for-leadership-jobs</loc>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://resumeera.xyz/how-to-highlight-achievements-in-resume-formatting</loc>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://resumeera.xyz/multi-page-resume-formatting</loc>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://resumeera.xyz/it-resume-formatting-tips</loc>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://resumeera.xyz/healthcare-industry-ke-liye-resume-formatting-guide</loc>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://resumeera.xyz/creative-and-designer-resume-tips</loc>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://resumeera.xyz/best-resume-formatting-sales-marketing</loc>
+    <priority>1.0</priority>
+  </url>
+   <url>
+    <loc>https://resumeera.xyz/resume_formatting_for_teachersAndProfessors</loc>
+    <priority>1.0</priority>
+  </url>
+   
   
   <!-- bloag and career -->
   <url>
@@ -329,6 +376,7 @@
   <loc>https://resumeera.xyz/management-cover-letter-example</loc>
   <priority>1.0</priority>
   </url>
+
   <url>
   <loc>https://resumeera.xyz/Why_Work_Here</loc>
   <priority>1.0</priority>
@@ -362,6 +410,7 @@
   <loc>https://resumeera.xyz/what-does-success-look-like-to-you</loc>
   <priority>1.0</priority>
   </url>
+  <!-- tommorow -->
   <url>
   <loc>https://resumeera.xyz/why-are-you-qualified-for-this-position</loc>
   <priority>1.0</priority>
@@ -374,6 +423,7 @@
   <loc>https://resumeera.xyz/work-alone-or-group-preference</loc>
   <priority>1.0</priority>
   </url>
+  <!-- down done -->
   <url>
   <loc>https://resumeera.xyz/dealing-with-difficult-customers</loc>
   <priority>1.0</priority>
@@ -386,6 +436,7 @@
   <loc>https://resumeera.xyz/where-do-you-see-yourself-in-five-years</loc>
   <priority>1.0</priority>
   </url>
+  
   <url>
   <loc>https://resumeera.xyz/what-motivates-you-to-do-your-best-work</loc>
   <priority>1.0</priority>
@@ -402,6 +453,223 @@
   <loc>https://resumeera.xyz/do-you-have-any-questions-for-us</loc>
   <priority>1.0</priority>
   </url>
+  <url>
+  <loc>https://resumeera.xyz/tailor-your-resume</loc>
+  <priority>1.0</priority>
+  </url>
+  <url>
+  <loc>https://resumeera.xyz/Functional_vs_Chronological_Resume_Formatting</loc>
+  <priority>1.0</priority>
+  </url>
+  <url>
+  <loc>https://resumeera.xyz/government-job-resume-guide</loc>
+  <priority>1.0</priority>
+  </url>
+  <url>
+  <loc>https://resumeera.xyz/hospitality-tourism-resume-tips</loc>
+  <priority>1.0</priority>
+  </url>
+  <url>
+  <loc>https://resumeera.xyz/Best-Resume-Formatting-Tips-for-Real-Estate-Agents</loc>
+  <priority>1.0</priority>
+  </url>
+  <url>
+  <loc>https://resumeera.xyz/20-Resume-Formatting-Mistakes-You-Should-Avoid</loc>
+  <priority>1.0</priority>
+  </url>
+  <url>
+  <loc>https://resumeera.xyz/top-10-resume-formatting-errors</loc>
+  <priority>1.0</priority>
+  </url>
+  <url>
+  <loc>https://resumeera.xyz/why-ats-unfriendly-formatting-can-lead-to-resume-rejection</loc>
+  <priority>1.0</priority>
+  </url>
+  <url>
+  <loc>https://resumeera.xyz/how-to-avoid-over-designing-your-resume-formatting</loc>
+  <priority>1.0</priority>
+  </url>
+  <url>
+  <loc>https://resumeera.xyz/font-and-size-mistakes</loc>
+  <priority>1.0</priority>
+  </url>
+  <url>
+  <loc>https://resumeera.xyz/Resume_Formatting_Errors_That_Fail_to_Reflect_Career_Breaks</loc>
+  <priority>1.0</priority>
+  </url>
+  <url>
+  <loc>https://resumeera.xyz/how-to-hide-spelling-and-grammar-mistakes-through-formatting-a-resume</loc>
+  <priority>1.0</priority>
+  </url>
+  <url>
+  <loc>https://resumeera.xyz/common-layout-mistakes-that-make-your-resume-unprofessional</loc>
+  <priority>1.0</priority>
+  </url>
+  <url>
+  <loc>https://resumeera.xyz/professional-resume-format-pdf</loc>
+  <priority>1.0</priority>
+  </url>
+  <!-- google upload -->
+  <url>
+  <loc>https://resumeera.xyz/pdf-vs-word-resume</loc>
+  <priority>1.0</priority>
+  </url>
+  <url>
+  <loc>https://resumeera.xyz/chronological-vs-functional-resume-formatting</loc>
+  <priority>1.0</priority>
+  </url>
+  <url>
+  <loc>https://resumeera.xyz/infographic-resume-vs-traditional-resume-formatting</loc>
+  <priority>1.0</priority>
+  </url>
+  <url>
+  <loc>https://resumeera.xyz/online-resume-builder-vs-manual-resume-builder-formatting</loc>
+  <priority>1.0</priority>
+  </url>
+  <url>
+  <loc>https://resumeera.xyz/one-vs-multi-page-resume</loc>
+  <priority>1.0</priority>
+  </url>
+  <url>
+  <loc>https://resumeera.xyz/Modern-vs-traditiona-resume-formatting</loc>
+  <priority>1.0</priority>
+  </url>
+  <url>
+  <loc>https://resumeera.xyz/ats-friendly-vs-creative-resume-format</loc>
+  <priority>1.0</priority>
+  </url>
+  <url>
+  <loc>https://resumeera.xyz/minimalist-vs-graphic-formatting</loc>
+  <priority>1.0</priority>
+  </url>
+  <url>
+  <loc>https://resumeera.xyz/objective-vs-summary-statement-the-right-way-to-format-your-resume</loc>
+  <priority>1.0</priority>
+  </url>
+  <url>
+  <loc>https://resumeera.xyz/2025-resume-formatting-trends</loc>
+  <priority>1.0</priority>
+  </url>
+  <url>
+  <loc>https://resumeera.xyz/resume-formattin-for ai-driven-application-tracking-system</loc>
+  <priority>1.0</priority>
+  </url>
+  <url>
+  <loc>https://resumeera.xyz/how-to-present-personal-branding-through-resume-formatting</loc>
+  <priority>1.0</priority>
+  </url>
+  <url>
+  <loc>https://resumeera.xyz/how-to-create-resume-formatting-that-matches-your-linkedin-profile</loc>
+  <priority>1.0</priority>
+  </url>
+  <url>
+  <loc>https://resumeera.xyz/modern-resume-formatting-with-interactive-elements</loc>
+  <priority>1.0</priority>
+  </url>
+  <url>
+  <loc>https://resumeera.xyz/data-driven-resume-formatting-for-analytical-jobs-formatting-for-analytical-jobs</loc>
+  <priority>1.0</priority>
+  </url>
+  <url>
+  <loc>https://resumeera.xyz/social-media-influencer-resume-formatting</loc>
+  <priority>1.0</priority>
+  </url>
+  <url>
+  <loc>https://resumeera.xyz/job-specific-resume-formatting</loc>
+  <priority>1.0</priority>
+  </url>
+  <url>
+  <loc>https://resumeera.xyz/freelancers-portfolio-resume-formatting-tips</loc>
+  <priority>1.0</priority>
+  </url>
+  <url>
+  <loc>https://resumeera.xyz/remote-resume-formatting-crafting-a-standout-resume-for-remote-jobs</loc>
+  <priority>1.0</priority>
+  </url>
+  <url>
+  <loc>https://resumeera.xyz/personalized-resume-formatting-for-international-jobs</loc>
+  <priority>1.0</priority>
+  </url>
+  <url>
+  <loc>https://resumeera.xyz/resume-formatting-your-ultimate-guide-to-landing-more-interviews</loc>
+  <priority>1.0</priority>
+  </url>
+  <url>
+  <loc>https://resumeera.xyz/download-best-resume-format-pdf-create-perfect-resume</loc>
+  <priority>1.0</priority>
+  </url>
+  <url>
+  <loc>https://resumeera.xyz/top-resume-format-pdf-job-seekers-free-templates-get-hired-fast</loc>
+  <priority>1.0</priority>
+  </url>
+  <url>
+  <loc>https://resumeera.xyz/effortless-resume-creation-download-professional-resume-format-pdf</loc>
+  <priority>1.0</priority>
+  </url>
+  <url>
+  <loc>https://resumeera.xyz/resume-format-pdf-guide-perfect-templates-for-a-standout-cv</loc>
+  <priority>1.0</priority>
+  </url>
+  <url>
+  <loc>https://resumeera.xyz/get-hired-faster-the-ultimate-resume-format-pdf-for-your-career</loc>
+  <priority>1.0</priority>
+  </url>
+  <url>
+  <loc>https://resumeera.xyz/how-to-choose-the-right-resume-format-pdf-free-templates-inside</loc>
+  <priority>1.0</priority>
+  </url>
+  <url>
+  <loc>https://resumeera.xyz/free-resume-format-pdf-simple-professional-and-ready-to-download"</loc>
+  <priority>1.0</priority>
+  </url>
+  <url>
+  <loc>https://resumeera.xyz/create-your-dream-job-resume-top-resume-format-pdf-templates-available</loc>
+  <priority>1.0</priority>
+  </url>
+  <url>
+  <loc>https://resumeera.xyz/step-by-step-resume-creation-with-our-free-resume-format-pdf-templates</loc>
+  <priority>1.0</priority>
+  </url>
+  <url>
+  <loc>https://resumeera.xyz/free-resume-format-pdf-build-a-cv-that-stands-out</loc>
+  <priority>1.0</priority>
+  </url>
+  <url>
+  <loc>https://resumeera.xyz/complete-guide-to-resume-format-pdf-your-key-to-landing-any-job</loc>
+  <priority>1.0</priority>
+  </url>
+  <url>
+  <loc>https://resumeera.xyz/download-a-professional-resume-format-pdf-simple-fast-effective</loc>
+  <priority>1.0</priority>
+  </url>
+  <url>
+  <loc>https://resumeera.xyz/how-to-build-the-perfect-resume-with-a-resume-format-pdf</loc>
+  <priority>1.0</priority>
+  </url>
+  <url>
+  <loc>https://resumeera.xyz/the-ultimate-collection-of-resume-format-pdfs-for-job-seekers</loc>
+  <priority>1.0</priority>
+  </url>
+  <url>
+  <loc>https://resumeera.xyz/my-top-10-free-resume-format-pdfs-for-landing-your-dream-job</loc>
+  <priority>1.0</priority>
+  </url>
+  <url>
+  <loc>https://resumeera.xyz/download-your-free-resume-format-pdf-today-and-stand-out</loc>
+  <priority>1.0</priority>
+  </url>
+  <url>
+  <loc>https://resumeera.xyz/find-the-right-resume-format-pdf-for-your-career-growth</loc>
+  <priority>1.0</priority>
+  </url>
+ 
+
+
+  <!-- <url>
+  <loc>https://resumeera.xyz/one-vs-multi-page-resume</loc>
+  <priority>1.0</priority>
+  </url> -->
+
   <!-- motivation webstory type content -->
   <url>
   <loc>https://resumeera.xyz/motivation-link</loc>
@@ -436,6 +704,5 @@
   <priority>1.0</priority>
   </url>
 
-  <url>
   
 </urlset>

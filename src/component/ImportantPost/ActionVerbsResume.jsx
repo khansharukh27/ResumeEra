@@ -6,12 +6,17 @@ import ShareButtons from '../../component/shareButton/ShareButtons.jsx'
 import AuthorCard from '../AuthorCard.jsx';
 import action_verbs_resume_intro from "../../image/image_for_link/action-verbs-resume-intro.jpg"
 import CallToAction from '../CallToAction.jsx';
+import GoogleAd from '../adFolder/GoogleAd.jsx';
+import WelcomeNotes from '../WelcomeNotes.jsx';
+import RandomeArticleToBlogCareer from '../RandomeArticleToBlogCareer.jsx';
+import DateAndAuthor from '../DateAndAuthor.jsx';
 const ActionVerbsResume = () => {
   const ArticleUrl = 'https://resumeera.xyz/improving-your-resume-with-action-verbs'
       const ArticleTitle = 'Improving Your Resume with Action Verbs'
       useEffect(()=>{
           window.scrollTo(0,0)
       },[])
+      const publishDate = '2024-12-09'
   return (
     <div>
     <div className="aboutResumeEra">
@@ -25,15 +30,15 @@ const ActionVerbsResume = () => {
       </Helmet>
       
       <h1 className="action-verbs-resume-title">Improving Your Resume with Action Verbs</h1>
-      <AuthorCard/>
+      <DateAndAuthor publishDate={publishDate}/>
       <figure>
-        <img src={action_verbs_resume_intro} alt='action-verbs-resume-intro' loading='loading'/> 
+        <img style={{height:'auto'}} src={action_verbs_resume_intro} alt='action-verbs-resume-intro' loading='loading'/> 
         <figcaption>Using strong action verbs is one of the easiest ways to make your resume more impactful.</figcaption>
       </figure>
       <p className="action-verbs-resume-intro">
         Using strong action verbs is one of the easiest ways to make your resume more impactful. These verbs help emphasize your accomplishments and showcase your active role in previous jobs. Here's how to improve your resume by incorporating powerful action verbs.
       </p>
-
+<div><GoogleAd/></div>
       <h3 className="action-verbs-resume-heading">Introduction</h3>
       <p className="action-verbs-resume-text">
         Your resume is your ticket to landing interviews and job offers. A well-crafted resume communicates your professional journey and capabilities in a way that sets you apart from other candidates. While most applicants focus on listing their skills and experiences, many fail to present them with the impact they deserve. This is where action verbs come into play.
@@ -41,7 +46,7 @@ const ActionVerbsResume = () => {
       <p className="action-verbs-resume-text">
         Action verbs are powerful tools that bring your resume to life, showcasing your abilities, accomplishments, and potential in a compelling manner. In this guide, we’ll explore the significance of Improving Your Resume with Action Verbs, the benefits they offer, and how to incorporate them effectively. By applying these strategies, you can create a standout resume that resonates with hiring managers.
       </p>
-
+      <div><GoogleAd/></div>
       <h3 className="action-verbs-resume-heading">What Are Action Verbs?</h3>
       <p className="action-verbs-resume-text">
         <strong>Definition and Examples:</strong> Action verbs are words that describe specific actions, highlighting your proactive role in achieving outcomes. For instance, instead of saying, “Responsible for team management,” you could say, “Led a dynamic team to achieve organizational goals.” Common examples include “Managed,” “Developed,” “Achieved,” and “Implemented.”
@@ -56,12 +61,12 @@ const ActionVerbsResume = () => {
       <p className="action-verbs-resume-text">
         The latter directly conveys your role and its results, making a stronger impression.
       </p>
-
+      <div><GoogleAd/></div>
       <h3 className="action-verbs-resume-heading">Why Are Action Verbs Essential for Resumes?</h3>
       <p className="action-verbs-resume-text">
         Using action verbs ensures your resume communicates confidence, professionalism, and capability. Instead of merely listing tasks, you demonstrate your contributions, making your resume engaging and impactful. By focusing on Improving Your Resume with Action Verbs, you signal to employers that you’re an achiever who gets results.
       </p>
-
+      <div><GoogleAd/></div>
       <h3 className="action-verbs-resume-heading">Benefits of Using Action Verbs in Your Resume</h3>
       <p className="action-verbs-resume-text">
         <strong>1. Enhancing Readability and Engagement:</strong> Action verbs make your resume more engaging by creating a vivid picture of your accomplishments. For instance, instead of saying, “Worked on project management,” say, “Spearheaded cross-functional projects that delivered results ahead of schedule.” This approach captures attention and keeps the reader invested.
@@ -82,7 +87,7 @@ const ActionVerbsResume = () => {
       <p className="action-verbs-resume-text">
         By focusing on Improving Your Resume with Action Verbs, you transform your resume from a generic document into a powerful representation of your capabilities.
       </p>
-
+      <div><GoogleAd/></div>
       <h3 className="action-verbs-resume-heading">Common Mistakes to Avoid When Using Action Verbs</h3>
       <p className="action-verbs-resume-text">
         While action verbs are valuable, their misuse can detract from your resume’s effectiveness. Avoid these common pitfalls:
@@ -99,7 +104,7 @@ const ActionVerbsResume = () => {
       <p className="action-verbs-resume-text">
         <strong>4. Misalignment with Job Requirements:</strong> Ensure your action verbs reflect the competencies sought by the employer. For instance, for a managerial role, use verbs like “Led” and “Mentored” to emphasize leadership skills.
       </p>
-
+      <div><GoogleAd/></div>
       <h3 className="action-verbs-resume-heading">Top Action Verbs for Your Resume</h3>
       <p className="action-verbs-resume-text">
         Here’s a categorized list of action verbs that can elevate your resume:
@@ -131,7 +136,7 @@ const ActionVerbsResume = () => {
       <p className="action-verbs-resume-text">
         By incorporating these into your resume, you’re actively Improving Your Resume with Action Verbs to make it more engaging and relevant.
       </p>
-
+      <div><GoogleAd/></div>
       <h3 className="action-verbs-resume-heading">Customizing Action Verbs for Different Industries</h3>
       <p className="action-verbs-resume-text">
         Different industries value specific competencies, so tailoring your action verbs to the field is essential:
@@ -159,7 +164,7 @@ const ActionVerbsResume = () => {
       <p className="action-verbs-resume-text">
         Customizing action verbs ensures that your resume aligns with industry expectations, further Improving Your Resume with Action Verbs to maximize impact.
       </p>
-
+      <div><GoogleAd/></div>
       <h3 className="action-verbs-resume-heading">Crafting a Powerful Resume with Action Verbs</h3>
       <p className="action-verbs-resume-text">
         Follow these steps to enhance your resume using action verbs:
@@ -180,7 +185,7 @@ const ActionVerbsResume = () => {
       <p className="action-verbs-resume-text">
         <strong>4. Use a Variety of Verbs:</strong> Diversify your vocabulary to avoid repetition and maintain reader engagement. This approach ensures you’re effectively Improving Your Resume with Action Verbs.
       </p>
-
+      <div><GoogleAd/></div>
       <h3 className="action-verbs-resume-heading">Conclusion</h3>
       <p className="action-verbs-resume-text">
         Action verbs are indispensable for crafting a compelling resume. They transform mundane statements into powerful narratives, highlighting your skills and achievements with clarity and impact. By focusing on Improving Your Resume with Action Verbs, you elevate your resume’s effectiveness, making it more appealing to hiring managers.
@@ -194,17 +199,19 @@ const ActionVerbsResume = () => {
           By integrating strong action verbs into your resume, you can effectively demonstrate your role in past achievements and make a lasting impression on employers. Review your resume today and replace passive language with compelling, action-oriented verbs.
         </p>
       </div>
-      
-      </div>
-      <section>
-          <div>
-            <CallToAction />
+      <div>
+            <WelcomeNotes />
+            <RandomeArticleToBlogCareer/>
           </div>
+      </div>
+      <div><GoogleAd/></div>
+      <section>
+          
           <div className="stickyShare">
             <ShareButtons url={ArticleUrl} title={ArticleTitle} />
           </div>
           <div>
-            <AuthorCard />
+            <AuthorCard/>
           </div>
         </section>
     </div>

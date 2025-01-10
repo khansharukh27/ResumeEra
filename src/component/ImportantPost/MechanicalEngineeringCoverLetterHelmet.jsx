@@ -36,13 +36,58 @@ export default function () {
             rel="canonical"
             href="https://www.resumeera.xyz/mechanical-engineering-cover-letter-example/"
           />
+          <meta property="og:title" content="Mechanical Engineering Cover Letter Example (With Templates & Tips for 2024)" />
+          <meta property="og:description" content="Learn how to craft a standout mechanical engineering cover letter with expert tips and templates for 2024. Stand out in your job search with our proven advice and examples." />
+          <meta property="og:image" content={Mechanical_Engineering_Cover_Letter} />
+          <meta property="og:url" content="https://www.resumeera.xyz/mechanical-engineering-cover-letter-example/" />
+          <meta name="twitter:card" content="summary_large_image" />
+          <meta name="twitter:title" content="Mechanical Engineering Cover Letter Example (With Templates & Tips for 2024)" />
+          <meta name="twitter:description" content="Learn how to craft a standout mechanical engineering cover letter with expert tips and templates for 2024. Stand out in your job search with our proven advice and examples." />
+          <meta name="twitter:image" content={Mechanical_Engineering_Cover_Letter} />
+          <script type="application/ld+json">
+          {`
+          {
+            "@context": "https://schema.org",
+            "@type": "Article",
+            "headline": "Mechanical Engineering Cover Letter Example (With Templates & Tips for 2024)",
+            "image": ${Mechanical_Engineering_Cover_Letter},
+            "author": {
+              "@type": "Person",
+              "name": "Author Name"
+            },
+            "publisher": {
+              "@type": "Organization",
+              "name": "ResumeEra",
+              "logo": {
+                "@type": "ImageObject",
+                "url": "https://resumeera.xyz/static/media/best_logo.895bb22edf6c08600c86.webp"
+              }
+            },
+            "datePublished": "2024-01-01",
+            "description": "Learn how to craft a standout mechanical engineering cover letter with expert tips and templates for 2024. Stand out in your job search with our proven advice and examples."
+          }
+          `}
+          </script>
         </Helmet>
         <div className="aboutResumeEra">
         <section>
           <h1>Crafting the Perfect Mechanical Engineering Cover Letter</h1>
-          <AuthorCard/>
+          <div className="date-author-container">
+                <img
+                    src="https://resumeera.xyz/static/media/best_logo.895bb22edf6c08600c86.webp"
+                    alt="ResumeEra Logo"
+                    className="author-logo"
+                    style={{ width: "50px", height: "50px" }}
+                />
+                <small className="author-details">
+                    ✍️ By the <span className="author-highlight">ResumeEra Team</span> |
+                    Published:{""}
+                    <span className="author-highlight">January 3, 2025</span> | ⏱️{" "}
+                    <span className="author-highlight">9 min read</span>
+                </small>
+                </div>
           <figure>
-            <img src={Mechanical_Engineering_Cover_Letter} alt="Crafting the Perfect Mechanical Engineering Cover Letter" loading="lazy" />
+            <img style={{height:'auto'}} src={Mechanical_Engineering_Cover_Letter} alt="Crafting the Perfect Mechanical Engineering Cover Letter" loading="lazy" />
             <figcaption>Learn how to craft a standout mechanical engineering cover letter with expert tips and templates for 2024.</figcaption>
           </figure>
           <p>
@@ -275,7 +320,26 @@ export default function () {
             With the right approach, your Mechanical Engineering Cover Letter
             will serve as a powerful tool in landing your next job.
           </p>
-       </section><div><GoogleAd/></div>
+       </section>
+      <section>
+        <h2>Frequently Asked Questions (FAQ)</h2>
+        <h3>1. What should I include in my Mechanical Engineering Cover Letter?</h3>
+        <p>Your cover letter should include your contact information, a personalized salutation, an opening paragraph that grabs attention, body paragraphs that detail your skills and experiences, and a closing paragraph with a call to action.</p>
+        
+        <h3>2. How long should my cover letter be?</h3>
+        <p>Your cover letter should be concise and to the point, ideally one page in length.</p>
+        
+        <h3>3. Should I include my technical skills in the cover letter?</h3>
+        <p>Yes, highlighting your technical skills, especially those relevant to the job, is important. Mention tools and technologies you are proficient in.</p>
+        
+        <h3>4. How can I make my cover letter stand out?</h3>
+        <p>To make your cover letter stand out, tailor it to the specific job and company, use metrics to demonstrate your achievements, and showcase your problem-solving abilities.</p>
+        
+        <h3>5. Is it necessary to address the cover letter to a specific person?</h3>
+        <p>Whenever possible, address the cover letter to a specific person. It shows that you have done your research and adds a personal touch.</p>
+      </section>
+       <RandomeArticleToBlogCareer />
+       <div><GoogleAd/></div>
       </div>
       <section>
         <div className="stickyShare">
@@ -283,7 +347,7 @@ export default function () {
         </div>
         <div>
           <AuthorCard />
-          <RandomeArticleToBlogCareer />
+          
           <CallToAction />
         </div>
      </section><div><GoogleAd/></div>

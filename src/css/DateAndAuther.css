@@ -1,20 +1,20 @@
-.date-author-container {
+.date-author-containerss {
     display: flex;
     align-items: center;
     background-color: #f9f9f9;
-    padding: 10px 15px;
+    padding-right: 70px;
     border: 1px solid #ddd;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    margin: 20px 0;
+    margin:  0px;
   }
   
-  .author-logo {
-    width: 10px;
-    height: 10px;
+  .date-author-containerss img {
+    width: 50px;
+    height: 50px;
     border-radius: 50%;
     margin-right: 10px;
-    object-fit: cover;
+    /* object-fit: cover; */
   }
   
   .author-details {

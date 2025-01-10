@@ -161,12 +161,13 @@ img {
 
 @media (max-width: 768px) {
     .aboutResumeEra {
-        padding: 0px;
+        padding-left: 15px;
+        /* padding-right: px; */
         width: 100%;
         margin: 0px;
         box-shadow: none;
-        margin-left:0px;
-        margin-right: 0px;
+        margin-left:auto;
+        
         align-items: center;
         text-align: center;
     }

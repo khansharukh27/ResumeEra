@@ -1,73 +1,75 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import '../../css/Important_Post/ResumeComponent.css'; // External CSS for styling
 import skill_image from '../../image/image_for_link/skill_image.jpg'
 import cv_image from '../../image/image_for_link/cv_image.png'
 import { Helmet } from 'react-helmet';
 import ShareButtons from '../shareButton/ShareButtons';
+import AuthorCard from '../AuthorCard';
+import RandomeArticleToBlogCareer from '../RandomeArticleToBlogCareer';
+import CallToAction from '../CallToAction';
 
 const ResumeComponent = () => {
+   const ArticleUrl =
+            "https://resumeera.xyz/how-to-write-a-resume-for-career-change";
+          const ArticleTitle = "How to Write a Resume for Career Change";
+          useEffect(() => {
+            window.scrollTo(0, 0);
+          }, []);
   return (
-    <div className="aboutResumeEra">
+    <div >
       <Helmet>
       <link rel="canonical" href="https://resumeera.xyz/resume_component" />
       <title>Create a Professional Resume with Free Templates and Showcase Your Skills</title>
             <meta name="description" content="Skills are one of the most critical aspects of any <strong>resume</strong>. Whether you're applying for your first job or making a career transition, the skills section is where you can truly shine. It's essential to understand what skills are relevant to the job you're applying for and how to highlight them in your <strong>curriculum vitae (CV)</strong>. A professional resume template can help you effectively display these skills to potential employers." />
             <meta name='keyword' content='ResumeEra,Resume Era, Free Resume, how to create free resume online,free resume creator,free resume creator online ,Create Resume Online,Free Resume Builder,free resume maker ,Professional Resume, 
-    Online Resume Builder, Job Application, CV Maker, Resume Templates, Career, 
-    Employment, Resume, Curriculum Vitae, Job Seeker, Resume Writing, Cover Letter, 
-    Job Interview, Career Development, Job Search, Online CV, Job Market, Job Board, 
-    LinkedIn Resume, Job Portal, Free CV, Resume Creator, Resume Example, Job Resume, 
-    Digital Resume, E-Resume, Career Opportunities, Job Network, Resume Tips, Resume Design, 
-    Interview Preparation, Job Hunt, Resume Service, Job Placement, Job Postings, 
-    Career Coaching, Resume Format, Resume Writing Service, Professional CV, Resume Samples, 
-    Job Listings, Employment Services, Job Recruitment, Career Resources, Resume Editing, 
-    Resume Help, Resume Advisor, Job Consultancy, Resume Checklist, Resume Download, 
-    Job Openings, Career Guidance, Resume Customization, Job Profiles, Resume Styles, 
-    Resume Outline, Resume Enhancements, Resume Highlights, Job Opportunities, 
-    Resume Professional, Resume Advice, Job Applications, Resume Guidance, Resume Presentation, 
-    Job Offers, Resume Layout, Resume Features, Job Prospects, Career Information, 
-    Resume Preparation, Resume Objective, Resume Review, Job Experience, Career Highlights, 
-    Resume Overview, Resume Headline, Job Titles, Career Path, Resume Strengths, 
-    Job Descriptions, Resume Creator Tool, Resume Formatter, Resume Documentation, 
-    Resume Content, Job Highlights, Career Building, Resume Summary, Job Skills, 
-    Career Goals, Resume Maker, Job Achievements ,Resume with AI, Free AI resume builder, 
-    AI-powered resume, AI resume creation, Free AI resume generator, AI resume maker, 
-    Free online AI resume, AI resume writing, Create resume with AI, AI-generated resume, 
-    AI-enhanced resume, Free AI CV builder, AI-driven resume tool, AI resume assistance, 
-    AI resume service, Free AI job resume, AI resume templates, AI-based resume builder, 
-    AI resume design, AI resume help, Resume AI free, Free AI resume creation, 
-    AI resume for job seekers, AI-enhanced CV, Free resume with AI assistance, 
-    AI resume suggestions, AI resume formatting, AI resume examples, 
-    AI-based resume maker free, Free AI resume advisor, 
-    AI resume optimization, AI resume checker, AI resume improvements, 
-    AI-powered CV, AI-enhanced job resume, Free AI resume samples, 
-    AI resume builder online free, AI resume editing free, 
-    AI resume tips, AI resume insights, AI resume guide, 
-    AI resume analysis, Free AI-driven resume, AI resume features, AI resume for free, 
-    AI resume solutions, AI resume generator free, Free AI resume recommendations, 
-    AI resume platform free, AI resume resources, AI resume writer free, 
-    AI resume creation tool, AI resume software free, AI resume applications, 
-    Free AI resume design, AI resume advice free, AI resume creation online, 
-    Free AI resume builder tool, AI resume review free, AI resume template free, 
-    AI resume customization free, Free AI resume tool online, AI resume development free, 
-    AI resume support free, AI resume preparation free, Free AI resume assistant, 
-    AI resume building free, AI resume suggestions free, AI resume format free, 
-    AI resume layout free, AI resume tips free, AI resume improvements free, 
-    Free AI resume creator online, AI resume personalization free, AI resume upgrade free, 
-    AI resume technology free, AI resume checker free, AI resume design tool free, 
-    AI resume recommendations free, AI resume customization tool, AI resume improvements online, 
-    AI resume checker tool free, AI resume builder application free, 
-    Free AI resume creation tool, AI resume editing tool free, AI resume formatting tool free, 
-    Free AI resume writing tool, AI resume enhancement tool free, AI resume guide online free, 
-    AI resume insights free, AI resume analysis tool free, Free AI resume builder online, 
-    AI resume creation app free, Free AI resume tools, AI resume generation free, 
-    AI resume review tool free'/>
+    Online Resume Builder, Job Application, CV Maker, Resume Templates, Career, '/>
+    <meta property="og:title" content="Create a Professional Resume with Free Templates and Showcase Your Skills" />
+    <meta property="og:description" content="Skills are one of the most critical aspects of any resume. Whether you're applying for your first job or making a career transition, the skills section is where you can truly shine. It's essential to understand what skills are relevant to the job you're applying for and how to highlight them in your curriculum vitae (CV). A professional resume template can help you effectively display these skills to potential employers." />
+    <meta property="og:image" content="https://resumeera.xyz/path_to_image.jpg" />
+    <meta property="og:url" content="https://resumeera.xyz/resume_component" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Create a Professional Resume with Free Templates and Showcase Your Skills" />
+    <meta name="twitter:description" content="Skills are one of the most critical aspects of any resume. Whether you're applying for your first job or making a career transition, the skills section is where you can truly shine. It's essential to understand what skills are relevant to the job you're applying for and how to highlight them in your curriculum vitae (CV). A professional resume template can help you effectively display these skills to potential employers." />
+    <meta name="twitter:image" content="https://resumeera.xyz/path_to_image.jpg" />
+    <script type="application/ld+json">
+    {{
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "Create a Professional Resume with Free Templates and Showcase Your Skills",
+      "description": "Skills are one of the most critical aspects of any resume. Whether you're applying for your first job or making a career transition, the skills section is where you can truly shine. It's essential to understand what skills are relevant to the job you're applying for and how to highlight them in your curriculum vitae (CV). A professional resume template can help you effectively display these skills to potential employers.",
+      "url": "https://resumeera.xyz/resume_component",
+      "image": "https://resumeera.xyz/path_to_image.jpg"
+    }}
+    </script>
             </Helmet>
-            <div>
-    <ShareButtons/>
-</div>
+            <article className='aboutResumeEra'>
       <h1>Create a Professional Resume with Free Templates and Showcase Your Skills</h1>
-      
+      <div className="date-author-container">
+          <img
+            src="https://resumeera.xyz/static/media/best_logo.895bb22edf6c08600c86.webp"
+            alt="ResumeEra Logo"
+            className="author-logo"
+            style={{ width: "50px", height: "50px" }}
+          />
+          <small className="author-details">
+            ✍️ By the <span className="author-highlight">ResumeEra Team</span> |
+            Published:{""}
+            <span className="author-highlight">December 30, 2024</span> | ⏱️{" "}
+            <span className="author-highlight">8 min read</span>
+          </small>
+        </div>
+        <div>
+          <figure>
+          <img 
+        style={{height:'auto'}}
+          src={skill_image} 
+          alt="Skills in a Resume" 
+          className="resume-image"
+          loading="lazy"
+        />
+        <figcaption>Skills are one of the most critical aspects of any resume</figcaption>
+          </figure>
+        </div>
       {/* Section 1 */}
       <section>
         <h2>Understanding the Importance of Skills in a Resume</h2>
@@ -79,12 +81,7 @@ const ResumeComponent = () => {
         </p>
 
         {/* First Image */}
-        <img 
-          src={skill_image} 
-          alt="Skills in a Resume" 
-          className="resume-image"
-          loading="lazy"
-        />
+        
 
         <p>
           Employers often scan resumes quickly, so having a clean, structured template that highlights your skills will ensure your resume makes it past the initial screening.
@@ -234,9 +231,47 @@ const ResumeComponent = () => {
       <section>
         <h2>Final Thoughts on Using Free Resume Templates</h2>
         <p>
-          Resume templates save time and make the resume creation process more manageable. With hundreds of options available, from creative to formal layouts, you can find a template that fits your style and industry. By selecting the right format, using relevant skills, and optimizing for ATS, you can increase your chances of landing your dream job.
+          Resume templates save time and make the resume creation process more manageable. 
+          With hundreds of options available, from creative to formal layouts, you can find a 
+          template that fits your style and industry. By selecting the right format, using relevant 
+          skills, and optimizing for ATS, you can increase your chances of landing your dream job.
         </p>
       </section>
+      {/* FAQ Section */}
+      <section>
+        <h2>Frequently Asked Questions (FAQ)</h2>
+        <div className="faq-item">
+          <h3>What is the difference between a resume and a CV?</h3>
+          <p>A resume is typically a one to two-page document highlighting your skills and work experience, while a CV is a more detailed document that includes your academic and professional achievements.</p>
+        </div>
+        <div className="faq-item">
+          <h3>How can I make my resume stand out?</h3>
+          <p>To make your resume stand out, use a clean and professional template, highlight relevant skills and experiences, and tailor your resume to the job you're applying for.</p>
+        </div>
+        <div className="faq-item">
+          <h3>What file format should I use for my resume?</h3>
+          <p>PDF is the most recommended format as it preserves formatting and is compatible with most applicant tracking systems (ATS). However, Word and Google Docs formats are also commonly used.</p>
+        </div>
+        <div className="faq-item">
+          <h3>Can I use a free resume template for professional job applications?</h3>
+          <p>Yes, free resume templates can be used for professional job applications. Just ensure the template is clean, well-organized, and tailored to the job you're applying for.</p>
+        </div>
+      </section>
+      </article>
+      <section>
+      <div>
+          <AuthorCard/>
+      </div>
+      <div>
+          <RandomeArticleToBlogCareer />
+      </div>
+      <div>
+          <CallToAction />
+      </div>
+      <div className="stickyShare">
+          <ShareButtons url={ArticleUrl} title={ArticleTitle} />
+      </div>
+</section>
     </div>
   );
 };

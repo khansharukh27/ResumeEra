@@ -231,6 +231,83 @@ import GoogleAnalytics from "./component/GoogleAnalytics.jsx";
 import ITResumeTips from "./component/ImportantPost/ITResumeTips.jsx";
 import HealthcareResumeGuide from "./component/ImportantPost/HealthcareResumeGuide.jsx";
 import CreativeAndDesignerResumeTips from "./component/ImportantPost/CreativeAndDesignerResumeTips.jsx";
+import ResumeFormattingForSaleAndMarketing from "./component/ImportantPost/ResumeFormattingForSaleAndMarketing.jsx";
+import ResumeFormattingForTeachersAndProfessors from "./component/ImportantPost/ResumeFormattingForTeachersAndProfessors.jsx";
+import ResumeFormattingEngineeringStudents from "./component/ImportantPost/ResumeFormattingEngineeringStudents.jsx";
+import ResumeFormattingforFreelancersandRemoteWorkers from "./component/ImportantPost/ResumeFormattingforFreelancersandRemoteWorkers.jsx";
+import GovernmentJobResumeGuide from "./component/ImportantPost/GovernmentJobResumeGuide.jsx";
+import Hospitality_and_Tourism from "./component/ImportantPost/HospitalityandTourism.jsx";
+import Resume_Formatting_Real_Estate_Agents from "./component/ImportantPost/Resume_Formatting_Real_Estate_Agents.jsx";
+import Best_Free_Resume_Formatting_Tools_for_2024 from "./component/ImportantPost/Best_Free_Resume_Formatting_Tools_for_2024.jsx";
+import Best_Free_Resume_Formatting_Tools_for_2025 from "./component/ImportantPost/Best_Free_Resume_Formatting_Tools_for_2024.jsx";
+import SitemapNotifier from "./component/SitemapNotifier.jsx";
+import ResumeFormattingTool from "./component/ImportantPost/ResumeFormattingTool.jsx";
+import Infographic_Resume_Formatting from "./component/ImportantPost/Infographic_Resume_Formatting.jsx";
+import ResumeFormattinMistake from "./component/ImportantPost/ResumeFormattinMistake.jsx";
+import ResumeFormattinError from "./component/ImportantPost/ResumeFormattinError.jsx";
+import AtsUnfriendlyResume from "./component/ImportantPost/AtsUnfriendlyResume.jsx";
+import OverDesignFormatting from "./component/ImportantPost/OverDesignFormatting.jsx";
+import ReflectCareerBreaks from "./component/ImportantPost/ReflectCareerBreaks.jsx";
+import FontAndSixMistake from "./component/ImportantPost/FontAndSixMistake.jsx";
+import SpellingandGrammarMistakes from "./component/ImportantPost/SpellingandGrammarMistakes.jsx";
+import ResumeLayoutMistakes from "./component/ImportantPost/ResumeLayoutMistakes.jsx";
+import ProfessionalResumeFormatPDF from "./component/ImportantPost/ProfessionalResumeFormatPDF.jsx";
+import PdfVsWordResume from "./component/ImportantPost/PdfVsWordResume.jsx";
+import ChronologicalVsFunctionalResume from "./component/ImportantPost/ChronologicalVsFunctionalResume.jsx";
+import InfographicVsTraditionalResumes from "./css/Important_Post/InfographicVsTraditionalResumes.jsx";
+import OnlineVsManualResume from "./css/Important_Post/OnlineVsManualResume.jsx";
+import OneVsMultiPageResume from "./component/ImportantPost/OneVsMultiPageResume.jsx";
+import ModernResumeVsTraditionResume from "./component/ImportantPost/ModernResumeVsTraditionResume.jsx";
+import AtsFriendlyVsCreativeResume from "./component/ImportantPost/AtsFriendlyVsCreativeResume.jsx";
+import MinimalistVsGraphic from "./component/ImportantPost/MinimalistVsGraphic.jsx";
+import ObjectiveStatementVsSummaryStatement from "./component/ImportantPost/ObjectiveStatementVsSummaryStatement.jsx";
+import ResumeFormattingTrends2025 from "./component/ImportantPost/ResumeFormattingTrends2025.jsx";
+import ResumeFormattingforAIDrivenApplicationTrackingSystems from "./component/ImportantPost/ResumeFormattingforAIDrivenApplicationTrackingSystems.jsx";
+import PresentingPersonalBranding from "./component/ImportantPost/PresentingPersonalBranding.jsx";
+import MatchesYourLinkedInProfile from "./component/ImportantPost/MatchesYourLinkedInProfile.jsx";
+import ModernResumeFormatting from "./component/ImportantPost/ModernResumeFormatting.jsx";
+import DataDrivenResumeArticle from "./component/ImportantPost/DataDrivenResumeArticle.jsx";
+import InfluencerResumeGuide from "./component/ImportantPost/InfluencerResumeGuide.jsx";
+import JobSpecificResumeFormatting from "./component/ImportantPost/JobSpecificResumeFormatting.jsx";
+import PortfolioResumeTips from "./component/ImportantPost/PortfolioResumeTips.jsx";
+import RemoteResumeFormattin from "./component/ImportantPost/RemoteResumeFormattin.jsx";
+import ResumeFormattingforInternational from "./component/ImportantPost/ResumeFormattingforInternational.jsx";
+import ResumeFormattintoMoreInterview from "./component/ImportantPost/ResumeFormattintoMoreInterview.jsx";
+import DownloadtheBestResumeFormatPDF from "./component/ImportantPost/DownloadtheBestResumeFormatPDF.jsx";
+import TopResumeFormatPDFforJobSeekers from "./component/ImportantPost/TopResumeFormatPDFforJobSeekers.jsx";
+import EffortlessResumeCreation from "./component/ImportantPost/EffortlessResumeCreation.jsx";
+import ResumeFormatPDFGuide from "./component/ImportantPost/ResumeFormatPDFGuide.jsx";
+import GetHiredFaster from "./component/ImportantPost/GetHiredFaster.jsx";
+import HowtoChoosetheRightResumeFormatPDF from "./component/ImportantPost/HowtoChoosetheRightResumeFormatPDF.jsx";
+import FreeResumeFormat from "./component/ImportantPost/FreeResumeFormat.jsx";
+import CreateYourDreamJobResume from "./component/ImportantPost/CreateYourDreamJobResume.jsx";
+import StepbyStepResumeCreation from "./component/ImportantPost/StepbyStepResumeCreation.jsx";
+import FreeResumeFormatPDF from "./component/ImportantPost/FreeResumeFormatPDF.jsx";
+import CompleteGuidetoResumeFormatPDF from "./component/ImportantPost/CompleteGuidetoResumeFormatPDF.jsx";
+import DownloadaProfessionalResumeFormatPDF from "./component/ImportantPost/DownloadaProfessionalResumeFormatPDF.jsx";
+import HowtoResumeGuide from "./component/ImportantPost/HowtoResumeGuide.jsx";
+import UltimateCollectionofResumeFormatPDF from "./component/ImportantPost/UltimateCollectionofResumeFormatPDF.jsx";
+import MyTop10FreeResumeFormatPDF from "./component/ImportantPost/MyTop10FreeResumeFormatPDF.jsx";
+import DownloadYourFreeResumeFormatPDF from "./component/ImportantPost/DownloadYourFreeResumeFormatPDF.jsx";
+import FindtheRightResumeFormatPDF from "./component/ImportantPost/FindtheRightResumeFormatPDF.jsx";
+import LookingforaResumeFormatPDF from "./component/ImportantPost/LookingforaResumeFormatPDF.jsx";
+import DownloadResumeFormatPDFforFreshers from "./component/ImportantPost/DownloadResumeFormatPDFforFreshers.jsx";
+import HospitalityandTourism from "./component/ImportantPost/HospitalityandTourism.jsx";
+import BestResumeFormatPDFforProfessionals from "./component/ImportantPost/BestResumeFormatPDFforProfessionals.jsx";
+import HowtoCreateaWinningResume from "./component/ImportantPost/HowtoCreateaWinningResume.jsx";
+import EasytoUseResumeFormatPDFforJobSeekers from "./component/ImportantPost/EasytoUseResumeFormatPDFforJobSeekers.jsx";
+import TopResumeFormatPDF from "./component/ImportantPost/TopResumeFormatPDF.jsx";
+import FreeResumeFormatPDFTemplates from "./component/ImportantPost/FreeResumeFormatPDFTemplates.jsx";
+import HowtoCreateaStunningResume from "./component/ImportantPost/HowtoCreateaStunningResume.jsx";
+import CraftthePerfectResumewithOurFreeResumeFormatPDF from "./component/ImportantPost/CraftthePerfectResumewithOurFreeResumeFormatPDF.jsx";
+import FreeResumeFormatPDFdesign from "./component/ImportantPost/FreeResumeFormatPDFdesign.jsx";
+import ResumeFormat from "./component/ImportantPost/ResumeFormat.jsx";
+import ResumeFormatPDF from "./component/ImportantPost/ResumeFormatPDF.jsx";
+import ResumeFormatting from "./component/ImportantPost/ResumeFormatting.jsx";
+import ProfessionalResumeFormat from "./component/ImportantPost/ProfessionalResumeFormat.jsx";
+import CraftthePerfectResume from "./component/ImportantPost/CraftthePerfectResume.jsx";
+import YourStepbyStepGuide from "./component/ImportantPost/YourStepbyStepGuide.jsx";
+import CreateResumeThatGetsResults from "./component/ImportantPost/CreateResumeThatGetsResults.jsx";
 
 var images = [
   { id: 1, src: resum1, alt: "Professional Resume Template 1" },
@@ -405,6 +482,14 @@ function App() {
           path="/coverletter_component"
           element={<CoverComponent CoverImage={CoverImage} />}
         />
+
+
+{/* <Route
+          path="/site-map-notifier"
+          element={<SitemapNotifier />}
+        /> */}
+
+
 
         {/* <Route path=`/cover_lett` element={<CoverLetterInput CoverImage={CoverImage}/>}/> */}
 
@@ -674,6 +759,39 @@ function App() {
           path="/creative-and-designer-resume-tips"
           element={<CreativeAndDesignerResumeTips/>}
         />
+<Route
+          path="/best-resume-formatting-sales-marketing"
+          element={<ResumeFormattingForSaleAndMarketing/>}
+        />
+        <Route
+          path="/resume_formatting_for_teachersAndProfessors"
+          element={<ResumeFormattingForTeachersAndProfessors/>}
+        />
+        <Route
+          path="/resume-formatting-engineerig-students"
+          element={<ResumeFormattingEngineeringStudents/>}
+        />
+        <Route
+          path="/resume-formatting-for-freelancers-and-remote-workers"
+          element={<ResumeFormattingforFreelancersandRemoteWorkers/>}
+        />
+        <Route
+          path="/best-free-resume-formatting-tools-for-2025"
+          element={<Best_Free_Resume_Formatting_Tools_for_2025/>}
+        />
+         <Route
+          path="/8-best-online-tools-for-resume-formatting-for-2025"
+          element={<ResumeFormattingTool/>}
+        />
+        <Route
+          path="/infographic-resume-formatting"
+          element={<Infographic_Resume_Formatting/>}
+        />
+        <Route
+          path="/infographic-resume-formatting"
+          element={<Infographic_Resume_Formatting/>}
+        />
+
 
 
 
@@ -750,6 +868,278 @@ function App() {
           path="/Functional_vs_Chronological_Resume_Formatting"
           element={<ResumeFormattingArticle/>}
         />
+        <Route
+          path="/government-job-resume-guide"
+          element={<GovernmentJobResumeGuide/>}
+        />
+ <Route
+          path="/hospitality-tourism-resume-tips"
+          element={<HospitalityandTourism/>}
+        />
+        <Route
+          path="/Best-Resume-Formatting-Tips-for-Real-Estate-Agents"
+          element={<Resume_Formatting_Real_Estate_Agents/>}
+        />
+ <Route
+          path="/20-Resume-Formatting-Mistakes-You-Should-Avoid"
+          element={<ResumeFormattinMistake/>}
+        />
+       
+        <Route
+          path="/top-10-resume-formatting-errors"
+          element={<ResumeFormattinError/>}
+        />
+<Route
+          path="/why-ats-unfriendly-formatting-can-lead-to-resume-rejection"
+          element={<AtsUnfriendlyResume/>}
+        />
+<Route
+          path="/how-to-avoid-over-designing-your-resume-formatting"
+          element={<OverDesignFormatting/>}
+        />
+        <Route
+          path="/font-and-size-mistakes"
+          element={<FontAndSixMistake/>}
+        />
+        <Route
+          path="/Resume_Formatting_Errors_That_Fail_to_Reflect_Career_Breaks"
+          element={<ReflectCareerBreaks/>}
+        />
+<Route
+          path="/how-to-hide-spelling-and-grammar-mistakes-through-formatting-a-resume"
+          element={<SpellingandGrammarMistakes/>}
+        />
+        <Route
+          path="/common-layout-mistakes-that-make-your-resume-unprofessional"
+          element={<ResumeLayoutMistakes/>}
+        />
+<Route
+          path="/professional-resume-format-pdf"
+          element={<ProfessionalResumeFormatPDF/>}
+        />
+        <Route
+          path="/pdf-vs-word-resume"
+          element={<PdfVsWordResume/>}
+        />
+        <Route
+          path="/chronological-vs-functional-resume-formatting"
+          element={<ChronologicalVsFunctionalResume/>}
+        />
+         <Route
+          path="/infographic-resume-vs-traditional-resume-formatting"
+          element={<InfographicVsTraditionalResumes/>}
+        />
+        <Route
+          path="/online-resume-builder-vs-manual-resume-builder-formatting"
+          element={<OnlineVsManualResume/>}
+        />
+         <Route
+          path="/one-vs-multi-page-resume"
+          element={<OneVsMultiPageResume/>}
+        />
+         <Route
+          path="/Modern-vs-traditiona-resume-formatting"
+          element={<ModernResumeVsTraditionResume/>}
+        />
+        <Route
+          path="/ats-friendly-vs-creative-resume-format"
+          element={<AtsFriendlyVsCreativeResume/>}// done for submit
+        />
+        <Route
+          path="/minimalist-vs-graphic-formatting"
+          element={<MinimalistVsGraphic/>}// done for submit
+        />
+        <Route
+          path="/objective-vs-summary-statement-the-right-way-to-format-your-resume"
+          element={<ObjectiveStatementVsSummaryStatement/>}// done for submit
+        />
+<Route
+          path="/2025-resume-formatting-trends"
+          element={<ResumeFormattingTrends2025/>}// done for submit
+        />
+<Route
+          path="/resume-formattin-for-ai-driven-application-tracking-system"
+          element={<ResumeFormattingforAIDrivenApplicationTrackingSystems/>}// done for submit
+        />
+        <Route
+          path="/how-to-present-personal-branding-through-resume-formatting"
+          element={<PresentingPersonalBranding/>}// done for submit
+        />
+        <Route
+          path="/how-to-create-resume-formatting-that-matches-your-linkedin-profile"
+          element={<MatchesYourLinkedInProfile/>}// done for submit
+        />
+        <Route
+          path="/modern-resume-formatting-with-interactive-elements"
+          element={<ModernResumeFormatting/>}// done for submit
+        />
+
+<Route
+          path="/data-driven-resume-formatting-for-analytical-jobs-formatting-for-analytical-jobs"
+          element={<DataDrivenResumeArticle/>}// done for submit
+        />
+        <Route
+          path="/social-media-influencer-resume-formatting"
+          element={<InfluencerResumeGuide/>}// done for submit
+        />
+        <Route
+          path="/job-specific-resume-formatting"
+          element={<JobSpecificResumeFormatting/>}// done for submit
+        />
+        <Route
+          path="/freelancers-portfolio-resume-formatting-tips"
+          element={<PortfolioResumeTips/>}// done for submit
+        />
+<Route
+          path="/remote-resume-formatting-crafting-a-standout-resume-for-remote-jobs"
+          element={<RemoteResumeFormattin/>}// done for submit
+        />
+        <Route
+          path="/personalized-resume-formatting-for-international-jobs"
+          element={<ResumeFormattingforInternational/>}// done for submit
+        />
+        <Route
+          path="/resume-formatting-your-ultimate-guide-to-landing-more-interviews"
+          element={<ResumeFormattintoMoreInterview/>}// done for submit
+        />
+        <Route
+          path="/download-best-resume-format-pdf-create-perfect-resume"
+          element={<DownloadtheBestResumeFormatPDF/>}// done for submit
+        />
+        <Route
+          path="/top-resume-format-pdf-job-seekers-free-templates-get-hired-fast"
+          element={<TopResumeFormatPDFforJobSeekers/>}// done for submit
+        />
+        <Route
+          path="/effortless-resume-creation-download-professional-resume-format-pdf"
+          element={<EffortlessResumeCreation/>}// done for submit
+        />
+        <Route
+          path="/resume-format-pdf-guide-perfect-templates-for-a-standout-cv"
+          element={<ResumeFormatPDFGuide/>}// done for submit
+        />
+<Route
+          path="/get-hired-faster-the-ultimate-resume-format-pdf-for-your-career"
+          element={<GetHiredFaster/>}// done for submit
+        />
+<Route
+          path="/how-to-choose-the-right-resume-format-pdf-free-templates-inside"
+          element={<HowtoChoosetheRightResumeFormatPDF/>}// done for submit
+        />
+<Route
+          path="/free-resume-format-pdf-simple-professional-and-ready-to-download"
+          element={<FreeResumeFormat/>}// done for submit
+        />
+        <Route
+          path="/create-your-dream-job-resume-top-resume-format-pdf-templates-available"
+          element={<CreateYourDreamJobResume/>}// done for submit
+        />
+         <Route
+          path="/step-by-step-resume-creation-with-our-free-resume-format-pdf-templates"
+          element={<StepbyStepResumeCreation/>}// done for submit
+        />
+        <Route
+          path="/free-resume-format-pdf-build-a-cv-that-stands-out"
+          element={<FreeResumeFormatPDF/>}// done for submit
+        />
+        <Route
+          path="/complete-guide-to-resume-format-pdf-your-key-to-landing-any-job"
+          element={<CompleteGuidetoResumeFormatPDF/>}// done for submit
+        />
+        <Route
+          path="/download-a-professional-resume-format-pdf-simple-fast-effective"
+          element={<DownloadaProfessionalResumeFormatPDF/>}// done for submit
+        />
+<Route
+          path="/how-to-build-the-perfect-resume-with-a-resume-format-pdf"
+          element={<HowtoResumeGuide/>}// done for submit
+        />
+<Route
+          path="/the-ultimate-collection-of-resume-format-pdfs-for-job-seekers"
+          element={<UltimateCollectionofResumeFormatPDF/>}// done for submit
+        />
+<Route
+          path="/my-top-10-free-resume-format-pdfs-for-landing-your-dream-job"
+          element={<MyTop10FreeResumeFormatPDF/>}// done for submit
+        />
+<Route
+          path="/download-your-free-resume-format-pdf-today-and-stand-out"
+          element={<DownloadYourFreeResumeFormatPDF/>}// done for submit
+        />
+        <Route
+          path="/find-the-right-resume-format-pdf-for-your-career-growth"
+          element={<FindtheRightResumeFormatPDF/>}// done for submit
+        />
+        <Route
+          path="/looking-for-resume-format-pdf-get-free-templates"
+          element={<LookingforaResumeFormatPDF/>}// done for submit
+        />
+<Route
+          path="/download-resume-format-pdf-for-freshers-simple-and-effective"
+          element={<DownloadResumeFormatPDFforFreshers/>}
+        />
+        <Route
+          path="/best-resume-format-pdf-for-professionals-download-now"
+          element={<BestResumeFormatPDFforProfessionals/>}
+        />
+<Route
+          path="/how-to-create-a-winning-resume-using-resume-format-pdf"
+          element={<HowtoCreateaWinningResume/>}
+        />
+<Route
+          path="/easy-to-use-resume-format-pdf-for-job-seekers"
+          element={<EasytoUseResumeFormatPDFforJobSeekers/>}
+        />
+        <Route
+          path="/top-resume-format-pdfs-for-high-impact-resumes"
+          element={<TopResumeFormatPDF/>}
+        />
+        <Route
+          path="/free-resume-format-pdf-templates-perfect-for-your-next-job"
+          element={<FreeResumeFormatPDFTemplates/>}
+        />
+        <Route
+          path="/how-to-create-a-stunning-resume-using-a-resume-format-pdf"
+          element={<HowtoCreateaStunningResume/>}
+        />
+        <Route
+          path="/craft-the-perfect-resume-with-our-free-resume-format-pdf"
+          element={<CraftthePerfectResumewithOurFreeResumeFormatPDF/>}
+        />
+<Route
+          path="/free-resume-format-pdf-design-your-resume-in-minutes"
+          element={<FreeResumeFormatPDFdesign/>}
+        />
+        <Route
+          path="/resume-format"
+          element={<ResumeFormat/>}
+        />
+         <Route
+          path="/resume-format-pdf"
+          element={<ResumeFormatPDF/>}
+        />
+        <Route
+          path="/resume-formatting"
+          element={<ResumeFormatting/>}
+        />
+        <Route
+          path="/professional-resume-format-pdf-download"
+          element={<ProfessionalResumeFormat/>}
+        />
+        <Route
+          path="/craft-perfect-resume-with-free-format-pdf"
+          element={<CraftthePerfectResume/>}
+        />
+         <Route
+          path="/your-step-by-step-guide-to-a-professional-resume-format-pdf"
+          element={<YourStepbyStepGuide/>}
+        />
+<Route
+          path="/create-a-resume-that-gets-results-best-resume-format-pdfs"
+          element={<CreateResumeThatGetsResults/>}
+        />
+
+
 
 
         {/* job and carier blog component */}

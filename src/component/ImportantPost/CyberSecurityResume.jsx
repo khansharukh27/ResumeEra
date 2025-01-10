@@ -34,11 +34,23 @@ const CyberSecurittyResume = () => {
   </Helmet>
         <section>
           <h2>Crafting a Powerful Cybersecurity Resume</h2>
-          <small>✍️ By the ResumeEra Team | Published: December 22, 2024 | ⏱️ 8 min read</small>
-          <figure>
-            <img src={Crafting_Powerful_Cybersecurity_Resume} alt="Crafting a Powerful Cybersecurity Resume" loading="lazy" />
-            <figcaption>Detailed guidance and tips on creating a standout cybersecurity resume</figcaption>
-          </figure>
+          <div className="date-author-container">
+                <img
+                    src="https://resumeera.xyz/static/media/best_logo.895bb22edf6c08600c86.webp"
+                    alt="ResumeEra Logo"
+                    className="author-logo"
+                    style={{ width: "50px", height: "50px" }}
+                />
+                <small className="author-details">
+                    ✍️ By the <span className="author-highlight">ResumeEra Team</span> |
+                    Published:{""}
+                    <span className="author-highlight">January 3, 2025</span> | ⏱️{" "}
+                    <span className="author-highlight">9 min read</span>
+                </small>
+            </div>
+            <figure>
+              <img src={Crafting_Powerful_Cybersecurity_Resume} alt="Crafting a Powerful Cybersecurity Resume" loading="lazy" />
+            </figure>
           <p>
             In the modern digital age, cybersecurity professionals are in higher
             demand than ever before. Organizations across industries face

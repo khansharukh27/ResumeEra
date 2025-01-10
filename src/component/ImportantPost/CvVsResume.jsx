@@ -16,7 +16,7 @@ const CvVsResume = () => {
     <div>
       <div className="aboutResumeEra">
         <Helmet>
-          <title>Difference Between CV and Resume | Comprehensive Guide</title>
+          <title>Difference Between CV and Resume | Comprehensive Guide|| ResumeEra</title>
           <meta
             name="description"
             content="Learn the key differences between CV and resume, their uses, and how to choose the right one for your job application. Explore tips and best practices."
@@ -30,7 +30,19 @@ const CvVsResume = () => {
             rel="canonical"
             href="https://resumeera.xyz/difference-between-cv-and-resume"
           />
-
+            {/* Open Graph Meta Tags */}
+            <meta property="og:title" content="Difference Between CV and Resume | Comprehensive Guide" />
+            <meta property="og:description" content="Learn the key differences between CV and resume, their uses, and how to choose the right one for your job application. Explore tips and best practices." />
+            <meta property="og:image" content={Difference_Between_CV_and_Resume} />
+            <meta property="og:url" content="https://resumeera.xyz/difference-between-cv-and-resume" />
+            <meta property="og:type" content="article" />
+            {/* Twitter Card Meta Tags */}
+            <meta name="twitter:card" content="summary_large_image" />
+            <meta name="twitter:title" content="Difference Between CV and Resume | Comprehensive Guide" />
+            <meta name="twitter:description" content="Learn the key differences between CV and resume, their uses, and how to choose the right one for your job application. Explore tips and best practices." />
+            <meta name="twitter:image" content={Difference_Between_CV_and_Resume} />
+            <meta name="twitter:url" content="https://resumeera.xyz/difference-between-cv-and-resume" />
+            <meta name="twitter:type" content="article" />
           {/* FAQ Schema in JSON-LD format */}
           <script type="application/ld+json">
             {`{
@@ -394,7 +406,26 @@ const CvVsResume = () => {
             Remember, the difference between CV and resume is your gateway to
             success!
           </p>
-        </section><div><GoogleAd/></div>
+        </section>
+        <section>
+          <h2>Frequently Asked Questions (FAQ)</h2>
+          <h3>What is the difference between CV and resume?</h3>
+          <p>A CV is a detailed document outlining an individual's full academic and professional history, while a resume is a concise, tailored document designed for a specific job application.</p>
+
+          <h3>When should I use a CV instead of a resume?</h3>
+          <p>Use a CV for academic, research, or international roles. A resume is typically used for corporate or industry-specific positions.</p>
+
+          <h3>How long should a CV be?</h3>
+          <p>A CV is typically longer than a resume and can span multiple pages, depending on your experience and accomplishments.</p>
+
+          <h3>How long should a resume be?</h3>
+          <p>A resume should generally be one or two pages, focusing on relevant experience and skills for a specific job application.</p>
+
+          <h3>What are the common mistakes to avoid when writing a CV?</h3>
+          <p>Common mistakes include overloading with irrelevant details, using informal language, and forgetting to include dates and specifics for experiences.</p>
+        </section>
+        <RandomeArticleToBlogCareer />
+        <div><GoogleAd/></div>
       </div>
       <section>
         <div className="stickyShare">

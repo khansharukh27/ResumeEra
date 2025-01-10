@@ -65,7 +65,7 @@ const RandomeArticleToBlogCareer = () => {
                 <meta name="description" content="This page is related to Blog to show valuable things." />
             </Helmet>
             <header>
-                <h1>Did you enjoy this article? Then the below might interest you.</h1>
+                <h3>Did you enjoy this article? Then the below might interest you.</h3>
                 <hr style={{width:'inherit'}}/>
             </header>
 

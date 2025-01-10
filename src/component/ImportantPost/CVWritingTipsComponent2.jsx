@@ -1,11 +1,17 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Helmet } from 'react-helmet';
 import Copy_Past_Cv from '../../image/image_for_link/Copy_Past_Cv.jpeg'
 import ShareButtons from '../shareButton/ShareButtons';
 import GoogleAd from '../adFolder/GoogleAd';
+import CallToAction from '../CallToAction';
+import RandomeArticleToBlogCareer from '../RandomeArticleToBlogCareer';
+import AuthorCard from '../AuthorCard';
 const CVWritingTipsComponent2 = () => {
     const ArticleUrl = 'https://resumeera.xyz/Dont_Copy_Paste_On_Your_Cv'
     const ArticleTitle = 'CV Writing Tips: क्या आप भी कॉपी-पेस्ट कर बनाते हैं सीवी?'
+     useEffect(() => {
+                        window.scrollTo(0, 0);
+                      }, []);
   return (
     <div className='aboutResumeEra'>
       <Helmet>
@@ -14,15 +20,43 @@ const CVWritingTipsComponent2 = () => {
         <meta property="og:title" content="CV Writing Tips: क्या आप भी कॉपी-पेस्ट कर बनाते हैं सीवी?" />
         <meta property="og:description" content="जानें कैसे एक सही सीवी बनाकर बेहतर जॉब अवसरों को प्राप्त किया जा सकता है।" />
         <meta property="og:type" content="article" />
-        <meta property="og:image" content="https://yourdomain.com/og-image.jpg"
+        <meta property="og:image" content={Copy_Past_Cv}
         />
         <link rel="canonical" href="https://resumeera.xyz/Dont_Copy_Paste_On_Your_Cv" />
         <meta property="twitter:card" content="summary_large_image" />
         <meta property="twitter:title" content="CV Writing Tips: क्या आप भी कॉपी-पेस्ट कर बनाते हैं सीवी?" />
         <meta property="twitter:description" content="जानें कैसे एक सही सीवी बनाकर बेहतर जॉब अवसरों को प्राप्त किया जा सकता है।" />
         <meta
-          name="twitter:image" content="https://yourdomain.com/twitter-image.jpg"
+          name="twitter:image" content={Copy_Past_Cv}
         />
+        <script type="application/ld+json">
+        {`
+        {
+          "@context": "https://schema.org",
+          "@type": "Article",
+          "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https://resumeera.xyz/Dont_Copy_Paste_On_Your_Cv"
+          },
+          "headline": "CV Writing Tips: क्या आप भी कॉपी-पेस्ट कर बनाते हैं सीवी?",
+          "description": "जानें कैसे एक सही सीवी बनाकर बेहतर जॉब अवसरों को प्राप्त किया जा सकता है।",
+          "image": ${Copy_Past_Cv},
+          "author": {
+            "@type": "Organization",
+            "name": "ResumeEra"
+          },
+          "publisher": {
+            "@type": "Organization",
+            "name": "ResumeEra",
+            "logo": {
+              "@type": "ImageObject",
+              "url": ${Copy_Past_Cv}
+            }
+          },
+          "datePublished": "2023-10-01",
+          "dateModified": "2023-10-01"
+          }`}
+        </script>
       </Helmet>
       <article>
         <header>
@@ -108,7 +142,16 @@ const CVWritingTipsComponent2 = () => {
           </p>
           <GoogleAd/>
         </section>
-
+        <section>
+          <h2>निष्कर्ष</h2>
+          <p>
+            एक प्रभावी CV बनाना एक महत्वपूर्ण कदम है जो आपके करियर को नई ऊंचाइयों तक ले जा सकता है। सही जानकारी, स्पष्टता, और पेशेवर प्रस्तुति के साथ, आप अपने संभावित नियोक्ताओं पर एक अच्छा प्रभाव डाल सकते हैं। याद रखें, हर नौकरी के लिए अपनी CV को अनुकूलित करें और इसे नियमित रूप से अपडेट करते रहें।
+          </p>
+          <p>
+            उम्मीद है कि ये टिप्स आपकी CV को और भी प्रभावी बनाने में मदद करेंगे। शुभकामनाएं!
+          </p>
+          <GoogleAd/>
+        </section>
         <section>
           <h2>ResumeEra से CV बनाएं</h2>
           <p>
@@ -146,9 +189,20 @@ const CVWritingTipsComponent2 = () => {
           <GoogleAd/>
         </section>
       </article>
-      <div className='stickyShare'>
-        <ShareButtons url={ArticleUrl} title={ArticleTitle}/>
-      </div>
+      <section>
+            <div>
+                <AuthorCard/>
+            </div>
+            <div>
+                <RandomeArticleToBlogCareer />
+            </div>
+            <div>
+                <CallToAction />
+            </div>
+            <div className="stickyShare">
+                <ShareButtons url={ArticleUrl} title={ArticleTitle} />
+            </div>
+       </section>
       <GoogleAd/>
     </div>
   );

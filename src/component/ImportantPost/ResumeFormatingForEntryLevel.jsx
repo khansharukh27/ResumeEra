@@ -5,12 +5,14 @@ import CallToAction from '../CallToAction';
 import RandomeArticleToBlogCareer from '../RandomeArticleToBlogCareer';
 import AuthorCard from '../AuthorCard';
 import Resume_Formatting_Tips_Entry_Level from '../../image/image_for_link/Resume Formatting Tips for Entry-Level Jobs.jpg'
+import DateAndAuthor from '../DateAndAuthor';
 export default function ResumeFormatingForEntryLevel() {
         const ArticleUrl = "https://resumeera.xyz/it-cover-letter-guide-2024";
                   const ArticleTitle = "IT Cover Letter Example | Tips & Templates for 2024";
                   useEffect(() => {
                     window.scrollTo(0, 0);
                   }, []);
+                  const publishDate = '2025-01-07'
     return (
         <>
             <Helmet>
@@ -51,6 +53,7 @@ export default function ResumeFormatingForEntryLevel() {
             <div className='aboutResumeEra'>
                 <section>
                     <h1>Resume Formatting Tips for Entry-Level Jobs ✨✉✨</h1>
+                    <DateAndAuthor publishDate={publishDate}/>
                     <figure>
                         <img src={Resume_Formatting_Tips_Entry_Level} alt="Resume Formatting Tips for Entry-Level Jobs" />
                         <figcaption>Resume Formatting Tips for Entry-Level Jobs</figcaption>
