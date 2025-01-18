@@ -15,7 +15,7 @@ const ArticleUrl = 'https://resumeera.xyz/administrative-assistant-cover-letter-
         <div>
         <div className='aboutResumeEra'>
             <Helmet>
-                <title>Administrative Assistant Cover Letter Example (With Templates & Tips for 2024)</title>
+                <title>Administrative Assistant Cover Letter Example | ResumeEra |2025</title>
                 <meta name="description" content="Explore a comprehensive guide with examples, templates, and tips to craft the perfect Administrative Assistant cover letter in 2024." />
                 <meta name="keywords" content="Administrative Assistant Cover Letter, Cover Letter Example, Cover Letter Tips, Cover Letter Templates 2024" />
                 <link rel="canonical" href="https://resumeera.xyz/administrative-assistant-cover-letter-example" />

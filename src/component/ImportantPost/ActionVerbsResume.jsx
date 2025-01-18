@@ -20,14 +20,107 @@ const ActionVerbsResume = () => {
   return (
     <div>
     <div className="aboutResumeEra">
-      <Helmet>
-        <link rel="canonical" href="https://resumeera.xyz/improving-your-resume-with-action-verbs" />
-        <title>Improving Your Resume with Action Verbs</title>
-        <meta name="description" content="Using strong action verbs is one of the easiest ways to make your resume more impactful. These verbs help emphasize your accomplishments and showcase your active role in previous jobs. Here's how to improve your resume by incorporating powerful action verbs." />
-        <meta name='keyword' content='ResumeEra,Resume Era, Free Resume, how to create free resume online,free resume creator,free resume creator online ,Create Resume Online,Free Resume Builder,free resume maker ,Professional Resume, 
-          Online Resume Builder, Job Application, CV Maker, Resume Templates, Career, 
-          Employment'/>
-      </Helmet>
+    <Helmet>
+    <title>Improving Your Resume with Action Verbs | ResumeEra | 2025</title>
+    <meta name="description" content="Using strong action verbs is one of the easiest ways to make your resume more impactful. These verbs help emphasize your accomplishments and showcase your active role in previous jobs. Here's how to improve your resume by incorporating powerful action verbs." />
+    
+    <meta name="keywords" content="ResumeEra,Resume Era, Free Resume, how to create free resume online, free resume creator, free resume creator online, Create Resume Online, Free Resume Builder, free resume maker, Professional Resume, Online Resume Builder, Job Application, CV Maker, Resume Templates, Career, Employment" />
+    
+    <link rel="canonical" href="https://resumeera.xyz/improving-your-resume-with-action-verbs" />
+    
+    <meta property="og:title" content="Improving Your Resume with Action Verbs | ResumeEra | 2025" />
+    <meta property="og:description" content="Using strong action verbs is one of the easiest ways to make your resume more impactful. These verbs help emphasize your accomplishments and showcase your active role in previous jobs." />
+    <meta property="og:url" content="https://resumeera.xyz/improving-your-resume-with-action-verbs" />
+    <meta property="og:image" content="https://resumeera.xyz/images/action-verbs-resume.jpg" />
+    <meta property="og:type" content="article" />
+    
+    <meta name="twitter:title" content="Improving Your Resume with Action Verbs | ResumeEra | 2025" />
+    <meta name="twitter:description" content="Learn how using strong action verbs in your resume can make your accomplishments stand out and create a lasting impact." />
+    <meta name="twitter:image" content="https://resumeera.xyz/images/action-verbs-resume.jpg" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <script type="application/ld+json">
+    {`
+        {
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+                {
+                    "@type": "Question",
+                    "name": "What are action verbs in a resume?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Action verbs are powerful verbs used to describe your skills, accomplishments, and experiences. They emphasize the active role you played in your previous roles, making your resume more dynamic and impactful."
+                    }
+                },
+                {
+                    "@type": "Question",
+                    "name": "How can action verbs improve my resume?",
+                    "acceptedAnswer": {
+                        "@type": "Answer",
+                        "text": "Using action verbs in your resume helps convey your accomplishments more clearly, shows your proactive role in past jobs, and makes your resume stand out to recruiters."
+                    }
+                }
+            ]
+        }
+    `}
+    </script>
+    
+    <script type="application/ld+json">
+        {`{
+            "@context": "https://schema.org",
+            "@type": "Article",
+            "headline": "Improving Your Resume with Action Verbs",
+            "description": "Using strong action verbs is one of the easiest ways to make your resume more impactful. These verbs help emphasize your accomplishments and showcase your active role in previous jobs.",
+            "author": {
+                "@type": "Organization",
+                "name": "ResumeEra"
+            },
+            "publisher": {
+                "@type": "Organization",
+                "name": "ResumeEra",
+                "logo": {
+                    "@type": "ImageObject",
+                    "url": "https://resumeera.xyz/images/logo.png"
+                }
+            },
+            "datePublished": "2025-01-15",
+            "dateModified": "2025-01-15",
+            "mainEntityOfPage": "https://resumeera.xyz/improving-your-resume-with-action-verbs"
+        }
+        `}
+    </script>
+
+    <script type="application/ld+json">
+    {`
+        {
+            "@context": "https://schema.org",
+            "@type": "BreadcrumbList",
+            "itemListElement": [
+                {
+                    "@type": "ListItem",
+                    "position": 1,
+                    "name": "Home",
+                    "item": "https://resumeera.xyz"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 2,
+                    "name": "Blog",
+                    "item": "https://resumeera.xyz/blog"
+                },
+                {
+                    "@type": "ListItem",
+                    "position": 3,
+                    "name": "Improving Your Resume with Action Verbs",
+                    "item": "https://resumeera.xyz/improving-your-resume-with-action-verbs"
+                }
+            ]
+        }
+        `}
+    </script>
+</Helmet>
+
       
       <h1 className="action-verbs-resume-title">Improving Your Resume with Action Verbs</h1>
       <DateAndAuthor publishDate={publishDate}/>

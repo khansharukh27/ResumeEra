@@ -7,6 +7,7 @@ import AuthorCard from "../AuthorCard";
 import CallToAction from "../CallToAction";
 import ShareButtons from "../shareButton/ShareButtons";
 import GoogleAd from "../adFolder/GoogleAd";
+import { Link } from "react-router-dom";
 export default function AtsFriendlyVsCreativeResume() {
      const ArticleUrl ="https://www.resumeera.xyz/first-job-resume";
         const ArticleTitle ="How to Create a Resume for Your First Job";
@@ -17,7 +18,7 @@ export default function AtsFriendlyVsCreativeResume() {
   return (
     <div>
         <Helmet>
-        <title>ATS-Friendly Resume Vs Creative Resume Formatting: What Employers Prefer | ResumeEra</title>
+        <title>ATS-Friendly Resume Vs Creative Resume Formatting | ResumeEra |2025</title>
         <meta
           name="description"
           content="Explore the key differences between ATS-friendly resumes and creative resumes. Learn what employers prefer and how to choose the right format for your job application."
@@ -83,7 +84,7 @@ export default function AtsFriendlyVsCreativeResume() {
             qualifications; they’re a strategic tool to grab an employer’s
             attention. As competition intensifies, understanding what type of
             resume formatting employers prefer becomes crucial. Is it the clean
-            and optimized ATS-friendly resume designed to pass automated
+            and optimized <Link to='/ats-friendly-resume-format-for-beginners'>Ats Friendly</Link> resume designed to pass automated
             systems, or the visually striking creative resume crafted to leave a
             memorable impression? Understanding the differences, benefits, and
             challenges of both formats can help job seekers tailor their
@@ -94,7 +95,7 @@ export default function AtsFriendlyVsCreativeResume() {
         <section>
           <h2>What Is an ATS-Friendly Resume?</h2>
           <p>
-            An ATS-friendly resume is specifically designed to navigate
+            An <Link to='/ats-friendly-resume-format-for-beginners'>Ats Friendly</Link> resume is specifically designed to navigate
             Applicant Tracking Systems (ATS) efficiently. These systems are
             automated tools used by many companies to scan, rank, and filter
             resumes before they ever reach a hiring manager’s desk. To increase
@@ -148,7 +149,7 @@ export default function AtsFriendlyVsCreativeResume() {
         <section>
           <h3>Plain Text and Compatibility:</h3>
           <ul>
-            <li>Saved in ATS-friendly file formats like .docx or .pdf.</li>
+            <li>Saved in <Link to='/ats-friendly-resume-format-for-beginners'>Ats Friendly</Link> file formats like .docx or .pdf.</li>
             <li>
               Avoids embedded images, unusual fonts, or excessive styling that
               could disrupt parsing.
@@ -199,7 +200,7 @@ export default function AtsFriendlyVsCreativeResume() {
             </li>
             <li>
               Focus on design over the traditional linear structure seen in
-              ATS-friendly formats.
+              <Link to='/ats-friendly-resume-format-for-beginners'>Ats Friendly</Link> formats.
             </li>
           </ul>
         </section><div><GoogleAd/></div>
@@ -244,7 +245,7 @@ export default function AtsFriendlyVsCreativeResume() {
             </li>
             <li>
               Employers in industries like finance, healthcare, and engineering
-              prefer ATS-friendly resumes for their simplicity, clarity, and
+              prefer <Link to='/ats-friendly-resume-format-for-beginners'>Ats Friendly</Link> resumes for their simplicity, clarity, and
               efficiency.
             </li>
             <li>
@@ -293,7 +294,7 @@ export default function AtsFriendlyVsCreativeResume() {
             <thead>
               <tr>
                 <th>Feature</th>
-                <th>ATS-Friendly Resume</th>
+                <th><Link to='/ats-friendly-resume-format-for-beginners'>Ats Friendly</Link> Resume</th>
                 <th>Creative Resume</th>
               </tr>
             </thead>
@@ -378,7 +379,7 @@ export default function AtsFriendlyVsCreativeResume() {
           <h3>Test for Compatibility:</h3>
           <ul>
             <li>
-              Run your ATS-friendly resume through online ATS scanners to
+              Run your <Link to='/ats-friendly-resume-format-for-beginners'>Ats Friendly</Link> resume through online ATS scanners to
               identify and fix potential errors.
             </li>
             <li>
@@ -399,7 +400,7 @@ export default function AtsFriendlyVsCreativeResume() {
           </p>
           <p>
             Understanding your audience is key. If you’re applying to a large
-            corporation with a structured hiring process, an ATS-friendly format
+            corporation with a structured hiring process, an <Link to='/ats-friendly-resume-format-for-beginners'>Ats Friendly</Link> format
             is the safest bet. On the other hand, for creative roles in dynamic
             industries, a well-designed resume can set you apart and make a
             strong impression. Ultimately, the most effective resumes are those
@@ -440,7 +441,7 @@ export default function AtsFriendlyVsCreativeResume() {
             <p>
               For large corporations, an ATS-friendly resume is often the better
               choice. These companies typically use ATS to screen resumes before
-              they reach hiring managers. The ATS-friendly format ensures that
+              they reach hiring managers. The <Link to='/ats-friendly-resume-format-for-beginners'>Ats Friendly</Link> format ensures that
               your resume is accurately parsed and ranked based on your
               qualifications.
             </p>
@@ -477,8 +478,8 @@ export default function AtsFriendlyVsCreativeResume() {
               applications?
             </h3>
             <p>
-              Yes, it's a good idea to have both an ATS-friendly version and a
-              creative version of your resume. Use the ATS-friendly version for
+              Yes, it's a good idea to have both an <Link to='/ats-friendly-resume-format-for-beginners'>Ats Friendly</Link> version and a
+              creative version of your resume. Use the <Link to='/ats-friendly-resume-format-for-beginners'>Ats Friendly</Link> version for
               online applications, while the creative version can be used for
               networking events or roles in creative industries.
             </p>

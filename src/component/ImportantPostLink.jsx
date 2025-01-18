@@ -118,6 +118,45 @@ import professionalresumeformat from '../image/image_for_link/Professional Resum
 import crafttheperfectresume from '../image/image_for_link/Craft the Perfect Resume pdf.jpeg'
 import YourStepbyStepGuidetoaProfessional from '../image/image_for_link/Your Step-by-Step Guide to a Professional.jpeg'
 import CreateresumeThatGets from '../image/image_for_link/Create a Resume That Gets Result.jpeg'
+import TopResumeFormatPDFforJobSeeker from '../image/image_for_link/Top Resume Format PDF for Job Seeker.jpeg'
+import Optimizeyourresume from '../image/image_for_link/Optimize Your Resume with the Best Resume.jpeg'
+import gettherightresume from '../image/image_for_link/Get the Right Resume Format PDF.jpeg'
+import TheBestResumeFormat from "../image/image_for_link/The Best Resume Format PDF.jpeg";
+import Downloadthetop from '../image/image_for_link/Download Resume Format PDF.jpeg'
+import FreeResumeFormat from "../image/image_for_link/Free Resume Format PDF for Freshers.jpeg";
+import Theultimateresume from '../image/image_for_link/Free Resume Format PDF for Fresher.jpeg'
+import HowtoPicktheRightResume from '../image/image_for_link/How to Pick the Right Resume Format.jpeg'
+import GetHiredwiththeBestResume from '../image/image_for_link/Get Hired with the Best Resume.jpeg'
+import FreeResumeFormatss from "../image/image_for_link/Free Resume Format PDF Templates.jpeg";
+import TopResumeFormat from '../image/image_for_link/Top Resume Format PDF Downloads for a Perfect.jpeg'
+import BestResumeFormat from '../image/image_for_link/Best Resume Format PDFfor.jpeg'
+import ResumeFormatPDF from '../image/image_for_link/Resume Format PDF for Freshers.jpeg'
+import SimpleYetProfessional from "../image/image_for_link/Simple Yet Professional Resume Format.jpeg";
+import UnlockYourCareer from '../image/image_for_link/Unlock Your Career Potential.jpeg'
+import FreeDownloadableResume from '../image/image_for_link/Free Downloadable Resume Format PDFs.jpeg'
+import HowtoBuildanImpactful from '../image/image_for_link/How to Build an Impactful Resume.jpeg'
+import ResumeFormatPDFs from '../image/image_for_link/Resume Format PDFs.jpeg'
+import GetNoticedwith from "../image/image_for_link/Get Noticed with the Best Resume.jpeg";
+import GetNoticed from '../image/image_for_link/Get Noticed with a Professional Resume Format PDF.jpeg'
+import SimpleResumeFormatPDF from '../image/image_for_link/Format PDFJob Seekers 2025.jpeg'
+import TheCompleteGuide  from '../image/image_for_link/The Complete Guide to Choosing.jpeg'
+import PerfectforCareerSuccess from '../image/image_for_link/Perfect for Career Success.jpeg'
+import GetYouenergy from '../image/image_for_link/Get You Energy in Interview.jpeg'
+import ResumeMistakess from '../image/image_for_link/Resume Mistakes You Need to Avoid in 2025.jpg'
+import JobApplications from '../image/image_for_link/Job Applications Resume Format PDF Download now  2025.jpg'
+import HowToUseResume from '../image/image_for_link/How to Use Resume Format PDFs 2025 Winning Job Application.jpg'
+import PerfectYourResume from '../image/image_for_link/Perfect Your Resume with the Best Resume Format PDFs.jpg'
+import BestResumeFormats from '../image/image_for_link/Best Resume Format PDF for Immediate Job Offers Copy.jpg'
+import FreeTopResume from '../image/image_for_link/free Top Resume Format PDF Successfull career -2025 Download now .jpg'
+import TopResumeFormatPDFforCareerSuc from '../image/image_for_link/free Top Resume Format PDF Successfull career -2025 Download now .jpg'
+import GetHiredSoon from '../image/image_for_link/Download Your Resume Format PDF Today Get Hired Soon.jpg'
+import BuildYourBestCV from '../image/image_for_link/Build Your Best CV Now.jpg'
+import FresherExpertProfessional from '../image/image_for_link/Get Free Resume Format Download Now Fresher & Expert Professional.jpg'
+import Howtooptimise from '../image/image_for_link/How to Optimize Your Killer Resume Format PDF in 2025.jpg'
+import Howtohandle from '../image/image_for_link/How to handle recruiters.jpg'
+import SimpleResumeFormatWord from '../image/technical_Image/Basic_Ats_Resume_Template.png'
+import pdfImage from '../image/technical_Image/Creative-ATS-Resume-Template.png'
+
 import { Link } from "react-router-dom";
 const ImportantPostLink = () => {
   const [searchTerm, setSearchTerm] = useState("");
@@ -993,11 +1032,236 @@ const ImportantPostLink = () => {
       src:  CreateresumeThatGets,
       alt: "Create a Resume That Gets Results: Best Resume Format PDFs",
     },
-  ];
-  
-  
+    {
+      path: "/top-resume-format-pdf-for-job-seekers-free-to-download",
+      title: "Top Resume Format PDF for Job Seekers: Free to Download | ResumeEra",
+      src:  TopResumeFormatPDFforJobSeeker,
+      alt: "Top Resume Format PDF for Job Seekers: Free to Download",
+    },
+    {
+      path: "/optimize-your-resume-with-the-best-resume-format-pdf-templates",
+      title: "Optimize Your Resume with the Best Resume Format PDF Templates | ResumeEra",
+      src:  Optimizeyourresume,
+      alt: "Optimize Your Resume with the Best Resume Format PDF Templates",
+    },
+    {
+      path: "/get-the-right-resume-format-pdf-for-your-job-search",
+      title: "Get the Right Resume Format PDF for Your Job Search | ResumeEra",
+      src:  gettherightresume,
+      alt: "Get the Right Resume Format PDF for Your Job Search | ResumeEra",
+    },
+    {
+      path: "/the-best-resume-format-pdf-for-career-success",
+      title: "The Best Resume Format PDF for Career Success 🌟 | ResumeEra",
+      src:  TheBestResumeFormat,
+      alt: "The Best Resume Format PDF for Career Success",
+    },
+    {
+      path: "/download-the-top-resume-format-pdf-for-your-job-application",
+      title: "Download the Top Resume Format PDF for Your Job Application | ResumeEra",
+      src:  Downloadthetop,
+      alt: "Download the Top Resume Format PDF for Your Job Application",
+    },
+    {
+      path: "/free-resume-format-pdf-for-freshers-ready-to-download",
+      title: "Free Resume Format PDF for Freshers: Ready to Download | ResumeEra",
+      src:  FreeResumeFormat,
+      alt: "Free Resume Format PDF for Freshers: Ready to Download | ResumeEra",
+    },
+    {
+      path: "/ultimate-resume-format-pdf-for-career-advancements",
+      title: "The Ultimate Resume Format PDF for Career Advancements | ResumeEra",
+      src:  Theultimateresume,
+      alt: "The Ultimate Resume Format PDF for Career Advancements | ResumeEra",
+    },
+    {
+      path: "/how-to-pick-the-right-resume-format-pdf-for-your-skills",
+      title: "How to Pick the Right Resume Format PDF for Your Skills | ResumeEra",
+      src:  HowtoPicktheRightResume,
+      alt: "How to Pick the Right Resume Format PDF for Your Skills | ResumeEra",
+    },
+    {
+      path: "/get-hired-with-the-best-resume-format-pdf-templates-available",
+      title: "Get Hired with the Best Resume Format PDF Templates Available | ResumeEra",
+      src:  GetHiredwiththeBestResume,
+      alt: "Get Hired with the Best Resume Format PDF Templates Available | ResumeEra",
+    },
+    {
+      path: "/free-resume-format-pdf-templates-to-help-you-land-your-dream-job",
+      title: "Free Resume Format PDF Templates to Help You Land Your Dream Job | ResumeEra",
+      src:  FreeResumeFormatss,
+      alt: "Free Resume Format PDF Templates to Help You Land Your Dream Job | ResumeEra",
+    },
+    {
+      path: "/top-resume-format-pdf-downloads-for-a-perfect-cv",
+      title: "Top Resume Format PDF Downloads for a Perfect CV | ResumeEra",
+      src:  TopResumeFormat,
+      alt: "Top Resume Format PDF Downloads for a Perfect CV | ResumeEra",
+    },
+    {
+      path: "/best-resume-format-pdfs-for-creating-a-professional-cv",
+      title: "Best Resume Format PDFs for Creating a Professional CV | ResumeEra",
+      src:  BestResumeFormat,
+      alt: "Best Resume Format PDFs for Creating a Professional CV ",
+    },
+    {
+      path: "/resume-format-pdf-for-freshers-easy-to-download-and-customize",
+      title: "Resume Format PDF for Freshers: Easy to Download and Customize | ResumeEra",
+      src:  ResumeFormatPDF,
+      alt: "Resume Format PDF for Freshers: Easy to Download and Customize ",
+    },
+    {
+      path: "/simple-yet-professional-resume-format-pdf-get-your-job-now",
+      title: "Simple Yet Professional Resume Format PDF: Get Your Job Now | ResumeEra",
+      src:  SimpleYetProfessional,
+      alt: "Simple Yet Professional Resume Format PDF: Get Your Job Now ",
+    },
+    {
+      path: "/unlock-your-career-potential-with-the-right-resume-format-pdf",
+      title: "Unlock Your Career Potential with the Right Resume Format PDF | ResumeEra",
+      src:  UnlockYourCareer,
+      alt: "Unlock Your Career Potential with the Right Resume Format PDF | ResumeEra ",
+    },
+    {
+      path: "/free-downloadable-resume-format-pdfs-for-all-professions",
+      title: "Free Downloadable Resume Format PDFs for All Professions | ResumeEra",
+      src:  FreeDownloadableResume,
+      alt: "Free Downloadable Resume Format PDFs for All Professions",
+    },
+    {
+      path: "/how-to-build-an-impactful-resume-with-a-resume-format-pdf",
+      title: "How to Build an Impactful Resume with a Resume Format PDF | ResumeEra",
+      src:  HowtoBuildanImpactful,
+      alt: "How to Build an Impactful Resume with a Resume Format PDF | ResumeEra",
+    },
+    {
+      path: "/resume-format-pdf-free-templates-that-make-a-difference",
+      title: "Resume Format PDF: Free Templates That Make a Difference | ResumeEra",
+      src:  ResumeFormatPDFs,
+      alt: "Resume Format PDF: Free Templates That Make a Difference | ResumeEra",
+    },
+    {
+      path: "/get-noticed-with-the-best-resume-format-pdf-free-download-2025",
+      title: "Get Noticed with the Best Resume Format PDF Free Download (2025)",
+      src: GetNoticedwith,
+      alt: "Get Noticed with the Best Resume Format PDF Free Download (2025)",
+    },
+    {
+      path: "/get-noticed-with-a-professional-resume-format-pdf-free-download-now",
+      title: "Get Noticed with a Professional Resume Format PDF | Free Download Now",
+      src: GetNoticed,
+      alt: "Get Noticed with a Professional Resume Format PDF | Free Download Now",
+    },
+    {
+      path: "/simple-resume-format-pdf-job-seekers-2025-download-now",
+      title: "Simple Resume Format PDF | Job Seekers 2025 | Download Now",
+      src: SimpleResumeFormatPDF,
+      alt: "Simple Resume Format PDF | Job Seekers 2025 | Download Now",
+    },
+    {
+      path: "/the-complete-guide-to-choosing-the-right-resume-format-pdf",
+      title: "The Complete Guide to Choosing the Right Resume Format PDF | ResumeEra",
+      src: TheCompleteGuide,
+      alt: "The Complete Guide to Choosing the Right Resume Format PDF | ResumeEra",
+    },
+    {
+      path: "/free-resume-format-pdf-2025-perfect-for-career-success-download-now",
+      title: "Free Resume Format PDF-2025 | Perfect for Career Success | Download Now",
+      src: PerfectforCareerSuccess,
+      alt: "Free Resume Format PDF-2025 | Perfect for Career Success | Download Now",
+    },
+    {
+      path: "/resume-format-pdf-that-will-get-you-energy-in-interview",
+      title: "Resume Format PDF That Will Get You Energy in Interview | Download Now",
+      src: GetYouenergy,
+      alt: "Resume Format PDF That Will Get You Energy in Interview",
+    },
+    {
+      path: "/resume-mistakes-you-need-to-avoid-in-2025",
+      title: "Resume Mistakes You Need to Avoid in 2025 | Expert Tips",
+      src: ResumeMistakess,
+      alt: "Resume Mistakes You Need to Avoid in 2025",
+    },
+    {
+      path: "/job-applications-resume-format-pdf-download-now-2025",
+      title: "Job Applications Resume Format PDF | Download Now 2025",
+      src: JobApplications,
+      alt: "Job Applications Resume Format PDF | Download Now 2025",
+    },
+    {
+      path: "/how-to-use-resume-format-pdfs-2025-winning-job-application",
+      title: "How to Use Resume Format PDFs 2025 | Winning Job Application",
+      src: HowToUseResume,
+      alt: "How to Use Resume Format PDFs 2025 | Winning Job Application",
+    },
+    {
+      path: "/perfect-your-resume-with-the-best-resume-format-pdfs",
+      title: "Perfect Your Resume with the Best Resume Format PDFs - ResumeEra",
+      src: PerfectYourResume,
+      alt: "Perfect Your Resume with the Best Resume Format PDFs - ResumeEra",
+    },
+    {
+      path: "/best-resume-format-pdf-for-immediate-job-offers-2025-download-free-now",
+      title: "PBest Resume Format PDF for Immediate Job Offers in 2025 | Download Free Now",
+      src: BestResumeFormats,
+      alt: "Best Resume Format PDF for Immediate Job Offers in 2025 | Download Free Now",
+    },
+    {
+      path: "/free-top-resume-format-pdf-successful-career-2025-download-now",
+      title: "Free Top Resume Format PDF | Successful Career - 2025 | Download Now",
+      src: FreeTopResume,
+      alt: "Free Top Resume Format PDF | Successful Career - 2025 | Download Now",
+    },
+    {
+      path: "/top-resume-format-pdf-for-careersuccess",
+      title: "Top Resume Format PDF for Career Success | Free Download Now",
+      src: TopResumeFormatPDFforCareerSuc,
+      alt: "Top Resume Format PDF for Career Success | Free Download Now",
+    },
+    {
+      path: "/download-resume-format-pdf-today",
+      title: "Download Your Resume Format PDF Today | Get Hired Soon",
+      src: GetHiredSoon,
+      alt: "Download Your Resume Format PDF Today | Get Hired Soon",
+    },
+    {
+      path: "/free-resume-format-pdfs",
+      title: "Free Resume Format PDFs: Build Your Best CV Now",
+      src: BuildYourBestCV,
+      alt: "Free Resume Format PDFs: Build Your Best CV Now",
+    },
+    {
+      path: "/get-free-resume-format-pdf-fresher-and-expert-professional",
+      title: "Get Free Resume Format Download Now | For Fresher & Expert Professional",
+      src: FresherExpertProfessional,
+      alt: "Get Free Resume Format Download Now | For Fresher & Expert Professional",
+    },
+    {
+      path: "/how-to-optimize-killer-resume-format-pdf-2025",
+      title: "How to Optimize Your Killer Resume Format PDF in 2025",
+      src: Howtooptimise,
+      alt: "How to Optimize Your Killer Resume Format PDF in 2025",
+    },
+    {
+      path: "/how-to-respond-to-a-linkedin-recruiter",
+      title: "How to Respond to a LinkedIn Recruiter: A Comprehensive Guide",
+      src: Howtohandle,
+      alt: "How to Respond to a LinkedIn Recruiter: A Comprehensive Guide",
+    },
+    {
+      path: "/simple-resume-format-word",
+      title: "Simple Resume Format Word: A Complete Guide to Crafting Your Perfect Resume",
+      src: SimpleResumeFormatWord,
+      alt: "Simple Resume Format Word",
+    },
+    {
+      path: "/simple-resume-format-pdf",
+      title: "Simple Resume Format PDF - Download Free Templates | Resumeera.xyz",
+      src: pdfImage,
+      alt: "Simple Resume Format PDF - Download Free Templates",
+    },
 
-   
+  ];
   
   // Filter posts based on search term
   const filteredPosts = posts.filter((post) =>

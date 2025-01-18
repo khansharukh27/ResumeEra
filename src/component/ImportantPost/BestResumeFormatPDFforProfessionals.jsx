@@ -20,7 +20,7 @@ export default function BestResumeFormatPDFforProfessionals() {
     <div>
         <Helmet>
     <title>
-        Best Resume Format PDF for Professionals: Download Now | ResumeEra
+        Best Resume Format PDF for Professionals| Download Now | ResumeEra
     </title>
     <meta
         name="description"

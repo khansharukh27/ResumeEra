@@ -4,14 +4,16 @@ import '../css/templates.css';
 import NormalResume from './NormalResume';
 import TechnicalResumeImages from './TechResume/TechnicalResumeImages';
 import GoogleAd from './adFolder/GoogleAd';
+import FresherResume from './FresherResume';
+// import FresherResumeImage from '../image/'
 // import CoverLetter from './CoverLetter';
 const TemplatePage = (props) => {
-    const { images ,techImages,CoverImage} = props;
+    const { images ,techImages,CoverImage,fresherResumeImage} = props;
     console.log('coverimage in template:-',CoverImage)
     useEffect(() => {
         window.scrollTo(0, 0);
       }, []);
-
+      console.log('fresherresume in template:-',fresherResumeImage.id)
     return (
         <div className='template-page-container'>
             {/* Hero Section */}
@@ -28,9 +30,11 @@ const TemplatePage = (props) => {
                 </p>
                 
             </section>
+            
             <GoogleAd/>
 
             {/* Template Grid */}
+            <FresherResume fresherResumeImage={fresherResumeImage}/>
             <NormalResume images = {images}/>
             <GoogleAd/>
             <TechnicalResumeImages techImages = {techImages}/>

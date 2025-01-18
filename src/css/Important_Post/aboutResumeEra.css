@@ -1,7 +1,7 @@
 /* Overall Container */
 .aboutResumeEra {
     padding: 40px;
-    font-family: Arial, sans-serif;
+    font-family: 'medium-content-sans-serif-font', sans-serif;
     color: #333;
     box-shadow: 0px 0px 30px -7px purple,
     0px 0px 20px -10px palegreen;
@@ -13,6 +13,12 @@
     margin-right: auto;
     color: black;
 }
+.aboutResumeEra strong{
+    font-weight: 900;
+    font-size: large;
+    font-family: 'Times New Roman', Times, serif;
+    color: black;
+}
 .aboutResumeEra .h1{
     border: 1px solid black;
     border-radius: 15px;
@@ -20,6 +26,8 @@
     padding: 50px;
     background-color: forestgreen;
     font-weight: 900;
+    font-family: 'Times New Roman', Times, serif;
+    
 }
 .aboutResumeEra h2::before {
     margin-bottom: -15px;
@@ -49,9 +57,11 @@
     margin-top: px;
     font-weight: 900;
     color: black;
+    font-family: 'Times New Roman', Times, serif;
   }
 .aboutResumeEra p,.aboutResumeEra h3{
     color: black;
+    font-family: 'Times New Roman', Times, serif;
 }
 .aboutResumeEra bold{
     font-weight: 700;
@@ -69,6 +79,11 @@
     color: #4a90e2;
     font-weight: 900;
 }
+.aboutResumeEra li{
+    font-family: 'Times New Roman', Times, serif;
+    color: black;
+    font-weight: 700;
+}
 
 h3 {
     font-size: 1.8em;
@@ -82,6 +97,10 @@ h3 {
 p {
     line-height: 1.6;
     margin-bottom: 15px;
+    font-family: 'Inter', sans-serif;  /* Replace with your desired font */
+    font-size: 24px;                   /* Set font size */
+    font-weight: bold;                 /* Optional: Set font weight */
+    color: #333;
 }
 
 /* Lists */
@@ -127,7 +146,11 @@ img {
     margin-bottom: 15px;
     margin-top: 15px;
 }
-
+.aboutResumeEra pre{
+    border: 2px dashed green;
+    padding: 5px;
+    
+}
 
 
 /* Responsive Styles for small screens (mobile) */

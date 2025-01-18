@@ -16,7 +16,7 @@ const CareerChangeResumeFormatting = () => {
   return (
     <div>
       <Helmet>
-        <title>Career Change ke Liye Resume Formatting Kaise Karein</title>
+        <title>Career Change ke Liye Resume Formatting Kaise Karein | 2025</title>
         <meta
           name="description"
           content="Step-by-step guide to formatting your resume for a career change. Learn the best practices, tips, and tricks to make your resume impactful for new opportunities."

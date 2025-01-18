@@ -308,6 +308,53 @@ import ProfessionalResumeFormat from "./component/ImportantPost/ProfessionalResu
 import CraftthePerfectResume from "./component/ImportantPost/CraftthePerfectResume.jsx";
 import YourStepbyStepGuide from "./component/ImportantPost/YourStepbyStepGuide.jsx";
 import CreateResumeThatGetsResults from "./component/ImportantPost/CreateResumeThatGetsResults.jsx";
+import OptimizeYourResumewiththeBestResumeFormatPDFTemplates from "./component/ImportantPost/OptimizeYourResumewiththeBestResumeFormatPDFTemplates.jsx";
+import GettheRightResumeFormatPDF from "./component/ImportantPost/GettheRightResumeFormatPDF .jsx";
+import TheBestResumeFormat from "./component/ImportantPost/TheBestResumeFormat.jsx";
+import DownloadtheTopResumeFormatPDF from "./component/ImportantPost/DownloadtheTopResumeFormatPDF.jsx";
+import FreeResumeFormatPDFforFreshers from "./component/ImportantPost/FreeResumeFormatPDFforFreshers.jsx";
+import TheUltimateResumeFormatPDF from "./component/ImportantPost/TheUltimateResumeFormatPDF.jsx";
+import HowPicktheRightResumeFormatPDF from "./component/ImportantPost/HowPicktheRightResumeFormatPDF.jsx";
+import GetHiredwiththeBestResumeFormat from "./component/ImportantPost/GetHiredwiththeBestResumeFormat.jsx";
+import TopResumeFormatPDFDownloads from "./component/ImportantPost/TopResumeFormatPDFDownloads.jsx";
+import BestResumeFormatPDFforCreatingProfessionalCV from "./component/ImportantPost/BestResumeFormatPDFforCreatingProfessionalCV.jsx";
+import ResumeFormatPDFforFreshers from "./component/ImportantPost/ResumeFormatPDFforFreshers.jsx";
+import SimpleYetProfessionalResumeFormatPDF from "./component/ImportantPost/SimpleYetProfessionalResumeFormatPDF.jsx";
+import UnlockqaqYourCareerPotential from "./component/ImportantPost/UnlockqaqYourCareerPotential.jsx";
+import FreeDownloadableResumeFormatPDFs from "./component/ImportantPost/FreeDownloadableResumeFormatPDFs.jsx";
+import HowtoBuildanImpactfulResume from "./component/ImportantPost/HowtoBuildanImpactfulResume.jsx";
+import ResumeFormatPDFFreeTemplates from "./component/ImportantPost/ResumeFormatPDFFreeTemplates.jsx";
+import FreeTemplatesThatMakeaDifference from "./component/ImportantPost/GetNoticedwiththeBestResume.jsx";
+import GetNoticedwiththeBestResume from "./component/ImportantPost/GetNoticedwiththeBestResume.jsx";
+import GetNoticewithProfetionalResumeFormatPDF from "./component/ImportantPost/GetNoticewithProfetionalResumeFormatPDF.jsx";
+import SimpleResumeFormatPDFJobSeekers from "./component/ImportantPost/SimpleResumeFormatPDFJobSeekers.jsx";
+import TheCompleteGuidetoChoosing from "./component/ImportantPost/TheCompleteGuidetoChoosing.jsx";
+import PerfectforCareerSuccess from "./component/ImportantPost/PerfectforCareerSuccess.jsx";
+import GetYouenergyininterview from "./component/ImportantPost/GetYouenergyininterview.jsx";
+import ResumeMistakesYouNeed from "./component/ImportantPost/ResumeMistakesYouNeed.jsx";
+import JobApplicationsResumeFormat from "./component/ImportantPost/JobApplicationsResumeFormat.jsx";
+import WinningJobApplication from "./component/ImportantPost/WinningJobApplication.jsx";
+import PerfectResumeBestResume from "./component/ImportantPost/PerfectResumeBestResume.jsx";
+import ResumeImmediateJobOffers from "./component/ImportantPost/ResumeImmediateJobOffers.jsx";
+import ResumeFormatPDFSuccessfull from "./component/ImportantPost/ResumeFormatPDFSuccessfull.jsx";
+import TopResumeFormatPDFforCareer from "./component/ImportantPost/TopResumeFormatPDFforCareer.jsx";
+import DownloadYourResumeFormat from "./component/ImportantPost/DownloadYourResumeFormat.jsx";
+import BuildYourBestCVNow from "./component/ImportantPost/BuildYourBestCVNow.jsx";
+import DownloadNowFresherExpertProfessional from "./component/ImportantPost/DownloadNowFresherExpertProfessional.jsx";
+import HowtoOptimizeYourKiller from "./component/ImportantPost/HowtoOptimizeYourKiller.jsx";
+import TechImageShow from "./component/TechResume/TechImageShow.jsx";
+import LinkedInRecruiterResponseGuide from "./component/ImportantPost/LinkedInRecruiterResponseGuide.jsx";
+import SimpleResumeFormatWord from "./component/ImportantPost/SimpleResumeFormatWord.jsx";
+import SimpleResumeformatpdf from "./component/ImportantPost/SimpleResumeformatpdf.jsx";
+import image_301 from './image/Fresher resume image folder/accountant-resume-example.webp'
+import image_302 from './image/Fresher resume image folder/babysitter-resume-example.webp'
+import image_303 from './image/Fresher resume image folder/cashier-resume-template-no-experiece.webp'
+import image_304 from './image/Fresher resume image folder/flight-attendant-resume-template-no-experience.webp'
+import image_305 from './image/Fresher resume image folder/line-cook-resume-template-no-experience.webp'
+import image_306 from './image/Fresher resume image folder/security-guard-resume-template-no-experience.webp'
+import image_307 from './image/Fresher resume image folder/social-media-manager-resume-example.webp'
+import image_308 from './image/Fresher resume image folder/web-developer-resume-example.webp'
+import FresherResume from "./component/FresherResume.jsx";
 
 var images = [
   { id: 1, src: resum1, alt: "Professional Resume Template 1" },
@@ -378,6 +425,16 @@ const CoverImage = [
   { id: 202, src: cover_letter_2, alt: "INTERNSHIP" },
   { id: 203, src: cover_letter_3, alt: "TEACHER" },
 ];
+const fresherResumeImage = [
+  {id:301, src:image_301,alt:'accountant resume example'},
+  {id:302, src:image_302, alt:'babysitter resume example'},
+  {id:303, src:image_303, alt:'cashier resume template not experience'},
+  {id:304,src:image_304, alt:'flight attendant resume template no exeperience'},
+  {id:305, src:image_305, alt:'line cook resume template no experience'},
+  {id:306, src:image_306, alt:'security guard resume template no experience'},
+  {id:307, src:image_307, alt:'social media manager resume example'},
+  {id:308, src:image_308, alt:'web developer resume example'}
+]
 console.log("images:=", images);
 console.log(images[0].id);
 const path = "mainpage";
@@ -436,6 +493,7 @@ function App() {
               images={images}
               techImages={techImages}
               CoverImage={CoverImage}
+              fresherResumeImage={fresherResumeImage}
             />
           }
         />
@@ -461,6 +519,9 @@ function App() {
             }
           />
         ))}
+        
+        <Route path="#" element={<TechImageShow  techImages={techImages}/>}/>
+
         {CoverImage.map((image) => (
           <Route
             key={image.id}
@@ -1138,11 +1199,134 @@ function App() {
           path="/create-a-resume-that-gets-results-best-resume-format-pdfs"
           element={<CreateResumeThatGetsResults/>}
         />
+        <Route
+          path="/top-resume-format-pdf-for-job-seekers-free-to-download"
+          element={<TopResumeFormatPDFforJobSeekers/>}
+        />
+        <Route
+          path="/optimize-your-resume-with-the-best-resume-format-pdf-templates"
+          element={<OptimizeYourResumewiththeBestResumeFormatPDFTemplates/>}
+        />
+         <Route
+          path="/get-the-right-resume-format-pdf-for-your-job-search"
+          element={<GettheRightResumeFormatPDF/>}
+        />
+         <Route
+          path="/the-best-resume-format-pdf-for-career-success"
+          element={<TheBestResumeFormat/>}
+        />
+<Route
+          path="/download-the-top-resume-format-pdf-for-your-job-application"
+          element={<DownloadtheTopResumeFormatPDF/>}
+        />
+        <Route
+          path="/free-resume-format-pdf-for-freshers-ready-to-download"
+          element={<FreeResumeFormatPDFforFreshers/>}
+        />
+        <Route
+          path="/ultimate-resume-format-pdf-for-career-advancements"
+          element={<TheUltimateResumeFormatPDF/>}
+        />
+<Route
+          path="/how-to-pick-the-right-resume-format-pdf-for-your-skills"
+          element={<HowPicktheRightResumeFormatPDF/>}
+        />
+        <Route
+          path="/get-hired-with-the-best-resume-format-pdf-templates-available"
+          element={<GetHiredwiththeBestResumeFormat/>}
+        />
+        <Route
+          path="/free-resume-format-pdf-templates-to-help-you-land-your-dream-job"
+          element={<FreeResumeFormatPDFTemplates/>}
+        />
+        <Route
+          path="/top-resume-format-pdf-downloads-for-a-perfect-cv"
+          element={<TopResumeFormatPDFDownloads/>}
+        />
+<Route path="/best-resume-format-pdfs-for-creating-a-professional-cv"
+          element={<BestResumeFormatPDFforCreatingProfessionalCV/>}
+        />
+        <Route path="/resume-format-pdf-for-freshers-easy-to-download-and-customize"
+          element={<ResumeFormatPDFforFreshers/>}
+        />
+<Route path="/simple-yet-professional-resume-format-pdf-get-your-job-now"
+          element={<SimpleYetProfessionalResumeFormatPDF/>}
+        />
+        <Route path="/unlock-your-career-potential-with-the-right-resume-format-pdf"
+          element={<UnlockqaqYourCareerPotential/>}
+        />
+        <Route path="/free-downloadable-resume-format-pdfs-for-all-professions"
+          element={<FreeDownloadableResumeFormatPDFs/>}
+        />
+        <Route path="/free-downloadable-resume-format-pdfs-for-all-professions"
+          element={<HowtoBuildanImpactfulResume/>}
+        />
+        <Route path="/resume-format-pdf-free-templates-that-make-a-difference"
+          element={<ResumeFormatPDFFreeTemplates/>}
+        />
+        {/*  */}
+        <Route path="/get-noticed-with-the-best-resume-format-pdf-free-download-2025"
+          element={<GetNoticedwiththeBestResume/>}
+        />
+        <Route path="/get-noticed-with-a-professional-resume-format-pdf-free-download-now"
+          element={<GetNoticewithProfetionalResumeFormatPDF/>}
+        />
+        <Route path="/simple-resume-format-pdf-job-seekers-2025-download-now"
+          element={<SimpleResumeFormatPDFJobSeekers/>}
+        />
+        <Route path="/the-complete-guide-to-choosing-the-right-resume-format-pdf"
+          element={<TheCompleteGuidetoChoosing/>}
+        />
+        <Route path="/free-resume-format-pdf-2025-perfect-for-career-success-download-now"
+          element={<PerfectforCareerSuccess/>}
+        />
+<Route path="/resume-format-pdf-that-will-get-you-energy-in-interview"
+          element={<GetYouenergyininterview/>}
+        />
+        <Route path="/resume-mistakes-you-need-to-avoid-in-2025"
+          element={<ResumeMistakesYouNeed/>}
+        />
+        <Route path="/job-applications-resume-format-pdf-download-now-2025"
+          element={<JobApplicationsResumeFormat/>}
+        />
+        <Route path="/how-to-use-resume-format-pdfs-2025-winning-job-application"
+          element={<WinningJobApplication/>}
+        />
+        <Route path="/perfect-your-resume-with-the-best-resume-format-pdfs"
+          element={<PerfectResumeBestResume/>}
+        />
+        <Route path="/best-resume-format-pdf-for-immediate-job-offers-2025-download-free-now"
+          element={<ResumeImmediateJobOffers/>}
+        />
+        <Route path="/free-top-resume-format-pdf-successful-career-2025-download-now"
+          element={<ResumeFormatPDFSuccessfull/>}
+        />
+        <Route path="/top-resume-format-pdf-for-careersuccess"
+          element={<TopResumeFormatPDFforCareer/>}
+        />
+        <Route path="/download-resume-format-pdf-today"
+          element={<DownloadYourResumeFormat/>}
+        />
+        <Route path="/free-resume-format-pdfs"
+          element={<BuildYourBestCVNow/>}
+        />
+        <Route path="/how-to-optimize-killer-resume-format-pdf-2025"
+          element={<HowtoOptimizeYourKiller/>}
+        />
+        <Route path="/how-to-respond-to-a-linkedin-recruiter"
+          element={<LinkedInRecruiterResponseGuide/>}
+        />
+        <Route path="/simple-resume-format-word"
+          element={<SimpleResumeFormatWord/>}
+        />
+        <Route path="/simple-resume-format-pdf"
+          element={<SimpleResumeformatpdf/>}
+        />
 
 
 
 
-        {/* job and carier blog component */}
+    {/* job and carier blog component */}
 
         <Route path="/Blog_or_Career_Tips_Page" element={<BlogCareer />} />
         <Route path="/how-to-land-your-dream-job" element={<DreamJob2024 />} />

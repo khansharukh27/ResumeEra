@@ -5,6 +5,8 @@ import ShareButtons from '../shareButton/ShareButtons';
 import CallToAction from '../CallToAction';
 import RandomeArticleToBlogCareer from '../RandomeArticleToBlogCareer';
 import AuthorCard from '../AuthorCard';
+import DateAndAuthor from '../DateAndAuthor';
+import { Link } from 'react-router-dom';
 
 export default function ATS_Friendly_Resume_Format_for_Beginners() {
      const ArticleUrl = "https://resumeera.xyz/ats-friendly-resume-format-for-beginners";
@@ -12,10 +14,11 @@ export default function ATS_Friendly_Resume_Format_for_Beginners() {
       useEffect(() => {
         window.scrollTo(0, 0);
       }, []);
+      const publishDate = '2025-10-01'
     return (
         <div>
             <Helmet>
-                <title>ATS-Friendly Resume Format for Beginners</title>
+                <title>ATS-Friendly Resume Format for Beginners | ResumeEra |2025</title>
                 <meta name="description" content="Learn how to create an ATS-friendly resume format for beginners to ensure your resume gets noticed by recruiters." />
                 <meta name="keywords" content="ATS, resume, beginners, job application, resume tips" />
                 <link rel="canonical" href="https://resumeera.xyz/ats-friendly-resume-format-for-beginners" />
@@ -35,7 +38,7 @@ export default function ATS_Friendly_Resume_Format_for_Beginners() {
                                 "name": "Your Website",
                                 "logo": {
                                     "@type": "ImageObject",
-                                    "url": "https://yourwebsite.com/logo.png"
+                                    "url": ${ATS_Friendly_Resume_Format_for_Beginner}
                                 }
                             },
                             "datePublished": "2023-10-01",
@@ -50,6 +53,7 @@ export default function ATS_Friendly_Resume_Format_for_Beginners() {
             <div className='aboutResumeEra'>
             <section>
                 <h1>How to Make an ATS-Friendly Resume Format for Beginners 🖋️</h1>
+                <DateAndAuthor publishDate={publishDate}/>
                 <div className="date-author-container" style={{textAlign:'center',alignItems:'center'}}>
       <img
         src="https://resumeera.xyz/static/media/best_logo.895bb22edf6c08600c86.webp"
@@ -57,11 +61,7 @@ export default function ATS_Friendly_Resume_Format_for_Beginners() {
         className="author-logo"
         style={{width:'50px',height:'50px'}}
       />
-      <small className="author-details">
-        ✍️ By the <span className="author-highlight">ResumeEra Team</span> | Published:{" "}
-        <span className="author-highlight">December 28, 2024</span> | ⏱️{" "}
-        <span className="author-highlight">8 min read</span>
-      </small>
+      
     </div>
                 <figure>
                     <img src={ATS_Friendly_Resume_Format_for_Beginner} alt="ATS-Friendly Resume Format for Beginners" loading='lazy' />
@@ -71,7 +71,11 @@ export default function ATS_Friendly_Resume_Format_for_Beginners() {
                     Are you just starting out and looking for your first job or internship? Your resume needs to do more than look good—it has to pass through something called an <strong>Applicant Tracking System (ATS)</strong>!
                 </p>
                 <p>
-                    Many companies use ATS software to filter resumes. If your resume isn’t ATS-friendly, it might never even get seen by a person. But don’t worry—this guide will show you exactly how to make a resume that stands out <em>and</em> gets through ATS software, ensuring you have the best chance at landing an interview.
+                    Many companies use ATS software to filter resumes. If your resume isn’t <Link to='/9-things-you-need-to-know-about-ATS-in-2024'>Ats-friendly</Link>, 
+                    it might never even get seen by a person. 
+                    But don’t worry—this guide will show you exactly how to make a resume that 
+                    stands out <em>and</em> gets through ATS software, ensuring you have the best 
+                    chance at landing an interview.
                 </p>
                 <hr />
                 <h2>What is an ATS? And Why Does It Matter? 🤔</h2>
@@ -86,8 +90,10 @@ export default function ATS_Friendly_Resume_Format_for_Beginners() {
                 <h3>1. Pick a Simple Format</h3>
                 <ul>
                     <li>Use a clean, easy-to-read style with clear section headings.</li>
-                    <li>Organize your information in reverse-chronological order, starting with your most recent education or experience.</li>
-                    <li>Avoid overly creative designs. While they may look appealing, ATS systems often can’t process them correctly.</li>
+                    <li>Organize your information in reverse-chronological order, starting 
+                        with your most recent education or experience.</li>
+                    <li><Link to="/11-ats-formatting-mistakes-that-can-cost-you-a-job">Avoid</Link> overly creative designs. While they may look appealing, 
+                        ATS systems often can’t process them correctly.</li>
                 </ul>
                 <h3>2. Use Common Fonts ✍️</h3>
                 <p>Stick to fonts that are standard and easy to read, such as:</p>
@@ -96,12 +102,12 @@ export default function ATS_Friendly_Resume_Format_for_Beginners() {
                     <li>Times New Roman</li>
                     <li>Calibri</li>
                 </ul>
-                <p><strong>Avoid:</strong> Decorative fonts, pictures, or unconventional layouts. These might confuse the ATS and lead to your resume being rejected.</p>
+                <p><strong><Link to='/11-ats-formatting-mistakes-that-can-cost-you-a-job'>Avoid</Link></strong> Decorative fonts, pictures, or unconventional layouts. These might confuse the ATS and lead to your resume being rejected.</p>
                 <h3>3. Add the Right Keywords 🔑</h3>
                 <ul>
                     <li>Study the job posting carefully to find important keywords, such as "teamwork," "coding," "leadership," or "problem-solving."</li>
                     <li>Include these keywords naturally in your resume, especially in the skills and experience sections.</li>
-                    <li>Remember, ATS systems use these keywords to determine if you match the job requirements.</li>
+                    <li>Remember, <Link to='/9-things-you-need-to-know-about-ATS-in-2024'>Ats-system</Link> use these keywords to determine if you match the job requirements.</li>
                 </ul>
                 <h3>4. Save in the Right Format 🗂</h3>
                 <ul>
@@ -169,7 +175,7 @@ export default function ATS_Friendly_Resume_Format_for_Beginners() {
                 </ul>
                 <hr />
                 <h2>Why This Matters for Beginners 🎯</h2>
-                <p>An ATS-friendly resume is important because it:</p>
+                <p>An <Link to='/'>ATS-friendly</Link> resume is important because it:</p>
                 <ul>
                     <li><strong>Increases Visibility:</strong> Ensures your application reaches human recruiters.</li>
                     <li><strong>Demonstrates Relevance:</strong> Highlights the skills and qualifications that match the job.</li>

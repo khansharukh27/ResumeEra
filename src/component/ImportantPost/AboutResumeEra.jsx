@@ -19,7 +19,7 @@ const AboutResumeEra = () => {
   return (
     <div>
       <Helmet>
-        <title>ResumeEra: Craft Your Perfect and free Resume Today</title>
+        <title>Craft Your Perfect and free Resume Today| ResumeEra | 2025</title>
         <link
           rel="canonical"
           href="https://resumeera.xyz/improving-your-resume-with-action-verbs"

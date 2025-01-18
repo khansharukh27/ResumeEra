@@ -20,17 +20,17 @@ const Home = ({ images }) => {
       <Helmet>
         <link rel="canonical" href="https://resumeera.xyz" />
         <title>
-        Resume Formatting for 2025 | Free Resume Formatting | ResumeEra
+        Create Your Professional Resume Online | Free Resume Format
         </title>
 
         <meta
           name="description"
-          content="ResumeEra is a user-friendly resume formatting platform that helps you create professional free resumes effortlessly. Choose from various templates to showcase your work experience, skills, and education with polished resume formatting. Make your resume stand out and leave a lasting impression with ResumeEra!"
+          content="Create your professional resume online for free with our easy-to-use platform. Choose from a variety of resume formats and templates to showcase your skills and experience."
         />
 
         <meta
           name="keywords"
-          content="ResumeEra, Resume Era, Free Resume,resume formatting,resume formate, how to create free resume online, free resume creator, free resume creator online, Create Resume Online, Free Resume Builder, free resume maker, Professional Resume, Online Resume Builder, Job Application, CV Maker, Resume Templates, Career, Employment, Resume, Curriculum Vitae, Job Seeker, Resume Writing, Cover Letter, Job Interview, Career Development, Job Search, Online CV, Job Market, Job Board, LinkedIn Resume, Job Portal"
+          content="ResumeEra, Resume format PDF, free resume PDF, resume builder, create resume PDF, download resume PDF, professional resume format, resume template PDF, CV PDF, resume maker, online resume builder, free resume creator, free resume maker, resume formatting, job application, CV builder, curriculum vitae, job seeker resume"
         />
 
         <meta name="author" content="ResumeEra Team" />
@@ -39,11 +39,11 @@ const Home = ({ images }) => {
 
         <meta
           property="og:title"
-          content="Resume Formatting for 2024 | Free Resume Formatting | ResumeEra"
+          content="Free Resume Format PDF | Resume Formatting & Builder | ResumeEra"
         />
         <meta
           property="og:description"
-          content="Create and customize professional resumes online with ResumeEra. Choose from free templates, showcase your skills, and build a standout resume effortlessly."
+          content="Create a professional resume in PDF format with ResumeEra. Choose from free templates, customize your resume, and download it as a polished PDF."
         />
         <meta property="og:url" content="https://resumeera.xyz" />
         <meta property="og:type" content="website" />
@@ -53,17 +53,17 @@ const Home = ({ images }) => {
         />
         <meta
           property="og:image:alt"
-          content="Preview of ResumeEra's easy-to-use resume builder interface"
+          content="Preview of ResumeEra's resume builder interface"
         />
 
         <meta name="twitter:card" content="summary_large_image" />
         <meta
           name="twitter:title"
-          content="Resume Formatting for 2024 | Free Resume Formatting | ResumeEra"
+          content="Free Resume Format PDF | Resume Formatting & Builder | ResumeEra"
         />
         <meta
           name="twitter:description"
-          content="Easily create and customize your free resume with ResumeEra. Access professional templates and make your resume stand out."
+          content="Create and download your resume in PDF format using ResumeEra. Access free templates, customize your resume, and export it as a polished PDF."
         />
         <meta
           name="twitter:image"
@@ -74,11 +74,6 @@ const Home = ({ images }) => {
           content="Preview of ResumeEra's resume builder interface"
         />
 
-        <link
-          rel="icon"
-          href="https://resumeera.xyz/favicon.ico"
-          type="image/x-icon"
-        />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
       </Helmet>
 
@@ -96,18 +91,19 @@ const Home = ({ images }) => {
           >
             {isAuthenticated ? (
               <Link className="home-link" to="/template">
-                WELCOME TO RESUMEERA! PLEASE CLICK PERSONALLIZED TEMPLATE FOR
-                EVERY INDUSTRY TO MAKE A FREE RESUME.
+                WELCOME TO RESUMEERA! PLEASE CLICK PERSONALIZED TEMPLATE FOR EVERY
+                INDUSTRY TO CREATE AND DOWNLOAD YOUR FREE RESUME FORMAT PDF.
               </Link>
             ) : (
               <span
                 style={{ cursor: "pointer", textDecoration: "underline" }}
                 onClick={() => loginWithRedirect()}
               >
-                PLEASE LOGIN TO ACCESS PERSONALLIZED TEMPLATES FOR EVERY
-                INDUSTRY TO MAKE A FREE RESUME.
+                PLEASE LOGIN TO ACCESS PERSONALIZED TEMPLATES FOR EVERY INDUSTRY AND
+                DOWNLOAD YOUR FREE RESUME FORMAT PDF.
               </span>
             )}
+
           </h1>
         </div>
       </div>
@@ -117,60 +113,65 @@ const Home = ({ images }) => {
       </div>
       <div className="home-description">
         <p>
-          ResumeEra is a user-friendly platform that allows you to create and
-          customize your free resumes. Choose from a variety of templates to
-          make your free resume stand out. Whether you're highlighting your work
-          experience, education, skills, or personal information, ResumeEra
-          makes it easy to create a professional-looking free resume.
+          ResumeEra is a user-friendly platform that allows you to create, customize,
+          and download your free resume format PDF. Choose from a variety of templates to
+          make your free resume stand out. Whether you're highlighting your work experience,
+          education, skills, or personal information, ResumeEra makes it easy to create a
+          professional-looking resume and download it as a polished resume format PDF.
         </p>
+
       </div>
       <hr />
       <div className="home-how-to">
-        <h1>HOW TO CREATE FREE RESUME</h1>
+        <h2>HOW TO CREATE A FREE RESUME FORMAT PDF</h2>
         <div className="home-steps">
           <div className="home-step">
             <img src={step1} alt="cv_template_1" />
             <h4>Pick a CV template.</h4>
-            <p>Choose a sleek design and layout to get started.</p>
+            <p>Choose a sleek design and layout to get started. Select the template that suits your style and industry needs.</p>
           </div>
           <div className="home-step">
             <img src={step2} alt="fill_in_the_blank" />
             <h4>Fill in the blanks.</h4>
-            <p>Type in a few words. Let the ResumeEra wizard fill the rest.</p>
+            <p>Type in a few words. Let the ResumeEra wizard fill the rest, preparing your resume for
+              download in PDF format.</p>
           </div>
           <div className="home-step">
             <img src={step3} alt="fill_in_the_blank" />
             <h4>Customize your document.</h4>
-            <p>Make it truly yours. Uniqueness in a few clicks.</p>
+            <p>Make it truly yours. Uniqueness in a few clicks. Then, easily download your resume as a
+              professional PDF format.</p>
           </div>
         </div>
       </div>
+
       <hr className="home-divider" />
       <div className="home-change-cv">
         <div className="home-change-cv-image">
           <img src={changeCV_image} alt="changeCV_image" />
         </div>
         <div className="home-change-cv-info">
-          <h4>Change Your CV. Change your life.</h4>
+          <h4>Change Your CV. Change Your Life.</h4>
           <ul>
             <li>
               ResumeEra builder. Not just an app. More like a personal career
               expert. <br />
-              Your CV is underwhelming and you deserve better. Get that fresh
-              look with our CV templates.
+              Your CV is underwhelming, and you deserve better. Get that fresh
+              look with our resume templates and download your CV in PDF format.
             </li>
             <li>
               Click on ready-to-use expert suggestions to build your CV in
-              minutes.
+              minutes, then download it as a professional PDF format.
             </li>
-            <li>Blow away recruiters with sleek designs.</li>
+            <li>Blow away recruiters with sleek, downloadable PDF designs.</li>
             <li>
-              Let employers see your true self—the best candidate for the job.
+              Let employers see your true self—the best candidate for the job—with
+              a polished resume in PDF format.
             </li>
           </ul>
           {isAuthenticated ? (
             <p style={{ textAlign: "center" }}>
-              <a href="/template">Create Free CV</a>
+              <a href="/template">Create Free Resume Format PDF</a>
             </p>
           ) : (
             <p style={{ textAlign: "center" }}>
@@ -184,17 +185,18 @@ const Home = ({ images }) => {
                   color: "white",
                 }}
               >
-                Create Free CV
+                Create Free Resume Format PDF
               </span>
             </p>
           )}
         </div>
+
       </div>
       <hr className="home-divider" />
       <div className="home-resume-builder">
-        <h4>Easy online free resume builder</h4>
+        <h4>Easy online free resume format pdf downloader</h4>
         <p style={{ textAlign: "center" }}>
-          Create an awesome free resume in minutes, without leaving your web
+          Create an awesome free resume in pdf format in a minutes, without leaving your web
           browser.
         </p>
         <div className="home-resume-features ">
@@ -205,9 +207,11 @@ const Home = ({ images }) => {
             <p>
               At ResumeEra, your privacy is our top priority. We collect only
               the information needed to provide you with a personalized
-              resume-building experience. to learn more ,You can click this
-              link... <a href="/template">Privacy policy</a>
+              resume-building experience. Once you're ready, create and download your resume format PDF.
+              To learn more, you can click this
+              link... <a href="/template">Privacy Policy</a>
             </p>
+
           </div>
           <div className="home-feature" style={{ color: "black" }}>
             <h5 style={{ color: "black", fontWeight: 900 }}>
@@ -249,19 +253,22 @@ const Home = ({ images }) => {
         <p>
           Getting that dream job can seem like an impossible task. We're here to
           change that. Give yourself a real advantage with the best online free
-          resume maker: created by experts, improved by data, trusted by
-          millions of professionals.
+          resume maker: created by experts, improved by data, and trusted by
+          millions of professionals. Easily create and download your professional
+          resume format PDF with ResumeEra to stand out from the competition.
         </p>
+
         <div className="home-story-feature-main d-sm-flex">
           <div className="home-story-feature">
             <h3>
-              <i className="bi bi-trophy-fill"></i>Make a free resume that wins
+              <i className="bi bi-trophy-fill"></i>Make a free resume  that wins
               interviews
             </h3>
             <p>
               Use our free resume maker with its advanced creation tools to tell
               a professional story that engages recruiters, hiring managers, and
               even CEOs.
+              <a className="button" href="/Interview_Question_Post" style={{width:'50%', padding:'15px',fontSize:'1.5rem',margin:'auto',fontWeight:'700'}}>Interview Guide</a>
             </p>
           </div>
           <div className="home-story-feature">
@@ -273,6 +280,8 @@ const Home = ({ images }) => {
               Resume writing has never been this effortless. Pre-generated text,
               visual designs, and more - all already integrated into the free
               resume maker. Just fill in your details.
+              <a className="button" href="/template" style={{width:'50%', padding:'15px',fontSize:'1.5rem',margin:'auto',fontWeight:'700'}}>Make Resume</a>
+
             </p>
           </div>
           <div className="home-story-feature">
@@ -284,6 +293,8 @@ const Home = ({ images }) => {
               Our free resume builder and its pre-generated content are tested
               by recruiters and IT experts. We help your free resume become
               truly competitive in the hiring process.
+              <a className="button" href="/template" style={{marginBottom:'2px', width:'50%', padding:'15px',fontSize:'1.5rem',margin:'auto',fontWeight:'700'}}>Make Resume</a>
+
             </p>
           </div>
         </div>
@@ -297,9 +308,12 @@ const Home = ({ images }) => {
           Tired of struggling with free cover letters? Our free cover letter
           maker transforms hours of work into minutes. Craft compelling pitches
           effortlessly with ready-to-use templates and persuasive phrases. Focus
-          on showcasing your skills without the stress of formatting. Streamline
-          your job application process today and stand out effortlessly.
+          on showcasing your skills without the stress of formatting. And when
+          you're done, easily download your resume and cover letter as professional
+          resume format PDFs. Streamline your job application process today and
+          stand out effortlessly.
         </p>
+
         <div className="home-cover-letter-carousel">
           <CoverLetterCrousel images={images} />
         </div>
