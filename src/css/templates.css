@@ -11,6 +11,25 @@
 .template-grid-divider{
 width: inherit;
 }
+.hero-banner{
+    margin-top: 0px;
+    background-color: darkolivegreen;
+    padding: 25px;
+    padding-top: 25px;
+    border-top-right-radius: 25px;
+    border-bottom-left-radius: 25px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.hero-title{
+    color: white;
+}
+.hero-description{
+    text-align: center;
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 1.5rem;
+}
 /* Large Desktops */
 @media (min-width: 1200px) {
     .template-page-container {

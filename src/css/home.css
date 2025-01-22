@@ -55,7 +55,31 @@
     margin-top: 40px;
 }
 
-.home-link {}
+.home_div {
+    border: 1px solid blue;
+    border-top-left-radius: 55px;
+    border-bottom-right-radius: 55px;
+    border-bottom-left-radius: -25px;
+    padding: 5px;
+    color: white;
+    background-color: rgb(198, 9, 245);
+    margin-bottom: 5px;
+
+}
+.home_div h1{
+    color: white;
+}
+.home_div::before {
+    content: '';
+    position: absolute;
+    border-bottom-left-radius: -20px;  /* Bottom corner */
+    right: -20px;   /* Right corner */
+    width: 40px;
+    height: 40px;
+    background-color: lightblue;
+    border-radius: 50%;
+    transform: scale(1.5); /* Expand the corner outward */
+  }
 
 /* Carousel container */
 .home-carousel {
@@ -314,5 +338,8 @@
     .home-story-feature-main {
         display: flex;
         flex-direction: column;
+    }
+    .home_div h1{
+        font-size: small;
     }
 }

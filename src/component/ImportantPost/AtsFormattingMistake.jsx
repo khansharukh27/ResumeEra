@@ -46,14 +46,87 @@ export default function AtsFormattingMistake() {
 						content="https://www.example.com/image.jpg"
 					/>
 					<meta name="twitter:creator" content="@YourTwitterHandle" />
+					<script type="application/ld+json">
+						{`{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://resumeera.xyz/11-ats-formatting-mistakes-that-can-cost-you-a-job"
+  },
+  "headline": "11 ATS Formatting Mistakes That Can Cost You a Job | 2025",
+  "description": "11ats-formatting mi9stakes that can cost you a job",
+  "image": "https://img.freepik.com/free-vector/curriculum-vitae-design_1212-314.jpg",  
+  "author": {
+    "@type": "Organization",
+    "name": "ResumeEra",
+    "url": "https://resumeera.xyz"
+  },  
+  "publisher": {
+    "@type": "Organization",
+    "name": "https://resumeera.xyz",
+    "logo": {
+      "@type": "ImageObject",
+      "url": "https://resumeera.xyz/static/media/best_logo.895bb22edf6c08600c86.webp"
+    }
+  },
+  "datePublished": "2025-01-01",
+  "dateModified": "2025-01-20"
+}`}
+					</script>
+					<script type="application/ld+json">
+						{`{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [{
+    "@type": "Question",
+    "name": "What is an ATS?",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "An Applicant Tracking System (ATS) is software used by employers to manage and streamline the hiring process. It helps filter and rank resumes based on specific criteria, such as keywords and qualifications."
+    }
+  },{
+    "@type": "Question",
+    "name": "How do I know if my resume is ATS-friendly?",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "You can use ATS-friendly tools or services to test your resume. These tools analyze your resume and provide feedback on its compatibility with ATS. Additionally, following the tips outlined in this article can help ensure your resume is ATS-friendly."
+    }
+  },{
+    "@type": "Question",
+    "name": "Can I use a creative resume template with ATS?",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "While creative resume templates can be visually appealing, they may not be ATS-friendly. It's best to use a simple, text-based template that prioritizes readability and compatibility with ATS."
+    }
+  },{
+    "@type": "Question",
+    "name": "How important are keywords in an ATS resume?",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Keywords are crucial in an ATS resume. The ATS scans resumes for specific keywords that match the job description. Including relevant keywords can significantly improve your chances of passing the ATS screening and getting noticed by employers."
+    }
+  },{
+    "@type": "Question",
+    "name": "Should I include a cover letter with my ATS resume?",
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": "Including a cover letter can be beneficial, as it provides an opportunity to highlight your qualifications and explain why you're a good fit for the job. Ensure your cover letter is also ATS-friendly by using standard formatting and including relevant keywords."
+    }
+  }]
+}`}
+					</script>
 				</Helmet>
-				<h1>11 ATS Formatting Mistakes That Can Cost You a Job</h1>
-				<DateAndAuthor />
+				<section className='header'>
+					<h1>11 ATS Formatting Mistakes That Can Cost You a Job</h1>
+					<DateAndAuthor />
+				</section>
+
 				<figure>
 					<img src={ATS_Formatting_Mistakes} alt="11 ATS Formatting Mistakes" loading='lazy' />
 					<figcaption>Optimize your resume for Applicant Tracking Systems to increase your chances of getting noticed by employers.</figcaption>
 				</figure>
-				<p>Applicant Tracking Systems (ATS) are used by many employers to filter and rank 
+				<p>Applicant Tracking Systems (ATS) are used by many employers to filter and rank
 					resumes. Avoid these common <Link to='/20-Resume-Formatting-Mistakes-You-Should-Avoid'>Ats formatting mistake</Link> to ensure your resume gets through the ATS and into the hands of hiring managers.</p>
 				<div><GoogleAd /></div>
 				<h2>1. Using Unreadable Fonts</h2>
@@ -74,9 +147,9 @@ export default function AtsFormattingMistake() {
 				<div><GoogleAd /></div>
 				<h2>5. Not Using Keywords</h2>
 				<p>Include relevant keywords from the job description to ensure your resume is ranked highly by the ATS.</p>
-				<p>Keywords play a crucial role in ATS optimization. These systems scan resumes for specific terms that match the job 
-					description. Failing to include relevant keywords can result in your resume being ranked lower or 
-					even rejected. Carefully review the job posting and incorporate applicable keywords naturally 
+				<p>Keywords play a crucial role in ATS optimization. These systems scan resumes for specific terms that match the job
+					description. Failing to include relevant keywords can result in your resume being ranked lower or
+					even rejected. Carefully review the job posting and incorporate applicable keywords naturally
 					throughout your resume to improve your chances of passing the ATS screening.</p>
 				<div><GoogleAd /></div>
 				<h2>6. Using Abbreviations</h2>
@@ -109,35 +182,43 @@ export default function AtsFormattingMistake() {
 				<h2>Additional Tips for ATS Optimization</h2>
 				<p>Here are a few more tips to help you optimize your resume for ATS:</p>
 				<ul>
-					<li><strong>Use Standard Section Headings:</strong> Use common section headings like "Work Experience," "Education," and "Skills" to ensure the ATS can easily identify and categorize your information.</li>
-					<li><strong>Include Relevant Certifications:</strong> List any relevant certifications or licenses you hold. These can be important keywords that the ATS looks for.</li>
-					<li><strong>Keep It Concise:</strong> While it's important to include relevant information, keep your resume concise and to the point. Aim for one to two pages in length.</li>
-					<li><strong>Customize for Each Job:</strong> Tailor your resume for each job application by including specific keywords and experiences that match the job description.</li>
-					<li><strong>Proofread:</strong> Ensure your resume is free of typos and grammatical errors. A well-written resume reflects your attention to detail and professionalism.</li>
+					<li className='common-mistakeli'><strong>Use Standard Section Headings:</strong> Use common section headings like "Work Experience," "Education," and "Skills" to ensure the ATS can easily identify and categorize your information.</li>
+					<li className='common-mistakeli'><strong>Include Relevant Certifications:</strong> List any relevant certifications or licenses you hold. These can be important keywords that the ATS looks for.</li>
+					<li className='common-mistakeli'><strong>Keep It Concise:</strong> While it's important to include relevant information, keep your resume concise and to the point. Aim for one to two pages in length.</li>
+					<li className='common-mistakeli'><strong>Customize for Each Job:</strong> Tailor your resume for each job application by including specific keywords and experiences that match the job description.</li>
+					<li className='common-mistakeli'><strong>Proofread:</strong> Ensure your resume is free of typos and grammatical errors. A well-written resume reflects your attention to detail and professionalism.</li>
 				</ul>
 				<div><GoogleAd /></div>
 				<h2>Common Questions About ATS</h2>
-				<h3>What is an ATS?</h3>
-				<p>An Applicant Tracking System (ATS) is software used by employers to manage and streamline the hiring process. It helps filter and rank resumes based on specific criteria, such as keywords and qualifications.</p>
+				<div className='qoute'>
+					<h3>What is an ATS?</h3>
+					<p>An Applicant Tracking System (ATS) is software used by employers to manage and streamline the hiring process. It helps filter and rank resumes based on specific criteria, such as keywords and qualifications.</p>
+				</div>
+				<div className='qoute'>
+					<h3>How do I know if my resume is ATS-friendly?</h3>
+					<p>You can use ATS-friendly tools or services to test your resume. These tools analyze your resume and provide feedback on its compatibility with ATS. Additionally, following the tips outlined in this article can help ensure your resume is ATS-friendly.</p>
+				</div>
 
-				<h3>How do I know if my resume is ATS-friendly?</h3>
-				<p>You can use ATS-friendly tools or services to test your resume. These tools analyze your resume and provide feedback on its compatibility with ATS. Additionally, following the tips outlined in this article can help ensure your resume is ATS-friendly.</p>
+				<div className='qoute'>
+					<h3>Can I use a creative resume template with ATS?</h3>
+					<p>While creative resume templates can be visually appealing, they may not be ATS-friendly. It's best to use a simple, text-based template that prioritizes readability and compatibility with ATS.</p>
 
-				<h3>Can I use a creative resume template with ATS?</h3>
-				<p>While creative resume templates can be visually appealing, they may not be ATS-friendly. It's best to use a simple, text-based template that prioritizes readability and compatibility with ATS.</p>
+				</div>
+				<div className='qoute'>
+					<h3>How important are keywords in an ATS resume?</h3>
+					<p>Keywords are crucial in an ATS resume. The ATS scans resumes for specific keywords that match the job description. Including relevant keywords can significantly improve your chances of passing the ATS screening and getting noticed by employers.</p>
 
-				<h3>How important are keywords in an ATS resume?</h3>
-				<p>Keywords are crucial in an ATS resume. The ATS scans resumes for specific keywords that match the job description. Including relevant keywords can significantly improve your chances of passing the ATS screening and getting noticed by employers.</p>
-
-				<h3>Should I include a cover letter with my ATS resume?</h3>
-				<p>Including a cover letter can be beneficial, as it provides an opportunity to highlight your qualifications and explain why you're a good fit for the job. Ensure your cover letter is also ATS-friendly by using standard formatting and including relevant keywords.</p>
+				</div>
+				<div className='qoute'><h3>Should I include a cover letter with my ATS resume?</h3>
+					<p>Including a cover letter can be beneficial, as it provides an opportunity to highlight your qualifications and explain why you're a good fit for the job. Ensure your cover letter is also ATS-friendly by using standard formatting and including relevant keywords.</p>
+				</div>
 				<div><GoogleAd /></div>
 				<h2>Final Thoughts</h2>
-				<p>Creating an ATS-optimized resume is essential in today's competitive job market. By 
-				<Link to='/20-Resume-Formatting-Mistakes-You-Should-Avoid'>avoiding common formatting mistake</Link> and 
-					following best practices, you can increase your chances of getting your resume noticed by employers. 
-					Remember to keep your resume simple, use standard fonts, and include relevant keywords. Test your 
-					resume with an ATS-friendly tool to ensure it will be read correctly by the system. With these tips, 
+				<p>Creating an ATS-optimized resume is essential in today's competitive job market. By
+					<Link to='/20-Resume-Formatting-Mistakes-You-Should-Avoid'>avoiding common formatting mistake</Link> and
+					following best practices, you can increase your chances of getting your resume noticed by employers.
+					Remember to keep your resume simple, use standard fonts, and include relevant keywords. Test your
+					resume with an ATS-friendly tool to ensure it will be read correctly by the system. With these tips,
 					you'll be well on your way to creating an ATS-optimized resume that stands out to hiring managers.</p>
 			</div>
 			<section>

@@ -14,13 +14,12 @@ const Hobbies = () => {
     const savedHobbies = localStorage.getItem("hobbiesData");
     return savedHobbies ? JSON.parse(savedHobbies) : [{ hobbies: "" }];
   });
-
   const [showLanguage, setShowLanguage] = useState(false);
   const [showHobbies, setShowHobbies] = useState(true);
   const [showSocialMedia, setShowSocialMedia] = useState(false);
   const [showSkills,setShowSkills] = useState(false)
   const dispatch = useDispatch();
-  const result = useSelector((state)=>state.reducer.templatePage[0])
+  const result = useSelector((state)=>state.reducer.templatePage)
   console.log('hobbies mai id ko lana h:-,',result)
 
   useEffect(() => {
@@ -37,7 +36,7 @@ const Hobbies = () => {
     setInput((prev) => [...prev, { hobbies: "" }]);
   };
 const location = useLocation()
-console.log(location)
+console.log('resume in hobbies:-,',result)
 
   const handleClick = (e) => {
     e.preventDefault();
@@ -63,10 +62,16 @@ console.log(location)
       setShowHobbies(false);
       setShowSocialMedia(true);
       dispatch(addHobbies(input));
-    }
+    }else if(location.pathname=== `/freshertemplate/${result}`){
+    setShowLanguage(false);
+    setShowHobbies(false);
+    setShowSocialMedia(true);
+    dispatch(addHobbies(input));
+  }
   };
 
   const handleClickBack = () => {
+    
     setShowLanguage(true);
     setShowHobbies(false);
     setShowSocialMedia(false);

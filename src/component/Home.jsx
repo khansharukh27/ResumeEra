@@ -81,22 +81,22 @@ const Home = ({ images }) => {
         <div className="home-logo">
           <img src={best_logo} alt="ResumeEra logo" />
         </div>
-        <div className="home-welcome" style={{ color: "orange" }}>
+        <div className="home-welcome" style={{ }}>
           <h1
             style={{
-              color: "black",
+              
               textAlign: "justify",
               margin: "0 10px 0 40px",
             }}
           >
             {isAuthenticated ? (
-              <Link className="home-link" to="/template">
+              <Link className="home-link" to="/template" style={{textDecoration:'none'}}>
                 WELCOME TO RESUMEERA! PLEASE CLICK PERSONALIZED TEMPLATE FOR EVERY
                 INDUSTRY TO CREATE AND DOWNLOAD YOUR FREE RESUME FORMAT PDF.
               </Link>
             ) : (
               <span
-                style={{ cursor: "pointer", textDecoration: "underline" }}
+                style={{ cursor: "pointer", textDecoration: "" }}
                 onClick={() => loginWithRedirect()}
               >
                 PLEASE LOGIN TO ACCESS PERSONALIZED TEMPLATES FOR EVERY INDUSTRY AND
@@ -121,7 +121,7 @@ const Home = ({ images }) => {
         </p>
 
       </div>
-      <hr />
+    
       <div className="home-how-to">
         <h2>HOW TO CREATE A FREE RESUME FORMAT PDF</h2>
         <div className="home-steps">
@@ -268,7 +268,9 @@ const Home = ({ images }) => {
               Use our free resume maker with its advanced creation tools to tell
               a professional story that engages recruiters, hiring managers, and
               even CEOs.
-              <a className="button" href="/Interview_Question_Post" style={{width:'50%', padding:'15px',fontSize:'1.5rem',margin:'auto',fontWeight:'700'}}>Interview Guide</a>
+              <a className="button" href="/Interview_Question_Post" 
+              style={{width:'50%', padding:'15px',fontSize:'1rem',
+              margin:'auto',fontWeight:'400'}}>Interview Guide</a>
             </p>
           </div>
           <div className="home-story-feature">
@@ -280,7 +282,8 @@ const Home = ({ images }) => {
               Resume writing has never been this effortless. Pre-generated text,
               visual designs, and more - all already integrated into the free
               resume maker. Just fill in your details.
-              <a className="button" href="/template" style={{width:'50%', padding:'15px',fontSize:'1.5rem',margin:'auto',fontWeight:'700'}}>Make Resume</a>
+              <a className="button" href="/template" style={{width:'50%', padding:'15px',
+                fontSize:'1rem',margin:'auto',fontWeight:'400'}}>Make Resume</a>
 
             </p>
           </div>
@@ -293,7 +296,9 @@ const Home = ({ images }) => {
               Our free resume builder and its pre-generated content are tested
               by recruiters and IT experts. We help your free resume become
               truly competitive in the hiring process.
-              <a className="button" href="/template" style={{marginBottom:'2px', width:'50%', padding:'15px',fontSize:'1.5rem',margin:'auto',fontWeight:'700'}}>Make Resume</a>
+              <a className="button" href="/template" 
+              style={{marginBottom:'2px', width:'50%', padding:'15px',fontSize:'1rem',margin:'auto',
+              fontWeight:'400'}}>Make Resume</a>
 
             </p>
           </div>

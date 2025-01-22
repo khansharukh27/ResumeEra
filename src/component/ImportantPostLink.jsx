@@ -156,7 +156,9 @@ import Howtooptimise from '../image/image_for_link/How to Optimize Your Killer R
 import Howtohandle from '../image/image_for_link/How to handle recruiters.jpg'
 import SimpleResumeFormatWord from '../image/technical_Image/Basic_Ats_Resume_Template.png'
 import pdfImage from '../image/technical_Image/Creative-ATS-Resume-Template.png'
-
+import ResumeFormatPDFFree from'../image/Fresher resume image folder/a-man-that-take-a-resume-in-hand-and-around-him-chair-that-take-.svg'
+import pdfresumeformat from '../image/image_for_link/PDF Resume Format Free Download.jpg'
+ 
 import { Link } from "react-router-dom";
 const ImportantPostLink = () => {
   const [searchTerm, setSearchTerm] = useState("");
@@ -1260,8 +1262,63 @@ const ImportantPostLink = () => {
       src: pdfImage,
       alt: "Simple Resume Format PDF - Download Free Templates",
     },
+    {
+      path: "/resume-format-pdf-free-download",
+      title: "Resume Format PDF Free Download",
+      src: ResumeFormatPDFFree,
+      alt: "Resume Format PDF Free Download",
+    },
+    {
+      path: "/pdf-resume-format-free-download",
+      title: "PDF Resume Format Free Download: A Comprehensive Guide to Crafting Your Perfect Resume",
+      src: pdfresumeformat,
+      alt: "PDF Resume Format Free Download",
+    },
+    {
+      path: "/resume-pdf",
+      title: "Resume PDF: The Ultimate Guide to Creating a Professional Resume in PDF Format",
+      src: 'https://img.freepik.com/free-vector/online-resume-concept-illustration_114360-5166.jpg',
+      alt: "resume pdf",
+    },
+    {
+      path: "/resume-format-pdf-for-fresher",
+      title: "Resume Format PDF for Freshers: Your Complete Guide to Crafting a Winning Resume",
+      src: 'https://img.freepik.com/free-vector/profile-data-concept-illustration_114360-2770.jpg',
+      alt: "Resume Format PDF for Fresher",
+    },
+    {
+      path: "/resume-pdf-download",
+      title: "Resume PDF Download - How to Download Your Resume as a PDF",
+      src: 'https://img.freepik.com/free-vector/online-cv-illustration-concept_23-2148566615.jpg',
+      alt: "Resume PDF Download - How to Download Your Resume as a PDF",
+    },
+    {
+      path: "/resume-quotes",
+      title: "Resume Quotes – Inspirational Quotes to Enhance Your Professional Journey",
+      src: 'https://img.freepik.com/free-vector/lettering-business-sticker-set_23-2150185946.jpg',
+      alt: "Resume Quotes",
+    },
+    {
+      path: "/simple-resume-format-pdf-download",
+      title: "Simple Resume Format PDF Download: A Professional Guide to Crafting Your Perfect Resume",
+      src: 'https://img.freepik.com/premium-vector/designer-creative-resume-template_23-2147540760.jpg',
+      alt: "Simple Resume Format PDF Download",
+    },
+    {
+      path: "/how-to-make-a-resume-for-freshers",
+      title: "How to Make a Resume for Freshers | Resume Tips & Templates",
+      src: 'https://img.freepik.com/free-vector/recruitment-concept-with-laptop_23-2148621834.jpg',
+      alt: "How to Make a Resume for Freshers",
+    },
+    {
+      path: "/how-to-write-a-strong-resume-objective",
+      title: "How to Write a Strong Resume Objective - Resumeera",
+      src: 'https://img.freepik.com/free-vector/illustrated-choice-worker-concept_52683-44355.jpg',
+      alt: "How to Write a Strong Resume Objective",
+    },
 
   ];
+  
   
   // Filter posts based on search term
   const filteredPosts = posts.filter((post) =>

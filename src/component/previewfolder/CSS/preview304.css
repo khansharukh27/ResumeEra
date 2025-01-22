@@ -1,0 +1,147 @@
+
+
+.main304{
+    display: flex;
+    justify-content: space-between;
+}
+.preview304{
+    padding:'15px'
+}
+.namediv304{
+    background-color: #cd8b01;
+    width: 100%;
+    padding: 15px;
+    text-align: center;
+}
+.contact304{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    background-color: #f5e8cc
+    
+}
+.emptydiv1{
+width: 100%;
+height: 3px;
+background-color:#cd8b01;
+}
+.emptydiv2{
+    margin-top: 5px;
+    width: 100%;
+    height: 5px;
+    background-color:#cd8b01;
+}
+
+
+@media (min-width:1024px){
+    .main304{
+        width: 100%;
+        display: flex;
+    }
+    .contact304 p{
+        font-size: 2rem;
+    }
+    .preview304{
+        padding: 35px;
+        margin: 15px;
+
+    }
+    .preview304 p,.preview304 li{
+        font-size: 2rem;
+    }
+    .preview304 h4{
+        font-size: xx-large;
+    }
+
+}
+
+@media (max-width:1024px){
+    .main304{
+        width: 100%;
+        display: flex;
+    }
+    .contact304 p{
+        font-size: 1rem;
+    }
+    .preview304{
+        padding: 5px;
+        margin: 15px;
+
+    }
+    .preview304 h4{
+        font-size: medium;
+    }
+
+}
+
+@media (max-width:768px){
+    .main304{
+        width: 100%;
+        display: flex;
+        /* flex-direction: column; */
+    }
+    .contact304 p{
+        font-size: 1rem;
+    }
+    .preview304{
+        padding: 5px;
+    }
+    .preview304 h4{
+        font-size: medium;
+    }
+
+}
+
+@media (max-width:425px){
+    .main304{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    .contact304 p{
+        font-size: 1rem;
+    }
+    .preview304{
+        padding: 5px;
+    }
+    .preview304 h4{
+        font-size: medium;
+    }
+
+}
+
+@media (max-width:375px){
+    .main304{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    .contact304 p{
+        font-size: .6rem;
+    }
+    .preview304{
+        padding: 5px;
+    }
+    .preview304 h4{
+        font-size: small;
+    }
+
+}
+
+@media (max-width:320px){
+    .main304{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    .contact304 p{
+        font-size: .6rem;
+    }
+    .preview304{
+        padding: 5px;
+    }
+    .preview304 h4{
+        font-size: small;
+    }
+
+}

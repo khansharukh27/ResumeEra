@@ -27,7 +27,13 @@ const MainPage = (props) => {
         } else if (location.pathname === `/techmain/${hoveredImage}`) {
             setPersonalInfo(true);
             setWorkExperience(false);
+            
+        }else if (location.pathname === `/freshertemplate/${hoveredImage}`) {
+            setPersonalInfo(true);
+            setWorkExperience(false);
+            
         }
+
     },[location.pathname, hoveredImage, result]);
 
     return (

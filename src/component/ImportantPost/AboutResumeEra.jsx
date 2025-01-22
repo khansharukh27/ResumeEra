@@ -47,8 +47,10 @@ const AboutResumeEra = () => {
         <meta property="og:type" content="website" />
       </Helmet>
       <div className="aboutResumeEra">
+        <section className="header">
         <h1>ResumeEra: Craft Your Perfect Resume Today</h1>
         <AuthorCard />
+        </section>
         <figure>
           <img src={download} alt="Perfect Resume" loading="lazy" />
           <figcaption>

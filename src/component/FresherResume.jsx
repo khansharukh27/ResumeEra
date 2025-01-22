@@ -12,7 +12,7 @@ const FresherResume = (props) => {
     const handleClick = (e) => {
         e.preventDefault();
         if (hoveredImage !== null) {
-            const path = `/mainpage/${hoveredImage}`;
+            const path = `/freshertemplate/${hoveredImage}`;
             navigate(path);
             dispatch(templatePage(hoveredImage));
         }
@@ -22,13 +22,13 @@ const FresherResume = (props) => {
     return (
         <div>
             <section className="template-grid-container">
-                <h2 className="template-grid-title">Select a Template</h2>
-                <p className="template-grid-description">
-                    Browse our collection of professional resume templates and find the one that suits your needs.
-                </p>
+                
+                <h2 style={{textAlign:'center'}}>
+                    Fresher Resume Template's
+                </h2>
                 <hr className="template-grid-divider" />
                 <div className="template-grid row m-3 ">
-                    {fresherResumeImage   ? fresherResumeImage.map((image) => (
+                    {fresherResumeImage ? fresherResumeImage.map((image) => (
                         <div
                             data-aos="flip-left"
                             data-aos-duration="1000"
@@ -45,7 +45,7 @@ const FresherResume = (props) => {
                             />
                             {hoveredImage === image.id && (
                                 <a
-                                    href={`/mainpage/${hoveredImage}`}
+                                    href={`/freshertemplate/${hoveredImage}`}
                                     onClick={handleClick}
                                     className="template-link"
                                 >

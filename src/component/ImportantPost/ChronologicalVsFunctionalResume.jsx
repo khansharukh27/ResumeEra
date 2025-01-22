@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import ShareButtons from '../shareButton/ShareButtons'
 import CallToAction from '../CallToAction'
 import AuthorCard from '../AuthorCard'
@@ -6,13 +6,44 @@ import RandomeArticleToBlogCareer from '../RandomeArticleToBlogCareer'
 import Chronological_vs_functional from '../../image/image_for_link/Chronological vs. Functional Resume.jpeg'
 import { Helmet } from 'react-helmet'
 import GoogleAd from '../adFolder/GoogleAd'
+import DateAndAuthor from '../DateAndAuthor'
+import { Link, useNavigate } from 'react-router-dom'
+import { useDispatch } from 'react-redux'
+import { templatePage } from '../../Redux/action'
+import TechnicalResumeImages from '../TechResume/TechnicalResumeImages'
+import ImageCard from '../ImageCardResusable/ImageCardResumeble'
 
-export default function ChronologicalVsFunctionalResume() {
+export default function ChronologicalVsFunctionalResume(prop) {
+     const [hoveredImage, setHoveredImage] = useState();
+     const {techImages} =prop
+        const navigate = useNavigate();
     const ArticleUrl = "https://resumeera.xyz/chronological-vs-functional-resume-formatting";
     const ArticleTitle ="Chronological vs. Functional Resume Formatting: When and What to Choose";
     useEffect(() => {
         window.scrollTo(0, 0);
     }, []);
+    const publishDate = '2025-01-11'
+    const dispatch = useDispatch();
+
+    const selectedImageId = 110;//chronoligical resume
+    const selectedimage = techImages.find((image) => image.id === selectedImageId)
+    const selectedImageId2 = 111;//functional resume
+    const selectedimage2 = techImages.find((image) => image.id === selectedImageId2)
+    const selectedImageId3 = 112; //minimalistik
+    const selectedimage3 = techImages.find((image) => image.id === selectedImageId3)
+    const selectedImageId4 =109 //creative
+    const selectedimage4 = techImages.find((image) =>image.id === selectedImageId4)
+    const selectedImageId5 =116 //creative
+    const selectedimage5 = techImages.find((image) =>image.id === selectedImageId5)
+    const selectedImageId6 =107 // infografic resume
+    const selectedimage6 = techImages.find((image) =>image.id === selectedImageId6)
+    console.log('hoveredImage:-,',hoveredImage)
+    const handleClick = (e, imageId) => {
+        e.preventDefault();
+        const path = `/techmain/${imageId}`;
+        navigate(path);
+        dispatch(templatePage(hoveredImage));
+      };
     return (
         <div>
             <Helmet>
@@ -56,33 +87,30 @@ export default function ChronologicalVsFunctionalResume() {
                 </script>
             </Helmet>
             <article className='aboutResumeEra'>
-                <h1>Chronological vs. Functional Resume Formatting: When and What to Choose</h1>
-                <div className="date-author-container">
-                    <img
-                        src="https://resumeera.xyz/static/media/best_logo.895bb22edf6c08600c86.webp"
-                        alt="ResumeEra Logo"
-                        className="author-logo"
-                        style={{ width: "50px", height: "50px" }}
-                    />
-                    <small className="author-details">
-                        ✍️ By the <span className="author-highlight">ResumeEra Team</span>{" "}
-                        | Published:{""}
-                        <span className="author-highlight">January 3, 2025</span> | ⏱️{" "}
-                        <span className="author-highlight">9 min read</span>
-                    </small>
-                </div>
-                <figure>
-                    <img
-                        style={{ height: "auto" }}
-                        src={Chronological_vs_functional}
-                        alt="Chronological vs. Functional Resume Formatting: When and What to Choose"
-                    />
-                </figure>
+            <section className='header'>
+                    <div className='d-flex'>
+                    <h1>Chronological vs. Functional Resume Formatting: When and What to Choose</h1>      
+                    <img className='qoute' style={{backgroundColor:'inherit',height:'50%',width:'30%',marginTop:'50px'}} src="https://img.freepik.com/free-vector/profile-data-concept-illustration_114360-2770.jpg" loading='lazy' alt="Resume Format PDF for Freshers" />
+                    </div>
+                    <DateAndAuthor publishDate={publishDate} />
+                </section><div><GoogleAd /></div>
+               
+               <TechnicalResumeImages techImages={techImages}/>
                 <p>
                     When it comes to crafting a compelling resume, selecting the right format is as important as the content itself. Two popular resume formats—chronological and functional—serve distinct purposes and cater to different career situations. Understanding when and what to choose between these formats can significantly enhance your chances of landing an interview. 📄✨🎯
                 </p>
                 <section>
                     <h2>1. 📅 What is a Chronological Resume?</h2>
+                    {[selectedimage].map((image) => (
+                <ImageCard
+                  key={image.id}
+                  image={image}
+                  hoveredImage={hoveredImage}
+                  setHoveredImage={setHoveredImage}
+                  handleClick={(e) => handleClick(e, image.id)}
+
+                />
+              ))}
                     <p>
                         The chronological resume is a traditional format that lists your work experience in reverse chronological order, starting with the most recent position. This format is widely recognized and favored by recruiters for its straightforward structure. Here are its key elements:
                     </p>
@@ -103,6 +131,16 @@ export default function ChronologicalVsFunctionalResume() {
 
                 <section>
                     <h2>2. 🛠️ What is a Functional Resume?</h2>
+                    {[selectedimage2].map((image) => (
+                <ImageCard
+                  key={image.id}
+                  image={image}
+                  hoveredImage={hoveredImage}
+                  setHoveredImage={setHoveredImage}
+                  handleClick={(e) => handleClick(e, image.id)}
+
+                />
+              ))}
                     <p>
                         A functional resume emphasizes skills and accomplishments rather than a timeline of work history. It organizes information into sections based on skill sets or expertise, de-emphasizing the chronology of past roles. Key elements include:
                     </p>
@@ -218,19 +256,19 @@ export default function ChronologicalVsFunctionalResume() {
                     <h2>6. 💡 Tips for Choosing the Right Format</h2>
                     <h3>Analyze Your Career History:</h3>
                     <ul>
-                        <li>If you have a linear career with relevant roles, choose a chronological format.</li>
-                        <li>If your career path includes diverse roles, gaps, or changes, go with a functional format.</li>
+                        <li className='qoute'>If you have a linear career with relevant roles, choose a chronological format.</li>
+                        <li className='qoute'>If your career path includes diverse roles, gaps, or changes, go with a functional format.</li>
                     </ul>
 
                     <h3>Consider Your Target Role:</h3>
                     <ul>
-                        <li>Research the industry’s preference. Traditional industries may favor chronological resumes, while creative or technical fields might accept functional ones.</li>
+                        <li className='qoute'>Research the industry’s preference. Traditional industries may favor chronological resumes, while creative or technical fields might accept functional ones.</li>
                     </ul>
 
                     <h3>Ensure ATS Compatibility:</h3>
                     <ul>
-                        <li>Use standard fonts and avoid overly complex formatting in both formats.</li>
-                        <li>Include keywords from the job description regardless of the format you choose.</li>
+                        <li className='qoute'>Use standard fonts and avoid overly complex formatting in both formats.</li>
+                        <li className='qoute'>Include keywords from the job description regardless of the format you choose.</li>
                     </ul>
                     <p>
                         Choosing the right format also involves striking a balance between clarity and creativity. Tailor your resume for each application to ensure maximum impact. 🎯📈✨
@@ -254,9 +292,9 @@ export default function ChronologicalVsFunctionalResume() {
                 <section>
                     <h2>8. ⚠️ Common Mistakes to Avoid</h2>
                     <ul>
-                        <li><strong>For Chronological Resumes:</strong> Avoid including irrelevant or outdated job roles. Focus on positions that align with the target job.</li>
-                        <li><strong>For Functional Resumes:</strong> Don’t omit work history entirely—it can raise red flags for recruiters. Include at least a brief section.</li>
-                        <li><strong>For Both Formats:</strong> Avoid typos, overcomplicated designs, and missing contact details.</li>
+                        <li className='common-mistakeli'><strong>For Chronological Resumes:</strong> Avoid including irrelevant or outdated job roles. Focus on positions that align with the target job.</li>
+                        <li className='common-mistakeli'><strong>For Functional Resumes:</strong> Don’t omit work history entirely—it can raise red flags for recruiters. Include at least a brief section.</li>
+                        <li className='common-mistakeli'><strong>For Both Formats:</strong> Avoid typos, overcomplicated designs, and missing contact details.</li>
                     </ul>
                     <p>
                         Mistakes in formatting or presentation can undermine the effectiveness of your resume. Pay attention to detail and ensure that your content is tailored, concise, and error-free. ✨📋💡
@@ -294,6 +332,17 @@ export default function ChronologicalVsFunctionalResume() {
                     <h3>Q5: What should I avoid in both resume formats?</h3>
                     <p>A: Avoid typos, irrelevant information, and overly complex designs. Ensure your contact details are up-to-date and your resume is easy to read.</p>
                 </section><div><GoogleAd/></div>
+                <section>
+                    <h2>RELETED ARTICLE: YOU CAN'T MISS:-</h2>
+                    <ul>
+                        <li><Link to='/simple-resume-format-word'>SIMPLE RESUME FORMAT WORD</Link></li>
+                        <li><Link to='/simple-resume-format-pdf'>SIMPLE RESUME FORMAT PDF</Link></li>
+                        <li><Link to='/resume-format-pdf-free-download'>RESUME FORMAT PDF FREE DOWNLOAD</Link></li>
+                        <li><Link to='/pdf-resume-format-free-download'>PDF RESUME FORMAT FREE DOWNLOAD</Link></li>
+                        <li><Link to="/resume-pdf"></Link></li>
+                    </ul>
+                </section>
+                <div><GoogleAd/></div>
                 <div>
                     <RandomeArticleToBlogCareer/>
                 </div>

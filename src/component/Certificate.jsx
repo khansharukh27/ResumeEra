@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { certificateData } from "../Redux/action"; // Assuming you have an action for certificates
 import "../css/Certificate.css";
 import SocialMedia from "./SocialMedia";
@@ -18,7 +18,8 @@ const Certificate = () => {
   const [showCertificate, setShowCertificate] = useState(true);
   const [showSoftSkill, setShowSoftSkill] = useState(false);
   const [hardSkill, setShowHardSkill] = useState(false);
-  
+const resume = useSelector((state)=>state.reducer.templatePage)
+console.log('resume in certificate:-',resume)  
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -94,7 +95,7 @@ const Certificate = () => {
     ]);
   };
   const handleClickBack = (e) => {
-    if (location.pathname === "/techmain/107") {
+    if (location.pathname === `$/techmain/${resume}`) {
       e.preventDefault();
       setShowSocialMedia(false);
       setShowCertificate(false);
@@ -119,7 +120,7 @@ const Certificate = () => {
       return;
     }
 
-    if (location.pathname === "/techmain/107") {
+    if (location.pathname === `/techmain/${resume}`) {
       setShowSocialMedia(false);
       setShowHardSkill(true);
       setShowCertificate(false);

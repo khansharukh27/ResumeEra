@@ -44,12 +44,14 @@ const TechnicalResumeImages = (props) => {
                                 src={image.src}
                                 alt={image.alt}
                                 loading="lazy"
+                                style={{border:'1px solid black',padding:'5px',margin:'5px',height:'500px'}}
                             />
                             {hoveredImage === image.id && (
                                 <a
                                     href={`/techmain/${hoveredImage}`}
                                     onClick={handleClick}
                                     className="template-link"
+                                    style={{}}
                                 >
                                     Go To Your Resume
                                 </a>

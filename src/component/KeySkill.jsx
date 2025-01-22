@@ -82,6 +82,13 @@ const KeySkills = () => {
       { value: 13, path: '/preview13' },
       { value: 14, path: '/preview14' },
       { value: 15, path: '/preview15' },
+      { value: 15, path: '/preview16' },
+      { value: 15, path: '/preview17' },
+      { value: 15, path: '/preview18' },
+      { value: 15, path: '/preview19' },
+      { value: 15, path: '/preview20' },
+      { value: 15, path: '/preview21' },
+      { value: 15, path: '/preview22' },
       { value: 101, path: '/preview101' },
       { value: 103, path: '/preview103' },
       { value: 104, path: '/preview104' },
@@ -97,7 +104,16 @@ const KeySkills = () => {
       { value: 113, path: '/preview113' },
       { value: 114, path: '/preview114' },
       { value: 115, path: '/preview115' },
-      { value: 116, path: '/preview11' },
+      { value: 116, path: '/preview116' },
+
+      { value:301, path: '/preview301' },
+      { value:302, path: '/preview302' },
+      { value:303, path: '/preview303' },
+      { value:304, path: '/preview304' },
+      { value:305, path: '/preview305' },
+      { value:306, path: '/preview306' },
+      { value:307, path: '/preview307' },
+      { value:308, path: '/preview308' },
     ];
 
     const resultMapping = resultMappings.find(mapping => mapping.value === result);
@@ -141,7 +157,7 @@ const KeySkills = () => {
       {showKeySkills && (
         <div>
           <div className="project-detail">
-    <h1 className="multicolor-heading">PROJECT HIGHLIGHTS</h1>
+    <h1 className="multicolor-heading">KEY SKILLS</h1>
     <p>
       Showcasing your project experience in a resume is crucial as it demonstrates your practical application of skills, problem-solving abilities, and hands-on experience with real-world scenarios.
     </p>

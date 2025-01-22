@@ -70,7 +70,7 @@ const Preview112 = () => {
   return (
     <div>
       <h1>Minimalist ATS Resume Template</h1>
-      <p style={{fontFamily:"sans-serif", fontSize:'5rem'}}>This Template Is Note Ready To Use</p>
+      <p style={{ fontFamily: "sans-serif", fontSize: '5rem' }}>This Template Is Note Ready To Use</p>
       <div className='main112 d-flex justify-content-between'>
         <div className='preview112 d-flex'>
 
@@ -82,22 +82,22 @@ const Preview112 = () => {
               <div className='contactinnerdiv112'><i class="bi bi-github ms-2 me-2" style={{ color: bgColor }} /><p style={{ color: fontColor, fontFamily: fontStyle, }}>{socialMediaLink[0].github}</p></div>
             </div>
             <div className="inner-104-1 me-4">
-              <div className='d-flex' style={{marginBottom:'5px'}}>
-              <i style={{fontSize:'1.5rem',color:'#cd9c5a'}} class="bi bi-suit-diamond-fill"/>
-              <h4 style={{ color: headingColor,marginTop:'10px' }}>SKILL</h4>
+              <div className='d-flex' style={{ marginBottom: '5px' }}>
+                <i style={{ fontSize: '1.5rem', color: '#cd9c5a' }} class="bi bi-suit-diamond-fill" />
+                <h4 style={{ color: headingColor, marginTop: '10px' }}>SKILL</h4>
               </div>
               {keyskills[0].map((keys, index) => (
                 <div key={index} className=" d-flex justify-content-between">
-                  <p className='technical-skill-item112' 
-                  style={{ color: fontColor, fontFamily: fontStyle, }}>{keys.keyskills}</p>
+                  <p className='technical-skill-item112'
+                    style={{ color: fontColor, fontFamily: fontStyle, }}>{keys.keyskills}</p>
                   {/* 5-star rating system */}
                 </div>
               ))}
             </div>
             <div className="">
-            <div className='d-flex' style={{marginBottom:'5px'}}>
-              <i style={{fontSize:'1.5rem',color:'#cd9c5a'}} class="bi bi-suit-diamond-fill"/>
-              <h4 style={{ color: headingColor,marginTop:'10px' }}>LANGUAGE</h4>
+              <div className='d-flex' style={{ marginBottom: '5px' }}>
+                <i style={{ fontSize: '1.5rem', color: '#cd9c5a' }} class="bi bi-suit-diamond-fill" />
+                <h4 style={{ color: headingColor, marginTop: '10px' }}>LANGUAGE</h4>
               </div>
               {languages[0].reduce((result, _, index, array) => {
                 if (index % 2 === 0) result.push(array.slice(index, index + 2));
@@ -115,24 +115,24 @@ const Preview112 = () => {
                           {keys.language}
                         </p>
                         <div
-                    style={{
-                      width: '100%',
-                      height: '8px',
-                      backgroundColor: '#e0e0e0', // Light gray for the uncolored portion
-                      borderRadius: '4px', // Rounded corners
-                      overflow: 'hidden', // Prevent overflow of the colored part
-                      marginBottom: '12px'
-                    }}
-                  >
-                    <div
-                      style={{
-                        width: `${(keys.rating / 5) * 100}%`, // Dynamic width based on rating
-                        height: '100%',
-                        backgroundColor: headingColor, // Primary color for the colored portion
-                        transition: 'width 0.3s ease', // Smooth transition
-                      }}
-                    ></div>
-                  </div>
+                          style={{
+                            width: '100%',
+                            height: '8px',
+                            backgroundColor: '#e0e0e0', // Light gray for the uncolored portion
+                            borderRadius: '4px', // Rounded corners
+                            overflow: 'hidden', // Prevent overflow of the colored part
+                            marginBottom: '12px'
+                          }}
+                        >
+                          <div
+                            style={{
+                              width: `${(keys.rating / 5) * 100}%`, // Dynamic width based on rating
+                              height: '100%',
+                              backgroundColor: headingColor, // Primary color for the colored portion
+                              transition: 'width 0.3s ease', // Smooth transition
+                            }}
+                          ></div>
+                        </div>
                       </div>
                     ))}
                   </div>

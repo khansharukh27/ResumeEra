@@ -16,9 +16,9 @@ const Carousel = ({ images }) => {
         dots: false,
         infinite: true,
         speed: 500, // Adjust speed for swipe transition
-        slidesToShow: 5,
+        slidesToShow: 3,
         slidesToScroll: 1,
-        autoplay: false, // Disable autoplay for manual control
+        autoplay:true, // Disable autoplay for manual control
         cssEase: 'ease', // Smooth easing for swipe effect
         swipeToSlide: true, // Allows smooth swiping between slides
         draggable: true, // Allows dragging/sliding on desktop
@@ -71,6 +71,7 @@ const Carousel = ({ images }) => {
                                 src={image.src}
                                 alt={image.alt}
                                 loading="lazy"
+
                             />
                             {hoveredImage === image.id && (
                                 <button

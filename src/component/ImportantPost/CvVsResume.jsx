@@ -3,15 +3,47 @@ import CallToAction from "../CallToAction";
 import RandomeArticleToBlogCareer from "../RandomeArticleToBlogCareer";
 import ShareButtons from "../shareButton/ShareButtons";
 import Difference_Between_CV_and_Resume from "../../image/image_for_link/Difference Between CV and Resume.jpg";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { Helmet } from "react-helmet";
 import GoogleAd from "../adFolder/GoogleAd";
-const CvVsResume = () => {
+import { Link, useNavigate } from "react-router-dom";
+import DateAndAuthor from "../DateAndAuthor";
+import { templatePage } from "../../Redux/action";
+import { useDispatch } from "react-redux";
+import TechnicalResumeImages from "../TechResume/TechnicalResumeImages";
+import ImageCard from "../ImageCardResusable/ImageCardResumeble";
+const CvVsResume = (prop) => {
+    const [hoveredImage, setHoveredImage] = useState();
+    const { techImages } = prop
+    const navigate = useNavigate();
   const ArticleUrl = "https://resumeera.xyz/11-essential-cv-tips-2024";
   const ArticleTitle = "11 Essential Tips to Get Your CV Noticed in 2024";
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+  const publishDate = '2025-01-11'
+  const dispatch = useDispatch();
+
+  const selectedImageId = 110;//chronoligical resume
+  const selectedimage = techImages.find((image) => image.id === selectedImageId)
+  const selectedImageId2 = 111;//functional resume
+  const selectedimage2 = techImages.find((image) => image.id === selectedImageId2)
+  const selectedImageId3 = 112; //minimalistik
+  const selectedimage3 = techImages.find((image) => image.id === selectedImageId3)
+  const selectedImageId4 = 109 //creative
+  const selectedimage4 = techImages.find((image) => image.id === selectedImageId4)
+  const selectedImageId5 = 116 //creative
+  const selectedimage5 = techImages.find((image) => image.id === selectedImageId5)
+  const selectedImageId6 = 107 // infografic resume
+  const selectedimage6 = techImages.find((image) => image.id === selectedImageId6)
+  console.log('hoveredImage:-,', hoveredImage)
+  const handleClick = (e, imageId) => {
+    e.preventDefault();
+    const path = `/techmain/${imageId}`;
+    navigate(path);
+    dispatch(templatePage(hoveredImage));
+  };
+
   return (
     <div>
       <div className="aboutResumeEra">
@@ -93,40 +125,20 @@ const CvVsResume = () => {
             }`}
           </script>
 
-          {/* Twitter Card */}
-          <meta name="twitter:card" content="summary_large_image" />
-          <meta
-            name="twitter:title"
-            content="Difference Between CV and Resume | Comprehensive Guide"
-          />
-          <meta
-            name="twitter:description"
-            content="Learn the key differences between CV and resume, their uses, and how to choose the right one for your job application. Explore tips and best practices."
-          />
-          <meta
-            name="twitter:image"
-            content="https://www.example.com/image.jpg"
-          />
-          <meta name="twitter:creator" content="@YourTwitterHandle" />
+         
         </Helmet>
 
-        <section>
-          <h1>The Comprehensive Guide: Difference Between CV and Resume</h1>
-          <small>
-            ✍️ By the ResumeEra Team | Published: December 22, 2024 | ⏱️ 8 min
-            read
-          </small>
-
-          <figure>
+        <section className="header">
+          <h1 className="qoute" style={{}}>The Comprehensive Guide: Difference Between CV and Resume</h1>
             <img
+            className="qoute"
+            style={{width:'100%'}}
               src={Difference_Between_CV_and_Resume}
               alt="Difference Between CV and Resume"
               loading="lazy"
             />
-            <figcaption>
-              Learn the key differences between CV and resume
-            </figcaption>
-          </figure>
+          </section><div><GoogleAd/></div><div><GoogleAd/></div>
+          <DateAndAuthor publishDate={publishDate}/>
           <p>
             In the world of job applications, two terms often create confusion:
             CV (Curriculum Vitae) and Resume. While they are both used to
@@ -137,11 +149,10 @@ const CvVsResume = () => {
             of success. This comprehensive guide explores all aspects of CVs and
             resumes, helping you distinguish between the two and decide which
             one to use in various scenarios.
-          </p>
-        </section><div><GoogleAd/></div><div><GoogleAd/></div>
-        
+          </p>        
         <section>
           <h2>What is a CV (Curriculum Vitae)?</h2>
+          <TechnicalResumeImages techImages={techImages}/>
           <p>
             The term "Curriculum Vitae" originates from Latin, meaning "course
             of life." A CV is a detailed document that outlines an individual’s
@@ -183,6 +194,7 @@ const CvVsResume = () => {
         </section><div><GoogleAd/></div>
         <section>
           <h2>What is a Resume?</h2>
+          
           <p>
             The term "resume" comes from the French word "resumé," meaning
             "summary." A resume is a concise document tailored to highlight
@@ -223,27 +235,16 @@ const CvVsResume = () => {
         </section><div><GoogleAd/></div>
         <section>
           <h2>Key Differences Between CV and Resume</h2>
-          <figure>
-            <img
-              src={Difference_Between_CV_and_Resume}
-              alt="Key Differences Between CV and Resume"
-            />
-            <figcaption>
-              Understanding the difference between CV and resume involves
-              analyzing several factors
-            </figcaption>
-          </figure>
-          <div className="container" style={{width:'50%',padding:'15px'}}>
-            <a href="https://resumeera.xyz/template" className="button" style={{padding:'15px'}}> Choose Template</a>
-          </div>
+          
+          
           <p>
             Understanding the difference between CV and resume involves
             analyzing several factors:
           </p>
 
           <h3>1. Length</h3>
-          <ul>
-            <li>
+          <ul className='common-mistakeli'>
+            <li >
               <strong>CV:</strong> Often exceeds two pages, with no strict
               length limit. It grows as the candidate’s experience and
               achievements expand.
@@ -255,7 +256,7 @@ const CvVsResume = () => {
           </ul>
 
           <h3>2. Content</h3>
-          <ul>
+          <ul className='common-mistakeli'>
             <li>
               <strong>CV:</strong> Focuses on academic achievements, research,
               and a comprehensive career history.
@@ -267,7 +268,7 @@ const CvVsResume = () => {
           </ul>
 
           <h3>3. Purpose</h3>
-          <ul>
+          <ul className='common-mistakeli'>
             <li>
               <strong>CV:</strong> Used for academic, research, or international
               roles.
@@ -278,7 +279,7 @@ const CvVsResume = () => {
             </li>
           </ul>
 
-          <h3>4. Regional Preferences</h3>
+          <h3 className='common-mistakeli'>4. Regional Preferences</h3>
           <ul>
             <li>
               <strong>CV:</strong> Commonly used in Europe, Asia, and academia
@@ -321,6 +322,16 @@ const CvVsResume = () => {
           </p>
 
           <h2>Tips for Writing a Great CV</h2>
+          {[selectedimage2].map((image) => (
+                <ImageCard
+                  key={image.id}
+                  image={image}
+                  hoveredImage={hoveredImage}
+                  setHoveredImage={setHoveredImage}
+                  handleClick={(e) => handleClick(e, image.id)}
+
+                />
+              ))}
           <p>
             Crafting a compelling CV requires attention to detail and a
             structured approach. Understanding the difference between CV and
@@ -345,12 +356,22 @@ const CvVsResume = () => {
 
           <h3>Common Mistakes to Avoid</h3>
           <ul>
-            <li>Overloading with irrelevant details.</li>
-            <li>Using informal language or unprofessional formatting.</li>
-            <li>Forgetting to include dates and specifics for experiences.</li>
+            <li className="common-mistakeli">Overloading with irrelevant details.</li>
+            <li className="common-mistakeli">Using informal language or unprofessional formatting.</li>
+            <li className="common-mistakeli">Forgetting to include dates and specifics for experiences.</li>
           </ul>
 
           <h2>Tips for Writing a Great Resume</h2>
+          {[selectedimage2].map((image) => (
+                <ImageCard
+                  key={image.id}
+                  image={image}
+                  hoveredImage={hoveredImage}
+                  setHoveredImage={setHoveredImage}
+                  handleClick={(e) => handleClick(e, image.id)}
+
+                />
+              ))}
           <p>
             Creating a resume that stands out involves showcasing relevant
             skills and achievements. The difference between CV and resume lies
@@ -375,9 +396,9 @@ const CvVsResume = () => {
 
           <h3>Common Mistakes to Avoid</h3>
           <ul>
-            <li>Using a generic resume for all applications.</li>
-            <li>Focusing on duties rather than achievements.</li>
-            <li>Including outdated or irrelevant information.</li>
+            <li className="common-mistakeli">Using a generic resume for all applications.</li>
+            <li className="common-mistakeli">Focusing on duties rather than achievements.</li>
+            <li className="common-mistakeli">Including outdated or irrelevant information.</li>
           </ul>
         </section><div><GoogleAd/></div>
 
@@ -423,6 +444,14 @@ const CvVsResume = () => {
 
           <h3>What are the common mistakes to avoid when writing a CV?</h3>
           <p>Common mistakes include overloading with irrelevant details, using informal language, and forgetting to include dates and specifics for experiences.</p>
+        </section>
+        <section className='releted-article'>
+          <h2 style={{color:'white'}}>RELETED ARTICLE:- YOU CAN'T MISS IT</h2>
+          <Link to='/best-resume-format-pdf-for-immediate-job-offers-2025-download-free-now'>BEST RESUME FORMAT PDF FOR IMMEDIATE JOB OFFERS 2025 DOWNLOAD FREE NOW</Link>
+          <br /><Link to='/perfect-your-resume-with-the-best-resume-format-pdfs'>PERFECT YOUR RESUME WITH THE BEST RESUMEFORMAT PDFS</Link>
+          <br /><Link to='/best-resume-format-pdf-for-immediate-job-offers-2025-download-free-now'>BEST RESUME FORMAT PDF FOR IMMEDIATE JOB OFFERS 2025 DOWNLOAD FREE NOW</Link>
+          <br /><Link to='/perfect-your-resume-with-the-best-resume-format-pdfs'>PERFECT YOUR RESUME WITH THE BEST RESUME FORMAT PDFS</Link>
+          <br /><Link to='/how-to-use-resume-format-pdfs-2025-winning-job-application'>HOW TO USE RESUME FORMAT PDFS 2025 WINNING JOB APPLICATION</Link>
         </section>
         <RandomeArticleToBlogCareer />
         <div><GoogleAd/></div>

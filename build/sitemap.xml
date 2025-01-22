@@ -363,10 +363,6 @@
   <priority>1.0</priority>
   </url>
   <url>
-  <loc>https://resumeera.xyz/create-your-perfect-resume-for-free</loc>
-  <priority>1.0</priority>
-  </url>
-  <url>
   <loc>https://resumeera.xyz/11-ats-formatting-mistakes-that-can-cost-you-a-job</loc>
   <priority>1.0</priority>
   </url>
@@ -378,9 +374,17 @@
   <loc>https://resumeera.xyz/management-cover-letter-example</loc>
   <priority>1.0</priority>
   </url>
-
   <url>
   <loc>https://resumeera.xyz/Why_Work_Here</loc>
+  <priority>1.0</priority>
+  </url>
+  <url>
+  <loc>https://resumeera.xyz/government-job-resume-guide</loc>
+  <priority>1.0</priority>
+  </url>
+  <!-- not ranke in google -->
+  <url>
+  <loc>https://resumeera.xyz/create-your-perfect-resume-for-free</loc>
   <priority>1.0</priority>
   </url>
   <!-- interview question and answer -->
@@ -388,15 +392,7 @@
   <loc>https://resumeera.xyz/tell-us-about-yourself</loc>
   <priority>1.0</priority>
   </url>
-  <url>
-  <loc>https://resumeera.xyz/why-should-we-hire-you</loc>
-  <priority>1.0</priority>
-  </url>
-  <url>
-  <loc>https://resumeera.xyz/why_do_you_want_to_work</loc>
-  <priority>1.0</priority>
-  </url>
-  <url>
+ <url>
   <loc>https://resumeera.xyz/how-employer-describe</loc>
   <priority>1.0</priority>
   </url>
@@ -408,12 +404,7 @@
   <loc>https://resumeera.xyz/hobbies-interests</loc>
   <priority>1.0</priority>
   </url>
-  <url>
-  <loc>https://resumeera.xyz/what-does-success-look-like-to-you</loc>
-  <priority>1.0</priority>
-  </url>
-  <!-- tommorow -->
-  <url>
+   <url>
   <loc>https://resumeera.xyz/why-are-you-qualified-for-this-position</loc>
   <priority>1.0</priority>
   </url>
@@ -422,25 +413,7 @@
   <priority>1.0</priority>
   </url>
   <url>
-  <loc>https://resumeera.xyz/work-alone-or-group-preference</loc>
-  <priority>1.0</priority>
-  </url>
-  <!-- down done -->
-  <url>
-  <loc>https://resumeera.xyz/dealing-with-difficult-customers</loc>
-  <priority>1.0</priority>
-  </url>
-  <url>
-  <loc>https://resumeera.xyz/Interview_Question_Post/How_Do_You_Handle_Stress_and_Pressure</loc>
-  <priority>1.0</priority>
-  </url>
-  <url>
   <loc>https://resumeera.xyz/where-do-you-see-yourself-in-five-years</loc>
-  <priority>1.0</priority>
-  </url>
-  
-  <url>
-  <loc>https://resumeera.xyz/what-motivates-you-to-do-your-best-work</loc>
   <priority>1.0</priority>
   </url>
   <url>
@@ -460,17 +433,49 @@
   <priority>1.0</priority>
   </url>
   <url>
-  <loc>https://resumeera.xyz/Functional_vs_Chronological_Resume_Formatting</loc>
-  <priority>1.0</priority>
-  </url>
-  <url>
-  <loc>https://resumeera.xyz/government-job-resume-guide</loc>
-  <priority>1.0</priority>
-  </url>
-  <url>
   <loc>https://resumeera.xyz/hospitality-tourism-resume-tips</loc>
   <priority>1.0</priority>
   </url>
+  <!-- not index in google -->
+  <url>
+  <loc>https://resumeera.xyz/why_do_you_want_to_work</loc>
+  <priority>1.0</priority>
+  </url>
+  <url>
+  <loc>https://resumeera.xyz/what-does-success-look-like-to-you</loc>
+  <priority>1.0</priority>
+  </url>
+  <url>
+  <loc>https://resumeera.xyz/work-alone-or-group-preference</loc>
+  <priority>1.0</priority>
+  </url>
+  <url>
+  <loc>https://resumeera.xyz/dealing-with-difficult-customers</loc>
+  <priority>1.0</priority>
+  </url>
+  <url>
+  <loc>https://resumeera.xyz/Interview_Question_Post/How_Do_You_Handle_Stress_and_Pressure</loc>
+  <priority>1.0</priority>
+  </url><url>
+  <loc>https://resumeera.xyz/what-motivates-you-to-do-your-best-work</loc>
+  <priority>1.0</priority>
+  </url>
+  <url>
+  <loc>https://resumeera.xyz/Functional_vs_Chronological_Resume_Formatting</loc>
+  <priority>1.0</priority>
+  </url>
+  <!-- down done -->
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
   <url>
   <loc>https://resumeera.xyz/Best-Resume-Formatting-Tips-for-Real-Estate-Agents</loc>
   <priority>1.0</priority>
@@ -748,6 +753,7 @@
   <loc>https://resumeera.xyz/the-best-resume-format-pdf-for-career-success</loc>
   <priority>1.0</priority>
   </url>
+  <!-- upload to google -->
   <url>
   <loc>https://resumeera.xyz/download-the-top-resume-format-pdf-for-your-job-application</loc>
   <priority>1.0</priority>
@@ -848,6 +854,66 @@
   <loc>https://resumeera.xyz/free-top-resume-format-pdf-successful-career-2025-download-now</loc>
   <priority>1.0</priority>
   </url>
+  <url>
+  <loc>https://resumeera.xyz/top-resume-format-pdf-for-careersuccess</loc>
+  <priority>1.0</priority>
+  </url>
+  <url>
+  <loc>https://resumeera.xyz/download-resume-format-pdf-today</loc>
+  <priority>1.0</priority>
+  </url>
+  <url>
+  <loc>https://resumeera.xyz/free-resume-format-pdfs</loc>
+  <priority>1.0</priority>
+  </url>
+  <url>
+  <loc>https://resumeera.xyz/how-to-optimize-killer-resume-format-pdf-2025</loc>
+  <priority>1.0</priority>
+  </url>
+  <!-- indexed -->
+  <url>
+  <loc>https://resumeera.xyz/how-to-respond-to-a-linkedin-recruiter</loc>
+  <priority>1.0</priority>
+  </url>
+  <!-- indexed -->
+  <url>
+  <loc>https://resumeera.xyz/simple-resume-format-word</loc>//
+  <priority>1.0</priority>
+  </url>
+  <url>
+  <loc>https://resumeera.xyz/simple-resume-format-pdf</loc>
+  <priority>1.0</priority>
+  </url>
+  <url>
+  <loc>https://resumeera.xyz/resume-format-pdf-free-download</loc>
+  <priority>1.0</priority>
+  </url>
+  <url>
+  <loc>https://resumeera.xyz/pdf-resume-format-free-download</loc>
+  <priority>1.0</priority>
+  </url>
+  <url>
+  <loc>https://resumeera.xyz/resume-pdf</loc>
+  <priority>1.0</priority>
+  </url>
+  <url>
+  <loc>https://resumeera.xyz/resume-format-pdf-for-fresher</loc>
+  <priority>1.0</priority>
+  </url>
+  <url>
+  <loc>https://resumeera.xyz/resume-pdf-download</loc>
+  <priority>1.0</priority>
+  </url>
+  <url>
+  <loc>https://resumeera.xyz/resume-quotes</loc>
+  <priority>1.0</priority>
+  </url>
+  <url>
+  <loc>https://resumeera.xyz/simple-resume-format-pdf-download</loc>
+  <priority>1.0</priority>
+  </url>
+
+
 
   
   <!-- <url>

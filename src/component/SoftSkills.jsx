@@ -1,4 +1,4 @@
-import { useDispatch} from "react-redux";
+import { useDispatch, useSelector} from "react-redux";
 import { addSoftSkills } from "../Redux/action";
 import { useState, useEffect } from "react";
 // import Language from "./Language";
@@ -9,19 +9,19 @@ import HonorAndAward from "./HonorAndAward";
 import Certificate from "./Certificate";
 import GoogleAd from "./adFolder/GoogleAd";
 import { useLocation } from "react-router-dom";
+import KeySkills from "./KeySkill";
 
 const SoftSkills = () => {
   const [input, setInput] = useState(() => {
-    // Load soft skills from local storage if available
     const savedSoftSkills = localStorage.getItem("softSkillsData");
     return savedSoftSkills ? JSON.parse(savedSoftSkills) : [{ softSkill: "" }];
   });
-
+  const [ShowKeySkill,setShowKeySkill] = useState(false) 
   const [showSoftSkill, setShowSoftSkill] = useState(true);
   const [showSocialMedia, setShowSocialMedia] = useState(false);
   const [showHonor,setShowHonor] = useState(false);
   const [showCertificate,setShowCertificate] = useState(false)
-  // const [certificate,setShowCertificate]
+  const result = useSelector((state)=>state.reducer.templatePage[0])
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -52,13 +52,20 @@ const SoftSkills = () => {
       const firstEmptyField = emptyFields[0].index;
       document.getElementsByClassName('input')[firstEmptyField].focus()
       return;
-    }else if(location.pathname === '/techmain/107'){
+    }else if(location.pathname === `/techmain/${result}`){
       setShowCertificate(true)
       setShowSocialMedia(false);
       setShowSoftSkill(false);
       setShowHonor(false);
       dispatch(addSoftSkills(input));
+    }else if(location.pathname === `/freshertemplate/${result}`){
+      setShowKeySkill(true)
+      setShowSocialMedia(false);
+      setShowSoftSkill(false);
+      setShowHonor(false);
+      dispatch(addSoftSkills(input));
     }
+
     else {
       setShowCertificate(false);
       setShowSocialMedia(false);
@@ -152,6 +159,7 @@ const SoftSkills = () => {
       {/* {showSoftSkill && <SoftSkill />} */}
       {showHonor && <HonorAndAward />}
       {showCertificate && (<Certificate/>)}
+      {ShowKeySkill &&(<KeySkills/>)}
     </form>
   );
 };

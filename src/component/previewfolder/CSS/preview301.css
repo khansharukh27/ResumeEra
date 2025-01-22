@@ -1,0 +1,121 @@
+
+
+.main301{
+display: flex;
+justify-content: space-between;
+
+}
+.preview301{
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 5px;
+}
+.blueline{
+    width: 100%;
+    height: 25px;
+    background-color: rgb(1, 1, 39);
+    border: black;
+    margin-top: 25px;
+}
+.personalInfo301 h3{
+    text-align: center;
+    font-weight: 400;
+
+}
+.personalInfo301 .jobtitle{
+    text-align: center;
+}
+
+.contact301{
+    display: flex;
+    justify-content: center;
+
+}
+.dashed-line{
+    border: none;
+    border-top: 1px dashed grey;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+.preview301 .object{
+    text-align: left;
+}
+.main301 h4{
+    font-size: medium;
+    font-weight: 900;
+}
+.preview301 li{
+    margin-top: -8px;
+    line-height: .5;
+}
+.technical-skill-item301 li{
+line-height: .5;
+}
+@media (min-width:768px){
+    .main301{
+        display: flex;
+        flex-direction: column;
+    }
+    .preview301 hr{
+        width: inherit;
+    }
+    .preview301 p,.preview301 li{
+        font-size: medium;
+    }
+    .main301 h4{
+        font-size: medium;
+        font-weight: 900;
+    }
+
+}
+@media (max-width:425px){
+    .main301{
+        display: flex;
+        flex-direction: column;
+    }
+    .preview301 hr{
+        width: inherit;
+    }
+    .preview301 p,.preview301 li{
+        font-size: small;
+    }
+    .main301 h4{
+        font-size: small;
+        font-weight: 900;
+    }
+
+}
+@media (max-width:375px){
+    .main301{
+        display: flex;
+        flex-direction: column;
+    }
+    .preview301 hr{
+        width: inherit;
+    }
+    .preview301 p,.preview301 li{
+        font-size: x-small;
+    }
+    .main301 h4{
+        font-size: small;
+        font-weight: 900;
+    }
+
+}
+@media (max-width:320px){
+    .main301{
+        display: flex;
+        flex-direction: column;
+    }
+    .preview301 hr{
+        width: inherit;
+    }
+    .preview301 p,.preview301 li{
+        font-size: xx-small;
+    }
+    .main301 h4{
+        font-size: small;
+        font-weight: 900;
+    }
+
+}

@@ -98,7 +98,14 @@ import CoverLetter from "./component/CoverLetter";
 import cover_letter_1 from "../src/image/CoverImage/cover_letter_1.png";
 import cover_letter_2 from "../src/image/CoverImage/cover_letter_2.webp";
 import cover_letter_3 from "../src/image/CoverImage/cover_letter_3.webp";
-
+import Preview301 from './component/previewfolder/Preview301.jsx'
+import Preview302 from './component/previewfolder/Preview302.jsx'
+import Preview303 from './component/previewfolder/Preview303.jsx'
+import Preview304 from './component/previewfolder/Preview304.jsx'
+import Preview305 from './component/previewfolder/Preview305.jsx'
+import Preview306 from './component/previewfolder/Preview306.jsx'
+import Preview307 from './component/previewfolder/Preview307.jsx'
+import Preview308 from './component/previewfolder/Preview308.jsx'
 import ResumeComponent from "./component/ImportantPost/ResumeComponent";
 import ThingsToRemoveFromYourCV from "./component/ImportantPost/ThingsToRemoveFromYourCV";
 import TipForInterview from "./component/ImportantPost/TipForInterview";
@@ -355,6 +362,15 @@ import image_306 from './image/Fresher resume image folder/security-guard-resume
 import image_307 from './image/Fresher resume image folder/social-media-manager-resume-example.webp'
 import image_308 from './image/Fresher resume image folder/web-developer-resume-example.webp'
 import FresherResume from "./component/FresherResume.jsx";
+import ResumeFormatPDFFreeDownload from "./component/ImportantPost/ResumeFormatPDFFreeDownload.jsx";
+import PDFResumeFormatFreeDownload from "./component/ImportantPost/PDFResumeFormatFreeDownload.jsx";
+import ResumePdf from "./component/ImportantPost/ResumePdf.jsx";
+import ResumeFormatPDFforFresher from "./component/ImportantPost/ResumeFormatPDFforFresher.jsx";
+import ResumePDFDownload from "./component/ImportantPost/ResumePDFDownload.jsx";
+import ResumeQoutes from "./component/ImportantPost/ResumeQoutes.jsx";
+import SimpleResumeFormatPDFDownload from "./component/ImportantPost/SimpleResumeFormatPDFDownload.jsx";
+import HowtoMakeaResumeforFreshers from "./component/ImportantPost/HowtoMakeaResumeforFreshers.js";
+import HowtoWriteaStrongResumeObjective from "./component/blog/HowtoWriteaStrongResumeObjective.jsx";
 
 var images = [
   { id: 1, src: resum1, alt: "Professional Resume Template 1" },
@@ -519,6 +535,15 @@ function App() {
             }
           />
         ))}
+        {fresherResumeImage.map((image)  => (
+          <Route
+            key={image.id}
+            path={`/freshertemplate/${image.id}`}
+            element={
+              <MainPage path={`/${path}/${image.id}`} fresherResumeImage={fresherResumeImage} />
+            }
+          />
+        ))}
         
         <Route path="#" element={<TechImageShow  techImages={techImages}/>}/>
 
@@ -576,7 +601,7 @@ function App() {
         <Route path="/language" element={<Language />} />
         <Route path="/key_skill" element={<KeySkills />} />
         <Route path="/honor_and_award" element={<HonorAndAward />} />
-        <Route path="/hobbies" element={<Hobbies />} />
+        <Route path="/hobbies" element={<Hobbies techImages={techImages} />} />
         <Route path="/education" element={<Education />} />
         <Route path="/certificate" element={<Certificate />} />
         {/* important post */}
@@ -716,7 +741,7 @@ function App() {
         <Route path="/11-essential-cv-tips-2024" element={<CVTips2024 />} />
         <Route
           path="/difference-between-cv-and-resume"
-          element={<CvVsResume />}
+          element={<CvVsResume techImages={techImages}/>}
         />
         <Route
           path="/create-your-perfect-resume-for-free"
@@ -852,7 +877,7 @@ function App() {
           path="/infographic-resume-formatting"
           element={<Infographic_Resume_Formatting/>}
         />
-
+        
 
 
 
@@ -915,7 +940,7 @@ function App() {
         />
         <Route
           path="/what-accomplishment-are-you-most-proud-of"
-          element={<AccomplishmentQuestion />}
+          element={<AccomplishmentQuestion techImages={techImages}/>}
         />
         <Route
           path="/do-you-have-any-questions-for-us"
@@ -984,7 +1009,7 @@ function App() {
         />
         <Route
           path="/chronological-vs-functional-resume-formatting"
-          element={<ChronologicalVsFunctionalResume/>}
+          element={<ChronologicalVsFunctionalResume techImages = {techImages}/>}
         />
          <Route
           path="/infographic-resume-vs-traditional-resume-formatting"
@@ -1173,7 +1198,7 @@ function App() {
         />
         <Route
           path="/resume-format"
-          element={<ResumeFormat/>}
+          element={<ResumeFormat techImages={techImages}/>}
         />
          <Route
           path="/resume-format-pdf"
@@ -1280,7 +1305,7 @@ function App() {
         <Route path="/free-resume-format-pdf-2025-perfect-for-career-success-download-now"
           element={<PerfectforCareerSuccess/>}
         />
-<Route path="/resume-format-pdf-that-will-get-you-energy-in-interview"
+        <Route path="/resume-format-pdf-that-will-get-you-energy-in-interview"
           element={<GetYouenergyininterview/>}
         />
         <Route path="/resume-mistakes-you-need-to-avoid-in-2025"
@@ -1321,6 +1346,36 @@ function App() {
         />
         <Route path="/simple-resume-format-pdf"
           element={<SimpleResumeformatpdf/>}
+        />
+         <Route path="/resume-format-pdf-free-download"
+          element={<ResumeFormatPDFFreeDownload techImages={techImages}/>}
+        />
+        <Route path="/pdf-resume-format-free-download"
+          element={<PDFResumeFormatFreeDownload techImages={techImages}/>}
+        />
+        <Route path="/resume-pdf"
+          element={<ResumePdf techImages={techImages}/>}
+        />
+        <Route path="/resume-format-pdf-for-fresher"
+          element={<ResumeFormatPDFforFresher techImages={techImages}/>}
+        />
+        <Route path="/resume-pdf-download"
+          element={<ResumePDFDownload techImages={techImages}/>}
+        />
+         <Route path="/resume-quotes"
+          element={<ResumeQoutes techImages={techImages}/>}
+        />
+<Route
+          path="/simple-resume-format-pdf-download"
+          element={<SimpleResumeFormatPDFDownload techImages={techImages} />}
+        />
+        <Route
+          path="/how-to-make-a-resume-for-freshers"
+          element={<HowtoMakeaResumeforFreshers techImages={techImages} />}
+        />
+        <Route
+          path="/how-to-write-a-strong-resume-objective"
+          element={<HowtoWriteaStrongResumeObjective techImages={techImages} />}
         />
 
 
@@ -1468,6 +1523,17 @@ function App() {
         <Route path="/preview/201" element={<Preview201 />} />
         <Route path="/preview/202" element={<Preview202 />} />
         <Route path="/EditablePage" element={<EditablePage />} />
+
+        <Route path="/preview301" element={<Preview301 />} />
+        <Route path="/preview302" element={<Preview302 />} />
+        <Route path="/preview303" element={<Preview303 />} />
+        <Route path="/preview304" element={<Preview304 />} />
+        <Route path="/preview305" element={<Preview305 />} />
+        <Route path="/preview306" element={<Preview306 />} />
+        <Route path="/preview307" element={<Preview307 />} />
+        <Route path="/preview308" element={<Preview308 />} />
+
+
       </Routes>
       <Footer />
     </Router>
