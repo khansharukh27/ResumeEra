@@ -371,6 +371,10 @@ import ResumeQoutes from "./component/ImportantPost/ResumeQoutes.jsx";
 import SimpleResumeFormatPDFDownload from "./component/ImportantPost/SimpleResumeFormatPDFDownload.jsx";
 import HowtoMakeaResumeforFreshers from "./component/ImportantPost/HowtoMakeaResumeforFreshers.js";
 import HowtoWriteaStrongResumeObjective from "./component/blog/HowtoWriteaStrongResumeObjective.jsx";
+import { HelmetProvider } from "react-helmet-async";
+import ResumeForInternship from "./component/ImportantPost/ResumeForInternship.jsx";
+import Upload from "./component/pages/Upload.js";
+import Edit from "./component/pages/Edit.js";
 
 var images = [
   { id: 1, src: resum1, alt: "Professional Resume Template 1" },
@@ -477,7 +481,7 @@ function App() {
   
   return (
     <div>
-      
+      <HelmetProvider>
     <Router style={{ backgroundColor: "black", width: "100%" }}>
     <GoogleAnalytics/>
       <Auth0Provider
@@ -499,7 +503,7 @@ function App() {
           path="https://sharukhmirza88.us.auth0.com/u/login?state=hKFo2SBrSmlGbld4Mkh5N2JoMUJVaVJSTUNzei1KRDZlVkxUVqFur3VuaXZlcnNhbC1sb2dpbqN0aWTZIDZEX1o5bHVra21hRXNpdVFjSTY2YlRpQ1FPLW5VWnBHo2NpZNkgWFFGODVGVFlJODdQOXRYNHoxOE5sdzFucHkxTjhCbng"
           element={<Login />}
         />
-        <Route path="/" element={<Home images={images} />} />
+        <Route path="/" element={<Home  images={images} />} />
         <Route path="*" element={<NotFoundPage />} />
         <Route
           path="/template"
@@ -568,8 +572,15 @@ function App() {
           path="/coverletter_component"
           element={<CoverComponent CoverImage={CoverImage} />}
         />
-
-
+        <Route
+          path="/upload"
+          element={<Upload CoverImage={CoverImage} />}
+        />
+        <Route
+          path="/edit"
+          element={<Edit CoverImage={CoverImage} />}
+        />
+        
 {/* <Route
           path="/site-map-notifier"
           element={<SitemapNotifier />}
@@ -989,7 +1000,7 @@ function App() {
         />
         <Route
           path="/Resume_Formatting_Errors_That_Fail_to_Reflect_Career_Breaks"
-          element={<ReflectCareerBreaks/>}
+          element={<ReflectCareerBreaks CoverImage = {CoverImage} techImages={techImages}/>}
         />
 <Route
           path="/how-to-hide-spelling-and-grammar-mistakes-through-formatting-a-resume"
@@ -1375,7 +1386,11 @@ function App() {
         />
         <Route
           path="/how-to-write-a-strong-resume-objective"
-          element={<HowtoWriteaStrongResumeObjective techImages={techImages} />}
+          element={<HowtoWriteaStrongResumeObjective fresherResumeImage={fresherResumeImage} techImages={techImages} />}
+        />
+        <Route
+          path="/resume-for-internship"
+          element={<ResumeForInternship fresherResumeImage={fresherResumeImage} techImages={techImages} />}
         />
 
 
@@ -1537,6 +1552,7 @@ function App() {
       </Routes>
       <Footer />
     </Router>
+    </HelmetProvider>
     </div>
   );
 }

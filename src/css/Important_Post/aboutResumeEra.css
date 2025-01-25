@@ -9,7 +9,7 @@
     margin-left: auto;
     margin-right: auto;
     border-radius: 25px;
-    background-color: #4d9b57; /* Added to ensure background color */
+    background-color: #dffce3; /* Added to ensure background color */
 }
 .header{
     
@@ -200,7 +200,53 @@ th {
     font-family: 'Times New Roman', Times, serif;
     text-align: center;
 }
+.aboutResumeEra .faqs{
+    border: 2px dashed salmon;
+    border-radius: 25px;
+    padding: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
 
+}
+.faq-item {
+    flex: 1 1 30%; /* Flexible width with min size control */
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #f9f9f9;
+  }
+.aboutResumeEra .question{
+
+}
+.aboutResumeEra .image-withcontent{
+    display: flex;
+    justify-content: space-around;
+
+}
+.image-withcontent .content{
+    width: 50%;
+padding: 5px;
+}
+.image-withcontent .image{
+    width: 50%;
+    margin: 25px;
+}
+.why-we img{
+width: 150px;
+height: 250px;
+margin: 30px;
+
+}
+.why-we h2{
+    margin-top: -10px;
+}
+.why-we .why-we-div{
+    display: flex;
+
+}
 /* Responsive Styles for Small Screens */
 @media (max-width: 768px) {
     .aboutResumeEra {
@@ -267,6 +313,7 @@ th {
     margin: 5px;
 
 }
+
 
 @media (max-width: 768px) {
     .aboutResumeEra {
@@ -395,5 +442,26 @@ th {
     .table-of-content{
         margin-top: 500px;
     }
+    .why-we-div{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .why-we-div h3{
+        font-size: 1rem;
+
+    }
+    .why-we-div p{
+        font-size: .5rem;
+    }
+    .why-we img{
+        width: 100%;
+        height: auto;
+    }
+        .faqs {
+            flex-direction: column;
+          }
+          .faq-item {
+            flex: 1 1 100%;
+          }
 }
 

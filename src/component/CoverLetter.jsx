@@ -262,6 +262,7 @@ const CoverLetter = (props) => {
                             className="template-image"
                             src={image.src}
                             alt={image.alt}
+                            style={{height:'350px',width:'250px'}}
                         />
                         {hoveredImage === image.id && (
                             <a

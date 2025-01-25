@@ -18,9 +18,9 @@ export default function FreeResumeFormat() {
   return (
     <div>
       <Helmet>
-    <title>Free Resume Format PDF: Simple, Professional, and Ready to Download | ResumeEra</title>
+    <title>Free Resume Format pdf:Simple,Professional,and Ready to Download | ResumeEra</title>
     <meta name="description" content="Download a simple and professional resume format PDF. Get the perfect template to create a standout CV and boost your chances of landing your dream job!" />
-    <meta name="keywords" content="Free Resume Format PDF, Resume Download, Simple Resume Template, Professional CV Format, Resume PDF Template, Resume Tips" />
+    <meta name="keywords" content="free reusme format,Free Resume Format PDF, Resume Download, Simple Resume Template, Professional CV Format, Resume PDF Template, Resume Tips" />
     <link rel="canonical" href="https://resumeera.xyz/free-resume-format-pdf-simple-professional-and-ready-to-download" />
 
     <meta name="twitter:card" content="summary_large_image" />

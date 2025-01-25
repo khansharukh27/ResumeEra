@@ -1316,8 +1316,15 @@ const ImportantPostLink = () => {
       src: 'https://img.freepik.com/free-vector/illustrated-choice-worker-concept_52683-44355.jpg',
       alt: "How to Write a Strong Resume Objective",
     },
+    {
+      path: "/resume-for-internship",
+      title: "Resume for Internship - Create Your Perfect Internship Resume",
+      src: 'https://img.freepik.com/free-vector/online-cv-concept_23-2148555717.jpg?t=st=1737619117~exp=1737622717~hmac=99f5c909b8d31a5decdb213fea7772d22dd998f43cd39e98ab65452e5826c3e2&w=740',
+      alt: "Resume for Internship",
+    },
 
   ];
+  
   
   
   // Filter posts based on search term

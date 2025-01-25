@@ -7,7 +7,7 @@ const AuthWrapper = ({ children }) => {
     if (!isAuthenticated) {
         return (
             <div style={{  textAlign:'center'}}>
-                <h2>Login to Access the App</h2>
+                <p>Login to Access the App</p>
                 <Login />
             </div>
         );

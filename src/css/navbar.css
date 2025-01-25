@@ -75,6 +75,8 @@
     text-decoration: none;
     color:white;
     margin: 5px;
+    font-size: 1rem;
+    
 }
 
 .navbar-link:hover {

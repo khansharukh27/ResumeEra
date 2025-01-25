@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { Helmet } from "react-helmet";
 import CallToAction from "../CallToAction";
 import RandomeArticleToBlogCareer from "../RandomeArticleToBlogCareer";
@@ -6,7 +6,16 @@ import AuthorCard from "../AuthorCard";
 import Reflect_Career_Breaks from "../../image/image_for_link/Reflect Career Breaks.jpeg";
 import ShareButtons from "../shareButton/ShareButtons";
 import GoogleAd from "../adFolder/GoogleAd";
-export default function ReflectCareerBreaks() {
+import { useDispatch } from "react-redux";
+import { Link, Navigate } from "react-router-dom";
+import { templatePage } from "../../Redux/action";
+import ImageCard from "../ImageCardResusable/ImageCardResumeble";
+import CoverComponent from "../CoverComponent";
+import CoverLetter from "../CoverLetter";
+export default function ReflectCareerBreaks(prop) {
+  const [hoveredImage, setHoveredImage] = useState();
+  const { techImages,CoverImage } = prop
+  console.log('reflect:-',CoverImage)
   const ArticleUrl =
     "https://resumeera.xyz/Resume_Formatting_Errors_That_Fail_to_Reflect_Career_Breaks";
   const ArticleTitle =
@@ -14,6 +23,28 @@ export default function ReflectCareerBreaks() {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+  const publishDate = '2025-01-11'
+  const dispatch = useDispatch();
+
+  const selectedImageId = 110;//chronoligical resume
+  const selectedimage = techImages.find((image) => image.id === selectedImageId)
+  const selectedImageId2 = 111;//functional resume
+  const selectedimage2 = techImages.find((image) => image.id === selectedImageId2)
+  const selectedImageId3 = 112; //minimalistik
+  const selectedimage3 = techImages.find((image) => image.id === selectedImageId3)
+  const selectedImageId4 = 109 //creative
+  const selectedimage4 = techImages.find((image) => image.id === selectedImageId4)
+  const selectedImageId5 = 116 //creative
+  const selectedimage5 = techImages.find((image) => image.id === selectedImageId5)
+  const selectedImageId6 = 107 // infografic resume
+  const selectedimage6 = techImages.find((image) => image.id === selectedImageId6)
+  console.log('hoveredImage:-,', hoveredImage)
+  const handleClick = (e, imageId) => {
+    e.preventDefault();
+    const path = `/techmain/${imageId}`;
+    Navigate(path);
+    dispatch(templatePage(hoveredImage));
+  };
   return (
     <div>
       <Helmet>
@@ -118,6 +149,13 @@ export default function ReflectCareerBreaks() {
             gaps transparently can significantly improve your chances of
             securing your next role. ✨💼📈
           </p>
+          <blockquote>
+      <p>
+        "Be proactive about sharing any gaps in employment. The past stigma of career breaks has changed significantly. 
+        Speak to the break and convey the accomplishments attained during this time. There are many transferrable skills learned through life experiences."
+      </p>
+      <footer>- Carolynn Bruce</footer>
+    </blockquote>
           <div>
             <GoogleAd />
           </div>
@@ -269,6 +307,16 @@ export default function ReflectCareerBreaks() {
             </li>
             <li>
               <strong>Use Functional Resume Format</strong>
+              {[selectedimage2].map((image) => (
+                <ImageCard
+                  key={image.id}
+                  image={image}
+                  hoveredImage={hoveredImage}
+                  setHoveredImage={setHoveredImage}
+                  handleClick={(e) => handleClick(e, image.id)}
+
+                />
+              ))}
               <p>
                 If your breaks are significant, consider a functional format
                 that emphasizes skills and achievements over a chronological
@@ -281,9 +329,7 @@ export default function ReflectCareerBreaks() {
                 contributions, you can ensure that your resume highlights your
                 value rather than dwelling on periods of inactivity. 💡🖋️🚀
               </p>
-              <div>
-                <GoogleAd />
-              </div>
+
             </li>
             <li>
               <strong>Be Honest and Concise</strong>
@@ -301,9 +347,7 @@ export default function ReflectCareerBreaks() {
                 communicating value. Highlighting achievements during the break
                 keeps the focus on your potential. ✨📚🎯
               </p>
-              <div>
-                <GoogleAd />
-              </div>
+
             </li>
             <li>
               <strong>Highlight Transferable Skills</strong>
@@ -319,9 +363,7 @@ export default function ReflectCareerBreaks() {
                 reassure employers of your readiness to contribute effectively
                 in a new role. 🌍💪🔑
               </p>
-              <div>
-                <GoogleAd />
-              </div>
+
             </li>
           </ol>
           <h3>Examples of Addressing Career Breaks</h3>
@@ -338,9 +380,7 @@ export default function ReflectCareerBreaks() {
                 creation. Developed time management and self-discipline while
                 juggling multiple clients.
               </p>
-              <div>
-                <GoogleAd />
-              </div>
+
             </li>
             <li>
               <strong>Family Caregiver | Mar 2018 - Nov 2019</strong>
@@ -349,9 +389,7 @@ export default function ReflectCareerBreaks() {
                 project management and agile methodologies. Gained valuable
                 skills in organization and problem-solving.
               </p>
-              <div>
-                <GoogleAd />
-              </div>
+
             </li>
             <li>
               <strong>
@@ -370,9 +408,7 @@ export default function ReflectCareerBreaks() {
             opportunities, making your career breaks a testament to your
             adaptability and growth. 🌎🌟📝
           </p>
-          <div>
-            <GoogleAd />
-          </div>
+
           <h3>Tools to Perfect Your Resume Formatting</h3>
           <p>
             Several online resume builders, such as ResumeEra, offer templates
@@ -431,24 +467,29 @@ export default function ReflectCareerBreaks() {
           <ol>
             <li>
               <strong>Leverage Your Cover Letter</strong>
+               <div style={{display:'flex',flexWrap:'wrap',gap:'16px',marginTop:'15px'}}>
+                {CoverImage && CoverImage.map((img)=>(
+                  
+                  <Link to="/cover_letter" key={img.id} >
+                    <img src={img.src} alt={img.alt} style={{width:'250px',height:'350px'}}/>
+                  </Link>
+                    
+                ))}
+               </div>
               <p>
                 Use your cover letter to expand on your career break. Highlight
                 how it contributed to your personal and professional
                 development. This allows you to control the narrative and show
                 how you’re prepared for the role you’re applying for.
               </p>
-              <div>
-                <GoogleAd />
-              </div>
+
               <p>
                 Cover letters offer a unique opportunity to frame your story in
                 a positive light. By addressing career breaks proactively, you
                 set the stage for constructive conversations during interviews.
                 📝📬🌟
               </p>
-              <div>
-                <GoogleAd />
-              </div>
+
             </li>
             <li>
               <strong>Prepare for Interviews</strong>
@@ -457,18 +498,14 @@ export default function ReflectCareerBreaks() {
                 interviews. Practice framing them positively, emphasizing the
                 skills and insights you gained during those periods.
               </p>
-              <div>
-                <GoogleAd />
-              </div>
+
               <p>
                 Confidence in addressing career breaks during interviews
                 reflects your self-assuredness and growth mindset. Preparing
                 answers in advance ensures you handle such questions
                 effectively. 💬🗣️✔️
               </p>
-              <div>
-                <GoogleAd />
-              </div>
+
             </li>
             <li>
               <strong>Include Volunteer Work and Freelance Projects</strong>
@@ -477,11 +514,12 @@ export default function ReflectCareerBreaks() {
                 resume active. Mention any volunteer or freelance work, even if
                 it wasn’t full-time. 💬🤝🎯
               </p>
-              <div>
-                <GoogleAd />
-              </div>
+
             </li>
           </ol>
+          <div>
+            <GoogleAd />
+          </div>
           <h3>Final Thoughts</h3>
           <p>
             Reflecting career breaks on your resume isn’t about hiding them but
@@ -490,9 +528,7 @@ export default function ReflectCareerBreaks() {
             career breaks effectively showcases resilience, adaptability, and a
             proactive attitude. ✨💡🌟
           </p>
-          <div>
-            <GoogleAd />
-          </div>
+
           <p>
             By avoiding common formatting errors and leveraging tools like
             ResumeEra, you can create a polished resume that highlights your
@@ -506,71 +542,76 @@ export default function ReflectCareerBreaks() {
             <GoogleAd />
           </div>
         </section>
-        <section>
-          <h3>Frequently Asked Questions (FAQ)</h3>
-          <div>
-            <h4>1. Should I mention short career breaks on my resume?</h4>
-            <p>
-              Yes, it’s advisable to mention even short career breaks to
-              maintain transparency. Briefly explain the reason and focus on any
-              skills or experiences gained during that time.
-            </p>
-            <div>
-              <GoogleAd />
+        <section >
+          <h3 className="text-center">Frequently Asked Questions (FAQ)</h3>
+
+          <div className="faqs">
+
+            <div className='faq-item'>
+              <h4>1. Should I mention short career breaks on my resume?</h4>
+              <p>
+                Yes, it’s advisable to mention even short career breaks to
+                maintain transparency. Briefly explain the reason and focus on any
+                skills or experiences gained during that time.
+              </p>
+
+            </div>
+            <div className='faq-item'>
+              <h4>
+                2. How can I explain a career break due to personal reasons?
+              </h4>
+              <p>
+                Be honest but concise. You can mention that you took time off for
+                personal reasons and highlight any relevant skills or activities
+                you engaged in during the break.
+              </p>
+
+            </div>
+            <div className='faq-item'>
+              <h4>3. Can career breaks negatively impact my job search?</h4>
+              <p>
+                Career breaks can be perceived negatively if not addressed
+                properly. However, by explaining the break and showcasing any
+                productive activities, you can turn it into a positive aspect of
+                your resume.
+              </p>
+
+            </div >
+            <div className='faq-item'>
+              <h4>
+                4. Should I use a different resume format to address career
+                breaks?
+              </h4>
+              <p>
+                Consider using a functional resume format if you have significant
+                a <Link to=''>chronological</Link> timeline.
+                career breaks. This format emphasizes skills and achievements over
+              </p>
+
+            </div>
+            <div className='faq-item'>
+              <h4>
+                5. How can I prepare for interview questions about my career
+                break?
+              </h4>
+              <p>
+                Practice framing your career break positively, focusing on the
+                skills and insights you gained. Be ready to discuss it confidently
+                and honestly during <Link to='/Interview_Question_Post'>interviews</Link> .
+              </p>
+
             </div>
           </div>
+        </section>
+        <section className="releted-article">
+          <h2>RELETED ARTICLE:- YOU CAN'T MISS IF YOU WANT TO CREATE RESUME</h2>
           <div>
-            <h4>
-              2. How can I explain a career break due to personal reasons?
-            </h4>
-            <p>
-              Be honest but concise. You can mention that you took time off for
-              personal reasons and highlight any relevant skills or activities
-              you engaged in during the break.
-            </p>
-            <div>
-              <GoogleAd />
-            </div>
-          </div>
-          <div>
-            <h4>3. Can career breaks negatively impact my job search?</h4>
-            <p>
-              Career breaks can be perceived negatively if not addressed
-              properly. However, by explaining the break and showcasing any
-              productive activities, you can turn it into a positive aspect of
-              your resume.
-            </p>
-            <div>
-              <GoogleAd />
-            </div>
-          </div>
-          <div>
-            <h4>
-              4. Should I use a different resume format to address career
-              breaks?
-            </h4>
-            <p>
-              Consider using a functional resume format if you have significant
-              career breaks. This format emphasizes skills and achievements over
-              a chronological timeline.
-            </p>
-            <div>
-              <GoogleAd />
-            </div>
-          </div>
-          <div>
-            <h4>
-              5. How can I prepare for interview questions about my career
-              break?
-            </h4>
-            <p>
-              Practice framing your career break positively, focusing on the
-              skills and insights you gained. Be ready to discuss it confidently
-              and honestly during interviews.
-            </p>
-            <div>
-              <GoogleAd />
-            </div>
+            <Link to='https://resumeera.xyz/simple-resume-format-pdf-download'>SIMPLE RESUME FORMAT PDF DOWNLOAD</Link>
+            <br /><Link to='https://resumeera.xyz/resume-quotes'>RESUME QOUTES</Link>
+            <br /><Link to='https://resumeera.xyz/resume-pdf-download'>RESUME PDF DOWNLOAD</Link>
+            <br /><Link to='https://resumeera.xyz/resume-format-pdf-for-fresher'>RESUME FORMAT PDF FOR FRESHER</Link>
+            <br /><Link to='https://resumeera.xyz/resume-pdf'>RESUME PDF</Link>
+
           </div>
         </section>
       </article>

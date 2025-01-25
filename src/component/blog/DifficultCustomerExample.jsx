@@ -4,8 +4,6 @@ import ShareButtons from '../shareButton/ShareButtons';
 import DaysSincePost from '../DaySincePost';
 import GoogleAd from '../adFolder/GoogleAd';
 import { useEffect } from 'react';
-// import './DifficultCustomerExample.css';
-
 const DifficultCustomerExample = () => {
     const ArticleUrl = 'https://resumeera.xyz/dealing-with-difficult-customers'
     const ArticleTitle = 'How to Handle Difficult Customers | ResumeEra'

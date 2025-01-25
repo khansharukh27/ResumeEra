@@ -12,6 +12,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import { useDispatch } from 'react-redux';
 import ImageCard from '../ImageCardResusable/ImageCardResumeble';
 import { templatePage } from '../../Redux/action';
+import TechnicalResumeImages from '../TechResume/TechnicalResumeImages';
 export default function ResumeFormat(prop) {
   const [hoveredImage, setHoveredImage] = useState();
   const { techImages } = prop
@@ -46,7 +47,7 @@ export default function ResumeFormat(prop) {
   return (
     <div>
       <Helmet>
-        <title>Resume Format| ResumeEra</title>
+        <title>Resume Format | Download Professional Resume Templates</title>
         <meta
           name="description"
           content="Discover the perfect resume format for your career. Learn about chronological, functional, and combination resume formats with tips and templates to help you land your dream job."
@@ -127,12 +128,77 @@ export default function ResumeFormat(prop) {
             A well-crafted resume can open doors 🚪 and help you stand out in a competitive job market.
             But how do you know which <Link to='https://resumeera.xyz/resume-format-pdf'>resume format</Link> to choose? 🤔</p>
           <p>In this article, I’m going to walk you through everything you need to know about choosing the right resume format, and how platforms like <strong>Resumeera.xyz</strong> can make the process a lot easier and more efficient 💼.</p>
-        </section><div><GoogleAd /></div>
+        </section >
+        <section className='why-we'>
+          <div className=''>
+            <h2 className='text-center'>Why ResumeEra </h2>
+            <div className='why-we-div'>
+              <img src="https://img.freepik.com/free-vector/money-bank-notes-stack-glyph-style_78370-4488.jpg" alt="offer free" />
+              <div>
+                <h3>We Offer You Only free Resume Format</h3>
+                <p>At ResumeEra, we provide a wide range of resume templates to suit every need.
+                  Whether you're looking for a free option or a more advanced template,
+                  we've got you covered. Our free resume templates are designed to be professional and easy to
+                  customize, ensuring that you can create a standout resume no matter your budget. With our
+                  intuitive resume builder, you can choose from various styles and formats that align with your
+                  career goals, giving you the tools to craft a resume that truly reflects your skills and
+                  experience. Start building your resume with us today!
+                </p>
+              </div>
+            </div>
+            <div className='why-we-div'>
+              <img src="https://img.freepik.com/free-vector/creativity-concept-illustration_114360-1176.jpg"
+                loading='lazy' alt="creative and profetional resume" />
+              <div>
+                <h3>Creative & Professional Resume Templates</h3>
+                <p>Whether you’re a creative advertiser looking for an outside-the-box resume template or a
+                  banker seeking a more professional design, we’ve got the perfect template for you! At ResumeEra,
+                  we offer a variety of templates that cater to different industries and career paths. From bold and
+                  unique designs for creative professionals to clean and formal layouts for corporate roles,
+                  our resume builder ensures you'll find a template that showcases your skills and experience in
+                  the best light.
+                  Start creating your ideal resume today, no matter your field or style!</p>
+              </div>
+            </div>
+          </div>
+          <div className='why-we-div'>
+            <img src="https://img.freepik.com/free-vector/stop-corruption-concept-illustration_114360-13709.jpg" alt="no hidden fees" loading='lazy' />
+            <div >
+              <h3>NO Hidden Fees</h3>
+              <p>If you’ve tried other resume builders, you’ve probably encountered this
+                frustrating scenario: after spending hours crafting your resume, you click “download,”
+                only to be met with a paywall asking you to subscribe.
+                At ResumeEra, we don’t do that. We believe in transparency and providing value upfront.
+                Our platform is completely free, with no hidden fees. You only need to consider a
+                paid upgrade if you absolutely love our resumes and want additional features. We’re here to make your resume-building experience seamless and affordable! Start creating your professional resume today,
+                with no surprises along the way.</p>
+            </div>
+          </div>
+          <div className='why-we-div'>
+            <img src='https://img.freepik.com/free-vector/partners-shaking-hands_74855-2504.jpg' loading='lazy' alt='ats friendly'></img>
+            <div>
+              <h3>ATS Friendly</h3>
+              <p>At ResumeEra, our resume templates are designed with the most popular Applicant Tracking Systems
+                (ATS) in mind. This means that no matter which job you apply for, the ATS software used by employers
+                will be able to read and properly parse your resume. You won’t have to worry about your resume being
+                automatically discarded due to formatting issues. With our ATS-friendly templates, you can be confident
+                that your resume will get the attention it deserves and increase your chances of landing an interview.
+                Create your standout resume with us today!</p>
+            </div>
+
+          </div>
+        </section>
+
+        <div><GoogleAd /></div>
 
         <section>
           <h2>What is a Resume Format? 📝</h2>
           <p>A <Link to='https://resumeera.xyz/resume-format-pdf'>resume format</Link>t refers to the structure and layout of your resume. It dictates how your information is organized and presented. The right format makes it easy for potential employers to find the information they need quickly and efficiently ⚡. The main goal of a resume format is to highlight your skills, experience, and qualifications in the most professional way possible 🎯.</p>
-          <p>There are several types of resume formats, and each has its advantages depending on your career goals and work history 📊. Choosing the right one can make a big difference in how hiring managers view your resume 👀.</p>
+          <p>There are several types of resume formats, and each has its advantages depending on
+            your career goals and work history 📊. Choosing the right one can make a big difference in
+            how hiring managers view your resume 👀.</p>
+          <p>right now we offer only pdf resume resume template to every job seeker's</p>
+          <TechnicalResumeImages techImages={techImages} />
         </section><div><GoogleAd /></div>
 
         <section>
@@ -374,25 +440,41 @@ export default function ResumeFormat(prop) {
           </ul>
         </section><div><GoogleAd /></div>
 
-        <section>
-          <h2>Frequently Asked Questions (FAQ) ❓</h2>
+        <section >
+          <h2 className='text-center'>Frequently Asked Questions (FAQ) ❓</h2>
+          <div className='faqs'>
+            <div  className='faq-item'>
+              <h3>Q: How do I decide which resume format to use? 🤔</h3>
+              <p>Choose a chronological format if you have a steady work history, a functional format if
+                you’re changing careers, and a combination format if you want to highlight both your skills
+                and experience 🔄.</p>
+            </div>
+            <div  className='faq-item'>
+              <h3>Q: Can I use Resumeera.xyz for free? 💸</h3>
+              <p>Yes, <strong>Resumeera.xyz</strong> offers a free version that allows you to create and download resumes without any hidden fees 🙌.</p>
 
-          <h3>Q: How do I decide which resume format to use? 🤔</h3>
-          <p>Choose a chronological format if you have a steady work history, a functional format if
-            you’re changing careers, and a combination format if you want to highlight both your skills
-            and experience 🔄.</p>
-
-          <h3>Q: Can I use Resumeera.xyz for free? 💸</h3>
-          <p>Yes, <strong>Resumeera.xyz</strong> offers a free version that allows you to create and download resumes without any hidden fees 🙌.</p>
-
-          <h3>Q: How long should my resume be? 📃</h3>
-          <p>Typically, resumes should be one to two pages long. If you’re just starting out, one page is often sufficient. For more experienced professionals, two pages may be necessary 📏.</p>
+            </div>
+            <div  className='faq-item'>
+              <h3>Q: How long should my resume be? 📃</h3>
+              <p>Typically, resumes should be one to two pages long. If you’re just starting out, one page is often sufficient. For more experienced professionals, two pages may be necessary 📏.</p>
+            </div>
+          </div>
         </section><div><GoogleAd /></div>
 
         <section>
           <h2>Conclusion 🎉</h2>
           <p>Choosing the right <Link to='https://resumeera.xyz/resume-format-pdf'>resume format</Link> is an important step in your job search journey 🚀. Whether you choose a chronological, functional, or combination format, make sure your resume highlights your strengths and qualifications in a clear and professional manner 📈. Platforms like <strong>Resumeera.xyz</strong> can help you create an impressive resume quickly and easily ⚡. Good luck with your job search, and remember to stay confident – the right opportunity is just around the corner! 💼✨</p>
         </section><div><GoogleAd /></div>
+        <section className='releted-article'>
+          <h2>RELETED ARTICLE :- YOU CAN'T MISS IF YOU WANT TO CREATE A PROFETIONAL RESUME</h2>
+          <Link to='https://resumeera.xyz/infographic-resume-vs-traditional-resume-formatting'> INFOGRAPHIC RESUME VS TRADITIONAL RESUME FORMATTING</Link>
+          <br /><Link to='https://resumeera.xyz/chronological-vs-functional-resume-formatting'>CHRONOLOGICAL VS FUNCTIONAL RESUME FORMATTING</Link>
+          <br /><Link to='https://resumeera.xyz/pdf-vs-word-resume'>PDF VS WORD RESUME</Link>
+          <br /><Link to='https://resumeera.xyz/professional-resume-format-pdf'> PROFESSIONAL RESUME FORMAT PDF</Link>
+          <br /><Link to='https://resumeera.xyz/common-layout-mistakes-that-make-your-resume-unprofessional'>COMMON LAYOUT MISTAKES THAT MAKE YOUR RESUME UNPROFESSIONAL</Link>
+          <br /><Link to='https://resumeera.xyz/how-to-hide-spelling-and-grammar-mistakes-through-formatting-a-resume'>HOW TO IDE SPELLING AND GRAMMAR MISTAKES THROUGH FORMATTING A RESUME</Link>
+
+        </section>
         <div>
           <WelcomeNotes />
           <RandomeArticleToBlogCareer />

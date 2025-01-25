@@ -66,7 +66,7 @@ const AIBiasInHiring = () => {
           </p>
         </header>
 <div><GoogleAd/></div>
-        <section>
+        <section className="releted-article">
           <h2>Why Companies Use AI in Hiring</h2>
           <p>
             The hiring process is notoriously time-consuming, with recruiters
@@ -146,7 +146,7 @@ const AIBiasInHiring = () => {
           </p>
         </footer>
         <div><GoogleAd/></div>
-        <section>
+        <section className="releted-article">
           <h3>FAQ</h3>
           <div>
             <h4>Can AI completely eliminate bias in hiring?</h4>

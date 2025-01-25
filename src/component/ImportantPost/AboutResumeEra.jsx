@@ -12,17 +12,17 @@ import AuthorCard from "../AuthorCard";
 const AboutResumeEra = () => {
   const ArticleUrl =
     "https://resumeera.xyz/improving-your-resume-with-action-verbs";
-  const ArticleTitle = "ResumeEra: Craft Your Perfect and free Resume Today";
+  const ArticleTitle = "ResumeEra: Craft Your Perfect and Free resume format Today";
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
   return (
     <div>
       <Helmet>
-        <title>Craft Your Perfect and free Resume Today| ResumeEra | 2025</title>
+        <title>Craft Your Perfect and Free resume format format Today| ResumeEra | 2025</title>
         <link
           rel="canonical"
-          href="https://resumeera.xyz/improving-your-resume-with-action-verbs"
+          href="https://resumeera.xyz/free-resume-format-today"
         />
         <meta
           name="description"
@@ -32,7 +32,7 @@ const AboutResumeEra = () => {
         />
         <meta
           name="keywords"
-          content="ResumeEra, free resumes, resume builder, professional resume, modern templates, resume tips, career growth"
+          content="ResumeEra, Free resume formats, resume builder, professional resume, modern templates, resume tips, career growth"
         />
         <meta name="author" content="ResumeEra" />
         <meta
@@ -43,7 +43,7 @@ const AboutResumeEra = () => {
           property="og:description"
           content="Join ResumeEra to create stunning professional resumes without any cost. Customize, download, and share your resume instantly."
         />
-        <meta property="og:url" content="https://resumeera.xyz/about" />
+        <meta property="og:url" content="https://resumeera.xyz/free-resume-format-today" />
         <meta property="og:type" content="website" />
       </Helmet>
       <div className="aboutResumeEra">

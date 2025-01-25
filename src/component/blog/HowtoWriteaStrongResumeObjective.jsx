@@ -11,9 +11,11 @@ import { Link, useNavigate } from 'react-router-dom';
 import GetNoticedwith from '../../image/image_for_link/Get Noticed with the Best Resume.jpeg'
 import { useDispatch } from 'react-redux';
 import { templatePage } from '../../Redux/action';
+import SEO from '../SEO';
+import FresherResume from '../FresherResume';
 export default function HowtoWriteaStrongResumeObjective(prop) {
     const [hoveredImage, setHoveredImage] = useState();
-    const { techImages } = prop
+    const { techImages,fresherResumeImage } = prop
     const navigate = useNavigate();
     const ArticleUrl = "https://resumeera.xyz/how-to-write-a-strong-resume-objective";
     const ArticleTitle = "How to Write a Strong Resume Objective - Resumeera";
@@ -45,19 +47,22 @@ export default function HowtoWriteaStrongResumeObjective(prop) {
 
     return (
         <div>
-            <Helmet>
-                <title>How to Write a Strong Resume Objective - Resumeera</title>
-                <meta name="description" content="Learn how to write a compelling and professional resume objective that highlights your skills, experience, and career goals effectively on your resume." />
-                <meta name="keywords" content="resume objective, writing a resume, resume tips, career objective, resume guide, resume writing tips" />
-                <link rel="canonical" href="https://resumeera.xyz/how-to-write-a-strong-resume-objective" />
-                <meta property="og:title" content="How to Write a Strong Resume Objective - Resumeera" />
-                <meta property="og:description" content="Learn how to write a compelling and professional resume objective that highlights your skills, experience, and career goals effectively on your resume." />
-                <meta property="og:url" content="https://resumeera.xyz/how-to-write-a-strong-resume-objective" />
-                <meta property="og:image" content="https://img.freepik.com/free-vector/illustrated-choice-worker-concept_52683-44355.jpg" />
-                <meta name="twitter:title" content="How to Write a Strong Resume Objective - Resumeera" />
-                <meta name="twitter:description" content="Learn how to write a compelling and professional resume objective that highlights your skills, experience, and career goals effectively on your resume." />
-                <meta name="twitter:image" content="https://img.freepik.com/free-vector/illustrated-choice-worker-concept_52683-44355.jpg" />
-                <meta name="twitter:card" content="summary_large_image" />
+            
+                <SEO
+                    title="How to Write a Strong Resume Objective - Resumeera"
+                    description="Learn how to write a compelling and professional resume objective that highlights your skills, experience, and career goals effectively on your resume."
+                    keywords="resume objective, writing a resume, resume tips, career objective, resume guide, resume writing tips"
+                    canonical="https://resumeera.xyz/how-to-write-a-strong-resume-objective"
+                    ogTitle="How to Write a Strong Resume Objective - Resumeera"
+                    ogDescription="Learn how to write a compelling and professional resume objective that highlights your skills, experience, and career goals effectively on your resume."
+                    ogUrl="https://resumeera.xyz/how-to-write-a-strong-resume-objective"
+                    ogImage="https://img.freepik.com/free-vector/illustrated-choice-worker-concept_52683-44355.jpg"
+                    twitterTitle="How to Write a Strong Resume Objective - Resumeera"
+                    twitterDescription="Learn how to write a compelling and professional resume objective that highlights your skills, experience, and career goals effectively on your resume."
+                    twitterImage="https://img.freepik.com/free-vector/illustrated-choice-worker-concept_52683-44355.jpg"
+                    twitterCard="summary_large_image"
+                />
+ <Helmet>
                 <script type="application/ld+json">
                     {`{
   "@context": "https://schema.org",
@@ -85,7 +90,7 @@ export default function HowtoWriteaStrongResumeObjective(prop) {
 }`}
                 </script>
                 <script type="application/ld+json">
-{`{
+                    {`{
   "@context": "https://schema.org",
   "@type": "FAQPage",
   "mainEntity": [
@@ -131,7 +136,7 @@ export default function HowtoWriteaStrongResumeObjective(prop) {
     }
   ]
 }`}
-</script>
+                </script>
             </Helmet>
 
             <article className='aboutResumeEra'>
@@ -173,11 +178,12 @@ export default function HowtoWriteaStrongResumeObjective(prop) {
                         </tr>
                     </tbody>
                 </table>
+                <FresherResume fresherResumeImage={fresherResumeImage}/>
 
                 <section id="what-is-a-resume-objective">
                     <h2><i class="bi bi-fire"></i>1. What is a Resume Objective?</h2>
                     <p>A resume objective is a brief, concise statement at the beginning of your resume that highlights your career goals, skills, and qualifications. It provides potential employers with a snapshot of what you aim to achieve in the role and how your skills align with the job position.</p>
-                </section>
+                </section><div><GoogleAd/></div>
 
                 <section id="why-is-a-strong-resume-objective-important">
                     <h2><i class="bi bi-fire"></i>2. Why is a Strong Resume Objective Important?</h2>
@@ -187,7 +193,7 @@ export default function HowtoWriteaStrongResumeObjective(prop) {
                         <li><strong>It highlights your strengths:</strong> By summarizing your key skills and qualifications, the objective quickly demonstrates what you can bring to the role.</li>
                         <li><strong>It aligns with the job description:</strong> Tailoring your resume objective to match the job description can help you stand out from other applicants.</li>
                     </ul>
-                </section>
+                </section><div><GoogleAd/></div>
 
                 <section id="how-to-write-a-strong-resume-objective">
                     <h2><i class="bi bi-fire"></i>3. How to Write a Strong Resume Objective</h2>
@@ -201,7 +207,7 @@ export default function HowtoWriteaStrongResumeObjective(prop) {
 
                     <h3><i class="bi bi-fire"></i>3.3 Be Specific and Concise</h3>
                     <p>Your resume objective should be no longer than 2-3 sentences. Focus on your goals and align them with the employer's needs. Keep your language direct and professional.</p>
-                </section>
+                </section><div><GoogleAd/></div>
 
                 <section id="examples-of-strong-resume-objectives">
                     <h2><i class="bi bi-fire"></i>4. Examples of Strong Resume Objectives</h2>
@@ -211,7 +217,7 @@ export default function HowtoWriteaStrongResumeObjective(prop) {
 
                     <h3><i class="bi bi-fire"></i>4.2 For Experienced Candidates</h3>
                     <p>Example: "Experienced software developer with 5+ years of expertise in creating scalable applications, seeking to contribute to innovative software solutions at [Company Name]."</p>
-                </section>
+                </section><div><GoogleAd/></div>
 
                 <section id="common-mistakes-to-avoid">
                     <h2><i class="bi bi-fire"></i>5. Common Mistakes to Avoid</h2>
@@ -221,7 +227,7 @@ export default function HowtoWriteaStrongResumeObjective(prop) {
                         <li><strong>Using vague statements:</strong> Phrases like “seeking an opportunity” are too vague. Employers want to know how you can contribute to their success.</li>
                         <li><strong>Including irrelevant information:</strong> Stay focused on the job you're applying for. Avoid mentioning irrelevant qualifications or personal details.</li>
                     </ul>
-                </section>
+                </section><div><GoogleAd/></div>
 
                 <section id="tips-for-customizing-your-resume-objective">
                     <h2><i class="bi bi-fire"></i>6. Tips for Customizing Your Resume Objective</h2>
@@ -231,179 +237,179 @@ export default function HowtoWriteaStrongResumeObjective(prop) {
                         <li><strong>Showcase your value:</strong> Focus on how you can bring value to the company, not just on your personal career goals.</li>
                         <li><strong>Keep it job-specific:</strong> A tailored objective can significantly increase your chances of getting noticed.</li>
                     </ul>
-                </section>
+                </section><div><GoogleAd/></div>
 
                 <section id="free-resume-objective-templates-and-tools">
                     <h2><i class="bi bi-fire"></i>7. Free Resume Objective Templates and Tools</h2>
                     <p>To make the process easier, you can use free resume objective templates available on ResumeEra.xyz. These templates are designed to help you craft a powerful and effective resume objective in no time.</p>
                     <p>Visit ResumeEra.xyz to download customizable templates that fit your career goals and aspirations.</p>
-                </section>
+                </section><div><GoogleAd/></div>
                 <h2><i class="bi bi-fire"></i>50 Resume Objectives for Freshers</h2>
 
                 <section className='releted-article'>
                     <h2><i class="bi bi-fire"></i>Marketing Fresher</h2>
                     <p>"A recent graduate with a degree in Marketing, eager to apply my knowledge of digital marketing strategies and consumer behavior to help your company increase brand awareness."</p>
-                </section>
+                </section><div><GoogleAd/></div>
 
                 <section className='releted-article'>
                     <h2><i class="bi bi-fire"></i>Software Developer</h2>
                     <p>"Motivated computer science graduate with hands-on experience in software development and problem-solving, seeking to contribute my coding skills and passion for technology to a dynamic team."</p>
-                </section>
+                </section><div><GoogleAd/></div>
 
                 <section className='releted-article'>
                     <h2><i class="bi bi-fire"></i>Data Analyst</h2>
                     <p>"A fresh graduate with strong analytical skills and proficiency in data analysis tools, looking to leverage my knowledge of Excel, SQL, and data visualization to support data-driven decision-making."</p>
-                </section>
+                </section><div><GoogleAd/></div>
 
                 <section className='releted-article'>
                     <h2><i class="bi bi-fire"></i>HR Assistant</h2>
                     <p>"Highly motivated HR graduate with a deep understanding of human resource management, seeking to support HR operations and help foster a positive work culture at your organization."</p>
-                </section>
+                </section><div><GoogleAd/></div>
 
                 <section className='releted-article'>
                     <h2><i class="bi bi-fire"></i>Finance Graduate</h2>
                     <p>"A fresh finance graduate with a keen eye for detail and an understanding of financial modeling and budgeting, eager to apply my skills in an entry-level finance role."</p>
-                </section>
+                </section><div><GoogleAd/></div>
 
                 <section className='releted-article'>
                     <h2><i class="bi bi-fire"></i>Content Writer</h2>
                     <p>"Enthusiastic writer with a flair for storytelling and creativity, seeking an opportunity to contribute engaging, SEO-optimized content to your company’s blog or website."</p>
-                </section>
+                </section><div><GoogleAd/></div>
 
                 <section className='releted-article'>
                     <h2><i class="bi bi-fire"></i>Customer Service Representative</h2>
                     <p>"Recent graduate with strong communication skills and a customer-centric mindset, aiming to provide exceptional customer service and contribute to customer satisfaction in a fast-paced environment."</p>
-                </section>
+                </section><div><GoogleAd/></div>
 
                 <section className='releted-article'>
                     <h2><i class="bi bi-fire"></i>Graphic Designer</h2>
                     <p>"Creative and detail-oriented graduate in graphic design, seeking an opportunity to create visually appealing designs that reflect the brand’s identity and enhance user experiences."</p>
-                </section>
+                </section><div><GoogleAd/></div>
 
                 <section className='releted-article'>
                     <h2><i class="bi bi-fire"></i>Sales Associate</h2>
                     <p>"A fresh graduate with a passion for sales and customer engagement, looking to apply my interpersonal and persuasive skills to help grow your customer base and meet sales goals."</p>
-                </section>
+                </section><div><GoogleAd/></div>
 
                 <section className='releted-article'>
                     <h2><i class="bi bi-fire"></i>Operations Assistant</h2>
                     <p>"Motivated graduate seeking to assist in daily operational tasks and contribute to the efficiency of your organization by applying my organizational and problem-solving skills."</p>
-                </section>
+                </section><div><GoogleAd/></div>
 
                 <section className='releted-article'>
                     <h2><i class="bi bi-fire"></i>Web Developer</h2>
                     <p>"Ambitious web development graduate, seeking to leverage my knowledge of HTML, CSS, JavaScript, and web design to build innovative and user-friendly websites for your company."</p>
-                </section>
+                </section><div><GoogleAd/></div>
 
                 <section className='releted-article'>
                     <h2><i class="bi bi-fire"></i>Product Manager</h2>
                     <p>"Recent graduate with strong organizational and leadership skills, eager to assist in product management processes and help launch products that meet market demands."</p>
-                </section>
+                </section><div><GoogleAd/></div>
 
                 <section className='releted-article'>
                     <h2><i class="bi bi-fire"></i>Digital Marketing Specialist</h2>
                     <p>"A graduate with hands-on experience in SEO, social media marketing, and Google Analytics, seeking to help your company develop and execute successful digital marketing campaigns."</p>
-                </section>
+                </section><div><GoogleAd/></div>
 
                 <section className='releted-article'>
                     <h2><i class="bi bi-fire"></i>Project Coordinator</h2>
                     <p>"Enthusiastic graduate with excellent organizational skills, looking for a role to assist in the coordination of projects and ensure timely and cost-effective completion."</p>
-                </section>
+                </section><div><GoogleAd/></div>
 
                 <section className='releted-article'>
                     <h2><i class="bi bi-fire"></i>Business Analyst</h2>
                     <p>"Recent business graduate, aiming to utilize my analytical skills and understanding of market trends to support decision-making and business strategies in your organization."</p>
-                </section>
+                </section><div><GoogleAd/></div>
 
                 <section className='releted-article'>
                     <h2><i class="bi bi-fire"></i>SEO Specialist</h2>
                     <p>"An entry-level SEO professional with a background in search engine optimization and digital marketing, seeking to enhance your website's visibility and rankings on search engines."</p>
-                </section>
+                </section><div><GoogleAd/></div>
 
                 <section className='releted-article'>
                     <h2><i class="bi bi-fire"></i>Teaching Assistant</h2>
                     <p>"A fresh graduate with a passion for teaching, seeking to assist in creating a supportive learning environment and help students achieve academic success in the classroom."</p>
-                </section>
+                </section><div><GoogleAd/></div>
 
                 <section className='releted-article'>
                     <h2><i class="bi bi-fire"></i>Event Coordinator</h2>
                     <p>"Energetic and organized graduate with a passion for event planning, eager to help organize and execute successful events that align with company goals."</p>
-                </section>
+                </section><div><GoogleAd/></div>
 
                 <section className='releted-article'>
                     <h2><i class="bi bi-fire"></i>Social Media Manager</h2>
                     <p>"A recent graduate in communications, skilled in social media strategy, seeking an opportunity to increase engagement and drive traffic through compelling social media content."</p>
-                </section>
+                </section><div><GoogleAd/></div>
 
                 <section className='releted-article'>
                     <h2><i class="bi bi-fire"></i>Public Relations Assistant</h2>
                     <p>"Recent graduate with a strong understanding of media relations and communication strategies, eager to assist in managing public relations campaigns and enhance brand reputation."</p>
-                </section>
+                </section><div><GoogleAd/></div>
 
                 <section className='releted-article'>
                     <h2><i class="bi bi-fire"></i>Software Tester</h2>
                     <p>"A detail-oriented computer science graduate, seeking an entry-level software testing role to contribute to ensuring high-quality software applications through meticulous testing."</p>
-                </section>
+                </section><div><GoogleAd/></div>
 
                 <section className='releted-article'>
                     <h2><i class="bi bi-fire"></i>Healthcare Administrator</h2>
                     <p>"Graduate with a background in healthcare management, aiming to leverage my organizational and communication skills to contribute to effective healthcare administration and patient care."</p>
-                </section>
+                </section><div><GoogleAd/></div>
 
                 <section className='releted-article'>
                     <h2><i class="bi bi-fire"></i>Administrative Assistant</h2>
                     <p>"Motivated graduate seeking an administrative assistant role to help with office management, scheduling, and ensuring smooth operations within the team."</p>
-                </section>
+                </section><div><GoogleAd/></div>
 
                 <section className='releted-article'>
                     <h2><i class="bi bi-fire"></i>Marketing Research Analyst</h2>
                     <p>"A fresh graduate with a passion for data collection and market research, looking to contribute insights and support informed marketing decisions through data-driven analysis."</p>
-                </section>
+                </section><div><GoogleAd/></div>
 
                 <section className='releted-article'>
                     <h2><i class="bi bi-fire"></i>Civil Engineer</h2>
                     <p>"Recent civil engineering graduate with practical knowledge of construction and design, seeking an opportunity to contribute to infrastructure development projects."</p>
-                </section>
+                </section><div><GoogleAd/></div>
 
                 <section className='releted-article'>
                     <h2><i class="bi bi-fire"></i>Interior Designer</h2>
                     <p>"Creative and detail-oriented interior design graduate, looking to help create functional and aesthetically pleasing environments for clients while expanding my professional skills."</p>
-                </section>
+                </section><div><GoogleAd/></div>
 
                 <section className='releted-article'>
                     <h2><i class="bi bi-fire"></i>Supply Chain Assistant</h2>
                     <p>"A recent graduate with a solid understanding of supply chain management, eager to contribute my skills in inventory control, logistics, and vendor management to enhance business operations."</p>
-                </section>
+                </section><div><GoogleAd/></div>
 
                 <section className='releted-article'>
                     <h2><i class="bi bi-fire"></i>Legal Assistant</h2>
                     <p>"Graduate in law, aiming to apply my legal research, documentation, and organizational skills to support legal teams and assist with case preparations."</p>
-                </section>
+                </section><div><GoogleAd/></div>
 
                 <section className='releted-article'>
                     <h2><i class="bi bi-fire"></i>Video Editor</h2>
                     <p>"A creative graduate with a passion for storytelling through video editing, eager to contribute my skills in editing, color correction, and sound design to your multimedia team."</p>
-                </section>
+                </section><div><GoogleAd/></div>
 
                 <section className='releted-article'>
                     <h2><i class="bi bi-fire"></i>Software Engineer Intern</h2>
                     <p>"Recent computer science graduate, looking for an internship opportunity to apply my coding skills, problem-solving abilities, and software engineering knowledge in real-world applications."</p>
-                </section>
+                </section><div><GoogleAd/></div>
 
                 <section className='releted-article'>
                     <h2><i class="bi bi-fire"></i>Data Entry Specialist</h2>
                     <p>"A highly organized and detail-oriented graduate seeking a data entry position to accurately input data and support the smooth operation of business processes."</p>
-                </section>
+                </section><div><GoogleAd/></div>
 
                 <section className='releted-article'>
                     <h2><i class="bi bi-fire"></i>HR Recruiter</h2>
                     <p>"Motivated graduate with an understanding of recruitment processes, eager to help identify and recruit top talent for your organization’s success."</p>
-                </section>
+                </section><div><GoogleAd/></div>
 
                 <section className='releted-article'>
                     <h2><i class="bi bi-fire"></i>Content Marketing Specialist</h2>
                     <p>"Recent graduate with strong writing and research skills, looking to assist in content marketing strategies that increase engagement and brand visibility."</p>
-                </section>
+                </section><div><GoogleAd/></div>
 
                 <section className='releted-article'>
                     <h2><i class="bi bi-fire"></i>Quality Assurance Analyst</h2>
@@ -743,13 +749,13 @@ export default function HowtoWriteaStrongResumeObjective(prop) {
                     <h3><i class="bi bi-fire"></i>Data Entry</h3>
                     <p>Objective: Seeking a data entry position where I can contribute to the efficiency of a team by entering, managing, and verifying data with accuracy and attention to detail.</p>
                 </section >
-                <section  id="conclusion">
+                <section id="conclusion">
                     <h2><i class="bi bi-fire"></i>8. Conclusion</h2>
                     <p>Writing a strong resume objective is an essential step toward creating an impactful resume. By following the steps outlined above and avoiding common mistakes, you can craft a resume objective that highlights your qualifications, aligns with the job description, and sets you apart from other candidates.</p>
                     <p>For additional help and free resume templates, visit ResumeEra.xyz to create a winning resume today.</p>
                 </section >
 
-                <section  id="faqs">
+                <section id="faqs">
                     <h2><i class="bi bi-fire"></i>9. Frequently Asked Questions (FAQs)</h2>
 
                     <h3><i class="bi bi-fire"></i>Q1: What should I include in a resume objective?</h3>
@@ -766,7 +772,7 @@ export default function HowtoWriteaStrongResumeObjective(prop) {
 
                     <h3><i class="bi bi-fire"></i>Q5: How can I make my resume objective stand out?</h3>
                     <p>Focus on how your qualifications align with the employer's needs and emphasize what you can bring to the company.</p>
-                </section>
+                </section><div><GoogleAd/></div>
 
                 <section id="key-takeaways">
                     <h2><i class="bi bi-fire"></i>Key Takeaways</h2>
@@ -776,7 +782,7 @@ export default function HowtoWriteaStrongResumeObjective(prop) {
                         <li>Avoid generic statements and focus on specifics that align with the role.</li>
                         <li>Visit ResumeEra.xyz for free resume templates and resources to create a standout resume.</li>
                     </ul>
-                </section>
+                </section><div><GoogleAd/></div>
 
 
                 <div>
@@ -796,7 +802,7 @@ export default function HowtoWriteaStrongResumeObjective(prop) {
                 <div className="stickyShare">
                     <ShareButtons url={ArticleUrl} title={ArticleTitle} />
                 </div>
-            </section>
+            </section><div><GoogleAd/></div>
         </div>
     )
 }
