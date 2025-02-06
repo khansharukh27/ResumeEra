@@ -10,8 +10,10 @@ const Preview = () => {
     const [inputFields, setInputFields] = useState('resume.pdf');
     const [bgColor, setBgColor] = useState('#F5DEB3'); // Default background color (wheat)
     const [fontStyle, setFontStyle] = useState('Arial'); // Default font style
-    const [fontColor, setFontColor] = useState('black')
-    const [headingColor, setHeadingColor] = useState('black')
+    const [fontColor, setFontColor] = useState('black');
+    const [headingColor, setHeadingColor] = useState('black');
+    const [fontSize, setFontSize] = useState(16); // Initial font size for paragraphs
+    const [fontSizeheading, setFontSizeheading] = useState(16); // Initial font size for headings
 
     const navigate = useNavigate();
     const personalInfo = useSelector((state) => state.reducer.personalInfo);
@@ -19,11 +21,10 @@ const Preview = () => {
     const keyskills = useSelector((state) => [state.reducer.keySkills[0]]);
     const work = useSelector((state) => [state.reducer.workExperience[0]]);
 
-
     const handleDownloadPDF = async () => {
         const element = document.getElementById('Alish_mirza1');
         try {
-            const scale = 4; // Slightly higher resolution without excessive file size
+            const scale = 3; // Slightly higher resolution without excessive file size
             const canvas = await html2canvas(element, {
                 scale: scale,
                 useCORS: true,
@@ -36,11 +37,8 @@ const Preview = () => {
             const a4Width = 210; // A4 width in mm
             const a4Height = 297;
             const imgHeight = (canvas.height * a4Width) / canvas.width;
-            // let position = 0;
 
-            // Check if the image height is greater than a single page height
             pdf.addImage(imgData, 'JPEG', 0, 0, a4Width, imgHeight > a4Height ? a4Height : imgHeight, undefined, 'FAST');
-
 
             const fileName = `${inputFields}.pdf`;
             pdf.save(fileName);
@@ -51,7 +49,6 @@ const Preview = () => {
             localStorage.setItem('savedResumes', JSON.stringify(savedResumes));
 
             alert('Your Resume is downloaded');
-            navigate('/myresume');
         } catch (error) {
             console.error('Error downloading PDF:', error);
         }
@@ -60,28 +57,29 @@ const Preview = () => {
     return (
         <div>
             <header style={{ paddingLeft: '10px', paddingRight: '10px', textAlign: 'center' }}>
-                <h1>Congratulations on Creating a Winning Resume!</h1>
+                <h1 style={{ fontSize: `${fontSizeheading}px` }}>Congratulations on Creating a Winning Resume!</h1>
                 <small style={{ textAlign: 'center' }}> <i style={{ color: 'white', backgroundColor: 'red' }}> warning </i>: if resume dont show your data in resume , please refresh the page</small>
 
-                <p>Your journey towards your dream job starts here! By crafting a professional resume with ResumeEra, you've taken the first step in showcasing your skills, experiences, and aspirations effectively. A well-structured resume is more than just a document—it's your story, your voice, and your opportunity to shine.
-
+                <p style={{ fontSize: `${fontSize}px` }}>
+                    Your journey towards your dream job starts here! By crafting a professional resume with ResumeEra, you've taken the first step in showcasing your skills, experiences, and aspirations effectively. A well-structured resume is more than just a document—it's your story, your voice, and your opportunity to shine.
                     Whether you're a fresher stepping into the professional world or an experienced professional climbing the career ladder, a compelling resume can make all the difference. Our platform ensures your resume is not only visually appealing but also tailored to meet industry standards.
-
-                    Take a moment to review your resume. Remember, the right opportunity is just around the corner. Stand out, stay confident, and let ResumeEra be your trusted partner in achieving your career goals!"
+                    Take a moment to review your resume. Remember, the right opportunity is just around the corner. Stand out, stay confident, and let ResumeEra be your trusted partner in achieving your career goals!
                 </p>
             </header>
 
             <div style={{ width: '100%' }}><GoogleAd /></div>
             <div className="preview-container d-sm-flex" style={{ position: 'relative' }}>
-                <div className="preview-page" id="Alisha_mirza1" style={{ color: fontColor, backgroundColor: bgColor, fontFamily: fontStyle }}>
+                <div className="preview-page" id="Alish_mirza1" style={{ color: fontColor, backgroundColor: bgColor, fontFamily: fontStyle }}>
                     <div className="d-flex justify-content-center preview-image-container">
                         <img src={personalInfo.image} alt="Selected" className="preview-image" />
                     </div>
                     <div className="text-center preview-text">
                         <div>
-                            <h3 className="preview-name" style={{ color: headingColor }}>{personalInfo.firstName} {personalInfo.lastName}</h3>
+                            <h3 className="preview-name" style={{ color: headingColor, fontSize: `${fontSizeheading}px` }}>
+                                {personalInfo.firstName} {personalInfo.lastName}
+                            </h3>
                         </div>
-                        <span className="preview-address">
+                        <span className="preview-address" style={{ fontSize: `${fontSize}px` }}>
                             {work.map((works, index) => (
                                 <div key={index} className="preview-job-title">
                                     {works.jobtitle}
@@ -95,23 +93,23 @@ const Preview = () => {
                             <div className='d-flex outer'>
                                 <div className='emptydiv'>
                                 </div>
-                                <h6 className="details-title" style={{ color: headingColor }}>Detail</h6>
+                                <h6 className="details-title" style={{ color: headingColor, fontSize: `${fontSizeheading}px` }}>Detail</h6>
                                 <div className='emptydiv'>
                                 </div>
                             </div>
-                            <span className="details-address">{personalInfo.address} </span>
-                            <span className="details-city-state">{personalInfo.city} {personalInfo.state}</span><br />
-                            <span className="details-mobile">{personalInfo.mobileNumber}</span><br />
-                            <span className="details-email">{personalInfo.email}</span>
+                            <span className="details-address" style={{ fontSize: `${fontSize}px` }}>{personalInfo.address}</span>
+                            <span className="details-city-state" style={{ fontSize: `${fontSize}px` }}>{personalInfo.city} {personalInfo.state}</span><br />
+                            <span className="details-mobile" style={{ fontSize: `${fontSize}px` }}>{personalInfo.mobileNumber}</span><br />
+                            <span className="details-email" style={{ fontSize: `${fontSize}px` }}>{personalInfo.email}</span>
                             <br />
                             <div className='d-flex outer'>
                                 <div className='emptydiv'></div>
-                                <h6 className="details-title" style={{ color: headingColor }}>Skills</h6>
+                                <h6 className="details-title" style={{ color: headingColor, fontSize: `${fontSizeheading}px` }}>Skills</h6>
                                 <div className='emptydiv'></div>
                             </div>
 
                             {keyskills.map((keys, index) => (
-                                <div key={index} className="skill-item">
+                                <div key={index} className="skill-item" style={{ fontSize: `${fontSize}px` }}>
                                     {keys.keyskills}
                                     <hr className="skill-divider" style={{ height: '5px', color: 'black', backgroundColor: '' }} />
                                 </div>
@@ -120,26 +118,28 @@ const Preview = () => {
                                 <div key={index} className="education-item">
                                     <div className='d-flex outer'>
                                         <div className='emptydiv'></div>
-                                        <h6 className="details-title" style={{ color: headingColor }}>Education {index + 1}</h6
-                                        ><div className='emptydiv'></div>
+                                        <h6 className="details-title" style={{ color: headingColor, fontSize: `${fontSizeheading}px` }}>Education {index + 1}</h6>
+                                        <div className='emptydiv'></div>
                                     </div>
-                                    <span className="education-duration">{edu.startYear} - {edu.endYear}</span>
-                                    <span className="education-detail">{edu.type} from {edu.univercity}</span>
+                                    <span className="education-duration" style={{ fontSize: `${fontSize}px` }}>{edu.startYear} - {edu.endYear}</span>
+                                    <span className="education-detail" style={{ fontSize: `${fontSize}px` }}>{edu.type} from {edu.univercity}</span>
                                 </div>
                             ))}
                         </div>
                         <div className="preview-profile-section">
 
-                            <h6 className="details-title" style={{ color: headingColor }}>Profile</h6>
+                            <h6 className="details-title" style={{ color: headingColor, fontSize: `${fontSizeheading}px` }}>Profile</h6>
 
-                            <span className="profile-description">{personalInfo.object}</span>
-                            <h6 className="details-title" style={{ color: headingColor }}>Employment History</h6>
+                            <span className="profile-description" style={{ fontSize: `${fontSize}px` }}>{personalInfo.object}</span>
+                            <h6 className="details-title" style={{ color: headingColor, fontSize: `${fontSizeheading}px` }}>Employment History</h6>
                             {work.map((works, index) => (
                                 <div key={index} className="employment-history">
-                                    <span className="employment-detail" style={{ fontWeight: '500' }}>{works.organization} {works.jobtitle}</span>
+                                    <span className="employment-detail" style={{ fontSize: `${fontSize}px`, fontWeight: '500' }}>
+                                        {works.organization} {works.jobtitle}
+                                    </span>
                                     <br />
-                                    <span className="employment-duration">{works.startYear} - {works.endYear}</span><br />
-                                    <span className='aboutexperience'>{works.aboutexperience}</span>
+                                    <span className="employment-duration" style={{ fontSize: `${fontSize}px` }}>{works.startYear} - {works.endYear}</span><br />
+                                    <span className='aboutexperience' style={{ fontSize: `${fontSize}px` }}>{works.aboutexperience}</span>
                                 </div>
                             ))}
                         </div>
@@ -197,6 +197,16 @@ const Preview = () => {
                             <input type="color" value={headingColor} onChange={(e) => setHeadingColor(e.target.value)} className="bg-color-picker ms-2" />
                         </div>
 
+                    </div>
+                    <div className='colordiv'>
+                        <div>
+                            <span style={{ color: headingColor }}><i class="bi bi-patch-plus"></i>HS  </span>
+                            <input type="number" value={fontSizeheading} onChange={(e) => setFontSizeheading(Number(e.target.value))} className="bg-color-picker ms-2" />
+                        </div>
+                        <div>
+                            <span style={{ color: fontColor }}><i class="bi bi-patch-plus"></i>FS  </span>
+                            <input type="number" value={fontSize} onChange={(e) => setFontSize(Number(e.target.value))} className="bg-color-picker ms-2" />
+                        </div>
                     </div>
                     <div style={{ width: '100%' }}><GoogleAd /></div>
 

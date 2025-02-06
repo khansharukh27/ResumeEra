@@ -17,13 +17,14 @@ export default function ResumeFormat(prop) {
   const [hoveredImage, setHoveredImage] = useState();
   const { techImages } = prop
   const navigate = useNavigate();
+  const publishDate = '2025-01-11'
+  const dispatch = useDispatch();
   const ArticleUrl = "https://resumeera.xyz/resume-format";
   const ArticleTitle = "Resume Format | ResumeEra";
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
-  const publishDate = '2025-01-11'
-  const dispatch = useDispatch();
+  
 
   const selectedImageId = 110;//chronoligical resume
   const selectedimage = techImages.find((image) => image.id === selectedImageId)
@@ -365,7 +366,7 @@ export default function ResumeFormat(prop) {
         </section><div><GoogleAd /></div>
 
         <section>
-          div
+        
 
           <h2>Why Use Resumeera.xyz? 🚀</h2>
           <p className='common-mistakeli'>Creating a resume can be time-consuming, but platforms like <strong>Resumeera.xyz</strong> make the process faster and easier ⏱️. Resumeera.xyz offers a variety of free resume templates that are customizable to suit your needs. Here’s why it’s a great tool:</p>

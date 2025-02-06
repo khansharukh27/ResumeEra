@@ -47,7 +47,7 @@ export default function PresentingPersonalBranding() {
         />
         <meta
           property="og:image"
-          content={Presenting_Personal_Branding}
+          content="https://img.freepik.com/free-vector/brand-creation-concept-illustration_114360-11328.jpg?t=st=1738392235~exp=1738395835~hmac=23cd21e32ef8950716665247db0352764a75e1091f14846bbd81a3bee639109a&w=740"
         />
         <meta name="twitter:card" content="summary_large_image" />
         <meta
@@ -60,7 +60,7 @@ export default function PresentingPersonalBranding() {
         />
         <meta
           name="twitter:image"
-          content={Presenting_Personal_Branding}
+          content="https://img.freepik.com/free-vector/brand-creation-concept-illustration_114360-11328.jpg?t=st=1738392235~exp=1738395835~hmac=23cd21e32ef8950716665247db0352764a75e1091f14846bbd81a3bee639109a&w=740"
         />
         <script type="application/ld+json">
           {`
@@ -84,7 +84,7 @@ export default function PresentingPersonalBranding() {
             "datePublished": "2025-01-07",
             "dateModified": "2025-01-07",
             "mainEntityOfPage": "https://resumeera.xyz/personal-branding-through-resume-formatting",
-            "image": ${Presenting_Personal_Branding},
+            "image": 'https://img.freepik.com/free-vector/brand-creation-concept-illustration_114360-11328.jpg?t=st=1738392235~exp=1738395835~hmac=23cd21e32ef8950716665247db0352764a75e1091f14846bbd81a3bee639109a&w=740',
             "keywords": "personal branding, resume formatting, resume tips, personal brand resume, professional resume, resume design, ATS-friendly resume"
           }
         `}

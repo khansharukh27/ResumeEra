@@ -1,0 +1,105 @@
+.big{
+    text-align: center;
+    background:l  inear-gradient(135deg,rgb(202, 250, 202),rgb(1, 48, 1));
+}
+
+
+.ResumeEraHeading{
+    display: flex;
+    justify-content: space-around;
+    padding: 25px;
+    background:linear-gradient(135deg,rgb(202, 250, 202),rgb(1, 48, 1));
+}
+.ResumeEraHeading Link{
+    border: 2px solid transparent;
+    border-image: linear-gradient(135deg, #ff7e5f, #feb47b);    padding: 10px;
+    margin: 5px;
+    border-radius: 25px;
+
+}
+.dateAuthor{
+    display: flex;
+    justify-content: space-around;
+}
+.dateAuthor img{
+    width: 150px;
+    height: 50%;
+    border-radius: 15px;
+    border: 5px solid white;
+    margin: 5px;
+}
+.dateAuthor span{
+    font-size: 1.3rem;
+    color: white;
+}
+.author-details{
+    color: black;
+}
+.author-highlight{
+    white-space: nowrap;
+}
+@media(max-width:320px){
+    .ResumeEraHeading{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 5px;
+        background:linear-gradient(135deg,rgb(202, 250, 202),rgb(1, 48, 1));
+    }
+    .dateAuthor img{
+        width: 100px;
+        height: auto;
+        border-radius: 15px;
+        border: 5px solid white;
+        margin: 5px;
+    }
+    .dateAuthor span{
+        font-size: .8rem;
+        color: white;
+    }
+       
+}
+
+@media(max-width:375px){
+    .ResumeEraHeading{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 5px;
+        background:linear-gradient(135deg,rgb(202, 250, 202),rgb(1, 48, 1));
+    }
+    .dateAuthor img{
+        width: 100px;
+        height: 50%;
+        border-radius: 15px;
+        border: 5px solid white;
+        margin: 5px;
+    }
+    .dateAuthor span{
+        font-size: .8rem;
+        color: white;
+    }
+       
+}
+
+@media(max-width:425px){
+    .ResumeEraHeading{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 5px;
+        background:linear-gradient(135deg,rgb(202, 250, 202),rgb(1, 48, 1));
+    }
+    .dateAuthor img{
+        width: 100px;
+        height: auto;
+        border-radius: 15px;
+        border: 5px solid white;
+        margin: 5px;
+    }
+    .dateAuthor span{
+        font-size: .8rem;
+        color: white;
+    }
+       
+}

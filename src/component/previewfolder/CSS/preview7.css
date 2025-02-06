@@ -6,18 +6,15 @@
     padding: 20px;
     box-sizing: border-box;
     /* padding-right: -50px-; */
-    font-size: xx-small;
-    height: fit-content;
+    /* font-size: xx-small; */
+    height: 100%;
 }
 
 /* Resume Preview Section */
 .resume-previeww7 {
     background-color: inherit;
     font-family: inherit;
-    /* width: 50%; */
-    max-width: 800px;
-    /* margin: 0 auto; */
-    font-size: xx-small;
+    width: 100%;
 }
 .text-end{
     padding-right: 10px;

@@ -1,0 +1,62 @@
+.main116{
+    display: flex;
+    justify-content: space-around;
+    padding: 15px;
+
+}
+.Preview116{
+    /* padding: 15px; */
+    padding-top: 25px;
+    /* padding: 15px; */
+}
+.Name-positio-summary116{
+    position: relative;
+    padding: 10px;
+    margin: 5px;
+    border-radius: 5px;
+
+}
+.jobtitle116 p{
+    position: absolute;
+    text-align: center;
+    font-weight: 700;
+    left: 42%;
+    padding: 15px;
+    margin-bottom: 15px;
+/* top: -25px; */
+}
+.object116{
+    margin-right: 100px;
+    margin-left: 100px;
+    margin-top: 45px;
+}
+.Name-positio-summary116 h3{
+position: absolute;
+left: 40%;
+top: -25px;
+padding-left: 25px;
+padding-right: 25px;
+/* margin-top: 15px; */
+
+}
+.contactdiv116{
+    display: flex;
+    justify-content: space-around;
+    padding: 5px;
+    border-radius: 5px;
+    color: white;
+}
+.contactdiv116 p{
+    
+    color: white;
+}
+.combine-div116{
+    display: flex;
+    justify-content: space-around;
+}
+
+.technical-skill-item116{
+    padding: 10px;
+    border-radius: 5px;
+    margin-top: 5px;
+}

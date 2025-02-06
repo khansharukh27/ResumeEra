@@ -28,7 +28,7 @@ const Preview109 = () => {
   const languages = useSelector((state) => [state.reducer.addLanguage]);
   // const Certificate = useSelector((state) => state.reducer.certificateData);
   const Hobbies = useSelector((state) => [state.reducer.addHobies])
-  const project = useSelector((state)=>[state.reducer.projectData])
+  const project = useSelector((state) => [state.reducer.projectData])
   console.log('hobbies preview 109:-', Hobbies)
   // console.log('Certificate:-', Certificate)
   console.log('honorand award:-', Honor)
@@ -77,123 +77,123 @@ const Preview109 = () => {
           Take a moment to review your resume. Remember, the right opportunity is just around the corner. Stand out, stay confident, and let ResumeEra be your trusted partner in achieving your career goals!"
         </p>
       </header>
-    <GoogleAd/>
-    
-    <div className="main109">
-      <div className="preview109" id="Alisha_mirza109">
-        <div className='personalInfo'>
-          <h3 style={{whiteSpace:'none',fontFamily:fontStyle}}>{personalInfo.firstName} {personalInfo.lastName}</h3>
-          <p className='jobtitle' style={{ color: 'black', fontFamily: fontStyle }}>{work[0].map((works, index) => (
-            <div key={index}>
-              <p style={{fontFamily:fontStyle}}>{works.jobtitle}</p>
-            </div>
-          ))}</p>
-          <p className='object' style={{fontFamily:fontStyle}}>{personalInfo.object}</p>
-        </div>
-        <div className='contact109 ' style={{}}>
-          <p style={{ color: fontColor, wordBreak: "break-all" }}><i className="bi bi-envelope me-2 me-2" />{personalInfo.email}</p>
-          <p style={{ color: fontColor, fontFamily: fontStyle }}><i className="bi bi-telephone-fill me-2 ms-2" />{personalInfo.mobileNumber}</p>
-          <p style={{ color: fontColor, fontFamily: fontStyle }} className=""><i className="bi bi-geo-alt-fill me-2 ms-2" /> {personalInfo.city} {personalInfo.state} {personalInfo.country} </p>
-          <p style={{ color: fontColor, fontFamily: fontStyle }}><i className="bi bi-linkedin me-2 ms-2" />{socialMediaLink[0].linkedin}</p>
-        </div>
-        <div className='firstdiv109' style={{backgroundColor:bgColor,}}>
-          <div className='me-3'>
-            <div className="experience-section109">
-              <h4 className="details-title109" style={{ color: headingColor,fontFamily:fontStyle  }}>
-                WORK EXPERIENCE <hr  style={{width:'100%'}} /></h4>
-              {work[0].map((works, index) => (
-                <div key={index} className="employment-history109">
-                  <div className="exp-inner109">
-                    <p style={{ color: fontColor, fontFamily: fontStyle, marginBottom: '-5px' }} className="employment-detail109"><b style={{ fontWeight: 500, color: fontColor }}>{works.jobtitle}</b><br />{works.organization}{work.city}</p>
-                    <p style={{ color: fontColor, fontFamily: fontStyle, marginBottom: '-5px' }} className="employment-detail109"><i>{works.startYear} - {works.endYear}</i></p>
-                    <p style={{ color: fontColor, fontFamily: fontStyle }} className='employment-detail109'>{works.aboutexperience}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-            <div className=" language-109">
-              <h4 style={{ color: headingColor,fontFamily:fontStyle  }}>LANGUAGE <hr  style={{width:'100%'}} /></h4>
-              {languages[0].map((keys, index) => (
-                <div key={index} className="language-item109">
-                  <p style={{ color: fontColor ,marginBottom:'-5px'}}>{keys.language}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-          <div className=''>
-            <div className="technical-">
-              <h4 className="" style={{ color: headingColor ,fontFamily:fontStyle }}>AREAS OF EXPERTISE <hr  style={{width:'100%'}} /></h4>
-              {keyskills[0].map((keys, index) => (
-                <div key={index} className="technical-skill-item109" style={{ display: 'flex', marginBottom: '8px' }}>
-                  {/* Skill Name */}
-                  <p style={{ color: fontColor, fontFamily: fontStyle, marginRight: '0px', minWidth: '100px', marginBottom: '-5px' }}>
-                    {keys.keyskills}
-                  </p>
+      <GoogleAd />
 
-                  {/* Rating Circles */}
-                  <div style={{ display: 'flex' }}>
-                    {[...Array(5)].map((_, circleIndex) => (
-                      <span
-                        key={circleIndex}
-                        style={{
-                          width: '12px',
-                          height: '12px',
-                          borderRadius: '50%',
-                          margin: '0 3px',
-                          backgroundColor: circleIndex < keys.rating ? 'blue' : 'lightgray',
-                        }}
-                      ></span>
-                    ))}
-                  </div>
-                </div>
-              ))}
-            </div>
-            <div className="education-section109 mt-3">
-              <h4 className="details-title109" style={{ color: headingColor,fontFamily:fontStyle  }}>EDUCATION <hr  style={{width:'100%'}}/></h4>
-              {education[0].map((edu, index) => (
-                <div key={index} className="education-item109">
-                  <div className="certificate-item109">
-                    <p style={{ color: fontColor, fontFamily: fontStyle }} className="employment-detail109">{edu.degree}</p>
-                    <p style={{ color: fontColor, fontFamily: fontStyle }} className="employment-detail109">{edu.univercity}</p>
-                    <p style={{ color: fontColor, fontFamily: fontStyle }} className="employment-detail109">{edu.startYear} - {edu.endYear},{edu.city}</p>
-                  </div>
-                  <div className="education-details109">
-                    <span><b></b></span>
-                  </div>
-                </div>
-              ))}
-            </div>
-            <div className="technical-skills-title109 mt-3">
-              <h4 className="" style={{ color: headingColor ,fontFamily:fontStyle }}>
-                VOLUNTEER AND PERSONAL PROJECT <hr  style={{width:'100%'}} /></h4>
-              {project[0].map((keys, index) => (
-                <div key={index} className="">
-                  <p style={{ marginBottom: '-5px',color:fontColor,fontFamily: fontStyle }}>{keys.link}</p>
-                  <p style={{ marginBottom: '-5px',color:fontColor,fontFamily: fontStyle }}>{keys.startTime}-{keys.endTime}</p>
-                  <p style={{ marginBottom: '-5px' }}></p>
-                  <p style={{ marginBottom: '-5px',color:fontColor,fontFamily: fontStyle }}>.{keys.description}</p>
-                </div>
-              ))}
-            </div>
-            <div className="technical-skills-title109 mt-3">
-      <h4 className="" style={{ color: headingColor,fontFamily:fontStyle }}>
-        INTEREST <hr  style={{width:'100%'}} />
-      </h4>
-      {Hobbies[0].map((keys, index) => (
-        <div key={index} className="d-flex align-items-center">
-          {/* Render Icon */}
-          <span style={{ marginRight: "10px", fontSize: "20px" }}>
-            {HobbyIcons[keys.hobbies] || "🎯"} {/* Default icon if hobby not in mapping */}
-          </span>
-          {/* Render Hobby Name */}
-          <p style={{ marginBottom: "-5px",color:fontColor,fontFamily: fontStyle}}>{keys.hobbies}</p>
-        </div>
-      ))}
-    </div>
+      <div className="main109">
+        <div className="preview109" id="Alisha_mirza109">
+          <div className='personalInfo'>
+            <h3 style={{ whiteSpace: 'none', fontFamily: fontStyle }}>{personalInfo.firstName} {personalInfo.lastName}</h3>
+            <p className='jobtitle' style={{ color: 'black', fontFamily: fontStyle }}>{work[0].map((works, index) => (
+              <div key={index}>
+                <p style={{ fontFamily: fontStyle }}>{works.jobtitle}</p>
+              </div>
+            ))}</p>
+            <p className='object' style={{ fontFamily: fontStyle }}>{personalInfo.object}</p>
           </div>
-        </div>
-      </div> |
-      <div className="resume-download-section0">
+          <div className='contact109 ' style={{}}>
+            <p style={{ color: fontColor, wordBreak: "break-all" }}><i className="bi bi-envelope me-2 me-2" />{personalInfo.email}</p>
+            <p style={{ color: fontColor, fontFamily: fontStyle }}><i className="bi bi-telephone-fill me-2 ms-2" />{personalInfo.mobileNumber}</p>
+            <p style={{ color: fontColor, fontFamily: fontStyle }} className=""><i className="bi bi-geo-alt-fill me-2 ms-2" /> {personalInfo.city} {personalInfo.state} {personalInfo.country} </p>
+            <p style={{ color: fontColor, fontFamily: fontStyle }}><i className="bi bi-linkedin me-2 ms-2" />{socialMediaLink[0].linkedin}</p>
+          </div>
+          <div className='firstdiv109' style={{ backgroundColor: bgColor, }}>
+            <div className='me-3'>
+              <div className="experience-section109">
+                <h4 className="details-title109" style={{ color: headingColor, fontFamily: fontStyle }}>
+                  WORK EXPERIENCE <hr style={{ width: '100%' }} /></h4>
+                {work[0].map((works, index) => (
+                  <div key={index} className="employment-history109">
+                    <div className="exp-inner109">
+                      <p style={{ color: fontColor, fontFamily: fontStyle, marginBottom: '-5px' }} className="employment-detail109"><b style={{ fontWeight: 500, color: fontColor }}>{works.jobtitle}</b><br />{works.organization}{work.city}</p>
+                      <p style={{ color: fontColor, fontFamily: fontStyle, marginBottom: '-5px' }} className="employment-detail109"><i>{works.startYear} - {works.endYear}</i></p>
+                      <p style={{ color: fontColor, fontFamily: fontStyle }} className='employment-detail109'>{works.aboutexperience}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+              <div className=" language-109">
+                <h4 style={{ color: headingColor, fontFamily: fontStyle }}>LANGUAGE <hr style={{ width: '100%' }} /></h4>
+                {languages[0].map((keys, index) => (
+                  <div key={index} className="language-item109">
+                    <p style={{ color: fontColor, marginBottom: '-5px' }}>{keys.language}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+            <div className=''>
+              <div className="technical-">
+                <h4 className="" style={{ color: headingColor, fontFamily: fontStyle }}>AREAS OF EXPERTISE <hr style={{ width: '100%' }} /></h4>
+                {keyskills[0].map((keys, index) => (
+                  <div key={index} className="technical-skill-item109" style={{ display: 'flex', marginBottom: '8px' }}>
+                    {/* Skill Name */}
+                    <p style={{ color: fontColor, fontFamily: fontStyle, marginRight: '0px', minWidth: '100px', marginBottom: '-5px' }}>
+                      {keys.keyskills}
+                    </p>
+
+                    {/* Rating Circles */}
+                    <div style={{ display: 'flex' }}>
+                      {[...Array(5)].map((_, circleIndex) => (
+                        <span
+                          key={circleIndex}
+                          style={{
+                            width: '12px',
+                            height: '12px',
+                            borderRadius: '50%',
+                            margin: '0 3px',
+                            backgroundColor: circleIndex < keys.rating ? 'blue' : 'lightgray',
+                          }}
+                        ></span>
+                      ))}
+                    </div>
+                  </div>
+                ))}
+              </div>
+              <div className="education-section109 mt-3">
+                <h4 className="details-title109" style={{ color: headingColor, fontFamily: fontStyle }}>EDUCATION <hr style={{ width: '100%' }} /></h4>
+                {education[0].map((edu, index) => (
+                  <div key={index} className="education-item109">
+                    <div className="certificate-item109">
+                      <p style={{ color: fontColor, fontFamily: fontStyle }} className="employment-detail109">{edu.degree}</p>
+                      <p style={{ color: fontColor, fontFamily: fontStyle }} className="employment-detail109">{edu.univercity}</p>
+                      <p style={{ color: fontColor, fontFamily: fontStyle }} className="employment-detail109">{edu.startYear} - {edu.endYear},{edu.city}</p>
+                    </div>
+                    <div className="education-details109">
+                      <span><b></b></span>
+                    </div>
+                  </div>
+                ))}
+              </div>
+              <div className="technical-skills-title109 mt-3">
+                <h4 className="" style={{ color: headingColor, fontFamily: fontStyle }}>
+                  VOLUNTEER AND PERSONAL PROJECT <hr style={{ width: '100%' }} /></h4>
+                {project[0].map((keys, index) => (
+                  <div key={index} className="">
+                    <p style={{ marginBottom: '-5px', color: fontColor, fontFamily: fontStyle }}>{keys.link}</p>
+                    <p style={{ marginBottom: '-5px', color: fontColor, fontFamily: fontStyle }}>{keys.startTime}-{keys.endTime}</p>
+                    <p style={{ marginBottom: '-5px' }}></p>
+                    <p style={{ marginBottom: '-5px', color: fontColor, fontFamily: fontStyle }}>.{keys.description}</p>
+                  </div>
+                ))}
+              </div>
+              <div className="technical-skills-title109 mt-3">
+                <h4 className="" style={{ color: headingColor, fontFamily: fontStyle }}>
+                  INTEREST <hr style={{ width: '100%' }} />
+                </h4>
+                {Hobbies[0].map((keys, index) => (
+                  <div key={index} className="d-flex align-items-center">
+                    {/* Render Icon */}
+                    <span style={{ marginRight: "10px", fontSize: "20px" }}>
+                      {HobbyIcons[keys.hobbies] || "🎯"} {/* Default icon if hobby not in mapping */}
+                    </span>
+                    {/* Render Hobby Name */}
+                    <p style={{ marginBottom: "-5px", color: fontColor, fontFamily: fontStyle }}>{keys.hobbies}</p>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div> |
+        <div className="resume-download-section0">
           <div style={{ width: '100%' }}>
             <GoogleAd />
           </div>
@@ -250,11 +250,11 @@ const Preview109 = () => {
             </div>
           </div>
           <div style={{ width: '100%' }}>
-            <GoogleAd/>
+            <GoogleAd />
           </div>
 
         </div>
-    </div>
+      </div>
     </div>
   );
 };

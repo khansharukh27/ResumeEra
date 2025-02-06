@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { templatePage } from "../Redux/action";
+import '../css/FresherResume.css'; // Import the CSS file
 
 const FresherResume = (props) => {
     const { fresherResumeImage } = props;
@@ -17,42 +18,43 @@ const FresherResume = (props) => {
             dispatch(templatePage(hoveredImage));
         }
     };
-    console.log('images show in normal resume:-',fresherResumeImage)
 
     return (
         <div>
             <section className="template-grid-container">
-                
-                <h2 style={{textAlign:'center'}}>
+                <h2 className="section-title">
                     Fresher Resume Template's
                 </h2>
                 <hr className="template-grid-divider" />
-                <div className="template-grid row m-3 ">
-                    {fresherResumeImage ? fresherResumeImage.map((image) => (
+                <div className="template-grid">
+                    {fresherResumeImage.length > 0 ? fresherResumeImage.map((image, index) => (
                         <div
+                            className="template-card"
                             data-aos="flip-left"
                             data-aos-duration="1000"
                             key={image.id}
-                            className="template-card col-12 col-md-6 col-lg-4"
                             onMouseEnter={() => setHoveredImage(image.id)}
                             onMouseLeave={() => setHoveredImage(null)}
                         >
                             <img
-                                className="template-image"
                                 src={image.src}
                                 alt={image.alt}
                                 loading="lazy"
+                                className="template-image"
                             />
                             {hoveredImage === image.id && (
                                 <a
-                                    href={`/freshertemplate/${hoveredImage}`}
+                                    href={`/mainpage/${image.id}`}
                                     onClick={handleClick}
                                     className="template-link"
                                 >
-                                    Go To  Resume
+                                    Go To Resume
                                 </a>
                             )}
-                            <div style={{textAlign:'center',color:'black'}}>{image.alt}</div>
+                            <div className="template-footer">
+                                <p>{image.alt}</p>
+                                <p>{index + 1}/{fresherResumeImage.length}</p>
+                            </div>
                         </div>
                     )) : (
                         <p>No templates available.</p>

@@ -1322,7 +1322,78 @@ const ImportantPostLink = () => {
       src: 'https://img.freepik.com/free-vector/online-cv-concept_23-2148555717.jpg?t=st=1737619117~exp=1737622717~hmac=99f5c909b8d31a5decdb213fea7772d22dd998f43cd39e98ab65452e5826c3e2&w=740',
       alt: "Resume for Internship",
     },
-
+    {
+      path: "/attention-grabbing-resume-summary",
+      title: "How to Write an Attention-Grabbing Resume Summary - Resumeera",
+      src: 'https://img.freepik.com/free-vector/resume-writing-service-abstract-concept-illustration-copywriting-service-cv-online-professional-help-writing-resume-cover-letter-candidate-profile-career-summary_335657-143.jpg',
+      alt: "Attention-Grabbing Resume Summary",
+    },
+    {
+      path: "/bank-resume-format-for-freshers-pdf",
+      title: "Bank Resume Format for Freshers PDF: A Professional Guide | ResumeEra",
+      src: 'https://img.freepik.com/free-vector/flat-design-cooking-class-online-resume_23-2149934784.jpg',
+      alt: "Bank Resume Format for Freshers PDF",
+    },
+    {
+      path: "/functional-resume-format",
+      title: "functional resume format-free dowload and free edit now",
+      src: 'https://img.freepik.com/free-vector/profile-data-concept-illustration_114360-28079.jpg?t=st=1738414491~exp=1738418091~hmac=d918d399fdf07825813cebf8bdb5bfb93c8d560fe0137410f1537dc21774a2eb&w=740',
+      alt: "functional resume format",
+    },
+    {
+      path: "/resume-format-for-freshers",
+      title: "Resume Format For Freshers:free and easy download now",
+      src: 'https://img.freepik.com/free-vector/online-resume-concept-illustration_114360-8401.jpg',
+      alt: "Resume Format For Freshers",
+    },
+    {
+      path: "/resume-format-for-freshers-sample-download-now-free",
+      title: "Resume Format for Freshers Sample: Download Now for Free",
+      src: 'https://img.freepik.com/free-vector/online-resume-concept-illustration_114360-8401.jpg',
+      alt: "Resume Format for Freshers Sample",
+    },
+    {
+      path: "/resume-format-for-freshers-example",
+      title: "Resume Format for Freshers Example: Free Editing & Downloading Now",
+      src: 'https://i.postimg.cc/BQzpQJ4W/Resume-Format-for-Freshers-example.jpg',
+      alt: "Resume Format for Freshers Example",
+    },
+    {
+      path: "/job-resume-format-for-fresher",
+      title: "job reusme format for fresher : Create And Download now",
+      src: 'https://i.postimg.cc/jd9B8ZRy/job-resume-format-for-fresher.webp',
+      alt: "job reusme format for fresher",
+    },
+    {
+      path: "/good-resume-format-for-freshers",
+      title: "Unlock the Best and Good Resume Format for Freshers",
+      src: 'https://i.postimg.cc/d34Gbzcn/unloack.webp',
+      alt: "Unlock the Best and Good Resume Format for Freshers",
+    },
+    {
+      path: "/pdf-of-resume-format-for-freshers",
+      title: "Exclusive Free PDF Of Resume Format for Freshers – Download now | ResumeEra",
+      src: 'https://i.postimg.cc/SNJCFJTp/1.webp',
+      alt: "Exclusive Free PDF Of Resume Format for Freshers",
+    },
+    {
+      path: "/resume-format-for-freshers-free-download",
+      title: "Crafting the Perfect Resume Format for Freshers Free Download",
+      src: 'https://i.postimg.cc/BQzpQJ4W/Resume-Format-for-Freshers-example.jpg',
+      alt: "Resume Format for Freshers Free Download",
+    },
+    {
+      path: "/model-resume-format-for-freshers",
+      title: "MODEL RESUME FORMAT FOR FRESHERS - Explore Rich - Download Now",
+      src: 'https://i.postimg.cc/vmXXtXQd/3f178a8b-c22f-4d89-bbbd-f34e16a44e6c.webp',
+      alt: "MODEL RESUME FORMAT FOR FRESHERS",
+    },
+    {
+      path: "/what-is-the-best-resume-format-for-freshers",
+      title: "What is the Best Resume Format for Freshers",
+      src: 'https://i.postimg.cc/RZDGpmqV/freepik-the-style-is-candid-image-photography-with-natural-84173.webp',
+      alt: "What is the Best Resume Format for Freshers",
+    },
   ];
   
   

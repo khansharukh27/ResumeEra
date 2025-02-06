@@ -115,13 +115,6 @@
 
 @media only  screen and (min-width:1440px) {
  
-
-.header-shapes4{
-
-}
-.shape-left4{
-
-}
 .shape-right4{
     border-bottom-left-radius: 150px;
     border-top-left-radius: 200px;
@@ -255,6 +248,7 @@
     .objective{
         margin-bottom: -150px;
         text-align: justify;
+        
     }
 }
 

@@ -1,0 +1,91 @@
+.main115{
+    display: flex;
+    justify-content: space-around;
+}
+.preview115{
+    display: flex;
+    justify-content: space-around;
+    padding: 15px;
+    margin: 15px;
+
+}
+.personal115{
+    background-color: #ecedef;
+    padding: 15px;
+    border-top-left-radius: 15px;
+}
+.personalandword115{
+    padding: 10px;
+}
+.contactdivouter115 {
+    padding: 10px;
+    width: 100%;
+}
+.contactinnerdiv115{
+    white-space: none;
+    display: flex;
+    background-color: #27bca9;
+    border-top-right-radius: 15px;
+    padding: 20px;
+}
+.contactinnerdiv115 .bi{
+    border: 1px solid ;
+    border-radius: 50%;
+    padding: 7px;
+}
+.technicalskills115{
+    padding: 20px;
+    background-color: #ecedef;
+}
+.technical-skill-item115{
+    background-color: #2cb9a7;
+    padding: 10px;
+    border-radius: 10px;
+}
+@media (max-width:768px){
+    .main115{
+        display: flex;
+        flex-direction: column;
+        /* justify-content: space-around; */
+    }
+    .preview115{
+        display: flex;
+        justify-content: space-around;
+        padding: 5px;
+        margin: 2px;
+    
+    }
+    .personal115{
+        background-color: #ecedef;
+        padding: 5px;
+        border-top-left-radius: 15px;
+    }
+    .personalandword115{
+        padding: 2px;
+    }
+    .contactdivouter115 {
+        padding: 10px;
+        width: 50%;
+    }
+    .contactinnerdiv115{
+        word-break: break-all;
+        display: flex;
+        background-color: #27bca9;
+        border-top-right-radius: 15px;
+        padding: 5px;
+    }
+    .contactinnerdiv115 .bi{
+        border: 1px solid ;
+        border-radius: 50%;
+        padding: 7px;
+    }
+    .technicalskills115{
+        padding: 5px;
+        background-color: #ecedef;
+    }
+    .technical-skill-item115{
+        background-color: #2cb9a7;
+        padding: 10px;
+        border-radius: 10px;
+    }
+    }

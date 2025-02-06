@@ -266,6 +266,7 @@ import OnlineVsManualResume from "./css/Important_Post/OnlineVsManualResume.jsx"
 import OneVsMultiPageResume from "./component/ImportantPost/OneVsMultiPageResume.jsx";
 import ModernResumeVsTraditionResume from "./component/ImportantPost/ModernResumeVsTraditionResume.jsx";
 import AtsFriendlyVsCreativeResume from "./component/ImportantPost/AtsFriendlyVsCreativeResume.jsx";
+import Bank_Resume_Format_for_Freshers_PDF from './image/technical_Image/banking-resume-example.png'
 import MinimalistVsGraphic from "./component/ImportantPost/MinimalistVsGraphic.jsx";
 import ObjectiveStatementVsSummaryStatement from "./component/ImportantPost/ObjectiveStatementVsSummaryStatement.jsx";
 import ResumeFormattingTrends2025 from "./component/ImportantPost/ResumeFormattingTrends2025.jsx";
@@ -375,12 +376,24 @@ import { HelmetProvider } from "react-helmet-async";
 import ResumeForInternship from "./component/ImportantPost/ResumeForInternship.jsx";
 import Upload from "./component/pages/Upload.js";
 import Edit from "./component/pages/Edit.js";
+import AttentionGrabbingResumeSummary from "./component/ImportantPost/AttentionGrabbingResumeSummary.jsx";
+import BankResumeFormatforFreshersPDF from "./component/ImportantPost/BankResumeFormatforFreshersPDF.jsx";
+import FunctionResumeFormat from "./component/ImportantPost/FunctionalResumeFormat.jsx";
+import Resumeformatforfreshers from "./component/ImportantPost/Resumeformatforfreshers.jsx";
+import ResumeFormatforFreshersSample from "./component/ImportantPost/ResumeFormatforFreshersSample.jsx";
+import ResumeFormatForFreshersExample from "./component/ImportantPost/ResumeFormatForFreshersExample.jsx";
+import Jobresumeformatforfresher from "./component/ImportantPost/Jobresumeformatforfresher.jsx";
+import GoodresumeFormatForFreshers from "./component/ImportantPost/GoodResumeFormatForFreshers.jsx";
+import PDFofResumeFormatforFreshers from "./component/ImportantPost/PDFofResumeFormatforFreshers.jsx";
+import ResumeFormatForFreshersFreeDownload from "./component/ImportantPost/ResumeFormatForFreshersFreeDownload.jsx";
+import MODELRESUMEFORMATFORFRESHERS from "./component/ImportantPost/MODELRESUMEFORMATFORFRESHERS.jsx";
+import WhatistheBestResumeFormatforFreshers from "./component/ImportantPost/WhatistheBestResumeFormatforFreshers.jsx";
 
 var images = [
-  { id: 1, src: resum1, alt: "Professional Resume Template 1" },
-  { id: 2, src: resume2, alt: "Modern Resume Design 2" },
-  { id: 3, src: resume3, alt: "Creative Resume Layout 3" },
-  { id: 4, src: resume4, alt: "Elegant Resume Example 4" },
+  { id: 1, src: resum1, alt: "Professional Resume Template 1",description:'Professional and elegant resume template with a timeline structure' },
+  { id: 2, src: resume2, alt: "Modern Resume Design 2",description:'Clean and modern resume portfolio or cv template' },
+  { id: 3, src: resume3, alt: "Creative Resume Layout 3",description:'This Marketing Manager resume template is designed to easily pass the computer screenings.' },
+  { id: 4, src: resume4, alt: "Elegant Resume Example 4",description:'' },
   // { id: 5, src: resume5, alt: 'Minimalist Resume Style 5' }, // Uncomment if used
   { id: 6, src: resume6, alt: "Corporate Resume Format 6" },
   { id: 7, src: resume7, alt: "Academic Resume Sample 7" },
@@ -437,6 +450,11 @@ var techImages = [
     id: 116,
     src: Traditional_ATS_Resume_Template,
     alt: "Traditional-ATS-Resume-Template",
+  },
+  {
+    id: 116,
+    src: Bank_Resume_Format_for_Freshers_PDF,
+    alt: "Bank Resume Format for Freshers PDF",
   },
 ];
 
@@ -705,7 +723,7 @@ function App() {
         />
         <Route
           path="/how-to-write-a-resume-for-career-change"
-          element={<ResumeCareerChange />}
+          element={<ResumeCareerChange  techImages={techImages}/>}
         />
         <Route
           path="/resume-writing-tips-for-remote-jobs"
@@ -779,14 +797,14 @@ function App() {
           path="/lawyer-cover-letter-example"
           element={<LawyerCoverLetter />}
         />
-        <Route path="/guide/resume-formatting" element={<FormattinResume />} />
+        <Route path="/guide/resume-formatting" element={<FormattinResume techImages={techImages} images={images} fresherResumeImage={fresherResumeImage} />} />
         <Route
           path="/fresher-resume-formatting"
           element={<FresherResumeFormatting />}
         />
         <Route
           path="/resume-formatting-entry-level"
-          element={<ResumeFormatingForEntryLevel />}
+          element={<ResumeFormatingForEntryLevel fresherResumeImage = {fresherResumeImage}/>}
         />
         <Route
           path="/Resume_Formatting_Steps_for_Freshers"
@@ -866,7 +884,7 @@ function App() {
         />
         <Route
           path="/resume-formatting-engineerig-students"
-          element={<ResumeFormattingEngineeringStudents/>}
+          element={<ResumeFormattingEngineeringStudents techImages={techImages}/>}
         />
         <Route
           path="/resume-formatting-for-freelancers-and-remote-workers"
@@ -963,7 +981,7 @@ function App() {
         />
         <Route
           path="/Functional_vs_Chronological_Resume_Formatting"
-          element={<ResumeFormattingArticle/>}
+          element={<ResumeFormattingArticle techImages={techImages}/>}
         />
         <Route
           path="/government-job-resume-guide"
@@ -984,7 +1002,7 @@ function App() {
        
         <Route
           path="/top-10-resume-formatting-errors"
-          element={<ResumeFormattinError/>}
+          element={<ResumeFormattinError fresherResumeImage={fresherResumeImage} techImages={techImages} images={images} />}
         />
 <Route
           path="/why-ats-unfriendly-formatting-can-lead-to-resume-rejection"
@@ -1113,7 +1131,7 @@ function App() {
         />
         <Route
           path="/resume-format-pdf-guide-perfect-templates-for-a-standout-cv"
-          element={<ResumeFormatPDFGuide/>}// done for submit
+          element={<ResumeFormatPDFGuide images={images} techImages={techImages} fresherResumeImage = {fresherResumeImage}/>}// done for submit
         />
 <Route
           path="/get-hired-faster-the-ultimate-resume-format-pdf-for-your-career"
@@ -1137,7 +1155,7 @@ function App() {
         />
         <Route
           path="/free-resume-format-pdf-build-a-cv-that-stands-out"
-          element={<FreeResumeFormatPDF/>}// done for submit
+          element={<FreeResumeFormatPDF techImages={techImages} fresherResumeImage={fresherResumeImage} images={images}/>}// done for submit
         />
         <Route
           path="/complete-guide-to-resume-format-pdf-your-key-to-landing-any-job"
@@ -1213,11 +1231,11 @@ function App() {
         />
          <Route
           path="/resume-format-pdf"
-          element={<ResumeFormatPDF/>}
+          element={<ResumeFormatPDF fresherResumeImage = {fresherResumeImage} images={images} techImages={techImages}/>}
         />
         <Route
           path="/resume-formatting"
-          element={<ResumeFormatting/>}
+          element={<ResumeFormatting fresherResumeImage = {fresherResumeImage} images={images} techImages={techImages}/>}
         />
         <Route
           path="/professional-resume-format-pdf-download"
@@ -1298,7 +1316,7 @@ function App() {
           element={<HowtoBuildanImpactfulResume/>}
         />
         <Route path="/resume-format-pdf-free-templates-that-make-a-difference"
-          element={<ResumeFormatPDFFreeTemplates/>}
+          element={<ResumeFormatPDFFreeTemplates images={images} techImages={techImages} fresherResumeImage={fresherResumeImage}/>}
         />
         {/*  */}
         <Route path="/get-noticed-with-the-best-resume-format-pdf-free-download-2025"
@@ -1335,7 +1353,7 @@ function App() {
           element={<ResumeImmediateJobOffers/>}
         />
         <Route path="/free-top-resume-format-pdf-successful-career-2025-download-now"
-          element={<ResumeFormatPDFSuccessfull/>}
+          element={<ResumeFormatPDFSuccessfull images={images} techImages={techImages} fresherResumeImage={fresherResumeImage} />}
         />
         <Route path="/top-resume-format-pdf-for-careersuccess"
           element={<TopResumeFormatPDFforCareer/>}
@@ -1359,7 +1377,7 @@ function App() {
           element={<SimpleResumeformatpdf/>}
         />
          <Route path="/resume-format-pdf-free-download"
-          element={<ResumeFormatPDFFreeDownload techImages={techImages}/>}
+          element={<ResumeFormatPDFFreeDownload fresherResumeImage={fresherResumeImage} images={images} techImages={techImages}/>}
         />
         <Route path="/pdf-resume-format-free-download"
           element={<PDFResumeFormatFreeDownload techImages={techImages}/>}
@@ -1391,6 +1409,54 @@ function App() {
         <Route
           path="/resume-for-internship"
           element={<ResumeForInternship fresherResumeImage={fresherResumeImage} techImages={techImages} />}
+        />
+        <Route
+          path="/attention-grabbing-resume-summary"
+          element={<AttentionGrabbingResumeSummary fresherResumeImage={fresherResumeImage} techImages={techImages} />}
+        />
+        <Route
+          path="/bank-resume-format-for-freshers-pdf"
+          element={<BankResumeFormatforFreshersPDF fresherResumeImage={fresherResumeImage} techImages={techImages} />}
+        />
+        <Route
+          path="/functional-resume-format"
+          element={<FunctionResumeFormat fresherResumeImage={fresherResumeImage} techImages={techImages} />}
+        />
+        <Route
+          path="/resume-format-for-freshers"
+          element={<Resumeformatforfreshers fresherResumeImage={fresherResumeImage} techImages={techImages} />}
+        />
+        <Route
+          path="/resume-format-for-freshers-sample-download-now-free"
+          element={<ResumeFormatforFreshersSample fresherResumeImage={fresherResumeImage} techImages={techImages} />}
+        />
+        <Route
+          path="/resume-format-for-freshers-example"
+          element={<ResumeFormatForFreshersExample fresherResumeImage={fresherResumeImage} techImages={techImages} />}
+        />
+        <Route
+          path="/job-resume-format-for-fresher"
+          element={<Jobresumeformatforfresher fresherResumeImage={fresherResumeImage} techImages={techImages} />}
+        />
+        <Route
+          path="/good-resume-format-for-freshers"
+          element={<GoodresumeFormatForFreshers fresherResumeImage={fresherResumeImage} techImages={techImages} />}
+        />
+        <Route
+          path="/pdf-of-resume-format-for-freshers"
+          element={<PDFofResumeFormatforFreshers fresherResumeImage={fresherResumeImage} techImages={techImages} />}
+        />
+        <Route
+          path="/resume-format-for-freshers-free-download"
+          element={<ResumeFormatForFreshersFreeDownload fresherResumeImage={fresherResumeImage} techImages={techImages} />}
+        />
+        <Route
+          path="/model-resume-format-for-freshers"
+          element={<MODELRESUMEFORMATFORFRESHERS fresherResumeImage={fresherResumeImage} techImages={techImages} />}
+        />
+        <Route
+          path="/what-is-the-best-resume-format-for-freshers"
+          element={<WhatistheBestResumeFormatforFreshers fresherResumeImage={fresherResumeImage} techImages={techImages} />}
         />
 
 
@@ -1433,7 +1499,7 @@ function App() {
         />
         <Route
           path="/tailor-resume-to-job-description"
-          element={<TailorResume />}
+          element={<TailorResume techImages={techImages} fresherResumeImage={fresherResumeImage} images = {images} />}
         />
         <Route
           path="/recruiters-guide-writing-resume"

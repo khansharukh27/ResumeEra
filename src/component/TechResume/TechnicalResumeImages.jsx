@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { templatePage } from "../../Redux/action";
+import "./TechnicalResumeImages.css"; // Import the CSS file
 
 const TechnicalResumeImages = (props) => {
     const { techImages } = props;
@@ -15,7 +16,6 @@ const TechnicalResumeImages = (props) => {
             const path = `/techmain/${hoveredImage}`;
             navigate(path);
             dispatch(templatePage(hoveredImage));
-            // window.location.reload();
         }
     };
     
@@ -29,33 +29,36 @@ const TechnicalResumeImages = (props) => {
                     Browse our collection of professional resume templates and find the one that suits your needs.
                 </p>
                 <hr className="template-grid-divider" />
-                <div className="template-grid row m-3">
-                    {techImages.length > 0 ? techImages.map((image) => (
+                <div className="template-grid-images">
+                    {techImages.length > 0 ? techImages.map((image, index) => (
                         <div
+                            className="image-card"
                             data-aos="flip-left"
                             data-aos-duration="1000"
                             key={image.id}
-                            className="template-card col-12 col-md-6 col-lg-4"
                             onMouseEnter={() => setHoveredImage(image.id)}
                             onMouseLeave={() => setHoveredImage(null)}
                         >
                             <img
-                                className="template-image"
                                 src={image.src}
                                 alt={image.alt}
                                 loading="lazy"
-                                style={{border:'1px solid black',padding:'5px',margin:'5px',height:'500px'}}
+                                className="image-card-img"
                             />
+                            {/* Show the link only when image is hovered */}
                             {hoveredImage === image.id && (
                                 <a
-                                    href={`/techmain/${hoveredImage}`}
+                                    href={`/mainpage/${image.id}`}
                                     onClick={handleClick}
                                     className="template-link"
-                                    style={{}}
                                 >
-                                    Go To Your Resume
+                                    Go To Resume
                                 </a>
                             )}
+                            <div className="image-card-footer">
+                                <p>{image.alt}</p>
+                                <p>{index + 1}/{techImages.length}</p>
+                            </div>
                         </div>
                     )) : (
                         <p>No templates available.</p>

@@ -7,6 +7,7 @@ import ShareButtons from "../shareButton/ShareButtons";
 import CallToAction from "../CallToAction";
 import AuthorCard from "../AuthorCard";
 import RandomeArticleToBlogCareer from "../RandomeArticleToBlogCareer";
+import ResumeEraHeading from "../ResumeEraHeading";
 export default function ResumeFormattingforAIDrivenApplicationTrackingSystems() {
      const ArticleUrl = "https://www.resumeera.xyz/resume-formattin-for ai-driven-application-tracking-system";
           const ArticleTitle = "Resume Formatting for AI-Driven Application Tracking Systems | ResumeEra";
@@ -14,6 +15,7 @@ export default function ResumeFormattingforAIDrivenApplicationTrackingSystems() 
             window.scrollTo(0, 0);
           }, []);
           const publishDate = "2025-01-06";
+          const title = 'Resume Formatting for AI-Driven Application Tracking Systems'
   return (
     <div>
       <Helmet>
@@ -44,7 +46,7 @@ export default function ResumeFormattingforAIDrivenApplicationTrackingSystems() 
         />
         <meta
           property="og:image"
-          content={resumeFormattingforai}
+          content='https://img.freepik.com/free-vector/java-developer-smartphone-software-javascript-coding-writing-application-css-programming-html-source-code-tampering-mobile-program-vector-isolated-concept-metaphor-illustration_335657-1994.jpg?t=st=1738392732~exp=1738396332~hmac=d64f218aa68aadfff05adaafdc30b0acee3353eaad47aeae0933660edbff6c32&w=740'
         />
         <meta
           property="og:url"
@@ -63,7 +65,7 @@ export default function ResumeFormattingforAIDrivenApplicationTrackingSystems() 
         />
         <meta
           name="twitter:image"
-          content={resumeFormattingforai}
+          content='https://img.freepik.com/free-vector/java-developer-smartphone-software-javascript-coding-writing-application-css-programming-html-source-code-tampering-mobile-program-vector-isolated-concept-metaphor-illustration_335657-1994.jpg?t=st=1738392732~exp=1738396332~hmac=d64f218aa68aadfff05adaafdc30b0acee3353eaad47aeae0933660edbff6c32&w=740'
         />
         <meta
           name="twitter:url"
@@ -76,7 +78,7 @@ export default function ResumeFormattingforAIDrivenApplicationTrackingSystems() 
     "@type": "Article",
     "headline": "How to Optimize Your Resume for ATS Compatibility",
     "description": "Learn how to optimize your resume for ATS compatibility to increase your chances of passing automated screening and getting noticed by recruiters.",
-    "image": ${resumeFormattingforai},
+    "image": "https://img.freepik.com/free-vector/java-developer-smartphone-software-javascript-coding-writing-application-css-programming-html-source-code-tampering-mobile-program-vector-isolated-concept-metaphor-illustration_335657-1994.jpg?t=st=1738392732~exp=1738396332~hmac=d64f218aa68aadfff05adaafdc30b0acee3353eaad47aeae0933660edbff6c32&w=740",
     "author": {
       "@type": "Person",
       "name": "ResumeEra"
@@ -94,11 +96,10 @@ export default function ResumeFormattingforAIDrivenApplicationTrackingSystems() 
   }`}
         </script>
       </Helmet>
-
+<ResumeEraHeading publishDate={publishDate} title = {title}/>
       <article className="aboutResumeEra">
         <section>
-          <h2>Resume Formatting for AI-Driven Application Tracking Systems</h2>
-          <DateAndAuthor publishDate={publishDate}/>
+         
           <img style={{height:'auto'}} src={resumeFormattingforai} alt="Resume Formatting for AI-Driven Application Tracking Systems"loading="lazy" />
           <p>
             In today’s competitive job market, understanding how to format your

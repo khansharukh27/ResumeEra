@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import '../../css/Important_Post/ResumeComponent.css'; // External CSS for styling
 import skill_image from '../../image/image_for_link/skill_image.jpg'
 import cv_image from '../../image/image_for_link/cv_image.png'
@@ -7,19 +7,47 @@ import ShareButtons from '../shareButton/ShareButtons';
 import AuthorCard from '../AuthorCard';
 import RandomeArticleToBlogCareer from '../RandomeArticleToBlogCareer';
 import CallToAction from '../CallToAction';
+import DateAndAuthor from '../DateAndAuthor';
+import { useNavigate } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import { templatePage } from '../../Redux/action';
 
-const ResumeComponent = () => {
-   const ArticleUrl =
-            "https://resumeera.xyz/how-to-write-a-resume-for-career-change";
-          const ArticleTitle = "How to Write a Resume for Career Change";
-          useEffect(() => {
-            window.scrollTo(0, 0);
-          }, []);
+const ResumeComponent = (prop) => {
+   const [hoveredImage, setHoveredImage] = useState();
+  const { techImages } = prop 
+  const navigate = useNavigate();
+  const ArticleUrl = "https://resumeera.xyz/resume_component";
+  const ArticleTitle = "Create a Professional Resume with Free Templates and Showcase Your Skills";
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+  const publishDate = '2025-01-11'
+  const dispatch = useDispatch();
+
+  const selectedImageId = 110;//chronoligical resume
+  const selectedimage = techImages.find((image) => image.id === selectedImageId)
+  const selectedImageId2 = 111;//functional resume
+  const selectedimage2 = techImages.find((image) => image.id === selectedImageId2)
+  const selectedImageId3 = 112; //minimalistik
+  const selectedimage3 = techImages.find((image) => image.id === selectedImageId3)
+  const selectedImageId4 = 109 //creative
+  const selectedimage4 = techImages.find((image) => image.id === selectedImageId4)
+  const selectedImageId5 = 116 //creative
+  const selectedimage5 = techImages.find((image) => image.id === selectedImageId5)
+  const selectedImageId6 = 107 // infografic resume
+  const selectedimage6 = techImages.find((image) => image.id === selectedImageId6)
+  // console.log('hoveredImage:-,', hoveredImage)
+  const handleClick = (e, imageId) => {
+    e.preventDefault();
+    const path = `/techmain/${imageId}`;
+    navigate(path);
+    dispatch(templatePage(hoveredImage));
+  };
   return (
     <div >
       <Helmet>
       <link rel="canonical" href="https://resumeera.xyz/resume_component" />
-      <title>Create a Professional Resume with Free Templates and Showcase Your Skills</title>
+      <title></title>
             <meta name="description" content="Skills are one of the most critical aspects of any <strong>resume</strong>. Whether you're applying for your first job or making a career transition, the skills section is where you can truly shine. It's essential to understand what skills are relevant to the job you're applying for and how to highlight them in your <strong>curriculum vitae (CV)</strong>. A professional resume template can help you effectively display these skills to potential employers." />
             <meta name='keyword' content='ResumeEra,Resume Era, Free Resume, how to create free resume online,free resume creator,free resume creator online ,Create Resume Online,Free Resume Builder,free resume maker ,Professional Resume, 
     Online Resume Builder, Job Application, CV Maker, Resume Templates, Career, '/>
@@ -43,21 +71,8 @@ const ResumeComponent = () => {
     </script>
             </Helmet>
             <article className='aboutResumeEra'>
-      <h1>Create a Professional Resume with Free Templates and Showcase Your Skills</h1>
-      <div className="date-author-container">
-          <img
-            src="https://resumeera.xyz/static/media/best_logo.895bb22edf6c08600c86.webp"
-            alt="ResumeEra Logo"
-            className="author-logo"
-            style={{ width: "50px", height: "50px" }}
-          />
-          <small className="author-details">
-            ✍️ By the <span className="author-highlight">ResumeEra Team</span> |
-            Published:{""}
-            <span className="author-highlight">December 30, 2024</span> | ⏱️{" "}
-            <span className="author-highlight">8 min read</span>
-          </small>
-        </div>
+      <h1>Create a Professional Resume with Free Templates and Showcase Your Skills</h1>  
+          <DateAndAuthor publishDate={publishDate}/>
         <div>
           <figure>
           <img 

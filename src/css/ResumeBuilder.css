@@ -1,0 +1,61 @@
+.resume-builder-component {
+    background-color: transparent; /* Transparent background */
+    border: 2px solid #ddd;
+    padding: 20px;
+    border-radius: 10px;
+    font-family: Arial, sans-serif;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: 20px auto;
+  }
+  
+  .resume-builder-header {
+    text-align: center;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #4CAF50; /* Green color */
+    margin-bottom: 20px;
+  }
+  
+  .resume-builder-description {
+    color: #333; /* Default text color */
+    font-size: 1.1rem;
+    line-height: 1.8;
+    margin-bottom: 20px;
+  }
+  
+  .resume-builder-features {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+  
+  .feature {
+    padding: 15px;
+    border-radius: 8px;
+    background-color: #f0f0f0;
+    text-align: center;
+    transition: background-color 0.3s ease;
+  }
+  
+  .feature:hover {
+    background-color: #d4e6f1; /* Light blue on hover */
+  }
+  
+  .feature-title {
+    font-weight: bold;
+    color: #FF5733; /* Red color */
+    font-size: 1.2rem;
+  }
+  
+  .feature-description {
+    color: #555; /* Slightly lighter text for descriptions */
+  }
+  
+  .resume-builder-footer {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 1.1rem;
+    color: #FF8C00; /* Orange color */
+  }
+  

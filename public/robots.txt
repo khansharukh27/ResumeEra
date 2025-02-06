@@ -1,5 +1,59 @@
-# https://www.robotstxt.org/robotstxt.html
 User-agent: Googlebot
-Disallow:
+Disallow: /admin/
+Disallow: /login/
+Disallow: /search/
+Disallow: /cart/
+Allow: /images/
+Allow: /blog/
+Sitemap: https://https://resumeera.xyz/sitemap.xml
+
+User-agent: Bingbot
+Disallow: /admin/
+Disallow: /login/
+Disallow: /search/
+Disallow: /cart/
+Allow: /images/
+Allow: /blog/
+Sitemap: https://https://resumeera.xyz/sitemap.xml
+
 User-agent: facebookexternalhit
-Sitemap: https://resumeera.xyz/sitemap.xml
+Disallow: /admin/
+Disallow: /login/
+Disallow: /search/
+Disallow: /cart/
+Allow: /images/
+Allow: /blog/
+
+User-agent: Twitterbot
+Disallow: /admin/
+Disallow: /login/
+Disallow: /search/
+Disallow: /cart/
+Allow: /images/
+Allow: /blog/
+
+User-agent: LinkedInBot
+Disallow: /admin/
+Disallow: /login/
+Disallow: /search/
+Disallow: /cart/
+Allow: /images/
+Allow: /blog/
+
+User-agent: Pinterestbot
+Disallow: /admin/
+Disallow: /login/
+Disallow: /search/
+Disallow: /cart/
+Allow: /images/
+Allow: /blog/
+
+User-agent: Slackbot
+Disallow: /admin/
+Disallow: /login/
+Disallow: /search/
+Disallow: /cart/
+Allow: /images/
+Allow: /blog/
+
+Sitemap: https://https://resumeera.xyz/sitemap.xml

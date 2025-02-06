@@ -6,7 +6,7 @@ const ImageCard = ({ image, hoveredImage, setHoveredImage, handleClick }) => {
     <div
       data-aos="flip-left"
       data-aos-duration="1000"
-      className="template-card col-12 col-md-6 col-lg-4"
+      className=""
       onMouseEnter={() => setHoveredImage(image.id)}
       onMouseLeave={() => setHoveredImage(null)}
     >

@@ -1,0 +1,455 @@
+
+.aboutresumeera {
+    padding: 40px;
+    font-family: 'medium-content-sans-serif-font', sans-serif;
+    color: #333;
+    box-shadow: 0px 0px 30px -7px purple, 0px 0px 20px -10px palegreen;
+    width: 70%;
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    border-radius: 25px;
+    background-color: #dffce3; /* Added to ensure background color */
+}
+.aboutresumeera img{
+    
+}
+
+.para{
+    bottom: -180px;
+    font-weight: 900;
+    position: absolute;
+    border: 2px solid transparent;
+    background-color: transparent; /* Gradient with color stops */
+    height: fit-content;
+    box-shadow: 5px 5px 15px 0px black;
+    padding: 50px;
+    border-radius: 25px;
+}
+.common-mistake{
+    border: 2px solid seagreen;
+    background:linear-gradient(135deg,magenta,pink,rgb(91, 168, 91));
+    color: white;
+    border-radius: 25px;
+    border-top-right-radius: 50%;
+    border-bottom-left-radius: 50%;
+    padding: 60px;
+
+}
+/* Headings */
+.aboutresumeera h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    text-align: left;
+    color: #4a90e2;
+    font-weight: 900;
+    background: linear-gradient(135deg, #ff7e5f 0%, #feb47b 30%, #ffcc70 70%, #6a11cb 100%); /* Gradient with color stops */
+    border-top-right-radius: 35%;
+    border-bottom-left-radius: 15%;
+    padding: 25px;
+    margin-left: -5px;
+    /* margin-top: -7px;00 */
+    margin-right: 15px;
+    width: 98%;
+    padding-top: 85px;
+}
+
+.aboutresumeera h2 {
+    margin-top: 20px;
+    font-weight: 900;
+    color: black;
+    font-family: 'Times New Roman', Times, serif;
+    position: relative;
+}
+
+.aboutresumeera h2::before {
+    content: "";
+    display: inline-block;
+    width: 4%;
+    height: 25px;
+    background-color: rgb(112, 228, 112); /* Green color */
+    margin-right: 15px;
+    margin-top: 15px;
+    border-radius: 5px;
+}
+
+.aboutresumeera h3 {
+    font-size: 1.8em;
+    margin-top: 30px;
+    margin-bottom: 10px;
+    color: #333;
+    font-weight: 700;
+    position: relative;
+}
+
+.aboutresumeera h3::before {
+    content: "";
+    display: inline-block;
+    width: 4%;
+    height: 25px;
+    background-color: #000; /* Black color */
+    margin-right: 15px;
+    margin-top: 15px;
+    border-radius: 5px;
+}
+
+/* Paragraphs */
+.aboutresumeera p {
+    line-height: 1.6;
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+    font-family:Arial, Helvetica, sans-serif;
+    color: #333;
+}
+
+/* Lists */
+.aboutresumeera ul,
+.aboutresumeera ol {
+    margin-left: 20px;
+    margin-bottom: 20px;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+.aboutresumeera li {
+    font-family:Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    color: black;
+    font-weight: 700;
+}
+
+/* Strong/Emphasized Text */
+.aboutresumeera strong {
+    font-weight: 900;
+    font-size: large;
+    font-family: 'Times New Roman', Times, serif;
+    color: black;
+}
+
+/* Images */
+.aboutresumeera img {
+    border-radius: 25px;
+    width: 100%;
+    height: auto;
+    box-shadow: 0px 0px 30px -7px purple, 0px 0px 20px -10px palegreen;
+}
+
+/* Tables */
+table {
+    width: 80%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    margin-left: 50px;
+}
+
+th,
+td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Quotes */
+.quotes {
+    width: 100%;
+    background-color: wheat;
+    padding: 20px;
+    margin-bottom: 15px;
+    margin-top: 15px;
+    
+}
+
+/* Code Blocks */
+.aboutresumeera pre {
+    border: 2px dashed green;
+    padding: 5px;
+    background-color: black;
+    color: mediumseagreen;
+}
+
+/* Headings in Other Sections */
+.aboutresumeera .h1 {
+    border: 1px solid black;
+    border-radius: 15px;
+    box-shadow: inherit;
+    padding: 50px;
+    background-color: forestgreen;
+    font-weight: 900;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+}
+.aboutresumeera .faqs{
+    border: 2px dashed salmon;
+    border-radius: 25px;
+    padding: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 20px;
+
+}
+.faq-item {
+    flex: 1 1 30%; /* Flexible width with min size control */
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #f9f9f9;
+  }
+.aboutresumeera .question{
+
+}
+.aboutresumeera .image-withcontent{
+    display: flex;
+    justify-content: space-around;
+
+}
+.image-withcontent .content{
+    width: 50%;
+padding: 5px;
+}
+.image-withcontent .image{
+    width: 50%;
+    margin: 25px;
+}
+.why-we img{
+width: 150px;
+height: 250px;
+margin: 30px;
+
+}
+.why-we h2{
+    margin-top: -10px;
+}
+.why-we .why-we-div{
+    display: flex;
+
+}
+.strong-point{
+    border: 1px solid green;
+    padding: 15px;
+    border-radius: 25px;
+    
+}
+/* Responsive Styles for Small Screens */
+@media (max-width: 768px) {
+    .aboutresumeera {
+        width: 90%;
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 2em;
+    }
+
+    h3 {
+        font-size: 1.5em;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+
+    table {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    th, td {
+        font-size: 0.8em;
+        padding: 8px;
+    }
+
+    .quotes {
+        padding: 10px;
+        margin-top: 10px;
+    }
+}
+.common-mistakeli{
+    border: 2px solid seagreen;
+    background:linear-gradient(135deg,magenta,pink,rgb(91, 168, 91));
+    color: white;
+    /* border-radius: 15px; */
+    border-top-right-radius: 50%;
+    border-bottom-left-radius: 50%;
+    padding: 25px;
+    font-size: .4rem;
+    margin-left: -20px;
+    height: auto;
+}
+.releted-article{
+    border-radius: 15px;
+    border: 2px dashed rgb(100, 199, 100);
+    padding: 25px;
+    background-color: #000;
+    color: white;
+    margin-top: 5px;
+}
+.releted-article h2,.releted-article h3,.releted-article .bi{
+    color: orange;
+
+}
+.releted-article p{
+    color:orange;
+    font-weight: 900;
+}
+.releted-article li{
+    margin: 5px;
+
+}
+
+
+@media (max-width: 768px) {
+    .aboutresumeera {
+        padding-left: 0px;
+        /* padding-right: px; */
+        width: 100%;
+        margin: 0px;
+        box-shadow: none;
+        margin-left:0px;
+        border-radius: 0px; 
+        /* align-items: center; */
+        /* text-align: center; */
+    }
+    .header{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        border: 2px solid blue;
+        background: linear-gradient(135deg, #ff7e5f 0%, #feb47b 30%, #ffcc70 70%, #6a11cb 100%); /* Gradient with color stops */
+        border-top-right-radius: 15%;
+        border-bottom-left-radius: 15%;
+        padding: 5px;
+        
+        height: fit-content;
+        margin: 0px;
+
+    }
+    .header img{
+        width: 80%;
+        height: 250px;
+        margin-left: 65px;
+        padding-bottom: 5px;
+        margin-bottom: 5px;
+        
+
+    }
+    .aboutresumeera h1 {
+        font-size: 1rem;
+        margin-bottom: 2px;
+        text-align:left;
+        color: #4a90e2;
+        font-weight: 900;
+        background: linear-gradient(135deg, #ff7e5f 0%, #feb47b 30%, #ffcc70 70%, #6a11cb 100%); /* Gradient with color stops */
+        border-top-right-radius: 25%;
+        border-bottom-left-radius: 15%;
+     
+      padding: 0px;
+      margin-top: -5px;
+    }
+    .aboutresumeera .qoute,.qoute h2{
+        width: 100%;
+        border: 2px solid blue;
+        background: linear-gradient(135deg, #ff7e5f 0%, #feb47b 30%, #ffcc70 70%, #6a11cb 100%); /* Gradient with color stops */
+        border-top-right-radius: 25%;
+        border-bottom-left-radius: 25%;
+        padding: 50px;
+        margin-top: -3px;
+        padding-bottom: 10px;
+    }
+    .aboutresumeera .qoute{
+        width: 100%;
+        border: 2px solid blue;
+        background: linear-gradient(135deg, #ff7e5f 0%, #feb47b 30%, #ffcc70 70%, #6a11cb 100%); /* Gradient with color stops */
+        border-top-right-radius: 25%;
+        border-bottom-left-radius: 25%;
+        padding: 2px;
+        height: auto;
+        font-size:medium;
+        margin: 0px;
+    }
+    .common-mistake{
+        border: 2px solid seagreen;
+        background:linear-gradient(135deg,magenta,pink,rgb(91, 168, 91));
+        color: white;
+        /* border-radius: 15px; */
+        border-top-right-radius: 50%;
+        border-bottom-left-radius: 50%;
+        padding: 15px;
+        /* paddingle; */
+    height: auto;
+    }
+    .common-mistakeli{
+        border: none;
+        background:inherit;
+        color:inherit;
+        /* border-radius: 15px; */
+        border-top-right-radius: none;
+        border-bottom-left-radius: none;
+        padding: 20px;
+        font-size: inherit;
+        margin-left: 0px;
+        height: auto;
+    }   
+    .aboutresumeera h1 {
+        font-size: 1.5rem;
+        /* padding-top: 20px; */
+    }
+
+    h3 {
+        font-size:1rem;
+    }
+
+    p, ul, ol {
+        font-size: 0.9em;
+    }
+
+    table {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    th, td {
+        font-size: 0.8em;
+        padding: 8px;
+    }
+    .para{
+        bottom: -540px;
+        position: absolute;
+        border: 2px solid transparent;
+        background-color: transparent; /* Gradient with color stops */
+        height: fit-content;
+        box-shadow: 5px 5px 15px 0px black;
+        padding: 5px;
+        border-radius: 25px;
+    }
+    .table-of-content{
+        margin-top: 500px;
+    }
+    .why-we-div{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .why-we-div h3{
+        font-size: 1rem;
+
+    }
+    .why-we-div p{
+        font-size: .5rem;
+    }
+    .why-we img{
+        width: 100%;
+        height: auto;
+    }
+        .faqs {
+            flex-direction: column;
+          }
+          .faq-item {
+            flex: 1 1 100%;
+          }
+}
+

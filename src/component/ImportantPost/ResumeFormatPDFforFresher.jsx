@@ -8,23 +8,26 @@ import CallToAction from '../CallToAction';
 import ShareButtons from '../shareButton/ShareButtons';
 import { Helmet } from 'react-helmet';
 import { Link, useNavigate } from 'react-router-dom';
-import GetNoticedwith from '../../image/image_for_link/Get Noticed with the Best Resume.jpeg'
+// import GetNoticedwith from '../../image/image_for_link/Get Noticed with the Best Resume.jpeg'
 import ImageCard from '../ImageCardResusable/ImageCardResumeble';
 import TechnicalResumeImages from '../TechResume/TechnicalResumeImages';
 import { templatePage } from '../../Redux/action';
 import { useDispatch } from 'react-redux';
-export default function ResumeFormatPDFforFresher({props,techImages}) {
-    const [hoveredImage, setHoveredImage] = useState();
-    const navigate = useNavigate();
-    // const { techImages } = props
+import ResumeEraHeading from '../ResumeEraHeading';
+// import { title } from 'process';
+export default function ResumeFormatPDFforFresher(props) {
+   
     const ArticleUrl = 'https://resumeera.xyz/resume-format-pdf-for-fresher';
     const ArticleTitle = "Resume Format PDF for Freshers: Your Complete Guide to Crafting a Winning Resume";
     useEffect(() => {
         window.scrollTo(0, 0);
     }, []);
+    const [hoveredImage, setHoveredImage] = useState();
+    const navigate = useNavigate();
+    const { techImages } = props
     const publishDate = '2025-01-11'
     const dispatch = useDispatch();
-
+    const title = 'Resume Format PDF for Freshers: Your Complete Guide to Crafting a Winning Resume'
     const selectedImageId = 110;
     const selectedimage = techImages.find((image) => image.id === selectedImageId)
     const selectedImageId2 = 111;
@@ -131,15 +134,15 @@ export default function ResumeFormatPDFforFresher({props,techImages}) {
 `}
                 </script>
             </Helmet>
+            <ResumeEraHeading publishDate={publishDate} title={title}/>
 
             <article className='aboutResumeEra' style={{padding:'5px'}}>
                 <section className='header'>
                     <div className='d-flex'>
-                    <h1> Resume Format PDF for Freshers: Your Complete Guide to Crafting a Winning Resume </h1>
+                    
                     <img className='qoute' style={{backgroundColor:'inherit',height:'50%',width:'30%',marginTop:'50px'}} src="https://img.freepik.com/free-vector/profile-data-concept-illustration_114360-2770.jpg" loading='lazy' alt="Resume Format PDF for Freshers" />
                     
                     </div>
-                    <DateAndAuthor publishDate={publishDate} />
 
                 </section><div><GoogleAd /></div>
                 <TechnicalResumeImages techImages = {techImages}/>

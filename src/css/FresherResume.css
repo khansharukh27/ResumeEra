@@ -1,0 +1,107 @@
+/* FresherResume.css */
+
+/* Container for the entire grid */
+.template-grid-container {
+    padding: 20px;
+}
+
+.section-title {
+    text-align: center;
+}
+
+.template-grid-divider {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-top: 2px solid #ccc;
+}
+
+.template-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    justify-content: center; /* Centers items on smaller screens */
+}
+
+/* Individual card container */
+.template-card {
+    /* border: 5px solid black; */
+    padding: 0px;
+    margin: 5px;
+    margin-bottom: 70px;
+    height: 500px;
+    position: relative;
+    width: calc(30% - 16px); /* Default width for larger screens */
+    border-radius: 15px;
+}
+
+/* Styling for the image */
+.template-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures image fills the container */
+    border-radius: 8px;
+}
+
+/* Link that appears on hover */
+.template-link {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* Footer for the image with description and index */
+.template-footer {
+    font-weight: 700;
+    margin-bottom: 10px;
+    text-align: center;
+    color: black;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+/* Mobile Responsiveness: */
+@media (max-width: 768px) {
+    /* Make the grid container flexible for small screens */
+    .template-grid {
+        justify-content: center;
+    }
+
+    /* Individual card container for mobile */
+    .template-card {
+        width: calc(45% - 16px); /* Adjust card width to 45% for small screens */
+        height: 400px; /* Decrease the height on smaller screens */
+    }
+
+    /* Adjust footer text spacing for smaller devices */
+    .template-footer {
+        flex-direction: column; /* Stack items vertically */
+        gap: 10px; /* Add gap between items */
+    }
+}
+
+@media (max-width: 480px) {
+    /* For very small screens like mobile phones */
+    .template-card {
+        width: calc(100% - 16px); /* Make cards take full width on very small screens */
+        height: 300px; /* Further reduce card height */
+    }
+
+    .template-footer {
+        flex-direction: column;
+        align-items: center; /* Center the footer items on mobile */
+    }
+
+    /* Make the text more readable on smaller devices */
+    .template-link {
+        font-size: 14px; /* Smaller text for mobile */
+        padding: 8px 16px; /* Adjust padding for smaller screens */
+    }
+}

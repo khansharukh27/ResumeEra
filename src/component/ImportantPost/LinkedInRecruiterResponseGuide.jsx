@@ -31,12 +31,12 @@ export default function LinkedInRecruiterResponseGuide() {
                 <meta property="og:title" content="How to Respond to a LinkedIn Recruiter: A Comprehensive Guide" />
                 <meta property="og:description" content="Master the art of responding to LinkedIn recruiters with this detailed guide. Get tips, examples, and professional advice to handle recruiter messages effectively." />
                 <meta property="og:url" content="https://resumeera.xyz/how-to-respond-to-a-linkedin-recruiter" />
-                <meta property="og:image" content={HowtoHandle} />
+                <meta property="og:image" content="https://img.freepik.com/free-vector/follow-me-social-business-theme-design_24877-50423.jpg?t=st=1738393086~exp=1738396686~hmac=9280cbfa3db46800dc7292f9a47ad5b72a01a0f64e9236085e7fb1593b29a4f4&w=740" />
                 <meta property="og:type" content="article" />
 
                 <meta name="twitter:title" content="How to Respond to a LinkedIn Recruiter: A Comprehensive Guide" />
                 <meta name="twitter:description" content="Find out the best ways to respond to LinkedIn recruiters. This guide provides expert advice and message templates to help you succeed in professional communications." />
-                <meta name="twitter:image" content={HowtoHandle} />
+                <meta name="twitter:image" content="https://img.freepik.com/free-vector/follow-me-social-business-theme-design_24877-50423.jpg?t=st=1738393086~exp=1738396686~hmac=9280cbfa3db46800dc7292f9a47ad5b72a01a0f64e9236085e7fb1593b29a4f4&w=740" />
                 <meta name="twitter:card" content="summary_large_image" />
 
                 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -61,7 +61,7 @@ export default function LinkedInRecruiterResponseGuide() {
   "datePublished": "2025-01-17",
   "dateModified": "2025-01-17",
   "mainEntityOfPage": "https://resumeera.xyz/how-to-respond-to-a-linkedin-recruiter",
-  "image": ${HowtoHandle}
+  "image": "https://img.freepik.com/free-vector/follow-me-social-business-theme-design_24877-50423.jpg?t=st=1738393086~exp=1738396686~hmac=9280cbfa3db46800dc7292f9a47ad5b72a01a0f64e9236085e7fb1593b29a4f4&w=740"
 }`}
                 </script>
                 <script type="application/ld+json">

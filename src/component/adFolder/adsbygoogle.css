@@ -5,3 +5,11 @@
     overflow: hidden;
     margin-left: 0px;
 }
+@media(max-width:768){
+    .ad-container{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        width: 100%;
+    }
+}

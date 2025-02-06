@@ -12,7 +12,7 @@ const Preview105 = () => {
     const [fontStyle, setFontStyle] = useState('Arial'); // Default font style
     const [fontColor, setFontColor] = useState('#rrggbb')
     const [headingColor, setHeadingColor] = useState('#rrggbb')
-    const [fontSize,setFontSize] = useState('medium')
+    const [fontSize, setFontSize] = useState('medium')
     const navigate = useNavigate();
     const personalInfo = useSelector((state) => state.reducer.personalInfo);
     const education = useSelector((state) => [state.reducer.education]);
@@ -68,100 +68,100 @@ const Preview105 = () => {
                 </p>
             </header>
             <div style={{ width: '100%' }}>
-                        <GoogleAd/>
-                    </div>
-        <div className="main105">
-            <div className="preview105" id="Alisha_mirza101" style={{ fontSize:fontSize,color: fontColor, backgroundColor: bgColor, fontFamily: fontStyle }}>
-                <div className="personalinfo105">
-                    <div className="imagediv105">
-                        <img src={personalInfo.image} alt="doctore resume" />
-                    </div>
-                    <div className="namediv105">
-                        <h3 style={{ whiteSpace: 'nowrap', marginBottom: '',color:headingColor,fontFamily:fontStyle }}>{personalInfo.firstName} {personalInfo.lastName}</h3>
-                        <p style={{color: fontColor,fontFamily:fontStyle}}></p>
-                        <p className="jobtitle105f" style={{color: fontColor,fontFamily:fontStyle,fontSize:''}} >{work[0][0].jobtitle}</p>
-                    </div>
-                    <div className="contactdiv105">
-                        <div className="d-flex">
-                        <div><p style={{color: fontColor,fontFamily:fontStyle}}><i className="bi bi-geo-alt-fill me-2 ms-2" /></p></div>
-                        <div><p style={{color: fontColor, wordBreak: "break-all" }}>{personalInfo.address} {personalInfo.city} {personalInfo.state} {personalInfo.postalCode}</p></div>
-                        </div>
-                        <div className="d-flex">
-                            <div><p style={{color: fontColor,fontFamily:fontStyle}}><i className="bi bi-telephone-fill me-2 ms-2" /></p></div>
-                            <div><p style={{color: fontColor,fontFamily:fontStyle}}> {personalInfo.mobileNumber}</p></div>
-                         </div>
-                        
-                        <div className="d-flex">
-                            <div><p style={{color: fontColor,fontFamily:fontStyle}} ><i className="bi bi-envelope me-2 ms-2" /></p></div>
-                            <div><p style={{color: fontColor, wordBreak: "break-all" }}>{personalInfo.email}</p></div>
-                        </div>
-                         <div>
-                            <div><p style={{color: fontColor,fontFamily:fontStyle}}><i class="bi bi-github ms-2" /></p></div>
-                            <div><p style={{color: fontColor,fontFamily:fontStyle}}>{socialMediaLink.github}</p></div>
-                         </div>
-                        
-                    </div>
-                </div>
-                <div className="d-flex justify-content-between mt-4 ">
-                    <div className="inner105-1 w-50">
-                        <h6 style={{ color: headingColor,fontFamily:fontStyle }}>Profile</h6>
-                        <p style={{color: fontColor,fontFamily:fontStyle}}>{personalInfo.object}</p>
-                        <div className=" ">
-                            <h6 style={{ color: headingColor }}>Language</h6>
-                            {languages[0].map((keys, index) => (
-                                <div key={index} className="">
-                                    <div>
-                                        <p style={{color: fontColor,fontFamily:fontStyle}}>{keys.language}</p>
-                                    </div>
-                                </div>
-                            ))}
-                        </div>
-                        <div className="education-section105 mt-3">
-                            <h6 className="details-title105" style={{ color: headingColor }}>EDUCATION</h6>
-                            {education[0].map((edu, index) => (
-                                <div key={index} className="education-item105">
-                                    <div className="education-degree105">
-                                        <p style={{color: fontColor,fontFamily:fontStyle}}>{edu.degree}</p>
-                                        <p style={{color: fontColor,fontFamily:fontStyle}}>{edu.univercity}</p>
-                                        <p style={{color: fontColor,fontFamily:fontStyle}} className="education-duration105">{edu.startYear} - {edu.endYear},{edu.city}</p>
-                                    </div>
-                                    <div className="education-details105">
-                                        <span><b></b></span>
-                                    </div>
-                                </div>
-                            ))}
-                        </div>
-                    </div>
-                    <div className="divider105"></div>
-                    <div className=".inner105-2">
-                        <div className="experience-section105">
-                            <h6 className="details-title105" style={{ color: headingColor }}>
-                                WORK EXPERIENCE</h6>
-                            {work[0].map((works, index) => (
-                                <div key={index} className="employment-history101 ms-4">
-                                    <div className="exp-inner105">
-                                        <p style={{color: fontColor,fontFamily:fontStyle}} className="employment-detail105"><b>{works.jobtitle}</b>|{works.organization}|{work.city}</p>
-                                        <p style={{color: fontColor,fontFamily:fontStyle}} className="employment-duration105">{works.startYear} - {works.endYear}</p>
-                                        <p style={{color: fontColor,fontFamily:fontStyle}} className='aboutexperience105'>{works.aboutexperience}</p>
-                                    </div>
-                                </div>
-                            ))}
-                        </div>
-                        <div className="technical-skills-title105 mt-3">
-                            <h6 className="" style={{ color: headingColor }}>
-                                TECHNICAL SKILL</h6>
-                            {keyskills[0].map((keys, index) => (
-                                <div key={index} className="technical-skill-item101 d-flex justify-content-between">
-                                    <ul>
-                                        <li><p style={{color: fontColor,fontFamily:fontStyle}}>{keys.keyskills}</p></li>
-                                    </ul>
-                                </div>
-                            ))}
-                        </div>
-                    </div>
-                </div>
+                <GoogleAd />
             </div>
-            <div className="resume-download-section0">
+            <div className="main105">
+                <div className="preview105" id="Alisha_mirza101" style={{ fontSize: fontSize, color: fontColor, backgroundColor: bgColor, fontFamily: fontStyle }}>
+                    <div className="personalinfo105">
+                        <div className="imagediv105">
+                            <img src={personalInfo.image} alt="doctore resume" />
+                        </div>
+                        <div className="namediv105">
+                            <h3 style={{ whiteSpace: 'nowrap', marginBottom: '', color: headingColor, fontFamily: fontStyle }}>{personalInfo.firstName} {personalInfo.lastName}</h3>
+                            <p style={{ color: fontColor, fontFamily: fontStyle }}></p>
+                            <p className="jobtitle105f" style={{ color: fontColor, fontFamily: fontStyle, fontSize: '' }} >{work[0][0].jobtitle}</p>
+                        </div>
+                        <div className="contactdiv105">
+                            <div className="d-flex">
+                                <div><p style={{ color: fontColor, fontFamily: fontStyle }}><i className="bi bi-geo-alt-fill me-2 ms-2" /></p></div>
+                                <div><p style={{ color: fontColor, wordBreak: "break-all" }}>{personalInfo.address} {personalInfo.city} {personalInfo.state} {personalInfo.postalCode}</p></div>
+                            </div>
+                            <div className="d-flex">
+                                <div><p style={{ color: fontColor, fontFamily: fontStyle }}><i className="bi bi-telephone-fill me-2 ms-2" /></p></div>
+                                <div><p style={{ color: fontColor, fontFamily: fontStyle }}> {personalInfo.mobileNumber}</p></div>
+                            </div>
+
+                            <div className="d-flex">
+                                <div><p style={{ color: fontColor, fontFamily: fontStyle }} ><i className="bi bi-envelope me-2 ms-2" /></p></div>
+                                <div><p style={{ color: fontColor, wordBreak: "break-all" }}>{personalInfo.email}</p></div>
+                            </div>
+                            <div>
+                                <div><p style={{ color: fontColor, fontFamily: fontStyle }}><i class="bi bi-github ms-2" /></p></div>
+                                <div><p style={{ color: fontColor, fontFamily: fontStyle }}>{socialMediaLink.github}</p></div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div className="d-flex justify-content-between mt-4 ">
+                        <div className="inner105-1 w-50">
+                            <h6 style={{ color: headingColor, fontFamily: fontStyle }}>Profile</h6>
+                            <p style={{ color: fontColor, fontFamily: fontStyle }}>{personalInfo.object}</p>
+                            <div className=" ">
+                                <h6 style={{ color: headingColor }}>Language</h6>
+                                {languages[0].map((keys, index) => (
+                                    <div key={index} className="">
+                                        <div>
+                                            <p style={{ color: fontColor, fontFamily: fontStyle }}>{keys.language}</p>
+                                        </div>
+                                    </div>
+                                ))}
+                            </div>
+                            <div className="education-section105 mt-3">
+                                <h6 className="details-title105" style={{ color: headingColor }}>EDUCATION</h6>
+                                {education[0].map((edu, index) => (
+                                    <div key={index} className="education-item105">
+                                        <div className="education-degree105">
+                                            <p style={{ color: fontColor, fontFamily: fontStyle }}>{edu.degree}</p>
+                                            <p style={{ color: fontColor, fontFamily: fontStyle }}>{edu.univercity}</p>
+                                            <p style={{ color: fontColor, fontFamily: fontStyle }} className="education-duration105">{edu.startYear} - {edu.endYear},{edu.city}</p>
+                                        </div>
+                                        <div className="education-details105">
+                                            <span><b></b></span>
+                                        </div>
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
+                        <div className="divider105"></div>
+                        <div className=".inner105-2">
+                            <div className="experience-section105">
+                                <h6 className="details-title105" style={{ color: headingColor }}>
+                                    WORK EXPERIENCE</h6>
+                                {work[0].map((works, index) => (
+                                    <div key={index} className="employment-history101 ms-4">
+                                        <div className="exp-inner105">
+                                            <p style={{ color: fontColor, fontFamily: fontStyle }} className="employment-detail105"><b>{works.jobtitle}</b>|{works.organization}|{work.city}</p>
+                                            <p style={{ color: fontColor, fontFamily: fontStyle }} className="employment-duration105">{works.startYear} - {works.endYear}</p>
+                                            <p style={{ color: fontColor, fontFamily: fontStyle }} className='aboutexperience105'>{works.aboutexperience}</p>
+                                        </div>
+                                    </div>
+                                ))}
+                            </div>
+                            <div className="technical-skills-title105 mt-3">
+                                <h6 className="" style={{ color: headingColor }}>
+                                    TECHNICAL SKILL</h6>
+                                {keyskills[0].map((keys, index) => (
+                                    <div key={index} className="technical-skill-item101 d-flex justify-content-between">
+                                        <ul>
+                                            <li><p style={{ color: fontColor, fontFamily: fontStyle }}>{keys.keyskills}</p></li>
+                                        </ul>
+                                    </div>
+                                ))}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div className="resume-download-section0">
                     <div style={{ width: '100%' }}>
                         <GoogleAd />
                     </div>
@@ -218,14 +218,14 @@ const Preview105 = () => {
                         </div>
                     </div>
                     <div style={{ width: '100%' }}>
-                        <GoogleAd/>
+                        <GoogleAd />
                     </div>
 
                 </div>
-                </div>
-                <div style={{ width: '100%' }}>
-                        <GoogleAd/>
-                    </div>
+            </div>
+            <div style={{ width: '100%' }}>
+                <GoogleAd />
+            </div>
         </div>
     )
 }

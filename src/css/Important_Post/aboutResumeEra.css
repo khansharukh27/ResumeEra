@@ -4,24 +4,14 @@
     font-family: 'medium-content-sans-serif-font', sans-serif;
     color: #333;
     box-shadow: 0px 0px 30px -7px purple, 0px 0px 20px -10px palegreen;
-    width: 70%;
+    width: 80%;
     margin-top: 50px;
     margin-left: auto;
     margin-right: auto;
-    border-radius: 25px;
-    background-color: #dffce3; /* Added to ensure background color */
+    background-color: #fcfdfc; /* Added to ensure background color */
 }
-.header{
-    
-    position: relative;
-    border: 2px solid blue;
-    background: linear-gradient(135deg, #ff7e5f 0%, #feb47b 30%, #ffcc70 70%, #6a11cb 100%); /* Gradient with color stops */
-    border-top-right-radius: 25%;
-    border-bottom-left-radius: 15%;
-    padding: 15px;
-    padding-bottom: 80px;
-}
-.header img{
+
+.aboutresumeera img{
     width: 250px;
     height: 350px;
 }
@@ -44,16 +34,7 @@
     padding: 50px;
     border-radius: 25px;
 }
-.common-mistake{
-    border: 2px solid seagreen;
-    background:linear-gradient(135deg,magenta,pink,rgb(91, 168, 91));
-    color: white;
-    border-radius: 25px;
-    border-top-right-radius: 50%;
-    border-bottom-left-radius: 50%;
-    padding: 60px;
 
-}
 /* Headings */
 .aboutResumeEra h1 {
     font-size: 2.5em;
@@ -115,9 +96,10 @@
 .aboutResumeEra p {
     line-height: 1.6;
     margin-bottom: 15px;
-    font-size: 1.2rem;
-    font-family:Arial, Helvetica, sans-serif;
+    font-size: 1.5rem;
+    font-family:Georgia, 'Times New Roman', Times, serif;
     color: #333;
+
 }
 
 /* Lists */
@@ -130,15 +112,16 @@
 
 .aboutResumeEra li {
     font-family:Arial, Helvetica, sans-serif;
-    font-size: 1rem;
+    font-size: 1.3rem;
     color: black;
-    font-weight: 700;
+    font-weight: normal;
+    /* font-weight: 700; */
 }
 
 /* Strong/Emphasized Text */
 .aboutResumeEra strong {
     font-weight: 900;
-    font-size: large;
+    font-size: 1.5rem;
     font-family: 'Times New Roman', Times, serif;
     color: black;
 }
@@ -182,12 +165,6 @@ th {
 }
 
 /* Code Blocks */
-.aboutResumeEra pre {
-    border: 2px dashed green;
-    padding: 5px;
-    background-color: black;
-    color: mediumseagreen;
-}
 
 /* Headings in Other Sections */
 .aboutResumeEra .h1 {
@@ -247,78 +224,139 @@ margin: 30px;
     display: flex;
 
 }
-/* Responsive Styles for Small Screens */
-@media (max-width: 768px) {
-    .aboutResumeEra {
-        width: 90%;
-        padding: 20px;
-    }
-
-    h1 {
-        font-size: 2em;
-    }
-
-    h3 {
-        font-size: 1.5em;
-    }
-
-    p {
-        font-size: 1rem;
-    }
-
-    table {
-        width: 100%;
-        margin-left: 0;
-    }
-
-    th, td {
-        font-size: 0.8em;
-        padding: 8px;
-    }
-
-    .quotes {
-        padding: 10px;
-        margin-top: 10px;
-    }
+.strong-point{
+    border: 1px solid green;
+    padding: 15px;
+    border-radius: 25px;
+    
 }
-.common-mistakeli{
-    border: 2px solid seagreen;
-    background:linear-gradient(135deg,magenta,pink,rgb(91, 168, 91));
-    color: white;
-    /* border-radius: 15px; */
-    border-top-right-radius: 50%;
-    border-bottom-left-radius: 50%;
-    padding: 25px;
-    font-size: .4rem;
-    margin-left: -20px;
-    height: auto;
-}
-.releted-article{
+.tips{
+    border: 2px solid blueviolet;
     border-radius: 15px;
-    border: 2px dashed rgb(100, 199, 100);
     padding: 25px;
-    background-color: #000;
-    color: white;
-    margin-top: 5px;
-}
-.releted-article h2,.releted-article h3,.releted-article .bi{
-    color: orange;
-
-}
-.releted-article p{
-    color:orange;
-    font-weight: 900;
-}
-.releted-article li{
     margin: 5px;
-
+    position: relative;
 }
+.tips i,.tips h2{
+    color: orange;
+}
+.aboutResumeEra pre{
+    font-size: 1.25rem;
+    border: 1px dashed black;
+    padding: 20px;
+    border-radius: 15px;
+    background-color: rgb(132, 233, 163);
+}
+/* Responsive Styles for Small Screens */
 
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* Container Styles */
+  .Resume-Builder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #f9f9f9;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  
+  /* Logo Image */
+  .Resume-Builder img {
+    width: 150px;
+    height: auto;
+    margin-bottom: 20px;
+  }
+  
+  /* Heading Styles */
+  .Resume-Builder h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .Resume-Builder h3 {
+    font-size: 1.25rem;
+    font-weight: 500;
+    color: #555;
+    margin-bottom: 15px;
+  }
+  
+  /* Paragraph Styles */
+  .Resume-Builder p {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 20px;
+    line-height: 1.6;
+  }
+  
+  /* Button Link Styles */
+  .Resume-Builder a {
+    display: inline-block;
+    padding: 12px 25px;
+    background-color: #4CAF50;
+    color: white;
+    text-decoration: none;
+    font-size: 1.125rem;
+    font-weight: bold;
+    border-radius: 50px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  /* Hover Effect for Button */
+  .Resume-Builder a:hover {
+    background-color: #45a049;
+    transform: translateY(-4px);
+  }
 
+  .exampleofsummary{
+    border: 2px dashed saddlebrown;
+    padding: 5px;
+    border-radius: 15px;
+  }
+  #education{
+    width:'20px';
+    height: 20px;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    .Resume-Builder {
+      padding: 5px;
+    }
+  
+    .Resume-Builder h2 {
+      font-size: 1.75rem;
+    }
+  
+    .Resume-Builder h3 {
+      font-size: 1.125rem;
+    }
+  
+    .Resume-Builder p {
+      font-size: 0.95rem;
+    }
+  
+    .Resume-Builder a {
+      padding: 10px 20px;
+      font-size: 1rem;
+    }
+  }
+  
 @media (max-width: 768px) {
     .aboutResumeEra {
         padding-left: 0px;
-        /* padding-right: px; */
         width: 100%;
         margin: 0px;
         box-shadow: none;
@@ -327,20 +365,15 @@ margin: 30px;
         /* align-items: center; */
         /* text-align: center; */
     }
-    .header{
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-        border: 2px solid blue;
-        background: linear-gradient(135deg, #ff7e5f 0%, #feb47b 30%, #ffcc70 70%, #6a11cb 100%); /* Gradient with color stops */
-        border-top-right-radius: 15%;
-        border-bottom-left-radius: 15%;
-        padding: 5px;
-        
-        height: fit-content;
-        margin: 0px;
-
+    .aboutResumeEra p{
+        font-size: small;
+        margin-left: auto;
+        margin-right: auto;
     }
+    .aboutResumeEra h3{
+        font-size: small;
+    }
+    
     .header img{
         width: 80%;
         height: 250px;
@@ -349,19 +382,6 @@ margin: 30px;
         margin-bottom: 5px;
         
 
-    }
-    .aboutResumeEra h1 {
-        font-size: 1rem;
-        margin-bottom: 2px;
-        text-align:left;
-        color: #4a90e2;
-        font-weight: 900;
-        background: linear-gradient(135deg, #ff7e5f 0%, #feb47b 30%, #ffcc70 70%, #6a11cb 100%); /* Gradient with color stops */
-        border-top-right-radius: 25%;
-        border-bottom-left-radius: 15%;
-     
-      padding: 0px;
-      margin-top: -5px;
     }
     .aboutResumeEra .qoute,.qoute h2{
         width: 100%;
@@ -372,6 +392,7 @@ margin: 30px;
         padding: 50px;
         margin-top: -3px;
         padding-bottom: 10px;
+        font-size: small;
     }
     .aboutResumeEra .qoute{
         width: 100%;
@@ -384,42 +405,26 @@ margin: 30px;
         font-size:medium;
         margin: 0px;
     }
-    .common-mistake{
-        border: 2px solid seagreen;
-        background:linear-gradient(135deg,magenta,pink,rgb(91, 168, 91));
-        color: white;
-        /* border-radius: 15px; */
-        border-top-right-radius: 50%;
-        border-bottom-left-radius: 50%;
-        padding: 15px;
-        /* paddingle; */
-    height: auto;
-    }
-    .common-mistakeli{
-        border: none;
-        background:inherit;
-        color:inherit;
-        /* border-radius: 15px; */
-        border-top-right-radius: none;
-        border-bottom-left-radius: none;
-        padding: 20px;
-        font-size: inherit;
-        margin-left: 0px;
-        height: auto;
-    }   
+   
     .aboutResumeEra h1 {
         font-size: 1.5rem;
         /* padding-top: 20px; */
     }
 
     h3 {
-        font-size:1rem;
+        font-size:.7rem;
     }
 
-    p, ul, ol {
-        font-size: 0.9em;
+   
+    .aboutResumeEra strong{
+        font-size: small;
     }
-
+.aboutResumeErac li{
+    font-size: small;
+}
+.aboutResumeEra ul li{
+    font-size: small;
+}
     table {
         width: 100%;
         margin-left: 0;
@@ -462,6 +467,9 @@ margin: 30px;
           }
           .faq-item {
             flex: 1 1 100%;
+          }
+          .aboutResumeEra pre{
+            font-size: small;
           }
 }
 

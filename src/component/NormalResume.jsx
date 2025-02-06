@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import { templatePage } from "../Redux/action";
+import "../css/NormalResume.css";  // Import the CSS file
 
 const NormalResume = (props) => {
     const { images } = props;
@@ -17,42 +18,41 @@ const NormalResume = (props) => {
             dispatch(templatePage(hoveredImage));
         }
     };
-    console.log('images show in normal resume:-',images)
+    console.log('images show in normal resume:-', images);
 
     return (
-        <div>
-            <section className="template-grid-container">
-                <h2 className="template-grid-title">Select a Template</h2>
-                <p className="template-grid-description">
-                    Browse our collection of professional resume templates and find the one that suits your needs.
-                </p>
-                <hr className="template-grid-divider" />
-                <div className="template-grid row m-3 ">
-                    {images.length > 0 ? images.map((image) => (
+        <div className="normal-resume-container">
+            <section className="resume-section">
+                <div className="image-grid">
+                    {images.length > 0 ? images.map((image, index) => (
                         <div
+                            className="image-card"
                             data-aos="flip-left"
                             data-aos-duration="1000"
                             key={image.id}
-                            className="template-card col-12 col-md-6 col-lg-4"
                             onMouseEnter={() => setHoveredImage(image.id)}
                             onMouseLeave={() => setHoveredImage(null)}
                         >
                             <img
-                                className="template-image"
                                 src={image.src}
                                 alt={image.alt}
                                 loading="lazy"
+                                className="image-card-img"
                             />
+                            {/* Show the link only when image is hovered */}
                             {hoveredImage === image.id && (
                                 <a
-                                    href={`/mainpage/${hoveredImage}`}
+                                    href={`/mainpage/${image.id}`}
                                     onClick={handleClick}
                                     className="template-link"
                                 >
-                                    Go To  Resume
+                                    Go To Resume
                                 </a>
                             )}
-                            <div style={{textAlign:'center',color:'black'}}>{image.alt}</div>
+                            <div className="image-card-footer">
+                                <p>{image.alt}</p>
+                                <p>{index + 1}/{images.length}</p>
+                            </div>
                         </div>
                     )) : (
                         <p>No templates available.</p>

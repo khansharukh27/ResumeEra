@@ -1,105 +1,109 @@
-.preview2{
+/* Base Style */
+.preview2 {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: around;
     width: 100%;
+    /* flex-direction: col; */
 }
+
 /* Main container */
-
-
-/* Main content container */
 .main {
     border: 1px solid #ccc;
-    /* margin-top:1px; */
     display: flex;
-    width: fit-content;
-    text-align: justify;
-    width: 80%;
+    flex-direction: column;
+    width: 100%;
+    padding: 10px;
 }
 
 /* Left side - Personal info and education */
 .main1 {
     display: flex;
     flex-direction: column;
-    margin-top: -275px;
     justify-content: center;
     margin-right: 15px;
+    width: 100%;
+    margin-top: 20px;
 }
 
 /* Personal info - Name and image */
 .maininner1 {
     text-align: center;
-    padding-top: 25px;
     background-color: black;
-    width: 280px;
+    color: white;
+    width: 100%;
     border-bottom-left-radius: 50%;
     border-bottom-right-radius: 50%;
-    color: white;
-    padding-left: 25px;
-    padding-right: 25px;
-}
-.maininner1 h3{
-    white-space: nowrap;
+    padding: 10px;
+    margin-bottom: 10px;
+    height: fit-content;
 }
 
+.maininner1 h3 {
+    white-space: nowrap;
+    font-size: 1.2rem;
+}
+
+/* Profile image */
 .maininner2 img {
     width: 120px;
     height: 120px;
     border-radius: 50%;
     border: 3px solid grey;
-    /* margin: 25px; */
-    margin-top: 25px;
+    margin-top: 10px;
 }
+
 /* Contact info */
 .maininner3 {
-    margin-left: 16px;
-    margin-top: 16px;
+    margin-top: 20px;
 }
 
-.maininner3 h3, .maininner4 h3 {
-    font-size: 24px;
+.maininner3 h3 {
+    font-size: 1.5rem;
 }
 
-.maininner3 p, .maininner4 p {
+.maininner3 p {
     margin-bottom: 8px;
 }
 
 /* Education section */
 .maininner4 {
-    margin-left: 8px;
-    margin-top: 16px;
-    padding: 16px;
     background-color: #000;
     text-align: center;
     color: white;
-    width: 200px;
+    padding: 15px;
     border-top-right-radius: 50%;
     border-top-left-radius: 50%;
+    margin-top: 10px;
+    height: fit-content;
+    text-align: center;
+}
+
+.maininner4 h3 {
+    font-size: 1.2rem;
+}
+.maininner4 p{
+    text-align: center;
 }
 
 /* Right side - About, Job Experience, Skills, Language, Hobbies */
 .main2 {
     margin-top: 16px;
+    width: 100%;
 }
 
 .about h3, .jobExperience h3 {
-    font-size: 24px;
+    font-size: 1.5rem;
     margin-bottom: 16px;
 }
 
-/* Skills */
+/* Skills section */
 .skill-section {
     text-align: center;
     margin-top: 16px;
 }
 
-/* Languages and Hobbies */
-/* .d-sm-flex.justify-content-between {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 16px;
-} */
-
+/* Languages and Hobbies sections */
 .language-section, .hobbies-section {
     margin-bottom: 16px;
 }
@@ -112,15 +116,15 @@
 /* Resume download section */
 .resume-download-section {
     margin-top: 16px;
-    width: 40%;
-    /* margin-left: 15px; */
+    width: 20%;
     padding: 20px;
-    margin: 20px;
 }
 
+/* Input for Resume Name */
 .resume-name-input {
     border-radius: 5px;
     padding: 10px;
+    width: 100%;
 }
 
 .download-button {
@@ -129,36 +133,23 @@
 
 .bg-color-picker, .font-style-selector {
     margin-left: 8px;
-    /* width: 50px; */
 }
 
 .bg-color-picker {
     margin-top: 5px;
-    display: flex;
-    justify-content: center;
-    height: fit-content;
-    /* width: 50px; */
 }
 
-
-.font-style-selector {
-    margin-left: 8px;
-    height: fit-content;
-}
+/* Color Picker */
 .color-picker-container {
     position: relative;
-    /* display: inline-block; */
 }
 
 .color-picker-label {
     position: absolute;
     top: 10px;
     left: 10px;
-    /* background-color: #fff; */
-    padding: 0 5px;
     font-size: 12px;
     color: #333;
-    /* border: 1px solid grey; */
     border-radius: 6px;
 }
 
@@ -172,399 +163,114 @@
     text-align: center;
 }
 
-@media (min-width:1024px) {
-    .preview2{
-        width: 768px;
-        display: flex;
-        /* flex-direction: column; */
-        font-size: xx-small;
-        
+/* Media Queries */
+
+/* Tablet (Min-width: 768px) */
+@media (min-width: 769px) {
+    .main {
+        flex-direction: row;
+        align-items: flex-start;
+        width: 100%;
     }
     .main1 {
-        display: flex;
         flex-direction: column;
-        margin-top: -410px;
-        margin-left: 5px;
-        justify-content: center;
-        width: fit-content;
-        /* position: absolute; */
+        margin-top: 0;
+        margin-right: 10px;
+        width: 250px;
     }
-    .main2{
-        margin-top: -15px;
-        width:fit-content;
-        padding-right: 5px;
+    .main2 {
+        margin-top: 0;
+        width: 100%;
+        padding-left: 20px;
     }
-    .main {
-        border: 1px solid #ccc;
-        /* margin-top:1px; */
-        display: flex;
-        position: relative;
-        width: 768px;
-        margin-right: 5px;
-    }
-    .main p{
-        font-size: xx-small;
-    }
-    .main h3{
-     font-size: small;
-     font-weight: 700; 
-       
-    }
-    .main p{
-        font-size: .5rem;
-        position: relative;
-    }
-    .font-style-selector{
-        height: fit-content;
-    }
-    .maininner1{
-        width: 150px;
-        /* top: 50px; */
-        position: absolute;
-    top: 0px;
-    }
-    .maininner2{
-        /* margin-top: 150px; */
-    }
-    .maininner1 h3{
-        font-size: xx-small;
-        top: 100px;
-    }
-    .maininner2 img{
-        width: 80px;
-        height: 80px;
-    }
-    .maininner3{
-        width: 110px;
-        margin-top: 700px;
-    }
-    .maininner4{
-        width: 150px;
-
-    }
-    .resume-download-section2{
-        width: 70%;
-        margin-top: 15px;
-       padding: 15px;
-    }
-    
-
-}
-
-@media (max-width:768px) {
-    .preview2{
-        width: 768px;
-        display: flex;
-        /* flex-direction: column; */
-        font-size: xx-small;
-        
-    }
-    .main1 {
-        display: flex;
-        flex-direction: column;
-        margin-top: -410px;
-        margin-left: 5px;
-        justify-content: center;
-        width: fit-content;
-        /* position: absolute; */
-    }
-    .main2{
-        margin-top: -15px;
-        width:fit-content;
-        padding-right: 5px;
-    }
-    .main {
-        border: 1px solid #ccc;
-        /* margin-top:1px; */
-        display: flex;
-        position: relative;
-        width: 768px;
-        margin-right: 5px;
-    }
-    .main p{
-        font-size: xx-small;
-    }
-    .main h3{
-     font-size: small;
-     font-weight: 700; 
-       
-    }
-    .main p{
-        font-size: .5rem;
-        position: relative;
-    }
-    .font-style-selector{
-        height: fit-content;
-    }
-    .maininner1{
-        width: 150px;
-        /* top: 50px; */
-        position: absolute;
-    top: 0px;
-    }
-    .maininner2{
-        /* margin-top: 150px; */
-    }
-    .maininner1 h3{
-        font-size: xx-small;
-        top: 100px;
-    }
-    .maininner2 img{
-        width: 80px;
-        height: 80px;
-    }
-    .maininner3{
-        width: 110px;
-        margin-top: 700px;
-    }
-    .maininner4{
-        width: 150px;
-
-    }
-    .resume-download-section2{
-        width: 70%;
-        margin-top: 15px;
-       padding: 15px;
-    }
-    
-    
-
 }
 
 
-@media (max-width:425px) {
-    .preview2{
-        width: 425px;
+/* Mobile Medium (Max-width: 768px) */
+@media (max-width: 768px) {
+    .preview2 {
+        width: 100%;
         display: flex;
         flex-direction: column;
-        font-size: xx-small;
-        
+    }
+    .main{
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
     }
     .main1 {
-        display: flex;
-        flex-direction: column;
-        margin-top: -410px;
-        margin-left: 5px;
-        justify-content: center;
-        width: fit-content;
-        /* position: absolute; */
+        margin-top: 0;
+        margin-bottom: 20px;
+        width: 100%;
     }
-    .main2{
-        margin-top: -15px;
-        width:fit-content;
-        padding-right: 5px;
+    .main2 {
+        width: 100%;
+        margin-top: 20px;
+    }
+    .maininner2 img {
+        width: 100px;
+        height: 100px;
+    }
+    .resume-download-section {
+        width: 90%;
+        margin-top: 15px;
+    }
+}
+
+/* Mobile Small (Max-width: 425px) */
+@media (max-width: 425px) {
+    .preview2 {
+        width: 100%;
     }
     .main {
-        border: 1px solid #ccc;
-        /* margin-top:1px; */
-        display: flex;
-        position: relative;
-        width: 425px;
+        width: 100%;
     }
-    .main p{
-        font-size: xx-small;
+    .main1 {
+        width: 100%;
     }
-    .main h3{
-     font-size: small;
-     font-weight: 700; 
-       
-    }
-    .main p{
-        font-size: .5rem;
-        position: relative;
-    }
-    .font-style-selector{
-        height: fit-content;
-    }
-    .maininner1{
-        width: 150px;
-        /* top: 50px; */
-        position: absolute;
-    top: 0px;
-    }
-    .maininner2{
-        /* margin-top: 150px; */
-    }
-    .maininner1 h3{
-        font-size: xx-small;
-        top: 100px;
-    }
-    .maininner2 img{
+    .maininner2 img {
         width: 80px;
         height: 80px;
     }
-    .maininner3{
-        width: 110px;
-        margin-top: 700px;
-    }
-    .maininner4{
-        width: 150px;
-
-    }
-    .resume-download-section2{
-        width: 80%;
+    .resume-download-section {
+        width: 90%;
         margin-top: 15px;
-       
     }
-    
-
 }
 
-@media (max-width:375px) {
-    .preview2{
-        width: 375px;
-        display: flex;
-        flex-direction: column;
-        font-size: xx-small;
-        /* margin-right: 0px; */
-        
+/* Extra Small Mobile (Max-width: 375px) */
+@media (max-width: 375px) {
+    .preview2 {
+        width: 100%;
     }
     .main1 {
-        display: flex;
-        flex-direction: column;
-        margin-top: -410px;
-        /* margin-left: 5px; */
-        justify-content: center;
-        width: 375px;
-        /* position: absolute; */
+        width: 100%;
+        margin-bottom: 20px;
     }
-    .main2{
-        margin-top: -15px;
-        width:140px;
-        padding-right: 5px;
+    .maininner2 img {
+        width: 70px;
+        height: 70px;
     }
-    .main {
-        border: 1px solid #ccc;
-        /* margin-top:1px; */
-        display: flex;
-        position: relative;
-        width: 320px;
-    }
-    .main p{
-        font-size: xx-small;
-    }
-    .main h3{
-     font-size: small;
-     font-weight: 700; 
-       
-    }
-    .main p{
-        font-size: .5rem;
-        position: relative;
-    }
-    .font-style-selector{
-        height: fit-content;
-    }
-    .maininner1{
-        width: 150px;
-        /* top: 50px; */
-        position: absolute;
-    top: 0px;
-    }
-    .maininner2{
-        /* margin-top: 450px; */
-    }
-    .maininner1 h3{
-        font-size: xx-small;
-        top: 100px;
-    }
-    .maininner2 img{
-        width: 80px;
-        height: 80px;
-    }
-    .maininner3{
-        width: 110px;
-        margin-top: 550px;
-    }
-    .maininner4{
-        width: 150px;
-
-    }
-    .resume-download-section2{
-        width: 80%;
+    .resume-download-section {
+        width: 100%;
         margin-top: 15px;
-       
     }
-    
-
 }
 
-@media(max-width:320px) {
-    .preview2{
-        width: 320px;
-        display: flex;
-        flex-direction: column;
-        font-size: xx-small;
-        
+/* Ultra Small Mobile (Max-width: 320px) */
+@media (max-width: 320px) {
+    .preview2 {
+        width: 100%;
     }
     .main1 {
-        display: flex;
-        flex-direction: column;
-        margin-top: -410px;
-        margin-left: 5px;
-        justify-content: center;
-        /* width: 170px; */
-        /* position: absolute; */
+        width: 100%;
     }
-    .main2{
-        margin-top: -15px;
-        width:140px;
-        padding-right: 5px;
+    .maininner2 img {
+        width: 60px;
+        height: 60px;
     }
-    .main {
-        border: 1px solid #ccc;
-        /* margin-top:1px; */
-        display: flex;
-        position: relative;
-        width: 320px;
-    }
-    .main p{
-        font-size: xx-small;
-    }
-    .main h3{
-     font-size: small;
-     font-weight: 700; 
-       
-    }
-    .main p{
-        font-size: .5rem;
-        position: relative;
-    }
-    .font-style-selector{
-        height: fit-content;
-    }
-    .maininner1{
-        width: 150px;
-        /* top: 50px; */
-        position: absolute;
-    top: 0px;
-    }
-    .maininner2{
-        /* margin-top: 150px; */
-    }
-    .maininner1 h3{
-        font-size: xx-small;
-        top: 100px;
-    }
-    .maininner2 img{
-        width: 80px;
-        height: 80px;
-    }
-    .maininner3{
-        width: 110px;
-        margin-top: 450px;
-    }
-    .maininner4{
-        width: 150px;
-
-    }
-    .resume-download-section2{
-        width: 80%;
+    .resume-download-section {
+        width: 100%;
         margin-top: 15px;
-       
     }
-    
-
 }
-
-

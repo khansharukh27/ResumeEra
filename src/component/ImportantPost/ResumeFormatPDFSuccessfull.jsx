@@ -1,5 +1,4 @@
-import React, { useEffect } from 'react'
-import DateAndAuthor from '../DateAndAuthor';
+import React, { useEffect, useState } from 'react'
 import WelcomeNotes from '../WelcomeNotes';
 import RandomeArticleToBlogCareer from '../RandomeArticleToBlogCareer';
 import GoogleAd from '../adFolder/GoogleAd';
@@ -7,15 +6,42 @@ import AuthorCard from '../AuthorCard';
 import CallToAction from '../CallToAction';
 import ShareButtons from '../shareButton/ShareButtons';
 import { Helmet } from 'react-helmet';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import topResumeImage from '../../image/image_for_link/free Top Resume Format PDF Successfull career -2025 Download now .jpg'
-export default function ResumeFormatPDFSuccessfull() {
+import { useDispatch } from 'react-redux';
+import { templatePage } from '../../Redux/action';
+import ResumeEraHeading from '../ResumeEraHeading';
+import ImageCard from '../ImageCardResusable/ImageCardResumeble';
+export default function ResumeFormatPDFSuccessfull(prop) {
+    const [hoveredImage, setHoveredImage] = useState();
+    const { techImages, images, fresherResumeImage } = prop
+    const navigate = useNavigate();
+    const dispatch = useDispatch();
     const ArticleUrl = 'https://resumeera.xyz/free-top-resume-format-pdf-successful-career-2025-download-now';
     const ArticleTitle = "Free Top Resume Format PDF | Successful Career - 2025 | Download Now";
     useEffect(() => {
         window.scrollTo(0, 0);
     }, []);
+
+    const selectedImageId8 = 113; //executive resume 
+    const selectedimage8 = techImages.find((image) => image.id === selectedImageId8)
+
+    const selectedImageId5 = 116 //creative
+    const selectedimage5 = techImages.find((image) => image.id === selectedImageId5)
+    const selectedImageId6 = 107 // infografic resume
+    const selectedimage6 = techImages.find((image) => image.id === selectedImageId6)
+    const selectedImageId7 = 6 //simple or Ats Resume Format
+    const selectedimage7 = images.find((image) => image.id === selectedImageId7)
+
+    console.log('hoveredImage:-,', hoveredImage)
+    const handleClick = (e, imageId) => {
+        e.preventDefault();
+        const path = `/techmain/${imageId}`;
+        navigate(path);
+        dispatch(templatePage(hoveredImage));
+    };
     const publishDate = '2025-01-11'
+    const title = 'Free Top Resume Format PDF | Successful Career - 2025 | Download Now 📄🚀'
 
     return (
         <div>
@@ -85,12 +111,9 @@ export default function ResumeFormatPDFSuccessfull() {
         `}
                 </script>
             </Helmet>
-
+            <ResumeEraHeading title={title} publishDate={publishDate} />
             <article className='aboutResumeEra'>
                 <section>
-                    <h1>Free Top Resume Format PDF | Successful Career - 2025 | Download Now 📄🚀</h1>
-                    <DateAndAuthor publishDate={publishDate} />
-                    <img src={topResumeImage} style={{ height: 'auto' }} loading='lazy' alt="Free Top Resume Format PDF | Successful Career - 2025 | Download Now" />
                     <p>
                         Hello there! 👋 Whether you're looking for your first job, eyeing a career switch, or climbing the corporate ladder, there's one thing every job seeker needs: a standout resume. But not just any resume – a perfect resume that helps you stand out to employers and land the job you deserve. And guess what? You don’t need to spend hours designing it from scratch. I’m here to help you with the best resume format PDF that’s ready to go!
                     </p>
@@ -160,11 +183,22 @@ export default function ResumeFormatPDFSuccessfull() {
                     <p>Here’s a breakdown of some of the most popular resume templates for 2025:</p>
                     <ul>
                         <li><strong>Classic Professional Resume 📑</strong>
+
                             <ul>
                                 <li>This template is clean and simple, perfect for most job applications.</li>
                                 <li>It’s designed with ATS in mind, so it will pass through digital filters with ease.</li>
                                 <li>It’s ideal for professionals in industries like business, finance, and engineering.</li>
                             </ul>
+                            {[selectedimage6].map((image) => (
+                                <ImageCard
+                                    key={image.id}
+                                    image={image}
+                                    hoveredImage={hoveredImage}
+                                    setHoveredImage={setHoveredImage}
+                                    handleClick={(e) => handleClick(e, image.id)}
+
+                                />
+                            ))}
                         </li>
                         <div><GoogleAd /></div>
                         <li><strong>Creative Resume Format 🎨</strong>
@@ -173,6 +207,16 @@ export default function ResumeFormatPDFSuccessfull() {
                                 <li>Features eye-catching elements like a portfolio section and a bold design layout.</li>
                                 <li>This one gives you room to showcase your creativity while remaining professional.</li>
                             </ul>
+                            {[selectedimage5].map((image) => (
+                                <ImageCard
+                                    key={image.id}
+                                    image={image}
+                                    hoveredImage={hoveredImage}
+                                    setHoveredImage={setHoveredImage}
+                                    handleClick={(e) => handleClick(e, image.id)}
+
+                                />
+                            ))}
                         </li>
                         <li><strong>Executive Resume Template 🧑💼</strong>
                             <ul>
@@ -180,6 +224,16 @@ export default function ResumeFormatPDFSuccessfull() {
                                 <li>Highlights your leadership experience and measurable results.</li>
                                 <li>The design allows space for showcasing high-level achievements, corporate experience, and strategic skills.</li>
                             </ul>
+                            {[selectedimage8].map((image) => (
+                                <ImageCard
+                                    key={image.id}
+                                    image={image}
+                                    hoveredImage={hoveredImage}
+                                    setHoveredImage={setHoveredImage}
+                                    handleClick={(e) => handleClick(e, image.id)}
+
+                                />
+                            ))}
                         </li>
                         <li><strong>Entry-Level Resume Format 🏁</strong>
                             <ul>
@@ -187,6 +241,16 @@ export default function ResumeFormatPDFSuccessfull() {
                                 <li>Emphasizes your education, internships, and any relevant volunteer work or part-time jobs.</li>
                                 <li>This format is simple but effective in demonstrating your potential.</li>
                             </ul>
+                            {[selectedimage7].map((image) => (
+                                <ImageCard
+                                    key={image.id} sz
+                                    image={image}
+                                    hoveredImage={hoveredImage}
+                                    setHoveredImage={setHoveredImage}
+                                    handleClick={(e) => handleClick(e, image.id)}
+
+                                />
+                            ))}
                         </li>
                     </ul>
                     <p>
@@ -199,20 +263,20 @@ export default function ResumeFormatPDFSuccessfull() {
                     <p>
                         Even though crafting a great resume seems straightforward, many job seekers still make simple mistakes that can cost them opportunities. Let’s go over some common resume mistakes that you should avoid in 2025:
                     </p>
-                    <ul>
-                        <li><strong>Overloading Your Resume with Information</strong>
+                    <ul className='faqs'>
+                        <li className='faq-item'><strong>Overloading Your Resume with Information</strong>
                             <p>A resume should highlight your key skills, experiences, and accomplishments, but less is more. If your resume is too long or includes irrelevant information, you risk losing the attention of the recruiter. Stick to the essentials and only include information that’s relevant to the job you’re applying for.</p>
                         </li>
-                        <li><strong>Ignoring ATS Compatibility</strong>
+                        <li className='faq-item'><strong>Ignoring ATS Compatibility</strong>
                             <p>It’s easy to forget that many companies use Applicant Tracking Systems (ATS) to screen resumes before they’re seen by a hiring manager. ATS often rejects resumes that are too complex or poorly formatted. Always ensure that your resume is ATS-friendly, using clear fonts, headings, and proper section labels.</p>
                         </li>
-                        <li><strong>Typos and Grammatical Errors</strong>
+                        <li className='faq-item'><strong>Typos and Grammatical Errors</strong>
                             <p>A resume full of spelling mistakes or grammatical errors is a huge turnoff for recruiters. It makes you look unprofessional, and it can send the wrong message about your attention to detail. Always proofread your resume before submitting it — or better yet, have a friend review it!</p>
                         </li>
-                        <li><strong>Using an Unprofessional Email Address</strong>
+                        <li className='faq-item'><strong>Using an Unprofessional Email Address</strong>
                             <p>It might seem harmless, but using an email like cutiepie123@gmail.com can give off the wrong impression. Make sure your email address is professional and includes your name or initials.</p>
                         </li>
-                        <li><strong>Not Updating Your Resume Regularly</strong>
+                        <li className='faq-item'><strong>Not Updating Your Resume Regularly</strong>
                             <p>Don’t wait until you’re actively looking for a job to update your resume. Keep it updated with any new skills, certifications, or job experiences. That way, you’re always ready to apply for new opportunities!</p>
                         </li>
                     </ul>
@@ -220,25 +284,33 @@ export default function ResumeFormatPDFSuccessfull() {
 
                 <section>
                     <h2>FAQs About Resume Format PDFs ❓</h2>
-                    <h3>How can I make my resume ATS-friendly?</h3>
-                    <p>
-                        Use a simple format with standard headings like Work Experience, Skills, and Education. Stick to fonts like Arial or Times New Roman, and avoid complex designs, tables, or images that could confuse the ATS. The templates available at resumeera.xyz are pre-designed with ATS compatibility in mind, making it easy for your resume to pass through the filters.
-                    </p>
+                    <div className=''>
+                        <div className='faq-item'>
+                            <h3>How can I make my resume ATS-friendly?</h3>
+                            <p>
+                                Use a simple format with standard headings like Work Experience, Skills, and Education. Stick to fonts like Arial or Times New Roman, and avoid complex designs, tables, or images that could confuse the ATS. The templates available at resumeera.xyz are pre-designed with ATS compatibility in mind, making it easy for your resume to pass through the filters.
+                            </p>
+                        </div>
+                        <div className='faq-item'>
+                            <h3>Can I download a free resume template for any industry?</h3>
+                            <p>
+                                Absolutely! We offer free resume format PDFs for a wide variety of industries including business, technology, healthcare, marketing, and more. Browse through the options at resumeera.xyz and find the perfect template for your career.
+                            </p>
+                        </div>
+                        <div className='faq-item'>
+                            <h3>Why should I use PDF for my resume?</h3>
+                            <p>
+                                PDFs preserve the format and layout of your resume, ensuring that it looks professional no matter what device or software the employer uses to view it. It also eliminates the risk of formatting errors that might happen with other file types like Word documents.
+                            </p>
+                        </div>
+                        <div className='faq-item'>
 
-                    <h3>Can I download a free resume template for any industry?</h3>
-                    <p>
-                        Absolutely! We offer free resume format PDFs for a wide variety of industries including business, technology, healthcare, marketing, and more. Browse through the options at resumeera.xyz and find the perfect template for your career.
-                    </p>
-
-                    <h3>Why should I use PDF for my resume?</h3>
-                    <p>
-                        PDFs preserve the format and layout of your resume, ensuring that it looks professional no matter what device or software the employer uses to view it. It also eliminates the risk of formatting errors that might happen with other file types like Word documents.
-                    </p>
-
-                    <h3>How do I customize my resume template?</h3>
-                    <p>
-                        Once you download a template from resumeera.xyz, you can easily customize it using a PDF editor or by opening it in a word processor like Microsoft Word. Update your contact details, skills, and experience, and tweak the design to make it truly yours.
-                    </p>
+                            <h3>How do I customize my resume template?</h3>
+                            <p>
+                                Once you download a template from resumeera.xyz, you can easily customize it using a PDF editor or by opening it in a word processor like Microsoft Word. Update your contact details, skills, and experience, and tweak the design to make it truly yours.
+                            </p>
+                        </div>
+                    </div>
                 </section><div><GoogleAd /></div>
 
                 <section>

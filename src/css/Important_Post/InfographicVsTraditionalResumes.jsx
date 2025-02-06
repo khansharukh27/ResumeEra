@@ -8,6 +8,7 @@ import CallToAction from '../../component/CallToAction';
 import { Helmet } from 'react-helmet';
 import { queryAllByAltText } from '@testing-library/react';
 import GoogleAd from '../../component/adFolder/GoogleAd';
+import ResumeEraHeading from '../../component/ResumeEraHeading';
 export default function InfographicVsTraditionalResumes() {
      const ArticleUrl =
                         "https://www.resumeera.xyz/infographic-resume-vs-traditional-resume-formatting";
@@ -16,6 +17,8 @@ export default function InfographicVsTraditionalResumes() {
                         window.scrollTo(0, 0);
                       }, []);
  const publishDate = "2025-01-06"  
+ const title = '📄✨📊 Infographic Resume vs. Traditional Resume Formatting: Pros and Cons'
+
 return (
 		<div>
 <Helmet>
@@ -44,7 +47,7 @@ return (
 	/>
 	<meta
 		property="og:image"
-		content={Infographic_vs_Traditional_Resume}
+		content='https://img.freepik.com/free-vector/online-cv-template_23-2148557392.jpg?t=st=1738394511~exp=1738398111~hmac=dad352fb32579d14197b83c34c62e7d6309361a03e634dfbcef61b93a3072119&w=740'
 	/>
 	<meta
 		property="og:url"
@@ -61,7 +64,7 @@ return (
 	/>
 	<meta
 		name="twitter:image"
-		content={Infographic_vs_Traditional_Resume}
+		content="https://img.freepik.com/free-vector/online-cv-template_23-2148557392.jpg?t=st=1738394511~exp=1738398111~hmac=dad352fb32579d14197b83c34c62e7d6309361a03e634dfbcef61b93a3072119&w=740"
 	/>
 	<script type="application/ld+json">
 		{`
@@ -69,7 +72,7 @@ return (
 				"@context": "https://schema.org",
 				"@type": "Article",
 				"headline": "Infographic Resume vs. Traditional Resume Formatting: Pros and Cons",
-				"image": ${Infographic_vs_Traditional_Resume},
+				"image": "https://img.freepik.com/free-vector/online-cv-template_23-2148557392.jpg?t=st=1738394511~exp=1738398111~hmac=dad352fb32579d14197b83c34c62e7d6309361a03e634dfbcef61b93a3072119&w=740",
 				"author": {
 					"@type": "Person",
 					"name": "Author Name"
@@ -88,11 +91,10 @@ return (
 		`}
 	</script>
 </Helmet>
-
+<ResumeEraHeading publishDate={publishDate} title={title}/>
 				<article className='aboutResumeEra'>
 						<section>
-								<h1>📄✨📊 Infographic Resume vs. Traditional Resume Formatting: Pros and Cons</h1>
-								<DateAndAuthor publishDate={publishDate}/>
+								
                                 <img style={{height:'auto'}} src={Infographic_vs_Traditional_Resume} alt="Infographic Resume vs. Traditional Resume Formatting" />
 								<p>In today’s competitive job market, crafting a compelling resume is crucial to grabbing the attention of recruiters. The debate between infographic resumes and traditional resumes has intensified as job seekers explore creative ways to stand out. Both formats have their unique strengths and challenges, and choosing the right one depends on various factors, including the job type, industry standards, and personal preferences. 🌟📑📌</p>
 						</section><div><GoogleAd/></div>
