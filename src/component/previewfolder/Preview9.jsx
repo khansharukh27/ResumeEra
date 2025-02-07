@@ -13,6 +13,9 @@ const Preview9 = () => {
     const [fontStyle, setFontStyle] = useState('Arial'); // Default font style
     const [headingColor, setHeadingColor] = useState('black')
     const [fontColor, setFontColor] = useState('black')
+    const [fontSize, setFontSize] = useState(16); // Initial font size for paragraphs
+    const [fontSizeheading, setFontSizeheading] = useState(16); // Initial font size for headings
+
 
     const navigate = useNavigate();
     const personalInfo = useSelector((state) => state.reducer.personalInfo);
@@ -30,7 +33,7 @@ const Preview9 = () => {
     const handleDownloadPDF = async () => {
         const element = document.getElementById('Alish_mirza1');
         try {
-            const scale = 4; // Slightly higher resolution without excessive file size
+            const scale = 3; // Slightly higher resolution without excessive file size
             const canvas = await html2canvas(element, {
                 scale: scale,
                 useCORS: true,
@@ -79,91 +82,89 @@ const Preview9 = () => {
             </header>
             <div style={{width:'inherit'}}><GoogleAd/></div>
         <div className=' preview9'>
-            <div className="resume-preview9 " style={{ color:fontColor,backgroundColor: bgColor, fontFamily: fontStyle }} id="Alish_mirza1">
-                <div className='main-one-9' style={{ position: 'relative' }}>
-                    <div className='image-div9' style={{ position: 'absolute', left:'15px', backgroundColor: 'yellow', borderBottomLeftRadius: '70px', borderBottomRightRadius: '70px', borderBottom: `10px solid ${bgColor}`, borderRight: `10px solid ${bgColor}`, borderLeft: `10px solid ${bgColor}` }}>
-                        <img src={personalInfo.image} className="image9" alt="Selected" style={{ }} />
-                    </div>
-                    <div className='contact-div9' style={{ color:fontColor,backgroundColor: '#e4e2df', marginTop: '150px' }}>
-                        <p>.</p>
-                        <h3 className='heading9' style={{color:headingColor,fontWeight:900}}> CONTACT_</h3>
-                        <div style={{color:fontColor}} >
-                            <div className='d-flex' style={{ height: "70px",color:fontColor }}>
-                                <div className='me-2 mb-3 ' style={{ backgroundColor: 'yellow', borderBottomLeftRadius: '50%', borderBottomRightRadius: '50%' }}><i class="bi bi-telephone-fill me-2 p-1 "></i></div>
-                                <p style={{color:fontColor,fontFamily:fontStyle}}>{personalInfo.mobileNumber}</p>
-                            </div>
-                            <div className='d-flex '>
-                                <div className='me-2' style={{ backgroundColor: 'yellow' }}><i class="bi bi-envelope me-2 p-1"></i></div>
-                                <div><p style={{color:fontColor,wordBreak:'break-all',fontFamily:fontStyle}}>{personalInfo.email}</p></div>
-                            </div>
-                            <div className='d-flex'>
-                                <div className='me-2' style={{ backgroundColor: 'yellow' }}><i class="bi bi-geo-alt-fill me-2 p-1" ></i></div>
-                                <div><p style={{color:fontColor,fontFamily:fontStyle}}>{personalInfo.address} {personalInfo.city} {personalInfo.state} {personalInfo.postalCode}</p></div>
-                            </div>
-                            <div className='d-flex'>
-                                <div className='me-2' style={{ backgroundColor: 'yellow', borderBottomLeftRadius: '50%', borderBottomRightRadius: '50%' }}><i class="bi bi-linkedin me-2 p-1"></i></div>
-                                <div><p style={{color:fontColor,fontFamily:fontStyle}}> {sMedia?.[0]?.linkedin || ''}</p></div>
-                            </div>
+        <div className="resume-preview9" style={{ color: fontColor, backgroundColor: bgColor, fontFamily: fontStyle }} id="Alish_mirza1">
+                    <div className='main-one-9' style={{ position: 'relative' }}>
+                        <div className='image-div9' style={{ position: 'absolute', left: '15px', backgroundColor: 'yellow', borderBottomLeftRadius: '70px', borderBottomRightRadius: '70px', borderBottom: `10px solid ${bgColor}`, borderRight: `10px solid ${bgColor}`, borderLeft: `10px solid ${bgColor}` }}>
+                            <img src={personalInfo.image} className="image9" alt="Selected" />
                         </div>
-                        <h3 className="heading9" style={{color:headingColor,fontWeight:900,fontFamily:fontStyle}}  >EDUCATION_</h3>
-                        {education[0].map((edu, index) => (
-                            <div key={index} className="education-inner9">
-                                <p style={{color:fontColor,fontFamily:fontStyle}}>{edu.degree}</p>
-                                <p style={{color:fontColor,fontFamily:fontStyle}}><b> {edu.univercity}</b></p>
-                                <p style={{color:fontColor,fontFamily:fontStyle}}>{edu.type}</p>
-                                <p style={{color:fontColor,fontFamily:fontStyle}}>{edu.startYear} - {edu.endYear}</p>
+                        <div className='contact-div9' style={{ color: fontColor, backgroundColor: '#e4e2df' }}>
+                            <h3 className='heading9' style={{ color: headingColor, fontSize: `${fontSizeheading}px`, fontWeight: 900,paddingTop:'250px' }}>CONTACT_</h3>
+                            <div style={{ color: fontColor }}>
+                                <div className='d-flex' style={{ height: "70px", color: fontColor }}>
+                                    <div className='me-2 mb-3 ' style={{ backgroundColor: 'yellow', borderBottomLeftRadius: '50%', borderBottomRightRadius: '50%' }}><i class="bi bi-telephone-fill me-2 p-1 "></i></div>
+                                    <p style={{ color: fontColor, fontFamily: fontStyle, fontSize: `${fontSize}px` }}>{personalInfo.mobileNumber}</p>
+                                </div>
+                                <div className='d-flex '>
+                                    <div className='me-2' style={{ backgroundColor: 'yellow' }}><i class="bi bi-envelope me-2 p-1"></i></div>
+                                    <div><p style={{ color: fontColor, wordBreak: 'break-all', fontFamily: fontStyle, fontSize: `${fontSize}px` }}>{personalInfo.email}</p></div>
+                                </div>
+                                <div className='d-flex'>
+                                    <div className='me-2' style={{ backgroundColor: 'yellow' }}><i class="bi bi-geo-alt-fill me-2 p-1"></i></div>
+                                    <div><p style={{ color: fontColor, fontFamily: fontStyle, fontSize: `${fontSize}px` }}>{personalInfo.address} {personalInfo.city} {personalInfo.state} {personalInfo.postalCode}</p></div>
+                                </div>
+                                <div className='d-flex'>
+                                    <div className='me-2' style={{ backgroundColor: 'yellow', borderBottomLeftRadius: '50%', borderBottomRightRadius: '50%' }}><i class="bi bi-linkedin me-2 p-1"></i></div>
+                                    <div><p style={{ color: fontColor, fontFamily: fontStyle, fontSize: `${fontSize}px` }}> {sMedia?.[0]?.linkedin || ''}</p></div>
+                                </div>
+                            </div>
+                            <h3 className="heading9" style={{ color: headingColor, fontSize: `${fontSizeheading}px`, fontWeight: 900, fontFamily: fontStyle }}>EDUCATION_</h3>
+                            {education[0].map((edu, index) => (
+                                <div key={index} className="education-inner9">
+                                    <p style={{ color: fontColor, fontFamily: fontStyle, fontSize: `${fontSize}px` }}>{edu.degree}</p>
+                                    <p style={{ color: fontColor, fontFamily: fontStyle, fontSize: `${fontSize}px` }}><b> {edu.univercity}</b></p>
+                                    <p style={{ color: fontColor, fontFamily: fontStyle, fontSize: `${fontSize}px` }}>{edu.type}</p>
+                                    <p style={{ color: fontColor, fontFamily: fontStyle, fontSize: `${fontSize}px` }}>{edu.startYear} - {edu.endYear}</p>
+                                </div>
+                            ))}
+
+                            <h3 className='heading9' style={{ color: headingColor, fontSize: `${fontSizeheading}px`, fontWeight: 900, fontFamily: fontStyle }}>ABOUT ME_</h3>
+                            <hr />
+                            <div className='d-flex justify-content-between'>
+                                <div><b>Date of Birth:- </b><p style={{ color: fontColor, fontSize: `${fontSize}px` }}>{personalInfo.dateofbirth}</p><hr style={{ height: '5px' }} /></div>
+                                <div><b>Marital Status:- </b><p style={{ color: fontColor, fontSize: `${fontSize}px` }}>{personalInfo.maritalstatus}</p><hr style={{ height: '5px' }} /></div>
+                                <div><b>Nationality:- </b><p style={{ color: fontColor, fontSize: `${fontSize}px` }}>{personalInfo.nationality}</p><hr style={{ height: '5px' }} /></div>
+                            </div>
+
+                            <h3 className='heading9' style={{ color: headingColor, fontSize: `${fontSizeheading}px`, fontWeight: 900 }}>OBJECT CARRIERE_</h3>
+                            <p style={{ textAlign: 'justify', color: fontColor, fontFamily: fontStyle, fontSize: `${fontSize}px` }}>{personalInfo.object}</p>
+                        </div>
+                    </div>
+                    <div className='main2-9'>
+                        <div className='name-div9'>
+                            <h3 className="pt-5" style={{ fontWeight: 900, color: headingColor, fontSize: `${fontSizeheading}px` }}>{personalInfo.firstName} {personalInfo.lastName}</h3>
+                            <p className='mb-5 jobtitles9' style={{ color: fontColor, fontFamily: fontStyle, fontSize: `${fontSize}px` }}>
+                                {work[0][0].jobtitle}
+                            </p>
+                        </div>
+                        <hr className='m-3' style={{ backgroundColor: 'yellow', height: '5px' }} />
+                        <h3 className='heading9' style={{ color: headingColor, fontSize: `${fontSizeheading}px`, fontWeight: 900 }}>JOB EXPERIENCE_</h3>
+                        {work[0].map((works, index) => (
+                            <div key={index} className='d-flex justify-content-around mt-2 work-div9'>
+                                <div style={{ height: '100px', width: '3px', backgroundColor: 'yellow' }}> </div>
+                                <div className='work-inner-div9'>
+                                    <p className='jobtitle9' style={{ color: fontColor, fontFamily: fontStyle, fontSize: `${fontSize}px` }}>{works.jobtitle}</p>
+                                    <p className='job-year9' style={{ color: fontColor, fontFamily: fontStyle, fontSize: `${fontSize}px` }}>{works.startYear}-{works.endYear}</p>
+                                    <p className='job-organization9' style={{ color: fontColor, fontFamily: fontStyle, fontSize: `${fontSize}px` }}>{works.organization}</p>
+                                </div>
                             </div>
                         ))}
 
-                        <h3 className='heading9' style={{color:headingColor,fontWeight:900,fontFamily:fontStyle}} >ABOUT ME_</h3>
-                        <hr />
-                        <div className='d-flex justify-content-between'>
-                            <div><b>Date of Birth:- </b><p style={{color:fontColor}}>{personalInfo.dateofbirth}</p><hr style={{ height: '5px' }} /></div>
-                            <div><b>Marital Status:- </b><p style={{color:fontColor}}> {personalInfo.maritalstatus}</p><hr style={{ height: '5px' }} /></div>
-                            <div><b>Nationality:- </b><p style={{color:fontColor}}>{personalInfo.nationality}</p><hr style={{ height: '5px' }} /></div>
-                        </div>
-
-                        <h3 className='heading9' style={{color:headingColor,fontWeight:900}}>OBJECT CARRIERE_</h3>
-                        <p style={{textAlign:'justify',color:fontColor,fontFamily:fontStyle}}>{personalInfo.object}</p>
-                    </div>
-                </div>
-                <div className='main2-9'>
-                    <div className='name-div9' > 
-                            <h3 className="pt-5"  style={{fontWeight:900,color:headingColor}}>{personalInfo.firstName} {personalInfo.lastName}</h3>
-                        <p className='mb-5 jobtitles9' style={{ color:fontColor,fontFamily:fontStyle}}>
-                            {work[0][0].jobtitle}
-                        </p>
-                    </div>
-                    <hr className='m-3' style={{ backgroundColor: 'yellow', height: '5px' }} />
-                    <h3 className='heading9' style={{color:headingColor,fontWeight:900}}> JOB EXPERIENCE_</h3>
-                    {work[0].map((works, index) => (
-                        <div key={index} className='d-flex justify-content-around mt-2 work-div9'>
-                            <div style={{ height: '100px', width: '3px', backgroundColor: 'yellow'}}> </div>
-                            <div className='work-inner-div9' >
-                                <p className='jobtitle9' style={{color:fontColor,fontFamily:fontStyle}}>{works.jobtitle}</p>
-                                <p className='job-year9' style={{color:fontColor,fontFamily:fontStyle}}>{works.startYear}-{works.endYear}</p>
-                                <p className='job-organization9' style={{color:fontColor,fontFamily:fontStyle}} >{works.organization} </p></div>
-                        </div>
-                    ))}
-
-                    <div><h3 className='heading9' style={{color:headingColor,fontWeight:900,fontFamily:fontStyle}}>HOBBIES_</h3></div>
-                    {Hobbies[0].map((hobb, index) => (
-                        <div key={index}>
-                            <p className='hobbiesp9' style={{color:fontColor,fontFamily:fontStyle}}>{hobb.hobbies}</p>
-                        </div>
-                    ))}
-                    <div className='row'>
-                        <h3 className='heading9' style={{color:headingColor,fontWeight:900,fontFamily:fontStyle}} >SKILLS_</h3>
-                        {keyskills[0].map((keys, index) => (
-                            
+                        <div><h3 className='heading9' style={{ color: headingColor, fontSize: `${fontSizeheading}px`, fontWeight: 900 }}>HOBBIES_</h3></div>
+                        {Hobbies[0].map((hobb, index) => (
+                            <div key={index}>
+                                <p className='hobbiesp9' style={{ color: fontColor, fontFamily: fontStyle, fontSize: `${fontSize}px` }}>{hobb.hobbies}</p>
+                            </div>
+                        ))}
+                        <div className='row'>
+                            <h3 className='heading9' style={{ color: headingColor, fontSize: `${fontSizeheading}px`, fontWeight: 900 }}>SKILLS_</h3>
+                            {keyskills[0].map((keys, index) => (
                                 <div className='skills9'>
-                                    <div ><p style={{color:fontColor,fontFamily:fontStyle}}>{keys.keyskills}</p> <hr style={{ height: '5px', backgroundColor: 'darkgoldenrod' }} /></div>
-                               
-                            </div>
-                        ))}
+                                    <div><p style={{ color: fontColor, fontFamily: fontStyle, fontSize: `${fontSize}px` }}>{keys.keyskills}</p> <hr style={{ height: '5px', backgroundColor: 'darkgoldenrod' }} /></div>
+                                </div>
+                            ))}
+                        </div>
                     </div>
                 </div>
-            </div>
             <div className="resume-download-section0">
             <div style={{width:'inherit'}}><GoogleAd/></div>
                 <div className='downloadbuttondiv'>
@@ -215,6 +216,16 @@ const Preview9 = () => {
                         <input type="color" value={headingColor} onChange={(e) => setHeadingColor(e.target.value)} className="bg-color-picker ms-2" />
                     </div>
                 </div>
+                <div className='colordiv'>
+                        <div>
+                            <span style={{ color: headingColor }}><i class="bi bi-patch-plus"></i>HS  </span>
+                            <input type="number" value={fontSizeheading} onChange={(e) => setFontSizeheading(Number(e.target.value))} className="bg-color-picker ms-2" />
+                        </div>
+                        <div>
+                            <span style={{ color: fontColor }}><i class="bi bi-patch-plus"></i>FS  </span>
+                            <input type="number" value={fontSize} onChange={(e) => setFontSize(Number(e.target.value))} className="bg-color-picker ms-2" />
+                        </div>
+                    </div>
                 <div style={{width:'inherit'}}><GoogleAd/></div>
 
             </div>

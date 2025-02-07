@@ -312,8 +312,8 @@ const ImportantPostLink = () => {
     {
       path: "/xyz-formula-resume",
       title:
-        "XYZ Formula: A Simple Approach to Showcasing Your Achievements in Your Resume",
-      src: xyz_formula,
+        "XYZ Formula: A Game-Changer for Your Resume",
+      src:"https://i.postimg.cc/NGZ0P9FL/xyz-formula-image.jpg",
       alt: "XYZ formula for resume",
     },
     {
@@ -1393,6 +1393,18 @@ const ImportantPostLink = () => {
       title: "What is the Best Resume Format for Freshers",
       src: 'https://i.postimg.cc/RZDGpmqV/freepik-the-style-is-candid-image-photography-with-natural-84173.webp',
       alt: "What is the Best Resume Format for Freshers",
+    },
+    {
+      path: "/types-of-resume-formats-for-freshers",
+      title: "Types of Resume Formats for Freshers: A Complete Guide",
+      src: 'https://i.postimg.cc/pL4GGcd5/type-of-resume-format-for-fresher.jpg',
+      alt: "Types of Resume Formats for FresherS",
+    },
+    {
+      path: "/step-by-step-guide-resume-format-for-freshers",
+      title: "Step-by-Step Guide to Writing Resume Format for Freshers",
+      src: 'https://i.postimg.cc/BQzpQJ4W/Resume-Format-for-Freshers-example.jpg',
+      alt: " Resume Format for Freshers",
     },
   ];
   

@@ -12,6 +12,8 @@ const Preview12 = () => {
     const [fontStyle, setFontStyle] = useState('Arial'); // Default font style
     const [headingColor, setHeadingColor] = useState('black')
     const [fontColor, setFontColor] = useState('black')
+    const [fontSize, setFontSize] = useState(16); // Initial font size for paragraphs
+    const [fontSizeheading, setFontSizeheading] = useState(16); // Initial font size for headings
 
     const navigate = useNavigate();
     const personalInfo = useSelector((state) => state.reducer.personalInfo);

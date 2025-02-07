@@ -388,6 +388,8 @@ import PDFofResumeFormatforFreshers from "./component/ImportantPost/PDFofResumeF
 import ResumeFormatForFreshersFreeDownload from "./component/ImportantPost/ResumeFormatForFreshersFreeDownload.jsx";
 import MODELRESUMEFORMATFORFRESHERS from "./component/ImportantPost/MODELRESUMEFORMATFORFRESHERS.jsx";
 import WhatistheBestResumeFormatforFreshers from "./component/ImportantPost/WhatistheBestResumeFormatforFreshers.jsx";
+import TypesofResumeFormatsforFresers from "./component/ImportantPost/TypesofResumeFormatsforFresers.jsx";
+import Stepd_by_StepGuidetoWritingaFresherResume from "./component/ImportantPost/Stepd_by_StepGuidetoWritingaFresherResume.jsx";
 
 var images = [
   { id: 1, src: resum1, alt: "Professional Resume Template 1",description:'Professional and elegant resume template with a timeline structure' },
@@ -730,7 +732,7 @@ function App() {
           element={<ResumeRemoteJobs />}
         />
         <Route path="/resume-tip-component" element={<ResumeTipsComponent />} />
-        <Route path="/xyz-formula-resume" element={<XYZFormula />} />
+        <Route path="/xyz-formula-resume" element={<XYZFormula techImages={techImages} fresherResumeImage={fresherResumeImage} />} />
         <Route path="/resume_component" element={<ResumeComponent />} />
         <Route
           path="/Things_To_Remove_From_Your_Cv"
@@ -1439,7 +1441,7 @@ function App() {
           element={<Jobresumeformatforfresher fresherResumeImage={fresherResumeImage} techImages={techImages} />}
         />
         <Route
-          path="/good-resume-format-for-freshers"
+          path="0"
           element={<GoodresumeFormatForFreshers fresherResumeImage={fresherResumeImage} techImages={techImages} />}
         />
         <Route
@@ -1458,6 +1460,14 @@ function App() {
           path="/what-is-the-best-resume-format-for-freshers"
           element={<WhatistheBestResumeFormatforFreshers fresherResumeImage={fresherResumeImage} techImages={techImages} />}
         />
+        <Route
+          path="/types-of-resume-formats-for-freshers"
+          element={<TypesofResumeFormatsforFresers fresherResumeImage={fresherResumeImage} techImages={techImages} />}
+        />
+        <Route
+          path="/step-by-step-guide-resume-format-for-freshers"
+          element={<Stepd_by_StepGuidetoWritingaFresherResume fresherResumeImage={fresherResumeImage} techImages={techImages} />}
+        />
 
 
 
@@ -1467,7 +1477,7 @@ function App() {
         <Route path="/Blog_or_Career_Tips_Page" element={<BlogCareer />} />
         <Route path="/how-to-land-your-dream-job" element={<DreamJob2024 />} />
         <Route
-          path="top-job-search-websites"
+          path="/top-job-search-websites"
           element={<TopJobSearchWebsites />}
         />
         <Route path="/networking-tips" element={<NetworkingTips />} />

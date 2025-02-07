@@ -8,11 +8,10 @@ import CallToAction from '../CallToAction';
 import ShareButtons from '../shareButton/ShareButtons';
 import { Helmet } from 'react-helmet';
 import { Link, useNavigate } from 'react-router-dom';
-import GetNoticedwith from '../../image/image_for_link/Get Noticed with the Best Resume.jpeg'
 import { useDispatch } from 'react-redux';
 import { templatePage } from '../../Redux/action';
 export default function GetNoticedwiththeBestResume(prop) {
-    const [hoveredImage, setHoveredImage] = useState();
+  const [hoveredImage, setHoveredImage] = useState();
   const { techImages } = prop
   const navigate = useNavigate();
   const ArticleUrl = "https://resumeera.xyz/resume-format";
@@ -42,29 +41,37 @@ export default function GetNoticedwiththeBestResume(prop) {
     navigate(path);
     dispatch(templatePage(hoveredImage));
   };
- 
+
   return (
     <div>
-        <article>
-
+      <article>
+        <section className='releted-article'>
+                  <h2>RELETED ARTICLE :- YOU CAN'T MISS IF YOU WANT TO CREATE A PROFETIONAL RESUME</h2>
+                  <br /><Link to=''></Link>
+                  <br /><Link to=''></Link>
+                  <br /><Link to=''> </Link>
+                  <br /><Link to=''></Link>
+                  <br /><Link to=''></Link>
+        
+                </section>
         <div>
-                    <WelcomeNotes />
-                    <RandomeArticleToBlogCareer />
-                </div>
-            </article>
-            <div><GoogleAd /></div>
-            <div><GoogleAd /></div>
-            <section>
-                <div>
-                    <AuthorCard />
-                </div>
-                <div>
-                    <CallToAction />
-                </div>
-                <div className="stickyShare">
-                    <ShareButtons url={ArticleUrl} title={ArticleTitle} />
-                </div>
-            </section>
+          <WelcomeNotes />
+          <RandomeArticleToBlogCareer />
+        </div>
+      </article>
+      <div><GoogleAd /></div>
+      <div><GoogleAd /></div>
+      <section>
+        <div>
+          <AuthorCard />
+        </div>
+        <div>
+          <CallToAction />
+        </div>
+        <div className="stickyShare">
+          <ShareButtons url={ArticleUrl} title={ArticleTitle} />
+        </div>
+      </section>
     </div>
   )
 }

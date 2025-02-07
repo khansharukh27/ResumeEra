@@ -45,7 +45,7 @@ export default function ResumeQoutes(prop) {
     return (
         <div>
             <Helmet>
-                <title>Resume Quotes – Inspirational Quotes to Enhance Your Professional Journey</title>
+                <title> Inspirational Resume Quotes to Enhance Your Professional Journey</title>
                 <meta name="description" content="Discover the best resume quotes that inspire hard work, perseverance, and success. Make your resume stand out with impactful quotes!" />
                 <meta name="keywords" content="resume quotes, inspirational quotes, quotes about hard work, motivational quotes for resumes, resume building tips, professional quotes" />
                 <link rel="canonical" href="https://resumeera.xyz/resume-quotes" />
@@ -65,7 +65,7 @@ export default function ResumeQoutes(prop) {
     "@type": "WebPage",
     "@id": "https://resumeera.xyz/resume-quotes"
   },
-  "headline": "Resume Quotes – Inspirational Quotes to Enhance Your Professional Journey",
+  "headline": " Inspirational Resume Quotes to Enhance Your Professional Journey",
   "image": "https://img.freepik.com/free-vector/lettering-business-sticker-set_23-2150185946.jpg",  
   "author": {
     "@type": "Organization",
