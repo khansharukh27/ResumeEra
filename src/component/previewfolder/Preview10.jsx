@@ -97,7 +97,7 @@ const Preview10 = () => {
                                 <p className='mb-5 p-2' style={{ backgroundColor: 'yellow', color: 'black', borderRadius: '5px', fontSize: `${fontSize}px` }}>
                                     {work[0][0].jobtitle}
                                 </p>
-                                <h5 style={{ color: headingColor, fontSize: `${fontSizeheading}px` }} className="education10">EDUCATION</h5>
+                                <h5 style={{ color: headingColor, fontSize: `${fontSizeheading}px`,fontFamily:fontStyle }} className="education10">EDUCATION</h5>
                                 <div style={{ width: '50px', height: '4px', backgroundColor: 'yellow' }}></div>
                                 {education[0].map((edu, index) => (
                                     <div key={index}>

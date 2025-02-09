@@ -390,6 +390,7 @@ import MODELRESUMEFORMATFORFRESHERS from "./component/ImportantPost/MODELRESUMEF
 import WhatistheBestResumeFormatforFreshers from "./component/ImportantPost/WhatistheBestResumeFormatforFreshers.jsx";
 import TypesofResumeFormatsforFresers from "./component/ImportantPost/TypesofResumeFormatsforFresers.jsx";
 import Stepd_by_StepGuidetoWritingaFresherResume from "./component/ImportantPost/Stepd_by_StepGuidetoWritingaFresherResume.jsx";
+import WhatisaFunctionalResume from "./component/ImportantPost/functional resume/WhatisaFunctionalResume.jsx";
 
 var images = [
   { id: 1, src: resum1, alt: "Professional Resume Template 1",description:'Professional and elegant resume template with a timeline structure' },
@@ -1441,7 +1442,7 @@ function App() {
           element={<Jobresumeformatforfresher fresherResumeImage={fresherResumeImage} techImages={techImages} />}
         />
         <Route
-          path="0"
+          path="/good-resume-format-for-freshers"
           element={<GoodresumeFormatForFreshers fresherResumeImage={fresherResumeImage} techImages={techImages} />}
         />
         <Route
@@ -1467,6 +1468,10 @@ function App() {
         <Route
           path="/step-by-step-guide-resume-format-for-freshers"
           element={<Stepd_by_StepGuidetoWritingaFresherResume fresherResumeImage={fresherResumeImage} techImages={techImages} />}
+        />
+<Route
+          path="/what-is-a-functional-resume"
+          element={<WhatisaFunctionalResume fresherResumeImage={fresherResumeImage} techImages={techImages} />}
         />
 
 

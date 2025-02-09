@@ -13,7 +13,9 @@ export default function Preview302() {
   const [fontStyle, setFontStyle] = useState('Arial'); // Default font style
   const [fontColor, setFontColor] = useState('#rrggbb')
   const [headingColor, setHeadingColor] = useState('#6a8a3f')
-  const [isDownloaded, setIsDownloaded] = useState(false);
+  // const [isDownloaded, setIsDownloaded] = useState(false);
+  const [fontSize, setFontSize] = useState(16); // Initial font size for paragraphs
+  const [fontSizeheading, setFontSizeheading] = useState(16); // Initial font size for headings
 
   const navigate = useNavigate();
   const personalInfo = useSelector((state) => state.reducer.personalInfo);
@@ -33,27 +35,57 @@ export default function Preview302() {
   console.log('honorand award:-', keyskills)
 
   const handleDownloadPDF = async () => {
+    // Show loading spinner
+    const loadingSpinner = document.getElementById('loadingSpinner');
+    loadingSpinner.style.display = "block"; // Show the spinner
+
     const element = document.getElementById('Alisha_mirza302');
     try {
       const scale = 3; // Increase the scale for better resolution
       const canvas = await html2canvas(element, {
         scale: scale,
         useCORS: true, // Allows cross-origin images to be rendered correctly
-        logging: true, // Enable logging for debugging
+        logging: false, // Disable logging for better performance
       });
       const pdf = new jsPDF('p', 'mm', 'a4');
       const imgData = canvas.toDataURL('image/png');
-      // Calculate the aspect ratio to fit A4
+
       const imgWidth = 210; // A4 width in mm
       const imgHeight = (canvas.height * imgWidth) / canvas.width;
-      pdf.addImage(imgData, 'PNG', 0, 0, imgWidth, imgHeight, undefined, 'FAST');
+
+      const a4Height = 297; // A4 height in mm
+
+      // If the content is shorter than the A4 page height, center it vertically
+      let verticalOffset = 0;
+      if (imgHeight < a4Height) {
+        // Center the content vertically
+        verticalOffset = (a4Height - imgHeight) / 2;
+      }
+
+      // If content fits on one page
+      if (imgHeight <= a4Height) {
+        pdf.addImage(imgData, 'PNG', 0, verticalOffset, imgWidth, imgHeight, undefined, 'FAST');
+      } else {
+        // If content is taller than one page, split it into multiple pages
+        let offsetY = 0;
+        while (offsetY < canvas.height) {
+          const currentHeight = Math.min(imgHeight, canvas.height - offsetY); // Handle remaining height
+          pdf.addImage(imgData, 'PNG', 0, offsetY, imgWidth, currentHeight, undefined, 'FAST');
+          offsetY += currentHeight;
+
+          // If there's more content, add another page
+          if (offsetY < canvas.height) {
+            pdf.addPage(3);
+          }
+        }
+      }
+
       const fileName = `${inputFields}.pdf`;
       pdf.save(fileName);
-      setIsDownloaded(true)
-      setTimeout(() => {
-        setIsDownloaded(false)
-      }, 4000)
-      // Store the image data URL in localStorage
+
+      // Hide loading spinner once PDF is ready
+      loadingSpinner.style.display = "none"; // Hide the spinner
+
       const savedResumes = JSON.parse(localStorage.getItem('savedResumes')) || [];
       savedResumes.push(imgData);
       localStorage.setItem('savedResumes', JSON.stringify(savedResumes));
@@ -61,6 +93,8 @@ export default function Preview302() {
       alert('Your Resume is downloaded');
       // navigate('/myresume');
     } catch (error) {
+      // Hide loading spinner if error occurs
+      loadingSpinner.style.display = "none";
       console.error('Error downloading PDF:', error);
     }
   };
@@ -81,38 +115,38 @@ export default function Preview302() {
       </header>
       <GoogleAd />
       <div className='main302'>
-        <div className='preview302' style={{ backgroundColor: bgColor, }} id="Alisha_mirza302">
+        <div className='preview302 p-4' style={{ backgroundColor: bgColor, }} id="Alisha_mirza302">
           <div className='header302' style={{ backgroundColor: '#fddad4' }}></div>
           <div className='headermiddle302' style={{ backgroundColor: 'white' }}></div>
-          <div className='namediv302' style={{ backgroundColor: bgColor, }}>
-            <h3 style={{ whiteSpace: 'none', fontFamily: fontStyle, color: fontColor, marginBottom: '-10px' }}>{personalInfo.firstName} {personalInfo.lastName}</h3>
+          <div className='namediv302' style={{}}>
+            <h3 style={{ whiteSpace: 'none', color: headingColor, fontFamily: fontStyle, fontSize: fontSizeheading, marginBottom: '-10px' }}>{personalInfo.firstName} {personalInfo.lastName}</h3>
             <div className='contact301'>
-              <p style={{ color: fontColor, fontFamily: fontStyle }}><i className="bi bi-telephone-fill me-2 ms-2" style={{ color: headingColor }} />{personalInfo.mobileNumber}</p>
-              <div > <p style={{ width: '20px' }}>|</p></div><p style={{ color: fontColor, wordBreak: "break-all" }}><i className="bi bi-envelope me-2 me-2" style={{ color: headingColor }} />{personalInfo.email}</p>
+              <p style={{ color: fontColor, fontFamily: fontStyle, fontSize: fontSize }}><i className="bi bi-telephone-fill me-2 ms-2" style={{ color: headingColor }} />{personalInfo.mobileNumber}</p>
+              <div > <p style={{ width: '20px',color: fontColor, fontFamily: fontStyle, fontSize: fontSize }}>|</p></div><p style={{ color: fontColor, fontFamily: fontStyle, fontSize: fontSize, wordBreak: "break-all" }}><i className="bi bi-envelope me-2 me-2" style={{ color: headingColor }} />{personalInfo.email}</p>
             </div>
-            <div className=' maindiv302' style={{}}>
-              <div className='skilldiv'>
-                <h4 style={{ color: headingColor, fontFamily: fontStyle }}>OBJECTIVE STATEMENT</h4>
-                <p className='object' style={{ fontFamily: fontStyle, color: fontColor }}>{personalInfo.object}</p>
+            <div className=' maindiv302 ' style={{}}>
+              <div className='skilldiv pe-4'>
+                <h4 style={{ color: headingColor, fontFamily: fontStyle, fontSize: fontSizeheading }}>OBJECTIVE STATEMENT</h4>
+                <p className='object' style={{ color: fontColor, fontFamily: fontStyle, fontSize: fontSize, }}>{personalInfo.object}</p>
                 <div className="soft-skill" style={{ backgroundColor: bgColor, }}>
-                  <h4 className="" style={{ color: headingColor, fontFamily: fontStyle }}>SOFT SKILL</h4>
+                  <h4 className="" style={{ color: headingColor, fontFamily: fontStyle, fontSize: fontSizeheading }}>SOFT SKILL</h4>
                   <div style={{}}>
                     {SoftSkill[0].map((keys, index) => (
                       <div key={index} className="technical-skill-item302" style={{}}>
-                        <ul style={{ fontSize: 'small',  marginRight: '0px', minWidth: '100px', marginBottom: '-5px' }}>
-                          <li><p style={{color: fontColor, fontFamily: fontStyle,}}>{keys.softSkill}</p></li>
+                        <ul style={{ fontSize: 'small', marginRight: '0px', minWidth: '100px', marginBottom: '-5px' }}>
+                          <li><p style={{ color: fontColor, fontFamily: fontStyle, fontSize: fontSize, }}>{keys.softSkill}</p></li>
                         </ul>
                       </div>
                     ))}
                   </div>
                 </div>
                 <div className="tech-skill" style={{ backgroundColor: bgColor, }}>
-                  <h4 className="" style={{ color: headingColor, fontFamily: fontStyle }}>TECHNICAL SKILL</h4>
+                  <h4 className="" style={{ color: headingColor, fontFamily: fontStyle, fontSize: fontSizeheading }}>TECHNICAL SKILL</h4>
                   <div style={{}}>
                     {keyskills[0].map((keys, index) => (
                       <div key={index} className="technical-skill-item302" style={{}}>
                         <ul style={{ fontSize: 'small', color: fontColor, fontFamily: fontStyle, marginRight: '0px', minWidth: '100px', marginBottom: '-5px' }}>
-                          <li><p style={{color: fontColor, fontFamily: fontStyle,}}>{keys.keyskills}</p></li>
+                          <li><p style={{ color: fontColor, fontFamily: fontStyle, fontSize: fontSize, }}>{keys.keyskills}</p></li>
                         </ul>
                       </div>
                     ))}
@@ -121,26 +155,26 @@ export default function Preview302() {
               </div>
               <div>
                 <div className="experience-section302">
-                  <h4 className="details-title302" style={{ color: headingColor, fontFamily: fontStyle }}>
+                  <h4 className="details-title302" style={{ color: headingColor, fontFamily: fontStyle, fontSize: fontSizeheading }}>
                     WORK EXPERIENCE </h4>
                   {work[0].map((works, index) => (
                     <div key={index} className="employment-history302">
                       <div className="exp-inner302">
-                        <p style={{ color: fontColor, fontFamily: fontStyle, marginBottom: '-5px' }} className="employment-detail302"><b style={{ fontWeight: 500, color: fontColor }}>{works.jobtitle}</b><br />{works.organization}{work.city}</p>
-                        <p style={{ color: fontColor, fontFamily: fontStyle, marginBottom: '-5px' }} className="employment-detail302"><i>{works.startYear} - {works.endYear}</i></p>
-                        <p style={{ color: fontColor, fontFamily: fontStyle }} className='employment-detail302'>{works.aboutexperience}</p>
+                        <p style={{ color: fontColor, fontFamily: fontStyle, fontSize: fontSize, marginBottom: '-5px' }} className="employment-detail302"><b style={{ fontWeight: 500, color: fontColor }}>{works.jobtitle}</b><br />{works.organization}{work.city}</p>
+                        <p style={{ color: fontColor, fontFamily: fontStyle, fontSize: fontSize, marginBottom: '-5px' }} className="employment-detail302"><i>{works.startYear} - {works.endYear}</i></p>
+                        <p style={{ color: fontColor, fontFamily: fontStyle, fontSize: fontSize, }} className='employment-detail302'>{works.aboutexperience}</p>
                       </div>
                     </div>
                   ))}
                 </div>
                 <div className="education-section302 mt-1">
-                  <h4 className="details-title302" style={{ color: headingColor, fontFamily: fontStyle }}>EDUCATION</h4>
+                  <h4 className="details-title302" style={{ color: headingColor, fontFamily: fontStyle, fontSize: fontSizeheading }}>EDUCATION</h4>
                   {education[0].map((edu, index) => (
                     <div key={index} className="education-item302">
                       <div className="certificate-item302">
-                        <p style={{ color: fontColor, fontFamily: fontStyle, fontSize: 'small', fontWeight: 900, marginBottom: '-5px' }} className="employment-detail302">{edu.degree} in {edu.university} </p>
-                        <p style={{ color: fontColor, fontFamily: fontStyle, marginBottom: '-5px' }} className="employment-detail302">{edu.university}</p>
-                        <p style={{ color: fontColor, fontFamily: fontStyle }} className="employment-detail302">{edu.startYear} - {edu.endYear},{edu.city}</p>
+                        <p style={{ color: fontColor, fontFamily: fontStyle, fontSize: fontSize, fontSize: 'small', fontWeight: 900, marginBottom: '-5px' }} className="employment-detail302">{edu.degree} in {edu.university} </p>
+                        <p style={{ color: fontColor, fontFamily: fontStyle, fontSize: fontSize, marginBottom: '-5px' }} className="employment-detail302">{edu.university}</p>
+                        <p style={{ color: fontColor, fontFamily: fontStyle, fontSize: fontSize, }} className="employment-detail302">{edu.startYear} - {edu.endYear},{edu.city}</p>
                       </div>
                       <div className="education-details302">
                         <span><b></b></span>
@@ -150,32 +184,32 @@ export default function Preview302() {
                 </div>
                 {Hobbies && Hobbies[0].length > 0 && (
                   <div>
-                    <h4 style={{ color: headingColor, fontFamily: fontStyle }}>HOBBIES & INTEREST</h4>
+                    <h4 style={{ color: headingColor, fontFamily: fontStyle, fontSize: fontSizeheading }}>HOBBIES & INTEREST</h4>
                     {Hobbies[0].map((keys, index) => (
                       <div style={{ display: 'flex', flexWrap: 'wrap', gap: '16px' }}>
 
                         <ul style={{ fontSize: 'small', color: fontColor, fontFamily: fontStyle, marginRight: '0px', minWidth: '100px', marginBottom: '-5px' }}>
                           <li style={{ marginBottom: "-5px", color: fontColor, fontFamily: fontStyle }}>
-                            <p style={{color: fontColor, fontFamily: fontStyle}}>{keys.hobbies}</p>
+                            <p style={{ color: fontColor, fontFamily: fontStyle, fontSize: fontSize, }}>{keys.hobbies}</p>
                           </li>
                         </ul>
                       </div>
                     ))}
                   </div>
                 )}
-                <div className=" language-301">
-                  <h4 style={{ color: headingColor, fontFamily: fontStyle }}>LANGUAGE </h4>
-                    {languages[0].map((keys, index) => (
-                      <div key={index} className="language-item301">
-                        <ul>
-                          <li>
-                          <p style={{ color: fontColor, fontFamily: fontStyle, marginBottom: '-5px' }}>{keys.language}</p>
+                <div className=" language-302">
+                  <h4 style={{ color: headingColor, fontFamily: fontStyle, fontSize: fontSizeheading }}>LANGUAGE </h4>
+                  {languages[0].map((keys, index) => (
+                    <div key={index} className="language-item302">
+                      <ul>
+                        <li>
+                          <p style={{ color: fontColor, fontFamily: fontStyle, fontSize: fontSize, marginBottom: '-5px' }}>{keys.language}</p>
 
-                          </li>
-                        </ul>
-                      </div>
-                    ))}
-                  
+                        </li>
+                      </ul>
+                    </div>
+                  ))}
+
                 </div>
               </div>
             </div>
@@ -237,6 +271,19 @@ export default function Preview302() {
               <span>Heading Color </span>
               <input type="color" value={headingColor} onChange={(e) => setHeadingColor(e.target.value)} className="bg-color-picker ms-2" />
             </div>
+          </div>
+          <div className='colordiv'>
+            <div>
+              <span style={{ color: headingColor }}><i class="bi bi-patch-plus"></i>HS  </span>
+              <input type="number" value={fontSizeheading} onChange={(e) => setFontSizeheading(Number(e.target.value))} className="bg-color-picker ms-2" />
+            </div>
+            <div>
+              <span style={{ color: fontColor }}><i class="bi bi-patch-plus"></i>FS  </span>
+              <input type="number" value={fontSize} onChange={(e) => setFontSize(Number(e.target.value))} className="bg-color-picker ms-2" />
+            </div>
+          </div>
+          <div id="loadingSpinner" style={{ display: "none", position: "fixed", top: "50%", left: "50%" }}>
+            <div class="spinner"></div>
           </div>
           <div style={{ width: '100%' }}>
             <GoogleAd />

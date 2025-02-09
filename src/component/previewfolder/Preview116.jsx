@@ -14,9 +14,9 @@ const Preview116 = () => {
   const [fontStyle, setFontStyle] = useState('Arial'); // Default font style
   const [fontColor, setFontColor] = useState('#rrggbb')
   const [headingColor, setHeadingColor] = useState('#6a8a3f')
-  const [fontkasize, setfontkasize] = useState('25')
-  const [headingsize, setheadingsize] = useState('25')
-  const [isDownloaded, setIsDownloaded] = useState(false);
+  // const [isDownloaded, setIsDownloaded] = useState(false);
+  const [fontSize, setFontSize] = useState(16); // Initial font size for paragraphs
+  const [fontSizeheading, setFontSizeheading] = useState(16); // Initial font size for headings
 
   const navigate = useNavigate();
   const personalInfo = useSelector((state) => state.reducer.personalInfo);
@@ -24,38 +24,69 @@ const Preview116 = () => {
   const keyskills = useSelector((state) => [state.reducer.keySkills]);
   const work = useSelector((state) => [state.reducer.workExperience]);
   const Honor = useSelector((state) => [state.reducer.honorAndaward]);
-  const Refrence = useSelector((state) => [state.reducer.addReference])
+  // const Refrence = useSelector((state) => [state.reducer.addReference])
   const SoftSkill = useSelector((state) => [state.reducer.addSoftSkills])
   const socialMediaLink = useSelector((state) => [state.reducer.socialMediaLink]);
   const languages = useSelector((state) => [state.reducer.addLanguage]);
-  const Certificate = useSelector((state) => state.reducer.certificateData);
+  // const Certificate = useSelector((state) => state.reducer.certificateData);
   const Hobbies = useSelector((state) => [state.reducer.addHobies])
-  const project = useSelector((state) => [state.reducer.projectData[0]])
-  console.log('hobbies preview 1116:-', Hobbies)
+  const project = useSelector((state) => [state.reducer.projectData])
+  console.log('hobbies preview 302:-', Hobbies)
   // console.log('Certificate:-', Certificate)
-  console.log('honorand award:-', Honor)
+  console.log('honorand award:-', keyskills)
+
   const handleDownloadPDF = async () => {
-    const element = document.getElementById('Alisha_mirza116');
+    // Show loading spinner
+    const loadingSpinner = document.getElementById('loadingSpinner');
+    loadingSpinner.style.display = "block"; // Show the spinner
+
+    const element = document.getElementById('Alisha_mirza302');
     try {
-      const scale = 2; // Increase the scale for better resolution
+      const scale = 3; // Increase the scale for better resolution
       const canvas = await html2canvas(element, {
         scale: scale,
         useCORS: true, // Allows cross-origin images to be rendered correctly
-        logging: true, // Enable logging for debugging
+        logging: false, // Disable logging for better performance
       });
       const pdf = new jsPDF('p', 'mm', 'a4');
       const imgData = canvas.toDataURL('image/png');
-      // Calculate the aspect ratio to fit A4
+
       const imgWidth = 210; // A4 width in mm
       const imgHeight = (canvas.height * imgWidth) / canvas.width;
-      pdf.addImage(imgData, 'PNG', 0, 0, imgWidth, imgHeight, undefined, 'FAST');
+
+      const a4Height = 297; // A4 height in mm
+
+      // If the content is shorter than the A4 page height, center it vertically
+      let verticalOffset = 0;
+      if (imgHeight < a4Height) {
+        // Center the content vertically
+        verticalOffset = (a4Height - imgHeight) / 2;
+      }
+
+      // If content fits on one page
+      if (imgHeight <= a4Height) {
+        pdf.addImage(imgData, 'PNG', 0, verticalOffset, imgWidth, imgHeight, undefined, 'FAST');
+      } else {
+        // If content is taller than one page, split it into multiple pages
+        let offsetY = 0;
+        while (offsetY < canvas.height) {
+          const currentHeight = Math.min(imgHeight, canvas.height - offsetY); // Handle remaining height
+          pdf.addImage(imgData, 'PNG', 0, offsetY, imgWidth, currentHeight, undefined, 'FAST');
+          offsetY += currentHeight;
+
+          // If there's more content, add another page
+          if (offsetY < canvas.height) {
+            pdf.addPage(3);
+          }
+        }
+      }
+
       const fileName = `${inputFields}.pdf`;
       pdf.save(fileName);
-      setIsDownloaded(true)
-      setTimeout(() => {
-        setIsDownloaded(false)
-      }, 4000)
-      // Store the image data URL in localStorage
+
+      // Hide loading spinner once PDF is ready
+      loadingSpinner.style.display = "none"; // Hide the spinner
+
       const savedResumes = JSON.parse(localStorage.getItem('savedResumes')) || [];
       savedResumes.push(imgData);
       localStorage.setItem('savedResumes', JSON.stringify(savedResumes));
@@ -63,6 +94,8 @@ const Preview116 = () => {
       alert('Your Resume is downloaded');
       // navigate('/myresume');
     } catch (error) {
+      // Hide loading spinner if error occurs
+      loadingSpinner.style.display = "none";
       console.error('Error downloading PDF:', error);
     }
   };
@@ -70,9 +103,9 @@ const Preview116 = () => {
   return (
     <div>
 
-      <header style={{ fontSize: fontkasize, paddingLeft: '10px', paddingRight: '10px', textAlign: 'center' }}>
+      <header style={{ fontSize: fontSize, paddingLeft: '10px', paddingRight: '10px', textAlign: 'center' }}>
         <h1>Tech ATS Resume Template</h1>
-        <small style={{ fontSize: fontkasize, textAlign: 'center' }}> <i style={{ fontSize: fontkasize, color: 'white', backgroundColor: 'red' }}> warning </i>: if resume dont show your data in resume , please refresh the page</small>
+        <small style={{ fontSize: fontSize, textAlign: 'center' }}> <i style={{ fontSize: fontSize, color: 'white', backgroundColor: 'red' }}> warning </i>: if resume dont show your data in resume , please refresh the page</small>
 
         <p>Your journey towards your dream job starts here! By crafting a professional resume with ResumeEra, you've taken the first step in showcasing your skills, experiences, and aspirations effectively. A well-structured resume is more than just a document—it's your story, your voice, and your opportunity to shine.
 
@@ -82,39 +115,39 @@ const Preview116 = () => {
         </p>
       </header>
       <div className='main116 d-md-flex'>
-        <div className='Preview116' style={{ backgroundColor: bgColor }} id='Alisha_mirza116'>
+        <div className='Preview116' style={{ backgroundColor: bgColor }} id='Alisha_mirza302'>
           <div className='Name-positio-summary116' style={{ border: '2px solid', borderColor: headingColor }}>
-            <h3 style={{ color: headingColor, fontSize: headingsize, backgroundColor: bgColor }}>{personalInfo.firstName} {personalInfo.lastName}</h3>
-            <p className='jobtitle116' style={{ fontSize: fontkasize, fontSize: fontkasize, color: 'black', fontFamily: fontStyle }}>{work[0].map((works, index) => (
+            <h3 style={{ color: headingColor, fontSize: fontSizeheading, backgroundColor: bgColor }}>{personalInfo.firstName} {personalInfo.lastName}</h3>
+            <p className='jobtitle116' style={{ fontSize: fontSize, fontSize: fontSize, color: 'black', fontFamily: fontStyle }}>{work[0].map((works, index) => (
               <div key={index}>
-                <p style={{ fontSize: fontkasize, fontFamily: fontStyle, marginBottom: '-10px', color: fontColor || '#f9dec7' }}>{works.jobtitle}</p>
+                <p style={{ fontSize: fontSize, fontFamily: fontStyle, marginBottom: '-10px', color: fontColor || '#f9dec7' }}>{works.jobtitle}</p>
               </div>
             ))}</p>
-            <p className='object116' style={{ fontSize: fontkasize, fontFamily: fontStyle, color: fontColor }}>{personalInfo.object}</p>
+            <p className='object116' style={{ fontSize: fontSize, fontFamily: fontStyle, color: fontColor }}>{personalInfo.object}</p>
 
           </div>
           <div className="contactdiv116" style={{ backgroundColor: headingColor }}>
-            <div className='contactinnerdiv116'><i className="bi bi-geo-alt-fill me-2 ms-2" style={{ borderColor: fontColor, fontSize: fontkasize, color: fontColor }} /><p style={{ fontSize: fontkasize, color: fontColor, fontFamily: fontStyle, }}>  {personalInfo.state} {personalInfo.postalCode}</p></div>
-            <div className='contactinnerdiv116'><i className="bi bi-telephone-fill me-2 ms-2" style={{ borderColor: fontColor, fontSize: fontkasize, color: fontColor }} /><p style={{ fontSize: fontkasize, color: fontColor, fontFamily: fontStyle, }}>{personalInfo.mobileNumber}</p></div>
-            <div className='contactinnerdiv116'><i className="bi bi-envelope me-2 ms-2" style={{ borderColor: fontColor, fontSize: fontkasize, color: fontColor }} /><p style={{ fontSize: fontkasize, color: fontColor, fontFamily: fontStyle, }}>{personalInfo.email}</p></div>
-            <div className='contactinnerdiv116'><i class="bi bi-github ms-2" style={{ borderColor: fontColor, fontSize: fontkasize, color: bgColor }} /><p style={{ fontSize: fontkasize, color: fontColor, fontFamily: fontStyle, }}>{socialMediaLink[0].github}</p></div>
+            <div className='contactinnerdiv116'><i className="bi bi-geo-alt-fill me-2 ms-2" style={{ borderColor: fontColor, fontSize: fontSize, color: fontColor }} /><p style={{ fontSize: fontSize, color: fontColor, fontFamily: fontStyle, }}>  {personalInfo.state} {personalInfo.postalCode}</p></div>
+            <div className='contactinnerdiv116'><i className="bi bi-telephone-fill me-2 ms-2" style={{ borderColor: fontColor, fontSize: fontSize, color: fontColor }} /><p style={{ fontSize: fontSize, color: fontColor, fontFamily: fontStyle, }}>{personalInfo.mobileNumber}</p></div>
+            <div className='contactinnerdiv116'><i className="bi bi-envelope me-2 ms-2" style={{ borderColor: fontColor, fontSize: fontSize, color: fontColor }} /><p style={{ fontSize: fontSize, color: fontColor, fontFamily: fontStyle, }}>{personalInfo.email}</p></div>
+            <div className='contactinnerdiv116'><i class="bi bi-github ms-2" style={{ borderColor: fontColor, fontSize: fontSize, color: bgColor }} /><p style={{ fontSize: fontSize, color: fontColor, fontFamily: fontStyle, }}>{socialMediaLink[0].github}</p></div>
           </div>
           <div className='combine-div116 mt-5'>
             <div className='work-education'>
               <div className="experience-section116 mt-4">
-                <h6 className="details-title116" style={{ color: headingColor, fontSize: headingsize, }}>
-                  <i class="bi bi-briefcase m-3" style={{ fontSize: fontkasize, border: `1px solid ${headingColor}`, padding: '7px', borderRadius: '50%' }}></i> WORK EXPERIENCE</h6>
+                <h6 className="details-title116" style={{ color: headingColor, fontSize: fontSizeheading, }}>
+                  <i class="bi bi-briefcase m-3" style={{ fontSize: fontSize, border: `1px solid ${headingColor}`, padding: '7px', borderRadius: '50%' }}></i> WORK EXPERIENCE</h6>
 
                 {work[0].map((works, index) => (
                   <div key={index} className="employment-history116 ms-4">
                     <div className="exp-inner1">
-                      <p style={{ fontSize: fontkasize, color: fontColor, fontFamily: fontStyle, marginBottom: '-5px' }} className="employment-detail116">{works.jobtitle}</p>
-                      <p style={{ fontSize: fontkasize, color: fontColor, fontFamily: fontStyle, marginBottom: '-5px' }} className="employment-detail116">{works.organization}</p>
-                      <p style={{ fontSize: fontkasize, color: fontColor, fontFamily: fontStyle, fontStyle }} className="employment-duration116" ><i>{works.startYear} - {works.endYear}</i></p>
+                      <p style={{ fontSize: fontSize, color: fontColor, fontFamily: fontStyle, marginBottom: '-5px' }} className="employment-detail116">{works.jobtitle}</p>
+                      <p style={{ fontSize: fontSize, color: fontColor, fontFamily: fontStyle, marginBottom: '-5px' }} className="employment-detail116">{works.organization}</p>
+                      <p style={{ fontSize: fontSize, color: fontColor, fontFamily: fontStyle, fontStyle }} className="employment-duration116" ><i>{works.startYear} - {works.endYear}</i></p>
 
                     </div>
                     <div>
-                      <p style={{ fontSize: fontkasize, color: fontColor, fontFamily: fontStyle, }} className='aboutexperience116' >{works.aboutexperience}</p>
+                      <p style={{ fontSize: fontSize, color: fontColor, fontFamily: fontStyle, }} className='aboutexperience116' >{works.aboutexperience}</p>
                     </div>
                   </div>
                 ))}
@@ -122,16 +155,16 @@ const Preview116 = () => {
               <div>
 
                 <div className=" ">
-                  <h6 style={{ color: headingColor, fontSize: headingsize }} className='heading116'>
-                    <i class="bi bi-backpack" style={{ fontSize: fontkasize, border: `1px solid ${headingColor}`, padding: '7px', borderRadius: '50%', margin: '5px' }}></i>EDUCATION <br /></h6>
+                  <h6 style={{ color: headingColor, fontSize: fontSizeheading }} className='heading116'>
+                    <i class="bi bi-backpack" style={{ fontSize: fontSize, border: `1px solid ${headingColor}`, padding: '7px', borderRadius: '50%', margin: '5px' }}></i>EDUCATION <br /></h6>
                   {education[0].map((edu, index) => (
                     <div key={index} className="education-item116">
                       <div className="d-flex justify-content-between">
                         <div className='ms-4'>
-                          <p style={{ fontSize: fontkasize, color: fontColor, fontFamily: fontStyle, marginBottom: '-5px' }} className="employment-detail116">{edu.degree}</p>
-                          <p style={{ fontSize: fontkasize, color: fontColor, fontFamily: fontStyle, marginBottom: '-5px' }} className="employment-detail116 ">{edu.university}</p>
-                          <p style={{ fontSize: fontkasize, color: fontColor, fontFamily: fontStyle, marginBottom: '-5px' }}>{edu.city}</p>
-                          <p style={{ fontSize: fontkasize, color: fontColor, fontFamily: fontStyle, }} className="employment-detail116 me-3" >{edu.startYear}-{edu.endYear}</p>
+                          <p style={{ fontSize: fontSize, color: fontColor, fontFamily: fontStyle, marginBottom: '-5px' }} className="employment-detail116">{edu.degree}</p>
+                          <p style={{ fontSize: fontSize, color: fontColor, fontFamily: fontStyle, marginBottom: '-5px' }} className="employment-detail116 ">{edu.university}</p>
+                          <p style={{ fontSize: fontSize, color: fontColor, fontFamily: fontStyle, marginBottom: '-5px' }}>{edu.city}</p>
+                          <p style={{ fontSize: fontSize, color: fontColor, fontFamily: fontStyle, }} className="employment-detail116 me-3" >{edu.startYear}-{edu.endYear}</p>
                         </div>
                       </div>
                     </div>
@@ -141,12 +174,12 @@ const Preview116 = () => {
             </div>
             <div>
               <div className="inner-116-1 me-4">
-                <h6 style={{ color: headingColor, fontSize: headingsize }}><i class="bi bi-tools" style={{ fontSize: fontkasize, border: `1px solid ${headingColor}`, padding: '7px', borderRadius: '50%', margin: '5px' }} />SKILL</h6>
+                <h6 style={{ color: headingColor, fontSize: fontSizeheading }}><i class="bi bi-tools" style={{ fontSize: fontSize, border: `1px solid ${headingColor}`, padding: '7px', borderRadius: '50%', margin: '5px' }} />SKILL</h6>
                 <div style={{display:'flex',flexWrap:'wrap',gap:'16px'}}>
                   {keyskills[0].map((keys, index) => (
                     <div key={index} className=" d-flex justify-content-between">
                       <p className='technical-skill-item116'
-                        style={{backgroundColor: headingColor,fontSize: fontkasize, color: fontColor, fontFamily: fontStyle, }}>
+                        style={{backgroundColor: headingColor,fontSize: fontSize, color: fontColor, fontFamily: fontStyle, }}>
                         {keys.keyskills}</p>
                       {/* 5-star rating system */}
                     </div>
@@ -155,28 +188,28 @@ const Preview116 = () => {
 
               </div>
               <div>
-              <h6 style={{ color: headingColor, fontSize: headingsize }}><i class="bi bi-kanban-fill" style={{ fontSize: fontkasize, border: `1px solid ${headingColor}`, padding: '7px', borderRadius: '50%', margin: '5px' }}></i>PERSONAL PROJECT<br /></h6>
+              <h6 style={{ color: headingColor, fontSize: fontSizeheading }}><i class="bi bi-kanban-fill" style={{ fontSize: fontSize, border: `1px solid ${headingColor}`, padding: '7px', borderRadius: '50%', margin: '5px' }}></i>PERSONAL PROJECT<br /></h6>
               <div>
                   {project && project.map((pro) => (
                     <div key={pro.id}>
-                      <p style={{ fontSize: fontkasize, color: fontColor, fontFamily: fontStyle, }}>{pro.link}({pro.startTime - pro.endTime})</p>
-                      <p style={{ fontSize: fontkasize, color: fontColor, fontFamily: fontStyle, }}>{pro.description}</p>
+                      <p style={{ fontSize: fontSize, color: fontColor, fontFamily: fontStyle, }}>{pro.link}({pro.startTime - pro.endTime})</p>
+                      <p style={{ fontSize: fontSize, color: fontColor, fontFamily: fontStyle, }}>{pro.description}</p>
                     </div>
                   ))}
                 </div>
               </div>
               <div className="">
-              <h6 style={{ color: headingColor, fontSize: headingsize }}><i class="bi bi-translate" style={{ fontSize: fontkasize, border: `1px solid ${headingColor}`, padding: '7px', borderRadius: '50%', margin: '5px' }}></i>LANGUAGE<br /></h6>
+              <h6 style={{ color: headingColor, fontSize: fontSizeheading }}><i class="bi bi-translate" style={{ fontSize: fontSize, border: `1px solid ${headingColor}`, padding: '7px', borderRadius: '50%', margin: '5px' }}></i>LANGUAGE<br /></h6>
                 {languages && languages[0].map((keys, index) => (
                   <div key={index} className=" d-flex  justify-content-between">
-                    <div>  <p style={{ fontSize: fontkasize, color: fontColor, fontFamily: fontStyle, }}>{keys.language}</p></div>
+                    <div>  <p style={{ fontSize: fontSize, color: fontColor, fontFamily: fontStyle, }}>{keys.language}</p></div>
                     <div className="star-rating ms-3 w-50">
                       {[...Array(5)].map((_, i) => (
                         <i
 
                           key={i}
                           className={`bi bi-star${i < keys.rating ? '-fill' : ''}`}
-                          style={{ color: i < keys.rating ? fontColor : 'grey', fontSize: fontkasize, fontFamily: fontStyle }} // Filled stars are gold, others are gray
+                          style={{ color: i < keys.rating ? fontColor : 'grey', fontSize: fontSize, fontFamily: fontStyle }} // Filled stars are gold, others are gray
                         />
                       ))}
                     </div>
@@ -184,7 +217,7 @@ const Preview116 = () => {
                 ))}
               </div>
               <div className="technical-skills-title109 mt-3">
-              <h6 style={{ color: headingColor, fontSize: headingsize }}><i class="bi bi-file-music" style={{ fontSize: fontkasize, border: `1px solid ${headingColor}`, padding: '7px', borderRadius: '50%', margin: '5px' }}></i>HOBBIES <br /></h6>
+              <h6 style={{ color: headingColor, fontSize: fontSizeheading }}><i class="bi bi-file-music" style={{ fontSize: fontSize, border: `1px solid ${headingColor}`, padding: '7px', borderRadius: '50%', margin: '5px' }}></i>HOBBIES <br /></h6>
                  
                 {Hobbies[0].map((keys, index) => (
                   <div key={index} className="d-flex align-items-center">
@@ -193,7 +226,7 @@ const Preview116 = () => {
                       {HobbyIcons[keys.hobbies] || "🎯"} {/* Default icon if hobby not in mapping */}
                     </span>
                     {/* Render Hobby Name */}
-                    <p style={{ marginBottom: "-5px", color: fontColor, fontFamily: fontStyle, fontSize: fontkasize }}>{keys.hobbies}</p>
+                    <p style={{ marginBottom: "-5px", color: fontColor, fontFamily: fontStyle, fontSize: fontSize }}>{keys.hobbies}</p>
                   </div>
                 ))}
               </div>
@@ -202,18 +235,19 @@ const Preview116 = () => {
 
         </div>
         <div className="resume-download-section0">
-          <div style={{ fontSize: fontkasize, width: '100%' }}>
+          <div style={{ fontSize: fontSize, width: '100%' }}>
             <GoogleAd />
+            
           </div>
-          <div style={{ fontSize: fontkasize, width: '100%' }}>
+          <div style={{ fontSize: fontSize, width: '100%' }}>
             <GoogleAd />
           </div>
           <div className='downloadbuttondiv'>
-            <input type="text" placeholder="Enter your resume name" className="resume-name-input" style={{ fontSize: fontkasize, borderRadius: '5px', padding: '10px' }} onChange={(e) => setInputFields(e.target.value)} />
+            <input type="text" placeholder="Enter your resume name" className="resume-name-input" style={{ fontSize: fontSize, borderRadius: '5px', padding: '10px' }} onChange={(e) => setInputFields(e.target.value)} />
             <button onClick={handleDownloadPDF} type="btn" className="btn btn-primary ms-2 download-button">Download</button>
           </div>
           {/* Color Picker for Background Color */}
-          <div className='d-flex border fontfamilydiv' style={{ fontSize: fontkasize, marginTop: '5px', display: 'flex', flexDirection: 'row', justifyContent: 'center' }}>
+          <div className='d-flex border fontfamilydiv' style={{ fontSize: fontSize, marginTop: '5px', display: 'flex', flexDirection: 'row', justifyContent: 'center' }}>
             <input type="color" value={bgColor} onChange={(e) => setBgColor(e.target.value)} className="bg-color-picker ms-2" />
             {/* Font Style Selector */}
             <select value={fontStyle} onChange={(e) => setFontStyle(e.target.value)} className="font-style-selector ms-2">
@@ -261,14 +295,17 @@ const Preview116 = () => {
           <div className='colordiv'>
             <div>
               <span style={{ color: headingColor }}><i class="bi bi-patch-plus"></i>HS  </span>
-              <input type="number" value={headingsize} onChange={(e) => setheadingsize(Number(e.target.value))} className="bg-color-picker ms-2" />
+              <input type="number" value={fontSizeheading} onChange={(e) => setFontSizeheading(Number(e.target.value))} className="bg-color-picker ms-2" />
             </div>
             <div>
               <span style={{ color: fontColor }}><i class="bi bi-patch-plus"></i>FS  </span>
-              <input type="number" value={fontkasize} onChange={(e) => setfontkasize(Number(e.target.value))} className="bg-color-picker ms-2" />
+              <input type="number" value={fontSize} onChange={(e) => setFontSize(Number(e.target.value))} className="bg-color-picker ms-2" />
             </div>
           </div>
-          <div style={{ fontSize: fontkasize, width: '100%' }}>
+          <div id="loadingSpinner" style={{ display: "none", position: "fixed", top: "50%", left: "50%" }}>
+            <div class="spinner"></div>
+          </div>
+          <div style={{ fontSize: fontSize, width: '100%' }}>
             <GoogleAd />
           </div>
 

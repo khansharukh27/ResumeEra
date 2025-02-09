@@ -8,54 +8,97 @@ import GoogleAd from '../adFolder/GoogleAd';
 
 const Preview12 = () => {
     const [inputFields, setInputFields] = useState('resume.pdf');
-    const [bgColor, setBgColor] = useState('#F5DEB3'); // Default background color (wheat)
+    const [bgColor, setBgColor] = useState('white'); // Default background color (wheat)
     const [fontStyle, setFontStyle] = useState('Arial'); // Default font style
-    const [headingColor, setHeadingColor] = useState('black');
-    const [fontColor, setFontColor] = useState('black');
+    const [fontColor, setFontColor] = useState('#rrggbb')
+    const [headingColor, setHeadingColor] = useState('#6a8a3f')
+    // const [isDownloaded, setIsDownloaded] = useState(false);
+    const [fontSize, setFontSize] = useState(16); // Initial font size for paragraphs
+    const [fontSizeheading, setFontSizeheading] = useState(16); // Initial font size for headings
 
-    const navigate = useNavigate();
+
+    // const navigate = useNavigate();
     const personalInfo = useSelector((state) => state.reducer.personalInfo);
     const education = useSelector((state) => [state.reducer.education]);
-    const LLanguage = useSelector((state) => [state.reducer.addLanguage]);
-    const Hobbies = useSelector((state) => [state.reducer.addHobies]);
     const keyskills = useSelector((state) => [state.reducer.keySkills]);
     const work = useSelector((state) => [state.reducer.workExperience]);
-    const result = useSelector((state) => [state.reducer]);
-    console.log('reducer:-', result);
+    const Honor = useSelector((state) => [state.reducer.honorAndaward]);
+    // const Refrence = useSelector((state) => [state.reducer.addReference])
+    const SoftSkill = useSelector((state) => [state.reducer.addSoftSkills])
+    const socialMediaLink = useSelector((state) => [state.reducer.socialMediaLink]);
+    const languages = useSelector((state) => [state.reducer.addLanguage]);
+    // const Certificate = useSelector((state) => state.reducer.certificateData);
+    const Hobbies = useSelector((state) => [state.reducer.addHobies])
+    const project = useSelector((state) => [state.reducer.projectData])
+    console.log('hobbies preview 301:-', Hobbies)
+    // console.log('Certificate:-', Certificate)
+    console.log('honorand award:-', Honor)
 
     const handleDownloadPDF = async () => {
-        const element = document.getElementById('Alish_mirza1');
+        // Show loading spinner
+        const loadingSpinner = document.getElementById('loadingSpinner');
+        loadingSpinner.style.display = "block"; // Show the spinner
+
+        const element = document.getElementById('Alisha_mirza301');
         try {
-            const scale = 4; // Slightly higher resolution without excessive file size
+            const scale = 3; // Increase the scale for better resolution
             const canvas = await html2canvas(element, {
                 scale: scale,
-                useCORS: true,
-                logging: true,
+                useCORS: true, // Allows cross-origin images to be rendered correctly
+                logging: false, // Disable logging for better performance
             });
-
             const pdf = new jsPDF('p', 'mm', 'a4');
-            const imgData = canvas.toDataURL('image/jpeg', 0.75); // Use JPEG format with 75% quality for compression
+            const imgData = canvas.toDataURL('image/png');
 
-            const a4Width = 210; // A4 width in mm
-            const a4Height = 297;
-            const imgHeight = (canvas.height * a4Width) / canvas.width;
+            const imgWidth = 210; // A4 width in mm
+            const imgHeight = (canvas.height * imgWidth) / canvas.width;
 
-            pdf.addImage(imgData, 'JPEG', 0, 0, a4Width, imgHeight > a4Height ? a4Height : imgHeight, undefined, 'FAST');
+            const a4Height = 297; // A4 height in mm
+
+            // If the content is shorter than the A4 page height, center it vertically
+            let verticalOffset = 0;
+            if (imgHeight < a4Height) {
+                // Center the content vertically
+                verticalOffset = (a4Height - imgHeight) / 2;
+            }
+
+            // If content fits on one page
+            if (imgHeight <= a4Height) {
+                pdf.addImage(imgData, 'PNG', 0, verticalOffset, imgWidth, imgHeight, undefined, 'FAST');
+            } else {
+                // If content is taller than one page, split it into multiple pages
+                let offsetY = 0;
+                while (offsetY < canvas.height) {
+                    const currentHeight = Math.min(imgHeight, canvas.height - offsetY); // Handle remaining height
+                    pdf.addImage(imgData, 'PNG', 0, offsetY, imgWidth, currentHeight, undefined, 'FAST');
+                    offsetY += currentHeight;
+
+                    // If there's more content, add another page
+                    if (offsetY < canvas.height) {
+                        pdf.addPage();
+                    }
+                }
+            }
 
             const fileName = `${inputFields}.pdf`;
             pdf.save(fileName);
 
-            // Store the image data URL in localStorage
+            // Hide loading spinner once PDF is ready
+            loadingSpinner.style.display = "none"; // Hide the spinner
+
             const savedResumes = JSON.parse(localStorage.getItem('savedResumes')) || [];
             savedResumes.push(imgData);
             localStorage.setItem('savedResumes', JSON.stringify(savedResumes));
 
             alert('Your Resume is downloaded');
-            navigate('/myresume');
+            // navigate('/myresume');
         } catch (error) {
+            // Hide loading spinner if error occurs
+            loadingSpinner.style.display = "none";
             console.error('Error downloading PDF:', error);
         }
     };
+
 
     const lineStyle = {
         height: '5px',
@@ -193,6 +236,19 @@ const Preview12 = () => {
                             <span>Heading Color </span>
                             <input type="color" value={headingColor} onChange={(e) => setHeadingColor(e.target.value)} className="bg-color-picker ms-2" />
                         </div>
+                    </div>
+                    <div className='colordiv'>
+                        <div>
+                            <span style={{ color: headingColor }}><i class="bi bi-patch-plus"></i>HS  </span>
+                            <input type="number" value={fontSizeheading} onChange={(e) => setFontSizeheading(Number(e.target.value))} className="bg-color-picker ms-2" />
+                        </div>
+                        <div>
+                            <span style={{ color: fontColor }}><i class="bi bi-patch-plus"></i>FS  </span>
+                            <input type="number" value={fontSize} onChange={(e) => setFontSize(Number(e.target.value))} className="bg-color-picker ms-2" />
+                        </div>
+                    </div>
+                    <div id="loadingSpinner" style={{ display: "none", position: "fixed", top: "50%", left: "50%" }}>
+                        <div class="spinner"></div>
                     </div>
                     <GoogleAd />
                 </div>

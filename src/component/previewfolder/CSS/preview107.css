@@ -15,7 +15,20 @@
     background-color: rgb(58, 84, 109);
     
 }
-
+.imagediv107{
+    width: 80%;
+}
+.image107{
+    height: 100%;
+    width: inherit;
+}
+.profilediv107{
+    padding: 5px;
+    width: 140%;
+}
+.contactdiv107{
+    width: 70%;
+}
 .header107 p{
     color: white;
     font-size: xx-small;

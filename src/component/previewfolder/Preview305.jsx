@@ -9,61 +9,96 @@ import HobbyIcons from '../HobbyIcons';
 import GoogleAd from '../adFolder/GoogleAd';
 export default function Preview305() {
   const [inputFields, setInputFields] = useState('resume.pdf');
-  const [bgColor, setBgColor] = useState('white'); // Default background color (wheat)
-  const [fontStyle, setFontStyle] = useState('Arial'); // Default font style
-  const [fontColor, setFontColor] = useState('#rrggbb')
-  const [headingColor, setHeadingColor] = useState('#6a8a3f')
-  const [isDownloaded, setIsDownloaded] = useState(false);
+    const [bgColor, setBgColor] = useState('white'); // Default background color (wheat)
+    const [fontStyle, setFontStyle] = useState('Arial'); // Default font style
+    const [fontColor, setFontColor] = useState('#rrggbb')
+    const [headingColor, setHeadingColor] = useState('#6a8a3f')
+    // const [isDownloaded, setIsDownloaded] = useState(false);
+    const [fontSize, setFontSize] = useState(16); // Initial font size for paragraphs
+    const [fontSizeheading, setFontSizeheading] = useState(16); // Initial font size for headings
 
-  const navigate = useNavigate();
-  const personalInfo = useSelector((state) => state.reducer.personalInfo);
-  const education = useSelector((state) => [state.reducer.education]);
-  const keyskills = useSelector((state) => [state.reducer.keySkills]);
-  const work = useSelector((state) => [state.reducer.workExperience]);
-  const Honor = useSelector((state) => [state.reducer.honorAndaward]);
-  // const Refrence = useSelector((state) => [state.reducer.addReference])
-  const SoftSkill = useSelector((state) => [state.reducer.addSoftSkills])
-  const socialMediaLink = useSelector((state) => [state.reducer.socialMediaLink]);
-  const languages = useSelector((state) => [state.reducer.addLanguage]);
-  // const Certificate = useSelector((state) => state.reducer.certificateData);
-  const Hobbies = useSelector((state) => [state.reducer.addHobies])
-  const project = useSelector((state) => [state.reducer.projectData])
-  console.log('hobbies preview 304:-', Hobbies)
-  // console.log('Certificate:-', Certificate)
-  console.log('honorand award:-', Honor)
 
-  const handleDownloadPDF = async () => {
-    const element = document.getElementById('Alisha_mirza304');
-    try {
-      const scale = 5; // Increase the scale for better resolution
-      const canvas = await html2canvas(element, {
-        scale: scale,
-        useCORS: true, // Allows cross-origin images to be rendered correctly
-        logging: true, // Enable logging for debugging
-      });
-      const pdf = new jsPDF('p', 'mm', 'a4');
-      const imgData = canvas.toDataURL('image/png');
-      // Calculate the aspect ratio to fit A4
-      const imgWidth = 210; // A4 width in mm
-      const imgHeight = (canvas.height * imgWidth) / canvas.width;
-      pdf.addImage(imgData, 'PNG', 0, 0, imgWidth, imgHeight, undefined, 'FAST');
-      const fileName = `${inputFields}.pdf`;
-      pdf.save(fileName);
-      setIsDownloaded(true)
-      setTimeout(() => {
-        setIsDownloaded(false)
-      }, 4000)
-      // Store the image data URL in localStorage
-      const savedResumes = JSON.parse(localStorage.getItem('savedResumes')) || [];
-      savedResumes.push(imgData);
-      localStorage.setItem('savedResumes', JSON.stringify(savedResumes));
+    // const navigate = useNavigate();
+    const personalInfo = useSelector((state) => state.reducer.personalInfo);
+    const education = useSelector((state) => [state.reducer.education]);
+    const keyskills = useSelector((state) => [state.reducer.keySkills]);
+    const work = useSelector((state) => [state.reducer.workExperience]);
+    const Honor = useSelector((state) => [state.reducer.honorAndaward]);
+    // const Refrence = useSelector((state) => [state.reducer.addReference])
+    const SoftSkill = useSelector((state) => [state.reducer.addSoftSkills])
+    const socialMediaLink = useSelector((state) => [state.reducer.socialMediaLink]);
+    const languages = useSelector((state) => [state.reducer.addLanguage]);
+    // const Certificate = useSelector((state) => state.reducer.certificateData);
+    const Hobbies = useSelector((state) => [state.reducer.addHobies])
+    const project = useSelector((state) => [state.reducer.projectData])
+    console.log('hobbies preview 301:-', Hobbies)
+    // console.log('Certificate:-', Certificate)
+    console.log('honorand award:-', Honor)
 
-      alert('Your Resume is downloaded');
-      // navigate('/myresume');
-    } catch (error) {
-      console.error('Error downloading PDF:', error);
-    }
-  };
+    const handleDownloadPDF = async () => {
+        // Show loading spinner
+        const loadingSpinner = document.getElementById('loadingSpinner');
+        loadingSpinner.style.display = "block"; // Show the spinner
+
+        const element = document.getElementById('Alisha_mirza304');
+        try {
+            const scale = 3; // Increase the scale for better resolution
+            const canvas = await html2canvas(element, {
+                scale: scale,
+                useCORS: true, // Allows cross-origin images to be rendered correctly
+                logging: false, // Disable logging for better performance
+            });
+            const pdf = new jsPDF('p', 'mm', 'a4');
+            const imgData = canvas.toDataURL('image/png');
+
+            const imgWidth = 210; // A4 width in mm
+            const imgHeight = (canvas.height * imgWidth) / canvas.width;
+
+            const a4Height = 297; // A4 height in mm
+
+            // If the content is shorter than the A4 page height, center it vertically
+            let verticalOffset = 0;
+            if (imgHeight < a4Height) {
+                // Center the content vertically
+                verticalOffset = (a4Height - imgHeight) / 2;
+            }
+
+            // If content fits on one page
+            if (imgHeight <= a4Height) {
+                pdf.addImage(imgData, 'PNG', 0, verticalOffset, imgWidth, imgHeight, undefined, 'FAST');
+            } else {
+                // If content is taller than one page, split it into multiple pages
+                let offsetY = 0;
+                while (offsetY < canvas.height) {
+                    const currentHeight = Math.min(imgHeight, canvas.height - offsetY); // Handle remaining height
+                    pdf.addImage(imgData, 'PNG', 0, offsetY, imgWidth, currentHeight, undefined, 'FAST');
+                    offsetY += currentHeight;
+
+                    // If there's more content, add another page
+                    if (offsetY < canvas.height) {
+                        pdf.addPage();
+                    }
+                }
+            }
+
+            const fileName = `${inputFields}.pdf`;
+            pdf.save(fileName);
+
+            // Hide loading spinner once PDF is ready
+            loadingSpinner.style.display = "none"; // Hide the spinner
+
+            const savedResumes = JSON.parse(localStorage.getItem('savedResumes')) || [];
+            savedResumes.push(imgData);
+            localStorage.setItem('savedResumes', JSON.stringify(savedResumes));
+
+            alert('Your Resume is downloaded');
+            // navigate('/myresume');
+        } catch (error) {
+            // Hide loading spinner if error occurs
+            loadingSpinner.style.display = "none";
+            console.error('Error downloading PDF:', error);
+        }
+    };
 
 
   return (
@@ -85,34 +120,34 @@ export default function Preview305() {
 
           <div className='personalInfo304' style={{ backgroundColor: bgColor }}>
             <div className='namediv304' style={{backgroundColor:bgColor}}>
-              <h3 style={{ textAlign:'right', whiteSpace: 'none', fontFamily: fontStyle, color: fontColor, marginBottom: '-10px' }}>{personalInfo.firstName} {personalInfo.lastName}</h3>
+              <h3 style={{ textAlign:'right', whiteSpace: 'none', fontFamily: fontStyle, color:headingColor,fontSize:fontSizeheading, marginBottom: '-10px' }}>{personalInfo.firstName} {personalInfo.lastName}</h3>
 ``
             </div>
             < div className="contact304" style={{display:'flex',justifyContent:'end',backgroundColor:bgColor}}>
-              <div className='contactinnerdiv304' style={{ whiteSpace: 'nowrap' }}><p style={{ color: fontColor, fontFamily: fontStyle, }}>  {personalInfo.state} {personalInfo.postalCode}</p></div>
-              <div>-</div><div className='contactinnerdiv304' style={{ whiteSpace: 'nowrap' }}><p style={{ color: fontColor, fontFamily: fontStyle, }}>{personalInfo.mobileNumber}</p></div>
-              <div>-</div><div className='contactinnerdiv304' style={{ whiteSpace: 'nowrap' }}><p style={{ color: fontColor, fontFamily: fontStyle, wordBreak: 'break-all' }}>{personalInfo.email}</p></div>
+              <div className='contactinnerdiv304' style={{ whiteSpace: 'nowrap' }}><p style={{ color: fontColor, fontFamily: fontStyle,fontSize:fontSize, }}>  {personalInfo.state} {personalInfo.postalCode}</p></div>
+              <div>-</div><div className='contactinnerdiv304' style={{ whiteSpace: 'nowrap' }}><p style={{ color: fontColor, fontFamily: fontStyle,fontSize:fontSize, }}>{personalInfo.mobileNumber}</p></div>
+              <div>-</div><div className='contactinnerdiv304' style={{ whiteSpace: 'nowrap' }}><p style={{ color: fontColor, fontFamily: fontStyle,fontSize:fontSize, wordBreak: 'break-all' }}>{personalInfo.email}</p></div>
             </div>
             
             <hr className='dashed-line' />
-            <h4 style={{ color: headingColor, fontFamily: fontStyle }}>OBJECTIVE STATEMENT</h4>
-            <p className='object' style={{ fontFamily: fontStyle, color: fontColor }}>{personalInfo.object}</p>
+            <h4 style={{ fontFamily: fontStyle, color:headingColor,fontSize:fontSizeheading }}>OBJECTIVE STATEMENT</h4>
+            <p className='object' style={{ fontFamily: fontStyle, color: fontColor,fontSize:fontSize }}>{personalInfo.object}</p>
           </div>
           <hr className='dashed-line' />
           <div className="soft-skill" style={{ backgroundColor: bgColor, }}>
-            <h4 className="" style={{ color: headingColor, fontFamily: fontStyle }}>SOFT SKILL</h4>
+            <h4 className="" style={{fontFamily: fontStyle, color:headingColor,fontSize:fontSizeheading}}>SOFT SKILL</h4>
             <div className='row' style={{ gap: '16px' }}>
               {SoftSkill[0].map((keys, index) => (
                 <div key={index} className="technical-skill-item304 col-4" style={{}}>
-                  <ul style={{ fontSize: 'small', color: fontColor, fontFamily: fontStyle, marginRight: '0px', minWidth: '100px', marginBottom: '-5px' }}>
-                    <li>{keys.softSkill}</li>
+                  <ul style={{  marginRight: '0px', minWidth: '100px', marginBottom: '-5px' }}>
+                    <li style={{color: fontColor, fontFamily: fontStyle,fontSize:fontSize}}>{keys.softSkill}</li>
                   </ul>
                 </div>
               ))}
             </div>
           </div>
           <div className="technical-">
-            <h4 className="" style={{ color: headingColor, fontFamily: fontStyle }}>
+            <h4 className="" style={{fontFamily: fontStyle, color:headingColor,fontSize:fontSizeheading}}>
               TECHNICAL SKILL
             </h4>
             <div style={{ flexWrap: 'wrap', gap: '16px' }}>
@@ -126,11 +161,10 @@ export default function Preview305() {
                 >
                   {/* Skill Name */}
 
-                  <ul style={{ fontSize: 'small', color: fontColor, fontFamily: fontStyle, marginRight: '0px', minWidth: '100px', marginBottom: '-5px' }}>
+                  <ul style={{ color: fontColor, fontFamily: fontStyle,fontSize:fontSize, marginRight: '0px', minWidth: '100px', marginBottom: '-5px' }}>
                     <li
                       style={{
-                        color: fontColor,
-                        fontFamily: fontStyle,
+                        color: fontColor, fontFamily: fontStyle,fontSize:fontSize,
                         marginRight: '10px',
                         minWidth: '100px',
 
@@ -147,37 +181,37 @@ export default function Preview305() {
           <div className='firstdiv304' style={{ backgroundColor: bgColor, }}>
             <div className='me-3'>
               <div className="experience-section304">
-                <h4 className="details-title304" style={{ color: headingColor, fontFamily: fontStyle }}>
+                <h4 className="details-title304" style={{fontFamily: fontStyle, color:headingColor,fontSize:fontSizeheading}}>
                   WORK EXPERIENCE </h4>
                 {work[0].map((works, index) => (
                   <div key={index} className="employment-history304">
                     <div className="exp-inner304">
-                      <p style={{ color: fontColor, fontFamily: fontStyle, marginBottom: '-5px' }} className="employment-detail304"><b style={{ fontWeight: 500, color: fontColor }}>{works.jobtitle}</b><br />{works.organization}{work.city}</p>
+                      <p style={{ color: fontColor, fontFamily: fontStyle,fontSize:fontSize, marginBottom: '-5px' }} className="employment-detail304"><b style={{ fontWeight: 500, color: fontColor }}>{works.jobtitle}</b><br />{works.organization}{work.city}</p>
                       <div style={{ display: 'flex', justifyContent: 'space-between' }}>
-                        <p style={{ color: fontColor, fontFamily: fontStyle, marginBottom: '-5px' }} className="employment-detail304"><i>{works.startYear} - {works.endYear}</i></p>
-                        <p style={{ color: fontColor, fontFamily: fontStyle }} className='employment-detail304'>{works.aboutexperience}</p>
+                        <p style={{ color: fontColor, fontFamily: fontStyle,fontSize:fontSize, marginBottom: '-5px' }} className="employment-detail304"><i>{works.startYear} - {works.endYear}</i></p>
+                        <p style={{ color: fontColor, fontFamily: fontStyle,fontSize:fontSize }} className='employment-detail304'>{works.aboutexperience}</p>
                       </div>
                     </div>
                   </div>
                 ))}
               </div>
               <div className="education-section304 mt-1">
-                <h4 className="details-title304" style={{ color: headingColor, fontFamily: fontStyle }}>EDUCATION</h4>
+                <h4 className="details-title304" style={{fontFamily: fontStyle, color:headingColor,fontSize:fontSizeheading}}>EDUCATION</h4>
                 {education[0].map((edu, index) => (
                   <div key={index} className="education-item304">
                     <div className="certificate-item304" style={{display:'flex',justifyContent:'space-between'}}>
                       <div>
                         <p style={{
-                          color: fontColor, fontFamily: fontStyle, fontSize: 'small', fontWeight: 900,
+                          color: fontColor, fontFamily: fontStyle,fontSize:fontSize, fontWeight: 900,
                           marginBottom: '-5px'
                         }} className="employment-detail304">{edu.degree}</p>
                         <p style={{
-                          color: fontColor, fontFamily: fontStyle, fontSize: 'small', fontWeight: 900,
+                          color: fontColor, fontFamily: fontStyle,fontSize:fontSize, fontWeight: 900,
                           marginBottom: '-5px'
                         }} className="employment-detail304"> {edu.university} </p>
                       </div>
                       <div>
-                        <p style={{ color: fontColor, fontFamily: fontStyle, marginBottom: '-5px' }}
+                        <p style={{ color: fontColor, fontFamily: fontStyle,fontSize:fontSize, marginBottom: '-5px' }}
                           className="employment-detail304">{edu.startYear}-{edu.endYear}</p>
                       </div>
                     </div>
@@ -189,7 +223,7 @@ export default function Preview305() {
               </div>
               <div className="">
               <div className='d-flex' style={{ marginBottom: '5px' }}>
-                <h4 style={{ color: headingColor, marginTop: '10px' }}>LANGUAGE</h4>
+                <h4 style={{ color: headingColor,fontSize:fontSizeheading,fontFamily:fontStyle, marginTop: '10px' }}>LANGUAGE</h4>
               </div>
               {languages[0].reduce((result, _, index, array) => {
                 if (index % 2 === 0) result.push(array.slice(index, index + 2));
@@ -203,7 +237,7 @@ export default function Preview305() {
                         className="col-6  justify-content-between"
                         style={{ paddingLeft: "10px", paddingRight: "10px" }}
                       >
-                        <p className='language' style={{ color: fontColor, fontFamily: fontStyle }}>
+                        <p className='language' style={{ color: fontColor, fontFamily: fontStyle,fontSize:fontSize }}>
                           {keys.language}
                         </p>
                         <div
@@ -233,14 +267,14 @@ export default function Preview305() {
             </div>
             <div className=''>
               <div className="technical-skills-title304 mt-1">
-                <h4 className="" style={{ color: headingColor, fontFamily: fontStyle }}>
+                <h4 className="" style={{fontFamily: fontStyle, color:headingColor,fontSize:fontSizeheading}}>
                   INTEREST
                 </h4>
                 <div style={{ display: 'flex', flexWrap: 'wrap', gap: '16px' }}>
                   {Hobbies && Hobbies[0].map((keys, index) => (
                     <div key={index} className="d-flex align-items-center">
                       <ul style={{ fontSize: 'small', color: fontColor, fontFamily: fontStyle, marginRight: '0px', minWidth: '100px', marginBottom: '-5px' }}>
-                        <li style={{ marginBottom: "-5px", color: fontColor, fontFamily: fontStyle }}>
+                        <li style={{ marginBottom: "-5px", color: fontColor, fontFamily: fontStyle,fontSize:fontSize }}>
 
                           {/* <span style={{ marginRight: "10px", fontSize: "20px" }}>
                                                         {HobbyIcons[keys.hobbies] || "🎯"} 
@@ -310,6 +344,19 @@ export default function Preview305() {
               <span>Heading Color </span>
               <input type="color" value={headingColor} onChange={(e) => setHeadingColor(e.target.value)} className="bg-color-picker ms-2" />
             </div>
+          </div>
+          <div className='colordiv'>
+            <div>
+              <span style={{ color: headingColor }}><i class="bi bi-patch-plus"></i>HS  </span>
+              <input type="number" value={fontSizeheading} onChange={(e) => setFontSizeheading(Number(e.target.value))} className="bg-color-picker ms-2" />
+            </div>
+            <div>
+              <span style={{ color: fontColor }}><i class="bi bi-patch-plus"></i>FS  </span>
+              <input type="number" value={fontSize} onChange={(e) => setFontSize(Number(e.target.value))} className="bg-color-picker ms-2" />
+            </div>
+          </div>
+          <div id="loadingSpinner" style={{ display: "none", position: "fixed", top: "50%", left: "50%" }}>
+            <div class="spinner"></div>
           </div>
           <div style={{ width: '100%' }}>
             <GoogleAd />

@@ -10,46 +10,91 @@ const Preview107 = () => {
     const [inputFields, setInputFields] = useState('resume.pdf');
     const [bgColor, setBgColor] = useState('white'); // Default background color (wheat)
     const [fontStyle, setFontStyle] = useState('Arial'); // Default font style
-    const [fontColor, setFontColor] = useState('#rrggbb');
-    const [headingColor, setHeadingColor] = useState('#rrggbb');
-    const navigate = useNavigate();
+    const [fontColor, setFontColor] = useState('#rrggbb')
+    const [headingColor, setHeadingColor] = useState('#6a8a3f')
+    // const [isDownloaded, setIsDownloaded] = useState(false);
+    const [fontSize, setFontSize] = useState(16); // Initial font size for paragraphs
+    const [fontSizeheading, setFontSizeheading] = useState(16); // Initial font size for headings
+
+
+    // const navigate = useNavigate();
     const personalInfo = useSelector((state) => state.reducer.personalInfo);
     const education = useSelector((state) => [state.reducer.education]);
     const keyskills = useSelector((state) => [state.reducer.keySkills]);
     const work = useSelector((state) => [state.reducer.workExperience]);
-    // const Honor = useSelector((state) => [state.reducer.honorAndaward]);
-    // const Refrence = useSelector((state) => [state.reducer.addReference]);
-    const SoftSkill = useSelector((state) => [state.reducer.addSoftSkills]);
+    const Honor = useSelector((state) => [state.reducer.honorAndaward]);
+    // const Refrence = useSelector((state) => [state.reducer.addReference])
+    const SoftSkill = useSelector((state) => [state.reducer.addSoftSkills])
     const socialMediaLink = useSelector((state) => [state.reducer.socialMediaLink]);
     const languages = useSelector((state) => [state.reducer.addLanguage]);
-    const hobbies = useSelector((state) => [state.reducer.addHobies])
-    const certi = useSelector((state) => [state.reducer.certificateData[0]])
-    console.log('certificate:-', certi);
-    console.log('softskill:-', SoftSkill);
+    const certi = useSelector((state) => state.reducer.certificateData);
+    const Hobbies = useSelector((state) => [state.reducer.addHobies])
+    const project = useSelector((state) => [state.reducer.projectData])
+    console.log('hobbies preview 301:-', Hobbies)
+    // console.log('Certificate:-', Certificate)
+    console.log('honorand award:-', Honor)
+
     const handleDownloadPDF = async () => {
-        const element = document.getElementById('Alisha_mirza101');
+        // Show loading spinner
+        const loadingSpinner = document.getElementById('loadingSpinner');
+        loadingSpinner.style.display = "block"; // Show the spinner
+
+        const element = document.getElementById('Alisha_mirza107');
         try {
-            const scale = 5; // Increase the scale for better resolution
+            const scale = 3; // Increase the scale for better resolution
             const canvas = await html2canvas(element, {
                 scale: scale,
                 useCORS: true, // Allows cross-origin images to be rendered correctly
-                logging: true, // Enable logging for debugging
+                logging: false, // Disable logging for better performance
             });
             const pdf = new jsPDF('p', 'mm', 'a4');
             const imgData = canvas.toDataURL('image/png');
-            // Calculate the aspect ratio to fit A4
+
             const imgWidth = 210; // A4 width in mm
             const imgHeight = (canvas.height * imgWidth) / canvas.width;
-            pdf.addImage(imgData, 'PNG', 0, 0, imgWidth, imgHeight, undefined, 'FAST');
+
+            const a4Height = 297; // A4 height in mm
+
+            // If the content is shorter than the A4 page height, center it vertically
+            let verticalOffset = 0;
+            if (imgHeight < a4Height) {
+                // Center the content vertically
+                verticalOffset = (a4Height - imgHeight) / 2;
+            }
+
+            // If content fits on one page
+            if (imgHeight <= a4Height) {
+                pdf.addImage(imgData, 'PNG', 0, verticalOffset, imgWidth, imgHeight, undefined, 'FAST');
+            } else {
+                // If content is taller than one page, split it into multiple pages
+                let offsetY = 0;
+                while (offsetY < canvas.height) {
+                    const currentHeight = Math.min(imgHeight, canvas.height - offsetY); // Handle remaining height
+                    pdf.addImage(imgData, 'PNG', 0, offsetY, imgWidth, currentHeight, undefined, 'FAST');
+                    offsetY += currentHeight;
+
+                    // If there's more content, add another page
+                    if (offsetY < canvas.height) {
+                        pdf.addPage();
+                    }
+                }
+            }
+
             const fileName = `${inputFields}.pdf`;
             pdf.save(fileName);
-            // Store the image data URL in localStorage
+
+            // Hide loading spinner once PDF is ready
+            loadingSpinner.style.display = "none"; // Hide the spinner
+
             const savedResumes = JSON.parse(localStorage.getItem('savedResumes')) || [];
             savedResumes.push(imgData);
             localStorage.setItem('savedResumes', JSON.stringify(savedResumes));
+
             alert('Your Resume is downloaded');
-            navigate('/myresume');
+            // navigate('/myresume');
         } catch (error) {
+            // Hide loading spinner if error occurs
+            loadingSpinner.style.display = "none";
             console.error('Error downloading PDF:', error);
         }
     };
@@ -71,69 +116,66 @@ const Preview107 = () => {
             </header>
             <div style={{ width: '100%' }}><GoogleAd /></div>
             <div className="main107">
-                <div className="preview107">
+                <div className="preview107"   id="Alisha_mirza107" style={{backgroundColor:bgColor}}>
                     <div className="header107 " style={{}}>
                         <div className="imagediv107">
                             <img className="image107" src={personalInfo.image} style={{}} alt="doctore resume" />
                         </div>
                         <div className="profilediv107">
-                            <h3 style={{ whiteSpace: 'none', }}>{personalInfo.firstName} {personalInfo.lastName}</h3>
-                            <p style={{ color: 'lightgray', whiteSpace: 'none', fontWeight: 600, }}>{work[0][0].jobtitle}</p>
-                            <p style={{ fontSize: '' }}>{personalInfo.object}</p>
+                            <h3 style={{ whiteSpace: 'none',color:headingColor,fontFamily:fontStyle,fontSize:fontSizeheading}}>{personalInfo.firstName} {personalInfo.lastName}</h3>
+                            <p style={{color:fontColor,fontFamily:fontStyle,fontSize:fontSize, whiteSpace: 'none', fontWeight: 600, }}>{work[0][0].jobtitle}</p>
+                            <p style={{color:fontColor,fontFamily:fontStyle,fontSize:fontSize}}>{personalInfo.object}</p>
                         </div>
                         <div className="contactdiv107">
                             <div className="d-flex">
                                 <div><i className="bi bi-telephone-fill me-2 ms-2" /></div>
-                                <div><p style={{}}>{personalInfo.mobileNumber}</p></div>
+                                <div><p style={{color:fontColor,fontFamily:fontStyle,fontSize:fontSize}}>{personalInfo.mobileNumber}</p></div>
                             </div>
                             <div className="d-flex">
                                 <div><i className="bi bi-envelope me-2 ms-2" /></div>
-                                <div><p style={{ wordBreak: 'break-all' }}>{personalInfo.email}</p></div>
+                                <div><p style={{color:fontColor,fontFamily:fontStyle,fontSize:fontSize, wordBreak: 'break-all' }}>{personalInfo.email}</p></div>
                             </div>
                             <div className="d-flex">
                                 <div><i className="bi bi-geo-alt-fill me-2 ms-2" /></div>
-                                <div><p className="mt-3" style={{ wordBreak: 'break-all' }}>{personalInfo.city} {personalInfo.state} {personalInfo.postalCode}</p></div>
+                                <div><p className="mt-3" style={{color:fontColor,fontFamily:fontStyle,fontSize:fontSize, wordBreak: 'break-all' }}>{personalInfo.city} {personalInfo.state} {personalInfo.postalCode}</p></div>
                             </div>
                             <div className="d-flex">
                                 <div><i class="bi bi-github ms-2 me-2" /></div>
-                                <div><p>{socialMediaLink[0].github}</p></div>
+                                <div><p style={{color:fontColor,fontFamily:fontStyle,fontSize:fontSize}}>{socialMediaLink[0].github}</p></div>
                             </div>
                         </div>
                     </div>
                     <div className="d-flex mt-4" >
                         <div style={{ width: '50%' }} className="me-4">
-                            <h6 className='heading107'>SOFT SKILLS <br /><hr style={{ width: 'inherite' }} /></h6>
-                            <ul className="custom-list" style={{ listStyleType: 'none' }}>
+                            <h6 className='heading107' style={{color:headingColor,fontFamily:fontStyle,fontSize:fontSizeheading}}>SOFT SKILLS <br /><hr style={{ width: 'inherite' }} /></h6>
+                            <ul className="custom-list" style={{ listStyleType: 'none', }}>
                                 {SoftSkill && SoftSkill.length > 0 && SoftSkill[0].map((soft, index) => (
                                     <li key={index} className="d-flex " style={{ marginLeft: '-50px' }}>
-                                        <div><span style={{ color: "green", marginRight: "8px" }}>✔</span></div>
-                                        <div>{soft.softSkill}</div>
+                                        <div><span style={{ color:fontColor,fontFamily:fontStyle,fontSize:fontSize, marginRight: "8px" }}>✔</span></div>
+                                        <p style={{color:fontColor,fontFamily:fontStyle,fontSize:fontSize}}>{soft.softSkill}</p>
                                     </li>
                                 ))}
                             </ul>
                             <div>
-                                <h6 className='heading107'>HARD SKILLS <br /><hr style={{ width: 'inherite' }} /></h6>
-
+                                <h6 className='heading107' style={{color:headingColor,fontFamily:fontStyle,fontSize:fontSizeheading}}>HARD SKILLS <br /><hr style={{ width: 'inherite' }} /></h6>
                                 <ul className="custom-list" style={{ listStyleType: 'none' }}>
                                     {keyskills && keyskills.length > 0 && keyskills[0].map((hard, index) => (
                                         <li key={index} className="d-flex " style={{ marginLeft: '-50px' }}>
-                                            <div><span style={{ color: "green", marginRight: "8px" }}>✔</span></div>
-                                            <div>{hard.keyskills}</div>
+                                            <div><span style={{ marginRight: "8px",color:fontColor,fontFamily:fontStyle,fontSize:fontSize }}>✔</span></div>
+                                            <div style={{color:fontColor,fontFamily:fontStyle,fontSize:fontSize}}>{hard.keyskills}</div>
 
                                         </li>
                                     ))}
                                 </ul>
                             </div>
-
-
                             <div>
-                                <h6 className="heading107">LANGUAGE <br /><hr style={{ width: 'inherite' }} /></h6>
+                                <h6 className="heading107" style={{color:headingColor,fontFamily:fontStyle,fontSize:fontSizeheading}}>LANGUAGE <br /><hr style={{ width: 'inherite' }} /></h6>
 
                                 <ul className="custom-list" style={{ listStyleType: 'none', padding: 0 }}>
                                     {languages && languages.length > 0 && languages[0].map((hard, index) => (
                                         <li key={index} style={{ marginBottom: '8px' }}>
                                             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
-                                                <span>{hard.language}</span>
+                                                <span style={{color:fontColor,fontFamily:fontStyle,fontSize:fontSize}}>{hard.language}</span>
                                                 <div
                                                     style={{
                                                         height: '8px', /* Line thickness */
@@ -159,13 +201,13 @@ const Preview107 = () => {
                                 </ul>
                             </div>
                             <div>
-                                <h6 className='heading107'>INTEREST <br /><hr style={{ width: 'inherite' }} /></h6>
+                                <h6 className='heading107' style={{color:headingColor,fontFamily:fontStyle,fontSize:fontSizeheading}}>INTEREST <br /><hr style={{ width: 'inherite' }} /></h6>
 
                                 <ul className="custom-list" style={{ listStyleType: 'none' }}>
-                                    {hobbies && hobbies.length > 0 && hobbies[0].map((hard, index) => (
+                                    {Hobbies && Hobbies.length > 0 && Hobbies[0].map((hard, index) => (
                                         <li key={index} className="d-flex " style={{ marginLeft: '-50px' }}>
-                                            <div><span style={{ color: "green", marginRight: "10px" }}>✔</span></div>
-                                            <div>{hard.hobbies}</div>
+                                            <div><span style={{ color: "green", marginRight: "10px",color:fontColor,fontFamily:fontStyle,fontSize:fontSize }}>✔</span></div>
+                                            <div><p style={{color:fontColor,fontFamily:fontStyle,fontSize:fontSize}}>{hard.hobbies}</p></div>
                                         </li>
                                     ))}
                                 </ul>
@@ -173,17 +215,17 @@ const Preview107 = () => {
                         </div>
                         <div style={{ width: '50%' }} className="">
                             <div className=" ">
-                                <h6 className='heading107'>EDUCATION <br /><hr style={{ width: '100%' }} /></h6>
+                                <h6 className='heading107' style={{color:headingColor,fontFamily:fontStyle,fontSize:fontSizeheading}}>EDUCATION <br /><hr style={{ width: '100%' }} /></h6>
                                 {education[0].map((edu, index) => (
                                     <div key={index} className="education-item107">
                                         <div className="d-flex justify-content-between">
                                             <div>
-                                                <p className="employment-detail107 me-3" style={{ whiteSpace: 'none' }}>{edu.startYear}-{edu.endYear}</p>
+                                                <p className="employment-detail107 me-3" style={{ whiteSpace: 'none',color:fontColor,fontFamily:fontStyle,fontSize:fontSize }}>{edu.startYear}-{edu.endYear}</p>
                                             </div>
                                             <div>
-                                                <p className="employment-detail107">{edu.degree}</p>
-                                                <p className="employment-detail107 ">{edu.university}</p>
-                                                <p>{edu.city}</p>
+                                                <p className="employment-detail107" style={{color:fontColor,fontFamily:fontStyle,fontSize:fontSize}}>{edu.degree}</p>
+                                                <p style={{color:fontColor,fontFamily:fontStyle,fontSize:fontSize}} className="employment-detail107 ">{edu.university}</p>
+                                                <p style={{color:fontColor,fontFamily:fontStyle,fontSize:fontSize}}>{edu.city}</p>
                                             </div>
                                         </div>
                                     </div>
@@ -191,17 +233,17 @@ const Preview107 = () => {
                             </div>
 
                             <div className=" ">
-                                <h6 className='heading107'>CERTIFICATION <br /><hr style={{ width: 'inherite' }} /></h6>
+                                <h6 className='heading107' style={{color:headingColor,fontFamily:fontStyle,fontSize:fontSizeheading}}>CERTIFICATION <br /><hr style={{ width: 'inherite' }} /></h6>
                                 {certi.map((edu, index) => (
                                     <div key={index} className="">
                                         <div className="d-flex justify-content-between">
                                             <div>
-                                                <p className=" me-3" style={{ whiteSpace: 'none' }}>{edu.issueDate}</p>
+                                                <p className=" me-3" style={{ whiteSpace: 'none',color:fontColor,fontFamily:fontStyle,fontSize:fontSize }}>{edu.issueDate}</p>
                                             </div>
                                             <div>
-                                                <p className="">{edu.organization}</p>
-                                                <p className=" ">{edu.description}</p>
-                                                <p>{edu.city}</p>
+                                                <p style={{color:fontColor,fontFamily:fontStyle,fontSize:fontSize}} className="">{edu.organization}</p>
+                                                <p style={{color:fontColor,fontFamily:fontStyle,fontSize:fontSize}} className=" ">{edu.description}</p>
+                                                <p style={{color:fontColor,fontFamily:fontStyle,fontSize:fontSize}}>{edu.city}</p>
                                             </div>
                                         </div>
                                     </div>
@@ -265,12 +307,23 @@ const Preview107 = () => {
                             <input type="color" value={headingColor} onChange={(e) => setHeadingColor(e.target.value)} className="bg-color-picker ms-2" />
                         </div>
                     </div>
+                    <div className='colordiv'>
+                        <div>
+                            <span style={{ color: headingColor }}><i class="bi bi-patch-plus"></i>HS  </span>
+                            <input type="number" value={fontSizeheading} onChange={(e) => setFontSizeheading(Number(e.target.value))} className="bg-color-picker ms-2" />
+                        </div>
+                        <div>
+                            <span style={{ color: fontColor }}><i class="bi bi-patch-plus"></i>FS  </span>
+                            <input type="number" value={fontSize} onChange={(e) => setFontSize(Number(e.target.value))} className="bg-color-picker ms-2" />
+                        </div>
+                    </div>
+                    <div id="loadingSpinner" style={{ display: "none", position: "fixed", top: "50%", left: "50%" }}>
+                        <div class="spinner"></div>
+                    </div>
                     <div style={{ width: '100%' }}>
                         <GoogleAd />
                     </div>
-
                 </div>
-
             </div>
             <div className="w-100"><GoogleAd /></div>
         </div>

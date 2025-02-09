@@ -1406,8 +1406,14 @@ const ImportantPostLink = () => {
       src: 'https://i.postimg.cc/BQzpQJ4W/Resume-Format-for-Freshers-example.jpg',
       alt: " Resume Format for Freshers",
     },
+    {
+      path: "/what-is-a-functional-resume",
+      title: "What is a Functional Resume and How Does it Work? | Resumeera",
+      src: 'https://i.postimg.cc/0Qc3h1nf/functional-resume.jpg',
+      alt: " What is a Functional Resume",
+    },
   ];
-  
+ 
   
   
   // Filter posts based on search term

@@ -1,42 +1,75 @@
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import { Helmet } from 'react-helmet';
 import Resume_Formatting_Real_Estate_Agent from '../../image/image_for_link/Resume Formatting Tips for Real Estate Agents.jpg'
 import ShareButtons from '../shareButton/ShareButtons';
 import CallToAction from '../CallToAction';
 import RandomeArticleToBlogCareer from '../RandomeArticleToBlogCareer';
 import AuthorCard from '../AuthorCard';
-export default function Resume_Formatting_Real_Estate_Agents() {
+import WelcomeNotes from '../WelcomeNotes';
+import { useNavigate } from 'react-router-dom';
+import { useDispatch } from 'react-redux';
+import { templatePage } from '../../Redux/action';
+import ResumeEraHeading from '../ResumeEraHeading';
+import GoogleAd from '../adFolder/GoogleAd';
+export default function Resume_Formatting_Real_Estate_Agents(prop) {
     const ArticleUrl =
             "https://resumeera.xyz/Best-Resume-Formatting-Tips-for-Real-Estate-Agents";
           const ArticleTitle = "Best Resume Formatting Tips for Real Estate Agents";
           useEffect(() => {
             window.scrollTo(0, 0);
           }, []);
+          const [hoveredImage, setHoveredImage] = useState();
+  const { techImages } = prop
+  const navigate = useNavigate();
+  const title = 'Best Resume Formatting Tips for Real Estate Agents'
+  const publishDate = '2025-01-11'
+  const dispatch = useDispatch();
+
+  const selectedImageId = 110;//chronoligical resume
+  const selectedimage = techImages.find((image) => image.id === selectedImageId)
+  const selectedImageId2 = 111;//functional resume
+  const selectedimage2 = techImages.find((image) => image.id === selectedImageId2)
+  const selectedImageId3 = 112; //minimalistik
+  const selectedimage3 = techImages.find((image) => image.id === selectedImageId3)
+  const selectedImageId4 = 109 //creative
+  const selectedimage4 = techImages.find((image) => image.id === selectedImageId4)
+  const selectedImageId5 = 116 //creative
+  const selectedimage5 = techImages.find((image) => image.id === selectedImageId5)
+  const selectedImageId6 = 107 // infografic resume
+  const selectedimage6 = techImages.find((image) => image.id === selectedImageId6)
+  console.log('hoveredImage:-,', hoveredImage)
+  const handleClick = (e, imageId) => {
+    e.preventDefault();
+    const path = `/techmain/${imageId}`;
+    navigate(path);
+    dispatch(templatePage(hoveredImage));
+  };
+
 return (
     <div>
         <Helmet>
-            <title>{ArticleTitle}</title>
+            <title>'Best Resume Formatting Tips for Real Estate Agents'</title>
             <meta name="description" content="Discover the best resume formatting tips for real estate agents to make your application stand out. Learn how to highlight your skills, experience, and qualifications effectively." />
             <meta name="keywords" content="resume formatting, real estate agents, resume tips, real estate resume, job application, resume writing" />
-            <link rel="canonical" href={ArticleUrl} />
-            <meta property="og:title" content={ArticleTitle} />
+            <link rel="canonical" href= 'https://resumeera.xyz/Best-Resume-Formatting-Tips-for-Real-Estate-Agents'/>
+            <meta property="og:title" content='Best Resume Formatting Tips for Real Estate Agents' />
             <meta property="og:description" content="Discover the best resume formatting tips for real estate agents to make your application stand out. Learn how to highlight your skills, experience, and qualifications effectively." />
-            <meta property="og:url" content={ArticleUrl} />
+            <meta property="og:url" content='https://resumeera.xyz/Best-Resume-Formatting-Tips-for-Real-Estate-Agents' />
             <meta property="og:type" content="article" />
             <meta name="twitter:card" content="summary_large_image" />
-            <meta name="twitter:title" content={ArticleTitle} />
+            <meta name="twitter:title" content='Best Resume Formatting Tips for Real Estate Agents' />
             <meta name="twitter:description" content="Discover the best resume formatting tips for real estate agents to make your application stand out. Learn how to highlight your skills, experience, and qualifications effectively." />
             <script type="application/ld+json">
                 {`
                 {
                     "@context": "https://schema.org",
                     "@type": "Article",
-                    "headline": "${ArticleTitle}",
+                    "headline": "$'Best Resume Formatting Tips for Real Estate Agents'",
                     "description": "Discover the best resume formatting tips for real estate agents to make your application stand out. Learn how to highlight your skills, experience, and qualifications effectively.",
-                    "url": "${ArticleUrl}",
+                    "url": "$'https://resumeera.xyz/Best-Resume-Formatting-Tips-for-Real-Estate-Agents'",
                     "mainEntityOfPage": {
                         "@type": "WebPage",
-                        "@id": "${ArticleUrl}"
+                        "@id": "$'https://resumeera.xyz/Best-Resume-Formatting-Tips-for-Real-Estate-Agents'"
                     },
                     "author": {
                         "@type": "Person",
@@ -56,34 +89,21 @@ return (
                 `}
             </script>
         </Helmet>
+        <ResumeEraHeading title ={title} publishDate={publishDate}/>
         <article className='aboutResumeEra'>
         <section>
-            <h1>Best Resume Formatting Tips for Real Estate Agents</h1>
-            <div className="date-author-container">
-          <img
-            src="https://resumeera.xyz/static/media/best_logo.895bb22edf6c08600c86.webp"
-            alt="ResumeEra Logo"
-            className="author-logo"
-            style={{ width: "50px", height: "50px" }}
-          />
-          <small className="author-details">
-            ✍️ By the <span className="author-highlight">ResumeEra Team</span> |
-            Published:{""}
-            <span className="author-highlight">December 30, 2024</span> | ⏱️{" "}
-            <span className="author-highlight">8 min read</span>
-          </small>
-        </div>
+           
         <figure>
             <img style={{height:'auto'}} src={Resume_Formatting_Real_Estate_Agent} alt="Best Resume Formatting Tips for Real Estate Agents" />
             <figcaption>Resume Formatting Tips for Real Estate Agents</figcaption>
         </figure>
             <p>A well-crafted resume is the first step to securing your dream role as a real estate agent. Whether you're an experienced realtor or a fresh graduate entering the field, using the right <strong>resume formatting</strong> ensures that your skills, experience, and qualifications stand out. This guide will help you design a polished resume tailored to the real estate industry, providing you with an edge over the competition and positioning you as a top candidate. ✨✨✨</p>
-        </section>
+        </section><div><GoogleAd/></div>
         
         <section>
             <h2>Why Resume Formatting Matters</h2>
             <p>In a competitive field like real estate, recruiters often sift through dozens, if not hundreds, of resumes. Effective <strong>resume formatting</strong> ensures that your application is not only visually appealing but also easy to read, making it more likely to grab attention. A good format showcases your achievements and highlights your ability to excel in a dynamic environment. Additionally, it communicates professionalism and attention to detail—qualities that are critical for success in real estate. 🌟🌟🌟</p>
-        </section>
+        </section><div><GoogleAd/></div><div><GoogleAd/></div>
         
         <section>
             <h2>Key Components of a Real Estate Agent Resume</h2>
@@ -134,7 +154,7 @@ return (
                 <li>Volunteer Experience</li>
                 <li>Personal Projects (e.g., developing a real estate blog or podcast) 🌟🌟🌟</li>
             </ul>
-        </section>
+        </section><div><GoogleAd/></div>
         
         <section>
             <h2>Tips for Effective Resume Formatting</h2>
@@ -166,7 +186,7 @@ return (
             
             <h3>6. Proofread Thoroughly</h3>
             <p>Even minor errors can leave a poor impression. Double-check your resume for spelling, grammar, and punctuation mistakes. Consider asking a trusted colleague or mentor to review it as well. An error-free resume reflects professionalism and attention to detail. ✅✅✅</p>
-        </section>
+        </section><div><GoogleAd/></div>
         
         <section>
             <h2>Common Mistakes in Resume Formatting</h2>
@@ -186,7 +206,7 @@ return (
             
             <h3>5. Including Irrelevant Information</h3>
             <p>Avoid listing hobbies or personal details unless they directly relate to the job. Focus on experiences and skills that enhance your candidacy. 🎯🎯🎯</p>
-        </section>
+        </section><div><GoogleAd/></div>
         
         <section>
             <h2>Sample Real Estate Agent Resume Template</h2>
@@ -225,12 +245,12 @@ return (
                     - [Award Name, Year, Organization]<br />
                 </code>
             </pre>
-        </section>
+        </section><div><GoogleAd/></div>
         
         <section>
             <h2>Conclusion</h2>
             <p>Effective <strong>resume formatting</strong> is essential for real estate agents to stand out in today’s competitive job market. By following the tips outlined in this guide, you can create a resume that highlights your skills and achievements, aligns with industry standards, and catches the recruiter’s eye. Remember, a well-structured resume is your first opportunity to make a lasting impression—make it count! A compelling and tailored resume not only reflects your professionalism but also communicates your value as a dedicated and accomplished real estate professional. 🌟✨💼</p>
-        </section>
+        </section><div><GoogleAd/></div>
         <section>
             <h2>Frequently Asked Questions (FAQ)</h2>
             
@@ -248,22 +268,25 @@ return (
             
             <h3>5. How do I list my real estate license on my resume?</h3>
             <p>Include your real estate license in the certifications section of your resume. Mention the state where you are licensed and any additional relevant certifications you hold.</p>
-        </section>
-        </article>
-        <section>
-            <div>
-                <AuthorCard/>
-            </div>
-            <div>
-                <RandomeArticleToBlogCareer/>
-            </div>
-            <div>
-                <CallToAction />
-            </div>
-            <div className="stickyShare">
-                <ShareButtons url={ArticleUrl} title={ArticleTitle} />
-            </div>
-      </section>
+        </section><div><GoogleAd/></div>
+        <div>
+          <WelcomeNotes />
+          <RandomeArticleToBlogCareer />
+        </div>
+      </article>
+      <div><GoogleAd /></div>
+      <div><GoogleAd /></div>
+      <section>
+        <div>
+          <AuthorCard />
+        </div>
+        <div>
+          <CallToAction />
+        </div>
+        <div className="stickyShare">
+          <ShareButtons url={ArticleUrl} title={ArticleTitle} />
+        </div>
+      </section><div><GoogleAd/></div>
     </div>
 )
 }

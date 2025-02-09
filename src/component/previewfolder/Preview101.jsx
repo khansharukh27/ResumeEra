@@ -12,46 +12,94 @@ const Preview101 = () => {
     const [bgColor, setBgColor] = useState('white'); // Default background color (wheat)
     const [fontStyle, setFontStyle] = useState('Arial'); // Default font style
     const [fontColor, setFontColor] = useState('#rrggbb')
-    const [headingColor, setHeadingColor] = useState('#rrggbb')
-    const navigate = useNavigate();
+    const [headingColor, setHeadingColor] = useState('#6a8a3f')
+    // const [isDownloaded, setIsDownloaded] = useState(false);
+    const [fontSize, setFontSize] = useState(16); // Initial font size for paragraphs
+    const [fontSizeheading, setFontSizeheading] = useState(16); // Initial font size for headings
+
+
+    // const navigate = useNavigate();
     const personalInfo = useSelector((state) => state.reducer.personalInfo);
-    const education = useSelector((state) => [state.reducer.education[0]]);
-    const keyskills = useSelector((state) => [state.reducer.keySkills[0]]);
-    const work = useSelector((state) => [state.reducer.workExperience[0]]);
-    const Honor = useSelector((state) => [state.reducer.honorAndaward[0]]);
-    const Refrence = useSelector((state) => [state.reducer.addReference[0]])
-    const SoftSkill = useSelector((state) => [state.reducer.addSoftSkills[0]])
-    console.log('refrences:-', personalInfo)
+    const education = useSelector((state) => [state.reducer.education]);
+    const keyskills = useSelector((state) => [state.reducer.keySkills]);
+    const work = useSelector((state) => [state.reducer.workExperience]);
+    const Honor = useSelector((state) => [state.reducer.honorAndaward]);
+    const Refrence = useSelector((state) => [state.reducer.addReference])
+    const SoftSkill = useSelector((state) => [state.reducer.addSoftSkills])
+    const socialMediaLink = useSelector((state) => [state.reducer.socialMediaLink]);
+    const languages = useSelector((state) => [state.reducer.addLanguage]);
+    // const Certificate = useSelector((state) => state.reducer.certificateData);
+    const Hobbies = useSelector((state) => [state.reducer.addHobies])
+    const project = useSelector((state) => [state.reducer.projectData])
+    console.log('hobbies preview 301:-', Hobbies)
+    // console.log('Certificate:-', Certificate)
     console.log('honorand award:-', Honor)
+
     const handleDownloadPDF = async () => {
-        const element = document.getElementById('Alisha_mirza101');
+        // Show loading spinner
+        const loadingSpinner = document.getElementById('loadingSpinner');
+        loadingSpinner.style.display = "block"; // Show the spinner
+
+        const element = document.getElementById('Alisha_mirza301');
         try {
-            const scale = 5; // Increase the scale for better resolution
+            const scale = 3; // Increase the scale for better resolution
             const canvas = await html2canvas(element, {
                 scale: scale,
                 useCORS: true, // Allows cross-origin images to be rendered correctly
-                logging: true, // Enable logging for debugging
+                logging: false, // Disable logging for better performance
             });
             const pdf = new jsPDF('p', 'mm', 'a4');
             const imgData = canvas.toDataURL('image/png');
-            // Calculate the aspect ratio to fit A4
+
             const imgWidth = 210; // A4 width in mm
             const imgHeight = (canvas.height * imgWidth) / canvas.width;
-            pdf.addImage(imgData, 'PNG', 0, 0, imgWidth, imgHeight, undefined, 'FAST');
+
+            const a4Height = 297; // A4 height in mm
+
+            // If the content is shorter than the A4 page height, center it vertically
+            let verticalOffset = 0;
+            if (imgHeight < a4Height) {
+                // Center the content vertically
+                verticalOffset = (a4Height - imgHeight) / 2;
+            }
+
+            // If content fits on one page
+            if (imgHeight <= a4Height) {
+                pdf.addImage(imgData, 'PNG', 0, verticalOffset, imgWidth, imgHeight, undefined, 'FAST');
+            } else {
+                // If content is taller than one page, split it into multiple pages
+                let offsetY = 0;
+                while (offsetY < canvas.height) {
+                    const currentHeight = Math.min(imgHeight, canvas.height - offsetY); // Handle remaining height
+                    pdf.addImage(imgData, 'PNG', 0, offsetY, imgWidth, currentHeight, undefined, 'FAST');
+                    offsetY += currentHeight;
+
+                    // If there's more content, add another page
+                    if (offsetY < canvas.height) {
+                        pdf.addPage();
+                    }
+                }
+            }
+
             const fileName = `${inputFields}.pdf`;
             pdf.save(fileName);
 
-            // Store the image data URL in localStorage
+            // Hide loading spinner once PDF is ready
+            loadingSpinner.style.display = "none"; // Hide the spinner
+
             const savedResumes = JSON.parse(localStorage.getItem('savedResumes')) || [];
             savedResumes.push(imgData);
             localStorage.setItem('savedResumes', JSON.stringify(savedResumes));
 
             alert('Your Resume is downloaded');
-            navigate('/myresume');
+            // navigate('/myresume');
         } catch (error) {
+            // Hide loading spinner if error occurs
+            loadingSpinner.style.display = "none";
             console.error('Error downloading PDF:', error);
         }
     };
+
 
     return (
         <div>
@@ -69,41 +117,41 @@ const Preview101 = () => {
             <h1>ResumeReady created by ResumeEra</h1>
             <GoogleAd />
             <div className="mainn101">
-                <div id="Alisha_mirza101" className="preview101"
+                <div id="Alisha_mirza301" className="preview101"
                     style={{ color: fontColor, fontFamily: fontStyle, backgroundColor: bgColor }}>
                     <div className="preview101-1" style={{ width: '50%' }}>
                         <div className="imagediv101">
                             <img className="image101" src={personalInfo ? personalInfo.image : null} alt="Selected" />
-                            <h3 className="personal-name101" style={{ color: headingColor, }}>{personalInfo.firstName} <br />{personalInfo.lastName}</h3>
+                            <h3 className="personal-name101" style={{ color: headingColor,fontSize:fontSizeheading,fontFamily:fontStyle }}>{personalInfo.firstName} <br />{personalInfo.lastName}</h3>
                             {work.map((works, index) => (
                                 <p key={index}>
                                     {works.jobtitle}</p>
                             ))}
                         </div>
                         <div className="profile-summary-section101">
-                            <h5 className="profile-summary-title101" style={{ color: headingColor }}>
+                            <h5 className="profile-summary-title101" style={{ color: headingColor,fontSize:fontSizeheading,fontFamily:fontStyle}}>
                                 <i class="bi bi-person-circle me-3" />PROFILE SUMMARY
                             </h5>
-                            <p className="profile-summary-content101">{personalInfo.object}</p>
+                            <p className="profile-summary-content101" style={{color:fontColor,fontFamily:fontStyle,fontSize:fontSize }}>{personalInfo.object}</p>
                         </div>
                         <div className="contact101">
-                            <h5 style={{ color: headingColor }}><i className="bi bi-person-lines-fill me-3" />Contact</h5>
-                            <p><i className="bi bi-geo-alt-fill me-2"></i>{personalInfo.address} {personalInfo.city} {personalInfo.state} {personalInfo.postalCode}</p>
-                            <p><i className="bi bi-telephone-fill me-2"></i>{personalInfo.mobileNumber}</p>
-                            <p style={{ wordBreak: "break-all" }}><i className="bi bi-envelope me-2" ></i>{personalInfo.email}</p>
+                            <h5 style={{color: headingColor,fontSize:fontSizeheading,fontFamily:fontStyle}}><i className="bi bi-person-lines-fill me-3" />Contact</h5>
+                            <p style={{color:fontColor,fontFamily:fontStyle,fontSize:fontSize }}><i className="bi bi-geo-alt-fill me-2"></i>{personalInfo.address} {personalInfo.city} {personalInfo.state} {personalInfo.postalCode}</p>
+                            <p style={{color:fontColor,fontFamily:fontStyle,fontSize:fontSize }}><i className="bi bi-telephone-fill me-2"></i>{personalInfo.mobileNumber}</p>
+                            <p style={{color:fontColor,fontFamily:fontStyle,fontSize:fontSize, wordBreak: "break-all" }}><i className="bi bi-envelope me-2" ></i>{personalInfo.email}</p>
                         </div>
                         <div className="reference101">
-                            <h5 style={{ color: headingColor }}><i class="bi bi-person-fill-gear me-3" />REFERENCE</h5>
                             {
-                                Refrence.map((ref, index) => (
+                               Refrence && Refrence[0].map((ref, index) => (
                                     <div key={index}>
+                                        <h5 style={{color: headingColor,fontSize:fontSizeheading,fontFamily:fontStyle}}><i class="bi bi-person-fill-gear me-3" />REFERENCE</h5>
                                         <div className="mbk-2">
-                                            <p className="" style={{ textAlign: 'center' }}><b>{ref.name}</b></p>
-                                            <p style={{ textAlign: 'center' }}>{ref.position}</p>
+                                            <p className="" style={{color:fontColor,fontFamily:fontStyle,fontSize:fontSize ,textAlign:'center'}}><b>{ref.name}</b></p>
+                                            <p style={{color:fontColor,fontFamily:fontStyle,fontSize:fontSize,textAlign:'center'}}>{ref.position}</p>
                                         </div>
 
-                                        <p className="ms-4"><i className="bi bi-telephone-fill me-2"></i>{ref.contact}</p>
-                                        <p className="ms-4"><i className="bi bi-envelope me-2"></i>{ref.email}</p>
+                                        <p className="ms-4" style={{color:fontColor,fontFamily:fontStyle,fontSize:fontSize}}><i className="bi bi-telephone-fill me-2"></i>{ref.contact}</p>
+                                        <p className="ms-4" style={{color:fontColor,fontFamily:fontStyle,fontSize:fontSize}}><i className="bi bi-envelope me-2"></i>{ref.email}</p>
                                     </div>
                                 ))
                             }
@@ -111,26 +159,26 @@ const Preview101 = () => {
                     </div>
                     <div className="preview101-2" style={{ width: '50%' }}>
                         <div className="experience-section101">
-                            <h5 className="details-title101" style={{ color: headingColor, wordBreak: 'none' }}>
+                            <h5 className="details-title101" style={{ color: headingColor,fontSize:fontSizeheading,fontFamily:fontStyle, wordBreak: 'none' }}>
                                 <i class="bi bi-person-workspace me-3" style={{}}></i>WORK-EXPERIENCE</h5>
-                            {work.map((works, index) => (
+                            {work[0].map((works, index) => (
                                 <div key={index} className="employment-history101 ms-4">
                                     <div className="exp-inner101">
-                                        <p className="employment-duration101">{works.startYear} - {works.endYear}</p>
+                                        <p className="employment-duration101" style={{color:fontColor,fontFamily:fontStyle,fontSize:fontSize}}>{works.startYear} - {works.endYear}</p>
                                         <p>/</p>
-                                        <p className="employment-detail101"><b>{works.organization}</b><br />{works.jobtitle}</p>
+                                        <p className="employment-detail101" style={{color:fontColor,fontFamily:fontStyle,fontSize:fontSize}}><b>{works.organization}</b><br />{works.jobtitle}</p>
                                     </div>
-                                    <p className='aboutexperience101'>{works.aboutexperience}</p>
+                                    <p className='aboutexperience101' style={{color:fontColor,fontFamily:fontStyle,fontSize:fontSize}}>{works.aboutexperience}</p>
                                 </div>
                             ))}
                         </div>
                         <div className="education-section101">
-                            <h5 className="details-title101" style={{ color: headingColor }}><i class="bi bi-book me-3"></i>EDUCATION</h5>
-                            {education.map((edu, index) => (
+                            <h5 className="details-title101" style={{color: headingColor,fontSize:fontSizeheading,fontFamily:fontStyle}}><i class="bi bi-book me-3"></i>EDUCATION</h5>
+                            {education[0].map((edu, index) => (
                                 <div key={index} className="education-item101 ms-4">
                                     <div className="education-degree101">
-                                        <span className="education-duration101">{edu.startYear} - {edu.endYear}</span>
-                                        <span>{edu.degree} <br /><br />{edu.univercity}</span>
+                                        <span className="education-duration101" style={{color:fontColor,fontFamily:fontStyle,fontSize:fontSize}}>{edu.startYear} - {edu.endYear}</span>
+                                        <span style={{color:fontColor,fontFamily:fontStyle,fontSize:fontSize}}>{edu.degree} <br /><br />{edu.univercity}</span>
                                     </div>
                                     <div className="education-details101">
                                         <span><b></b></span>
@@ -139,13 +187,13 @@ const Preview101 = () => {
                             ))}
                         </div>
                         <div className="skill-section101 mt-3">
-                            <h5><i class="bi bi-gear-wide-connected me-3"></i>SKILL</h5>
+                            <h5 style={{color: headingColor,fontSize:fontSizeheading,fontFamily:fontStyle}}><i class="bi bi-gear-wide-connected me-3"></i>SKILL</h5>
                             <div className="inner-101-1 ms-4">
-                                <h6 className="technical-skills-title101" style={{ color: headingColor }}>
+                                <h6 className="technical-skills-title101" style={{color: headingColor,fontSize:fontSizeheading,fontFamily:fontStyle}}>
                                     <i class="bi bi-person-fill-gear"></i>TECHNICAL SKILL</h6>
-                                {keyskills.map((keys, index) => (
+                                {keyskills[0].map((keys, index) => (
                                     <div key={index} className="technical-skill-item101 d-flex justify-content-between">
-                                        <p style={{ marginTop: '10px' }}>{keys.keyskills}</p>
+                                        <p style={{ marginTop: '10px',color:fontColor,fontFamily:fontStyle,fontSize:fontSize }}>{keys.keyskills}</p>
                                         {/* 5-star rating system */}
                                         <div className="star-rating ms-3 w-50">
                                             {[...Array(5)].map((_, i) => (
@@ -161,11 +209,11 @@ const Preview101 = () => {
 
                             </div>
                             <div className="row inner-101-1">
-                                <h6 className="soft-skills-title101" style={{ color: headingColor }}>
+                                <h6 className="soft-skills-title101" style={{color: headingColor,fontSize:fontSizeheading,fontFamily:fontStyle}}>
                                     <i class="bi bi-person-fill-gear"></i>SOFT SKILL</h6>
-                                {SoftSkill.map((soft, index) => (
+                                {SoftSkill[0].map((soft, index) => (
                                     <div className="col-4 ms-2">
-                                        <p>{soft.softSkill}</p>
+                                        <p style={{color:fontColor,fontFamily:fontStyle,fontSize:fontSize}}>{soft.softSkill}</p>
                                     </div>
                                 ))}
                             </div>
@@ -228,6 +276,19 @@ const Preview101 = () => {
                             <span>Heading Color </span>
                             <input type="color" value={headingColor} onChange={(e) => setHeadingColor(e.target.value)} className="bg-color-picker ms-2" />
                         </div>
+                    </div>
+                    <div className='colordiv'>
+                        <div>
+                            <span style={{ color: headingColor }}><i class="bi bi-patch-plus"></i>HS  </span>
+                            <input type="number" value={fontSizeheading} onChange={(e) => setFontSizeheading(Number(e.target.value))} className="bg-color-picker ms-2" />
+                        </div>
+                        <div>
+                            <span style={{ color: fontColor }}><i class="bi bi-patch-plus"></i>FS  </span>
+                            <input type="number" value={fontSize} onChange={(e) => setFontSize(Number(e.target.value))} className="bg-color-picker ms-2" />
+                        </div>
+                    </div>
+                    <div id="loadingSpinner" style={{ display: "none", position: "fixed", top: "50%", left: "50%" }}>
+                        <div class="spinner"></div>
                     </div>
                     <div style={{ width: '100%' }}>
                         <GoogleAd />

@@ -11,9 +11,10 @@
     background-color: #fcfdfc; /* Added to ensure background color */
 }
 
-.aboutresumeera img{
+.aboutResumeEra img{
     width: 250px;
     height: 350px;
+    margin: auto;
 }
 .aboutResumeEra .qoute{
     border: 2px solid blue;

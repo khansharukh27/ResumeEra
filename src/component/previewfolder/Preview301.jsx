@@ -13,9 +13,12 @@ export default function Preview301() {
     const [fontStyle, setFontStyle] = useState('Arial'); // Default font style
     const [fontColor, setFontColor] = useState('#rrggbb')
     const [headingColor, setHeadingColor] = useState('#6a8a3f')
-    const [isDownloaded, setIsDownloaded] = useState(false);
+    // const [isDownloaded, setIsDownloaded] = useState(false);
+    const [fontSize, setFontSize] = useState(16); // Initial font size for paragraphs
+    const [fontSizeheading, setFontSizeheading] = useState(16); // Initial font size for headings
 
-    const navigate = useNavigate();
+
+    // const navigate = useNavigate();
     const personalInfo = useSelector((state) => state.reducer.personalInfo);
     const education = useSelector((state) => [state.reducer.education]);
     const keyskills = useSelector((state) => [state.reducer.keySkills]);
@@ -31,39 +34,71 @@ export default function Preview301() {
     console.log('hobbies preview 301:-', Hobbies)
     // console.log('Certificate:-', Certificate)
     console.log('honorand award:-', Honor)
-    
-  const handleDownloadPDF = async () => {
-    const element = document.getElementById('Alisha_mirza301');
-    try {
-      const scale = 5; // Increase the scale for better resolution
-      const canvas = await html2canvas(element, {
-        scale: scale,
-        useCORS: true, // Allows cross-origin images to be rendered correctly
-        logging: true, // Enable logging for debugging
-      });
-      const pdf = new jsPDF('p', 'mm', 'a4');
-      const imgData = canvas.toDataURL('image/png');
-      // Calculate the aspect ratio to fit A4
-      const imgWidth = 210; // A4 width in mm
-      const imgHeight = (canvas.height * imgWidth) / canvas.width;
-      pdf.addImage(imgData, 'PNG', 0, 0, imgWidth, imgHeight, undefined, 'FAST');
-      const fileName = `${inputFields}.pdf`;
-      pdf.save(fileName);
-      setIsDownloaded(true)
-      setTimeout(() => {
-        setIsDownloaded(false)
-      }, 4000)
-      // Store the image data URL in localStorage
-      const savedResumes = JSON.parse(localStorage.getItem('savedResumes')) || [];
-      savedResumes.push(imgData);
-      localStorage.setItem('savedResumes', JSON.stringify(savedResumes));
 
-      alert('Your Resume is downloaded');
-      // navigate('/myresume');
-    } catch (error) {
-      console.error('Error downloading PDF:', error);
-    }
-  };
+    const handleDownloadPDF = async () => {
+        // Show loading spinner
+        const loadingSpinner = document.getElementById('loadingSpinner');
+        loadingSpinner.style.display = "block"; // Show the spinner
+
+        const element = document.getElementById('Alisha_mirza301');
+        try {
+            const scale = 3; // Increase the scale for better resolution
+            const canvas = await html2canvas(element, {
+                scale: scale,
+                useCORS: true, // Allows cross-origin images to be rendered correctly
+                logging: false, // Disable logging for better performance
+            });
+            const pdf = new jsPDF('p', 'mm', 'a4');
+            const imgData = canvas.toDataURL('image/png');
+
+            const imgWidth = 210; // A4 width in mm
+            const imgHeight = (canvas.height * imgWidth) / canvas.width;
+
+            const a4Height = 297; // A4 height in mm
+
+            // If the content is shorter than the A4 page height, center it vertically
+            let verticalOffset = 0;
+            if (imgHeight < a4Height) {
+                // Center the content vertically
+                verticalOffset = (a4Height - imgHeight) / 2;
+            }
+
+            // If content fits on one page
+            if (imgHeight <= a4Height) {
+                pdf.addImage(imgData, 'PNG', 0, verticalOffset, imgWidth, imgHeight, undefined, 'FAST');
+            } else {
+                // If content is taller than one page, split it into multiple pages
+                let offsetY = 0;
+                while (offsetY < canvas.height) {
+                    const currentHeight = Math.min(imgHeight, canvas.height - offsetY); // Handle remaining height
+                    pdf.addImage(imgData, 'PNG', 0, offsetY, imgWidth, currentHeight, undefined, 'FAST');
+                    offsetY += currentHeight;
+
+                    // If there's more content, add another page
+                    if (offsetY < canvas.height) {
+                        pdf.addPage();
+                    }
+                }
+            }
+
+            const fileName = `${inputFields}.pdf`;
+            pdf.save(fileName);
+
+            // Hide loading spinner once PDF is ready
+            loadingSpinner.style.display = "none"; // Hide the spinner
+
+            const savedResumes = JSON.parse(localStorage.getItem('savedResumes')) || [];
+            savedResumes.push(imgData);
+            localStorage.setItem('savedResumes', JSON.stringify(savedResumes));
+
+            alert('Your Resume is downloaded');
+            // navigate('/myresume');
+        } catch (error) {
+            // Hide loading spinner if error occurs
+            loadingSpinner.style.display = "none";
+            console.error('Error downloading PDF:', error);
+        }
+    };
 
 
     return (
@@ -71,7 +106,6 @@ export default function Preview301() {
             <header style={{ paddingLeft: '10px', paddingRight: '10px', textAlign: 'center' }}>
                 <h1>Congratulations on Creating a Winning Resume!</h1>
                 <small style={{ textAlign: 'center' }}> <i style={{ color: 'white', backgroundColor: 'red' }}> warning </i>: if resume dont show your data in resume , please refresh the page</small>
-
                 <p>Your journey towards your dream job starts here! By crafting a professional resume with ResumeEra, you've taken the first step in showcasing your skills, experiences, and aspirations effectively. A well-structured resume is more than just a document—it's your story, your voice, and your opportunity to shine.
 
                     Whether you're a fresher stepping into the professional world or an experienced professional climbing the career ladder, a compelling resume can make all the difference. Our platform ensures your resume is not only visually appealing but also tailored to meet industry standards.
@@ -80,61 +114,61 @@ export default function Preview301() {
                 </p>
             </header>
             <GoogleAd />
-            <div className='main301'>
+            <div className='main301 d-md-flex'>
                 <div className="preview301" style={{ backgroundColor: bgColor, }} id="Alisha_mirza301">
 
                     <div className='personalInfo301' style={{ backgroundColor: bgColor }}>
                         <div className='blueline'></div>
-                        <h3 style={{ whiteSpace: 'none', fontFamily: fontStyle, color: fontColor, marginBottom: '-10px' }}>{personalInfo.firstName} {personalInfo.lastName}</h3>
+                        <h3 style={{ whiteSpace: 'none', fontFamily: fontStyle, color: headingColor, fontSize: fontSizeheading, marginBottom: '-10px' }}>{personalInfo.firstName} {personalInfo.lastName}</h3>
                         <p className='jobtitle' style={{ color: 'black', fontFamily: fontStyle }}>{work[0].map((works, index) => (
                             <div key={index}>
-                                <p style={{ fontFamily: fontStyle, marginBottom: '-10px', textAlign: 'center' }}>{works.jobtitle}</p>
+                                <p style={{ color: fontColor, fontFamily: fontStyle, fontSize: fontSize, marginBottom: '-10px', textAlign: 'center' }}>{works.jobtitle}</p>
                             </div>
                         ))}</p>
                         <div className='contact301 '>
-                            <p style={{ color: fontColor, fontFamily: fontStyle }}><i className="bi bi-telephone-fill me-2 ms-2" style={{ color: headingColor }} />{personalInfo.mobileNumber}</p>
-                            <div > <p style={{ width: '20px' }}>|</p></div><p style={{ color: fontColor, wordBreak: "break-all" }}><i className="bi bi-envelope me-2 me-2" style={{ color: headingColor }} />{personalInfo.email}</p>
+                            <p style={{ color: fontColor, fontFamily: fontStyle, fontSize: fontSize }}><i className="bi bi-telephone-fill me-2 ms-2" style={{ color: fontColor, fontFamily: fontStyle, fontSize: fontSize }} />{personalInfo.mobileNumber}</p>
+                            <div > <p style={{ width: '20px' }}>|</p></div><p style={{ wordBreak: "break-all", color: fontColor, fontFamily: fontStyle, fontSize: fontSize }}><i className="bi bi-envelope me-2 me-2" style={{ color: headingColor }} />{personalInfo.email}</p>
                         </div>
                         <hr className='dashed-line' />
-                        <p className='object' style={{ fontFamily: fontStyle, color: fontColor }}>{personalInfo.object}</p>
+                        <p className='object' style={{ color: fontColor, fontFamily: fontStyle, fontSize: fontSize }}>{personalInfo.object}</p>
                     </div>
                     <hr className='dashed-line' />
                     <div className="soft-skill" style={{ backgroundColor: bgColor, }}>
-                        <h4 className="" style={{ color: headingColor, fontFamily: fontStyle }}>SOFT SKILL</h4>
+                        <h4 className="" style={{ fontFamily: fontStyle, color: headingColor, fontSize: fontSizeheading }}>SOFT SKILL</h4>
                         <div style={{ display: 'flex', flexWrap: 'wrap', gap: '16px' }}>
                             {SoftSkill[0].map((keys, index) => (
                                 <div key={index} className="technical-skill-item301" style={{}}>
-                                    <ul style={{ fontSize: 'small', color: fontColor, fontFamily: fontStyle, marginRight: '0px', minWidth: '100px', marginBottom: '-5px' }}>
-                                        <li>{keys.softSkill}</li>
+                                    <ul style={{ marginRight: '0px', minWidth: '100px', marginBottom: '-5px' }}>
+                                        <li style={{ color: fontColor, fontFamily: fontStyle, fontSize: fontSize }}>{keys.softSkill}</li>
                                     </ul>
                                 </div>
                             ))}
                         </div>
                     </div>
 
-                    <div className='firstdiv301' style={{ backgroundColor: bgColor, }}>
+                    <div className='firstdiv301' style={{}}>
                         <div className='me-3'>
                             <div className="experience-section301">
-                                <h4 className="details-title301" style={{ color: headingColor, fontFamily: fontStyle }}>
+                                <h4 className="details-title301" style={{ fontFamily: fontStyle, color: headingColor, fontSize: fontSizeheading }}>
                                     WORK EXPERIENCE </h4>
                                 {work[0].map((works, index) => (
                                     <div key={index} className="employment-history301">
                                         <div className="exp-inner301">
-                                            <p style={{ color: fontColor, fontFamily: fontStyle, marginBottom: '-5px' }} className="employment-detail301"><b style={{ fontWeight: 500, color: fontColor }}>{works.jobtitle}</b><br />{works.organization}{work.city}</p>
-                                            <p style={{ color: fontColor, fontFamily: fontStyle, marginBottom: '-5px' }} className="employment-detail301"><i>{works.startYear} - {works.endYear}</i></p>
-                                            <p style={{ color: fontColor, fontFamily: fontStyle }} className='employment-detail301'>{works.aboutexperience}</p>
+                                            <p style={{ color: fontColor, fontFamily: fontStyle, fontSize: fontSize, marginBottom: '-5px' }} className="employment-detail301"><b style={{ fontWeight: 500, color: fontColor }}>{works.jobtitle}</b><br />{works.organization}{work.city}</p>
+                                            <p style={{ color: fontColor, fontFamily: fontStyle, fontSize: fontSize, marginBottom: '-5px' }} className="employment-detail301"><i>{works.startYear} - {works.endYear}</i></p>
+                                            <p style={{ color: fontColor, fontFamily: fontStyle, fontSize: fontSize }} className='employment-detail301'>{works.aboutexperience}</p>
                                         </div>
                                     </div>
                                 ))}
                             </div>
                             <div className="education-section301 mt-1">
-                                <h4 className="details-title301" style={{ color: headingColor, fontFamily: fontStyle }}>EDUCATION</h4>
+                                <h4 className="details-title301" style={{ fontFamily: fontStyle, color: headingColor, fontSize: fontSizeheading }}>EDUCATION</h4>
                                 {education[0].map((edu, index) => (
                                     <div key={index} className="education-item301">
                                         <div className="certificate-item301">
-                                            <p style={{ color: fontColor, fontFamily: fontStyle, fontSize: 'small', fontWeight: 900, marginBottom: '-5px' }} className="employment-detail301">{edu.degree} in {edu.university} </p>
-                                            <p style={{ color: fontColor, fontFamily: fontStyle, marginBottom: '-5px' }} className="employment-detail301">{edu.university}</p>
-                                            <p style={{ color: fontColor, fontFamily: fontStyle }} className="employment-detail301">{edu.startYear} - {edu.endYear},{edu.city}</p>
+                                            <p style={{ color: fontColor, fontFamily: fontStyle, fontSize: fontSize, fontWeight: 900, marginBottom: '-5px' }} className="employment-detail301">{edu.degree} in {edu.university} </p>
+                                            <p style={{ color: fontColor, fontFamily: fontStyle, fontSize: fontSize, marginBottom: '-5px' }} className="employment-detail301">{edu.university}</p>
+                                            <p style={{ color: fontColor, fontFamily: fontStyle, fontSize: fontSize }} className="employment-detail301">{edu.startYear} - {edu.endYear},{edu.city}</p>
                                         </div>
                                         <div className="education-details301">
                                             <span><b></b></span>
@@ -143,11 +177,11 @@ export default function Preview301() {
                                 ))}
                             </div>
                             <div className=" language-301">
-                                <h4 style={{ color: headingColor, fontFamily: fontStyle }}>LANGUAGE </h4>
+                                <h4 style={{ fontFamily: fontStyle, color: headingColor, fontSize: fontSizeheading }}>LANGUAGE </h4>
                                 <div style={{ display: 'flex', flexWrap: 'wrap', gap: '16px' }}>
                                     {languages.map((keys, index) => (
                                         <div key={index} className="language-item301">
-                                            <p style={{ color: fontColor, fontFamily: fontStyle, marginBottom: '-5px' }}>{keys.language}</p>
+                                            <p style={{ color: fontColor, fontFamily: fontStyle, fontSize: fontSize, marginBottom: '-5px' }}>{keys.language}</p>
                                         </div>
                                     ))}
                                 </div>
@@ -156,7 +190,7 @@ export default function Preview301() {
                         <div className=''>
 
                             <div className="technical-">
-                                <h4 className="" style={{ color: headingColor, fontFamily: fontStyle }}>
+                                <h4 className="" style={{ fontFamily: fontStyle, color: headingColor, fontSize: fontSizeheading }}>
                                     TECHNICAL SKILL
                                 </h4>
                                 <div style={{ display: 'flex', flexWrap: 'wrap', gap: '16px' }}>
@@ -165,44 +199,44 @@ export default function Preview301() {
                                             key={index}
                                             className="technical-skill-item301"
                                             style={{
-                                               
+
                                             }}
                                         >
                                             {/* Skill Name */}
-                                           
+
                                             <ul style={{ fontSize: 'small', color: fontColor, fontFamily: fontStyle, marginRight: '0px', minWidth: '100px', marginBottom: '-5px' }}>
-                                            <li 
+                                                <li
                                                     style={{
                                                         color: fontColor,
                                                         fontFamily: fontStyle,
                                                         marginRight: '10px',
                                                         minWidth: '100px',
-                                                        
+
                                                     }}
                                                 >
-                                                    {keys.keyskills}
-                                              
-                                                    </li>
-                                                </ul>
+                                                    <p style={{ color: fontColor, fontFamily: fontStyle, fontSize: fontSize }}>{keys.keyskills}</p>
+
+                                                </li>
+                                            </ul>
                                         </div>
                                     ))}
                                 </div>
                             </div>
 
                             <div className="technical-skills-title301 mt-1">
-                                <h4 className="" style={{ color: headingColor, fontFamily: fontStyle }}>
+                                <h4 style={{ fontFamily: fontStyle, color: headingColor, fontSize: fontSizeheading }}>
                                     INTEREST
                                 </h4>
                                 <div style={{ display: 'flex', flexWrap: 'wrap', gap: '16px' }}>
                                     {Hobbies && Hobbies[0].map((keys, index) => (
                                         <div key={index} className="d-flex align-items-center">
-                                            <ul style={{ fontSize: 'small', color: fontColor, fontFamily: fontStyle, marginRight: '0px', minWidth: '100px', marginBottom: '-5px' }}>
-                                            <li style={{ marginBottom: "-5px", color: fontColor, fontFamily: fontStyle }}>
-                                                    
+                                            <ul style={{ fontSize: 'small', color: fontColor, fontFamily: fontStyle, fontSize: fontSize, marginRight: '0px', minWidth: '100px', marginBottom: '-5px' }}>
+                                                <li style={{ marginBottom: "-5px", color: fontColor, fontFamily: fontStyle, fontSize: fontSize }}>
+
                                                     {/* <span style={{ marginRight: "10px", fontSize: "20px" }}>
                                                         {HobbyIcons[keys.hobbies] || "🎯"} 
                                                     </span> */}
-                                                    {keys.hobbies} 
+                                                    <p style={{ color: fontColor, fontFamily: fontStyle, fontSize: fontSize }}>{keys.hobbies} </p>
                                                 </li>
                                             </ul>
                                         </div>
@@ -268,12 +302,26 @@ export default function Preview301() {
                             <input type="color" value={headingColor} onChange={(e) => setHeadingColor(e.target.value)} className="bg-color-picker ms-2" />
                         </div>
                     </div>
+                    <div className='colordiv'>
+                        <div>
+                            <span style={{ color: headingColor }}><i class="bi bi-patch-plus"></i>HS  </span>
+                            <input type="number" value={fontSizeheading} onChange={(e) => setFontSizeheading(Number(e.target.value))} className="bg-color-picker ms-2" />
+                        </div>
+                        <div>
+                            <span style={{ color: fontColor }}><i class="bi bi-patch-plus"></i>FS  </span>
+                            <input type="number" value={fontSize} onChange={(e) => setFontSize(Number(e.target.value))} className="bg-color-picker ms-2" />
+                        </div>
+                    </div>
+                    <div id="loadingSpinner" style={{ display: "none", position: "fixed", top: "50%", left: "50%" }}>
+                        <div class="spinner"></div>
+                    </div>
                     <div style={{ width: '100%' }}>
                         <GoogleAd />
                     </div>
 
                 </div>
             </div>
+
         </div>
     )
 }

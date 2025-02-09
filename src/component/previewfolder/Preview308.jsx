@@ -13,9 +13,12 @@ export default function Preview308() {
   const [fontStyle, setFontStyle] = useState('Arial'); // Default font style
   const [fontColor, setFontColor] = useState('#rrggbb')
   const [headingColor, setHeadingColor] = useState('#6a8a3f')
-  const [isDownloaded, setIsDownloaded] = useState(false);
+  // const [isDownloaded, setIsDownloaded] = useState(false);
+  const [fontSize, setFontSize] = useState(16); // Initial font size for paragraphs
+  const [fontSizeheading, setFontSizeheading] = useState(16); // Initial font size for headings
 
-  const navigate = useNavigate();
+
+  // const navigate = useNavigate();
   const personalInfo = useSelector((state) => state.reducer.personalInfo);
   const education = useSelector((state) => [state.reducer.education]);
   const keyskills = useSelector((state) => [state.reducer.keySkills]);
@@ -28,32 +31,62 @@ export default function Preview308() {
   // const Certificate = useSelector((state) => state.reducer.certificateData);
   const Hobbies = useSelector((state) => [state.reducer.addHobies])
   const project = useSelector((state) => [state.reducer.projectData])
-  console.log('hobbies preview 302:-', Hobbies)
+  console.log('hobbies preview 301:-', Hobbies)
   // console.log('Certificate:-', Certificate)
-  console.log('honorand award:-', keyskills)
+  console.log('honorand award:-', Honor)
 
   const handleDownloadPDF = async () => {
-    const element = document.getElementById('Alisha_mirza302');
+    // Show loading spinner
+    const loadingSpinner = document.getElementById('loadingSpinner');
+    loadingSpinner.style.display = "block"; // Show the spinner
+
+    const element = document.getElementById('Alisha_mirza308');
     try {
       const scale = 3; // Increase the scale for better resolution
       const canvas = await html2canvas(element, {
         scale: scale,
         useCORS: true, // Allows cross-origin images to be rendered correctly
-        logging: true, // Enable logging for debugging
+        logging: false, // Disable logging for better performance
       });
       const pdf = new jsPDF('p', 'mm', 'a4');
       const imgData = canvas.toDataURL('image/png');
-      // Calculate the aspect ratio to fit A4
+
       const imgWidth = 210; // A4 width in mm
       const imgHeight = (canvas.height * imgWidth) / canvas.width;
-      pdf.addImage(imgData, 'PNG', 0, 0, imgWidth, imgHeight, undefined, 'FAST');
+
+      const a4Height = 297; // A4 height in mm
+
+      // If the content is shorter than the A4 page height, center it vertically
+      let verticalOffset = 0;
+      if (imgHeight < a4Height) {
+        // Center the content vertically
+        verticalOffset = (a4Height - imgHeight) / 2;
+      }
+
+      // If content fits on one page
+      if (imgHeight <= a4Height) {
+        pdf.addImage(imgData, 'PNG', 0, verticalOffset, imgWidth, imgHeight, undefined, 'FAST');
+      } else {
+        // If content is taller than one page, split it into multiple pages
+        let offsetY = 0;
+        while (offsetY < canvas.height) {
+          const currentHeight = Math.min(imgHeight, canvas.height - offsetY); // Handle remaining height
+          pdf.addImage(imgData, 'PNG', 0, offsetY, imgWidth, currentHeight, undefined, 'FAST');
+          offsetY += currentHeight;
+
+          // If there's more content, add another page
+          if (offsetY < canvas.height) {
+            pdf.addPage();
+          }
+        }
+      }
+
       const fileName = `${inputFields}.pdf`;
       pdf.save(fileName);
-      setIsDownloaded(true)
-      setTimeout(() => {
-        setIsDownloaded(false)
-      }, 4000)
-      // Store the image data URL in localStorage
+
+      // Hide loading spinner once PDF is ready
+      loadingSpinner.style.display = "none"; // Hide the spinner
+
       const savedResumes = JSON.parse(localStorage.getItem('savedResumes')) || [];
       savedResumes.push(imgData);
       localStorage.setItem('savedResumes', JSON.stringify(savedResumes));
@@ -61,9 +94,12 @@ export default function Preview308() {
       alert('Your Resume is downloaded');
       // navigate('/myresume');
     } catch (error) {
+      // Hide loading spinner if error occurs
+      loadingSpinner.style.display = "none";
       console.error('Error downloading PDF:', error);
     }
   };
+
 
 
   return (
@@ -81,33 +117,34 @@ export default function Preview308() {
       </header>
       <GoogleAd />
       <div className='main302'>
-        <div className='preview302' style={{ backgroundColor: bgColor, }} id="Alisha_mirza302">
-          <div className='namediv308' style={{ backgroundColor: bgColor, }}>
+        <div className='preview302' style={{ backgroundColor: bgColor, }} id="Alisha_mirza308">
+          <div className='namediv308' style={{}}>
             <div className='d-flex justify-content-between' style={{ backgroundColor: '#d9eafa' }}>
-              <h4 style={{ whiteSpace: 'none', fontFamily: fontStyle, color: fontColor, marginTop: '10px' }}>{personalInfo.firstName} {personalInfo.lastName}</h4>
+              <h4 style={{ whiteSpace: 'none', fontFamily: fontStyle, color: headingColor, fontSize: fontSizeheading, marginTop: '10px' }}>{personalInfo.firstName} {personalInfo.lastName}</h4>
               <div className='contact301' style={{ display: 'flex', flexDirection: 'column' }}>
-                <p style={{ color: fontColor, fontFamily: fontStyle }}><i className="bi bi-telephone-fill me-2 ms-2" style={{ color: headingColor }} />{personalInfo.mobileNumber}</p>
-                <p style={{ color: fontColor, wordBreak: "break-all" }}><i className="bi bi-envelope me-2 me-2" style={{ color: headingColor }} />{personalInfo.email}</p>
-                <div className='contactinnerdiv304' style={{ whiteSpace: 'nowrap' }}><p style={{ color: fontColor, fontFamily: fontStyle, }}>  {personalInfo.state} {personalInfo.postalCode}</p></div>
+                <p style={{ color: fontColor, fontFamily: fontStyle, fontSize: fontSize }}><i className="bi bi-telephone-fill me-2 ms-2" style={{ color: fontColor, fontFamily: fontStyle, fontSize: fontSize }} />{personalInfo.mobileNumber}</p>
+                <p style={{ color: fontColor, fontFamily: fontStyle, fontSize: fontSize, wordBreak: "break-all" }}><i className="bi bi-envelope me-2 me-2" style={{ color: fontColor, fontFamily: fontStyle, fontSize: fontSize }} />{personalInfo.email}</p>
+                <div className='contactinnerdiv304' style={{ whiteSpace: 'nowrap' }}><p style={{ color: fontColor, fontFamily: fontStyle, fontSize: fontSize }}>  {personalInfo.state} {personalInfo.postalCode}</p></div>
               </div>
             </div>
 
             <div className=' maindiv302 mt-4' style={{}}>
-              <div className='skilldiv'>
+              <div className='skilldiv m-3'>
                 <div className='d-flex'>
                   <div style={{ width: '8px', height: '20px', backgroundColor: headingColor, marginRight: '4px', marginTop: '2px' }}></div>
-                  <h4 style={{ color: headingColor, fontFamily: fontStyle }}>OBJECTIVE STATEMENT</h4>
+                  <h4 style={{ fontFamily: fontStyle, color: headingColor, fontSize: fontSizeheading }}>OBJECTIVE STATEMENT</h4>
                 </div>
-                <p className='object' style={{ fontFamily: fontStyle, color: fontColor }}>{personalInfo.object}</p>
+                <p className='object' style={{ fontFamily: fontStyle, color: fontColor,fontSize:fontSize }}>{personalInfo.object}</p>
                 <div className="soft-skill" style={{ backgroundColor: bgColor, }}>
                   <div className='d-flex'>
                     <div style={{ width: '8px', height: '20px', backgroundColor: headingColor, marginRight: '4px', marginTop: '2px' }}></div>
-                    <h4 style={{ color: headingColor, fontFamily: fontStyle }}>SOFT SKILL</h4>
-                  </div>                  <div style={{}}>
+                    <h4 style={{ fontFamily: fontStyle, color: headingColor, fontSize: fontSizeheading }}>SOFT SKILL</h4>
+                  </div>
+                  <div>
                     {SoftSkill[0].map((keys, index) => (
                       <div key={index} className="technical-skill-item302" style={{}}>
-                        <ul style={{ fontSize: 'small', marginRight: '0px', minWidth: '100px', marginBottom: '-5px' }}>
-                          <li><p style={{ color: fontColor, fontFamily: fontStyle, }}>{keys.softSkill}</p></li>
+                        <ul style={{ marginRight: '0px', minWidth: '100px', marginBottom: '-5px' }}>
+                          <li style={{ color: fontColor, fontFamily: fontStyle, fontSize: fontSize }}>{keys.softSkill}</li>
                         </ul>
                       </div>
                     ))}
@@ -116,12 +153,12 @@ export default function Preview308() {
                 <div className="tech-skill" style={{ backgroundColor: bgColor, }}>
                   <div className='d-flex'>
                     <div style={{ width: '8px', height: '20px', backgroundColor: headingColor, marginRight: '4px', marginTop: '2px' }}></div>
-                    <h4 style={{ color: headingColor, fontFamily: fontStyle }}>TECHNICAL SKILL</h4>
+                    <h4 style={{ fontFamily: fontStyle, color: headingColor, fontSize: fontSizeheading }}>TECHNICAL SKILL</h4>
                   </div>                  <div style={{}}>
                     {keyskills[0].map((keys, index) => (
                       <div key={index} className="technical-skill-item302" style={{}}>
-                        <ul style={{ fontSize: 'small', color: fontColor, fontFamily: fontStyle, marginRight: '0px', minWidth: '100px', marginBottom: '-5px' }}>
-                          <li><p style={{ color: fontColor, fontFamily: fontStyle, }}>{keys.keyskills}</p></li>
+                        <ul style={{ color: fontColor, fontFamily: fontStyle, fontSize: fontSize, marginRight: '0px', minWidth: '100px', marginBottom: '-5px' }}>
+                          <li><p style={{ color: fontColor, fontFamily: fontStyle, fontSize: fontSize }}>{keys.keyskills}</p></li>
                         </ul>
                       </div>
                     ))}
@@ -132,14 +169,14 @@ export default function Preview308() {
                 <div className="experience-section302">
                   <div className='d-flex'>
                     <div style={{ width: '8px', height: '20px', backgroundColor: headingColor, marginRight: '4px', marginTop: '2px' }}></div>
-                    <h4 style={{ color: headingColor, fontFamily: fontStyle }}>WORK EXPERIENCE</h4>
+                    <h4 style={{ fontFamily: fontStyle, color: headingColor, fontSize: fontSizeheading }}>WORK EXPERIENCE</h4>
                   </div>
                   {work[0].map((works, index) => (
                     <div key={index} className="employment-history302">
                       <div className="exp-inner302">
-                        <p style={{ color: fontColor, fontFamily: fontStyle, marginBottom: '-5px' }} className="employment-detail302"><b style={{ fontWeight: 500, color: fontColor }}>{works.jobtitle}</b><br />{works.organization}{work.city}</p>
-                        <p style={{ color: fontColor, fontFamily: fontStyle, marginBottom: '-5px' }} className="employment-detail302"><i>{works.startYear} - {works.endYear}</i></p>
-                        <p style={{ color: fontColor, fontFamily: fontStyle }} className='employment-detail302'>{works.aboutexperience}</p>
+                        <p style={{ color: fontColor, fontFamily: fontStyle, fontSize: fontSize, marginBottom: '-5px' }} className="employment-detail302"><b style={{ fontWeight: 500, color: fontColor }}>{works.jobtitle}</b><br />{works.organization}{work.city}</p>
+                        <p style={{ color: fontColor, fontFamily: fontStyle, fontSize: fontSize, marginBottom: '-5px' }} className="employment-detail302"><i>{works.startYear} - {works.endYear}</i></p>
+                        <p style={{ color: fontColor, fontFamily: fontStyle, fontSize: fontSize }} className='employment-detail302'>{works.aboutexperience}</p>
                       </div>
                     </div>
                   ))}
@@ -147,14 +184,14 @@ export default function Preview308() {
                 <div className="education-section302 mt-1">
                   <div className='d-flex'>
                     <div style={{ width: '8px', height: '20px', backgroundColor: headingColor, marginRight: '4px', marginTop: '2px' }}></div>
-                    <h4 style={{ color: headingColor, fontFamily: fontStyle }}>EDUCATION</h4>
+                    <h4 style={{ fontFamily: fontStyle, color: headingColor, fontSize: fontSizeheading }}>EDUCATION</h4>
                   </div>
                   {education[0].map((edu, index) => (
                     <div key={index} className="education-item302">
                       <div className="certificate-item302">
-                        <p style={{ color: fontColor, fontFamily: fontStyle, fontSize: 'small', fontWeight: 900, marginBottom: '-5px' }} className="employment-detail302">{edu.degree} in {edu.university} </p>
-                        <p style={{ color: fontColor, fontFamily: fontStyle, marginBottom: '-5px' }} className="employment-detail302">{edu.university}</p>
-                        <p style={{ color: fontColor, fontFamily: fontStyle }} className="employment-detail302">{edu.startYear} - {edu.endYear},{edu.city}</p>
+                        <p style={{ color: fontColor, fontFamily: fontStyle, fontSize: fontSize, fontWeight: 900, marginBottom: '-5px' }} className="employment-detail302">{edu.degree} in {edu.university} </p>
+                        <p style={{ color: fontColor, fontFamily: fontStyle, fontSize: fontSize, marginBottom: '-5px' }} className="employment-detail302">{edu.university}</p>
+                        <p style={{ color: fontColor, fontFamily: fontStyle, fontSize: fontSize }} className="employment-detail302">{edu.startYear} - {edu.endYear},{edu.city}</p>
                       </div>
                       <div className="education-details302">
                         <span><b></b></span>
@@ -166,14 +203,14 @@ export default function Preview308() {
                   <div>
                     <div className='d-flex'>
                       <div style={{ width: '8px', height: '20px', backgroundColor: headingColor, marginRight: '4px', marginTop: '2px' }}></div>
-                      <h4 style={{ color: headingColor, fontFamily: fontStyle }}>HOBBIES & INTEREST</h4>
+                      <h4 style={{ fontFamily: fontStyle, color: headingColor, fontSize: fontSizeheading }}>HOBBIES & INTEREST</h4>
                     </div>
                     {Hobbies[0].map((keys, index) => (
                       <div style={{ display: 'flex', flexWrap: 'wrap', gap: '16px' }}>
 
                         <ul style={{ fontSize: 'small', color: fontColor, fontFamily: fontStyle, marginRight: '0px', minWidth: '100px', marginBottom: '-5px' }}>
-                          <li style={{ marginBottom: "-5px", color: fontColor, fontFamily: fontStyle }}>
-                            <p style={{ color: fontColor, fontFamily: fontStyle }}>{keys.hobbies}</p>
+                          <li style={{ marginBottom: "-5px", color: fontColor, fontFamily: fontStyle, fontSize: fontSize }}>
+                            {keys.hobbies}
                           </li>
                         </ul>
                       </div>
@@ -183,13 +220,13 @@ export default function Preview308() {
                 <div className=" language-301">
                   <div className='d-flex'>
                     <div style={{ width: '8px', height: '20px', backgroundColor: headingColor, marginRight: '4px', marginTop: '2px' }}></div>
-                    <h4 style={{ color: headingColor, fontFamily: fontStyle }}>LANGUAGE</h4>
+                    <h4 style={{ fontFamily: fontStyle, color: headingColor, fontSize: fontSizeheading }}>LANGUAGE</h4>
                   </div>
                   {languages[0].map((keys, index) => (
                     <div key={index} className="language-item301">
                       <ul>
                         <li>
-                          <p style={{ color: fontColor, fontFamily: fontStyle, marginBottom: '-5px' }}>{keys.language}</p>
+                          <p style={{ color: fontColor, fontFamily: fontStyle, fontSize: fontSize, marginBottom: '-5px' }}>{keys.language}</p>
 
                         </li>
                       </ul>
@@ -257,6 +294,19 @@ export default function Preview308() {
               <span>Heading Color </span>
               <input type="color" value={headingColor} onChange={(e) => setHeadingColor(e.target.value)} className="bg-color-picker ms-2" />
             </div>
+          </div>
+          <div className='colordiv'>
+            <div>
+              <span style={{ color: headingColor }}><i class="bi bi-patch-plus"></i>HS  </span>
+              <input type="number" value={fontSizeheading} onChange={(e) => setFontSizeheading(Number(e.target.value))} className="bg-color-picker ms-2" />
+            </div>
+            <div>
+              <span style={{ color: fontColor }}><i class="bi bi-patch-plus"></i>FS  </span>
+              <input type="number" value={fontSize} onChange={(e) => setFontSize(Number(e.target.value))} className="bg-color-picker ms-2" />
+            </div>
+          </div>
+          <div id="loadingSpinner" style={{ display: "none", position: "fixed", top: "50%", left: "50%" }}>
+            <div class="spinner"></div>
           </div>
           <div style={{ width: '100%' }}>
             <GoogleAd />

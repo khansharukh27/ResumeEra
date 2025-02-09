@@ -14,9 +14,9 @@ const Preview115 = () => {
   const [fontStyle, setFontStyle] = useState('Arial'); // Default font style
   const [fontColor, setFontColor] = useState('#rrggbb')
   const [headingColor, setHeadingColor] = useState('#6a8a3f')
-  const [fontkasize, setfontkasize] = useState('25')
-  const [headingsize,setheadingsize] = useState('25')
-  const [isDownloaded, setIsDownloaded] = useState(false);
+  // const [isDownloaded, setIsDownloaded] = useState(false);
+  const [fontSize, setFontSize] = useState(16); // Initial font size for paragraphs
+  const [fontSizeheading, setFontSizeheading] = useState(16); // Initial font size for headings
 
   const navigate = useNavigate();
   const personalInfo = useSelector((state) => state.reducer.personalInfo);
@@ -24,38 +24,69 @@ const Preview115 = () => {
   const keyskills = useSelector((state) => [state.reducer.keySkills]);
   const work = useSelector((state) => [state.reducer.workExperience]);
   const Honor = useSelector((state) => [state.reducer.honorAndaward]);
-  const Refrence = useSelector((state) => [state.reducer.addReference])
+  // const Refrence = useSelector((state) => [state.reducer.addReference])
   const SoftSkill = useSelector((state) => [state.reducer.addSoftSkills])
   const socialMediaLink = useSelector((state) => [state.reducer.socialMediaLink]);
   const languages = useSelector((state) => [state.reducer.addLanguage]);
   const Certificate = useSelector((state) => state.reducer.certificateData);
   const Hobbies = useSelector((state) => [state.reducer.addHobies])
   const project = useSelector((state) => [state.reducer.projectData])
-  console.log('hobbies preview 114:-', Hobbies)
+  console.log('hobbies preview 302:-', Hobbies)
   // console.log('Certificate:-', Certificate)
-  console.log('honorand award:-', Honor)
+  console.log('honorand award:-', keyskills)
+
   const handleDownloadPDF = async () => {
+    // Show loading spinner
+    const loadingSpinner = document.getElementById('loadingSpinner');
+    loadingSpinner.style.display = "block"; // Show the spinner
+
     const element = document.getElementById('Alisha_mirza115');
     try {
-      const scale = 2; // Increase the scale for better resolution
+      const scale = 3; // Increase the scale for better resolution
       const canvas = await html2canvas(element, {
         scale: scale,
         useCORS: true, // Allows cross-origin images to be rendered correctly
-        logging: true, // Enable logging for debugging
+        logging: false, // Disable logging for better performance
       });
       const pdf = new jsPDF('p', 'mm', 'a4');
       const imgData = canvas.toDataURL('image/png');
-      // Calculate the aspect ratio to fit A4
+
       const imgWidth = 210; // A4 width in mm
       const imgHeight = (canvas.height * imgWidth) / canvas.width;
-      pdf.addImage(imgData, 'PNG', 0, 0, imgWidth, imgHeight, undefined, 'FAST');
+
+      const a4Height = 297; // A4 height in mm
+
+      // If the content is shorter than the A4 page height, center it vertically
+      let verticalOffset = 0;
+      if (imgHeight < a4Height) {
+        // Center the content vertically
+        verticalOffset = (a4Height - imgHeight) / 2;
+      }
+
+      // If content fits on one page
+      if (imgHeight <= a4Height) {
+        pdf.addImage(imgData, 'PNG', 0, verticalOffset, imgWidth, imgHeight, undefined, 'FAST');
+      } else {
+        // If content is taller than one page, split it into multiple pages
+        let offsetY = 0;
+        while (offsetY < canvas.height) {
+          const currentHeight = Math.min(imgHeight, canvas.height - offsetY); // Handle remaining height
+          pdf.addImage(imgData, 'PNG', 0, offsetY, imgWidth, currentHeight, undefined, 'FAST');
+          offsetY += currentHeight;
+
+          // If there's more content, add another page
+          if (offsetY < canvas.height) {
+            pdf.addPage(3);
+          }
+        }
+      }
+
       const fileName = `${inputFields}.pdf`;
       pdf.save(fileName);
-      setIsDownloaded(true)
-      setTimeout(() => {
-        setIsDownloaded(false)
-      }, 4000)
-      // Store the image data URL in localStorage
+
+      // Hide loading spinner once PDF is ready
+      loadingSpinner.style.display = "none"; // Hide the spinner
+
       const savedResumes = JSON.parse(localStorage.getItem('savedResumes')) || [];
       savedResumes.push(imgData);
       localStorage.setItem('savedResumes', JSON.stringify(savedResumes));
@@ -63,16 +94,19 @@ const Preview115 = () => {
       alert('Your Resume is downloaded');
       // navigate('/myresume');
     } catch (error) {
+      // Hide loading spinner if error occurs
+      loadingSpinner.style.display = "none";
       console.error('Error downloading PDF:', error);
     }
   };
 
+
   return (
     <div>
 
-      <header style={{fontSize:fontkasize, paddingLeft: '10px', paddingRight: '10px', textAlign: 'center' }}>
+      <header style={{fontSize:fontSize, paddingLeft: '10px', paddingRight: '10px', textAlign: 'center' }}>
         <h1>Tech ATS Resume Template</h1>
-        <small style={{fontSize:fontkasize, textAlign: 'center' }}> <i style={{fontSize:fontkasize, color: 'white', backgroundColor: 'red' }}> warning </i>: if resume dont show your data in resume , please refresh the page</small>
+        <small style={{fontSize:fontSize, textAlign: 'center' }}> <i style={{fontSize:fontSize, color: 'white', backgroundColor: 'red' }}> warning </i>: if resume dont show your data in resume , please refresh the page</small>
 
         <p>Your journey towards your dream job starts here! By crafting a professional resume with ResumeEra, you've taken the first step in showcasing your skills, experiences, and aspirations effectively. A well-structured resume is more than just a document—it's your story, your voice, and your opportunity to shine.
 
@@ -86,47 +120,47 @@ const Preview115 = () => {
 
           <div className='personalandword115'>
             <div className='personal115'>
-              <h3 style={{ color: headingColor, fontSize: headingsize }}>{personalInfo.firstName} {personalInfo.lastName}</h3>
-              <p className='jobtitle' style={{fontSize:fontkasize,fontSize:fontkasize, color: 'black', fontFamily: fontStyle }}>{work[0].map((works, index) => (
+              <h3 style={{color: headingColor, fontSize: fontSizeheading,fontFamily:fontStyle}}>{personalInfo.firstName} {personalInfo.lastName}</h3>
+              <p className='jobtitle' style={{fontSize:fontSize,fontSize:fontSize, color: 'black', fontFamily: fontStyle }}>{work[0].map((works, index) => (
                 <div key={index}>
-                  <p style={{fontSize:fontkasize, fontFamily: fontStyle, marginBottom: '-10px',color:fontColor }}>{works.jobtitle}</p>
+                  <p style={{fontSize:fontSize, fontFamily: fontStyle, marginBottom: '-10px',color:fontColor }}>{works.jobtitle}</p>
                 </div>
               ))}</p>
-              <p className='object' style={{fontSize:fontkasize, fontFamily: fontStyle, color: fontColor }}>{personalInfo.object}</p>
+              <p className='object' style={{fontSize:fontSize, fontFamily: fontStyle, color: fontColor }}>{personalInfo.object}</p>
             </div>
 
             <div>
               <div>
                 <div className="experience-section115 mt-4">
-                  <h6 className="details-title115" style={{ color: headingColor, fontSize: headingsize, }}>
-                    <i class="bi bi-briefcase m-3" style={{fontSize:fontkasize, border: `1px solid ${headingColor}`, padding: '7px', borderRadius: '50%' }}></i> WORK EXPERIENCE</h6>
+                  <h6 className="details-title115" style={{ color: headingColor, fontSize: fontSizeheading,fontFamily:fontStyle}}>
+                    <i class="bi bi-briefcase m-3" style={{fontSize:fontSize, border: `1px solid ${headingColor}`, padding: '7px', borderRadius: '50%' }}></i> WORK EXPERIENCE</h6>
                   
                   {work[0].map((works, index) => (
                     <div key={index} className="employment-history115 ms-4">
                       <div className="exp-inner1">
-                        <p style={{fontSize:fontkasize, color: fontColor, fontFamily: fontStyle, marginBottom: '-5px' }} className="employment-detail115">{works.jobtitle}</p>
-                        <p style={{fontSize:fontkasize, color: fontColor, fontFamily: fontStyle, marginBottom: '-5px' }} className="employment-detail115">{works.organization}</p>
-                        <p style={{fontSize:fontkasize, color: fontColor, fontFamily: fontStyle,fontStyle }} className="employment-duration115" ><i>{works.startYear} - {works.endYear}</i></p>
+                        <p style={{fontSize:fontSize, color: fontColor, fontFamily: fontStyle, marginBottom: '-5px' }} className="employment-detail115">{works.jobtitle}</p>
+                        <p style={{fontSize:fontSize, color: fontColor, fontFamily: fontStyle, marginBottom: '-5px' }} className="employment-detail115">{works.organization}</p>
+                        <p style={{fontSize:fontSize, color: fontColor, fontFamily: fontStyle,fontStyle }} className="employment-duration115" ><i>{works.startYear} - {works.endYear}</i></p>
 
                       </div>
                       <div>
-                        <p style={{fontSize:fontkasize, color: fontColor, fontFamily: fontStyle, }} className='aboutexperience115' >{works.aboutexperience}</p>
+                        <p style={{fontSize:fontSize, color: fontColor, fontFamily: fontStyle, }} className='aboutexperience115' >{works.aboutexperience}</p>
                       </div>
                     </div>
                   ))}
                 </div>
               </div>
               <div className=" ">
-                <h6 style={{ color: headingColor, fontSize: headingsize }} className='heading115'>
-                <i class="bi bi-backpack" style={{fontSize:fontkasize, border: `1px solid ${headingColor}`, padding: '7px', borderRadius: '50%' ,margin:'5px' }}></i>EDUCATION <br /></h6>
+                <h6 style={{ color: headingColor, fontSize: fontSizeheading,fontFamily:fontStyle}} className='heading115'>
+                <i class="bi bi-backpack" style={{fontSize:fontSize, border: `1px solid ${headingColor}`, padding: '7px', borderRadius: '50%' ,margin:'5px' }}></i>EDUCATION <br /></h6>
                 {education[0].map((edu, index) => (
                   <div key={index} className="education-item115">
                     <div className="d-flex justify-content-between">
                       <div className='ms-4'>
-                        <p style={{fontSize:fontkasize, color: fontColor, fontFamily: fontStyle, marginBottom: '-5px' }} className="employment-detail115">{edu.degree}</p>
-                        <p style={{fontSize:fontkasize, color: fontColor, fontFamily: fontStyle, marginBottom: '-5px' }} className="employment-detail115 ">{edu.university}</p>
-                        <p style={{fontSize:fontkasize, color: fontColor, fontFamily: fontStyle, marginBottom: '-5px' }}>{edu.city}</p>
-                        <p style={{fontSize:fontkasize, color: fontColor, fontFamily: fontStyle, }} className="employment-detail115 me-3" >{edu.startYear}-{edu.endYear}</p>
+                        <p style={{fontSize:fontSize, color: fontColor, fontFamily: fontStyle, marginBottom: '-5px' }} className="employment-detail115">{edu.degree}</p>
+                        <p style={{fontSize:fontSize, color: fontColor, fontFamily: fontStyle, marginBottom: '-5px' }} className="employment-detail115 ">{edu.university}</p>
+                        <p style={{fontSize:fontSize, color: fontColor, fontFamily: fontStyle, marginBottom: '-5px' }}>{edu.city}</p>
+                        <p style={{fontSize:fontSize, color: fontColor, fontFamily: fontStyle, }} className="employment-detail115 me-3" >{edu.startYear}-{edu.endYear}</p>
                       </div>
                     </div>
                   </div>
@@ -137,29 +171,29 @@ const Preview115 = () => {
 
           <div className='contactdivouter115'>
             <div className="contactdiv115">
-              <div className='contactinnerdiv115'><i className="bi bi-geo-alt-fill me-2 ms-2" style={{borderColor:fontColor,fontSize:fontkasize, color: fontColor }} /><p style={{fontSize:fontkasize, color: fontColor, fontFamily: fontStyle, }}>  {personalInfo.state} {personalInfo.postalCode}</p></div>
-              <div className='contactinnerdiv115'><i className="bi bi-telephone-fill me-2 ms-2" style={{borderColor:fontColor,fontSize:fontkasize, color: fontColor }} /><p style={{fontSize:fontkasize, color: fontColor, fontFamily: fontStyle, }}>{personalInfo.mobileNumber}</p></div>
-              <div className='contactinnerdiv115'><i className="bi bi-envelope me-2 ms-2" style={{borderColor:fontColor,fontSize:fontkasize, color: fontColor }} /><p style={{fontSize:fontkasize, color: fontColor, fontFamily: fontStyle, }}>{personalInfo.email}</p></div>
-              <div className='contactinnerdiv115'><i class="bi bi-github ms-2" style={{borderColor:fontColor,fontSize:fontkasize, color: bgColor }} /><p style={{fontSize:fontkasize, color: fontColor, fontFamily: fontStyle, }}>{socialMediaLink[0].github}</p></div>
+              <div className='contactinnerdiv115'><i className="bi bi-geo-alt-fill me-2 ms-2" style={{borderColor:fontColor,fontSize:fontSize, color: fontColor }} /><p style={{fontSize:fontSize, color: fontColor, fontFamily: fontStyle, }}>  {personalInfo.state} {personalInfo.postalCode}</p></div>
+              <div className='contactinnerdiv115'><i className="bi bi-telephone-fill me-2 ms-2" style={{borderColor:fontColor,fontSize:fontSize, color: fontColor }} /><p style={{fontSize:fontSize, color: fontColor, fontFamily: fontStyle, }}>{personalInfo.mobileNumber}</p></div>
+              <div className='contactinnerdiv115'><i className="bi bi-envelope me-2 ms-2" style={{borderColor:fontColor,fontSize:fontSize, color: fontColor }} /><p style={{fontSize:fontSize, color: fontColor, fontFamily: fontStyle, }}>{personalInfo.email}</p></div>
+              <div className='contactinnerdiv115'><i class="bi bi-github ms-2" style={{borderColor:fontColor,fontSize:fontSize, color: bgColor }} /><p style={{fontSize:fontSize, color: fontColor, fontFamily: fontStyle, }}>{socialMediaLink[0].github}</p></div>
             </div>
             <div className='technicalskills115'>
               <div className="inner-115-1 me-4">
-                <h6 style={{ color: headingColor, fontSize: headingsize }}><i class="bi bi-tools" style={{fontSize:fontkasize, border: `1px solid ${headingColor}`, padding: '7px', borderRadius: '50%' ,margin:'5px' }}/>SKILL</h6>
+                <h6 style={{ color: headingColor, fontSize: fontSizeheading,fontFamily:fontStyle}}><i class="bi bi-tools" style={{fontSize:fontSize, border: `1px solid ${headingColor}`, padding: '7px', borderRadius: '50%' ,margin:'5px' }}/>SKILL</h6>
                 
                 {keyskills[0].map((keys, index) => (
                   <div key={index} className=" d-flex justify-content-between">
                     <p className='technical-skill-item115' 
-                    style={{fontSize:fontkasize, color: fontColor, fontFamily: fontStyle, }}>
+                    style={{fontSize:fontSize, color: fontColor, fontFamily: fontStyle, }}>
                       {keys.keyskills}</p>
                     {/* 5-star rating system */}
                   </div>
                 ))}
               </div>
               <div className='certificate115'>
-                <h6 style={{ color: headingColor, fontSize: headingsize }}><i class="bi bi-file-text" style={{fontSize:fontkasize, border: `1px solid ${headingColor}`, padding: '7px', borderRadius: '50%' ,margin:'5px' }}/>CERTIFICATE</h6>
+                <h6 style={{ color: headingColor, fontSize: fontSizeheading,fontFamily:fontStyle }}><i class="bi bi-file-text" style={{fontSize:fontSize, border: `1px solid ${headingColor}`, padding: '7px', borderRadius: '50%' ,margin:'5px' }}/>CERTIFICATE</h6>
                 {Certificate && Certificate.map((img) => (
                   <div>
-                    <p style={{fontSize:fontkasize, color: fontColor }}>{img.certificateName}({img.issueDate})</p>
+                    <p style={{fontSize:fontSize, color: fontColor,fontFamily:fontStyle }}>{img.certificateName}({img.issueDate})</p>
                   </div>
                 ))}
               </div>
@@ -167,18 +201,18 @@ const Preview115 = () => {
           </div>
         </div>
         <div className="resume-download-section0">
-          <div style={{fontSize:fontkasize, width: '100%' }}>
+          <div style={{fontSize:fontSize, width: '100%' }}>
             <GoogleAd />
           </div>
-          <div style={{fontSize:fontkasize, width: '100%' }}>
+          <div style={{fontSize:fontSize, width: '100%' }}>
             <GoogleAd />
           </div>
           <div className='downloadbuttondiv'>
-            <input type="text" placeholder="Enter your resume name" className="resume-name-input" style={{fontSize:fontkasize, borderRadius: '5px', padding: '10px' }} onChange={(e) => setInputFields(e.target.value)} />
+            <input type="text" placeholder="Enter your resume name" className="resume-name-input" style={{fontSize:fontSize, borderRadius: '5px', padding: '10px' }} onChange={(e) => setInputFields(e.target.value)} />
             <button onClick={handleDownloadPDF} type="btn" className="btn btn-primary ms-2 download-button">Download</button>
           </div>
           {/* Color Picker for Background Color */}
-          <div className='d-flex border fontfamilydiv' style={{fontSize:fontkasize, marginTop: '5px', display: 'flex', flexDirection: 'row', justifyContent: 'center' }}>
+          <div className='d-flex border fontfamilydiv' style={{fontSize:fontSize, marginTop: '5px', display: 'flex', flexDirection: 'row', justifyContent: 'center' }}>
             <input type="color" value={bgColor} onChange={(e) => setBgColor(e.target.value)} className="bg-color-picker ms-2" />
             {/* Font Style Selector */}
             <select value={fontStyle} onChange={(e) => setFontStyle(e.target.value)} className="font-style-selector ms-2">
@@ -225,21 +259,20 @@ const Preview115 = () => {
           </div>
           <div className='colordiv'>
             <div>
-              <span style={{color:headingColor}}><i class="bi bi-patch-plus"></i>HS  </span>
-              <input type="number" value={headingsize} onChange={(e) => setheadingsize(Number(e.target.value))} className="bg-color-picker ms-2" />
+              <span style={{ color: headingColor }}><i class="bi bi-patch-plus"></i>HS  </span>
+              <input type="number" value={fontSizeheading} onChange={(e) => setFontSizeheading(Number(e.target.value))} className="bg-color-picker ms-2" />
             </div>
             <div>
-              <span style={{color:fontColor}}><i class="bi bi-patch-plus"></i>FS  </span>
-              <input type="number" value={fontkasize} onChange={(e) => setfontkasize(Number(e.target.value))} className="bg-color-picker ms-2" />
+              <span style={{ color: fontColor }}><i class="bi bi-patch-plus"></i>FS  </span>
+              <input type="number" value={fontSize} onChange={(e) => setFontSize(Number(e.target.value))} className="bg-color-picker ms-2" />
             </div>
           </div>
-          <div style={{fontSize:fontkasize, width: '100%' }}>
-            <GoogleAd />
-          </div>
-
+          <div id="loadingSpinner" style={{ display: "none", position: "fixed", top: "50%", left: "50%" }}>
+            <div class="spinner"></div>
+          </div> </div>
+           
         </div>
       </div>
-    </div>
   );
 };
 

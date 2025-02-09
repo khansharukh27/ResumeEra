@@ -3,69 +3,101 @@ import html2canvas from 'html2canvas';
 import jsPDF from 'jspdf';
 import React, { useState } from 'react';
 import { useSelector } from 'react-redux';
-import { useNavigate } from 'react-router-dom';
 import './CSS/preview111.css'
 // import Hobbies from '../Hobbies';
 import HobbyIcons from '../HobbyIcons';
 import GoogleAd from '../adFolder/GoogleAd';
 const Preview111 = () => {
   const [inputFields, setInputFields] = useState('resume.pdf');
-  const [bgColor, setBgColor] = useState('#6a213f'); // Default background color (wheat)
-  const [fontStyle, setFontStyle] = useState('Arial'); // Default font style
-  const [fontColor, setFontColor] = useState('#rrggbb')
-  const [headingColor, setHeadingColor] = useState('#5a1d36')
-  const [isDownloaded, setIsDownloaded] = useState(false);
+    const [bgColor, setBgColor] = useState('white'); // Default background color (wheat)
+    const [fontStyle, setFontStyle] = useState('Arial'); // Default font style
+    const [fontColor, setFontColor] = useState('#rrggbb')
+    const [headingColor, setHeadingColor] = useState('#6a8a3f')
+    // const [isDownloaded, setIsDownloaded] = useState(false);
+    const [fontSize, setFontSize] = useState(16); // Initial font size for paragraphs
+    const [fontSizeheading, setFontSizeheading] = useState(16); // Initial font size for headings
 
-  const navigate = useNavigate();
-  const personalInfo = useSelector((state) => state.reducer.personalInfo);
-  const education = useSelector((state) => [state.reducer.education]);
-  const keyskills = useSelector((state) => [state.reducer.keySkills]);
-  const work = useSelector((state) => [state.reducer.workExperience]);
-  const Honor = useSelector((state) => [state.reducer.honorAndaward]);
-  const Refrence = useSelector((state) => [state.reducer.addReference])
-  // const SoftSkill = useSelector((state) => [state.reducer.addSoftSkills])
-  const socialMediaLink = useSelector((state) => [state.reducer.socialMediaLink]);
-  const languages = useSelector((state) => [state.reducer.addLanguage]);
-  const certi = useSelector((state) => state.reducer.certificateData);
-  const Hobbies = useSelector((state) => [state.reducer.addHobies])
-  const project = useSelector((state) => [state.reducer.projectData])
-  console.log('hobbies preview 110:-', Hobbies)
-  // console.log('Certificate:-', Certificate)
-  console.log('honorand award:-', Honor)
-  let timeoutId;
-const handleDownloadPDF = async () => {
-  const element = document.getElementById('Alisha_mirza101');
-  try {
-    const scale = 2.5;
-    const canvas = await html2canvas(element, {
-      scale: scale,
-      useCORS: true,
-      logging: true,
-    });
-    const pdf = new jsPDF('p', 'mm', 'a4');
-    const imgData = canvas.toDataURL('image/png');
-    const imgWidth = 210;
-    const imgHeight = (canvas.height * imgWidth) / canvas.width;
-    pdf.addImage(imgData, 'PNG', 0, 0, imgWidth, imgHeight, undefined, 'FAST');
-    const fileName = `${inputFields}.pdf`;
-    pdf.save(fileName);
 
-    setIsDownloaded(true);
-    clearTimeout(timeoutId); // Clear any existing timeout
-    timeoutId = setTimeout(() => {
-      setIsDownloaded(false);
-    }, 4000);
+    // const navigate = useNavigate();
+    const personalInfo = useSelector((state) => state.reducer.personalInfo);
+    const education = useSelector((state) => [state.reducer.education]);
+    const keyskills = useSelector((state) => [state.reducer.keySkills]);
+    const work = useSelector((state) => [state.reducer.workExperience]);
+    const Honor = useSelector((state) => [state.reducer.honorAndaward]);
+    // const Refrence = useSelector((state) => [state.reducer.addReference])
+    const SoftSkill = useSelector((state) => [state.reducer.addSoftSkills])
+    const socialMediaLink = useSelector((state) => [state.reducer.socialMediaLink]);
+    const languages = useSelector((state) => [state.reducer.addLanguage]);
+    const certi = useSelector((state) => state.reducer.certificateData);
+    const Hobbies = useSelector((state) => [state.reducer.addHobies])
+    const project = useSelector((state) => [state.reducer.projectData])
+    console.log('hobbies preview 301:-', Hobbies)
+    console.log('honorand award:-', Honor)
 
-    const savedResumes = JSON.parse(localStorage.getItem('savedResumes')) || [];
-    savedResumes.push(imgData);
-    localStorage.setItem('savedResumes', JSON.stringify(savedResumes));
+    const handleDownloadPDF = async () => {
+        // Show loading spinner
+        const loadingSpinner = document.getElementById('loadingSpinner');
+        loadingSpinner.style.display = "block"; // Show the spinner
 
-    alert('Your Resume is downloaded');
-  } catch (error) {
-    console.error('Error downloading PDF:', error);
-  }
-};
+        const element = document.getElementById('Alisha_mirza111');
+        try {
+            const scale = 3; // Increase the scale for better resolution
+            const canvas = await html2canvas(element, {
+                scale: scale,
+                useCORS: true, // Allows cross-origin images to be rendered correctly
+                logging: false, // Disable logging for better performance
+            });
+            const pdf = new jsPDF('p', 'mm', 'a4');
+            const imgData = canvas.toDataURL('image/png');
 
+            const imgWidth = 210; // A4 width in mm
+            const imgHeight = (canvas.height * imgWidth) / canvas.width;
+
+            const a4Height = 297; // A4 height in mm
+
+            // If the content is shorter than the A4 page height, center it vertically
+            let verticalOffset = 0;
+            if (imgHeight < a4Height) {
+                // Center the content vertically
+                verticalOffset = (a4Height - imgHeight) / 2;
+            }
+
+            // If content fits on one page
+            if (imgHeight <= a4Height) {
+                pdf.addImage(imgData, 'PNG', 0, verticalOffset, imgWidth, imgHeight, undefined, 'FAST');
+            } else {
+                // If content is taller than one page, split it into multiple pages
+                let offsetY = 0;
+                while (offsetY < canvas.height) {
+                    const currentHeight = Math.min(imgHeight, canvas.height - offsetY); // Handle remaining height
+                    pdf.addImage(imgData, 'PNG', 0, offsetY, imgWidth, currentHeight, undefined, 'FAST');
+                    offsetY += currentHeight;
+
+                    // If there's more content, add another page
+                    if (offsetY < canvas.height) {
+                        pdf.addPage();
+                    }
+                }
+            }
+
+            const fileName = `${inputFields}.pdf`;
+            pdf.save(fileName);
+
+            // Hide loading spinner once PDF is ready
+            loadingSpinner.style.display = "none"; // Hide the spinner
+
+            const savedResumes = JSON.parse(localStorage.getItem('savedResumes')) || [];
+            savedResumes.push(imgData);
+            localStorage.setItem('savedResumes', JSON.stringify(savedResumes));
+
+            alert('Your Resume is downloaded');
+            // navigate('/myresume');
+        } catch (error) {
+            // Hide loading spinner if error occurs
+            loadingSpinner.style.display = "none";
+            console.error('Error downloading PDF:', error);
+        }
+    };
 
   return (
     <div className='resume111'>
@@ -85,41 +117,41 @@ const handleDownloadPDF = async () => {
       </div>
       <h1>Functional-ATS-Resume-Template</h1>
       <div className='main111'>
-        <div className='preview111' id="Alisha_mirza101">
-          <div className='about111' style={{ backgroundColor: bgColor }}>
-            <h3 style={{ marginBottom: '-5px',marginTop:'0px' }}>{personalInfo.firstName} {personalInfo.lastName}</h3>
-            <p style={{ color: 'lightgray', fontSize: 'xx-small', whiteSpace: 'none' }}>{work[0][0].jobtitle}</p>
-            <hr style={{ marginTop: '-15px' }} />
-            <p style={{ color: fontColor, fontFamily: fontStyle, lineHeight: '.95' }}>{personalInfo.object}</p>
+        <div className='preview111' id="Alisha_mirza111" style={{backgroundColor:bgColor}}>
+          <div className='about111' style={{color: fontColor, fontFamily: fontStyle,fontSize:fontSize}}>
+            <h3 style={{ marginBottom: '-5px',marginTop:'0px',fontFamily:fontStyle,color:headingColor,fontSize:fontSizeheading }}>{personalInfo.firstName} {personalInfo.lastName}</h3>
+            <p style={{color: fontColor, fontFamily: fontStyle,fontSize:fontSize, whiteSpace: 'none' }}>{work[0][0].jobtitle}</p>
+            <hr style={{ marginTop: '-15px'}} />
+            <p style={{ color: fontColor, fontFamily: fontStyle,fontSize:fontSize, lineHeight: '.95' }}>{personalInfo.object}</p>
           </div>
           <div className='d-flex'>
             <div className='contact111'>
               <div className="contactdiv111">
-                <div className='contactinnerdiv111'><i className="bi bi-geo-alt-fill me-2 ms-2" style={{ color: bgColor }} /><p style={{ color: fontColor, fontFamily: fontStyle, }}>  {personalInfo.state} {personalInfo.postalCode}</p></div>
-                <div className='contactinnerdiv111'><i className="bi bi-telephone-fill me-2 ms-2" style={{ color: bgColor }} /><p style={{ color: fontColor, fontFamily: fontStyle, }}>{personalInfo.mobileNumber}</p></div>
-                <div className='contactinnerdiv111'><i className="bi bi-envelope me-2 ms-2" style={{ color: bgColor }} /><p style={{ color: fontColor, fontFamily: fontStyle,wordBreak:'break-all' }}>{personalInfo.email}</p></div>
-                <div className='contactinnerdiv111'><i class="bi bi-github ms-2" style={{ color: bgColor }} /><p style={{ color: fontColor, fontFamily: fontStyle, }}>{socialMediaLink[0].github}</p></div>
+                <div className='contactinnerdiv111'><i className="bi bi-geo-alt-fill me-2 ms-2" style={{color: fontColor, fontFamily: fontStyle,fontSize:fontSize }} /><p style={{color: fontColor, fontFamily: fontStyle,fontSize:fontSize}}>  {personalInfo.state} {personalInfo.postalCode}</p></div>
+                <div className='contactinnerdiv111'><i className="bi bi-telephone-fill me-2 ms-2" style={{color: fontColor, fontFamily: fontStyle,fontSize:fontSize }} /><p style={{color: fontColor, fontFamily: fontStyle,fontSize:fontSize}}>{personalInfo.mobileNumber}</p></div>
+                <div className='contactinnerdiv111'><i className="bi bi-envelope me-2 ms-2" style={{color: fontColor, fontFamily: fontStyle,fontSize:fontSize }} /><p style={{color: fontColor, fontFamily: fontStyle,fontSize:fontSize,wordBreak:'break-all' }}>{personalInfo.email}</p></div>
+                <div className='contactinnerdiv111'><i class="bi bi-github ms-2" style={{color: fontColor, fontFamily: fontStyle,fontSize:fontSize }} /><p style={{color: fontColor, fontFamily: fontStyle,fontSize:fontSize}}>{socialMediaLink[0].github}</p></div>
               </div>
               <div className="inner-104-1 me-4">
-                <h6 style={{ color: bgColor }}>SKILL</h6>
+                <h6 style={{fontFamily:fontStyle,color:headingColor,fontSize:fontSizeheading}}>SKILL</h6>
                 <hr style={{ width: 'inherit' }} />
                 {keyskills[0].map((keys, index) => (
                   <div key={index} className=" d-flex justify-content-between">
-                    <p className='technical-skill-item111' style={{ color: fontColor, fontFamily: fontStyle, }}>{keys.keyskills}</p>
+                    <p className='technical-skill-item111' style={{color: fontColor, fontFamily: fontStyle,fontSize:fontSize}}>{keys.keyskills}</p>
                     {/* 5-star rating system */}
                   </div>
                 ))}
               </div>
               <div className=" ">
-                <h6 style={{ color: bgColor }} className='heading107'>CERTIFICATION <br /><hr style={{ width: 'inherite' }} /></h6>
+                <h6 style={{ fontFamily:fontStyle,color:headingColor,fontSize:fontSizeheading}} className='heading107'>CERTIFICATION <br /><hr style={{ width: 'inherite' }} /></h6>
                 {certi.map((edu, index) => (
                   <div key={index} className="">
                     <div className="d-flex justify-content-between">
                       <div>
-                        <p style={{ color: fontColor, fontFamily: fontStyle, }} className="">{edu.organization}</p>
-                        <p style={{ color: fontColor, fontFamily: fontStyle, }} className=" ">{edu.description}</p>
-                        <p style={{ color: fontColor, fontFamily: fontStyle, }}>{edu.city}</p>
-                        <p className=" me-3" style={{ color: fontColor, fontFamily: fontStyle, }}>{edu.issueDate}</p>
+                        <p style={{color: fontColor, fontFamily: fontStyle,fontSize:fontSize }} className="">{edu.organization}</p>
+                        <p style={{color: fontColor, fontFamily: fontStyle,fontSize:fontSize }} className=" ">{edu.description}</p>
+                        <p style={{color: fontColor, fontFamily: fontStyle,fontSize:fontSize }}>{edu.city}</p>
+                        <p className=" me-3" style={{color: fontColor, fontFamily: fontStyle,fontSize:fontSize}}>{edu.issueDate}</p>
                       </div>
                     </div>
                   </div>
@@ -128,39 +160,39 @@ const handleDownloadPDF = async () => {
             </div>
             <div className='work111'>
               <div className="experience-section104 mt-4">
-                <h6 className="details-title104" style={{ color: bgColor }}>
+                <h6 className="details-title104" style={{ fontFamily:fontStyle,color:headingColor,fontSize:fontSizeheading }}>
                   VOLUNTEER EXPERIENCE</h6>
                 <hr />
                 {work[0].map((works, index) => (
                   <div key={index} className="employment-history101 ms-4">
                     <div className="exp-inner1">
-                      <p style={{ color: fontColor, fontFamily: fontStyle,marginBottom:'-5px' }} className="employment-detail104">{works.jobtitle}</p>
-                      <p style={{ color: fontColor, fontFamily: fontStyle,marginBottom:'-5px'}} className="employment-detail104">{works.organization}</p>
-                      <p style={{ color: fontColor, fontFamily: fontStyle }} className="employment-duration104" >{works.startYear} - {works.endYear}</p>
+                      <p style={{color: fontColor, fontFamily: fontStyle,fontSize:fontSize,marginBottom:'-5px' }} className="employment-detail104">{works.jobtitle}</p>
+                      <p style={{color: fontColor, fontFamily: fontStyle,fontSize:fontSize,marginBottom:'-5px'}} className="employment-detail104">{works.organization}</p>
+                      <p style={{color: fontColor, fontFamily: fontStyle,fontSize:fontSize }} className="employment-duration104" >{works.startYear} - {works.endYear}</p>
                     </div>
                     <div>
-                      <p style={{ color: fontColor, fontFamily: fontStyle, }} className='aboutexperience104' >{works.aboutexperience}</p>
+                      <p style={{color: fontColor, fontFamily: fontStyle,fontSize:fontSize, }} className='aboutexperience104' >{works.aboutexperience}</p>
                     </div>
                   </div>
                 ))}
               </div>
               <div className=" ">
-                <h6 style={{ color: bgColor }} className='heading107'>EDUCATION <br /><hr style={{ width: 'inherit' }} /></h6>
+                <h6 style={{fontFamily:fontStyle,color:headingColor,fontSize:fontSizeheading}} className='heading107'>EDUCATION <br /><hr style={{ width: 'inherit' }} /></h6>
                 {education[0].map((edu, index) => (
                   <div key={index} className="education-item111">
                     <div className="d-flex justify-content-between">
                       <div className='ms-4'>
-                        <p style={{ color: fontColor, fontFamily: fontStyle,marginBottom:'-5px' }} className="employment-detail111">{edu.degree}</p>
-                        <p style={{ color: fontColor, fontFamily: fontStyle,marginBottom:'-5px' }} className="employment-detail111 ">{edu.university}</p>
-                        <p style={{ color: fontColor, fontFamily: fontStyle,marginBottom:'-5px' }}>{edu.city}</p>
-                        <p style={{ color: fontColor, fontFamily: fontStyle, }} className="employment-detail111 me-3" >{edu.startYear}-{edu.endYear}</p>
+                        <p style={{color: fontColor, fontFamily: fontStyle,fontSize:fontSize,marginBottom:'-5px' }} className="employment-detail111">{edu.degree}</p>
+                        <p style={{color: fontColor, fontFamily: fontStyle,fontSize:fontSize,marginBottom:'-5px' }} className="employment-detail111 ">{edu.university}</p>
+                        <p style={{color: fontColor, fontFamily: fontStyle,fontSize:fontSize,marginBottom:'-5px' }}>{edu.city}</p>
+                        <p style={{color: fontColor, fontFamily: fontStyle,fontSize:fontSize, }} className="employment-detail111 me-3" >{edu.startYear}-{edu.endYear}</p>
                       </div>
                     </div>
                   </div>
                 ))}
               </div>
               <div className="">
-                <h6 style={{ color: bgColor }}>LANGUAGE</h6>
+                <h6 style={{fontFamily:fontStyle,color:headingColor,fontSize:fontSizeheading}}>LANGUAGE</h6>
                 <hr style={{ width: 'inherit' }} />
                 {languages[0].reduce((result, _, index, array) => {
                   if (index % 2 === 0) result.push(array.slice(index, index + 2));
@@ -174,7 +206,7 @@ const handleDownloadPDF = async () => {
                           className="col-6 d-flex justify-content-between"
                           style={{ paddingLeft: "10px", paddingRight: "10px" }}
                         >
-                          <p className='language' style={{ color: fontColor, fontFamily: fontStyle }}>
+                          <p className='language' style={{ color: fontColor, fontFamily: fontStyle,fontSize:fontSize }}>
                             {keys.language}
                           </p>
                         </div>
@@ -241,6 +273,19 @@ const handleDownloadPDF = async () => {
             <input type="color" value={headingColor} onChange={(e) => setHeadingColor(e.target.value)} className="bg-color-picker ms-2" />
           </div>
         </div>
+        <div className='colordiv'>
+            <div>
+              <span style={{ color: headingColor }}><i class="bi bi-patch-plus"></i>HS  </span>
+              <input type="number" value={fontSizeheading} onChange={(e) => setFontSizeheading(Number(e.target.value))} className="bg-color-picker ms-2" />
+            </div>
+            <div>
+              <span style={{ color: fontColor }}><i class="bi bi-patch-plus"></i>FS  </span>
+              <input type="number" value={fontSize} onChange={(e) => setFontSize(Number(e.target.value))} className="bg-color-picker ms-2" />
+            </div>
+          </div>
+          <div id="loadingSpinner" style={{ display: "none", position: "fixed", top: "50%", left: "50%" }}>
+            <div class="spinner"></div>
+          </div>
         <div style={{ width: 'inherit' }}>
           <GoogleAd />
         </div>
