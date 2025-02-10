@@ -391,6 +391,10 @@ import WhatistheBestResumeFormatforFreshers from "./component/ImportantPost/What
 import TypesofResumeFormatsforFresers from "./component/ImportantPost/TypesofResumeFormatsforFresers.jsx";
 import Stepd_by_StepGuidetoWritingaFresherResume from "./component/ImportantPost/Stepd_by_StepGuidetoWritingaFresherResume.jsx";
 import WhatisaFunctionalResume from "./component/ImportantPost/functional resume/WhatisaFunctionalResume.jsx";
+import TeenagerResumeWithoutWorkExperience from "./component/ImportantPost/teenager resume/TeenagerResumeWithoutWorkExperience.jsx";
+import HowtoCreateaResumeforYourFirstJobasaStudent from "./component/ImportantPost/teenager resume/HowtoCreateaResumeforYourFirstJobasaStudent.jsx";
+import FirstJobResumeExamples from "./component/ImportantPost/teenager resume/FirstJobResumeExamples.jsx";
+import StudentResumeExampleswithNoExperience from "./component/ImportantPost/teenager resume/StudentResumeExampleswithNoExperience.jsx";
 
 var images = [
   { id: 1, src: resum1, alt: "Professional Resume Template 1",description:'Professional and elegant resume template with a timeline structure' },
@@ -730,7 +734,7 @@ function App() {
         />
         <Route
           path="/resume-writing-tips-for-remote-jobs"
-          element={<ResumeRemoteJobs />}
+          element={<ResumeRemoteJobs fresherResumeImage={fresherResumeImage}/>}
         />
         <Route path="/resume-tip-component" element={<ResumeTipsComponent />} />
         <Route path="/xyz-formula-resume" element={<XYZFormula techImages={techImages} fresherResumeImage={fresherResumeImage} />} />
@@ -1472,6 +1476,22 @@ function App() {
 <Route
           path="/what-is-a-functional-resume"
           element={<WhatisaFunctionalResume fresherResumeImage={fresherResumeImage} techImages={techImages} />}
+        />
+        <Route
+          path="/how-to-create-a-teenager-resume-without-work-experience"
+          element={<TeenagerResumeWithoutWorkExperience fresherResumeImage={fresherResumeImage} techImages={techImages} />}
+        />
+        <Route
+          path="/how-to-create-a-resume-for-your-first-job-as-a-student"
+          element={<HowtoCreateaResumeforYourFirstJobasaStudent fresherResumeImage={fresherResumeImage} techImages={techImages} />}
+        />
+        <Route
+          path="/1st-job-resume-examples"
+          element={<FirstJobResumeExamples fresherResumeImage={fresherResumeImage} techImages={techImages} />}
+        />
+        <Route
+          path="/student-resume-examples-with-no-experience"
+          element={<StudentResumeExampleswithNoExperience fresherResumeImage={fresherResumeImage} techImages={techImages} />}
         />
 
 

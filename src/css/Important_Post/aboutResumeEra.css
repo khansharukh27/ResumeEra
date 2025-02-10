@@ -333,9 +333,7 @@ margin: 30px;
   
   /* Responsive Design */
   @media (max-width: 768px) {
-    .Resume-Builder {
-      padding: 5px;
-    }
+   
   
     .Resume-Builder h2 {
       font-size: 1.75rem;
@@ -363,6 +361,8 @@ margin: 30px;
         box-shadow: none;
         margin-left:0px;
         border-radius: 0px; 
+        text-align: justify;
+        margin-left: 15px;
         /* align-items: center; */
         /* text-align: center; */
     }

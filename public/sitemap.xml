@@ -10,22 +10,12 @@
   </url>
   <!-- Dynamically generated URLs for images -->
   <!-- Example for images -->
-  <url>
-    <loc>https://resumeera.xyz/ads.txt</loc>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://resumeera.xyz/myresume</loc>
-    <priority>1.0</priority>
-  </url>
+  
   <url>
     <loc>https://resumeera.xyz/AboutUs</loc>
     <priority>1.0</priority>
   </url>
-  <url>
-    <loc>https://resumeera.xyz/important_post</loc>
-    <priority>1.0</priority>
-  </url>
+  
   
   <url>
     <loc>https://resumeera.xyz/how-to-create-a-professional-resume</loc>

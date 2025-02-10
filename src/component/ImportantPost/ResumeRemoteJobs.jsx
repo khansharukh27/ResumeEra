@@ -7,13 +7,18 @@ import RandomeArticleToBlogCareer from "../RandomeArticleToBlogCareer";
 import AuthorCard from "../AuthorCard";
 import Resume_Writing_Tips_for_Remote_Jobs from '../../image/image_for_link/Resume Writing Tips for Remote Jobs.jpg';
 import GoogleAd from "../adFolder/GoogleAd";
-const ResumeRemoteJobs = () => {
+import ResumeEraHeading from "../ResumeEraHeading";
+import FresherResume from "../FresherResume";
+const ResumeRemoteJobs = (prop) => {
+  const {fresherResumeImage} = prop;
   const ArticleUrl =
-            "https://resumeera.xyz/resume-writing-tips-for-remote-jobs";
-          const ArticleTitle = "10-Resume Writing Tips for Remote Jobs";
-          useEffect(() => {
-            window.scrollTo(0, 0);
-          }, []);
+    "https://resumeera.xyz/resume-writing-tips-for-remote-jobs";
+  const ArticleTitle = "10-Resume Writing Tips for Remote Jobs";
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+  const title = '10-Resume Writing Tips for Remote Jobs'
+  const publishDate = '2023-01-10'
   return (
     <div >
       <Helmet>
@@ -71,25 +76,10 @@ const ResumeRemoteJobs = () => {
           `}
         </script>
       </Helmet>
-     
+      <ResumeEraHeading title={title} publishDate={publishDate} />
       <article className="aboutResumeEra">
-        <h1>10-Resume Writing Tips for Remote Jobs</h1>
-        <div className="date-author-container">
-          <img
-            src="https://resumeera.xyz/static/media/best_logo.895bb22edf6c08600c86.webp"
-            alt="ResumeEra Logo"
-            className="author-logo"
-            style={{ width: "50px", height: "50px" }}
-          />
-          <small className="author-details">
-            ✍️ By the <span className="author-highlight">ResumeEra Team</span> |
-            Published:{""}
-            <span className="author-highlight">December 30, 2024</span> | ⏱️{" "}
-            <span className="author-highlight">8 min read</span>
-          </small>
-        </div>
         <figure>
-          <img style={{height:'auto'}} src={Resume_Writing_Tips_for_Remote_Jobs} alt="10-Resume Writing Tips for Remote Jobs" />
+          <img style={{ height: 'auto' }} src={Resume_Writing_Tips_for_Remote_Jobs} alt="10-Resume Writing Tips for Remote Jobs" />
         </figure>
         <section>
           <h2>Introduction</h2>
@@ -99,24 +89,90 @@ const ResumeRemoteJobs = () => {
           <p>
             In today's competitive job market, understanding how to make your resume stand out is more important than ever. Remote jobs demand a unique set of skills and qualities, such as proficiency in digital tools, the ability to manage time effectively, and a knack for collaboration across distances. By crafting a resume that emphasizes these strengths, you can position yourself as an ideal candidate for remote opportunities. 🌟💼🖋️
           </p>
-        </section><div><GoogleAd/></div>
+        </section><div><GoogleAd /></div>
+
+
         <section>
           <h3>1. Understand the Job Description</h3>
-          <p>
-            The first step to creating an effective resume is understanding the job description thoroughly. Remote job postings often include specific requirements like familiarity with certain tools, time zone adaptability, or self-motivation. 🧐🖊️📄
-          </p>
-          <p>
-            Taking the time to carefully analyze the job description allows you to tailor your resume effectively. Remote roles often list precise qualifications, such as experience with project management software or the ability to coordinate with teams in different time zones. By addressing these requirements, you can show prospective employers that you’re the perfect fit for their team.
-          </p>
-          <ul>
-            <li>
-              <strong>Analyze Keywords:</strong> Identify and incorporate relevant keywords from the job description into your resume. For instance, if a posting mentions "proficiency in Asana," ensure this is listed under your skills.
-            </li>
-            <li>
-              <strong>Match Employer Needs:</strong> Align your experiences and skills with what the employer is looking for. Tailoring your resume for each application increases your chances of standing out. 🎯🧩✔️
-            </li>
-          </ul>
-        </section><div><GoogleAd/></div>
+          <p> The first step to creating an effective resume is
+            understanding the job description thoroughly. Remote
+            job postings often include specific requirements like
+            familiarity with certain tools, time zone adaptability,
+            or self-motivation. 🧐🖊️📄 </p>
+          <p> Taking the time to carefully analyze the job description
+            allows you to tailor your resume effectively. Remote roles
+            often list precise qualifications, such as experience with
+            project management software or the ability to coordinate with
+            teams in different time zones. By addressing these requirements,
+            you can show prospective employers that you’re the perfect fit for their team. </p>
+          <ul> <li> <strong>Analyze Keywords:</strong> Identify and incorporate relevant keywords
+            from the job description into your resume. For instance, if a posting mentions
+            "proficiency in Asana," ensure this is listed under your skills. </li>
+            <li> <strong>Match Employer Needs:</strong> Align your experiences and skills with what
+              the employer is looking for. Tailoring your resume for each application increases your
+              chances of standing out. 🎯🧩✔️ </li> </ul>
+          <div className="d-md-flex justify-content-between">
+          <div className="strong-point">
+            <h4>Example Job Description:</h4>
+            <p><strong>About the Job:</strong></p> <p><strong>About Us:</strong><br />
+              Soul AI is a pioneering company founded by IIT Bombay and IIM Ahmedabad alumni,
+              with a strong founding team from IITs, NITs, and BITS. We specialize in
+              delivering high-quality human-curated data, AI-first scaled operations services,
+              and more. Based in SF and Hyderabad, we are a young, fast-moving team on a mission
+              to build AI for Good, driving innovation and positive societal impact. </p>
+            <p><strong>Job Title:</strong> Frontend Developer (Freelance)<br /> <strong>Location:</strong> Remote<br />
+              <strong>Key Responsibilities:</strong>
+              <ul>
+                <li>Write clean, efficient code for data processing and transformation.</li>
+                <li>Debug and resolve technical issues.</li>
+                <li>Evaluate and review code to ensure quality and compliance.</li>
+              </ul> </p>
+            <p><strong>Required Qualifications:</strong>
+              <ul>
+                <li>1+ year of Frontend Development experience.</li>
+                <li>Proficiency in JavaScript frameworks (React, Angular).</li>
+                <li>Strong knowledge of HTML, CSS.</li>
+                <li>Familiarity with testing/debugging tools.</li> </ul> </p>
+            <p><strong>Why Join Us?</strong><br />
+              Competitive pay (₹1000/hour).<br /> Flexible hours.<br /> Remote opportunity.<br />
+              <strong>NOTE:</strong> Pay will vary by project and typically is up to Rs.
+              1000 per hour (if you work an average of 3 hours every day -
+              that could be as high as Rs 90K per month) once you clear our screening process.
+            </p>
+          </div>
+          <div className="strong-point">
+            <h4>Sample Resume Tailored to Job Description:</h4>
+            <p><strong>John Doe</strong><br /> Email: john.doe@example.com<br /> Phone: 123-456-7890<br />
+              LinkedIn: linkedin.com/in/johndoe </p> <p><strong>Objective:</strong><br />
+              A detail-oriented and innovative Frontend Developer with 2+ years of experience
+              in JavaScript frameworks like React and Angular, seeking to contribute my expertise
+              in developing clean and efficient code at Soul AI. Passionate about AI-driven
+              innovation and eager to collaborate with remote teams on impactful projects. </p>
+            <p><strong>Skills:</strong> <ul> <li>Proficient in JavaScript (React, Angular)</li>
+              <li>Strong understanding of HTML, CSS, and responsive web design</li>
+              <li>Experience with debugging and testing tools (Jest, Cypress)</li>
+              <li>Version control using Git</li> <li>Familiar with Agile development methodologies</li>
+            </ul> </p> <p><strong>Professional Experience:</strong>
+              <br /> <strong>Frontend Developer</strong> | XYZ Tech Solutions | Jan 2023 - Present<br />
+              <ul> <li>Developed and maintained complex frontend features using React, improving user
+                engagement by 25%.</li> <li>Collaborated with a cross-functional team to design and
+                  implement scalable web applications.</li> <li>Debugged and resolved client-reported
+                    issues, reducing turnaround time by 15%.</li> <li>Ensured code quality and compliance
+                      by conducting regular code reviews and adhering to best practices.</li> </ul>
+            </p> <p><strong>Education:</strong><br />
+              <strong>Bachelor's in Computer Science</strong>
+              | University of ABC | Graduated May 2022 </p> <p><strong>Certifications:</strong><br />
+              JavaScript (React) - FreeCodeCamp, 2022<br />
+              HTML & CSS - Codecademy, 2021 </p> <p> By analyzing the job description and
+                tailoring your resume, you can highlight relevant skills and experiences that
+                make you stand out as the best candidate for the position. 🌟 </p>
+
+          </div>
+          </div>
+          <FresherResume fresherResumeImage={fresherResumeImage}/>
+          
+        </section>
+        <div><GoogleAd /></div>
         <section>
           <h3>2. Emphasize Remote Work Skills</h3>
           <p>
@@ -139,7 +195,7 @@ const ResumeRemoteJobs = () => {
               <strong>Technical Competency:</strong> Demonstrate familiarity with remote work essentials such as VPNs, cloud-based software, and troubleshooting basic technical issues. These skills show that you can navigate the technical challenges of working remotely without constant IT support. 🔧🖥️🌐
             </li>
           </ul>
-        </section><div><GoogleAd/></div>
+        </section><div><GoogleAd /></div>
         <section>
           <h3>3. Structure Your Resume for Remote Jobs</h3>
           <p>
@@ -181,7 +237,7 @@ const ResumeRemoteJobs = () => {
           <p>
             Adding context and quantifiable results to your achievements demonstrates the impact you’ve made in previous roles, making your application more compelling.
           </p>
-        </section><div><GoogleAd/></div>
+        </section><div><GoogleAd /></div>
         <section>
           <h3>4. Demonstrate Communication Skills</h3>
           <p>
@@ -201,7 +257,7 @@ const ResumeRemoteJobs = () => {
               <strong>Quantify Achievements:</strong> Use metrics wherever possible to give a clear picture of your impact. For example, "Improved team communication efficiency by 30% through optimized reporting tools." 📊📈🎯
             </li>
           </ul>
-        </section><div><GoogleAd/></div>
+        </section><div><GoogleAd /></div>
         <section>
           <h3>5. Highlight Remote Work Experience</h3>
           <p>
@@ -219,7 +275,7 @@ const ResumeRemoteJobs = () => {
           <p>
             Including a separate section for remote work experience makes it easy for employers to recognize your suitability for their role. Providing specific examples and metrics further strengthens your candidacy.
           </p>
-        </section><div><GoogleAd/></div>
+        </section><div><GoogleAd /></div>
         <section>
           <h3>6. Tailor Your Resume for ATS (Applicant Tracking Systems)</h3>
           <p>
@@ -242,7 +298,7 @@ const ResumeRemoteJobs = () => {
           <p>
             By creating an ATS-friendly resume, you increase the likelihood of your application being shortlisted for further review.
           </p>
-        </section><div><GoogleAd/></div>
+        </section><div><GoogleAd /></div>
         <section>
           <h3>7. Showcase Adaptability and Problem-Solving Skills</h3>
           <p>
@@ -262,7 +318,7 @@ const ResumeRemoteJobs = () => {
           <p>
             Demonstrating adaptability and problem-solving skills assures employers that you can handle the demands of remote work with confidence.
           </p>
-        </section><div><GoogleAd/></div>
+        </section><div><GoogleAd /></div>
         <section>
           <h3>8. Include Certifications and Training</h3>
           <p>
@@ -279,7 +335,7 @@ const ResumeRemoteJobs = () => {
           <p>
             Certifications add credibility to your resume and help establish you as a well-rounded candidate.
           </p>
-        </section><div><GoogleAd/></div>
+        </section><div><GoogleAd /></div>
         <section>
           <h3>9. Add a Portfolio or Links</h3>
           <p>
@@ -297,7 +353,7 @@ const ResumeRemoteJobs = () => {
           <p>
             These links give potential employers a more comprehensive understanding of your capabilities and accomplishments.
           </p>
-        </section><div><GoogleAd/></div>
+        </section><div><GoogleAd /></div>
         <section>
           <h3>10. Proofread and Edit Thoroughly</h3>
           <p>
@@ -314,7 +370,7 @@ const ResumeRemoteJobs = () => {
           <p>
             Taking the time to edit your resume thoroughly can make a significant difference in how it’s received.
           </p>
-        </section><div><GoogleAd/></div>
+        </section><div><GoogleAd /></div>
         <section>
           <h2>Conclusion</h2>
           <p>
@@ -323,41 +379,41 @@ const ResumeRemoteJobs = () => {
           <p>
             A well-prepared resume not only showcases your qualifications but also reflects your understanding of the unique challenges and opportunities presented by remote work. By taking the time to refine your resume, you can increase your chances of landing your ideal remote job and advancing your career. 🌍💻✨
           </p>
-        </section><div><GoogleAd/></div>
+        </section><div><GoogleAd /></div>
         <section>
           <h2>Frequently Asked Questions (FAQ)</h2>
           <div className="faq">
             <h3>Q1: What are the key skills for remote jobs?</h3>
             <p>A1: Key skills for remote jobs include time management, proficiency in digital communication tools, self-motivation, technical competency, and adaptability.</p>
-            
+
             <h3>Q2: How can I make my resume stand out for remote positions?</h3>
             <p>A2: Tailor your resume to highlight remote-specific skills, use keywords from the job description, and showcase your remote work experience and achievements.</p>
-            
+
             <h3>Q3: Should I include a separate section for remote work experience?</h3>
             <p>A3: Yes, including a dedicated section for remote work experience can make it easier for employers to recognize your suitability for remote roles.</p>
-            
+
             <h3>Q4: How do I optimize my resume for Applicant Tracking Systems (ATS)?</h3>
             <p>A4: Use keywords from the job posting, keep the formatting simple, and use clear section titles like "Skills," "Experience," and "Education."</p>
-            
+
             <h3>Q5: What certifications are beneficial for remote jobs?</h3>
             <p>A5: Certifications such as "Certified Remote Work Professional (CRWP)," "Advanced Google Workspace Training," and "Time Management for Remote Teams" can be beneficial.</p>
           </div>
-        </section><div><GoogleAd/></div>
+        </section><div><GoogleAd /></div>
       </article>
       <section>
-            <div>
-                <AuthorCard/>
-            </div>
-            <div>
-                <RandomeArticleToBlogCareer />
-            </div>
-            <div>
-                <CallToAction />
-            </div>
-            <div className="stickyShare">
-                <ShareButtons url={ArticleUrl} title={ArticleTitle} />
-            </div>
-      </section><div><GoogleAd/></div>
+        <div>
+          <AuthorCard />
+        </div>
+        <div>
+          <RandomeArticleToBlogCareer />
+        </div>
+        <div>
+          <CallToAction />
+        </div>
+        <div className="stickyShare">
+          <ShareButtons url={ArticleUrl} title={ArticleTitle} />
+        </div>
+      </section><div><GoogleAd /></div>
     </div>
   );
 };

@@ -1412,8 +1412,32 @@ const ImportantPostLink = () => {
       src: 'https://i.postimg.cc/0Qc3h1nf/functional-resume.jpg',
       alt: " What is a Functional Resume",
     },
+    {
+      path: "/how-to-create-a-teenager-resume-without-work-experience",
+      title: "How to Create a Teenager Resume Without Work Experience",
+      src: 'https://i.postimg.cc/B6gtQXVx/teenager-reusme-with-no-experience.webp',
+      alt: " How to Create a Teenager Resume Without Work Experience",
+    },
+    {
+      path: "/how-to-create-a-resume-for-your-first-job-as-a-student",
+      title: "How to Create a Resume for Your First Job as a Student",
+      src: 'https://i.postimg.cc/TKpvbjMD/Create-a-Resume-for-Your-First-Job.webp',
+      alt: " How to Create a Resume for Your First Job as a Student",
+    },
+    {
+      path: "/1st-job-resume-examples",
+      title: "1st Job Resume Examples – A Guide to Crafting Your Perfect Resume",
+      src: 'https://i.postimg.cc/tCWTdwMM/1st-Job-Resume-Examples.jpg',
+      alt: " 1st Job Resume Examples – A Guide to Crafting Your Perfect Resume",
+    },
+    {
+      path: "/student-resume-examples-with-no-experience",
+      title: "Student Resume Examples with No Experience: How to Stand Out with the Right Resume Format",
+      src: 'https://i.postimg.cc/xdWW9fvf/freepik-the-style-is-candid-image-photography-with-natural-52995.jpg',
+      alt: "Student Resume Examples with No Experience",
+    },
   ];
- 
+  
   
   
   // Filter posts based on search term
