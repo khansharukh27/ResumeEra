@@ -10,7 +10,7 @@ function Navbar() {
             <div>
                 <div className="navbar-brand" style={{marginBottom:'-22px'}}>
                     <Link className="navbar-link-brand" to="/"> 
-                        <p className=".logo-Name" style={{
+                        <p className="logo-Name" style={{
                             background: "linear-gradient(90deg,green, blue, indigo, violet)",
                             WebkitBackgroundClip: "text",
                             WebkitTextFillColor: "transparent",
@@ -19,6 +19,7 @@ function Navbar() {
                             fontFamily:'sans-serif',
                             marginBottom:'',
                             position:'absolute'
+                            
                         }}>RESUME ERA </p><br />
                         <br />
                         {isAuthenticated &&(<p style={{marginTop:'-35px',paddingTop:'',fontFamily:'sans-serif'}}>Welcome {user.name} !</p>)}

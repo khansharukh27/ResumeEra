@@ -1,3 +1,4 @@
+# Basic settings
 RewriteEngine On
 RewriteBase /
 
@@ -5,3 +6,32 @@ RewriteBase /
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^(.*)$ /index.html [L]
+
+# Enable caching for static assets (images, CSS, JS, etc.)
+<IfModule mod_expires.c>
+    ExpiresActive On
+    ExpiresDefault "access plus 1 year"
+    ExpiresByType image/jpg "access plus 1 year"
+    ExpiresByType image/jpeg "access plus 1 year"
+    ExpiresByType image/png "access plus 1 year"
+    ExpiresByType image/gif "access plus 1 year"
+    ExpiresByType application/javascript "access plus 1 year"
+    ExpiresByType text/css "access plus 1 year"
+    ExpiresByType application/font-woff2 "access plus 1 year"
+</IfModule>
+
+# Enable Gzip compression
+<IfModule mod_deflate.c>
+    AddOutputFilterByType DEFLATE text/plain text/html text/xml text/css application/x-javascript application/javascript application/json application/xml+rss
+</IfModule>
+
+# Lazy load images (with the "loading=lazy" attribute)
+<IfModule mod_headers.c>
+    Header set X-Lazy-Load "on"
+</IfModule>
+
+# Preload important CSS & JS files
+<IfModule mod_headers.c>
+    Header set Link "<your_important_css_file.css>; rel=preload; as=style"
+    Header set Link "<your_important_js_file.js>; rel=preload; as=script"
+</IfModule>

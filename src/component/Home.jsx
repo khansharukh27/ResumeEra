@@ -1,23 +1,32 @@
 import { useAuth0 } from "@auth0/auth0-react";
-// import logo from '../image/logo.png';
-// import Carousel from "./Crousel";
+import logo from '../image/logo.png';
 import step1 from "../image/step1.png";
 import step2 from "../image/step2.png";
 import step3 from "../image/step3.png";
 import changeCV_image from "../image/changeCV_image.png";
 import CoverLetterCrousel from "./CoverLetterCrousel";
 import "../css/home.css";
-// import { Link } from "react-router-dom";
-import best_logo from "../image/best_logo.webp";
-// import { Helmet } from "react-helmet";
-import SEO from "./SEO";
 import { Link } from "react-router-dom";
-// import { image } from "html2canvas/dist/types/css/types/image";
-// import ResumeEraBuilder from "./ResumeEraBuilder";
+import best_logo from "../image/best_logo.webp";
+import { Helmet } from "react-helmet";
+import SEO from "./SEO";
+import { useEffect } from "react";
 
 const Home = (prop) => {
-  const {images} = prop
+  const { images } = prop;
   const { isAuthenticated, loginWithRedirect } = useAuth0();
+  <script defer src="/js/jquery.min.js" />
+  useEffect(() => {
+    // Dynamically add the Home CSS when this component is loaded
+    const link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.href = '../css/Important_Post';  // Link to Home's specific CSS file
+    document.head.appendChild(link);
+
+    return () => {
+      document.head.removeChild(link); // Cleanup on unmount
+    };
+  }, []);
 
   return (
     <div className="home-container">
@@ -43,37 +52,37 @@ const Home = (prop) => {
         httpEquiv="X-UA-Compatible"
         content="IE=edge"
       />
+      <Helmet>
+        <link rel="preload" href="../image/step1.png" as="image" />
+        <link rel="preload" href="../image/step2.png" as="image" />
+        <link rel="preload" href="../image/step3.png" as="image" />
+        <link rel="preload" href="../image/changeCV_image.png" as="image" />
+        <link rel="preload" href="../image/best_logo.webp" as="image" />
+        <link rel='preload' href="../../css/home.css" as="style" />
+      </Helmet>
       <div className="home_div">
-        <div className="home-logo">
-          <img src={best_logo} alt="ResumeEra logo" />
-        </div>
-        <div className="home-welcome" style={{}}>
-          <h1>
-              <span className="home-welcome-span">WELCOME TO RESUMEERA! </span >  
-              <span className="home-welcome-span" >CREATE AND DOWNLOAD </span>
-              <span className="home-welcome-span">FREE RESUME FORMAT.</span> 
-          </h1>
-          <p>
-          ResumeEra is a user-friendly platform that allows you to create, customize,
-          and download your free resume format PDF. Choose from a variety of templates to
-          make your free resume stand out. Whether you're highlighting your work experience,
-          education, skills, or personal information, ResumeEra makes it easy to create a
-          professional-looking resume and download it as a polished resume format PDF.
-        </p>
-        </div>
+        {/* <div className="home-logo">
+          <img src={best_logo} alt="ResumeEra logo" loading="lazy" />
+        </div> */}
       </div>
-
-      <div className="home-description">
-        {images.map((img)=>(
-          <div className="img-div-home">
-            <img src={img.src} alt="alt" loading="lazy" />
-          </div>
-        ))}
-
+      <div className="home-welcome" style={{}}  >
+        <h1>
+          <span className="gradient-text">WELCOME TO RESUMEERA! </span>
+          <span className="gradient-text">CREATE AND DOWNLOAD </span>
+          <span className="gradient-text">FREE RESUME FORMAT.</span>
+        </h1>
+        <h2> </h2>
+        <h2></h2>
       </div>
-
+      <p class="intro-text" style={{}}>ResumeEra is a user-friendly platform that allows you to create, customize, and download your free resume format PDF.</p>
+      <span class="highlighted-text">Choose from a variety of templates to make your free resume stand out.</span>
+      <span>Whether you're highlighting your work experience, education,
+        skills, or personal information,</span>
+      <span>ResumeEra makes it easy to create a
+        professional-looking resume and download it as a polished resume format PDF.</span>
+      <span>Get started today and take the next step in your career journey.</span>
       <div className="home-how-to">
-        <h2 style={{textAlign:'center'}}>HOW TO CREATE A FREE RESUME FORMAT PDF</h2>
+        <h2 style={{ textAlign: 'center' }}>HOW TO CREATE A FREE RESUME FORMAT PDF</h2>
         <div className="home-steps">
           <div className="home-step">
             <img src={step1} alt="cv_template_1" />
@@ -94,7 +103,6 @@ const Home = (prop) => {
           </div>
         </div>
       </div>
-
       <hr className="home-divider" />
       <div className="home-change-cv">
         <div className="home-change-cv-image">
@@ -119,24 +127,20 @@ const Home = (prop) => {
               a polished resume in PDF format.
             </li>
           </ul>
-          
-            
-            <Link to='/template' style={{textDecoration:'none'}}>
-              <span
-                style={{
-                  border: "1px solid grey",
-                  borderRadius: "10px",
-                  padding: "5px",
-                  backgroundColor: "blue",
-                  color: "white",
-                }}
-              >
-                Create Free Resume Format PDF
-              </span>
-            </Link>
-          
+          <Link to='/template' style={{ textDecoration: 'none' }}>
+            <span
+              style={{
+                border: "1px solid grey",
+                borderRadius: "10px",
+                padding: "5px",
+                backgroundColor: "blue",
+                color: "white",
+              }}
+            >
+              Create Free Resume Format PDF
+            </span>
+          </Link>
         </div>
-
       </div>
       <hr className="home-divider" />
       <div className="home-resume-builder">
@@ -157,7 +161,6 @@ const Home = (prop) => {
               To learn more, you can click this
               link... <a href="/template">Privacy Policy</a>
             </p>
-
           </div>
           <div className="home-feature" style={{ color: "black" }}>
             <h5 style={{ color: "black", fontWeight: 900 }}>
@@ -203,7 +206,6 @@ const Home = (prop) => {
           millions of professionals. Easily create and download your professional
           resume format PDF with ResumeEra to stand out from the competition.
         </p>
-
         <div className="home-story-feature-main d-md-flex">
           <div className="home-story-feature">
             <h3>
@@ -234,7 +236,6 @@ const Home = (prop) => {
                 width: '50%', padding: '15px',
                 fontSize: '1rem', margin: 'auto', fontWeight: '400'
               }}>Make Resume</a>
-
             </p>
           </div>
           <div className="home-story-feature">
@@ -251,12 +252,10 @@ const Home = (prop) => {
                   marginBottom: '2px', width: '50%', padding: '15px', fontSize: '1rem', margin: 'auto',
                   fontWeight: '400'
                 }}>Make Resume</a>
-
             </p>
           </div>
         </div>
       </div>
-
       <div className="home-cover-letter">
         <h2>
           Create a professional story in minutes. Use our cover letter maker.
@@ -270,9 +269,7 @@ const Home = (prop) => {
           resume format PDFs. Streamline your job application process today and
           stand out effortlessly.
         </p>
-
         <div className="home-cover-letter-carousel">
-          
         </div>
       </div>
     </div>

@@ -1,7 +1,7 @@
 
 .aboutResumeEra {
     padding: 40px;
-    font-family: 'medium-content-sans-serif-font', sans-serif;
+    font-family:  sans-serif;
     color: #333;
     box-shadow: 0px 0px 30px -7px purple, 0px 0px 20px -10px palegreen;
     width: 80%;
@@ -38,22 +38,24 @@
 
 /* Headings */
 .aboutResumeEra h1 {
-    font-size: 2.5em;
+    font-size: 2.5rem;
     margin-bottom: 20px;
     text-align: left;
-    color: #4a90e2;
-    font-weight: 900;
-    background: linear-gradient(135deg, #ff7e5f 0%, #feb47b 30%, #ffcc70 70%, #6a11cb 100%); /* Gradient with color stops */
-    border-top-right-radius: 35%;
-    border-bottom-left-radius: 15%;
-    padding: 25px;
-    margin-left: -5px;
-    /* margin-top: -7px;00 */
     margin-right: 15px;
     width: 98%;
     padding-top: 85px;
+    font-display: swap;
+    
 }
-
+.tableOfContent{
+    margin-top: 50px;
+    margin-bottom: 50px;
+    padding: 20px;
+    border: 2px solid black;
+    border-radius: 25px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);   
+}
 .aboutResumeEra h2 {
     margin-top: 20px;
     font-weight: 900;
@@ -98,9 +100,17 @@
     line-height: 1.6;
     margin-bottom: 15px;
     font-size: 1.5rem;
-    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     color: #333;
+    font-display: swap;
 
+}
+.examplegeneral{
+    background-color: #45a049;
+    padding: 15px;
+    width: 100%;
+    border-radius: 15px;
+    color: white;
 }
 
 /* Lists */
@@ -245,12 +255,11 @@ margin: 30px;
     font-size: 1.25rem;
     border: 1px dashed black;
     padding: 20px;
-    border-radius: 15px;
+    border-radius:15px;
     background-color: rgb(132, 233, 163);
+    width: 100%;
 }
-/* Responsive Styles for Small Screens */
 
-/* General Reset */
 * {
     margin: 0;
     padding: 0;

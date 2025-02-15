@@ -1436,6 +1436,54 @@ const ImportantPostLink = () => {
       src: 'https://i.postimg.cc/xdWW9fvf/freepik-the-style-is-candid-image-photography-with-natural-52995.jpg',
       alt: "Student Resume Examples with No Experience",
     },
+    {
+      path: "/how-to-create-a-student-cv-template-with-no-experience",
+      title: "How to Create a Student CV Template with No Experience: A Comprehensive Guide",
+      src: 'https://i.postimg.cc/KjwQ8mz5/student-cv-template-with-no-experience.jpg',
+      alt: "Student CV Template with No Experience",
+    },
+    {
+      path: "/resume-example-for-students-first-job",
+      title: "Resume Examples for Students First Job: Professional Guide",
+      src: 'https://i.postimg.cc/SN50RtxZ/Resume-Examples-for-Students-First-Job.jpg',
+      alt: "Resume Examples for Students First Job",
+    },
+    {
+      path: "/resume-examples-for-no-work-experience",
+      title: "Resume Examples for No Work Experience: Crafting Your First Resume for Success",
+      src: 'https://i.postimg.cc/8zMvscSj/resume-example-with-no-experience.jpg',
+      alt: "Resume Examples for No Work Experience",
+    },
+    {
+      path: "/crafting-a-sample-resume-for-students-with-no-work-experience",
+      title: "Crafting a Sample Resume for Students with No Work Experience",
+      src: 'https://i.postimg.cc/XqkpbHBL/Crafting-a-Sample-Resume-for-Students-with-No-Work-Experience.jpg',
+      alt: "Sample Resume for Students with No Work Experience",
+    },
+    {
+      path: "/student-resume-for-your-first-job",
+      title: "How to Write a Winning Student Resume for Your First Job: Tips & Examples",
+      src: 'https://i.postimg.cc/jSHYFQCQ/Student-Resume-for-Your-First-Job.png',
+      alt: "Student Resume for Your First Job",
+    },
+    {
+      path: "/resume-for-a-15-year-old-first-job",
+      title: "How to Write a Resume for a 15-Year-Old First Job: Step-by-Step Guide",
+      src: 'https://i.postimg.cc/1zHbcqQ3/How-to-Write-a-Resume-for-a-15-Year-Old-First-Job.webp',
+      alt: "Resume for a 15-Year-Old First Job",
+    },
+    {
+      path: "/teenager-resume-for-your-first-job-in-high-school",
+      title: "How to Write a Teenager Resume for Your First Job in High School: A Step-by-Step Guide",
+      src: 'https://i.postimg.cc/BnxWYvFR/Teenager-Resume-for-Your-First-Job-in-High-School.webp',
+      alt: "Teenager Resume for Your First Job in High School",
+    },
+    {
+      path: "/teenager-resume-for-your-first-job",
+      title: "How to Write a Teenager Resume for Your First Job: A Professional Guide",
+      src: 'https://i.postimg.cc/WpxXWFZ8/freepik-an-asian-man-25-years-old-black-hair-wearing-glass-31571.jpg',
+      alt: "Teenager Resume for Your First Job",
+    },
   ];
   
   

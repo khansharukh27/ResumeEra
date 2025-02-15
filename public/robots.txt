@@ -5,7 +5,7 @@ Disallow: /search/
 Disallow: /cart/
 Allow: /images/
 Allow: /blog/
-Sitemap: https://https://resumeera.xyz/sitemap.xml
+Sitemap: https://resumeera.xyz/sitemap.xml
 
 User-agent: Bingbot
 Disallow: /admin/
@@ -14,7 +14,7 @@ Disallow: /search/
 Disallow: /cart/
 Allow: /images/
 Allow: /blog/
-Sitemap: https://https://resumeera.xyz/sitemap.xml
+Sitemap: https://resumeera.xyz/sitemap.xml
 
 User-agent: facebookexternalhit
 Disallow: /admin/
@@ -56,4 +56,4 @@ Disallow: /cart/
 Allow: /images/
 Allow: /blog/
 
-Sitemap: https://https://resumeera.xyz/sitemap.xml
+Sitemap: https://resumeera.xyz/sitemap.xml

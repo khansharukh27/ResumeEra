@@ -395,6 +395,14 @@ import TeenagerResumeWithoutWorkExperience from "./component/ImportantPost/teena
 import HowtoCreateaResumeforYourFirstJobasaStudent from "./component/ImportantPost/teenager resume/HowtoCreateaResumeforYourFirstJobasaStudent.jsx";
 import FirstJobResumeExamples from "./component/ImportantPost/teenager resume/FirstJobResumeExamples.jsx";
 import StudentResumeExampleswithNoExperience from "./component/ImportantPost/teenager resume/StudentResumeExampleswithNoExperience.jsx";
+import StudentCVTemplatewithNoExperience from "./component/ImportantPost/teenager resume/StudentCVTemplatewithNoExperience.jsx";
+import ResumeExamplesforStudentsFirstJob from "./component/ImportantPost/teenager resume/ResumeExamplesforStudentsFirstJob.jsx";
+import ResumeExamplesforNoWorkExperience from "./component/ImportantPost/teenager resume/ResumeExamplesforNoWorkExperience.jsx";
+import SampleResumeforStudentswithNoWorkExperience from "./component/ImportantPost/teenager resume/SampleResumeforStudentswithNoWorkExperience.jsx";
+import Studentresumeforfirstjob from "./component/ImportantPost/teenager resume/Studentresumeforfirstjob.jsx";
+import Resumefora15YearOldfirstjob from "./component/ImportantPost/teenager resume/Resumefora15YearOldfirstjob.jsx";
+import TeenagerResumeforYourFirstJobinHighSchool from "./component/ImportantPost/teenager resume/TeenagerResumeforYourFirstJobinHighSchool.jsx";
+import TeenagerResumeforYourFirstJob from "./component/ImportantPost/teenager resume/TeenagerResumeforYourFirstJob.jsx";
 
 var images = [
   { id: 1, src: resum1, alt: "Professional Resume Template 1",description:'Professional and elegant resume template with a timeline structure' },
@@ -499,7 +507,14 @@ function App() {
     AOS.init();
   }, []);
   
-
+  useEffect(() => {
+    // Preload Home CSS when Home page is loaded
+    const preloadHomeCSS = document.createElement('link');
+    preloadHomeCSS.rel = 'preload';
+    preloadHomeCSS.href = '../src/css/home.css'; // Link to Home's specific CSS file
+    preloadHomeCSS.as = 'style';
+    document.head.appendChild(preloadHomeCSS);
+  },[]);
 // Get the current route location
 
   // Track pageview whenever location changes
@@ -1493,6 +1508,44 @@ function App() {
           path="/student-resume-examples-with-no-experience"
           element={<StudentResumeExampleswithNoExperience fresherResumeImage={fresherResumeImage} techImages={techImages} />}
         />
+        <Route
+          path="/how-to-create-a-student-cv-template-with-no-experience"
+          element={<StudentCVTemplatewithNoExperience fresherResumeImage={fresherResumeImage} techImages={techImages} />}
+        />
+        <Route
+          path="/resume-example-for-students-first-job"
+          element={<ResumeExamplesforStudentsFirstJob fresherResumeImage={fresherResumeImage} techImages={techImages} />}
+        />
+        <Route
+          path="/resume-examples-for-no-work-experience"
+          element={<ResumeExamplesforNoWorkExperience fresherResumeImage={fresherResumeImage} techImages={techImages} />}
+        />
+<Route
+          path="/crafting-a-sample-resume-for-students-with-no-work-experience"
+          element={<SampleResumeforStudentswithNoWorkExperience fresherResumeImage={fresherResumeImage} techImages={techImages} />}
+        />
+        <Route
+        
+          path="/student-resume-for-your-first-job"
+          element={<Studentresumeforfirstjob fresherResumeImage={fresherResumeImage} techImages={techImages} />}
+        />
+        <Route
+        
+        path="/resume-for-a-15-year-old-first-job"
+        element={<Resumefora15YearOldfirstjob fresherResumeImage={fresherResumeImage} techImages={techImages} />}
+      />
+      <Route
+        path="/teenager-resume-for-your-first-job-in-high-school"
+        element={<TeenagerResumeforYourFirstJobinHighSchool fresherResumeImage={fresherResumeImage} techImages={techImages} />}
+      />
+      <Route
+        path="/teenager-resume-for-your-first-job"
+        element={<TeenagerResumeforYourFirstJob fresherResumeImage={fresherResumeImage} techImages={techImages} />}
+      />
+
+
+
+
 
 
 

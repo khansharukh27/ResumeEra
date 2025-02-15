@@ -185,7 +185,7 @@ export default function FunctionResumeFormat(prop) {
                     <ul>
                         <li><strong>Career changers:</strong> If you’re transitioning to a new field and don’t have relevant job titles in your work history.</li>
                         <li><strong>Those with gaps in employment:</strong> If there are significant gaps in your resume, a functional resume can help shift the focus to your skills.</li>
-                        <li><strong>Entry-level candidates:</strong> If you’re new to the workforce and don’t have much experience, you can highlight your relevant skills, such as during internships, volunteer work, or school projects.</li>
+                        <li><strong> <Link to='/student-resume-for-your-first-job'>Entry-level candidates</Link> :</strong> If you’re new to the workforce and don’t have much experience, you can highlight your relevant skills, such as during internships, volunteer work, or school projects.</li>
                     </ul>
                     <p>
                         In short, this format works well when you want to downplay your career timeline and emphasize what you can bring to the table.

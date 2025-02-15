@@ -3,19 +3,18 @@
     margin-left: 0;
     margin-right: 0;
     padding: 20px; /* Optional: Adds some space inside the container */
-    background-color: rgb(180, 238, 224); /* Simplify background */
-    color: #e0e0e0; /* Light gray text color for readability */
+    /* background-color: rgb(180, 238, 224); Simplify background */
+    /* color: #e0e0e0; Light gray text color for readability */
     /* Removed background gradient and filters for better performance */
 }
 
-.home-container p, ul {
-    font-weight: 200;
-}
+
 
 .home_div {
     display: flex;
     justify-content: space-between;
     margin-top: 20px;
+    margin-bottom: 5px;
 }
 
 .home-logo {
@@ -40,13 +39,45 @@
 .home-welcome {
     margin-top: 25px;
     text-align: justify;
+    font-family: 'Arial', sans-serif; /* Ensure fallback fonts are used */
+    color: #333; /* Ensure text is visible immediately */
 }
-.home-welcome-span{
+.gradient-text {
+    background: linear-gradient(to right, #2563eb, #16a34a);
+    -webkit-background-clip: text;
+    color: transparent;
+}
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+.home-welcome-span {
     font-size: 40px;
     font-weight: bold;
-    background: linear-gradient(90deg, blue,green);
+    /* background: linear-gradient(90deg, blue, green); */
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    color: inherit; /* Ensure text is visible even during loading */
+    transition:all 0.3s ease; /* Smooth gradient transition */
+    font-display: swap; /* Ensure text is visible even if font is loading */
+}
+
+/* Optionally, add a fallback solid color */
+.home-welcome-span.no-gradient {
+    color: #000; /* Fallback color */
+}
+.home-welcome p {
+    /* font-size: 18px; */
+    /* line-height: 1.6; */
+    /* font-family: 'Arial', sans-serif; Use a system font to avoid delays */
+    /* color: #333; Solid color to ensure text is visible immediately */
+    margin-top: 10px; /* Add margin for better spacing */
+    text-align: justify;
+    transition: color 0.3s ease; /* Smooth color change if needed */
+    font-display: swap;
+}
+
+/* Optional: Adding styles to handle the text rendering better during load */
+.home-welcome p.no-gradient {
+    color: #000; /* Ensure text is solid and visible during load */
 }
 .home-welcome h4 {
     font-size: 16px; /* Adjust font size */
@@ -59,14 +90,6 @@
     text-decoration: none;
     font-size: medium;
     margin-top: 40px;
-}
-
-.home_div {
-    /* border-top-left-radius: 55px; */
-    
-    /* background-color: rgb(198, 9, 245); */
-    margin-bottom: 5px;
-
 }
 
 .home_div::before {
@@ -260,7 +283,7 @@
 }
 
 /* Removed animation on carousel */
-.home-cover-letter-carousel {}
+
 
 /* Responsive media queries */
 
