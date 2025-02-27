@@ -174,7 +174,8 @@ export default function HowtoCreateaResumeforYourFirstJobasaStudent(prop) {
                 <section>
                     <p>Creating your first  <Link to='/how-to-make-a-resume-for-freshers'> resume as a student</Link> can feel overwhelming, especially when you don’t have much work experience. But don’t worry—you already have valuable skills to showcase!</p>
                     <p>Think about your strengths, like teamwork, time management, or creativity. These transferable skills can make a big impact. To help you get started, consider looking at a student first job resume sample. A polished resume helps you stand out and leaves a great first impression.</p>
-                </section>
+                </section><div><GoogleAd/></div>
+
                 <section>
                     <h2>Essential Sections for a Student Resume</h2>
                     <p>When you're building your resume for the first time, it helps to know what sections to include. Here's a breakdown of the must-haves:</p>
@@ -255,7 +256,8 @@ export default function HowtoCreateaResumeforYourFirstJobasaStudent(prop) {
                     <p>This section gives employers a quick snapshot of what you bring to the table.</p>
 
                     <p>By organizing your resume with these sections, you'll create a strong foundation. If you're unsure how to format it, check out a student first job resume sample for inspiration.</p>
-                </section>
+                </section><div><GoogleAd/></div>
+
                 <section>
                     <h2>Tips to Make Your Resume Stand Out</h2>
 
@@ -317,7 +319,8 @@ export default function HowtoCreateaResumeforYourFirstJobasaStudent(prop) {
 
 
 
-                    </section>
+                    </section><div><GoogleAd/></div>
+
 
                     <h3>Keep It Concise and Easy to Read</h3>
                     <p>A good resume is clear and to the point. Stick to one page and use bullet points to organize information. Avoid long paragraphs. Use a clean format, like a chronological or combination style, to make it easy for employers to scan. Fonts like Arial or Calibri work well because they’re simple and professional.</p>
@@ -331,7 +334,8 @@ export default function HowtoCreateaResumeforYourFirstJobasaStudent(prop) {
                         <li>Ask a friend or mentor to review it for you.</li>
                     </ul>
                     <p>Finally, ensure your resume looks polished. Use consistent formatting for headings, bullet points, and spacing. A clean, professional layout makes a big difference. If you’re unsure, check out a student first job resume sample for inspiration.</p>
-                </section>
+                </section><div><GoogleAd/></div>
+
                 <section>
                     <h2>Student First Job Resume Sample and Templates</h2>
 
@@ -361,7 +365,8 @@ export default function HowtoCreateaResumeforYourFirstJobasaStudent(prop) {
                     <p>Focus on abilities like communication, problem-solving, or technical skills (e.g., Microsoft Office).</p>
 
                     <p>This structure keeps your resume concise and professional. Tailor it to each job by including keywords from the job description. Proofread carefully to avoid mistakes.</p>
-                </section>
+                </section><div><GoogleAd/></div>
+
                 <section>
                     <h2>Template Suggestions for Beginners</h2>
 
@@ -407,7 +412,8 @@ export default function HowtoCreateaResumeforYourFirstJobasaStudent(prop) {
                     </ol>
 
                     <p>Every professional starts somewhere. Apply confidently—you’re building the foundation for your future! 😊</p>
-                </section>
+                </section><div><GoogleAd/></div>
+
                 <section>
                     <h2>Key Takeaways</h2>
 
@@ -416,7 +422,8 @@ export default function HowtoCreateaResumeforYourFirstJobasaStudent(prop) {
                         <li><strong>Write a Strong Objective Statement:</strong> Craft a concise and focused objective statement that clearly communicates your goals and the skills you bring to the table. This helps employers quickly understand why you're a great candidate for the job and what you hope to achieve.</li>
                         <li><strong>Highlight Your Education and Relevant Experiences:</strong> Since you may not have a lot of work experience yet, emphasize your education. Include relevant classes, certifications, and academic achievements. Additionally, list any volunteer work, extracurricular activities, or awards to showcase the skills you’ve developed and your potential as an employee.</li>
                     </ul>
-                </section>
+                </section><div><GoogleAd/></div>
+
                 <section>
                     <h2>FAQ</h2>
 
@@ -437,7 +444,8 @@ export default function HowtoCreateaResumeforYourFirstJobasaStudent(prop) {
                         <p>Note: Always check the job posting for specific requirements.</p>
                     </div>
 
-                </section>
+                </section><div><GoogleAd/></div>
+
 
                 <section className='releted-article'>
                     <h2>RELETED ARTICLE :- YOU CAN'T MISS IF YOU WANT TO CREATE A PROFETIONAL RESUME</h2>
@@ -447,7 +455,8 @@ export default function HowtoCreateaResumeforYourFirstJobasaStudent(prop) {
                     <br /><Link to='/how-to-write-a-strong-resume-objective'>HOW TO WRITE A STRONG OBJECTIVE</Link>
                     <br /><Link to='/how-to-make-a-resume-for-freshers'>HOW TO MAKE A RESUME FOR FRESHERS</Link>
 
-                </section>
+                </section><div><GoogleAd/></div>
+
                 <div>
                     <WelcomeNotes />
                     <RandomeArticleToBlogCareer />
@@ -465,7 +474,8 @@ export default function HowtoCreateaResumeforYourFirstJobasaStudent(prop) {
                 <div className="stickyShare">
                     <ShareButtons url={ArticleUrl} title={ArticleTitle} />
                 </div>
-            </section>
+            </section><div><GoogleAd/></div>
+
         </div>
     )
 }

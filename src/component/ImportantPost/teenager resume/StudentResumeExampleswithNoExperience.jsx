@@ -147,6 +147,7 @@ export default function StudentResumeExampleswithNoExperience(prop) {
       <p>
         In this article, we will guide you through various student resume examples with no experience, offer tips on resume formats, and give you key takeaways to help you land your first job. Additionally, we will explain how using the right tools, like ResumeEra, can help you craft the perfect resume for your job search.
       </p>
+      <div><GoogleAd/></div>
 
       <h2>Table of Contents</h2>
       <ul>
@@ -159,6 +160,7 @@ export default function StudentResumeExampleswithNoExperience(prop) {
         <li>7. FAQs</li>
         <li>8. Conclusion</li>
       </ul>
+      <div><GoogleAd/></div>
 
       <h2>Why a Resume is Important for Students with No Experience</h2>
       <p>
@@ -172,6 +174,7 @@ export default function StudentResumeExampleswithNoExperience(prop) {
         <li><strong>Highlights Your Skills:</strong> You may not have job experience, but you have transferable skills, such as teamwork, communication, and problem-solving, which are highly valued by employers.</li>
         <li><strong>Increases Your Chances of Getting Hired:</strong> A strong resume helps set you apart from other candidates who may not take the time to create a professional document.</li>
       </ul>
+      <div><GoogleAd/></div>
 
       <h2>Key Sections Every Resume Should Have</h2>
 <p>
@@ -244,6 +247,7 @@ export default function StudentResumeExampleswithNoExperience(prop) {
     </pre>
   </li>
 </ul>
+<div><GoogleAd/></div>
 
 
       <h2>Best Resume Format for Students with No Experience</h2>
@@ -264,6 +268,7 @@ export default function StudentResumeExampleswithNoExperience(prop) {
           <strong>Best for:</strong> Students who have some volunteer or freelance experience, but no formal job history.
         </li>
       </ul>
+      <div><GoogleAd/></div>
 
       <h2>Student Resume Examples with No Experience</h2>
       <p>
@@ -296,9 +301,13 @@ export default function StudentResumeExampleswithNoExperience(prop) {
           </ul>
         </li>
       </ul>
+      <div><GoogleAd/></div>
+
             <section>
                 <FresherResume fresherResumeImage={fresherResumeImage}/>
             </section>
+            <div><GoogleAd/></div>
+
       <h2>Top Tips for Crafting a Resume as a Student</h2>
       <ul>
         <li><strong>Highlight Your Transferable Skills:</strong> You may not have formal job experience, but you’ve gained valuable skills through school, volunteer work, and extracurricular activities.</li>
@@ -307,6 +316,7 @@ export default function StudentResumeExampleswithNoExperience(prop) {
         <li><strong>Keep It Concise:</strong> Employers typically spend just a few seconds reviewing resumes. Keep yours to one page and make sure every line adds value to your application.</li>
         <li><strong>Proofread Carefully:</strong> Ensure that your resume is free of spelling and grammatical errors. Have a friend or mentor review your resume before submitting it.</li>
       </ul>
+      <div><GoogleAd/></div>
 
       <h2>How ResumeEra Can Help You Create Your Perfect Resume</h2>
       <ul>
@@ -319,6 +329,7 @@ export default function StudentResumeExampleswithNoExperience(prop) {
       <p>
         Visit <a href="https://ResumeEra.xyz">ResumeEra.xyz</a> today to start building your first job-winning resume!
       </p>
+      <div><GoogleAd/></div>
 
       <h2>FAQs</h2>
       <ul className="faqs">
@@ -327,6 +338,7 @@ export default function StudentResumeExampleswithNoExperience(prop) {
         <li className="faq-item"><strong>Q3: Should I include an objective statement on my resume?</strong> A3: Yes! A brief objective statement helps employers understand your career goals and enthusiasm for the role.</li>
         <li className="faq-item"><strong>Q4: How long should my resume be?</strong> A4: Keep your resume to one page. Concise and relevant information is key to grabbing the employer's attention.</li>
       </ul>
+      <div><GoogleAd/></div>
 
       <h2>Conclusion</h2>
       <p>

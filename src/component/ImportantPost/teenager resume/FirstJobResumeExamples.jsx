@@ -165,9 +165,15 @@ export default function FirstJobResumeExamples(prop) {
         <img src="https://i.postimg.cc/0xHwvqdP/1st-Job-Resume-Examples.jpg" loading="lazy" alt="First job resume examples" style={{ width: '100%', height: '100%' }} />
         <header>
           <p>
-            Starting your career can be an exciting yet challenging journey. One of the first steps in landing your first job is creating a resume that highlights your skills, education, and experiences. If you're unsure how to build a resume that stands out, this guide will provide you with helpful tips, key takeaways, and main 1st job resume examples that will boost your chances of landing that dream role.
+            Starting your career can be an exciting yet challenging journey. 
+            One of the first steps in landing your first job is creating a 
+            resume that highlights your skills, education, and experiences. 
+            If you're unsure how to build a resume that stands out, this guide will 
+            provide you with helpful tips, key takeaways, and main 1st job resume 
+            examples that will boost your chances of landing that dream role.
           </p>
         </header>
+        <div><GoogleAd/></div>
 
         <section>
           <h2>In this article, we’ll cover:</h2>
@@ -180,6 +186,8 @@ export default function FirstJobResumeExamples(prop) {
             <li>How ResumeEra can help you create the perfect resume</li>
           </ul>
         </section>
+        <div><GoogleAd/></div>
+
         <section>
           <h2>Why Your First Job Resume Is Important</h2>
           <p>
@@ -191,6 +199,7 @@ export default function FirstJobResumeExamples(prop) {
             <li>Reflect your professionalism and commitment to finding a job.</li>
           </ul>
         </section>
+        <div><GoogleAd/></div>
 
         <section>
           <h2>Key Sections Every Resume Should Have</h2>
@@ -268,6 +277,7 @@ export default function FirstJobResumeExamples(prop) {
             </li>
           </ol>
         </section>
+        <div><GoogleAd/></div>
 
         <section>
           <h2>Resume Examples for Different Industries</h2>
@@ -325,10 +335,14 @@ export default function FirstJobResumeExamples(prop) {
           </ul>
           <p><strong>Education:</strong> Bachelor’s Degree in Computer Science (In Progress) | XYZ University | Expected Graduation: May 2025</p>
         </section>
+        <div><GoogleAd/></div>
+
         <section>
           <FresherResume fresherResumeImage={fresherResumeImage} />
           <TechnicalResumeImages techImages={techImages} />
         </section>
+        <div><GoogleAd/></div>
+
         <section>
           <h2>Top Tips for Crafting a Successful First Job Resume</h2>
           <ul>
@@ -339,6 +353,7 @@ export default function FirstJobResumeExamples(prop) {
             <li><strong>Keep It Concise:</strong> Limit your resume to one page. Employers typically spend only a few seconds reviewing each resume, so it’s essential to be concise and only include relevant information.</li>
           </ul>
         </section>
+        <div><GoogleAd/></div>
 
         <section>
           <h2>How ResumeEra Can Help</h2>
@@ -355,6 +370,7 @@ export default function FirstJobResumeExamples(prop) {
             Visit <a href="https://resumeera.xyz" target="_blank" rel="noopener noreferrer">ResumeEra</a> to start building your first job resume today and take the first step towards a successful career.
           </p>
         </section>
+        <div><GoogleAd/></div>
 
         <section>
           <h2>Conclusion</h2>

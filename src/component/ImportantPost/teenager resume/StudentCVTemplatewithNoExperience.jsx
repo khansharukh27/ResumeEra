@@ -124,6 +124,8 @@ export default function StudentCVTemplatewithNoExperience(prop) {
                         <li>Employers value transferable skills, academic achievements, and a strong work ethic.</li>
                         <li>You don’t need a long history of employment to create a compelling CV.</li>
                     </ul>
+                    <div><GoogleAd/></div>
+
                     <h2>Student CV Template with No Experience</h2>
                     <p>Creating your CV from scratch might seem like a daunting task, but with the right template, it can become a smooth and structured process. Below is a detailed student CV template with no experience, which you can use and modify to suit your needs.</p>
                     <h3>Table of Contents:</h3>
@@ -136,6 +138,8 @@ export default function StudentCVTemplatewithNoExperience(prop) {
                         <li>Achievements and Awards</li>
                         <li>References</li>
                     </ol>
+                    <div><GoogleAd/></div>
+
                     <h3>1. Contact Information</h3>
                     <p>The first section of your CV should include your contact details. This is essential to ensure that recruiters or hiring managers can reach you for an interview or follow-up.</p>
                     <p>Essential Contact Information to Include:</p>
@@ -217,6 +221,8 @@ export default function StudentCVTemplatewithNoExperience(prop) {
                     <p>While you don't need to list specific references on your CV, it’s a good practice to mention that references are available upon request. This shows that you’re prepared and have contacts ready who can speak to your qualifications.</p>
                     <p>Example:</p>
                     <p>“References available upon request.”</p>
+                    <div><GoogleAd/></div>
+
                     <h2>Internship Resume Example for Students</h2>
                     <p>An internship is often the best way for students to gain professional experience,
                         and including an internship on your CV can significantly enhance your chances of
@@ -248,7 +254,7 @@ export default function StudentCVTemplatewithNoExperience(prop) {
                     <section>
                         <h2>CREATE YOUR ADVANCE RESUME AS A FRESHER OR PROFETIONAL</h2>
                         <FresherResume fresherResumeImage={fresherResumeImage}/>
-                    </section>
+                    </section><div><GoogleAd/></div>
 
                     <h3>Key Takeaways</h3>
                     <ol>
@@ -257,6 +263,8 @@ export default function StudentCVTemplatewithNoExperience(prop) {
                         <li>Clear and Concise Formatting: Use simple, easy-to-read formatting, making sure your CV is organized and free from clutter. Recruiters appreciate clarity.</li>
                         <li>Be Confident in Your Potential: Even without work experience, your enthusiasm, academic background, and eagerness to learn can be strong selling points.</li>
                     </ol>
+                    <div><GoogleAd/></div>
+
                     <h3>Frequently Asked Questions (FAQs)</h3>
                     <dl className='faqs'>
                         <dt className='faq-item'><h4>Q1: How do I write a CV with no experience?</h4>
@@ -273,9 +281,12 @@ export default function StudentCVTemplatewithNoExperience(prop) {
                         </dt>
                         <dt className='faq-item'></dt>
                     </dl>
+                    <div><GoogleAd/></div>
+
                     <h3>Conclusion</h3>
                     <p>Creating a student CV template with no experience can be a challenge, but by focusing on your strengths—academic achievements, transferable skills, and a willingness to learn—you can craft a compelling CV. Whether you’re applying for your first job, internship, or volunteer role, remember that employers value potential. Use the tips, examples, and structure outlined in this guide to create a standout CV that will help you launch your career.</p>
-                </section>
+                </section><div><GoogleAd/></div>
+
                 <section className='releted-article'>
                     <h2>RELETED ARTICLE :- YOU CAN'T MISS IF YOU WANT TO CREATE A PROFETIONAL RESUME</h2>
                     <br /><Link to='/Best_Online_CV_Builder'>BEST ONLINE CV BUILDER</Link>
@@ -284,7 +295,8 @@ export default function StudentCVTemplatewithNoExperience(prop) {
                     <br /><Link to='/free-resume-builder'>FREE RESUME BUILDER</Link>
                     <br /><Link to='/9-things-you-need-to-know-about-ATS-in-2024'>9 THINGS YOU NEED TO KNOW ABOUT ATS IN 2024</Link>
 
-                </section>
+                </section><div><GoogleAd/></div>
+
                 <div>
                     <WelcomeNotes />
                     <RandomeArticleToBlogCareer />
@@ -302,7 +314,8 @@ export default function StudentCVTemplatewithNoExperience(prop) {
                 <div className="stickyShare">
                     <ShareButtons url={ArticleUrl} title={ArticleTitle} />
                 </div>
-            </section>
+            </section><div><GoogleAd/></div>
+
         </div>
     )
 }

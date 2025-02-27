@@ -8,6 +8,7 @@ import CallToAction from '../CallToAction';
 import ShareButtons from '../shareButton/ShareButtons';
 import { Helmet } from 'react-helmet';
 import perfectResumeImage from '../../image/image_for_link/Perfect Your Resume with the Best Resume Format PDFs.jpg'
+import { Link } from 'react-router-dom';
 export default function PerfectResumeBestResume() {
     const ArticleUrl = 'https://resumeera.xyz/perfect-your-resume-with-the-best-resume-format-pdfs';
                     const ArticleTitle = "Perfect Your Resume with the Best Resume Format PDFs - ResumeEra";
@@ -236,7 +237,7 @@ export default function PerfectResumeBestResume() {
 
         <h3>Step 1: Choose a Template</h3>
         <p>
-          Using a professional resume template can save you time and ensure that your resume has a clean, polished look. <strong>ResumeEra.xyz</strong> offers a variety of customizable templates, so you can choose the one that best fits your style and career goals.
+          Using a <Link to='/professional-resume-format-pdf'>professional resume</Link> template can save you time and ensure that your resume has a clean, polished look. <strong>ResumeEra.xyz</strong> offers a variety of customizable templates, so you can choose the one that best fits your style and career goals.
         </p>
 
         <h3>Step 2: Fill in Your Information</h3>

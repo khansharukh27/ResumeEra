@@ -120,7 +120,8 @@ export default function ResumeExamplesforNoWorkExperience(prop) {
                     <p>Introduction</p>
                     <p>Starting your career journey can be challenging, especially when you're fresh out of school or transitioning into a new field. One of the most important steps to landing your first job is crafting a resume that highlights your strengths and potential—despite a lack of work experience. With the right approach, you can create an eye-catching resume that opens doors to your dream job.</p>
                     <p>In this article, we will explore resume examples for no work experience and provide valuable tips on how to craft a standout resume that shows off your skills, education, and personal accomplishments. We'll also discuss how to tailor your resume for various job applications and why platforms like Resumeera.xyz are perfect for building a professional, ATS-friendly resume.</p>
-                </section>
+                </section><div><GoogleAd/></div>
+
                 <section>
                     <h2>Why Your Resume Matters</h2>
                     <p>Even if you don't have work experience, your resume is still a powerful tool. It gives potential employers a glimpse into your capabilities, skills, and education. A strong resume can demonstrate that you have the qualities they are looking for, including:</p>
@@ -179,7 +180,8 @@ export default function ResumeExamplesforNoWorkExperience(prop) {
                         <li><strong>Dean’s List:</strong> Recognized for academic excellence for 3 consecutive semesters during undergraduate studies.</li>
                         <li><strong>Content Marketing Certification:</strong> Completed an online course from HubSpot Academy, focusing on content creation and strategy.</li>
                     </ul>
-                </section>
+                </section><div><GoogleAd/></div>
+
                 <section>
                     <h2>Resume Examples for No Work Experience</h2>
                     <p>Let’s dive into some resume examples to show how you can effectively structure your resume even if you have little or no work experience.</p>
@@ -221,7 +223,8 @@ export default function ResumeExamplesforNoWorkExperience(prop) {
                             <li>HubSpot Content Marketing Certification</li>
                         </ul>
 
-                    </section>
+                    </section><div><GoogleAd/></div>
+
                     <ResumeBuilder/>
                     <section style={{ border: '1px solid green', padding: '5px', margin: '5px', borderRadius: '15px' }} >
                         <h3>Example 2: Entry-Level IT Resume for No Work Experience</h3>
@@ -255,9 +258,11 @@ export default function ResumeExamplesforNoWorkExperience(prop) {
                             <li>Python for Data Science (Coursera)</li>
                             <li>AWS Certified Cloud Practitioner</li>
                         </ul>
-                    </section>
+                    </section><div><GoogleAd/></div>
 
-                </section>
+
+                </section><div><GoogleAd/></div>
+
                 <section>
                     <h2>Key Resume Sections and Their Importance</h2>
                     <table>
@@ -294,7 +299,8 @@ export default function ResumeExamplesforNoWorkExperience(prop) {
                             </tr>
                         </tbody>
                     </table>
-                </section>
+                </section><div><GoogleAd/></div>
+
                 <section>
                     <h2>Tips for Crafting a Standout Resume for No Work Experience</h2>
                     <ol>
@@ -308,7 +314,8 @@ export default function ResumeExamplesforNoWorkExperience(prop) {
                         <li>Focus on Transferable Skills: Even if you haven’t worked in a professional setting, skills such as leadership, communication, and problem-solving are highly valued by employers.</li>
                         <li>Use Online Tools: Platforms like Resumeera.xyz can help you design a professional, ATS-friendly resume with ease. These tools offer pre-designed templates that you can tailor to your needs.</li>
                     </ol>
-                </section>
+                </section><div><GoogleAd/></div>
+
                 <section>
                     <h2>Quotes from Industry Experts</h2>
                     <blockquote>
@@ -317,7 +324,8 @@ export default function ResumeExamplesforNoWorkExperience(prop) {
                     <blockquote>
                         "For recent graduates or individuals without work experience, the key is to demonstrate your potential and enthusiasm to contribute, learn, and grow within a company." - HR Manager, Mark Thompson
                     </blockquote>
-                </section>
+                </section><div><GoogleAd/></div>
+
                 <section>
                     <h2>Key Takeaways</h2>
                     <ul>
@@ -326,7 +334,8 @@ export default function ResumeExamplesforNoWorkExperience(prop) {
                         <li>Use Resumeera.xyz: This platform provides pre-designed, ATS-friendly templates that help you craft a professional resume without hassle.</li>
                         <li>Keep it Concise: Keep your resume to one page and avoid unnecessary details.</li>
                     </ul>
-                </section>
+                </section><div><GoogleAd/></div>
+
                 <section>
                     <h2>Frequently Asked Questions (FAQs)</h2>
                     <div className='faqs'>
@@ -349,11 +358,13 @@ export default function ResumeExamplesforNoWorkExperience(prop) {
                             <p>A: Yes, using platforms like Resumeera.xyz can help you design a professional, ATS-friendly resume that increases your chances of being noticed by employers.</p>
                         </div>
                     </div>
-                </section>
+                </section><div><GoogleAd/></div>
+
                 <section>
                     <h2>Conclusion</h2>
                     <p>Creating a standout resume as a student with no work experience can seem daunting, but with the right strategy, it’s entirely possible. Focus on your strengths, transferable skills, and any relevant experiences that can demonstrate your potential. Platforms like Resumeera.xyz make it easy to design a polished, professional resume that will catch the attention of recruiters and help you land that first job.</p>
-                </section>
+                </section><div><GoogleAd/></div>
+
                 <section className='releted-article'>
                     <h2>RELETED ARTICLE :- YOU CAN'T MISS IF YOU WANT TO CREATE A PROFETIONAL RESUME</h2>
                     <br /><Link to='/tips-for-writing-a-cover-letter'>TIPS FOR WRITING A COVER LETTER</Link>
@@ -362,7 +373,8 @@ export default function ResumeExamplesforNoWorkExperience(prop) {
                     <br /><Link to='/common-mistakes-to-avoid-on-your-resume'>COMMON MISTAKES TO AVOID ON YOUR RESUME</Link>
                     <br /><Link to='/how-to-choose-the-right-resume-template'>HOW TO CHOOSE THE RIGHT RESUME TEMPLATE</Link>
 
-                </section>
+                </section><div><GoogleAd/></div>
+
                 <div>
                     <WelcomeNotes />
                     <RandomeArticleToBlogCareer />
@@ -380,7 +392,8 @@ export default function ResumeExamplesforNoWorkExperience(prop) {
                 <div className="stickyShare">
                     <ShareButtons url={ArticleUrl} title={ArticleTitle} />
                 </div>
-            </section>
+            </section><div><GoogleAd/></div>
+
         </div>
     )
 }

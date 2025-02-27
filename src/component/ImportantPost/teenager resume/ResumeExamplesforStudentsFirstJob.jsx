@@ -174,6 +174,7 @@ export default function ResumeExamplesforStudentsFirstJob(prop) {
                         <li>9. Key Takeaways</li>
                         <li>10. Frequently Asked Questions (FAQs)</li>
                     </ul>
+                    <div><GoogleAd/></div>
 
                     <h2>1. Introduction</h2>
                     <p>Starting your career journey can feel overwhelming, especially when you're applying for your first job. As a student or recent graduate, you might not have extensive work experience, but a strong resume can help showcase your potential to employers. Even without a long work history, employers are often looking for qualities like enthusiasm, adaptability, and a willingness to learn. These traits can make you an attractive candidate for entry-level positions.</p>
@@ -188,7 +189,8 @@ export default function ResumeExamplesforStudentsFirstJob(prop) {
                         <li><strong>Highlight Transferable Skills:</strong> While you may not have previous professional work experience, you likely possess a variety of skills that can be valuable to employers. These include communication, time management, problem-solving, teamwork, and technical skills. A good resume allows you to highlight these transferable skills, demonstrating how your academic experience, volunteer work, or extracurricular activities have helped you develop the qualities that employers value in the workplace. This shows that, even without job experience, you can contribute to the team and the organization.</li>
                         <li><strong>Showcase Your Potential:</strong> A well-written resume doesn’t just focus on what you’ve done, but also on what you can bring to the table. Employers want to know your potential to grow within the role and the company. A strong resume allows you to communicate your enthusiasm, eagerness to learn, and ability to adapt to new challenges. It’s an opportunity to tell potential employers why they should invest in you, even if you don’t have a long track record of experience.</li>
                     </ul>
-                </section>
+                </section><div><GoogleAd/></div>
+
                 <section>
                     <h2>3. Key Components of a Strong First Job Resume</h2>
                     <p>Whether you're crafting your resume from scratch or using an online tool, there are several key components that should be included to make a strong first job resume. Here’s a breakdown of the essential elements you should incorporate to create a compelling resume.</p>
@@ -353,7 +355,8 @@ export default function ResumeExamplesforStudentsFirstJob(prop) {
                         o Assisted with the creation of marketing campaigns on social media<br />
                         o Conducted market research and competitor analysis<br />
                     </pre>
-                </section>
+                </section><div><GoogleAd/></div>
+
                 <section>
                     <h2>5. Tailoring Your Resume for Specific Roles</h2>
                     <p>Tailoring your resume for each job application is a key step in creating a strong, effective resume. While your core experience and skills remain the same, adjusting certain sections to better match the specific requirements of the role can help you stand out to recruiters. Here’s how to do it:</p>
@@ -430,7 +433,8 @@ export default function ResumeExamplesforStudentsFirstJob(prop) {
                         <li>Make sure formatting is consistent (e.g., font style, size, and spacing).</li>
                         <li>If possible, have a friend, family member, or mentor review your resume to catch any errors you may have missed.</li>
                     </ul>
-                </section>
+                </section><div><GoogleAd/></div>
+
                 <section>
                     <h2>7. How to Format Your Resume for Maximum Impact</h2>
                     <p>The format of your resume is just as important as the content. A clean, organized, and visually appealing resume allows recruiters to quickly find the information they need and makes a lasting positive impression. Here are some key tips for formatting your resume to maximize its impact:</p>
@@ -486,7 +490,8 @@ export default function ResumeExamplesforStudentsFirstJob(prop) {
                     </ul>
                     <section>
                         <FresherResume fresherResumeImage={fresherResumeImage}/>
-                    </section>
+                    </section><div><GoogleAd/></div>
+
 
                     <h2>9. Key Takeaways</h2>
                     <ul>
@@ -520,11 +525,13 @@ export default function ResumeExamplesforStudentsFirstJob(prop) {
 
                             </div>
                         </div>
-                    </section>
+                    </section><div><GoogleAd/></div>
+
                     <h2>Conclusion</h2>
                     <p>Your first job is a significant milestone in your career, and your resume is the key to unlocking that opportunity. A well-crafted resume helps you stand out in a competitive job market, showcasing your potential, skills, and enthusiasm. By following the guidelines outlined in this article and leveraging tools like Resumeera.xyz, you can create a professional, polished, and ATS-friendly resume that sets you apart from other candidates.</p>
                     <p>Remember, your resume should be clear, concise, and tailored to each specific role. Highlight your strengths, whether through your education, transferable skills, or extracurricular activities. With the right approach, your resume will open doors to new opportunities, bringing you one step closer to landing your dream job.</p>
-                </section>
+                </section><div><GoogleAd/></div>
+
 
                 <section className='releted-article'>
                     <h2>RELETED ARTICLE :- YOU CAN'T MISS IF YOU WANT TO CREATE A PROFETIONAL RESUME</h2>
@@ -533,7 +540,8 @@ export default function ResumeExamplesforStudentsFirstJob(prop) {
                     <br /><Link to='/why-do-you-have-a-gap-in-your-job-history'>WHY DO YOU HAVE A GAP IN YOUR JOB HISTORY </Link>
                     <br /><Link to='/how-to-build-relationships-with-your-coworkers'>HOW TO BUILD RELATIONSHIPS WITH YOUR COWORKERS</Link>
                     <br /><Link to='/5-mistake-to-getting-job'>5 MISTAKE TO GETTING JOB</Link>
-                </section>
+                </section><div><GoogleAd/></div>
+
                 <div>
                     <WelcomeNotes />
                     <RandomeArticleToBlogCareer />
@@ -551,7 +559,8 @@ export default function ResumeExamplesforStudentsFirstJob(prop) {
                 <div className="stickyShare">
                     <ShareButtons url={ArticleUrl} title={ArticleTitle} />
                 </div>
-            </section>
+            </section><div><GoogleAd/></div>
+
         </div>
     )
 }

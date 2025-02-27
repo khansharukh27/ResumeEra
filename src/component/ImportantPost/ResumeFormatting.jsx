@@ -36,7 +36,7 @@ export default function ResumeFormatting(prop) {
     return (
         <div>
             <Helmet>
-                <title>Resume Formatting | ResumeEra</title>
+                <title>Best 5+ Resume Formatting | ResumeEra</title>
                 <meta
                     name="description"
                     content="Master the art of Resume Formatting with ResumeEra. Learn essential formatting tips, best practices, and how to create ATS-friendly resumes that stand out."
@@ -61,7 +61,7 @@ export default function ResumeFormatting(prop) {
                     name="twitter:description"
                     content="Learn the essentials of resume formatting. Get expert tips on structuring your resume and using ATS-friendly designs to impress employers."
                 />
-                <meta name="twitter:image" content={resumeformatting} />
+                <meta name="twitter:image" content='https://i.postimg.cc/Hx68HHKz/resume-formatting.jpg' />
 
                 <meta
                     property="og:title"
@@ -71,7 +71,7 @@ export default function ResumeFormatting(prop) {
                     property="og:description"
                     content="Discover how to format your resume professionally. Follow best practices and create ATS-friendly resumes with the help of ResumeEra's templates."
                 />
-                <meta property="og:image" content={resumeformatting} />
+                <meta property="og:image" content='https://i.postimg.cc/Hx68HHKz/resume-formatting.jpg' />
                 <meta
                     property="og:url"
                     content="https://resumeera.xyz/resume-formatting"
@@ -85,7 +85,7 @@ export default function ResumeFormatting(prop) {
             "@type": "Article",
             "headline": "Resume Formatting",
             "description": "Learn how to create a professional resume with perfect formatting. Access expert tips and ATS-friendly templates to optimize your resume.",
-            "image": "https://img.freepik.com/free-psd/designer-template-design_23-2151814723.jpg",
+            "image": "https://i.postimg.cc/Hx68HHKz/resume-formatting.jpg",
             "author": {
                 "@type": "Person",
                 "name": "ResumeEra Team"
@@ -140,7 +140,7 @@ export default function ResumeFormatting(prop) {
             <ResumeEraHeading publishDate={publishDate} title={title} />
             <article className='aboutResumeEra'>
                 <section>
-                    <img src={resumeformatting} style={{ height: 'auto' }} loading='lazy' alt="resume formatting" />
+                    <img src='https://i.postimg.cc/Hx68HHKz/resume-formatting.jpg' style={{ height: 'auto',width:'100%'}} loading='lazy' alt="resume formatting" />
                     <p>When you're applying for a job, one of the first things recruiters and hiring managers will notice
                         is your resume. Your resume formatting plays a critical role in ensuring that your resume is easy
                         to read, professional, and visually appealing. If your resume formatting isn’t up to par,
@@ -169,24 +169,13 @@ export default function ResumeFormatting(prop) {
                             <li><strong>Location:</strong> While it's not necessary to include your full address, it's good to mention your city and state (or just your state if you're applying for remote roles).</li>
                         </ul>
 
-                        <h3>Example:</h3>
-                        <pre style={{
-                            fontFamily: 'Arial, sans-serif',
-                            fontSize: '25px',
-                            lineHeight: '1.5',
-                            whiteSpace: 'pre-wrap',
-                            wordWrap: 'break-word',
-                            margin: '0',
-                            padding: '10px',
-                            backgroundColor: '#f4f4f4',
-                            borderRadius: '5px',
-                            border: '1px solid #ccc',
-                        }}>
+                        <h3 className='examplegeneral'>Example:</h3>
+                        <p  className='strong-point'>
                             Jane Doe  <br />
                             Phone: (555) 123-4567 | Email: jane.doe@email.com  <br />
                             LinkedIn: linkedin.com/in/janedoe  <br />
                             Location: New York, NY <br />
-                        </pre>
+                        </p>
                     </section>
 
                     <h3>2. Career Summary or Objective</h3>
@@ -200,42 +189,20 @@ export default function ResumeFormatting(prop) {
 
                     <p>Here are examples of both:</p>
 
-                    <h4>Example of Career Summary:</h4>
-                    <pre style={{
-                        fontFamily: 'Arial, sans-serif',
-                        fontSize: '25px',
-                        lineHeight: '1.5',
-                        whiteSpace: 'pre-wrap',
-                        wordWrap: 'break-word',
-                        margin: '0',
-                        padding: '10px',
-                        backgroundColor: '#f4f4f4',
-                        borderRadius: '5px',
-                        border: '1px solid #ccc',
-                    }}>
+                    <h4 className='examplegeneral'>Example of Career Summary:</h4>
+                    <p className='strong-point'>
                         Experienced Digital Marketing Specialist with over 5 years of success in developing strategic marketing campaigns, driving brand awareness, and optimizing lead generation. Skilled in SEO, content marketing, and social media strategy. Proven ability to increase website traffic by 40% and contribute to a 25% revenue growth in a highly competitive market. Passionate about creating innovative marketing solutions to drive business success.
-                    </pre>
+                    </p>
 
-                    <h4>Example of Career Objective:</h4>
-                    <pre style={{
-                        fontFamily: 'Arial, sans-serif',
-                        fontSize: '25px',
-                        lineHeight: '1.5',
-                        whiteSpace: 'pre-wrap',
-                        wordWrap: 'break-word',
-                        margin: '0',
-                        padding: '10px',
-                        backgroundColor: '#f4f4f4',
-                        borderRadius: '5px',
-                        border: '1px solid #ccc',
-                    }}>
+                    <h4 className='examplegeneral'>Example of Career Objective:</h4>
+                    <p className='strong-point'>
                         Recent graduate with a degree in Computer Science and a strong passion <br />
                         for software development. Seeking to leverage programming skills, <br />
                         creativity, and a problem-solving mindset to contribute to a dynamic <br />
                         development team. Eager to apply my knowledge of coding languages like <br />
                         Python, JavaScript, and Java to support cutting-edge projects and grow <br />
                         professionally in a fast-paced environment.
-                    </pre>
+                    </p>
 
                     <p>Choosing between a career summary and objective depends on your level of experience and the type of role you're applying for. A career summary is ideal for experienced professionals, while a career objective works best for newcomers or those looking to change career paths.</p>
 
@@ -252,19 +219,8 @@ export default function ResumeFormatting(prop) {
 
                     <p>Here’s an example of how to format your work experience section:</p>
 
-                    <h4>Example:</h4>
-                    <pre style={{
-                        fontFamily: 'Arial, sans-serif',
-                        fontSize: '25px',
-                        lineHeight: '1.5',
-                        whiteSpace: 'pre-wrap',
-                        wordWrap: 'break-word',
-                        margin: '0',
-                        padding: '10px',
-                        backgroundColor: '#f4f4f4',
-                        borderRadius: '5px',
-                        border: '1px solid #ccc',
-                    }}>
+                    <h4 className='examplegeneral'>Example:</h4>
+                    <p className='strong-point'>
                         <strong>Marketing Manager</strong>  <br />
                         XYZ Corporation – New York, NY  <br />
                         March 2018 – Present<br />
@@ -283,7 +239,7 @@ export default function ResumeFormatting(prop) {
                         - Supported the planning and execution of marketing events, increasing attendee participation by 20%.<br />
                         - Assisted in the creation of marketing collateral and presentations for new product launches.<br />
                         - Analyzed campaign performance metrics, providing insights to improve future strategies.<br />
-                    </pre>
+                    </p>
 
                     <p>In this example, the job titles are bolded to stand out, the company name and dates are clearly formatted, and each responsibility/achievement is quantified to emphasize impact. Always aim to show your contributions and measurable results to make your experience stand out.</p>
 
@@ -298,24 +254,13 @@ export default function ResumeFormatting(prop) {
                         <li><strong>Relevant Courses (Optional):</strong> If applicable, you can list a few courses that are directly related to the job you're applying for.</li>
                     </ul>
 
-                    <h4>Example:</h4>
-                    <pre style={{
-                        fontFamily: 'Arial, sans-serif',
-                        fontSize: '25px',
-                        lineHeight: '1.5',
-                        whiteSpace: 'pre-wrap',
-                        wordWrap: 'break-word',
-                        margin: '0',
-                        padding: '10px',
-                        backgroundColor: '#f4f4f4',
-                        borderRadius: '5px',
-                        border: '1px solid #ccc',
-                    }}>
+                    <h4 className='examplegeneral'>Example:</h4>
+                    <p className='examplegeneral'>
                         <strong>Bachelor of Arts in Marketing</strong>  <br />
                         XYZ University – New York, NY  <br />
                         Graduation Date: May 2020  <br />
                         Relevant Courses: Digital Marketing, Consumer Behavior, Market Research<br />
-                    </pre>
+                    </p>
 
                     <h3>5. Skills</h3>
                     <p>In the skills section, you should list both hard and soft skills that are relevant to the job you’re applying for. Hard skills are technical abilities, such as software proficiency, while soft skills are personal attributes that help you succeed in the workplace.</p>
@@ -325,22 +270,11 @@ export default function ResumeFormatting(prop) {
                         <li><strong>Soft Skills:</strong> Personal attributes like communication, leadership, and problem-solving that help you work well with others and succeed in various situations.</li>
                     </ul>
 
-                    <h4>Example:</h4>
-                    <pre style={{
-                        fontFamily: 'Arial, sans-serif',
-                        fontSize: '25px',
-                        lineHeight: '1.5',
-                        whiteSpace: 'pre-wrap',
-                        wordWrap: 'break-word',
-                        margin: '0',
-                        padding: '10px',
-                        backgroundColor: '#f4f4f4',
-                        borderRadius: '5px',
-                        border: '1px solid #ccc',
-                    }}>
+                    <h4 className='examplegeneral'>Example:</h4>
+                    <p className='strong-point'>
                         <strong>Hard Skills:</strong> Adobe Creative Suite, Google Analytics, SEO, Microsoft Excel  <br />
                         <strong>Soft Skills:</strong> Communication, Teamwork, Time Management, Leadership<br />
-                    </pre>
+                    </p>
 
                     <h3>6. Additional Sections (Optional)</h3>
                     <p>Depending on your industry, career level, and the role you're applying for, you may want to include additional sections on your resume. These sections help showcase your unique qualifications and experiences that may set you apart from other candidates.</p>
@@ -352,24 +286,13 @@ export default function ResumeFormatting(prop) {
                         <li><strong>Awards:</strong> Include any awards or recognitions you’ve received that are relevant to the job or demonstrate your expertise.</li>
                     </ul>
 
-                    <h4>Example:</h4>
-                    <pre style={{
-                        fontFamily: 'Arial, sans-serif',
-                        fontSize: '25px',
-                        lineHeight: '1.5',
-                        whiteSpace: 'pre-wrap',
-                        wordWrap: 'break-word',
-                        margin: '0',
-                        padding: '10px',
-                        backgroundColor: '#f4f4f4',
-                        borderRadius: '5px',
-                        border: '1px solid #ccc',
-                    }}>
+                    <h4 className='examplegeneral'>Example:</h4>
+                    <p className='strong-point'>
                         <strong>Certifications:</strong> Google Analytics Certified, HubSpot Inbound Marketing Certified  <br />
                         <strong>Volunteer Experience:</strong> Event Coordinator – New York Charity Run (January 2019 – Present)  <br />
                         <strong>Languages:</strong> Spanish (Fluent), French (Intermediate)  <br />
                         <strong>Awards:</strong> Employee of the Year – ABC Corporation (2022)<br />
-                    </pre>
+                    </p>
 
                 </section><div><GoogleAd /></div>
 

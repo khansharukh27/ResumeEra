@@ -5,6 +5,7 @@ import AuthorCard from '../AuthorCard';
 import ShareButtons from '../shareButton/ShareButtons';
 import CallToAction from '../CallToAction';
 import GoogleAd from '../adFolder/GoogleAd';
+import ResumeEraHeading from '../ResumeEraHeading';
 const MultiPageResumeFormatting = () => {
     const ArticleUrl =
                     "https://resumeera.xyz/multi-page-resume-formatting";
@@ -12,6 +13,8 @@ const MultiPageResumeFormatting = () => {
                   useEffect(() => {
                     window.scrollTo(0, 0);
                   }, []);
+                  const title = 'How To Multi-Page Resume Formatting ? 📈📈📈';
+                  const publishDate = '26-08-2024';
   return (
     <>
       <Helmet>
@@ -23,7 +26,7 @@ const MultiPageResumeFormatting = () => {
         {/* Open Graph (OG) Tags */}
         <meta property="og:title" content="Multi-Page Resume Formatting - Resumeera.xyz" />
         <meta property="og:description" content="Learn the best practices for multi-page resume formatting that help highlight your professional profile and skills." />
-        <meta property="og:image" content="https://resumeera.xyz/images/resume-graphic.jpg" />
+        <meta property="og:image" content="https://i.postimg.cc/P5vzd6mZ/multi-page-resume-formatting.jpg" />
         <meta property="og:url" content="https://resumeera.xyz/multi-page-resume-formatting" />
         <meta property="og:type" content="article" />
         
@@ -31,7 +34,7 @@ const MultiPageResumeFormatting = () => {
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Multi-Page Resume Formatting - Resumeera.xyz" />
         <meta name="twitter:description" content="Learn the best practices for multi-page resume formatting that help highlight your professional profile and skills." />
-        <meta name="twitter:image" content="https://resumeera.xyz/images/resume-graphic.jpg" />
+        <meta name="twitter:image" content="https://i.postimg.cc/P5vzd6mZ/multi-page-resume-formatting.jpg" />
         <meta name="twitter:url" content="https://resumeera.xyz/multi-page-resume-formatting" />
         
         {/* Schema Markup (JSON-LD) */}
@@ -41,40 +44,23 @@ const MultiPageResumeFormatting = () => {
             "@type": "Article",
             "headline": "Multi-Page Resume Formatting - Resumeera.xyz",
             "description": "Learn the best practices for multi-page resume formatting that help highlight your professional profile and skills.",
-            "image": "https://resumeera.xyz/images/resume-graphic.jpg",
+            "image": "https://i.postimg.cc/P5vzd6mZ/multi-page-resume-formatting.jpg",
             "url": "https://resumeera.xyz/multi-page-resume-formatting",
             "publisher": {
               "@type": "Organization",
               "name": "Resumeera",
               "logo": {
                 "@type": "ImageObject",
-                "url": "https://resumeera.xyz/images/logo.png"
+                "url": "https://resumeera.xyz/static/media/best_logo.895bb22edf6c08600c86.webp"
               }
             }
           }`}
         </script>
       </Helmet>
-
+<ResumeEraHeading title={title} publishDate={publishDate} />
       <div className="aboutResumeEra">
         <section>
-        <h1>Multi-Page Resume Formatting Kaise Karein? 📈📈📈</h1>
-        <div className="date-author-container">
-          <img
-            src="https://resumeera.xyz/static/media/best_logo.895bb22edf6c08600c86.webp"
-            alt="ResumeEra Logo"
-            className="author-logo"
-            style={{ width: "50px", height: "50px" }}
-          />
-          <small className="author-details">
-            ✍️ By the <span className="author-highlight">ResumeEra Team</span> |
-            Published:{" "}
-            <span className="author-highlight">December 31, 2024</span> | ⏱️{" "}
-            <span className="author-highlight">8 min read</span>
-          </small>
-        </div>
-        <figure>
-            <img style={{height:'auto'}} src={Multi_Page_Resume_Formatting} alt="Multi-Page Resume Formatting" />
-        </figure>
+        <img src="https://i.postimg.cc/P5vzd6mZ/multi-page-resume-formatting.jpg" style={{width:'100%',height:'auto' }} loading='lazy' alt="multi page resume formatting" />
         <p>
           Aaj ke competitive job market mein ek professionally formatted resume hone kaafi zaroori hai.
           Lekin jab aapka experience ya qualifications zyada ho jayein, ek multi-page resume kaafi helpful ho sakta hai.
@@ -90,7 +76,7 @@ const MultiPageResumeFormatting = () => {
           Chaliye in details mein jaakar samajhte hain ki ek structured aur visually appealing resume kaise banayein. 📚📚📚
         </p>
         </section><div><GoogleAd/></div>
-        <section className="resume-tips">
+        <section >
   <h2>Multi-Page Resume Formatting Ke Liye Essential Tips 🖋️🖋️🖋️</h2>
 
   <h3>1. Content Prioritization Karein 🔄🔄🔄</h3>
@@ -117,7 +103,7 @@ const MultiPageResumeFormatting = () => {
     Content prioritization mein sabse bada focus relevance aur clarity par hota hai. Aapka resume job description ke hisaab se tailor hona chahiye, jo employer ke liye aapke profile ko instantly valuable banata hai. 🚀🚀🚀
   </p>
 </section><div><GoogleAd/></div>
-<section className="resume-tips">
+<section >
   <h2>Multi-Page Resume Formatting Ke Liye Essential Tips 🖋️🖋️🖋️</h2>
 
   <h3>2. Consistency Maintain Karein 🌱🌱🌱</h3>
@@ -168,7 +154,7 @@ const MultiPageResumeFormatting = () => {
     Readable layouts recruiter ke experience ko seamless banate hain. Wo resume ke content mein interest maintain karte hain aur hiring process mein ek better consideration ke liye encourage karte hain. 🛠️🛠️🛠️
   </p>
 </section><div><GoogleAd/></div>
-<section className="resume-tips">
+<section >
   <h2>Multi-Page Resume Formatting Ke Liye Essential Tips 🖋️🖋️🖋️</h2>
 
   <h3>4. Page Breaks Aur Continuity Par Dhyan Dein 🌐🌐🌐</h3>
@@ -213,7 +199,7 @@ const MultiPageResumeFormatting = () => {
     Advanced formatting tools ke use se aap ek highly professional aur tailored resume design kar sakte hain. Yeh tools additional creativity aur customization ke liye kaafi useful hain. 🎨🎨🎨
   </p>
 </section><div><GoogleAd/></div>
-<section className="resume-tips">
+<section >
   <h2>Multi-Page Resume Formatting Ke Liye Essential Tips 🖋️🖋️🖋️</h2>
 
   <h3>6. Visual Elements Ko Optimize Karein 🌟🌟🌟</h3>
@@ -261,7 +247,7 @@ const MultiPageResumeFormatting = () => {
     Customizable sections se aapke resume ko ek personalized aur dynamic touch milta hai. Yeh recruiter ko aapki profile ke distinct aspects ko samajhne mein madad karta hai. 🌸🌸🌸
   </p>
 </section><div><GoogleAd/></div>
-<section className="resume-tips">
+<section >
   <h2>Multi-Page Resume Formatting Ke Liye Essential Tips 🖋️🖋️🖋️</h2>
 
   <h3>8. Proofreading Aur Final Touches Zaroor Karein ✍️✍️✍️</h3>

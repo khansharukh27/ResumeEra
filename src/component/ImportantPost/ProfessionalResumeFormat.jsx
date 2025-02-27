@@ -8,6 +8,7 @@ import AuthorCard from '../AuthorCard';
 import CallToAction from '../CallToAction';
 import ShareButtons from '../shareButton/ShareButtons';
 import { Helmet } from 'react-helmet';
+import { Link } from 'react-router-dom';
 export default function ProfessionalResumeFormat() {
      const ArticleUrl = "https://resumeera.xyz/professional-resume-format-pdf-download";
                             const ArticleTitle = "Professional Resume Format PDF: Download for Free | ResumeEra";
@@ -249,7 +250,7 @@ export default function ProfessionalResumeFormat() {
 <section >
       <h1 >Why Choose Resumeera.xyz for Your Resume Format PDF?</h1>
       <p >
-        Creating a professional resume that is also ATS-friendly can be a time-consuming process. Fortunately, 
+        Creating a <Link to='/professional-resume-format-pdf'>professional resume</Link> that is also ATS-friendly can be a time-consuming process. Fortunately, 
         <strong> Resumeera.xyz </strong> makes it simple and free to create a polished resume in just a few minutes.
       </p>
       <ul>
@@ -313,7 +314,7 @@ export default function ProfessionalResumeFormat() {
 
 <section>
   <h2>🔚 Conclusion 🔚</h2>
-  <p>Creating a professional resume format PDF doesn’t need to be difficult or time-consuming. With the right tools, like <a href="https://resumeera.xyz" target="_blank">Resumeera.xyz</a>, you can craft a polished, ATS-friendly resume in just minutes.</p>
+  <p>Creating a <Link to='/professional-resume-format-pdf'>professional resume</Link> format PDF doesn’t need to be difficult or time-consuming. With the right tools, like <a href="https://resumeera.xyz" target="_blank">Resumeera.xyz</a>, you can craft a polished, ATS-friendly resume in just minutes.</p>
   <p>By choosing the right template, filling in your details, and downloading your resume as a PDF, you’ll be well on your way to landing your next job. Best of luck! 🍀</p>
 </section><div><GoogleAd/></div>
 

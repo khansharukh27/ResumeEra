@@ -27,42 +27,6 @@ const Preview12 = () => {
     console.log('reducer:-', result)
 
 
-    const handleDownloadPDF = async () => {
-        const element = document.getElementById('Alish_mirza1');
-        try {
-            const scale = 4; // Slightly higher resolution without excessive file size
-            const canvas = await html2canvas(element, {
-                scale: scale,
-                useCORS: true,
-                logging: true,
-            });
-    
-            const pdf = new jsPDF('p', 'mm', 'a4');
-            const imgData = canvas.toDataURL('image/jpeg', 0.75); // Use JPEG format with 75% quality for compression
-    
-            const a4Width = 210; // A4 width in mm
-        const a4Height = 297;
-            const imgHeight = (canvas.height * a4Width) / canvas.width;
-            // let position = 0;
-    
-            // Check if the image height is greater than a single page height
-            pdf.addImage(imgData, 'JPEG', 0, 0, a4Width, imgHeight > a4Height ? a4Height : imgHeight, undefined, 'FAST');
-
-    
-            const fileName = `${inputFields}.pdf`;
-            pdf.save(fileName);
-    
-            // Store the image data URL in localStorage
-            const savedResumes = JSON.parse(localStorage.getItem('savedResumes')) || [];
-            savedResumes.push(imgData);
-            localStorage.setItem('savedResumes', JSON.stringify(savedResumes));
-    
-            alert('Your Resume is downloaded');
-            navigate('/myresume');
-        } catch (error) {
-            console.error('Error downloading PDF:', error);
-        }
-    };
     const lineStyle = {
         height: '5px',
         width: '75%',

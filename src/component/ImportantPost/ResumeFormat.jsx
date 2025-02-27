@@ -13,14 +13,16 @@ import { useDispatch } from 'react-redux';
 import ImageCard from '../ImageCardResusable/ImageCardResumeble';
 import { templatePage } from '../../Redux/action';
 import TechnicalResumeImages from '../TechResume/TechnicalResumeImages';
+import ResumeEraHeading from '../ResumeEraHeading'
 export default function ResumeFormat(prop) {
   const [hoveredImage, setHoveredImage] = useState();
   const { techImages } = prop
   const navigate = useNavigate();
+  const title = 'Create multi Resume Format✨:Free download Now'
   const publishDate = '2025-01-11'
   const dispatch = useDispatch();
   const ArticleUrl = "https://resumeera.xyz/resume-format";
-  const ArticleTitle = "Resume Format | ResumeEra";
+  const ArticleTitle = "Create multi Resume Format✨:Free download Now| ResumeEra";
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -48,7 +50,7 @@ export default function ResumeFormat(prop) {
   return (
     <div>
       <Helmet>
-        <title>Resume Format | Download Professional Resume Templates</title>
+        <title>Create multi Resume Format✨:Free download Now</title>
         <meta
           name="description"
           content="Discover the perfect resume format for your career. Learn about chronological, functional, and combination resume formats with tips and templates to help you land your dream job."
@@ -73,7 +75,7 @@ export default function ResumeFormat(prop) {
           name="twitter:description"
           content="Explore the best resume formats for your career. Learn about the chronological, functional, and combination formats and choose the one that highlights your strengths."
         />
-        <meta name="twitter:image" content={resumeformate} />
+        <meta name="twitter:image" content='https://i.postimg.cc/kgBprF1R/Create-multi-Resume-Format-Free-download-Now.jpg' />
 
         <meta
           property="og:title"
@@ -83,7 +85,7 @@ export default function ResumeFormat(prop) {
           property="og:description"
           content="Learn about the best resume formats and choose the one that fits your career goals. Discover tips and templates to create a standout resume."
         />
-        <meta property="og:image" content={resumeformate} />
+        <meta property="og:image" content='https://i.postimg.cc/kgBprF1R/Create-multi-Resume-Format-Free-download-Now.jpg' />
         <meta
           property="og:url"
           content="https://resumeera.xyz/resume-format"
@@ -97,7 +99,7 @@ export default function ResumeFormat(prop) {
             "@type": "Article",
             "headline": "Resume Format: Choose the Best Design for Your Resume",
             "description": "Explore the best resume formats and find the one that will help you land your dream job. Learn about chronological, functional, and combination formats.",
-            "image": "${resumeformate}",
+            "image": "$'https://i.postimg.cc/kgBprF1R/Create-multi-Resume-Format-Free-download-Now.jpg'",
             "author": {
                 "@type": "Person",
                 "name": "ResumeEra Team"
@@ -116,15 +118,12 @@ export default function ResumeFormat(prop) {
         `}
         </script>
       </Helmet>
-
+<ResumeEraHeading title={title} publishDate={publishDate}/>
       <article className='aboutResumeEra'>
+        
         <section>
-          <div className='header'>
-            <h1>Resume Format✨</h1>
-            <DateAndAuthor publishDate={publishDate} />
-          </div>
-
-          <img src={resumeformate} style={{ height: 'auto' }} loading='lazy' alt="Resume Format" />
+          <img src='https://i.postimg.cc/kgBprF1R/Create-multi-Resume-Format-Free-download-Now.jpg' 
+          style={{ height: 'auto',width:'100%' }} loading='lazy' alt="Resume Format" />
           <p>When you’re on the hunt for a new job, your resume is one of the most important tools you have.
             A well-crafted resume can open doors 🚪 and help you stand out in a competitive job market.
             But how do you know which <Link to='https://resumeera.xyz/resume-format-pdf'>resume format</Link> to choose? 🤔</p>
@@ -284,27 +283,31 @@ export default function ResumeFormat(prop) {
         <section>
           <h2>Key Elements of a Resume Format 📝</h2>
           <p>No matter which resume format you choose, there are several key elements that should be included in your resume. These elements help ensure that your resume presents you in the best light possible 🌟. Let’s take a closer look at what should go into your resume:</p>
-          <div className="qoute">
-            <h3 className="qoute">1. Header 📋</h3>
+          <div >
+            <h3>1. Header 📋</h3>
             <p>Your header should include your name, phone number, email address, and LinkedIn profile (if applicable). It’s important to make sure this information is easy to read and up-to-date 🕒. For example:</p>
-            <ul>
+            <p className='examplegeneral'>Example:-</p>
+            <ul className='strong-point'>
               <li><strong>Name:</strong> Make sure your name stands out 🏷️.</li>
               <li><strong>Contact Information:</strong> Include a professional email address and a phone number where you can easily be reached 📱.</li>
               <li><strong>LinkedIn Profile:</strong> If you have a LinkedIn profile, add the link so employers can learn more about your professional background 🔗.</li>
             </ul>
           </div>
 
-          <div className="qoute">
+          <div >
             <h3>2. Career Summary or Objective 🎯</h3>
             <p>The career summary or objective statement gives the reader an overview of your experience, skills, and career goals. The career summary is a short paragraph that highlights your qualifications. If you’re just starting out or changing careers, you can write an objective instead, which focuses more on your aspirations and goals.</p>
-            <p><strong>Career Summary Example:</strong> “Dynamic marketing professional with 5+ years of experience in digital advertising and brand strategy. Proven track record of driving engagement and increasing brand awareness.”</p>
-            <p><strong>Objective Example:</strong> “Recent college graduate seeking an entry-level marketing role to apply my skills in content creation and data analysis.”</p>
+            <p className='examplegeneral'>Example:-</p>
+            <p className='strong-point'>“Dynamic marketing professional with 5+ years of experience in digital advertising and 
+              brand strategy. Proven track record of driving engagement and increasing brand awareness.”
+             “Recent college graduate seeking an entry-level marketing role to apply my skills in content creation and data analysis.”</p>
 
           </div>
-          <div className="qoute">
+          <div >
             <h3>3. Work Experience 💼</h3>
             <p>This section is the heart of your resume. Here, you’ll list your past jobs, including your job title, the company name, dates of employment, and a brief description of your responsibilities and accomplishments. When writing your job descriptions, focus on specific achievements that demonstrate your impact 🔥.</p>
-            <ul>
+            <p className='examplegeneral'>Experience:-</p>
+            <ul className='strong-point'>
               <li><strong>Job Title:</strong> Marketing Manager</li>
               <li><strong>Company:</strong> XYZ Marketing</li>
               <li><strong>Dates:</strong> June 2018 – Present</li>
@@ -316,36 +319,38 @@ export default function ResumeFormat(prop) {
                 </ul>
               </li>
             </ul>
-
           </div>
 
-          <div className="qoute">
+          <div >
             <h3>4. Education 🎓</h3>
             <p>In this section, list your degrees, certifications, and any relevant coursework.
               If you have a degree or diploma, you don’t need to include high school education
               (unless it’s your highest level of education). For example:</p>
-            <ul>
+            <p className='examplegeneral'> Example:-</p>
+            <ul className='strong-point'>
               <li><strong>Degree:</strong> Bachelor of Science in Marketing</li>
               <li><strong>University:</strong> ABC University</li>
               <li><strong>Graduation Date:</strong> May 2020</li>
             </ul>
 
           </div>
-          <div className="qoute">
+          <div >
             <h3>5. Skills 🛠️</h3>
             <p>The skills section should highlight key abilities that are relevant to the job you’re
               applying for. Include both hard skills (like software or technical abilities) and soft
               skills (like communication or leadership). For example:</p>
-            <ul>
+            <p className='examplegeneral'> Example:-</p>
+            <ul className='strong-point'>
               <li><strong>Hard Skills:</strong> Microsoft Excel, Google Analytics, SEO</li>
               <li><strong>Soft Skills:</strong> Communication, Teamwork, Problem-Solving</li>
             </ul>
           </div>
-          <div className="qoute">
+          <div>
             <h3>6. Additional Sections (Optional) 🎁</h3>
             <p>Depending on your industry and experience, you may also want to include additional
               sections such as:</p>
-            <ul>
+            <p className='examplegeneral'></p>
+            <ul className='strong-point'>
               <li><strong>Certifications:</strong> Any relevant certifications or courses you’ve completed 🎓.</li>
               <li><strong>Volunteer Work:</strong> If applicable, especially if it’s relevant to the job 🙋‍♂️.</li>
               <li><strong>Awards:</strong> Recognitions you’ve received in your field 🏆.</li>
@@ -369,19 +374,19 @@ export default function ResumeFormat(prop) {
         
 
           <h2>Why Use Resumeera.xyz? 🚀</h2>
-          <p className='common-mistakeli'>Creating a resume can be time-consuming, but platforms like <strong>Resumeera.xyz</strong> make the process faster and easier ⏱️. Resumeera.xyz offers a variety of free resume templates that are customizable to suit your needs. Here’s why it’s a great tool:</p>
+          <p >Creating a resume can be time-consuming, but platforms like <strong>Resumeera.xyz</strong> make the process faster and easier ⏱️. Resumeera.xyz offers a variety of free resume templates that are customizable to suit your needs. Here’s why it’s a great tool:</p>
 
           <h3>1. Variety of Templates 🎨</h3>
-          <p className='common-mistakeli'>Resumeera.xyz has a wide selection of templates to choose from, whether you’re a fresh graduate, a mid-career professional, or someone with extensive experience. You can find templates that fit any job industry and profession 🌍.</p>
+          <p >Resumeera.xyz has a wide selection of templates to choose from, whether you’re a fresh graduate, a mid-career professional, or someone with extensive experience. You can find templates that fit any job industry and profession 🌍.</p>
 
           <h3 >2. ATS-Optimized ⚙️</h3>
-          <p className='common-mistakeli'>Many employers use Applicant Tracking Systems (ATS) to filter resumes before they even see them. Resumeera.xyz offers ATS-friendly templates that ensure your resume will pass through these systems and get noticed by human recruiters 👀.</p>
+          <p >Many employers use Applicant Tracking Systems (ATS) to filter resumes before they even see them. Resumeera.xyz offers ATS-friendly templates that ensure your resume will pass through these systems and get noticed by human recruiters 👀.</p>
 
           <h3>3. Free and Easy to Use 💸</h3>
-          <p className='common-mistakeli'>You don’t have to spend a dime to create a great-looking resume on Resumeera.xyz. The platform is free to use and offers an easy-to-navigate interface that lets you design and download your resume in minutes ⏳.</p>
+          <p >You don’t have to spend a dime to create a great-looking resume on Resumeera.xyz. The platform is free to use and offers an easy-to-navigate interface that lets you design and download your resume in minutes ⏳.</p>
 
           <h3>4. Customizable Features ✏️</h3>
-          <p className='common-mistakeli'>Once you choose a template, you can easily customize it to fit your personal style and career goals. You can change the fonts, colors, and sections to match the job you’re applying for 🎯.</p>
+          <p >Once you choose a template, you can easily customize it to fit your personal style and career goals. You can change the fonts, colors, and sections to match the job you’re applying for 🎯.</p>
         </section><div><GoogleAd /></div>
 
         <section>
@@ -434,10 +439,10 @@ export default function ResumeFormat(prop) {
 
         <section>
           <h2>Key Takeaways 📝</h2>
-          <ul className='qoute'>
-            <li className='common-mistakeli'>Your resume format is crucial for presenting your qualifications in the best possible light 🌟.</li>
-            <li className='common-mistakeli'>Choose the right format based on your work history, career goals, and the job you’re applying for 🎯.</li>
-            <li className='common-mistakeli'><strong>Resumeera.xyz</strong> offers free, customizable, and ATS-friendly resume templates that can help you create a professional resume in minutes ⏱️.</li>
+          <ul >
+            <li >Your resume format is crucial for presenting your qualifications in the best possible light 🌟.</li>
+            <li >Choose the right format based on your work history, career goals, and the job you’re applying for 🎯.</li>
+            <li ><strong>Resumeera.xyz</strong> offers free, customizable, and ATS-friendly resume templates that can help you create a professional resume in minutes ⏱️.</li>
           </ul>
         </section><div><GoogleAd /></div>
 

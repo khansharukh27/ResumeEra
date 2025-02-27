@@ -5,6 +5,7 @@ import { useSelector } from "react-redux";
 import { useNavigate } from "react-router-dom";
 import './CSS/preview106.css'
 import GoogleAd from "../adFolder/GoogleAd";
+import PdfDownloadButton from "../PdfDownloadButton";
 
 
 const Preview106 = () => {
@@ -35,72 +36,6 @@ const Preview106 = () => {
     console.log('hobbies preview 301:-', Hobbies)
     // console.log('Certificate:-', Certificate)
     console.log('honorand award:-', Honor)
-
-    const handleDownloadPDF = async () => {
-        // Show loading spinner
-        const loadingSpinner = document.getElementById('loadingSpinner');
-        loadingSpinner.style.display = "block"; // Show the spinner
-
-        const element = document.getElementById('Alisha_mirza106');
-        try {
-            const scale = 3; // Increase the scale for better resolution
-            const canvas = await html2canvas(element, {
-                scale: scale,
-                useCORS: true, // Allows cross-origin images to be rendered correctly
-                logging: false, // Disable logging for better performance
-            });
-            const pdf = new jsPDF('p', 'mm', 'a4');
-            const imgData = canvas.toDataURL('image/png');
-
-            const imgWidth = 210; // A4 width in mm
-            const imgHeight = (canvas.height * imgWidth) / canvas.width;
-
-            const a4Height = 297; // A4 height in mm
-
-            // If the content is shorter than the A4 page height, center it vertically
-            let verticalOffset = 0;
-            if (imgHeight < a4Height) {
-                // Center the content vertically
-                verticalOffset = (a4Height - imgHeight) / 2;
-            }
-
-            // If content fits on one page
-            if (imgHeight <= a4Height) {
-                pdf.addImage(imgData, 'PNG', 0, verticalOffset, imgWidth, imgHeight, undefined, 'FAST');
-            } else {
-                // If content is taller than one page, split it into multiple pages
-                let offsetY = 0;
-                while (offsetY < canvas.height) {
-                    const currentHeight = Math.min(imgHeight, canvas.height - offsetY); // Handle remaining height
-                    pdf.addImage(imgData, 'PNG', 0, offsetY, imgWidth, currentHeight, undefined, 'FAST');
-                    offsetY += currentHeight;
-
-                    // If there's more content, add another page
-                    if (offsetY < canvas.height) {
-                        pdf.addPage();
-                    }
-                }
-            }
-
-            const fileName = `${inputFields}.pdf`;
-            pdf.save(fileName);
-
-            // Hide loading spinner once PDF is ready
-            loadingSpinner.style.display = "none"; // Hide the spinner
-
-            const savedResumes = JSON.parse(localStorage.getItem('savedResumes')) || [];
-            savedResumes.push(imgData);
-            localStorage.setItem('savedResumes', JSON.stringify(savedResumes));
-
-            alert('Your Resume is downloaded');
-            // navigate('/myresume');
-        } catch (error) {
-            // Hide loading spinner if error occurs
-            loadingSpinner.style.display = "none";
-            console.error('Error downloading PDF:', error);
-        }
-    };
-
 
 
     return (
@@ -205,7 +140,7 @@ const Preview106 = () => {
                     <div style={{ width: '100%' }}><GoogleAd /></div>
                     <div className='downloadbuttondiv'>
                         <input type="text" placeholder="Enter your resume name" className="resume-name-input" style={{ borderRadius: '5px', padding: '10px' }} onChange={(e) => setInputFields(e.target.value)} />
-                        <button onClick={handleDownloadPDF} type="btn" className="btn btn-primary ms-2 download-button">Download</button>
+<PdfDownloadButton elementId="Alisha_mirza106" fileName={inputFields} />
                     </div>
                     {/* Color Picker for Background Color */}
                     <div className='d-flex border fontfamilydiv' style={{ marginTop: '5px', display: 'flex', flexDirection: 'row', justifyContent: 'center' }}>

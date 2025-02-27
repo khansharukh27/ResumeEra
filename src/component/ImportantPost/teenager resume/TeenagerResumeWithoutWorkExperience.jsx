@@ -151,7 +151,8 @@ export default function TeenagerResumeWithoutWorkExperience(prop) {
                     <img src="https://i.postimg.cc/B6gtQXVx/teenager-reusme-with-no-experience.webp" style={{ width: '100%', height: 'auto' }} loading="lazy" alt="" />
                     <p>Creating a teenager resume without work experience might sound intimidating at first, but with the right approach, you can create a standout resume that highlights your skills, achievements, and potential. Many teenagers face the challenge of not having formal work experience, but the good news is, your resume can still be incredibly compelling by showcasing what you do have: your skills, enthusiasm, and the valuable experiences you’ve gained in school, volunteer work, or personal projects.</p>
                     <p>In this guide, we’ll walk you through how to craft an impressive teenager resume that highlights your strengths and makes you a top contender for your first job or internship. Let’s dive in!</p>
-                </section>
+                </section><div><GoogleAd/></div>
+
 
                 <section>
                     <h2>Understanding a Teenager Resume with No Work Experience</h2>
@@ -180,7 +181,8 @@ export default function TeenagerResumeWithoutWorkExperience(prop) {
                     <p>Don’t forget to highlight relevant coursework—classes that demonstrate the skills you’ve developed that are applicable to the role you’re interested in. For example, if you’re applying for a role that involves customer service, mentioning a communication or business course would show you’ve gained useful knowledge.</p>
                     <p>Beyond academics, extracurricular activities and volunteer work can make your resume stand out. These experiences showcase important skills such as time management, leadership, teamwork, and problem-solving. Whether you're on a sports team, in a school club, or volunteering at a local organization, these activities show that you're committed, reliable, and willing to contribute your time and energy.</p>
                     <p>By emphasizing your achievements, skills, and interests, you show potential employers that you are not just looking for a job—you are ready to make a positive impact. Even without formal work experience, your resume can highlight your potential and set you apart from other candidates. Your drive, skills, and enthusiasm will speak volumes, giving employers confidence that you have what it takes to succeed.</p>
-                </section>
+                </section><div><GoogleAd/></div>
+
                 <ResumeBuilder/>
                 <section>
                     <h2>Building a Teenager Resume with No Work Experience</h2>
@@ -280,7 +282,8 @@ export default function TeenagerResumeWithoutWorkExperience(prop) {
                         • MVP, School Soccer Team (2024)<br />
                     </pre>
                     <FresherResume fresherResumeImage={fresherResumeImage}/>
-                </section>
+                </section><div><GoogleAd/></div>
+
                 <section>
                     <h2>Tips for Writing and Formatting Your Resume</h2>
                     <img src="https://i.postimg.cc/3NxNyYsz/Tips-for-Writing-and-Formatting-Your-Resume.webp" alt="tips for writing and formatting your resume"
@@ -299,7 +302,8 @@ export default function TeenagerResumeWithoutWorkExperience(prop) {
                         <li>Planned</li>
                     </ul>
                     <p>"I spearheaded a project that increased sales by 20%." Statements like this grab attention and make your experiences stand out. Use positive language to show enthusiasm and highlight your contributions.</p>
-                </section>
+                </section><div><GoogleAd/></div>
+
                 <section>
                     <h2>Tailor Your Resume to Each Opportunity</h2>
                     <p>A generic resume might get overlooked, so customize it for each opportunity. Look at the job description and include keywords that match the role. For example, if the position values teamwork, mention a group project where you worked well with others. Highlight experiences that directly relate to the job. Tailoring your resume shows employers you’ve done your homework and are serious about the role.</p>
@@ -361,7 +365,8 @@ export default function TeenagerResumeWithoutWorkExperience(prop) {
 
                     <h5>References:</h5>
                     <p>Available upon request.</p>
-                </section>
+                </section><div><GoogleAd/></div>
+
                 <section>
                     <h2>Key Takeaways</h2>
                     <ul>
@@ -375,7 +380,8 @@ export default function TeenagerResumeWithoutWorkExperience(prop) {
                             <strong>Tailor Your Resume for Each Job:</strong> One size doesn’t fit all when it comes to resumes. Each job opportunity is unique, and it’s essential to tailor your resume for the specific position you’re applying for. This means you should carefully read the job ad and adjust your resume accordingly. Incorporate keywords and phrases from the job description to highlight relevant skills or experiences that match the role. Additionally, don’t forget to update your objective statement to reflect why you're particularly excited about the opportunity and how your specific skills and experiences make you an excellent fit. By customizing your resume for each job, you show that you’ve done your research, are enthusiastic about the role, and understand the employer's needs.
                         </li>
                     </ul>
-                </section>
+                </section><div><GoogleAd/></div>
+
 
                 <section>
                     <h2>Proofread and Seek Feedback</h2>
@@ -389,7 +395,8 @@ export default function TeenagerResumeWithoutWorkExperience(prop) {
                         <li>Highlight your education, activities, and achievements.</li>
                     </ul>
                     <p>Your unique experiences and enthusiasm can leave a lasting impression. Tools like Rezi make the process simple by guiding you through each section and offering formatting help. Don’t hesitate to ask a teacher or mentor for advice—they’re there to help!</p>
-                </section>
+                </section><div><GoogleAd/></div>
+
                 <section>
                     <h2>FAQ</h2>
                     <dl className='faqs'>
@@ -404,7 +411,8 @@ export default function TeenagerResumeWithoutWorkExperience(prop) {
                             <dd>Absolutely! Templates make formatting easier and keep your resume professional. Look for free options online or use tools like Canva or Google Docs.</dd>
                         </div>
                     </dl>
-                </section>
+                </section><div><GoogleAd/></div>
+
                 <section className='releted-article'>
                     <h2>RELETED ARTICLE :- YOU CAN'T MISS IF YOU WANT TO CREATE A PROFETIONAL RESUME</h2>
                     <br /><Link to='/what-is-a-functional-resume'>WHAT IS A FUNCTIONAL RUSUME</Link>
@@ -412,7 +420,8 @@ export default function TeenagerResumeWithoutWorkExperience(prop) {
                     <br /><Link to='/types-of-resume-formats-for-freshers'>TYPES OF RESUME FORMATS FOR FRESHERS</Link>
                     <br /><Link to='/what-is-the-best-resume-format-for-freshers'>WHAT IS THE BEST RESUME FORMAT FOR FRESHERS</Link>
                     <br /><Link to='/model-resume-format-for-freshers'>MODEL RESUME FORMAT FOR FRESHERS</Link>
-                </section>
+                </section><div><GoogleAd/></div>
+
                 <div>
                     <WelcomeNotes />
                     <RandomeArticleToBlogCareer />
@@ -430,7 +439,8 @@ export default function TeenagerResumeWithoutWorkExperience(prop) {
                 <div className="stickyShare">
                     <ShareButtons url={ArticleUrl} title={ArticleTitle} />
                 </div>
-            </section>
+            </section><div><GoogleAd/></div>
+
         </div>
     )
 }

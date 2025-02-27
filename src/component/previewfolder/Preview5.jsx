@@ -5,6 +5,7 @@ import { useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import '../previewfolder/CSS/preview5.css';
 import GoogleAd from '../adFolder/GoogleAd';
+import PdfDownloadButton from '../PdfDownloadButton';
 
 const Preview5 = () => {
     const [inputFields, setInputFields] = useState('resume.pdf');
@@ -22,39 +23,6 @@ const Preview5 = () => {
     const work = useSelector((state) => [state.reducer.workExperience]);
     const LLanguage = useSelector((state) => [state.reducer.addLanguage]);
     const Hobbies = useSelector((state) => [state.reducer.addHobies]);
-
-    const handleDownloadPDF = async () => {
-        const element = document.getElementById('Alish_mirza1');
-        try {
-            const scale = 3; // Slightly higher resolution without excessive file size
-            const canvas = await html2canvas(element, {
-                scale: scale,
-                useCORS: true,
-                logging: true,
-            });
-
-            const pdf = new jsPDF('p', 'mm', 'a4');
-            const imgData = canvas.toDataURL('image/jpeg', 0.75); // Use JPEG format with 75% quality for compression
-
-            const a4Width = 210; // A4 width in mm
-            const a4Height = 297;
-            const imgHeight = (canvas.height * a4Width) / canvas.width;
-            
-            pdf.addImage(imgData, 'JPEG', 0, 0, a4Width, imgHeight > a4Height ? a4Height : imgHeight, undefined, 'FAST');
-
-            const fileName = `${inputFields}.pdf`;
-            pdf.save(fileName);
-
-            const savedResumes = JSON.parse(localStorage.getItem('savedResumes')) || [];
-            savedResumes.push(imgData);
-            localStorage.setItem('savedResumes', JSON.stringify(savedResumes));
-
-            alert('Your Resume is downloaded');
-            navigate('/myresume');
-        } catch (error) {
-            console.error('Error downloading PDF:', error);
-        }
-    };
 
     return (
         <div>
@@ -158,7 +126,7 @@ const Preview5 = () => {
                     <div className="w-100"><GoogleAd /></div>
                     <div className='downloadbuttondiv'>
                         <input type="text" placeholder="Enter your resume name" className="resume-name-input" style={{ borderRadius: '5px', padding: '10px' }} onChange={(e) => setInputFields(e.target.value)} />
-                        <button onClick={handleDownloadPDF} type="btn" className="btn btn-primary ms-2 download-button">Download</button>
+<PdfDownloadButton elementId="Alish_mirza1" fileName={inputFields} />
                     </div>
                     {/* Color Picker for Background Color */}
                     <div className='d-flex border fontfamilydiv' style={{ marginTop: '5px', display: 'flex', flexDirection: 'row', justifyContent: 'center' }}>

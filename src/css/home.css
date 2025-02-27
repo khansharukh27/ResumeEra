@@ -1,400 +1,56 @@
-/* Optimized Container class for the Home component */
 .home-container {
-    margin-left: 0;
-    margin-right: 0;
-    padding: 20px; /* Optional: Adds some space inside the container */
-    /* background-color: rgb(180, 238, 224); Simplify background */
-    /* color: #e0e0e0; Light gray text color for readability */
-    /* Removed background gradient and filters for better performance */
-}
-
-
-
-.home_div {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 20px;
-    margin-bottom: 5px;
-}
-
-.home-logo {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    object-fit: cover;
-    margin-top: 40px;
-    width: 250px;
-    height: 120px;
-    border-radius: 50%;
-}
-
-/* Removed rotation animation to optimize LCP */
-.home-logo img {
-    width: 120px;
-    height: 120px;
-    border: 2px solid black;
-    border-radius: 50%;
-}
-
-.home-welcome {
-    margin-top: 25px;
-    text-align: justify;
-    font-family: 'Arial', sans-serif; /* Ensure fallback fonts are used */
-    color: #333; /* Ensure text is visible immediately */
-}
-.gradient-text {
-    background: linear-gradient(to right, #2563eb, #16a34a);
-    -webkit-background-clip: text;
-    color: transparent;
-}
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
-
-.home-welcome-span {
-    font-size: 40px;
-    font-weight: bold;
-    /* background: linear-gradient(90deg, blue, green); */
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    color: inherit; /* Ensure text is visible even during loading */
-    transition:all 0.3s ease; /* Smooth gradient transition */
-    font-display: swap; /* Ensure text is visible even if font is loading */
-}
-
-/* Optionally, add a fallback solid color */
-.home-welcome-span.no-gradient {
-    color: #000; /* Fallback color */
-}
-.home-welcome p {
-    /* font-size: 18px; */
-    /* line-height: 1.6; */
-    /* font-family: 'Arial', sans-serif; Use a system font to avoid delays */
-    /* color: #333; Solid color to ensure text is visible immediately */
-    margin-top: 10px; /* Add margin for better spacing */
-    text-align: justify;
-    transition: color 0.3s ease; /* Smooth color change if needed */
-    font-display: swap;
-}
-
-/* Optional: Adding styles to handle the text rendering better during load */
-.home-welcome p.no-gradient {
-    color: #000; /* Ensure text is solid and visible during load */
-}
-.home-welcome h4 {
-    font-size: 16px; /* Adjust font size */
-    font-weight: bold;
-    color: black;
-    margin-left: 20px;
-}
-
-.home-welcome h4 a {
-    text-decoration: none;
-    font-size: medium;
-    margin-top: 40px;
-}
-
-.home_div::before {
-    content: '';
-    position: absolute;
-    border-bottom-left-radius: -20px;  /* Bottom corner */
-    right: -20px;   /* Right corner */
-    width: 40px;
-    height: 40px;
-    background-color: lightblue;
-    border-radius: 50%;
-    transform: scale(1.5); /* Expand the corner outward */
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
   }
-
-/* Carousel container */
-.home-carousel {
-    width: 100%;
-}
-
-/* Description of the ResumeEra platform */
-.home-description{
-    display: flex;
-    flex-wrap: wrap;
-    gap: 16px;
-    justify-content: center;
-    align-items: center;
-}
-.img-div-home {
-    border: 5px solid transparent;
-    border-image-source: linear-gradient(135deg, blue, green);
-    border-image-slice: 1;
-}
-
-.home-description img{
-   height: 400px;
-   width:250px;
-   /* padding: 5px; */
-   margin: 5px;
-
-}
-
-/* Section for how to create a resume */
-.home-how-to {
-    text-align: start;
-    font-size: 30px;
+  
+  .gradient-text {
+    background: linear-gradient(45deg, #2d6adf, #5e92f3);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    font-size: 2.5rem;
     font-weight: bold;
-    color: black;
-    margin-left: 20px;
-}
-
-/* Steps for creating a resume */
-.home-steps {
-    display: flex;
-    justify-content: space-around;
     text-align: center;
-    margin-right: 40px;
-}
-
-.home-step p {
-    font-size: medium;
-    font-weight: 200;
-    margin-right: 60px;
-}
-
-.home-step img {
-    width: 200px;
-    border-radius: 15px;
-}
-
-/* Section for changing CV */
-.home-change-cv {
-    display: flex;
-    justify-content: space-around;
-}
-
-.home-change-cv-image img {
-    width: 250px;
-    height: 250px;
-    border-radius: 15px;
-}
-
-.home-change-cv-info {
-    margin-left: 15px;
-    padding: 5px;
-    margin-top: 45px;
-    color: black;
-}
-
-.home-change-cv-info span{
-    background:linear-gradient(135deg,blue,green);
-    padding: 25px;
-    font-size: 2rem;
-    text-decoration: none;
-}
-
-.home-change-cv-info h4 {
-    font-weight: 700;
-}
-
-.home-change-cv-info p {
-    font-weight: 200;
-    
-}
-
-.home-change-cv-info p a {
-    border: 3px solid black;
-    text-decoration: none;
-    border-radius: 8px;
-    background-color: palegreen;
-    padding: 15px;
+  }
+  
+  .highlighted-text {
+    display: block;
     text-align: center;
-    font-size: 20px;
-    font-weight: bold;
-}
-
-/* Features of the resume builder */
-.home-resume-builder {
-    text-align: center;
-}
-.home-resume-builder{
-    text-align: center;
-}
-
-.home-resume-features {
-    display: flex;
-    justify-content: space-around;
-    /* text-align: center; */
-}
-.home-feature {
-    margin-right: 25px;
-    padding: 5px;
-    width: 100%;
-    text-align: justify;
-}
-.home-resume-builder h4 {
-    font-weight: 700;
-    color: black;
-}
-
-.home-resume-builder p {
-    font-weight: 200;
-    color: black;
-}
-
-/* Section for creating a professional story */
-.home-professional-story {
-    text-align: center;
-    /* border: 2px solid grey; */
-    border-radius: 8px;
-    padding: 10px;
-    color: black;
-}
-
-.home-professional-story h2 {
-    color: black;
-    font-weight: 700;
-}
-
-.home-professional-story p {
-    color: black;
-    font-weight: 200;
-}
-
-.home-story-feature-main {
-    display: flex;
-}
-
-.home-story-feature {
-    border: 1px solid black;
-    border-radius: 8px;
-    padding: 5px;
-    text-align: justify;
-    margin: 5px;
-}
-
-.home-story-feature h3 {
-    color: black; /* Removed gradient text */
-}
-
-/* Section for cover letter */
-.home-cover-letter h2 {
-    text-align: center;
-    font-weight: 700;
-    color: black;
-}
-
-.home-cover-letter p {
-    text-align: justify;
-    color: black;
-    font-weight: 200;
-}
-
-/* Removed animation on carousel */
-
-
-/* Responsive media queries */
-
-@media (max-width: 768px) {
-    .home-container {
-        margin-left: 0px;
-        margin-right: 0px;
+    margin: 1rem 0;
+  }
+  
+  .cta-button {
+    display: inline-block;
+    transition: background 0.3s;
+  }
+  .cta-button:hover {
+    background: #1a5ac7;
+  }
+  
+  .home-steps .home-step:hover,
+  .home-resume-features .home-feature:hover,
+  .home-story-feature:hover {
+    transform: scale(1.05);
+  }
+  
+  .home-divider {
+    border: 1px solid #e0e7ff;
+    margin: 2rem 0;
+  }
+  
+  @media (max-width: 768px) {
+    .home-welcome, .home-how-to, .home-change-cv, .home-resume-builder, .home-professional-story, .home-cover-letter {
+      padding: 1.5rem;
     }
-
-    .home_div {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        margin-top: 20px;
+    .gradient-text {
+      font-size: 2rem;
     }
-
-    .home-logo img {
-        width: 100px;
-        height: 100px;
+    .home-steps, .home-resume-features, .home-story-feature-main {
+      flex-direction: column;
+      align-items: center;
     }
-
-    .home-welcome {
-        margin-top: 25px;
-        text-align: center;
-    }
-
-    .home-welcome h4 {
-        font-size: 30px;
-        font-weight: bold;
-        color: black;
-        margin-left: 20px;
-    }
-
-    .home-description {
-        text-align: justify;
-        margin: 5px;
-    }
-
-    .home-how-to h2{
-        text-align: center;
-    }
-    .home-step {
-        text-align: center;
-        font-size: 30px;
-        font-weight: bold;
-        color: black;
-        margin-left: 20px;
-    }
-
-    .home-steps {
-        flex-direction: column;
-    }
-
-    .home-step img {
-        width: 200px;
-    }
-
-    .home-change-cv {
-        flex-direction: column;
-    }
-
-    .home-change-cv-image img {
-        width: 250px;
-        height: 250px;
-    }
-
-    .home-change-cv-info p a {
-        margin-left: 35px;
-        margin-top: 10px;
-    }
-
-    .home-resume-features {
-        flex-direction: column;
-    }
-}
-
-@media (max-width: 425px) {
-    .home-logo img {
-        width: 90px;
-        height: 90px;
-    }
-
-    .home-step img {
-        width: 180px;
-    }
-    .home-story-feature-main {
-        display: flex;
-        flex-direction: column;
-    }
-}
-
-@media (max-width: 320px) {
-    .home-logo img {
-        width: 80px;
-        height: 80px;
-    }
-
-    .home-step img {
-        width: 160px;
-    }
-    .home-story-feature-main {
-        display: flex;
-        flex-direction: column;
-    }
-    .home_div h1{
-        font-size: small;
-    }
-    .home-change-cv-info span{
-        background:linear-gradient(135deg,blue,green);
-        padding: 25px;
-        font-size: 1rem;
-        text-decoration: none;
-    }
-}
+  }

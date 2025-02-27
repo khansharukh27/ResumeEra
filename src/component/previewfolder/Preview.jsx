@@ -1,10 +1,10 @@
-import jsPDF from 'jspdf';
-import html2canvas from 'html2canvas';
+
 import { useState } from 'react';
 import { useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import './CSS/preview.css';
 import GoogleAd from '../adFolder/GoogleAd';
+import PdfDownloadButton from '../PdfDownloadButton';
 
 const Preview = () => {
     const [inputFields, setInputFields] = useState('resume.pdf');
@@ -20,40 +20,6 @@ const Preview = () => {
     const education = useSelector((state) => [state.reducer.education[0]]);
     const keyskills = useSelector((state) => [state.reducer.keySkills[0]]);
     const work = useSelector((state) => [state.reducer.workExperience[0]]);
-
-    const handleDownloadPDF = async () => {
-        const element = document.getElementById('Alish_mirza1');
-        try {
-            const scale = 3; // Slightly higher resolution without excessive file size
-            const canvas = await html2canvas(element, {
-                scale: scale,
-                useCORS: true,
-                logging: true,
-            });
-
-            const pdf = new jsPDF('p', 'mm', 'a4');
-            const imgData = canvas.toDataURL('image/jpeg', 0.75); // Use JPEG format with 75% quality for compression
-
-            const a4Width = 210; // A4 width in mm
-            const a4Height = 297;
-            const imgHeight = (canvas.height * a4Width) / canvas.width;
-
-            pdf.addImage(imgData, 'JPEG', 0, 0, a4Width, imgHeight > a4Height ? a4Height : imgHeight, undefined, 'FAST');
-
-            const fileName = `${inputFields}.pdf`;
-            pdf.save(fileName);
-
-            // Store the image data URL in localStorage
-            const savedResumes = JSON.parse(localStorage.getItem('savedResumes')) || [];
-            savedResumes.push(imgData);
-            localStorage.setItem('savedResumes', JSON.stringify(savedResumes));
-
-            alert('Your Resume is downloaded');
-        } catch (error) {
-            console.error('Error downloading PDF:', error);
-        }
-    };
-
     return (
         <div>
             <header style={{ paddingLeft: '10px', paddingRight: '10px', textAlign: 'center' }}>
@@ -68,7 +34,7 @@ const Preview = () => {
             </header>
 
             <div style={{ width: '100%' }}><GoogleAd /></div>
-            <div className="preview-container d-sm-flex" style={{ position: 'relative' }}>
+            <div className="preview-container d-md-flex" style={{ position: 'relative' }}>
                 <div className="preview-page" id="Alish_mirza1" style={{ color: fontColor, backgroundColor: bgColor, fontFamily: fontStyle }}>
                     <div className="d-flex justify-content-center preview-image-container">
                         <img src={personalInfo.image} alt="Selected" className="preview-image" />
@@ -150,7 +116,7 @@ const Preview = () => {
                     <div style={{ width: '100%' }}><GoogleAd /></div>
                     <div className='downloadbuttondiv'>
                         <input type="text" placeholder="Enter your resume name" className="resume-name-input" style={{ borderRadius: '5px', padding: '10px' }} onChange={(e) => setInputFields(e.target.value)} />
-                        <button onClick={handleDownloadPDF} type="btn" className="btn btn-primary ms-2 download-button">Download</button>
+                                    <PdfDownloadButton elementId="Alish_mirza1" fileName={inputFields} />
                     </div>
                     {/* Color Picker for Background Color */}
                     <div className='d-flex border fontfamilydiv' style={{ marginTop: '5px', display: 'flex', flexDirection: 'row', justifyContent: 'center' }}>

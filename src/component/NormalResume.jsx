@@ -22,8 +22,9 @@ const NormalResume = (props) => {
 
     return (
         <div className="normal-resume-container">
-            <section className="resume-section">
-                <div className="image-grid">
+            <section className="template-grid-container">
+
+                <div className="template-grid mt-5">
                     {images.length > 0 ? images.map((image, index) => (
                         <div
                             className="image-card"
@@ -37,7 +38,8 @@ const NormalResume = (props) => {
                                 src={image.src}
                                 alt={image.alt}
                                 loading="lazy"
-                                className="image-card-img"
+                                className="template-image"
+                                // style={{marginTop:'25px'}}
                             />
                             {/* Show the link only when image is hovered */}
                             {hoveredImage === image.id && (

@@ -216,6 +216,8 @@ export default function SampleResumeforStudentswithNoWorkExperience(prop) {
                         <li>Awarded “Best Marketing Presentation” in Business Club Annual Conference (2024)</li>
                         <li>Volunteered over 100 hours for local community outreach programs.</li>
                     </ul>
+                    <div><GoogleAd/></div>
+
                     <h3>Example 2: Sample Resume for a Student Seeking a Retail Position</h3>
                     <p>Jane Smith</p>
                     <p>Phone: (987) 654-3210 | Email: janesmith@email.com</p>
@@ -262,6 +264,8 @@ export default function SampleResumeforStudentswithNoWorkExperience(prop) {
                             <p>When describing your experiences, use strong action verbs such as “led,” “coordinated,” or “organized” to convey your initiative. Quantifying your achievements helps employers understand the impact you’ve made. For instance, instead of saying “Helped organize events,” say “Coordinated and organized 5 community events, increasing attendance by 30%.”</p>
                         </li>
                     </ol>
+                    <div><GoogleAd/></div>
+
                     <h2>Key Takeaways for Crafting a Sample Resume for Students with No Work Experience</h2>
                     <ul>
                         <li>Leverage Your Education, Skills, and Experiences: Your education, even without formal job experience, is a powerful tool to highlight your qualifications. Emphasize relevant coursework, certifications, and volunteer work.</li>
@@ -269,6 +273,8 @@ export default function SampleResumeforStudentswithNoWorkExperience(prop) {
                         <li>Make Use of Resume Tools like Resumeera.xyz: Utilize online resume-building platforms such as Resumeera.xyz to ensure that your resume is polished, professional, and ATS-friendly.</li>
                         <li>Keep It Concise: Your resume should be no more than one page. Highlight only the most relevant information and keep your descriptions brief but impactful.</li>
                     </ul>
+                    <div><GoogleAd/></div>
+
                     <section>
                         <h2>Frequently Asked Questions (FAQs)</h2>
                         <div className="faqs">
@@ -291,10 +297,12 @@ export default function SampleResumeforStudentswithNoWorkExperience(prop) {
 
                             </div>
                         </div>
-                    </section>
+                    </section><div><GoogleAd/></div>
+
                     <h2>Conclusion</h2>
                     <p>Creating a sample resume for students with no work experience is a crucial step in launching your career. While you may not have professional job experience, there are many ways to highlight your qualifications and potential. By focusing on your education, skills, volunteer work, and academic achievements, you can create a resume that positions you as a valuable candidate. Use tools like Resumeera.xyz to ensure your resume is both polished and optimized for success in today’s competitive job market.</p>
-                </section>
+                </section><div><GoogleAd/></div>
+
                 <section className='releted-article'>
                     <h2>RELETED ARTICLE :- YOU CAN'T MISS IF YOU WANT TO CREATE A PROFETIONAL RESUME</h2>
                     <br /><Link to='/common-mistakes-to-avoid-on-your-resume'>COMMON MISTAKES TO AVOID ON YOUR RESUME</Link>
@@ -302,7 +310,8 @@ export default function SampleResumeforStudentswithNoWorkExperience(prop) {
                     <br /><Link to='/creating-a-resume-for-your-first-job'>CREATE A RESUME FOR YOUR FIRST JOB</Link>
                     <br /><Link to='/how-to-highlight-achievements-in-a-resume'>HOW TO HIGHLIGT ACIEVEMENT IN A RESUME</Link>
                     <br /><Link to='/resume-tips-for-experienced-professionals'>RESUME TIPS FOR EXPERIENCED PROFESSIONALS</Link>
-                </section>
+                </section><div><GoogleAd/></div>
+
                 <div>
                     <WelcomeNotes />
                     <RandomeArticleToBlogCareer />
@@ -320,7 +329,8 @@ export default function SampleResumeforStudentswithNoWorkExperience(prop) {
                 <div className="stickyShare">
                     <ShareButtons url={ArticleUrl} title={ArticleTitle} />
                 </div>
-            </section>
+            </section><div><GoogleAd/></div>
+
         </div>
     )
 }

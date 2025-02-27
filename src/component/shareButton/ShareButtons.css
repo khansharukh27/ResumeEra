@@ -9,7 +9,7 @@
   padding-right: 150px;
   border-radius: 10px;
   
-  z-index: 1000;
+  z-index: 100;
   width: 60px;  /* Adjust width as needed */
   text-align: center;
   /* height: 24rem; */
@@ -21,7 +21,7 @@
   opacity: 0;
   transform: translateY(-20px); /* Start position off-screen */
   transition: opacity 2s ease-in-out, transform 2s ease-in-out;
-  margin-top: 25px;
+  margin-top: 5px;
   margin-left: 20px;
   /* You can adjust the transition duration and easing for different effects */
 }
@@ -66,7 +66,7 @@
 
 /* Optional Adjustments for Positioning */
 .stickyShare a {
-  margin-top: -150px;
+  margin-top: -50px;
 }
 
   

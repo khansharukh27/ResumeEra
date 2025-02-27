@@ -7,6 +7,7 @@ import HobbyIcons from '../HobbyIcons';
 import jsPDF from 'jspdf';
 import html2canvas from 'html2canvas';
 import './CSS/preview116.css'
+import PdfDownloadButton from '../PdfDownloadButton';
 
 const Preview116 = () => {
   const [inputFields, setInputFields] = useState('resume.pdf');
@@ -35,70 +36,6 @@ const Preview116 = () => {
   // console.log('Certificate:-', Certificate)
   console.log('honorand award:-', keyskills)
 
-  const handleDownloadPDF = async () => {
-    // Show loading spinner
-    const loadingSpinner = document.getElementById('loadingSpinner');
-    loadingSpinner.style.display = "block"; // Show the spinner
-
-    const element = document.getElementById('Alisha_mirza302');
-    try {
-      const scale = 3; // Increase the scale for better resolution
-      const canvas = await html2canvas(element, {
-        scale: scale,
-        useCORS: true, // Allows cross-origin images to be rendered correctly
-        logging: false, // Disable logging for better performance
-      });
-      const pdf = new jsPDF('p', 'mm', 'a4');
-      const imgData = canvas.toDataURL('image/png');
-
-      const imgWidth = 210; // A4 width in mm
-      const imgHeight = (canvas.height * imgWidth) / canvas.width;
-
-      const a4Height = 297; // A4 height in mm
-
-      // If the content is shorter than the A4 page height, center it vertically
-      let verticalOffset = 0;
-      if (imgHeight < a4Height) {
-        // Center the content vertically
-        verticalOffset = (a4Height - imgHeight) / 2;
-      }
-
-      // If content fits on one page
-      if (imgHeight <= a4Height) {
-        pdf.addImage(imgData, 'PNG', 0, verticalOffset, imgWidth, imgHeight, undefined, 'FAST');
-      } else {
-        // If content is taller than one page, split it into multiple pages
-        let offsetY = 0;
-        while (offsetY < canvas.height) {
-          const currentHeight = Math.min(imgHeight, canvas.height - offsetY); // Handle remaining height
-          pdf.addImage(imgData, 'PNG', 0, offsetY, imgWidth, currentHeight, undefined, 'FAST');
-          offsetY += currentHeight;
-
-          // If there's more content, add another page
-          if (offsetY < canvas.height) {
-            pdf.addPage(3);
-          }
-        }
-      }
-
-      const fileName = `${inputFields}.pdf`;
-      pdf.save(fileName);
-
-      // Hide loading spinner once PDF is ready
-      loadingSpinner.style.display = "none"; // Hide the spinner
-
-      const savedResumes = JSON.parse(localStorage.getItem('savedResumes')) || [];
-      savedResumes.push(imgData);
-      localStorage.setItem('savedResumes', JSON.stringify(savedResumes));
-
-      alert('Your Resume is downloaded');
-      // navigate('/myresume');
-    } catch (error) {
-      // Hide loading spinner if error occurs
-      loadingSpinner.style.display = "none";
-      console.error('Error downloading PDF:', error);
-    }
-  };
 
   return (
     <div>
@@ -114,7 +51,7 @@ const Preview116 = () => {
           Take a moment to review your resume. Remember, the right opportunity is just around the corner. Stand out, stay confident, and let ResumeEra be your trusted partner in achieving your career goals!"
         </p>
       </header>
-      <div className='main116 d-md-flex'>
+      <div className=' main116'>
         <div className='Preview116' style={{ backgroundColor: bgColor }} id='Alisha_mirza302'>
           <div className='Name-positio-summary116' style={{ border: '2px solid', borderColor: headingColor }}>
             <h3 style={{ color: headingColor, fontSize: fontSizeheading, backgroundColor: bgColor }}>{personalInfo.firstName} {personalInfo.lastName}</h3>
@@ -133,7 +70,7 @@ const Preview116 = () => {
             <div className='contactinnerdiv116'><i class="bi bi-github ms-2" style={{ borderColor: fontColor, fontSize: fontSize, color: bgColor }} /><p style={{ fontSize: fontSize, color: fontColor, fontFamily: fontStyle, }}>{socialMediaLink[0].github}</p></div>
           </div>
           <div className='combine-div116 mt-5'>
-            <div className='work-education'>
+            <div className='work-education me-4' style={{width:'50%'}}>
               <div className="experience-section116 mt-4">
                 <h6 className="details-title116" style={{ color: headingColor, fontSize: fontSizeheading, }}>
                   <i class="bi bi-briefcase m-3" style={{ fontSize: fontSize, border: `1px solid ${headingColor}`, padding: '7px', borderRadius: '50%' }}></i> WORK EXPERIENCE</h6>
@@ -172,7 +109,7 @@ const Preview116 = () => {
                 </div>
               </div>
             </div>
-            <div>
+            <div style={{width:'50%'}}>
               <div className="inner-116-1 me-4">
                 <h6 style={{ color: headingColor, fontSize: fontSizeheading }}><i class="bi bi-tools" style={{ fontSize: fontSize, border: `1px solid ${headingColor}`, padding: '7px', borderRadius: '50%', margin: '5px' }} />SKILL</h6>
                 <div style={{display:'flex',flexWrap:'wrap',gap:'16px'}}>
@@ -232,7 +169,6 @@ const Preview116 = () => {
               </div>
             </div>
           </div>
-
         </div>
         <div className="resume-download-section0">
           <div style={{ fontSize: fontSize, width: '100%' }}>
@@ -244,7 +180,7 @@ const Preview116 = () => {
           </div>
           <div className='downloadbuttondiv'>
             <input type="text" placeholder="Enter your resume name" className="resume-name-input" style={{ fontSize: fontSize, borderRadius: '5px', padding: '10px' }} onChange={(e) => setInputFields(e.target.value)} />
-            <button onClick={handleDownloadPDF} type="btn" className="btn btn-primary ms-2 download-button">Download</button>
+            <PdfDownloadButton elementId='Alisha_mirza302' fileName={inputFields} />
           </div>
           {/* Color Picker for Background Color */}
           <div className='d-flex border fontfamilydiv' style={{ fontSize: fontSize, marginTop: '5px', display: 'flex', flexDirection: 'row', justifyContent: 'center' }}>

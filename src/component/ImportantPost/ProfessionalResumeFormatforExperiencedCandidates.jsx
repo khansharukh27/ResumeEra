@@ -6,6 +6,7 @@ import AuthorCard from '../AuthorCard';
 import Professional_Resume_Format_for_Experienced_Candidates from '../../image/image_for_link/Professional Resume Format for Experienced Candidates.jpg'
 import { Helmet } from 'react-helmet';
 import GoogleAd from '../adFolder/GoogleAd';
+import { Link } from 'react-router-dom';
 export default function ProfessionalResumeFormatforExperiencedCandidates() {
     const ArticleUrl =
         "https://resumeera.xyz/Professional-Resume-Format-Experienced";
@@ -321,7 +322,7 @@ return (
 
     <section>
         <h2>8. Conclusion 🌟📜✨</h2>
-        <p>A professional resume format for experienced candidates is more than just a document; it’s a strategic tool that reflects your career achievements and potential. By focusing on clarity, design, and content customization, you can create a resume that opens doors to new opportunities. 🚪 Continuously refine and tailor your resume to stay aligned with industry trends and job requirements. Remember, your resume is the first step toward your next career milestone—make it count. 💼✨📄</p>
+        <p>A <Link to='/professional-resume-format-pdf'>professional resume</Link> format for experienced candidates is more than just a document; it’s a strategic tool that reflects your career achievements and potential. By focusing on clarity, design, and content customization, you can create a resume that opens doors to new opportunities. 🚪 Continuously refine and tailor your resume to stay aligned with industry trends and job requirements. Remember, your resume is the first step toward your next career milestone—make it count. 💼✨📄</p>
     </section><div><GoogleAd/></div>
 </div>
 <section>

@@ -6,6 +6,7 @@ import AuthorCard from "../AuthorCard";
 import resum_Download_pdf from "../../image/image_for_link/resume format PDF Download.jpeg";
 import { Helmet } from "react-helmet";
 import GoogleAd from "../adFolder/GoogleAd";
+import { Link } from "react-router-dom";
 
 export default function ProfessionalResumeFormatPDF() {
      const ArticleUrl ="https://ResumeEra.xyz/professional-resume-format-pdf";
@@ -180,7 +181,7 @@ export default function ProfessionalResumeFormatPDF() {
         </section><div><GoogleAd/></div>
 
         <section>
-          <h2>📋 Features of the Professional Resume Format PDF:</h2>
+          <h2>📋 Features of the <Link to='/professional-resume-format-pdf'>professional resume</Link> Format PDF:</h2>
           <ol>
             <li>
               <strong>Modern and Sleek Design</strong>: Each template is
@@ -298,7 +299,7 @@ export default function ProfessionalResumeFormatPDF() {
         <section>
           <h2>📚 Additional Resources at ResumeEra.xyz:</h2>
           <p>
-            Apart from the <strong>Professional Resume Format PDF</strong>,{" "}
+            Apart from the <strong><Link to='/professional-resume-format-pdf'>professional resume</Link> Format PDF</strong>,{" "}
             <strong>ResumeEra.xyz</strong> also offers:
           </p>
           <ul>

@@ -362,6 +362,7 @@ import image_305 from './image/Fresher resume image folder/line-cook-resume-temp
 import image_306 from './image/Fresher resume image folder/security-guard-resume-template-no-experience.webp'
 import image_307 from './image/Fresher resume image folder/social-media-manager-resume-example.webp'
 import image_308 from './image/Fresher resume image folder/web-developer-resume-example.webp'
+import image_309 from './image/Fresher resume image folder/internship resume example.png'
 import FresherResume from "./component/FresherResume.jsx";
 import ResumeFormatPDFFreeDownload from "./component/ImportantPost/ResumeFormatPDFFreeDownload.jsx";
 import PDFResumeFormatFreeDownload from "./component/ImportantPost/PDFResumeFormatFreeDownload.jsx";
@@ -403,6 +404,73 @@ import Studentresumeforfirstjob from "./component/ImportantPost/teenager resume/
 import Resumefora15YearOldfirstjob from "./component/ImportantPost/teenager resume/Resumefora15YearOldfirstjob.jsx";
 import TeenagerResumeforYourFirstJobinHighSchool from "./component/ImportantPost/teenager resume/TeenagerResumeforYourFirstJobinHighSchool.jsx";
 import TeenagerResumeforYourFirstJob from "./component/ImportantPost/teenager resume/TeenagerResumeforYourFirstJob.jsx";
+import TeenagerResume from "./component/ImportantPost/teenager resume/TeenagerResume.jsx";
+import TeenagerResumeexamples from "./component/ImportantPost/teenager resume/TeenagerResumeExamples.jsx";
+import TeenagerResumeTemplate from "./component/ImportantPost/teenager resume/TenagerResumeTemplate.jsx";
+import TeenagerResumewithNoWorkExperience from "./component/ImportantPost/teenager resume/TeenagerResumewithNoWorkExperience.jsx";
+import TeenagerResumewithNoJobExperience from "./component/ImportantPost/teenager resume/TeenagerResumewithNoJobExperience.jsx";
+import GoogleResumeformat from "./component/ImportantPost/GoogleResumeformat.jsx";
+import FresherimageCard from "./component/ImageCardResusable/FresherimageCard.jsx";
+import SampleTeenagerResume from "./component/ImportantPost/teenager resume/SampleTeenagerResume.jsx";
+import CombinedTemplates from "./component/CombinedTemplates.jsx";
+import ResumeSummary from "./component/ImportantPost/ResumeSummary.jsx";
+import FreeTeenagerResumeTemplates from "./component/ImportantPost/FreeTeenagerResumeTemplates.jsx";
+import Highschoolteenagerresume from "./component/ImportantPost/teenager resume/Highschoolteenagerresume.jsx";
+import Teenagerresumeforcollegeentrance from "./component/ImportantPost/teenager resume/Teenagerresumeforcollegeentrance.jsx";
+import SkillsForTeenagerResumeExamples from "./component/ImportantPost/teenager resume/SkillsForTeenagerResumeExamples.jsx";
+import SampleoOfTeenagerResumeTemplate from "./component/ImportantPost/teenager resume/SampleoOfTeenagerResumeTemplate.jsx";
+import StudentResumeForInternships from "./component/ImportantPost/teenager resume/StudentResumeForInternships.jsx";
+import SampleResumeforHighSchoolStudentsApplyingforInternships from "./component/ImportantPost/teenager resume/SampleResumeforHighSchoolStudentsApplyingforInternships.jsx";
+import InternshipResumeExamplesForTeenagers from "./component/ImportantPost/teenager resume/InternshipResumeExamplesForTeenagers.jsx";
+import HowtoWriteaResumeforaTeenageInternship from "./component/ImportantPost/teenager resume/HowtoWriteaResumeforaTeenageInternship.jsx";
+import HighSchoolInternshipResumeTemplates from "./component/ImportantPost/teenager resume/HighSchoolInternshipResumeTemplates.jsx";
+import BestTeenInternshipResumeFormat from "./component/ImportantPost/teenager resume/BestTeenInternshipResumeFormat.jsx";
+import EntryLevelHighSchoolResumeExamples from "./component/ImportantPost/teenager resume/Entrylevelresumeexamplesforhighschoolstudents.jsx";
+import Tipsforcreatingateenageinternshipresume from "./component/ImportantPost/teenager resume/Tipsforcreatingateenageinternshipresume.jsx";
+import NoExperienceHighSchoolInternshipResume from "./component/ImportantPost/teenager resume/NoExperienceHighSchoolInternshipResume.jsx";
+import HighSchoolInternshipResumeNoExperience from "./component/ImportantPost/teenager resume/HighSchoolInternshipResumeNoExperience.jsx";
+import DownloadableTeenInternshipTemplates from "./component/ImportantPost/teenager resume/DownloadableTeenInternshipTemplates.jsx";
+import EffectiveResumeWritingForHighSchoolInternships from "./component/ImportantPost/teenager resume/EffectiveResumeWritingForHighSchoolInternships.jsx";
+import HighSchoolStudentResumeExamplesForJobApplications from "./component/ImportantPost/teenager resume/HighSchoolStudentResumeExamplesForJobApplications.jsx";
+import HowToListExtracurricularActivitiesOnATeenResume from "./component/ImportantPost/teenager resume/HowToListExtracurricularActivitiesOnATeenResume.jsx";
+import ObjectiveStatementExamplesForTeenageInternshipResumes from "./component/ImportantPost/teenager resume/ObjectiveStatementExamplesForTeenageInternshipResumes.jsx";
+import HighSchoolResumeExamplesWithNoWorkExperience from "./component/ImportantPost/teenager resume/HighSchoolResumeExamplesWithNoWorkExperience.jsx";
+import Skillstoincludeonahighschoolinternshipresume from "./component/ImportantPost/teenager resume/Skillstoincludeonahighschoolinternshipresume.jsx";
+import FreeResumeTemplatesForHighSchoolStudents from "./component/ImportantPost/teenager resume/Freeresumetemplatesforhighschoolstudent.jsx";
+import HowToFormatAResumeForATeenageInternship from "./component/ImportantPost/teenager resume/HowToFormatAResumeForATeenageInternship.jsx";
+import HighSchoolStudentResumeForPartTimeJobs from "./component/ImportantPost/teenager resume/HighSchoolStudentResumeForPartTimeJobs.jsx";
+import HowToWriteAJobResumeForAHighSchoolStudent from "./component/ImportantPost/teenager resume/HowToWriteAJobResumeForAHighSchoolStudent.jsx";
+import ResumeFor12thPassStudent from "./component/ImportantPost/teenager resume/ResumeFor12thPassStudent.jsx";
+import ResumeFor12thStudentPartTimeJobs from "./component/ImportantPost/teenager resume/ResumeFor12thStudentPartTimeJobs.jsx";
+import BankResumeFormat from "./component/ImportantPost/bank resume artifcle/BankResumeFormat.jsx";
+import ResumeFormatForBankJob from "./component/ImportantPost/bank resume artifcle/ResumeFormatForBankJob.jsx";
+import BankResumeFormatForFreshers from "./component/ImportantPost/bank resume artifcle/BankResumeFormatForFreshers.jsx";
+import HDFCBankResumeFormat from "./component/ImportantPost/bank resume artifcle/HDFCBankResumeFormat.jsx";
+import ResumeFormatForBankJobFresher from "./component/ImportantPost/bank resume artifcle/ResumeFormatForBankJobFresher.jsx";
+import BankingResume from "./component/ImportantPost/bank resume artifcle/BankingResume.jsx";
+import BankResumeFormatForFreshersPDFGuide from "./component/ImportantPost/bank resume artifcle/BankResumeFormatForFreshersPDFGuide.jsx";
+import ICICIBankResumeFormatForFreshers from "./component/ImportantPost/bank resume artifcle/ICICIBankResumeFormatForFreshers.jsx";
+import BankResumeFormatFreshers from "./component/ImportantPost/bank resume artifcle/BankResumeFormatFreshers.jsx";
+import AxisBankResumeFormatForFreshers from "./component/ImportantPost/bank resume artifcle/AxisBankResumeFormatForFreshers.jsx";
+import Preview309 from "./component/previewfolder/Preview309.jsx";
+import HowToCreateResumeForFreshers from "./component/ImportantPost/teenager resume/HowToCreateResumeForFreshers.jsx";
+import FormatOfResume from "./component/ImportantPost/teenager resume/FormatOfResume.jsx";
+import FresherResumeTemplate from "./component/ImportantPost/teenager resume/FresherResumeTemplate.jsx";
+import FreshersResume from "./component/ImportantPost/teenager resume/FreshersResume.jsx";
+import ResumeTemplateForFresher from "./component/ImportantPost/teenager resume/ResumeTemplateForFresher.jsx";
+import ResumeFormatForFresher from "./component/ImportantPost/teenager resume/ResumeFormatForFresher.jsx";
+import ResumeForFresherStudent from "./component/ImportantPost/teenager resume/ResumeForFresherStudent.jsx";
+import SampleResumeForFreshers from "./component/ImportantPost/teenager resume/SampleResumeForFreshers.jsx";
+import ResumeForFresher from "./component/ImportantPost/teenager resume/ResumeForFresher.jsx";
+import XYZResumeGenerator from "./component/ImportantPost/teenager resume/XyzResumeGenerator.jsx";
+import ResumeQuotes from "./component/ImportantPost/teenager resume/ResumeQuotes.jsx";
+import Patternofresumeforfreshers from "./component/ImportantPost/teenager resume/Patternofresumeforfreshers.jsx";
+import FreshersResumeSummary from "./component/ImportantPost/FreshersResumeSummary.jsx/FreshersResumeSummary.jsx";
+import Cvsummaryforfresher from "./component/ImportantPost/FreshersResumeSummary.jsx/Cvsummaryforfresher.jsx";
+import Resumesummaryforitfreshers from "./component/ImportantPost/FreshersResumeSummary.jsx/Resumesummaryforitfreshers.jsx";
+import Resumesynopsisforfreshers from "./component/ImportantPost/FreshersResumeSummary.jsx/Resumesynopsisforfreshers.jsx";
+import Profilesummaryforfreshers from "./component/ImportantPost/FreshersResumeSummary.jsx/Profilesummaryforfreshers.jsx";
+import Professionalsummaryinresumeforfresher from "./component/ImportantPost/FreshersResumeSummary.jsx/Professionalsummaryinresumeforfresher.jsx";
 
 var images = [
   { id: 1, src: resum1, alt: "Professional Resume Template 1",description:'Professional and elegant resume template with a timeline structure' },
@@ -430,46 +498,31 @@ var techImages = [
   { id: 106, src: profetional_resume_6, alt: "hospital resume" },
   { id: 107, src: profetional_resume_7, alt: "hospital resume" },
   { id: 108, src: Basic_Ats_Resume_Template, alt: "Basic Ats Resume Template" },
+  { id: 109,src: Creative_ATS_Resume_Template,alt: "Creative ATS",},
   {
-    id: 109,
-    src: Creative_ATS_Resume_Template,
-    alt: "Creative ATS Resume Template",
+    id: 110,src: Executive_ATS_Resume_Template,alt: "Executive ATS Resume Template",},
+  {
+    id: 111,src: Functional_ATS_Resume_Template,alt: "Functional ATS Resume Template",
   },
   {
-    id: 110,
-    src: Executive_ATS_Resume_Template,
-    alt: "Executive ATS Resume Template",
+    id: 112,src: Minimalist_ATS_Resume_Template,alt: "Minimalist-ATS-Resume-Template",
   },
   {
-    id: 111,
-    src: Functional_ATS_Resume_Template,
-    alt: "Functional ATS Resume Template",
+    id: 113,src: Modern_ATS_Resume_Template,alt: "Modern Ats Resume template",
   },
   {
-    id: 112,
-    src: Minimalist_ATS_Resume_Template,
-    alt: "Minimalist-ATS-Resume-Template",
-  },
-  {
-    id: 113,
-    src: Modern_ATS_Resume_Template,
-    alt: "Modern Ats Resume template",
-  },
-  {
-    id: 114,
-    src: Simple_ATS_Resume_Template,
-    alt: "Simple-ATS-Resume-Template",
+    id: 114,src: Simple_ATS_Resume_Template,alt: "Simple-ATS-Resume-Template",
   },
   { id: 115, src: Tech_ATS_Resume_Template, alt: "Tech-ATS-Resume-Template" },
   {
     id: 116,
     src: Traditional_ATS_Resume_Template,
-    alt: "Traditional-ATS-Resume-Template",
+    alt: "Traditional-ATS",
   },
   {
-    id: 116,
+    id: 117,
     src: Bank_Resume_Format_for_Freshers_PDF,
-    alt: "Bank Resume Format for Freshers PDF",
+    alt: "Bank Resume ",
   },
 ];
 
@@ -479,14 +532,15 @@ const CoverImage = [
   { id: 203, src: cover_letter_3, alt: "TEACHER" },
 ];
 const fresherResumeImage = [
-  {id:301, src:image_301,alt:'accountant resume example'},
-  {id:302, src:image_302, alt:'babysitter resume example'},
-  {id:303, src:image_303, alt:'cashier resume template not experience'},
-  {id:304,src:image_304, alt:'flight attendant resume template no exeperience'},
-  {id:305, src:image_305, alt:'line cook resume template no experience'},
-  {id:306, src:image_306, alt:'security guard resume template no experience'},
-  {id:307, src:image_307, alt:'social media manager resume example'},
-  {id:308, src:image_308, alt:'web developer resume example'}
+  {id:301, src:image_301,alt:'accountant resume'},
+  {id:302, src:image_302, alt:'babysitter resume'},
+  {id:303, src:image_303, alt:'cashier resume'},
+  {id:304,src:image_304, alt:'flight attendant'},
+  {id:305, src:image_305, alt:'line cook '},
+  {id:306, src:image_306, alt:'security guard '},
+  {id:307, src:image_307, alt:'social media'},
+  {id:308, src:image_308, alt:'web developer'},
+  {id:309, src:image_309, alt:'internship resume'}
 ]
 console.log("images:=", images);
 console.log(images[0].id);
@@ -590,7 +644,8 @@ function App() {
         ))}
         
         <Route path="#" element={<TechImageShow  techImages={techImages}/>}/>
-
+        <Route path='#' element={<FresherimageCard fresherResumeImage={fresherResumeImage}/>}/>
+        <Route path="#" element={<CombinedTemplates fresherResumeImage={fresherResumeImage} techImages={techImages} images={images}/>}/>
         {CoverImage.map((image) => (
           <Route
             key={image.id}
@@ -834,7 +889,7 @@ function App() {
         />
         <Route
           path="/ats-friendly-resume-format-for-beginners"
-          element={<ATS_Friendly_Resume_Format_for_Beginners />}
+          element={<ATS_Friendly_Resume_Format_for_Beginners fresherResumeImage = {fresherResumeImage}/>}
         />
         <Route
           path="/simple-resume-formatting-best-practices"
@@ -1542,16 +1597,237 @@ function App() {
         path="/teenager-resume-for-your-first-job"
         element={<TeenagerResumeforYourFirstJob fresherResumeImage={fresherResumeImage} techImages={techImages} />}
       />
-
-
-
-
-
-
-
-
-    {/* job and carier blog component */}
-
+      <Route
+        path="/teenager-resume"
+        element={<TeenagerResume fresherResumeImage={fresherResumeImage} techImages={techImages} />}
+      />
+      <Route
+        path="/teenager-resume-examples"
+        element={<TeenagerResumeexamples fresherResumeImage={fresherResumeImage} techImages={techImages} />}
+      />
+      <Route
+        path="/teenager-resume-template"
+        element={<TeenagerResumeTemplate fresherResumeImage={fresherResumeImage} techImages={techImages} />}
+      />
+<Route
+        path="/teenager-resume-with-no-work-experience"
+        element={<TeenagerResumewithNoWorkExperience fresherResumeImage={fresherResumeImage} techImages={techImages} />}
+      />
+      <Route
+        path="/teenager-resume-with-no-job-experience"
+        element={<TeenagerResumewithNoJobExperience fresherResumeImage={fresherResumeImage} techImages={techImages} />}
+      />
+      <Route
+        path="/how-to-create-google-resume-format"
+        element={<GoogleResumeformat fresherResumeImage={fresherResumeImage} techImages={techImages} />}
+      />
+      <Route
+        path="/sample-teenager-resume-free-create-and-download"
+        element={<SampleTeenagerResume fresherResumeImage={fresherResumeImage} techImages={techImages} images={images}/>}
+      />
+      <Route
+        path="/how-to-write-an-attention-grabbing-resume-summary"
+        element={<ResumeSummary fresherResumeImage={fresherResumeImage} techImages={techImages} images={images}/>}
+      />
+      <Route
+        path="/download-free-teenager-resume-templates"
+        element={<FreeTeenagerResumeTemplates fresherResumeImage={fresherResumeImage} techImages={techImages} images={images}/>}
+      />
+      <Route
+        path="/hig-hschool-teenager-resume"
+        element={<Highschoolteenagerresume fresherResumeImage={fresherResumeImage} techImages={techImages} images={images}/>}
+      />
+<Route
+        path="/teenager-resume-for-college-entrance"
+        element={<Teenagerresumeforcollegeentrance fresherResumeImage={fresherResumeImage} techImages={techImages} images={images}/>}
+      />
+      <Route
+        path="/skills-for-teenager-resume-examples"
+        element={<SkillsForTeenagerResumeExamples fresherResumeImage={fresherResumeImage} techImages={techImages} images={images}/>}
+      />
+       <Route
+        path="/sample-of-teenager-resume-template"
+        element={<SampleoOfTeenagerResumeTemplate fresherResumeImage={fresherResumeImage} techImages={techImages} images={images}/>}
+      />
+      <Route
+        path="/student-resume-for-internships"
+        element={<StudentResumeForInternships fresherResumeImage={fresherResumeImage} techImages={techImages} images={images}/>}
+      />
+      <Route
+        path="/sample-resume-high-school-internships"
+        element={<SampleResumeforHighSchoolStudentsApplyingforInternships fresherResumeImage={fresherResumeImage} techImages={techImages} images={images}/>}
+      />
+      <Route
+        path="/internship-resume-examples-for-teenagers"
+        element={<InternshipResumeExamplesForTeenagers fresherResumeImage={fresherResumeImage} techImages={techImages} images={images}/>}
+      />
+      <Route
+        path="/how-to-write-a-resume-for-a-teenage-internship"
+        element={<HowtoWriteaResumeforaTeenageInternship fresherResumeImage={fresherResumeImage} techImages={techImages} images={images}/>}
+      />
+      <Route
+        path="/high-school-student-resume-templates-for-internships"
+        element={<HighSchoolInternshipResumeTemplates fresherResumeImage={fresherResumeImage} techImages={techImages} images={images}/>}
+      />
+      <Route
+        path="/best-resume-format-for-teen-internships"
+        element={<BestTeenInternshipResumeFormat fresherResumeImage={fresherResumeImage} techImages={techImages} images={images}/>}
+      />
+      <Route
+        path="/entry-level-resume-examples-for-high-school-students"
+        element={<EntryLevelHighSchoolResumeExamples fresherResumeImage={fresherResumeImage} techImages={techImages} images={images}/>}
+      />
+      <Route
+        path="/tips-for-creating-a-teenage-internship-resume"
+        element={<Tipsforcreatingateenageinternshipresume fresherResumeImage={fresherResumeImage} techImages={techImages} images={images}/>}
+      />
+      <Route
+        path="/high-school-internship-resume-with-no-experience"
+        element={<NoExperienceHighSchoolInternshipResume fresherResumeImage={fresherResumeImage} techImages={techImages} images={images}/>}
+      />
+      <Route
+        path="/high-school-internship-resume-with-no-experience"
+        element={<HighSchoolInternshipResumeNoExperience fresherResumeImage={fresherResumeImage} techImages={techImages} images={images}/>}
+      />
+      <Route
+        path="/downloadable-teen-internship-templates"
+        element={<DownloadableTeenInternshipTemplates fresherResumeImage={fresherResumeImage} techImages={techImages} images={images}/>}
+      />
+      <Route
+        path="/effective-resume-writing-for-high-school-internships"
+        element={<EffectiveResumeWritingForHighSchoolInternships fresherResumeImage={fresherResumeImage} techImages={techImages} images={images}/>}
+      />
+      <Route
+        path="/high-school-student-resume-examples-for-job-applications"
+        element={<HighSchoolStudentResumeExamplesForJobApplications fresherResumeImage={fresherResumeImage} techImages={techImages} images={images}/>}
+      />
+      <Route
+        path="/how-to-list-extracurricular-activities-on-a-teen-resume"
+        element={<HowToListExtracurricularActivitiesOnATeenResume fresherResumeImage={fresherResumeImage} techImages={techImages} images={images}/>}
+      />
+      <Route
+        path="/objective-statement-examples-for-teenage-internship-resumes"
+        element={<ObjectiveStatementExamplesForTeenageInternshipResumes fresherResumeImage={fresherResumeImage} techImages={techImages} images={images}/>}
+      />
+      <Route
+        path="/high-school-resume-examples-with-no-work-experience"
+        element={<HighSchoolResumeExamplesWithNoWorkExperience fresherResumeImage={fresherResumeImage} techImages={techImages} images={images}/>}
+      />
+      <Route
+        path="/skills-to-include-on-a-high-school-internship-resume"
+        element={<Skillstoincludeonahighschoolinternshipresume fresherResumeImage={fresherResumeImage} techImages={techImages} images={images}/>}
+      />
+      <Route
+        path="/free-resume-templates-for-high-school-students"
+        element={<FreeResumeTemplatesForHighSchoolStudents fresherResumeImage={fresherResumeImage} techImages={techImages} images={images}/>}
+      />
+      <Route
+        path="/how-to-format-a-resume-for-a-teenage-internship"
+        element={<HowToFormatAResumeForATeenageInternship fresherResumeImage={fresherResumeImage} techImages={techImages} images={images}/>}
+      />
+      <Route
+        path="/high-school-student-resume-for-part-time-jobs"
+        element={<HighSchoolStudentResumeForPartTimeJobs fresherResumeImage={fresherResumeImage} techImages={techImages} images={images}/>}
+      />
+      <Route
+        path="/how-to-write-a-job-resume-for-a-high-school-student"
+        element={<HowToWriteAJobResumeForAHighSchoolStudent fresherResumeImage={fresherResumeImage} techImages={techImages} images={images}/>}
+      />
+       <Route
+        path="/how-to-write-resume-for-12th-pass-student"
+        element={<ResumeFor12thPassStudent fresherResumeImage={fresherResumeImage} techImages={techImages} images={images}/>}
+      />
+       <Route path="/twelth-student-resume-for-part-time-jobs"
+        element={<ResumeFor12thStudentPartTimeJobs fresherResumeImage={fresherResumeImage} techImages={techImages} images={images}/>}
+      />
+      <Route path="/bank-resume-format"
+        element={<BankResumeFormat fresherResumeImage={fresherResumeImage} techImages={techImages} images={images}/>}
+      />
+      <Route path="/resume-format-for-bank-job"
+        element={<ResumeFormatForBankJob fresherResumeImage={fresherResumeImage} techImages={techImages} images={images}/>}
+      />
+      <Route path="/bank-resume-format-for-freshers"
+        element={<BankResumeFormatForFreshers fresherResumeImage={fresherResumeImage} techImages={techImages} images={images}/>}
+      />
+      <Route path="/hdfc-bank-resume-format"
+        element={<HDFCBankResumeFormat fresherResumeImage={fresherResumeImage} techImages={techImages} images={images}/>}
+      />
+      <Route path="/resume-format-for-bank-job-fresher"
+        element={<ResumeFormatForBankJobFresher fresherResumeImage={fresherResumeImage} techImages={techImages} images={images}/>}
+      />
+<Route path="/banking-resume"
+        element={<BankingResume fresherResumeImage={fresherResumeImage} techImages={techImages} images={images}/>}
+      />
+      <Route path="/bank-resume-format-for-freshers-pdf-guide-free-download"
+        element={<BankResumeFormatForFreshersPDFGuide fresherResumeImage={fresherResumeImage} techImages={techImages} images={images}/>}
+      />
+      <Route path="/icici-bank-resume-format-for-freshers"
+        element={<ICICIBankResumeFormatForFreshers fresherResumeImage={fresherResumeImage} techImages={techImages} images={images}/>}
+      />
+      <Route path="/bank-resume-format-freshers"
+        element={<BankResumeFormatFreshers fresherResumeImage={fresherResumeImage} techImages={techImages} images={images}/>}
+      />
+       <Route path="/axis-bank-resume-format-for-freshers-guide-create-update-download"
+        element={<AxisBankResumeFormatForFreshers fresherResumeImage={fresherResumeImage} techImages={techImages} images={images}/>}
+      />
+      <Route path="/how-to-create-resume-for-freshers"
+        element={<HowToCreateResumeForFreshers fresherResumeImage={fresherResumeImage} techImages={techImages} images={images}/>}
+      />
+       <Route path="/format-of-resume"
+        element={<FormatOfResume fresherResumeImage={fresherResumeImage} techImages={techImages} images={images}/>}
+      />
+      <Route path="/fresher-resume-template"
+        element={<FresherResumeTemplate fresherResumeImage={fresherResumeImage} techImages={techImages} images={images}/>}
+      />
+      <Route path="/freshers-resume"
+        element={<FreshersResume fresherResumeImage={fresherResumeImage} techImages={techImages} images={images}/>}
+      />
+      <Route path="/resume-template-for-fresher"
+        element={<ResumeTemplateForFresher fresherResumeImage={fresherResumeImage} techImages={techImages} images={images}/>}
+      />
+       <Route path="/resume-format-for-fresher"
+        element={<ResumeFormatForFresher fresherResumeImage={fresherResumeImage} techImages={techImages} images={images}/>}
+      />
+      <Route path="/resume-for-fresher-student"
+        element={<ResumeForFresherStudent fresherResumeImage={fresherResumeImage} techImages={techImages} images={images}/>}
+      />
+      <Route path="/sample-resume-for-freshers"
+        element={<SampleResumeForFreshers fresherResumeImage={fresherResumeImage} techImages={techImages} images={images}/>}
+      />
+      <Route path="/resume-for-fresher"
+        element={<ResumeForFresher fresherResumeImage={fresherResumeImage} techImages={techImages} images={images}/>}
+      />
+      <Route path="/xyz-resume-generator"
+        element={<XYZResumeGenerator fresherResumeImage={fresherResumeImage} techImages={techImages} images={images}/>}
+      />
+      <Route path="/resume-quote"
+        element={<ResumeQuotes fresherResumeImage={fresherResumeImage} techImages={techImages} images={images}/>}
+      />
+      <Route path="/pattern-of-resume-for-freshers"
+        element={<Patternofresumeforfreshers fresherResumeImage={fresherResumeImage} techImages={techImages} images={images}/>}
+      />
+      <Route path="/fresher-resume-summary"
+        element={<FreshersResumeSummary fresherResumeImage={fresherResumeImage} techImages={techImages} images={images}/>}
+      />
+       <Route path="/cv-summary-for-fresher"
+        element={<Cvsummaryforfresher fresherResumeImage={fresherResumeImage} techImages={techImages} images={images}/>}
+      />
+      <Route path="/resume-summary-for-it-freshers"
+        element={<Resumesummaryforitfreshers fresherResumeImage={fresherResumeImage} techImages={techImages} images={images}/>}
+      />
+       <Route path="/resume-synopsis-for-freshers"
+        element={<Resumesynopsisforfreshers fresherResumeImage={fresherResumeImage} techImages={techImages} images={images}/>}
+      />
+      <Route path="/profile-summary-for-freshers"
+        element={<Profilesummaryforfreshers fresherResumeImage={fresherResumeImage} techImages={techImages} images={images}/>}
+      />
+      <Route path="/professional-summary-in-resume-for-fresher"
+        element={<Professionalsummaryinresumeforfresher fresherResumeImage={fresherResumeImage} techImages={techImages} images={images}/>}
+      />
+      
+      
+      
+      
         <Route path="/Blog_or_Career_Tips_Page" element={<BlogCareer />} />
         <Route path="/how-to-land-your-dream-job" element={<DreamJob2024 />} />
         <Route
@@ -1701,6 +1977,7 @@ function App() {
         <Route path="/preview306" element={<Preview306 />} />
         <Route path="/preview307" element={<Preview307 />} />
         <Route path="/preview308" element={<Preview308 />} />
+        <Route path="/preview309" element={<Preview309 />} />
 
 
       </Routes>
