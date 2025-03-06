@@ -41,6 +41,7 @@ const FresherResume = (props) => {
                                 alt={image.alt}
                                 loading="lazy"
                                 className="template-image"
+                                style={{backgroundColor:'white'}}
                             />
                             {hoveredImage === image.id && (
                                 <a

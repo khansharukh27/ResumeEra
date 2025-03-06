@@ -471,6 +471,16 @@ import Resumesummaryforitfreshers from "./component/ImportantPost/FreshersResume
 import Resumesynopsisforfreshers from "./component/ImportantPost/FreshersResumeSummary.jsx/Resumesynopsisforfreshers.jsx";
 import Profilesummaryforfreshers from "./component/ImportantPost/FreshersResumeSummary.jsx/Profilesummaryforfreshers.jsx";
 import Professionalsummaryinresumeforfresher from "./component/ImportantPost/FreshersResumeSummary.jsx/Professionalsummaryinresumeforfresher.jsx";
+import ProfessionalSummaryForFresher from "./component/ImportantPost/FreshersResumeSummary.jsx/ProfessionalSummaryForFresher.jsx";
+import ResumeHeadingAndSummaryForFreshers from "./component/ImportantPost/FreshersResumeSummary.jsx/ResumeHeadingAndSummaryForFreshers.jsx";
+import SummaryForResumeForFreshersExample from "./component/ImportantPost/FreshersResumeSummary.jsx/SummaryForResumeForFreshersExample.jsx";
+import ResumeProfileSummaryForFreshers from "./component/ImportantPost/FreshersResumeSummary.jsx/ResumeProfileSummaryForFreshers.jsx";
+import ProfileSummaryForResumeForFreshers from "./component/ImportantPost/FreshersResumeSummary.jsx/ProfileSummaryForResumeForFreshers.jsx";
+import AboutMeResumeExamplesForFreshers from "./component/ImportantPost/FreshersResumeSummary.jsx/AboutMeResumeExamplesForFreshers.jsx";
+import DescriptionForResumeForFreshers from "./component/ImportantPost/FreshersResumeSummary.jsx/DescriptionForResumeForFreshers.jsx";
+import BestSummaryForResumeForFreshers from "./component/ImportantPost/FreshersResumeSummary.jsx/BestSummaryForResumeForFreshers.jsx";
+import FresherSummaryForResume from "./component/ImportantPost/FreshersResumeSummary.jsx/FresherSummaryForResume.jsx";
+import WhatShouldIAddinMyResume from "./component/ImportantPost/WhatShouldIAddinMyResume.jsx";
 
 var images = [
   { id: 1, src: resum1, alt: "Professional Resume Template 1",description:'Professional and elegant resume template with a timeline structure' },
@@ -1823,6 +1833,36 @@ function App() {
       />
       <Route path="/professional-summary-in-resume-for-fresher"
         element={<Professionalsummaryinresumeforfresher fresherResumeImage={fresherResumeImage} techImages={techImages} images={images}/>}
+      />
+       <Route path="/professional-summary-in-resume-for-fresher"
+        element={<ProfessionalSummaryForFresher fresherResumeImage={fresherResumeImage} techImages={techImages} images={images}/>}
+      />
+      <Route path="/resume-heading-and-summary-for-freshers"
+        element={<ResumeHeadingAndSummaryForFreshers fresherResumeImage={fresherResumeImage} techImages={techImages} images={images}/>}
+      />          
+      <Route path="/summary-for-resume-for-freshers-example"
+        element={<SummaryForResumeForFreshersExample fresherResumeImage={fresherResumeImage} techImages={techImages} images={images}/>}
+      />
+      <Route path="/resume-profile-summary-for-freshers"
+        element={<ResumeProfileSummaryForFreshers fresherResumeImage={fresherResumeImage} techImages={techImages} images={images}/>}
+      />
+       <Route path="/profile-summary-for-resume-for-freshers"
+        element={<ProfileSummaryForResumeForFreshers fresherResumeImage={fresherResumeImage} techImages={techImages} images={images}/>}
+      />
+      <Route path="/about-me-resume-examples-for-freshers-tip-guide-sample"
+        element={<AboutMeResumeExamplesForFreshers fresherResumeImage={fresherResumeImage} techImages={techImages} images={images}/>}
+      />
+      <Route path="/description-for-resume-for-freshers-tip-guide-sample"
+        element={<DescriptionForResumeForFreshers fresherResumeImage={fresherResumeImage} techImages={techImages} images={images}/>}
+      />
+      <Route path="/best-summary-for-resume-for-freshers-tips-examples-templates"
+        element={<BestSummaryForResumeForFreshers fresherResumeImage={fresherResumeImage} techImages={techImages} images={images}/>}
+      />
+      <Route path="/fresher-summary-for-resume-tips-examples-templates"
+        element={<FresherSummaryForResume fresherResumeImage={fresherResumeImage} techImages={techImages} images={images}/>}
+      />
+       <Route path="/what-should-i-add-my-resume-as-a-fresher"
+        element={<WhatShouldIAddinMyResume fresherResumeImage={fresherResumeImage} techImages={techImages} images={images}/>}
       />
       
       

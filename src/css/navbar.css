@@ -46,14 +46,14 @@
     margin-bottom: 5px;
 }
 
-.navbar-link {
-    border: 1px solid whitesmoke;
+.navbar-link{
+    
     border-radius: 8px;
     padding: 5px;
     text-decoration: none;
     color: white;
-    margin: 5px;
-    font-size: 1rem;
+    /* margin: 5px; */
+    font-size: large;
 }
 
 .navbar-link:hover {

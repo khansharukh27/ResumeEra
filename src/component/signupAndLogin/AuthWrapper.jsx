@@ -24,7 +24,7 @@ const AuthWrapper = ({ children }) => {
                 color: 'white',
                 border: 'none',
                 borderRadius: '15px',
-                width: '100%',
+                width: '90%',
                 height: '80px',
                 backgroundColor: 'goldenrod',
                 marginTop:'20px'

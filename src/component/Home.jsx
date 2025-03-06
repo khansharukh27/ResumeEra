@@ -144,8 +144,10 @@ const Home = (prop) => {
         <span className="highlighted-text" style={{ color: "#2d6adf", fontWeight: "bold", fontSize: "1.2rem" }}>
           Choose from our beautiful, free resume templates to make your resume shine.
         </span>
-        <p style={{ color: "#666", fontSize: "1rem", marginTop: "0.5rem" }}>
-          Whether you’re showcasing work experience, education, skills, or personal info, ResumeEra makes it simple to craft a professional-looking resume and download it as a polished PDF format. Get started today and elevate your career journey!
+        <p >
+          Whether you’re showcasing work experience, education, skills, or personal info, 
+          ResumeEra makes it simple to craft a professional-looking resume and download it as a 
+          polished PDF format. Get started today and elevate your career journey!
         </p>
         <Link to="/template" className="cta-button" style={{ display: "inline-block", marginTop: "1.5rem", padding: "12px 24px", background: "#2d6adf", color: "white", borderRadius: "8px", textDecoration: "none", fontWeight: "bold", fontSize: "1.1rem", transition: "background 0.3s" }}>
           Create Your Free Resume Now

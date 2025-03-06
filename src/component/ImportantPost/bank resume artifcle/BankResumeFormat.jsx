@@ -250,7 +250,9 @@ export default function BankResumeFormat(prop) {
 
                     <h3>Step 5: Add Activities or Projects</h3>
                     <p>
-                        Include school projects, events, or volunteer work. These show you can handle tasks banks care about. Need ideas? See <Link to="/how-to-create-a-teenager-resume-without-work-experience">how to create a teenager resume without work experience</Link>.
+                        Include school projects, events, or volunteer work. 
+                        These show you can handle tasks banks care about. Need ideas? 
+                        See <Link to="/how-to-create-a-teenager-resume-without-work-experience">how to create a teenager resume without work experience</Link>.
                     </p>
                     <p><strong>Example:</strong></p>
                     <ul>

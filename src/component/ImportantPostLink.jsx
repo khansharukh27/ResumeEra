@@ -1880,10 +1880,78 @@ const ImportantPostLink = () => {
       src: 'https://i.postimg.cc/rshDHppR/professional-summary-in-resume-for-fresher.jpg',
       alt: "Professional Summary in Resume for Fresher",
     },
-
+    {
+      path: "/professional-summary-in-resume-for-fresher",
+      title: "Professional Summary for Fresher 2025: How to Write, Examples, and Free Templates",
+      src: 'https://i.postimg.cc/jS6JvG5Y/Professional-Summary-for-Fresher-2025.webp',
+      alt: "Professional Summary for Fresher",
+    },
+    {
+      path: "/resume-heading-and-summary-for-freshers",
+      title: "Resume Heading and Summary for Freshers 2025: How to Write, Examples, and Free Templates",
+      src: 'https://i.postimg.cc/jS6JvG5Y/Professional-Summary-for-Fresher-2025.webp',
+      alt: "Resume Heading and Summary for Freshers",
+    },
+    {
+      path: "/summary-for-resume-for-freshers-example",
+      title: "Summary for Resume for Freshers Example: Top Tips, Samples, and Free Templates for 2025",
+      src: 'https://i.postimg.cc/jS6JvG5Y/Professional-Summary-for-Fresher-2025.webp',
+      alt: "Summary for Resume for Freshers Example",
+    },
+    {
+      path: "/resume-profile-summary-for-freshers",
+      title: "Resume Profile Summary for Freshers: Top Tips, Examples, and Free Templates for 2025",
+      src: 'https://i.postimg.cc/jS6JvG5Y/Professional-Summary-for-Fresher-2025.webp',
+      alt: "Resume Profile Summary for Freshers",
+    },
+    {
+      path: "/profile-summary-for-resume-for-freshers",
+      title: "Profile Summary for Resume for Freshers: Expert Tips, Examples, and Free Templates for 2025",
+      src: 'https://i.postimg.cc/jS6JvG5Y/Professional-Summary-for-Fresher-2025.webp',
+      alt: "Profile Summary for Resume for Freshers",
+    },
+    {
+      path: "/about-me-resume-examples-for-freshers-tip-guide-sample",
+      title: "About Me Resume Examples for Freshers: Top Tips, Samples, and Free Templates for 2025",
+      src: 'https://i.postimg.cc/jS6JvG5Y/Professional-Summary-for-Fresher-2025.webp',
+      alt: "About Me Resume Examples for Freshers",
+    },
+    {
+      path: "/description-for-resume-for-freshers-tip-guide-sample",
+      title: "Description for Resume for Freshers: Top Tips, 31 Examples, and Free Templates for 2025",
+      src: 'https://i.postimg.cc/jS6JvG5Y/Professional-Summary-for-Fresher-2025.webp',
+      alt: "Description for Resume for Freshers",
+    },
+    {
+      path: "/description-for-resume-for-freshers-tip-guide-sample",
+      title: "Description for Resume for Freshers: Top Tips, 31 Examples, and Free Templates for 2025",
+      src: 'https://i.postimg.cc/jS6JvG5Y/Professional-Summary-for-Fresher-2025.webp',
+      alt: "Description for Resume for Freshers",
+    },
+    {
+      path: "/best-summary-for-resume-for-freshers-tips-examples-templates",
+      title: "Best Summary for Resume for Freshers: Top Tips, 31 Examples, and Free Templates for 2025",
+      src: 'https://i.postimg.cc/jS6JvG5Y/Professional-Summary-for-Fresher-2025.webp',
+      alt: "Best Summary for Resume for Freshers",
+    },
+    {
+      path: "/fresher-summary-for-resume-tips-examples-templates",
+      title: "Fresher Summary for Resume: Top Tips, 31 Examples, and Free Templates for 2025",
+      src: 'https://i.postimg.cc/jS6JvG5Y/Professional-Summary-for-Fresher-2025.webp',
+      alt: "Fresher Summary for Resume",
+    },
+    {
+      path: "/what-should-i-add-my-resume-as-a-fresher",
+      title: "What Should I Add in My Resume as a Fresher? 10 Essential Tips for Success",
+      src: 'https://i.postimg.cc/zBLwX41t/DALL-E-2025-03-05-21-52-43-A-vibrant-imaginative-illustration-with-a-light-blue-sky-background-fe.webp',
+      alt: "What Should I Add in My Resume as a Fresher",
+    },
   ];
   
   
+
+  
+
   // Filter posts based on search term
   const filteredPosts = posts.filter((post) =>
     post.title.toLowerCase().includes(searchTerm.toLowerCase())

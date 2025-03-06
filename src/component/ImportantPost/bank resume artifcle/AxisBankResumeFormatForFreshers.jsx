@@ -219,9 +219,14 @@ export default function AxisBankResumeFormatForFreshers(prop) {
 
                     <h3>Step 2: Write an Axis Bank Objective</h3>
                     <p>
-                        Add a short statement about your goal for an Axis Bank job and what you offer. Keep it tied to banking and your enthusiasm for Axis Bank, ready to update as needed. Learn more at <Link to="/how-to-write-a-strong-resume-objective">how to write a strong resume objective</Link>.
+                        Add a short statement about your goal for an Axis Bank job and what you offer. 
+                        Keep it tied to banking and your enthusiasm for Axis Bank, ready to update as 
+                        needed. Learn more at <Link to="/how-to-write-a-strong-resume-objective">
+                        how to write a strong resume objective</Link>.
                     </p>
-                    <p><strong>Example:</strong><br /> "A 12th-pass fresher with strong math skills seeking an Axis Bank teller role to assist customers and start a banking career."</p>
+                    <p><strong>Example:</strong><br /> 
+                    "A 12th-pass fresher with strong math skills seeking an Axis Bank teller role to 
+                    assist customers and start a banking career."</p>
 
                     <h3>Step 3: Highlight Your Education</h3>
                     <p>

@@ -15,7 +15,7 @@ export default function ResumeQoutes(prop) {
     const { techImages } = prop
     const navigate = useNavigate();
     const ArticleUrl = "https://resumeera.xyz/resume-quotes";
-    const ArticleTitle = "Resume Quotes – Inspirational Quotes to Enhance Your Professional Journey";
+    const ArticleTitle = "Resume Quote – Inspirational Quotes to Enhance Your Professional Journey";
     useEffect(() => {
         window.scrollTo(0, 0);
     }, []);
