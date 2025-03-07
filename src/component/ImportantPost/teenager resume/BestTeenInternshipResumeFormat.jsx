@@ -229,7 +229,10 @@ export default function BestTeenInternshipResumeFormat(prop) {
             <li>
               <strong>Objective</strong>
               <p>
-                Write a short, sharp goal for your internship and what you offer. In the best resume format for teen internships, try: “Motivated high school student seeking a marketing internship to develop social media skills.” Tailor it to the internship for a standout teen resume format.
+                Write a short, sharp goal for your internship and what you offer. 
+                In the best resume format for teen internships, try: “Motivated high school student 
+                seeking a marketing internship to develop social media skills.” Tailor it to the 
+                internship for a standout teen resume format.
               </p>
               <h4 className="examplegeneral">Examples to Try:</h4>
               <ul className="strong-point">
@@ -265,7 +268,8 @@ export default function BestTeenInternshipResumeFormat(prop) {
             <li>
               <strong>Extracurriculars</strong>
               <p>
-                Highlight your out-of-school activities to show responsibility. For example: “Volunteer, Local Library, 2024 – Organized books weekly.” Or: “Debate Club Member, 2023-2024 – Won regional rounds.” These shine in the best resume format for teen internships.
+                Highlight your out-of-school activities to show responsibility. 
+                For example: “Volunteer, Local Library, 2024 – Organized books weekly.” Or: “Debate Club Member, 2023-2024 – Won regional rounds.” These shine in the best resume format for teen internships.
               </p>
               <h4 className="examplegeneral">Examples to Try:</h4>
               <ul className="strong-point">
@@ -344,7 +348,9 @@ export default function BestTeenInternshipResumeFormat(prop) {
             <li>
               <strong>Proofread for Clarity</strong>
               <p>
-                Check for errors. Read your resume aloud or ask a friend to review it. Fix typos or unclear parts. A polished teen resume format looks pro and stands out online with ResumeEra.xyz’s free templates.
+                Check for errors. Read your resume aloud or ask a friend to review it. 
+                Fix typos or unclear parts. A polished teen resume format looks pro and 
+                stands out online with ResumeEra.xyz’s free templates.
               </p>
             </li>
           </ol>

@@ -1946,10 +1946,16 @@ const ImportantPostLink = () => {
       src: 'https://i.postimg.cc/zBLwX41t/DALL-E-2025-03-05-21-52-43-A-vibrant-imaginative-illustration-with-a-light-blue-sky-background-fe.webp',
       alt: "What Should I Add in My Resume as a Fresher",
     },
+    {
+      path: "/resume-for-ai-driven-hiring-systems",
+      title: "What’s the Best Way to Optimize Your Resume for AI-Driven Hiring Systems",
+      src: 'https://i.postimg.cc/7hZH0VdJ/Resume-for-AI-Driven-Hiring-Systems.jpg',
+      alt: "Resume for AI-Driven Hiring Systems",
+    },
   ];
   
   
-
+  
   
 
   // Filter posts based on search term

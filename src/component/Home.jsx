@@ -45,11 +45,11 @@ const Home = (prop) => {
       <Helmet>
         {/* Core SEO Tags */}
         <title>
-          Create Your Professional Resume Online | Free Resume Format PDF | ResumeEra
+        ResumeEra.xyz | Create Your Resume Online |Free Download Now
         </title>
         <meta
           name="description"
-          content="Create a professional resume online for free with ResumeEra. Choose from beautiful, free resume templates, customize easily, and download as a polished PDF format."
+          content="Create a  resume online for free with ResumeEra.xyz . Choose from beautiful, free resume templates, customize easily, and download as a polished PDF format."
         />
         <meta
           name="keywords"

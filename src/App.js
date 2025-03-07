@@ -481,6 +481,7 @@ import DescriptionForResumeForFreshers from "./component/ImportantPost/FreshersR
 import BestSummaryForResumeForFreshers from "./component/ImportantPost/FreshersResumeSummary.jsx/BestSummaryForResumeForFreshers.jsx";
 import FresherSummaryForResume from "./component/ImportantPost/FreshersResumeSummary.jsx/FresherSummaryForResume.jsx";
 import WhatShouldIAddinMyResume from "./component/ImportantPost/WhatShouldIAddinMyResume.jsx";
+import AI_DrivenHiringSystems from "./component/ImportantPost/AI_DrivenHiringSystems.jsx";
 
 var images = [
   { id: 1, src: resum1, alt: "Professional Resume Template 1",description:'Professional and elegant resume template with a timeline structure' },
@@ -1863,6 +1864,9 @@ function App() {
       />
        <Route path="/what-should-i-add-my-resume-as-a-fresher"
         element={<WhatShouldIAddinMyResume fresherResumeImage={fresherResumeImage} techImages={techImages} images={images}/>}
+      />
+      <Route path="/resume-for-ai-driven-hiring-systems"
+        element={<AI_DrivenHiringSystems fresherResumeImage={fresherResumeImage} techImages={techImages} images={images}/>}
       />
       
       
