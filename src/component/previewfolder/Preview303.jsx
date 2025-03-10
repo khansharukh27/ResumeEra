@@ -1,113 +1,219 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react';
 import GoogleAd from '../adFolder/GoogleAd';
 import { useSelector } from 'react-redux';
 import html2canvas from 'html2canvas';
 import jsPDF from 'jspdf';
-import '../previewfolder/CSS/preview303.css'
+import '../previewfolder/CSS/preview303.css';
 import PdfDownloadButton from '../PdfDownloadButton';
+
 export default function Preview303() {
+  // State for PDF filename and styling options
   const [inputFields, setInputFields] = useState('resume.pdf');
-    const [bgColor, setBgColor] = useState('white'); // Default background color (wheat)
-    const [fontStyle, setFontStyle] = useState('Arial'); // Default font style
-    const [fontColor, setFontColor] = useState('#rrggbb')
-    const [headingColor, setHeadingColor] = useState('#6a8a3f')
-    // const [isDownloaded, setIsDownloaded] = useState(false);
-    const [fontSize, setFontSize] = useState(16); // Initial font size for paragraphs
-    const [fontSizeheading, setFontSizeheading] = useState(16); // Initial font size for headings
+  const [bgColor, setBgColor] = useState('white'); // Default background color
+  const [fontStyle, setFontStyle] = useState('Arial'); // Default font style
+  const [fontColor, setFontColor] = useState('#000000'); // Default font color (corrected from '#rrggbb')
+  const [headingColor, setHeadingColor] = useState('#6a8a3f'); // Default heading color
+  const [fontSize, setFontSize] = useState(16); // Font size for paragraphs
+  const [headingSize, setHeadingSize] = useState(20); // Font size for headings (replaced fontSizeheading)
+  const [margin, setMargin] = useState(10); // Margin for resume wrapper
+  const [padding, setPadding] = useState(10); // Padding for sections
+  const [lineSpacing, setLineSpacing] = useState(1.2); // Line spacing for text
+  const [sectionSpacing, setSectionSpacing] = useState(15); // Spacing between sections
 
-    // const navigate = useNavigate();
-    const personalInfo = useSelector((state) => state.reducer.personalInfo);
-    const education = useSelector((state) => [state.reducer.education]);
-    const keyskills = useSelector((state) => [state.reducer.keySkills]);
-    const work = useSelector((state) => [state.reducer.workExperience]);
-    const Honor = useSelector((state) => [state.reducer.honorAndaward]);
-    // const Refrence = useSelector((state) => [state.reducer.addReference])
-    const SoftSkill = useSelector((state) => [state.reducer.addSoftSkills])
-    const socialMediaLink = useSelector((state) => [state.reducer.socialMediaLink]);
-    const languages = useSelector((state) => [state.reducer.addLanguage]);
-    // const Certificate = useSelector((state) => state.reducer.certificateData);
-    const Hobbies = useSelector((state) => [state.reducer.addHobies])
-    const project = useSelector((state) => [state.reducer.projectData])
-    console.log('hobbies preview 303:-', Hobbies)
-    // console.log('Certificate:-', Certificate)
-    console.log('honorand award:-', Honor)
+  // Editable headings
+  const [objectHeading, setObjectHeading] = useState('Object Statement');
+  const [softSkillsHeading, setSoftSkillsHeading] = useState('Soft Skill');
+  const [technicalSkillsHeading, setTechnicalSkillsHeading] = useState('Technical Skill');
+  const [contactHeading, setContactHeading] = useState('Contact');
+  const [experienceHeading, setExperienceHeading] = useState('Work History');
+  const [educationHeading, setEducationHeading] = useState('Education');
+  const [languageHeading, setLanguageHeading] = useState('Language');
+  const [hobbiesHeading, setHobbiesHeading] = useState('Hobbies');
 
+  // Redux state selectors
+  const personalInfo = useSelector((state) => state.reducer.personalInfo);
+  const education = useSelector((state) => [state.reducer.education]);
+  const keyskills = useSelector((state) => [state.reducer.keySkills]);
+  const work = useSelector((state) => [state.reducer.workExperience]);
+  const Honor = useSelector((state) => [state.reducer.honorAndaward]);
+  const SoftSkill = useSelector((state) => [state.reducer.addSoftSkills]);
+  const socialMediaLink = useSelector((state) => [state.reducer.socialMediaLink]);
+  const languages = useSelector((state) => [state.reducer.addLanguage]);
+  const Hobbies = useSelector((state) => [state.reducer.addHobies]);
+  const project = useSelector((state) => [state.reducer.projectData]);
+
+  console.log('hobbies preview 303:-', Hobbies);
+  console.log('honor and award:-', Honor);
+
+  // Responsive heading size
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth <= 720) {
+        setHeadingSize(14); // Smaller heading size for mobile
+      } else {
+        setHeadingSize(20); // Default heading size
+      }
+    };
+
+    handleResize();
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+  // Handle heading edits
+  const handleEdit = (e, defaultValue, setter) => {
+    setter(e.target.textContent.trim() || defaultValue);
+  };
 
   return (
     <div>
       <header style={{ paddingLeft: '10px', paddingRight: '10px', textAlign: 'center' }}>
-        <h1>Congratulations on Creating a Winning Resume!</h1>
-        <small style={{ textAlign: 'center' }}> <i style={{ color: 'white', backgroundColor: 'red' }}> warning </i>: if resume dont show your data in resume , please refresh the page</small>
-
-        <p>Your journey towards your dream job starts here! By crafting a professional resume with ResumeEra, you've taken the first step in showcasing your skills, experiences, and aspirations effectively. A well-structured resume is more than just a document—it's your story, your voice, and your opportunity to shine.
+        <h1 style={{ fontSize: `${headingSize}px`, lineHeight: `${lineSpacing}em`, marginBottom: `${sectionSpacing}px` }}>
+          Congratulations on Creating a Winning Resume!
+        </h1>
+        <small style={{ textAlign: 'center' }}>
+          <i style={{ color: 'white', backgroundColor: 'red' }}> warning </i>: if resume doesn’t show your data, please refresh the page
+        </small>
+        <p style={{ fontSize: `${fontSize}px`, lineHeight: `${lineSpacing}em`, marginBottom: `${sectionSpacing}px` }}>
+          Your journey towards your dream job starts here! By crafting a professional resume with ResumeEra, you've taken the first step in showcasing your skills, experiences, and aspirations effectively. A well-structured resume is more than just a document—it's your story, your voice, and your opportunity to shine.
 
           Whether you're a fresher stepping into the professional world or an experienced professional climbing the career ladder, a compelling resume can make all the difference. Our platform ensures your resume is not only visually appealing but also tailored to meet industry standards.
 
-          Take a moment to review your resume. Remember, the right opportunity is just around the corner. Stand out, stay confident, and let ResumeEra be your trusted partner in achieving your career goals!"
+          Take a moment to review your resume. Remember, the right opportunity is just around the corner. Stand out, stay confident, and let ResumeEra be your trusted partner in achieving your career goals!
         </p>
       </header>
       <GoogleAd />
-      <div className='main303'>
-        <div className='preview303' style={{backgroundColor:bgColor}} id='Alisha_mirza303'>
-          <div className='blankdiv303'></div>
-          <h3 style={{ whiteSpace: 'none', marginBottom: '-10px', fontFamily: fontStyle, color: headingColor,fontSize:fontSizeheading }}>{personalInfo.firstName} {personalInfo.lastName}</h3>
-          <div className='blankdiv303-2'></div>
-          <div className='blanckall303-3'></div>
-          <div className='innermain303 d-flex justify-content-around'>
-            <div className='inner303-1' style={{ width: '50%' }}>
-              <div className='d-flex'>
-                <h4 className="" style={{
-                  fontFamily: fontStyle, color: headingColor,fontSize:fontSizeheading,
-                  whiteSpace: 'nowrap'
-                }}>OBJECT STATEMENT</h4>
-                <div className='blanckall303'></div>
+      <div className="main303">
+        <div
+          className="preview303"
+          style={{ backgroundColor: bgColor, margin: `${margin}px` }}
+          id="Alisha_mirza303"
+          contentEditable
+          suppressContentEditableWarning
+        >
+          <div className="blankdiv303"></div>
+          <h3
+            style={{
+              whiteSpace: 'nowrap', // Corrected from 'none'
+              marginBottom: `${sectionSpacing}px`,
+              fontFamily: fontStyle,
+              color: headingColor,
+              fontSize: `${headingSize * 1.2}px`, // Slightly larger for name
+              lineHeight: `${lineSpacing}em`,
+            }}
+          >
+            {personalInfo.firstName} {personalInfo.lastName}
+          </h3>
+          <div className="blankdiv303-2"></div>
+          <div className="blanckall303-3"></div>
+          <div className="innermain303 d-flex justify-content-around" style={{ padding: `${padding}px` }}>
+            <div className="inner303-1" style={{ width: '50%' }}>
+              <div className="d-flex">
+                <h4
+                  contentEditable
+                  suppressContentEditableWarning
+                  onBlur={(e) => handleEdit(e, 'Object Statement', setObjectHeading)}
+                  style={{
+                    fontFamily: fontStyle,
+                    color: headingColor,
+                    fontSize: `${headingSize}px`,
+                    whiteSpace: 'nowrap',
+                    lineHeight: `${lineSpacing}em`,
+                    marginBottom: `${sectionSpacing}px`,
+                  }}
+                >
+                  {objectHeading}
+                </h4>
+                <div className="blanckall303"></div>
               </div>
-              <div className='blankdiv303-2'></div>
-              <div className='blanckall303-3'></div>
-              <p className='object303' style={{ fontSize:fontSize, color: fontColor, fontFamily: fontStyle }}>{personalInfo.object}</p>
+              <div className="blankdiv303-2"></div>
+              <div className="blanckall303-3"></div>
+              <p
+                className="object303"
+                style={{
+                  fontSize: `${fontSize}px`,
+                  color: fontColor,
+                  fontFamily: fontStyle,
+                  lineHeight: `${lineSpacing}em`,
+                  marginBottom: `${sectionSpacing}px`,
+                }}
+              >
+                {personalInfo.object}
+              </p>
               <div className="soft-skill">
-                <div className='d-flex'>
-                  <h4 className="" style={{ fontFamily: fontStyle, color: headingColor,fontSize:fontSizeheading, whiteSpace: 'nowrap' }}>SOFT SKILL</h4>
-                  <div className='blanckall303'></div>
+                <div className="d-flex">
+                  <h4
+                    contentEditable
+                    suppressContentEditableWarning
+                    onBlur={(e) => handleEdit(e, 'Soft Skill', setSoftSkillsHeading)}
+                    style={{
+                      fontFamily: fontStyle,
+                      color: headingColor,
+                      fontSize: `${headingSize}px`,
+                      whiteSpace: 'nowrap',
+                      lineHeight: `${lineSpacing}em`,
+                      marginBottom: `${sectionSpacing}px`,
+                    }}
+                  >
+                    {softSkillsHeading}
+                  </h4>
+                  <div className="blanckall303"></div>
                 </div>
-                <div className='blankdiv303-2'></div>
-                <div className='blanckall303-3'></div>
+                <div className="blankdiv303-2"></div>
+                <div className="blanckall303-3"></div>
                 <div>
                   {SoftSkill[0].map((keys, index) => (
-                    <div key={index} className="technical-skill-item303" style={{}}>
-                      <ul style={{  marginRight: '0px', minWidth: '100px', marginBottom: '-5px' }}>
-                        <li style={{fontSize:fontSize, color: fontColor, fontFamily: fontStyle}}>{keys.softSkill}</li>
+                    <div key={index} className="technical-skill-item303">
+                      <ul style={{ marginRight: '0px', minWidth: '100px', marginBottom: '-5px' }}>
+                        <li
+                          style={{
+                            fontSize: `${fontSize}px`,
+                            color: fontColor,
+                            fontFamily: fontStyle,
+                            lineHeight: `${lineSpacing}em`,
+                          }}
+                        >
+                          {keys.softSkills} {/* Corrected from softSkill to match Redux state */}
+                        </li>
                       </ul>
                     </div>
                   ))}
                 </div>
               </div>
               <div className="technical-" style={{ backgroundColor: bgColor }}>
-                <div className='d-flex'>
-                  <h4 className="" style={{
-                    fontFamily: fontStyle, color: headingColor,fontSize:fontSizeheading,
-                    whiteSpace: 'nowrap'
-                  }}>TECHNICAL SKILL</h4>
-                  <div className='blanckall303'></div>
+                <div className="d-flex">
+                  <h4
+                    contentEditable
+                    suppressContentEditableWarning
+                    onBlur={(e) => handleEdit(e, 'Technical Skill', setTechnicalSkillsHeading)}
+                    style={{
+                      fontFamily: fontStyle,
+                      color: headingColor,
+                      fontSize: `${headingSize}px`,
+                      whiteSpace: 'nowrap',
+                      lineHeight: `${lineSpacing}em`,
+                      marginBottom: `${sectionSpacing}px`,
+                    }}
+                  >
+                    {technicalSkillsHeading}
+                  </h4>
+                  <div className="blanckall303"></div>
                 </div>
-                <div className='blankdiv303-2'></div>
-                <div className='blanckall303-3'></div>
+                <div className="blankdiv303-2"></div>
+                <div className="blanckall303-3"></div>
                 <div>
                   {keyskills[0].map((keys, index) => (
-                    <div
-                      key={index}
-                      className="technical-skill-item303"
-                      style={{
-
-                      }}
-                    >
-                      {/* Skill Name */}
-
+                    <div key={index} className="technical-skill-item303">
                       <ul style={{ marginRight: '0px', minWidth: '100px', marginBottom: '-5px' }}>
                         <li
-                         
+                          style={{
+                            fontSize: `${fontSize}px`,
+                            color: fontColor,
+                            fontFamily: fontStyle,
+                            lineHeight: `${lineSpacing}em`,
+                          }}
                         >
-                          <p style={{fontSize:fontSize, color: fontColor, fontFamily: fontStyle}}>{keys.keyskills}</p>
+                          {keys.keyskills}
                         </li>
                       </ul>
                     </div>
@@ -115,110 +221,312 @@ export default function Preview303() {
                 </div>
               </div>
             </div>
-            <div className='innerdiv303-2' style={{ width: '40%' }}>
-              < div className="contact303">
-                <div className='d-flex'>
-                  <h4 className="" style={{
-                    fontFamily: fontStyle, color: headingColor,fontSize:fontSizeheading,
-                    whiteSpace: 'nowrap'
-                  }}>CONTACT</h4>
-                  <div className='blanckall303'></div>
+            <div className="innerdiv303-2" style={{ width: '40%' }}>
+              <div className="contact303">
+                <div className="d-flex">
+                  <h4
+                    contentEditable
+                    suppressContentEditableWarning
+                    onBlur={(e) => handleEdit(e, 'Contact', setContactHeading)}
+                    style={{
+                      fontFamily: fontStyle,
+                      color: headingColor,
+                      fontSize: `${headingSize}px`,
+                      whiteSpace: 'nowrap',
+                      lineHeight: `${lineSpacing}em`,
+                      marginBottom: `${sectionSpacing}px`,
+                    }}
+                  >
+                    {contactHeading}
+                  </h4>
+                  <div className="blanckall303"></div>
                 </div>
-                <div className='blankdiv303-2'></div>
-                <div className='blanckall303-3'></div>
-                <p style={{ fontSize:fontSize, color: fontColor, fontFamily: fontStyle, marginBottom:'.1rem', marginTop: '4px' }}>ADDRESS:-  {personalInfo.state} {personalInfo.postalCode}</p>
-                <p style={{ fontSize:fontSize, color: fontColor, fontFamily: fontStyle,marginBottom:'.1rem' }}>MOBILE:- {personalInfo.mobileNumber}</p>
-                <p style={{ fontSize:fontSize, color: fontColor, fontFamily: fontStyle, wordBreak: 'break-all', marginBottom:'.1rem'}}>EMAIL:- {personalInfo.email}</p>
-                <p style={{ fontSize:fontSize, color: fontColor, fontFamily: fontStyle,marginBottom:'.1rem' }}>GITHUB:-{socialMediaLink[0].github}</p>
-                <p style={{ fontSize:fontSize, color: fontColor, fontFamily: fontStyle, marginBottom:'.1rem'}}>LINKEDIN:- {socialMediaLink[0].linkedin}</p>
-                <p style={{ fontSize:fontSize, color: fontColor, fontFamily: fontStyle, marginBottom:'.1rem' }}>TWITTER:- {socialMediaLink[0].TWITTER}</p>
-
+                <div className="blankdiv303-2"></div>
+                <div className="blanckall303-3"></div>
+                <p
+                  style={{
+                    fontSize: `${fontSize}px`,
+                    color: fontColor,
+                    fontFamily: fontStyle,
+                    marginBottom: '.1rem',
+                    marginTop: '4px',
+                    lineHeight: `${lineSpacing}em`,
+                  }}
+                >
+                  ADDRESS:- {personalInfo.state} {personalInfo.postalCode}
+                </p>
+                <p
+                  style={{
+                    fontSize: `${fontSize}px`,
+                    color: fontColor,
+                    fontFamily: fontStyle,
+                    marginBottom: '.1rem',
+                    lineHeight: `${lineSpacing}em`,
+                  }}
+                >
+                  MOBILE:- {personalInfo.mobileNumber}
+                </p>
+                <p
+                  style={{
+                    fontSize: `${fontSize}px`,
+                    color: fontColor,
+                    fontFamily: fontStyle,
+                    wordBreak: 'break-all',
+                    marginBottom: '.1rem',
+                    lineHeight: `${lineSpacing}em`,
+                  }}
+                >
+                  EMAIL:- {personalInfo.email}
+                </p>
+                <p
+                  style={{
+                    fontSize: `${fontSize}px`,
+                    color: fontColor,
+                    fontFamily: fontStyle,
+                    marginBottom: '.1rem',
+                    lineHeight: `${lineSpacing}em`,
+                  }}
+                >
+                  GITHUB:- {socialMediaLink?.[0]?.github || 'N/A'}
+                </p>
+                <p
+                  style={{
+                    fontSize: `${fontSize}px`,
+                    color: fontColor,
+                    fontFamily: fontStyle,
+                    marginBottom: '.1rem',
+                    lineHeight: `${lineSpacing}em`,
+                  }}
+                >
+                  LINKEDIN:- {socialMediaLink?.[0]?.linkedin || 'N/A'}
+                </p>
+                <p
+                  style={{
+                    fontSize: `${fontSize}px`,
+                    color: fontColor,
+                    fontFamily: fontStyle,
+                    marginBottom: '.1rem',
+                    lineHeight: `${lineSpacing}em`,
+                  }}
+                >
+                  TWITTER:- {socialMediaLink?.[0]?.TWITTER || 'N/A'}
+                </p>
               </div>
               <div className="experience-section303">
-                <div className='d-flex'>
-                  <h4 className="" style={{
-                    fontFamily: fontStyle, color: headingColor,fontSize:fontSizeheading,
-                    whiteSpace: 'nowrap'
-                  }}>WORK HISTORY</h4>
-                  <div className='blanckall303'></div>
-
+                <div className="d-flex">
+                  <h4
+                    contentEditable
+                    suppressContentEditableWarning
+                    onBlur={(e) => handleEdit(e, 'Work History', setExperienceHeading)}
+                    style={{
+                      fontFamily: fontStyle,
+                      color: headingColor,
+                      fontSize: `${headingSize}px`,
+                      whiteSpace: 'nowrap',
+                      lineHeight: `${lineSpacing}em`,
+                      marginBottom: `${sectionSpacing}px`,
+                    }}
+                  >
+                    {experienceHeading}
+                  </h4>
+                  <div className="blanckall303"></div>
                 </div>
-                <div className='blankdiv303-2'></div>
-                <div className='blanckall303-3'></div>
+                <div className="blankdiv303-2"></div>
+                <div className="blanckall303-3"></div>
                 {work[0].map((works, index) => (
-                  <div key={index} className="employment-history303">
+                  <div key={index} className="employment-history303" style={{ marginBottom: `${sectionSpacing}px` }}>
                     <div className="exp-inner303">
-                      <p style={{ fontSize:fontSize, color: fontColor, fontFamily: fontStyle, marginBottom: '-5px' }}
-                       className="employment-detail303"><b style={{ fontWeight: 500, color: fontColor }}>
-                        {works.jobtitle}</b><br />{works.organization}{work.city}</p>
-                      <p style={{ fontSize:fontSize, color: fontColor, fontFamily: fontStyle, marginBottom: '-5px' }} className="employment-detail303"><i>{works.startYear} - {works.endYear}</i></p>
-                      <p style={{ fontSize:fontSize, color: fontColor, fontFamily: fontStyle}} className='employment-detail303'>{works.aboutexperience}</p>
+                      <p
+                        style={{
+                          fontSize: `${fontSize}px`,
+                          color: fontColor,
+                          fontFamily: fontStyle,
+                          marginBottom: '-5px',
+                          lineHeight: `${lineSpacing}em`,
+                        }}
+                        className="employment-detail303"
+                      >
+                        <b style={{ fontWeight: 500, color: fontColor }}>{works.jobtitle}</b>
+                        <br />
+                        {works.organization} {works.city || 'N/A'}
+                      </p>
+                      <p
+                        style={{
+                          fontSize: `${fontSize}px`,
+                          color: fontColor,
+                          fontFamily: fontStyle,
+                          marginBottom: '-5px',
+                          lineHeight: `${lineSpacing}em`,
+                        }}
+                        className="employment-detail303"
+                      >
+                        <i>{works.startYear} - {works.endYear}</i>
+                      </p>
+                      <p
+                        style={{
+                          fontSize: `${fontSize}px`,
+                          color: fontColor,
+                          fontFamily: fontStyle,
+                          lineHeight: `${lineSpacing}em`,
+                        }}
+                        className="employment-detail303"
+                      >
+                        {works.aboutexperience}
+                      </p>
                     </div>
                   </div>
                 ))}
               </div>
               <div className="education-section303 mt-1">
-                <div className='d-flex'>
-                  <h4 className="" style={{
-                    fontFamily: fontStyle, color: headingColor,fontSize:fontSizeheading,
-                    whiteSpace: 'nowrap'
-                  }}>EDUCATION</h4>
-                  <div className='blanckall303'></div>
-
+                <div className="d-flex">
+                  <h4
+                    contentEditable
+                    suppressContentEditableWarning
+                    onBlur={(e) => handleEdit(e, 'Education', setEducationHeading)}
+                    style={{
+                      fontFamily: fontStyle,
+                      color: headingColor,
+                      fontSize: `${headingSize}px`,
+                      whiteSpace: 'nowrap',
+                      lineHeight: `${lineSpacing}em`,
+                      marginBottom: `${sectionSpacing}px`,
+                    }}
+                  >
+                    {educationHeading}
+                  </h4>
+                  <div className="blanckall303"></div>
                 </div>
-                <div className='blankdiv303-2'></div>
-                <div className='blanckall303-3'></div>
+                <div className="blankdiv303-2"></div>
+                <div className="blanckall303-3"></div>
                 {education[0].map((edu, index) => (
-                  <div key={index} className="education-item303">
+                  <div key={index} className="education-item303" style={{ marginBottom: `${sectionSpacing}px` }}>
                     <div className="certificate-item303">
-                      <p style={{ fontSize:fontSize, color: fontColor, fontFamily: fontStyle, fontWeight: 900, marginBottom: '-5px' }} className="employment-detail303">{edu.degree} in {edu.university} </p>
-                      <p style={{ fontSize:fontSize, color: fontColor, fontFamily: fontStyle, marginBottom: '-5px' }} className="employment-detail303">{edu.university}</p>
-                      <p style={{ fontSize:fontSize, color: fontColor, fontFamily: fontStyle}} className="employment-detail303">{edu.startYear} - {edu.endYear},{edu.city}</p>
-                    </div>
-                    <div className="education-details303">
-                      <span><b></b></span>
+                      <p
+                        style={{
+                          fontSize: `${fontSize}px`,
+                          color: fontColor,
+                          fontFamily: fontStyle,
+                          fontWeight: 900,
+                          marginBottom: '-5px',
+                          lineHeight: `${lineSpacing}em`,
+                        }}
+                        className="employment-detail303"
+                      >
+                        {edu.degree} in {edu.university}
+                      </p>
+                      <p
+                        style={{
+                          fontSize: `${fontSize}px`,
+                          color: fontColor,
+                          fontFamily: fontStyle,
+                          marginBottom: '-5px',
+                          lineHeight: `${lineSpacing}em`,
+                        }}
+                        className="employment-detail303"
+                      >
+                        {edu.university}
+                      </p>
+                      <p
+                        style={{
+                          fontSize: `${fontSize}px`,
+                          color: fontColor,
+                          fontFamily: fontStyle,
+                          lineHeight: `${lineSpacing}em`,
+                        }}
+                        className="employment-detail303"
+                      >
+                        {edu.startYear} - {edu.endYear}, {edu.city}
+                      </p>
                     </div>
                   </div>
                 ))}
               </div>
-              <div className=" language-303">
-                <div className='d-flex'>
-                  <h4 className="" style={{
-                    fontFamily: fontStyle, color: headingColor,fontSize:fontSizeheading,
-                    whiteSpace: 'nowrap'
-                  }}>LANGUAGE</h4>
-                  <div className='blanckall303'></div>
+              <div className="language-303">
+                <div className="d-flex">
+                  <h4
+                    contentEditable
+                    suppressContentEditableWarning
+                    onBlur={(e) => handleEdit(e, 'Language', setLanguageHeading)}
+                    style={{
+                      fontFamily: fontStyle,
+                      color: headingColor,
+                      fontSize: `${headingSize}px`,
+                      whiteSpace: 'nowrap',
+                      lineHeight: `${lineSpacing}em`,
+                      marginBottom: `${sectionSpacing}px`,
+                    }}
+                  >
+                    {languageHeading}
+                  </h4>
+                  <div className="blanckall303"></div>
                 </div>
-                <div className='blankdiv303-2'></div>
-                <div className='blanckall303-3'></div>
+                <div className="blankdiv303-2"></div>
+                <div className="blanckall303-3"></div>
                 <div style={{ display: 'flex', flexWrap: 'wrap', gap: '16px' }}>
                   {languages[0].map((keys, index) => (
                     <div key={index} className="language-item303">
-                      <p style={{ fontSize:fontSize, color: fontColor, fontFamily: fontStyle, marginBottom: '-5px' }}>{keys.language}</p>
+                      <p
+                        style={{
+                          fontSize: `${fontSize}px`,
+                          color: fontColor,
+                          fontFamily: fontStyle,
+                          marginBottom: '-5px',
+                          lineHeight: `${lineSpacing}em`,
+                        }}
+                      >
+                        {keys.language}
+                      </p>
                     </div>
                   ))}
                 </div>
               </div>
               <div className="technical-skills-title303 mt-1">
-                <div className='d-flex'>
-                  <h4 className="" style={{
-                    fontFamily: fontStyle, color: headingColor,fontSize:fontSizeheading,
-                    whiteSpace: 'nowrap'
-                  }}>HOBBIES</h4>
-                  <div className='blanckall303'></div>
+                <div className="d-flex">
+                  <h4
+                    contentEditable
+                    suppressContentEditableWarning
+                    onBlur={(e) => handleEdit(e, 'Hobbies', setHobbiesHeading)}
+                    style={{
+                      fontFamily: fontStyle,
+                      color: headingColor,
+                      fontSize: `${headingSize}px`,
+                      whiteSpace: 'nowrap',
+                      lineHeight: `${lineSpacing}em`,
+                      marginBottom: `${sectionSpacing}px`,
+                    }}
+                  >
+                    {hobbiesHeading}
+                  </h4>
+                  <div className="blanckall303"></div>
                 </div>
-                <div className='blankdiv303-2'></div>
-                <div className='blanckall303-3'></div>
+                <div className="blankdiv303-2"></div>
+                <div className="blanckall303-3"></div>
                 <div style={{ display: 'flex', flexWrap: 'wrap', gap: '16px' }}>
-                  {Hobbies && Hobbies[0].map((keys, index) => (
+                  {Hobbies[0].map((keys, index) => (
                     <div key={index} className="d-flex align-items-center">
-                      <ul style={{ fontSize: 'small', color: fontColor, fontFamily: fontStyle, marginRight: '0px', minWidth: '100px', marginBottom: '-5px' }}>
-                        <li style={{ marginBottom: "-5px", color: fontColor, fontFamily: fontStyle }}>
-
-                          {/* <span style={{ marginRight: "10px", fontSize: "20px" }}>
-                                                        {HobbyIcons[keys.hobbies] || "🎯"} 
-                                                    </span> */}
-                          <p style={{fontSize: fontSize, color: fontColor, fontFamily: fontStyle}}>{keys.hobbies}</p>
+                      <ul
+                        style={{
+                          fontSize: `${fontSize}px`,
+                          color: fontColor,
+                          fontFamily: fontStyle,
+                          marginRight: '0px',
+                          minWidth: '100px',
+                          marginBottom: '-5px',
+                        }}
+                      >
+                        <li
+                          style={{
+                            marginBottom: '-5px',
+                            color: fontColor,
+                            fontFamily: fontStyle,
+                            lineHeight: `${lineSpacing}em`,
+                          }}
+                        >
+                          {/* Uncomment if you want to reintroduce hobby icons */}
+                          {/* <span style={{ marginRight: '10px', fontSize: '20px' }}>
+                            {HobbyIcons[keys.hobbies] || '🎯'}
+                          </span> */}
+                          {keys.hobbies}
                         </li>
                       </ul>
                     </div>
@@ -227,83 +535,34 @@ export default function Preview303() {
               </div>
             </div>
           </div>
-
         </div>
-        <div className="resume-download-section0">
-          <div style={{ width: '100%' }}>
-            <GoogleAd />
-          </div>
-          <div style={{ width: '100%' }}>
-            <GoogleAd />
-          </div>
-          <div className='downloadbuttondiv'>
-            <input type="text" placeholder="Enter your resume name" className="resume-name-input" style={{ borderRadius: '5px', padding: '10px' }} onChange={(e) => setInputFields(e.target.value)} />
-<PdfDownloadButton elementId='Alisha_mirza303' fileName={inputFields} />
-          </div>
-          {/* Color Picker for Background Color */}
-          <div className='d-flex border fontfamilydiv' style={{ marginTop: '5px', display: 'flex', flexDirection: 'row', justifyContent: 'center' }}>
-            <input type="color" value={bgColor} onChange={(e) => setBgColor(e.target.value)} className="bg-color-picker ms-2" />
-            {/* Font Style Selector */}
-            <select value={fontStyle} onChange={(e) => setFontStyle(e.target.value)} className="font-style-selector ms-2">
-              <option value="Arial">Arial</option>
-              <option value="Arial Black">Arial Black</option>
-              <option value="Verdana">Verdana</option>
-              <option value="Tahoma">Tahoma</option>
-              <option value="Trebuchet MS">Trebuchet MS</option>
-              <option value="Impact">Impact</option>
-              <option value="Times New Roman">Times New Roman</option>
-              <option value="Georgia">Georgia</option>
-              <option value="Palatino Linotype">Palatino Linotype</option>
-              <option value="Courier New">Courier New</option>
-              <option value="Lucida Console">Lucida Console</option>
-              <option value="Lucida Sans Unicode">Lucida Sans Unicode</option>
-              <option value="Gill Sans">Gill Sans</option>
-              <option value="Century Gothic">Century Gothic</option>
-              <option value="Comic Sans MS">Comic Sans MS</option>
-              <option value="Garamond">Garamond</option>
-              <option value="Bookman">Bookman</option>
-              <option value="Arial Narrow">Arial Narrow</option>
-              <option value="Brush Script MT">Brush Script MT</option>
-              <option value="Candara">Candara</option>
-              <option value="Franklin Gothic Medium">Franklin Gothic Medium</option>
-              <option value="Goudy Old Style">Goudy Old Style</option>
-              <option value="Herculanum">Herculanum</option>
-              <option value="Monaco">Monaco</option>
-              <option value="Optima">Optima</option>
-              <option value="Perpetua">Perpetua</option>
-              <option value="Rockwell">Rockwell</option>
-              <option value="Segoe UI">Segoe UI</option>
-            </select>
-          </div>
-          <div className='colordiv'>
-            <div>
-              <span>Font Color </span>
-              <input type="color" value={fontColor} onChange={(e) => setFontColor(e.target.value)} className="bg-color-picker ms-2" />
-            </div>
-            <div>
-              <span>Heading Color </span>
-              <input type="color" value={headingColor} onChange={(e) => setHeadingColor(e.target.value)} className="bg-color-picker ms-2" />
-            </div>
-          </div>
-          <div className='colordiv'>
-            <div>
-              <span style={{ color: headingColor }}><i class="bi bi-patch-plus"></i>HS  </span>
-              <input type="number" value={fontSizeheading} onChange={(e) => setFontSizeheading(Number(e.target.value))} className="bg-color-picker ms-2" />
-            </div>
-            <div>
-              <span style={{ color: fontColor }}><i class="bi bi-patch-plus"></i>FS  </span>
-              <input type="number" value={fontSize} onChange={(e) => setFontSize(Number(e.target.value))} className="bg-color-picker ms-2" />
-            </div>
-          </div>
-          <div id="loadingSpinner" style={{ display: "none", position: "fixed", top: "50%", left: "50%" }}>
-            <div class="spinner"></div>
-          </div>
-          <div style={{ width: '100%' }}>
-            <GoogleAd />
-          </div>
 
-        </div>
+        <PdfDownloadButton
+          inputFields={inputFields}
+          setInputFields={setInputFields}
+          bgColor={bgColor}
+          setBgColor={setBgColor}
+          fontStyle={fontStyle}
+          setFontStyle={setFontStyle}
+          headingColor={headingColor}
+          setHeadingColor={setHeadingColor}
+          fontColor={fontColor}
+          setFontColor={setFontColor}
+          fontSize={fontSize}
+          setFontSize={setFontSize}
+          headingSize={headingSize}
+          setHeadingSize={setHeadingSize}
+          margin={margin}
+          setMargin={setMargin}
+          padding={padding}
+          setPadding={setPadding}
+          lineSpacing={lineSpacing}
+          setLineSpacing={setLineSpacing}
+          sectionSpacing={sectionSpacing}
+          setSectionSpacing={setSectionSpacing}
+          elementId="Alisha_mirza303"
+        />
       </div>
     </div>
-  )
+  );
 }

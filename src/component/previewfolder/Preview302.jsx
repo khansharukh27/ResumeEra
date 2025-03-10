@@ -1,155 +1,445 @@
-import React from 'react'
-import '../previewfolder/CSS/preview302.css'
+import React, { useState, useEffect } from 'react';
+import '../previewfolder/CSS/preview301.css';
 import html2canvas from 'html2canvas';
 import jsPDF from 'jspdf';
-import { useState } from 'react';
 import { useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import HobbyIcons from '../HobbyIcons';
 import GoogleAd from '../adFolder/GoogleAd';
 import PdfDownloadButton from '../PdfDownloadButton';
-export default function Preview302() {
-  const [inputFields, setInputFields] = useState('resume.pdf');
-  const [bgColor, setBgColor] = useState('white'); // Default background color (wheat)
-  const [fontStyle, setFontStyle] = useState('Arial'); // Default font style
-  const [fontColor, setFontColor] = useState('#rrggbb')
-  const [headingColor, setHeadingColor] = useState('#6a8a3f')
-  // const [isDownloaded, setIsDownloaded] = useState(false);
-  const [fontSize, setFontSize] = useState(16); // Initial font size for paragraphs
-  const [fontSizeheading, setFontSizeheading] = useState(16); // Initial font size for headings
 
-  const navigate = useNavigate();
+export default function Preview301() {
+  // State for PDF filename and styling options
+  const [inputFields, setInputFields] = useState('resume.pdf');
+  const [bgColor, setBgColor] = useState('white'); // Default background color
+  const [fontStyle, setFontStyle] = useState('Arial'); // Default font style
+  const [fontColor, setFontColor] = useState('#000000'); // Default font color (corrected from '#rrggbb')
+  const [headingColor, setHeadingColor] = useState('#6a8a3f'); // Default heading color
+  const [fontSize, setFontSize] = useState(16); // Font size for paragraphs
+  const [headingSize, setHeadingSize] = useState(20); // Font size for headings (replaced fontSizeheading)
+  const [margin, setMargin] = useState(10); // Margin for resume wrapper
+  const [padding, setPadding] = useState(10); // Padding for sections
+  const [lineSpacing, setLineSpacing] = useState(1.2); // Line spacing for text
+  const [sectionSpacing, setSectionSpacing] = useState(15); // Spacing between sections
+
+  // Editable headings
+  const [softSkillsHeading, setSoftSkillsHeading] = useState('Soft Skill');
+  const [experienceHeading, setExperienceHeading] = useState('Work Experience');
+  const [educationHeading, setEducationHeading] = useState('Education');
+  const [languageHeading, setLanguageHeading] = useState('Language');
+  const [technicalSkillsHeading, setTechnicalSkillsHeading] = useState('Technical Skill');
+  const [interestHeading, setInterestHeading] = useState('Interest');
+
+  // Redux state selectors
   const personalInfo = useSelector((state) => state.reducer.personalInfo);
   const education = useSelector((state) => [state.reducer.education]);
   const keyskills = useSelector((state) => [state.reducer.keySkills]);
   const work = useSelector((state) => [state.reducer.workExperience]);
   const Honor = useSelector((state) => [state.reducer.honorAndaward]);
-  // const Refrence = useSelector((state) => [state.reducer.addReference])
-  const SoftSkill = useSelector((state) => [state.reducer.addSoftSkills])
+  const SoftSkill = useSelector((state) => [state.reducer.addSoftSkills]);
   const socialMediaLink = useSelector((state) => [state.reducer.socialMediaLink]);
   const languages = useSelector((state) => [state.reducer.addLanguage]);
-  // const Certificate = useSelector((state) => state.reducer.certificateData);
-  const Hobbies = useSelector((state) => [state.reducer.addHobies])
-  const project = useSelector((state) => [state.reducer.projectData])
-  console.log('hobbies preview 302:-', Hobbies)
-  // console.log('Certificate:-', Certificate)
-  console.log('honorand award:-', keyskills)
+  const Hobbies = useSelector((state) => [state.reducer.addHobies]);
+  const project = useSelector((state) => [state.reducer.projectData]);
 
+  console.log('hobbies preview 301:-', Hobbies);
+  console.log('honor and award:-', Honor);
+
+  // Responsive heading size
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth <= 720) {
+        setHeadingSize(14); // Smaller heading size for mobile
+      } else {
+        setHeadingSize(20); // Default heading size
+      }
+    };
+
+    handleResize();
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+  // Handle heading edits
+  const handleEdit = (e, defaultValue, setter) => {
+    setter(e.target.textContent.trim() || defaultValue);
+  };
 
   return (
     <div>
       <header style={{ paddingLeft: '10px', paddingRight: '10px', textAlign: 'center' }}>
-        <h1>Congratulations on Creating a Winning Resume!</h1>
-        <small style={{ textAlign: 'center' }}> <i style={{ color: 'white', backgroundColor: 'red' }}> warning </i>: if resume dont show your data in resume , please refresh the page</small>
-
-        <p>Your journey towards your dream job starts here! By crafting a professional resume with ResumeEra, you've taken the first step in showcasing your skills, experiences, and aspirations effectively. A well-structured resume is more than just a document—it's your story, your voice, and your opportunity to shine.
+        <h1 style={{ fontSize: `${headingSize}px`, lineHeight: `${lineSpacing}em`, marginBottom: `${sectionSpacing}px` }}>
+          Congratulations on Creating a Winning Resume!
+        </h1>
+        <small style={{ textAlign: 'center' }}>
+          <i style={{ color: 'white', backgroundColor: 'red' }}> warning </i>: if resume doesn’t show your data, please refresh the page
+        </small>
+        <p style={{ fontSize: `${fontSize}px`, lineHeight: `${lineSpacing}em`, marginBottom: `${sectionSpacing}px` }}>
+          Your journey towards your dream job starts here! By crafting a professional resume with ResumeEra, you've taken the first step in showcasing your skills, experiences, and aspirations effectively. A well-structured resume is more than just a document—it's your story, your voice, and your opportunity to shine.
 
           Whether you're a fresher stepping into the professional world or an experienced professional climbing the career ladder, a compelling resume can make all the difference. Our platform ensures your resume is not only visually appealing but also tailored to meet industry standards.
 
-          Take a moment to review your resume. Remember, the right opportunity is just around the corner. Stand out, stay confident, and let ResumeEra be your trusted partner in achieving your career goals!"
+          Take a moment to review your resume. Remember, the right opportunity is just around the corner. Stand out, stay confident, and let ResumeEra be your trusted partner in achieving your career goals!
         </p>
       </header>
       <GoogleAd />
-      <div className='main302'>
-        <div className='preview302 p-4' style={{ backgroundColor: bgColor, }} id="Alisha_mirza302">
-          <div className='header302' style={{ backgroundColor: '#fddad4' }}></div>
-          <div className='headermiddle302' style={{ backgroundColor: 'white' }}></div>
-          <div className='namediv302' style={{}}>
-            <h3 style={{ whiteSpace: 'none', color: headingColor, fontFamily: fontStyle, fontSize: fontSizeheading, marginBottom: '-10px' }}>{personalInfo.firstName} {personalInfo.lastName}</h3>
-            <div className='contact301'>
-              <p style={{ color: fontColor, fontFamily: fontStyle, fontSize: fontSize }}><i className="bi bi-telephone-fill me-2 ms-2" style={{ color: headingColor }} />{personalInfo.mobileNumber}</p>
-              <div > <p style={{ width: '20px',color: fontColor, fontFamily: fontStyle, fontSize: fontSize }}>|</p></div><p style={{ color: fontColor, fontFamily: fontStyle, fontSize: fontSize, wordBreak: "break-all" }}><i className="bi bi-envelope me-2 me-2" style={{ color: headingColor }} />{personalInfo.email}</p>
+      <div className="main301 d-md-flex">
+        <div
+          className="preview301"
+          style={{ backgroundColor: bgColor, margin: `${margin}px` }}
+          id="Alisha_mirza301"
+          contentEditable
+          suppressContentEditableWarning
+        >
+          <div className="personalInfo301" style={{ backgroundColor: bgColor, padding: `${padding}px` }}>
+            <div className="blueline"></div>
+            <h3
+              style={{
+                whiteSpace: 'nowrap', // Corrected from 'none'
+                fontFamily: fontStyle,
+                color: headingColor,
+                fontSize: `${headingSize * 1.2}px`, // Slightly larger for name
+                lineHeight: `${lineSpacing}em`,
+                marginBottom: `${sectionSpacing}px`,
+              }}
+            >
+              {personalInfo.firstName} {personalInfo.lastName}
+            </h3>
+            <p
+              className="jobtitle"
+              style={{
+                color: fontColor,
+                fontFamily: fontStyle,
+                fontSize: `${fontSize}px`,
+                lineHeight: `${lineSpacing}em`,
+                textAlign: 'center',
+              }}
+            >
+              {work[0][0].jobtitle} {/* Simplified to display only the first job title */}
+            </p>
+            <div className="contact301">
+              <p
+                style={{
+                  color: fontColor,
+                  fontFamily: fontStyle,
+                  fontSize: `${fontSize}px`,
+                  lineHeight: `${lineSpacing}em`,
+                }}
+              >
+                <i className="bi bi-telephone-fill me-2 ms-2" style={{ color: headingColor, fontSize: `${fontSize}px` }} />
+                {personalInfo.mobileNumber}
+              </p>
+              <div>
+                <p style={{ width: '20px' }}>|</p>
+              </div>
+              <p
+                style={{
+                  wordBreak: 'break-all',
+                  color: fontColor,
+                  fontFamily: fontStyle,
+                  fontSize: `${fontSize}px`,
+                  lineHeight: `${lineSpacing}em`,
+                }}
+              >
+                <i className="bi bi-envelope me-2 ms-2" style={{ color: headingColor, fontSize: `${fontSize}px` }} />
+                {personalInfo.email}
+              </p>
             </div>
-            <div className=' maindiv302 ' style={{}}>
-              <div className='skilldiv pe-4'>
-                <h4 style={{ color: headingColor, fontFamily: fontStyle, fontSize: fontSizeheading }}>OBJECTIVE STATEMENT</h4>
-                <p className='object' style={{ color: fontColor, fontFamily: fontStyle, fontSize: fontSize, }}>{personalInfo.object}</p>
-                <div className="soft-skill" style={{ backgroundColor: bgColor, }}>
-                  <h4 className="" style={{ color: headingColor, fontFamily: fontStyle, fontSize: fontSizeheading }}>SOFT SKILL</h4>
-                  <div style={{}}>
-                    {SoftSkill[0].map((keys, index) => (
-                      <div key={index} className="technical-skill-item302" style={{}}>
-                        <ul style={{ fontSize: 'small', marginRight: '0px', minWidth: '100px', marginBottom: '-5px' }}>
-                          <li><p style={{ color: fontColor, fontFamily: fontStyle, fontSize: fontSize, }}>{keys.softSkill}</p></li>
-                        </ul>
-                      </div>
-                    ))}
-                  </div>
+            <hr className="dashed-line" />
+            <p
+              className="object"
+              style={{
+                color: fontColor,
+                fontFamily: fontStyle,
+                fontSize: `${fontSize}px`,
+                lineHeight: `${lineSpacing}em`,
+                marginBottom: `${sectionSpacing}px`,
+              }}
+            >
+              {personalInfo.object}
+            </p>
+          </div>
+          <hr className="dashed-line" />
+          <div className="soft-skill" style={{ backgroundColor: bgColor, padding: `${padding}px` }}>
+            <h4
+              contentEditable
+              suppressContentEditableWarning
+              onBlur={(e) => handleEdit(e, 'Soft Skill', setSoftSkillsHeading)}
+              style={{
+                fontFamily: fontStyle,
+                color: headingColor,
+                fontSize: `${headingSize}px`,
+                lineHeight: `${lineSpacing}em`,
+                marginBottom: `${sectionSpacing}px`,
+              }}
+            >
+              {softSkillsHeading}
+            </h4>
+            <div style={{ display: 'flex', flexWrap: 'wrap', gap: '16px' }}>
+              {SoftSkill[0].map((keys, index) => (
+                <div key={index} className="technical-skill-item301">
+                  <ul style={{ marginRight: '0px', minWidth: '100px', marginBottom: '-5px' }}>
+                    <li
+                      style={{
+                        color: fontColor,
+                        fontFamily: fontStyle,
+                        fontSize: `${fontSize}px`,
+                        lineHeight: `${lineSpacing}em`,
+                      }}
+                    >
+                      {keys.softSkills} {/* Corrected from softSkill to match Redux state */}
+                    </li>
+                  </ul>
                 </div>
-                <div className="tech-skill" style={{ backgroundColor: bgColor, }}>
-                  <h4 className="" style={{ color: headingColor, fontFamily: fontStyle, fontSize: fontSizeheading }}>TECHNICAL SKILL</h4>
-                  <div style={{}}>
-                    {keyskills[0].map((keys, index) => (
-                      <div key={index} className="technical-skill-item302" style={{}}>
-                        <ul style={{ fontSize: 'small', color: fontColor, fontFamily: fontStyle, marginRight: '0px', minWidth: '100px', marginBottom: '-5px' }}>
-                          <li><p style={{ color: fontColor, fontFamily: fontStyle, fontSize: fontSize, }}>{keys.keyskills}</p></li>
-                        </ul>
-                      </div>
-                    ))}
+              ))}
+            </div>
+          </div>
+          <div className="firstdiv301" style={{ padding: `${padding}px` }}>
+            <div className="me-3">
+              <div className="experience-section301">
+                <h4
+                  contentEditable
+                  suppressContentEditableWarning
+                  onBlur={(e) => handleEdit(e, 'Work Experience', setExperienceHeading)}
+                  className="details-title301"
+                  style={{
+                    fontFamily: fontStyle,
+                    color: headingColor,
+                    fontSize: `${headingSize}px`,
+                    lineHeight: `${lineSpacing}em`,
+                    marginBottom: `${sectionSpacing}px`,
+                  }}
+                >
+                  {experienceHeading}
+                </h4>
+                {work[0].map((works, index) => (
+                  <div key={index} className="employment-history301" style={{ marginBottom: `${sectionSpacing}px` }}>
+                    <div className="exp-inner301">
+                      <p
+                        style={{
+                          color: fontColor,
+                          fontFamily: fontStyle,
+                          fontSize: `${fontSize}px`,
+                          marginBottom: '-5px',
+                          lineHeight: `${lineSpacing}em`,
+                        }}
+                        className="employment-detail301"
+                      >
+                        <b style={{ fontWeight: 500, color: fontColor }}>{works.jobtitle}</b>
+                        <br />
+                        {works.organization} {works.city || 'N/A'}
+                      </p>
+                      <p
+                        style={{
+                          color: fontColor,
+                          fontFamily: fontStyle,
+                          fontSize: `${fontSize}px`,
+                          marginBottom: '-5px',
+                          lineHeight: `${lineSpacing}em`,
+                        }}
+                        className="employment-detail301"
+                      >
+                        <i>{works.startYear} - {works.endYear}</i>
+                      </p>
+                      <p
+                        style={{
+                          color: fontColor,
+                          fontFamily: fontStyle,
+                          fontSize: `${fontSize}px`,
+                          lineHeight: `${lineSpacing}em`,
+                        }}
+                        className="employment-detail301"
+                      >
+                        {works.aboutexperience}
+                      </p>
+                    </div>
                   </div>
+                ))}
+              </div>
+              <div className="education-section301 mt-1">
+                <h4
+                  contentEditable
+                  suppressContentEditableWarning
+                  onBlur={(e) => handleEdit(e, 'Education', setEducationHeading)}
+                  className="details-title301"
+                  style={{
+                    fontFamily: fontStyle,
+                    color: headingColor,
+                    fontSize: `${headingSize}px`,
+                    lineHeight: `${lineSpacing}em`,
+                    marginBottom: `${sectionSpacing}px`,
+                  }}
+                >
+                  {educationHeading}
+                </h4>
+                {education[0].map((edu, index) => (
+                  <div key={index} className="education-item301" style={{ marginBottom: `${sectionSpacing}px` }}>
+                    <div className="certificate-item301">
+                      <p
+                        style={{
+                          color: fontColor,
+                          fontFamily: fontStyle,
+                          fontSize: `${fontSize}px`,
+                          fontWeight: 900,
+                          marginBottom: '-5px',
+                          lineHeight: `${lineSpacing}em`,
+                        }}
+                        className="employment-detail301"
+                      >
+                        {edu.degree} in {edu.university}
+                      </p>
+                      <p
+                        style={{
+                          color: fontColor,
+                          fontFamily: fontStyle,
+                          fontSize: `${fontSize}px`,
+                          marginBottom: '-5px',
+                          lineHeight: `${lineSpacing}em`,
+                        }}
+                        className="employment-detail301"
+                      >
+                        {edu.university}
+                      </p>
+                      <p
+                        style={{
+                          color: fontColor,
+                          fontFamily: fontStyle,
+                          fontSize: `${fontSize}px`,
+                          lineHeight: `${lineSpacing}em`,
+                        }}
+                        className="employment-detail301"
+                      >
+                        {edu.startYear} - {edu.endYear}, {edu.city}
+                      </p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+              <div className="language-301">
+                <h4
+                  contentEditable
+                  suppressContentEditableWarning
+                  onBlur={(e) => handleEdit(e, 'Language', setLanguageHeading)}
+                  style={{
+                    fontFamily: fontStyle,
+                    color: headingColor,
+                    fontSize: `${headingSize}px`,
+                    lineHeight: `${lineSpacing}em`,
+                    marginBottom: `${sectionSpacing}px`,
+                  }}
+                >
+                  {languageHeading}
+                </h4>
+                <div style={{ display: 'flex', flexWrap: 'wrap', gap: '16px' }}>
+                  {languages[0].map((keys, index) => (
+                    <div key={index} className="language-item301">
+                      <p
+                        style={{
+                          color: fontColor,
+                          fontFamily: fontStyle,
+                          fontSize: `${fontSize}px`,
+                          marginBottom: '-5px',
+                          lineHeight: `${lineSpacing}em`,
+                        }}
+                      >
+                        {keys.language}
+                      </p>
+                    </div>
+                  ))}
                 </div>
               </div>
-              <div>
-                <div className="experience-section302">
-                  <h4 className="details-title302" style={{ color: headingColor, fontFamily: fontStyle, fontSize: fontSizeheading }}>
-                    WORK EXPERIENCE </h4>
-                  {work[0].map((works, index) => (
-                    <div key={index} className="employment-history302">
-                      <div className="exp-inner302">
-                        <p style={{ color: fontColor, fontFamily: fontStyle, fontSize: fontSize, marginBottom: '-5px' }} className="employment-detail302"><b style={{ fontWeight: 500, color: fontColor }}>{works.jobtitle}</b><br />{works.organization}{work.city}</p>
-                        <p style={{ color: fontColor, fontFamily: fontStyle, fontSize: fontSize, marginBottom: '-5px' }} className="employment-detail302"><i>{works.startYear} - {works.endYear}</i></p>
-                        <p style={{ color: fontColor, fontFamily: fontStyle, fontSize: fontSize, }} className='employment-detail302'>{works.aboutexperience}</p>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-                <div className="education-section302 mt-1">
-                  <h4 className="details-title302" style={{ color: headingColor, fontFamily: fontStyle, fontSize: fontSizeheading }}>EDUCATION</h4>
-                  {education[0].map((edu, index) => (
-                    <div key={index} className="education-item302">
-                      <div className="certificate-item302">
-                        <p style={{ color: fontColor, fontFamily: fontStyle, fontSize: fontSize, fontSize: 'small', fontWeight: 900, marginBottom: '-5px' }} className="employment-detail302">{edu.degree} in {edu.university} </p>
-                        <p style={{ color: fontColor, fontFamily: fontStyle, fontSize: fontSize, marginBottom: '-5px' }} className="employment-detail302">{edu.university}</p>
-                        <p style={{ color: fontColor, fontFamily: fontStyle, fontSize: fontSize, }} className="employment-detail302">{edu.startYear} - {edu.endYear},{edu.city}</p>
-                      </div>
-                      <div className="education-details302">
-                        <span><b></b></span>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-                {Hobbies && Hobbies[0].length > 0 && (
-                  <div>
-                    <h4 style={{ color: headingColor, fontFamily: fontStyle, fontSize: fontSizeheading }}>HOBBIES & INTEREST</h4>
-                    {Hobbies[0].map((keys, index) => (
-                      <div style={{ display: 'flex', flexWrap: 'wrap', gap: '16px' }}>
-
-                        <ul style={{ fontSize: 'small', color: fontColor, fontFamily: fontStyle, marginRight: '0px', minWidth: '100px', marginBottom: '-5px' }}>
-                          <li style={{ marginBottom: "-5px", color: fontColor, fontFamily: fontStyle }}>
-                            <p style={{ color: fontColor, fontFamily: fontStyle, fontSize: fontSize, }}>{keys.hobbies}</p>
-                          </li>
-                        </ul>
-                      </div>
-                    ))}
-                  </div>
-                )}
-                <div className=" language-302">
-                  <h4 style={{ color: headingColor, fontFamily: fontStyle, fontSize: fontSizeheading }}>LANGUAGE </h4>
-                  {languages[0].map((keys, index) => (
-                    <div key={index} className="language-item302">
-                      <ul>
-                        <li>
-                          <p style={{ color: fontColor, fontFamily: fontStyle, fontSize: fontSize, marginBottom: '-5px' }}>{keys.language}</p>
-
+            </div>
+            <div>
+              <div className="technical-">
+                <h4
+                  contentEditable
+                  suppressContentEditableWarning
+                  onBlur={(e) => handleEdit(e, 'Technical Skill', setTechnicalSkillsHeading)}
+                  style={{
+                    fontFamily: fontStyle,
+                    color: headingColor,
+                    fontSize: `${headingSize}px`,
+                    lineHeight: `${lineSpacing}em`,
+                    marginBottom: `${sectionSpacing}px`,
+                  }}
+                >
+                  {technicalSkillsHeading}
+                </h4>
+                <div style={{ display: 'flex', flexWrap: 'wrap', gap: '16px' }}>
+                  {keyskills[0].map((keys, index) => (
+                    <div key={index} className="technical-skill-item301">
+                      <ul
+                        style={{
+                          fontSize: `${fontSize}px`,
+                          color: fontColor,
+                          fontFamily: fontStyle,
+                          marginRight: '0px',
+                          minWidth: '100px',
+                          marginBottom: '-5px',
+                        }}
+                      >
+                        <li
+                          style={{
+                            color: fontColor,
+                            fontFamily: fontStyle,
+                            lineHeight: `${lineSpacing}em`,
+                          }}
+                        >
+                          {keys.keyskills}
                         </li>
                       </ul>
                     </div>
                   ))}
-
+                </div>
+              </div>
+              <div className="technical-skills-title301 mt-1">
+                <h4
+                  contentEditable
+                  suppressContentEditableWarning
+                  onBlur={(e) => handleEdit(e, 'Interest', setInterestHeading)}
+                  style={{
+                    fontFamily: fontStyle,
+                    color: headingColor,
+                    fontSize: `${headingSize}px`,
+                    lineHeight: `${lineSpacing}em`,
+                    marginBottom: `${sectionSpacing}px`,
+                  }}
+                >
+                  {interestHeading}
+                </h4>
+                <div style={{ display: 'flex', flexWrap: 'wrap', gap: '16px' }}>
+                  {Hobbies[0].map((keys, index) => (
+                    <div key={index} className="d-flex align-items-center">
+                      <ul
+                        style={{
+                          fontSize: `${fontSize}px`,
+                          color: fontColor,
+                          fontFamily: fontStyle,
+                          marginRight: '0px',
+                          minWidth: '100px',
+                          marginBottom: '-5px',
+                        }}
+                      >
+                        <li
+                          style={{
+                            marginBottom: '-5px',
+                            color: fontColor,
+                            fontFamily: fontStyle,
+                            lineHeight: `${lineSpacing}em`,
+                          }}
+                        >
+                          {/* Uncomment if you want to reintroduce hobby icons */}
+                          {/* <span style={{ marginRight: '10px', fontSize: '20px' }}>
+                            {HobbyIcons[keys.hobbies] || '🎯'}
+                          </span> */}
+                          {keys.hobbies}
+                        </li>
+                      </ul>
+                    </div>
+                  ))}
                 </div>
               </div>
             </div>
-
           </div>
         </div>
         <div className="resume-download-section0">
@@ -159,74 +449,39 @@ export default function Preview302() {
           <div style={{ width: '100%' }}>
             <GoogleAd />
           </div>
-          <div className='downloadbuttondiv'>
-            <input type="text" placeholder="Enter your resume name" className="resume-name-input" style={{ borderRadius: '5px', padding: '10px' }} onChange={(e) => setInputFields(e.target.value)} />
-<PdfDownloadButton elementId="Alisha_mirza302" fileName={inputFields} />
-          </div>
-          {/* Color Picker for Background Color */}
-          <div className='d-flex border fontfamilydiv' style={{ marginTop: '5px', display: 'flex', flexDirection: 'row', justifyContent: 'center' }}>
-            <input type="color" value={bgColor} onChange={(e) => setBgColor(e.target.value)} className="bg-color-picker ms-2" />
-            {/* Font Style Selector */}
-            <select value={fontStyle} onChange={(e) => setFontStyle(e.target.value)} className="font-style-selector ms-2">
-              <option value="Arial">Arial</option>
-              <option value="Arial Black">Arial Black</option>
-              <option value="Verdana">Verdana</option>
-              <option value="Tahoma">Tahoma</option>
-              <option value="Trebuchet MS">Trebuchet MS</option>
-              <option value="Impact">Impact</option>
-              <option value="Times New Roman">Times New Roman</option>
-              <option value="Georgia">Georgia</option>
-              <option value="Palatino Linotype">Palatino Linotype</option>
-              <option value="Courier New">Courier New</option>
-              <option value="Lucida Console">Lucida Console</option>
-              <option value="Lucida Sans Unicode">Lucida Sans Unicode</option>
-              <option value="Gill Sans">Gill Sans</option>
-              <option value="Century Gothic">Century Gothic</option>
-              <option value="Comic Sans MS">Comic Sans MS</option>
-              <option value="Garamond">Garamond</option>
-              <option value="Bookman">Bookman</option>
-              <option value="Arial Narrow">Arial Narrow</option>
-              <option value="Brush Script MT">Brush Script MT</option>
-              <option value="Candara">Candara</option>
-              <option value="Franklin Gothic Medium">Franklin Gothic Medium</option>
-              <option value="Goudy Old Style">Goudy Old Style</option>
-              <option value="Herculanum">Herculanum</option>
-              <option value="Monaco">Monaco</option>
-              <option value="Optima">Optima</option>
-              <option value="Perpetua">Perpetua</option>
-              <option value="Rockwell">Rockwell</option>
-              <option value="Segoe UI">Segoe UI</option>
-            </select>
-          </div>
-          <div className='colordiv'>
-            <div>
-              <span>Font Color </span>
-              <input type="color" value={fontColor} onChange={(e) => setFontColor(e.target.value)} className="bg-color-picker ms-2" />
-            </div>
-            <div>
-              <span>Heading Color </span>
-              <input type="color" value={headingColor} onChange={(e) => setHeadingColor(e.target.value)} className="bg-color-picker ms-2" />
-            </div>
-          </div>
-          <div className='colordiv'>
-            <div>
-              <span style={{ color: headingColor }}><i class="bi bi-patch-plus"></i>HS  </span>
-              <input type="number" value={fontSizeheading} onChange={(e) => setFontSizeheading(Number(e.target.value))} className="bg-color-picker ms-2" />
-            </div>
-            <div>
-              <span style={{ color: fontColor }}><i class="bi bi-patch-plus"></i>FS  </span>
-              <input type="number" value={fontSize} onChange={(e) => setFontSize(Number(e.target.value))} className="bg-color-picker ms-2" />
-            </div>
-          </div>
-          <div id="loadingSpinner" style={{ display: "none", position: "fixed", top: "50%", left: "50%" }}>
-            <div class="spinner"></div>
+          <PdfDownloadButton
+            inputFields={inputFields}
+            setInputFields={setInputFields}
+            bgColor={bgColor}
+            setBgColor={setBgColor}
+            fontStyle={fontStyle}
+            setFontStyle={setFontStyle}
+            headingColor={headingColor}
+            setHeadingColor={setHeadingColor}
+            fontColor={fontColor}
+            setFontColor={setFontColor}
+            fontSize={fontSize}
+            setFontSize={setFontSize}
+            headingSize={headingSize}
+            setHeadingSize={setHeadingSize}
+            margin={margin}
+            setMargin={setMargin}
+            padding={padding}
+            setPadding={setPadding}
+            lineSpacing={lineSpacing}
+            setLineSpacing={setLineSpacing}
+            sectionSpacing={sectionSpacing}
+            setSectionSpacing={setSectionSpacing}
+            elementId="Alisha_mirza301"
+          />
+          <div id="loadingSpinner" style={{ display: 'none', position: 'fixed', top: '50%', left: '50%' }}>
+            <div className="spinner"></div>
           </div>
           <div style={{ width: '100%' }}>
             <GoogleAd />
           </div>
-
         </div>
       </div>
     </div>
-  )
+  );
 }

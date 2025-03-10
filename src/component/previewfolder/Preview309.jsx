@@ -1,152 +1,511 @@
-// TechAtsResumeTemplate.js
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useSelector } from 'react-redux';
-import { useNavigate } from 'react-router-dom';
 import GoogleAd from '../adFolder/GoogleAd';
 import HobbyIcons from '../HobbyIcons';
 import jsPDF from 'jspdf';
 import html2canvas from 'html2canvas';
-import './CSS/preview116.css'
+import './CSS/preview116.css';
 import PdfDownloadButton from '../PdfDownloadButton';
 
 const Preview309 = () => {
+  // State for PDF filename and styling options
   const [inputFields, setInputFields] = useState('resume.pdf');
-  const [bgColor, setBgColor] = useState('white'); // Default background color (wheat)
+  const [bgColor, setBgColor] = useState('white'); // Default background color
   const [fontStyle, setFontStyle] = useState('Arial'); // Default font style
-  const [fontColor, setFontColor] = useState('#rrggbb')
-  const [headingColor, setHeadingColor] = useState('#6a8a3f')
-  // const [isDownloaded, setIsDownloaded] = useState(false);
-  const [fontSize, setFontSize] = useState(16); // Initial font size for paragraphs
-  const [fontSizeheading, setFontSizeheading] = useState(16); // Initial font size for headings
+  const [fontColor, setFontColor] = useState('#000000'); // Default font color (corrected from '#rrggbb')
+  const [headingColor, setHeadingColor] = useState('#6a8a3f'); // Default heading color
+  const [fontSize, setFontSize] = useState(16); // Font size for paragraphs
+  const [headingSize, setHeadingSize] = useState(20); // Font size for headings (replaced fontSizeheading)
+  const [margin, setMargin] = useState(10); // Margin for resume wrapper
+  const [padding, setPadding] = useState(10); // Padding for sections
+  const [lineSpacing, setLineSpacing] = useState(1.2); // Line spacing for text
+  const [sectionSpacing, setSectionSpacing] = useState(15); // Spacing between sections
 
-  const navigate = useNavigate();
+  // Editable headings
+  const [workHeading, setWorkHeading] = useState('Work Experience');
+  const [educationHeading, setEducationHeading] = useState('Education');
+  const [skillsHeading, setSkillsHeading] = useState('Skill');
+  const [projectHeading, setProjectHeading] = useState('Personal Project');
+  const [languageHeading, setLanguageHeading] = useState('Language');
+  const [hobbiesHeading, setHobbiesHeading] = useState('Hobbies');
+
+  // Redux state selectors
   const personalInfo = useSelector((state) => state.reducer.personalInfo);
   const education = useSelector((state) => [state.reducer.education]);
   const keyskills = useSelector((state) => [state.reducer.keySkills]);
   const work = useSelector((state) => [state.reducer.workExperience]);
   const Honor = useSelector((state) => [state.reducer.honorAndaward]);
-  // const Refrence = useSelector((state) => [state.reducer.addReference])
-  const SoftSkill = useSelector((state) => [state.reducer.addSoftSkills])
+  const SoftSkill = useSelector((state) => [state.reducer.addSoftSkills]);
   const socialMediaLink = useSelector((state) => [state.reducer.socialMediaLink]);
   const languages = useSelector((state) => [state.reducer.addLanguage]);
-  // const Certificate = useSelector((state) => state.reducer.certificateData);
-  const Hobbies = useSelector((state) => [state.reducer.addHobies])
-  const project = useSelector((state) => [state.reducer.projectData])
-  console.log('hobbies preview 302:-', Hobbies)
-  // console.log('Certificate:-', Certificate)
-  console.log('honorand award:-', keyskills)
+  const Hobbies = useSelector((state) => [state.reducer.addHobies]);
+  const project = useSelector((state) => [state.reducer.projectData]);
 
+  console.log('hobbies preview 309:-', Hobbies); // Updated to reflect Preview309
+  console.log('keyskills:-', keyskills); // Corrected from 'honorand award'
+
+  // Responsive heading size
+  useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth <= 720) {
+        setHeadingSize(14); // Smaller heading size for mobile
+      } else {
+        setHeadingSize(20); // Default heading size
+      }
+    };
+
+    handleResize();
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+  // Handle heading edits
+  const handleEdit = (e, defaultValue, setter) => {
+    setter(e.target.textContent.trim() || defaultValue);
+  };
 
   return (
     <div>
-
-      <header style={{ fontSize: fontSize, paddingLeft: '10px', paddingRight: '10px', textAlign: 'center' }}>
-        <h1>Tech ATS Resume Template</h1>
-        <small style={{ fontSize: fontSize, textAlign: 'center' }}> <i style={{ fontSize: fontSize, color: 'white', backgroundColor: 'red' }}> warning </i>: if resume dont show your data in resume , please refresh the page</small>
-
-        <p>Your journey towards your dream job starts here! By crafting a professional resume with ResumeEra, you've taken the first step in showcasing your skills, experiences, and aspirations effectively. A well-structured resume is more than just a document—it's your story, your voice, and your opportunity to shine.
+      <header style={{ paddingLeft: '10px', paddingRight: '10px', textAlign: 'center' }}>
+        <h1 style={{ fontSize: `${headingSize}px`, lineHeight: `${lineSpacing}em`, marginBottom: `${sectionSpacing}px` }}>
+          Tech ATS Resume Template
+        </h1>
+        <small style={{ textAlign: 'center' }}>
+          <i style={{ color: 'white', backgroundColor: 'red' }}> warning </i>: if resume doesn’t show your data, please refresh the page
+        </small>
+        <p style={{ fontSize: `${fontSize}px`, lineHeight: `${lineSpacing}em`, marginBottom: `${sectionSpacing}px` }}>
+          Your journey towards your dream job starts here! By crafting a professional resume with ResumeEra, you've taken the first step in showcasing your skills, experiences, and aspirations effectively. A well-structured resume is more than just a document—it's your story, your voice, and your opportunity to shine.
 
           Whether you're a fresher stepping into the professional world or an experienced professional climbing the career ladder, a compelling resume can make all the difference. Our platform ensures your resume is not only visually appealing but also tailored to meet industry standards.
 
-          Take a moment to review your resume. Remember, the right opportunity is just around the corner. Stand out, stay confident, and let ResumeEra be your trusted partner in achieving your career goals!"
+          Take a moment to review your resume. Remember, the right opportunity is just around the corner. Stand out, stay confident, and let ResumeEra be your trusted partner in achieving your career goals!
         </p>
       </header>
-      <div className=' main116'>
-        <div className='Preview116' style={{ backgroundColor: bgColor }} id='Alisha_mirza302'>
-          <div className='Name-positio-summary116' style={{ border: '2px solid', borderColor: headingColor }}>
-            <h3 style={{ color: headingColor, fontSize: fontSizeheading, backgroundColor: bgColor }}>{personalInfo.firstName} {personalInfo.lastName}</h3>
-            <p className='jobtitle116' style={{ fontSize: fontSize, fontSize: fontSize, color: 'black', fontFamily: fontStyle }}>{work[0].map((works, index) => (
-              <div key={index}>
-                <p style={{ fontSize: fontSize, fontFamily: fontStyle, marginBottom: '-10px', color: fontColor || '#f9dec7' }}>{works.jobtitle}</p>
-              </div>
-            ))}</p>
-            <p className='object116' style={{ fontSize: fontSize, fontFamily: fontStyle, color: fontColor }}>{personalInfo.object}</p>
-
+      <div className="main116">
+        <div
+          className="Preview116"
+          style={{ backgroundColor: bgColor, margin: `${margin}px` }}
+          id="Alisha_mirza302"
+          contentEditable
+          suppressContentEditableWarning
+        >
+          <div
+            className="Name-positio-summary116"
+            style={{ border: `2px solid ${headingColor}`, padding: `${padding}px` }}
+          >
+            <h3
+              style={{
+                color: headingColor,
+                fontSize: `${headingSize * 1.2}px`, // Larger for name
+                backgroundColor: bgColor,
+                fontFamily: fontStyle,
+                lineHeight: `${lineSpacing}em`,
+                marginBottom: `${sectionSpacing}px`,
+              }}
+            >
+              {personalInfo.firstName} {personalInfo.lastName}
+            </h3>
+            <p
+              className="jobtitle116"
+              style={{ fontSize: `${fontSize}px`, color: 'black', fontFamily: fontStyle }}
+            >
+              {work[0].map((works, index) => (
+                <div key={index}>
+                  <p
+                    style={{
+                      fontSize: `${fontSize}px`,
+                      fontFamily: fontStyle,
+                      marginBottom: '-10px',
+                      color: fontColor || '#f9dec7',
+                      lineHeight: `${lineSpacing}em`,
+                    }}
+                  >
+                    {works.jobtitle}
+                  </p>
+                </div>
+              ))}
+            </p>
+            <p
+              className="object116"
+              style={{
+                fontSize: `${fontSize}px`,
+                fontFamily: fontStyle,
+                color: fontColor,
+                lineHeight: `${lineSpacing}em`,
+                marginBottom: `${sectionSpacing}px`,
+              }}
+            >
+              {personalInfo.object}
+            </p>
           </div>
-          <div className="contactdiv116" style={{ backgroundColor: headingColor }}>
-            <div className='contactinnerdiv116'><i className="bi bi-geo-alt-fill me-2 ms-2" style={{ borderColor: fontColor, fontSize: fontSize, color: fontColor }} /><p style={{ fontSize: fontSize, color: fontColor, fontFamily: fontStyle, }}>  {personalInfo.state} {personalInfo.postalCode}</p></div>
-            <div className='contactinnerdiv116'><i className="bi bi-telephone-fill me-2 ms-2" style={{ borderColor: fontColor, fontSize: fontSize, color: fontColor }} /><p style={{ fontSize: fontSize, color: fontColor, fontFamily: fontStyle, }}>{personalInfo.mobileNumber}</p></div>
-            <div className='contactinnerdiv116'><i className="bi bi-envelope me-2 ms-2" style={{ borderColor: fontColor, fontSize: fontSize, color: fontColor }} /><p style={{ fontSize: fontSize, color: fontColor, fontFamily: fontStyle, }}>{personalInfo.email}</p></div>
-            <div className='contactinnerdiv116'><i class="bi bi-github ms-2" style={{ borderColor: fontColor, fontSize: fontSize, color: bgColor }} /><p style={{ fontSize: fontSize, color: fontColor, fontFamily: fontStyle, }}>{socialMediaLink[0].github}</p></div>
+          <div className="contactdiv116" style={{ backgroundColor: headingColor, padding: `${padding}px` }}>
+            <div className="contactinnerdiv116">
+              <i className="bi bi-geo-alt-fill me-2 ms-2" style={{ color: fontColor, fontSize: `${fontSize}px` }} />
+              <p
+                style={{
+                  fontSize: `${fontSize}px`,
+                  color: fontColor,
+                  fontFamily: fontStyle,
+                  display: 'inline',
+                  lineHeight: `${lineSpacing}em`,
+                }}
+              >
+                {personalInfo.state} {personalInfo.postalCode}
+              </p>
+            </div>
+            <div className="contactinnerdiv116">
+              <i className="bi bi-telephone-fill me-2 ms-2" style={{ color: fontColor, fontSize: `${fontSize}px` }} />
+              <p
+                style={{
+                  fontSize: `${fontSize}px`,
+                  color: fontColor,
+                  fontFamily: fontStyle,
+                  display: 'inline',
+                  lineHeight: `${lineSpacing}em`,
+                }}
+              >
+                {personalInfo.mobileNumber}
+              </p>
+            </div>
+            <div className="contactinnerdiv116">
+              <i className="bi bi-envelope me-2 ms-2" style={{ color: fontColor, fontSize: `${fontSize}px` }} />
+              <p
+                style={{
+                  fontSize: `${fontSize}px`,
+                  color: fontColor,
+                  fontFamily: fontStyle,
+                  display: 'inline',
+                  lineHeight: `${lineSpacing}em`,
+                }}
+              >
+                {personalInfo.email}
+              </p>
+            </div>
+            <div className="contactinnerdiv116">
+              <i className="bi bi-github ms-2" style={{ color: bgColor, fontSize: `${fontSize}px` }} />
+              <p
+                style={{
+                  fontSize: `${fontSize}px`,
+                  color: fontColor,
+                  fontFamily: fontStyle,
+                  display: 'inline',
+                  lineHeight: `${lineSpacing}em`,
+                }}
+              >
+                {socialMediaLink[0]?.github || 'N/A'}
+              </p>
+            </div>
           </div>
-          <div className='combine-div116 mt-5'>
-            <div className='work-education me-4' style={{width:'50%'}}>
+          <div className="combine-div116 mt-5" style={{ display: 'flex', padding: `${padding}px` }}>
+            <div className="work-education me-4" style={{ width: '50%' }}>
               <div className="experience-section116 mt-4">
-                <h6 className="details-title116" style={{ color: headingColor, fontSize: fontSizeheading, }}>
-                  <i class="bi bi-briefcase m-3" style={{ fontSize: fontSize, border: `1px solid ${headingColor}`, padding: '7px', borderRadius: '50%' }}></i> WORK EXPERIENCE</h6>
-
+                <h6
+                  contentEditable
+                  suppressContentEditableWarning
+                  onBlur={(e) => handleEdit(e, 'Work Experience', setWorkHeading)}
+                  className="details-title116"
+                  style={{
+                    color: headingColor,
+                    fontSize: `${headingSize}px`,
+                    fontFamily: fontStyle,
+                    lineHeight: `${lineSpacing}em`,
+                    marginBottom: `${sectionSpacing}px`,
+                  }}
+                >
+                  <i
+                    className="bi bi-briefcase m-3"
+                    style={{
+                      fontSize: `${fontSize}px`,
+                      border: `1px solid ${headingColor}`,
+                      padding: '7px',
+                      borderRadius: '50%',
+                    }}
+                  />
+                  {workHeading}
+                </h6>
                 {work[0].map((works, index) => (
-                  <div key={index} className="employment-history116 ms-4">
+                  <div key={index} className="employment-history116 ms-4" style={{ marginBottom: `${sectionSpacing}px` }}>
                     <div className="exp-inner1">
-                      <p style={{ fontSize: fontSize, color: fontColor, fontFamily: fontStyle, marginBottom: '-5px' }} className="employment-detail116">{works.jobtitle}</p>
-                      <p style={{ fontSize: fontSize, color: fontColor, fontFamily: fontStyle, marginBottom: '-5px' }} className="employment-detail116">{works.organization}</p>
-                      <p style={{ fontSize: fontSize, color: fontColor, fontFamily: fontStyle, fontStyle }} className="employment-duration116" ><i>{works.startYear} - {works.endYear}</i></p>
-
+                      <p
+                        style={{
+                          fontSize: `${fontSize}px`,
+                          color: fontColor,
+                          fontFamily: fontStyle,
+                          marginBottom: '-5px',
+                          lineHeight: `${lineSpacing}em`,
+                        }}
+                        className="employment-detail116"
+                      >
+                        {works.jobtitle}
+                      </p>
+                      <p
+                        style={{
+                          fontSize: `${fontSize}px`,
+                          color: fontColor,
+                          fontFamily: fontStyle,
+                          marginBottom: '-5px',
+                          lineHeight: `${lineSpacing}em`,
+                        }}
+                        className="employment-detail116"
+                      >
+                        {works.organization}
+                      </p>
+                      <p
+                        style={{
+                          fontSize: `${fontSize}px`,
+                          color: fontColor,
+                          fontFamily: fontStyle,
+                          lineHeight: `${lineSpacing}em`,
+                        }}
+                        className="employment-duration116"
+                      >
+                        <i>{works.startYear} - {works.endYear}</i>
+                      </p>
                     </div>
                     <div>
-                      <p style={{ fontSize: fontSize, color: fontColor, fontFamily: fontStyle, }} className='aboutexperience116' >{works.aboutexperience}</p>
+                      <p
+                        style={{
+                          fontSize: `${fontSize}px`,
+                          color: fontColor,
+                          fontFamily: fontStyle,
+                          lineHeight: `${lineSpacing}em`,
+                        }}
+                        className="aboutexperience116"
+                      >
+                        {works.aboutexperience}
+                      </p>
                     </div>
                   </div>
                 ))}
               </div>
               <div>
-
-                <div className=" ">
-                  <h6 style={{ color: headingColor, fontSize: fontSizeheading }} className='heading116'>
-                    <i class="bi bi-backpack" style={{ fontSize: fontSize, border: `1px solid ${headingColor}`, padding: '7px', borderRadius: '50%', margin: '5px' }}></i>EDUCATION <br /></h6>
-                  {education[0].map((edu, index) => (
-                    <div key={index} className="education-item116">
-                      <div className="d-flex justify-content-between">
-                        <div className='ms-4'>
-                          <p style={{ fontSize: fontSize, color: fontColor, fontFamily: fontStyle, marginBottom: '-5px' }} className="employment-detail116">{edu.degree}</p>
-                          <p style={{ fontSize: fontSize, color: fontColor, fontFamily: fontStyle, marginBottom: '-5px' }} className="employment-detail116 ">{edu.university}</p>
-                          <p style={{ fontSize: fontSize, color: fontColor, fontFamily: fontStyle, marginBottom: '-5px' }}>{edu.city}</p>
-                          <p style={{ fontSize: fontSize, color: fontColor, fontFamily: fontStyle, }} className="employment-detail116 me-3" >{edu.startYear}-{edu.endYear}</p>
-                        </div>
+                <h6
+                  contentEditable
+                  suppressContentEditableWarning
+                  onBlur={(e) => handleEdit(e, 'Education', setEducationHeading)}
+                  style={{
+                    color: headingColor,
+                    fontSize: `${headingSize}px`,
+                    fontFamily: fontStyle,
+                    lineHeight: `${lineSpacing}em`,
+                    marginBottom: `${sectionSpacing}px`,
+                  }}
+                  className="heading116"
+                >
+                  <i
+                    className="bi bi-backpack"
+                    style={{
+                      fontSize: `${fontSize}px`,
+                      border: `1px solid ${headingColor}`,
+                      padding: '7px',
+                      borderRadius: '50%',
+                      margin: '5px',
+                    }}
+                  />
+                  {educationHeading}
+                </h6>
+                {education[0].map((edu, index) => (
+                  <div key={index} className="education-item116" style={{ marginBottom: `${sectionSpacing}px` }}>
+                    <div className="d-flex justify-content-between">
+                      <div className="ms-4">
+                        <p
+                          style={{
+                            fontSize: `${fontSize}px`,
+                            color: fontColor,
+                            fontFamily: fontStyle,
+                            marginBottom: '-5px',
+                            lineHeight: `${lineSpacing}em`,
+                          }}
+                          className="employment-detail116"
+                        >
+                          {edu.degree}
+                        </p>
+                        <p
+                          style={{
+                            fontSize: `${fontSize}px`,
+                            color: fontColor,
+                            fontFamily: fontStyle,
+                            marginBottom: '-5px',
+                            lineHeight: `${lineSpacing}em`,
+                          }}
+                          className="employment-detail116"
+                        >
+                          {edu.university}
+                        </p>
+                        <p
+                          style={{
+                            fontSize: `${fontSize}px`,
+                            color: fontColor,
+                            fontFamily: fontStyle,
+                            marginBottom: '-5px',
+                            lineHeight: `${lineSpacing}em`,
+                          }}
+                        >
+                          {edu.city || 'N/A'}
+                        </p>
+                        <p
+                          style={{
+                            fontSize: `${fontSize}px`,
+                            color: fontColor,
+                            fontFamily: fontStyle,
+                            lineHeight: `${lineSpacing}em`,
+                          }}
+                          className="employment-detail116 me-3"
+                        >
+                          {edu.startYear}-{edu.endYear}
+                        </p>
                       </div>
                     </div>
-                  ))}
-                </div>
+                  </div>
+                ))}
               </div>
             </div>
-            <div style={{width:'50%'}}>
+            <div style={{ width: '50%' }}>
               <div className="inner-116-1 me-4">
-                <h6 style={{ color: headingColor, fontSize: fontSizeheading }}><i class="bi bi-tools" style={{ fontSize: fontSize, border: `1px solid ${headingColor}`, padding: '7px', borderRadius: '50%', margin: '5px' }} />SKILL</h6>
-                <div style={{display:'flex',flexWrap:'wrap',gap:'16px'}}>
+                <h6
+                  contentEditable
+                  suppressContentEditableWarning
+                  onBlur={(e) => handleEdit(e, 'Skill', setSkillsHeading)}
+                  style={{
+                    color: headingColor,
+                    fontSize: `${headingSize}px`,
+                    fontFamily: fontStyle,
+                    lineHeight: `${lineSpacing}em`,
+                    marginBottom: `${sectionSpacing}px`,
+                  }}
+                >
+                  <i
+                    className="bi bi-tools"
+                    style={{
+                      fontSize: `${fontSize}px`,
+                      border: `1px solid ${headingColor}`,
+                      padding: '7px',
+                      borderRadius: '50%',
+                      margin: '5px',
+                    }}
+                  />
+                  {skillsHeading}
+                </h6>
+                <div style={{ display: 'flex', flexWrap: 'wrap', gap: '16px' }}>
                   {keyskills[0].map((keys, index) => (
-                    <div key={index} className=" d-flex justify-content-between">
-                      <p className='technical-skill-item116'
-                        style={{backgroundColor: headingColor,fontSize: fontSize, color: fontColor, fontFamily: fontStyle, }}>
-                        {keys.keyskills}</p>
-                      {/* 5-star rating system */}
+                    <div key={index} className="d-flex justify-content-between">
+                      <p
+                        className="technical-skill-item116"
+                        style={{
+                          backgroundColor: headingColor,
+                          fontSize: `${fontSize}px`,
+                          color: fontColor,
+                          fontFamily: fontStyle,
+                          lineHeight: `${lineSpacing}em`,
+                          padding: '5px 10px',
+                        }}
+                      >
+                        {keys.keyskills}
+                      </p>
                     </div>
                   ))}
                 </div>
-
               </div>
               <div>
-              <h6 style={{ color: headingColor, fontSize: fontSizeheading }}><i class="bi bi-kanban-fill" style={{ fontSize: fontSize, border: `1px solid ${headingColor}`, padding: '7px', borderRadius: '50%', margin: '5px' }}></i>PERSONAL PROJECT<br /></h6>
-              <div>
-                  {project && project.map((pro) => (
-                    <div key={pro.id}>
-                      <p style={{ fontSize: fontSize, color: fontColor, fontFamily: fontStyle, }}>{pro.link}({pro.startTime - pro.endTime})</p>
-                      <p style={{ fontSize: fontSize, color: fontColor, fontFamily: fontStyle, }}>{pro.description}</p>
+                <h6
+                  contentEditable
+                  suppressContentEditableWarning
+                  onBlur={(e) => handleEdit(e, 'Personal Project', setProjectHeading)}
+                  style={{
+                    color: headingColor,
+                    fontSize: `${headingSize}px`,
+                    fontFamily: fontStyle,
+                    lineHeight: `${lineSpacing}em`,
+                    marginBottom: `${sectionSpacing}px`,
+                  }}
+                >
+                  <i
+                    className="bi bi-kanban-fill"
+                    style={{
+                      fontSize: `${fontSize}px`,
+                      border: `1px solid ${headingColor}`,
+                      padding: '7px',
+                      borderRadius: '50%',
+                      margin: '5px',
+                    }}
+                  />
+                  {projectHeading}
+                </h6>
+                <div>
+                  {project[0]?.map((pro, index) => (
+                    <div key={index} style={{ marginBottom: `${sectionSpacing}px` }}>
+                      <p
+                        style={{
+                          fontSize: `${fontSize}px`,
+                          color: fontColor,
+                          fontFamily: fontStyle,
+                          lineHeight: `${lineSpacing}em`,
+                        }}
+                      >
+                        {pro.link} ({pro.startTime} - {pro.endTime})
+                      </p>
+                      <p
+                        style={{
+                          fontSize: `${fontSize}px`,
+                          color: fontColor,
+                          fontFamily: fontStyle,
+                          lineHeight: `${lineSpacing}em`,
+                        }}
+                      >
+                        {pro.description}
+                      </p>
                     </div>
                   ))}
                 </div>
               </div>
               <div className="">
-              <h6 style={{ color: headingColor, fontSize: fontSizeheading }}><i class="bi bi-translate" style={{ fontSize: fontSize, border: `1px solid ${headingColor}`, padding: '7px', borderRadius: '50%', margin: '5px' }}></i>LANGUAGE<br /></h6>
-                {languages && languages[0].map((keys, index) => (
-                  <div key={index} className=" d-flex  justify-content-between">
-                    <div>  <p style={{ fontSize: fontSize, color: fontColor, fontFamily: fontStyle, }}>{keys.language}</p></div>
+                <h6
+                  contentEditable
+                  suppressContentEditableWarning
+                  onBlur={(e) => handleEdit(e, 'Language', setLanguageHeading)}
+                  style={{
+                    color: headingColor,
+                    fontSize: `${headingSize}px`,
+                    fontFamily: fontStyle,
+                    lineHeight: `${lineSpacing}em`,
+                    marginBottom: `${sectionSpacing}px`,
+                  }}
+                >
+                  <i
+                    className="bi bi-translate"
+                    style={{
+                      fontSize: `${fontSize}px`,
+                      border: `1px solid ${headingColor}`,
+                      padding: '7px',
+                      borderRadius: '50%',
+                      margin: '5px',
+                    }}
+                  />
+                  {languageHeading}
+                </h6>
+                {languages[0]?.map((keys, index) => (
+                  <div key={index} className="d-flex justify-content-between" style={{ marginBottom: `${sectionSpacing}px` }}>
+                    <div>
+                      <p
+                        style={{
+                          fontSize: `${fontSize}px`,
+                          color: fontColor,
+                          fontFamily: fontStyle,
+                          lineHeight: `${lineSpacing}em`,
+                        }}
+                      >
+                        {keys.language}
+                      </p>
+                    </div>
                     <div className="star-rating ms-3 w-50">
                       {[...Array(5)].map((_, i) => (
                         <i
-
                           key={i}
                           className={`bi bi-star${i < keys.rating ? '-fill' : ''}`}
-                          style={{ color: i < keys.rating ? fontColor : 'grey', fontSize: fontSize, fontFamily: fontStyle }} // Filled stars are gold, others are gray
+                          style={{
+                            color: i < keys.rating ? fontColor : 'grey',
+                            fontSize: `${fontSize}px`,
+                          }}
                         />
                       ))}
                     </div>
@@ -154,97 +513,80 @@ const Preview309 = () => {
                 ))}
               </div>
               <div className="technical-skills-title109 mt-3">
-              <h6 style={{ color: headingColor, fontSize: fontSizeheading }}><i class="bi bi-file-music" style={{ fontSize: fontSize, border: `1px solid ${headingColor}`, padding: '7px', borderRadius: '50%', margin: '5px' }}></i>HOBBIES <br /></h6>
-                 
-                {Hobbies[0].map((keys, index) => (
-                  <div key={index} className="d-flex align-items-center">
-                    {/* Render Icon */}
-                    <span style={{ marginRight: "10px", fontSize: "20px" }}>
-                      {HobbyIcons[keys.hobbies] || "🎯"} {/* Default icon if hobby not in mapping */}
+                <h6
+                  contentEditable
+                  suppressContentEditableWarning
+                  onBlur={(e) => handleEdit(e, 'Hobbies', setHobbiesHeading)}
+                  style={{
+                    color: headingColor,
+                    fontSize: `${headingSize}px`,
+                    fontFamily: fontStyle,
+                    lineHeight: `${lineSpacing}em`,
+                    marginBottom: `${sectionSpacing}px`,
+                  }}
+                >
+                  <i
+                    className="bi bi-file-music"
+                    style={{
+                      fontSize: `${fontSize}px`,
+                      border: `1px solid ${headingColor}`,
+                      padding: '7px',
+                      borderRadius: '50%',
+                      margin: '5px',
+                    }}
+                  />
+                  {hobbiesHeading}
+                </h6>
+                {Hobbies[0]?.map((keys, index) => (
+                  <div key={index} className="d-flex align-items-center" style={{ marginBottom: `${sectionSpacing}px` }}>
+                    <span style={{ marginRight: '10px', fontSize: '20px' }}>
+                      {HobbyIcons[keys.hobbies] || '🎯'}
                     </span>
-                    {/* Render Hobby Name */}
-                    <p style={{ marginBottom: "-5px", color: fontColor, fontFamily: fontStyle, fontSize: fontSize }}>{keys.hobbies}</p>
+                    <p
+                      style={{
+                        marginBottom: '-5px',
+                        color: fontColor,
+                        fontFamily: fontStyle,
+                        fontSize: `${fontSize}px`,
+                        lineHeight: `${lineSpacing}em`,
+                      }}
+                    >
+                      {keys.hobbies}
+                    </p>
                   </div>
                 ))}
               </div>
             </div>
           </div>
         </div>
-        <div className="resume-download-section0">
-          <div style={{ fontSize: fontSize, width: '100%' }}>
-            <GoogleAd />
-            
-          </div>
-          <div style={{ fontSize: fontSize, width: '100%' }}>
-            <GoogleAd />
-          </div>
-          <div className='downloadbuttondiv'>
-            <input type="text" placeholder="Enter your resume name" className="resume-name-input" style={{ fontSize: fontSize, borderRadius: '5px', padding: '10px' }} onChange={(e) => setInputFields(e.target.value)} />
-            <PdfDownloadButton elementId='Alisha_mirza302' fileName={inputFields} />
-          </div>
-          {/* Color Picker for Background Color */}
-          <div className='d-flex border fontfamilydiv' style={{ fontSize: fontSize, marginTop: '5px', display: 'flex', flexDirection: 'row', justifyContent: 'center' }}>
-            <input type="color" value={bgColor} onChange={(e) => setBgColor(e.target.value)} className="bg-color-picker ms-2" />
-            {/* Font Style Selector */}
-            <select value={fontStyle} onChange={(e) => setFontStyle(e.target.value)} className="font-style-selector ms-2">
-              <option value="Arial">Arial</option>
-              <option value="Arial Black">Arial Black</option>
-              <option value="Verdana">Verdana</option>
-              <option value="Tahoma">Tahoma</option>
-              <option value="Trebuchet MS">Trebuchet MS</option>
-              <option value="Impact">Impact</option>
-              <option value="Times New Roman">Times New Roman</option>
-              <option value="Georgia">Georgia</option>
-              <option value="Palatino Linotype">Palatino Linotype</option>
-              <option value="Courier New">Courier New</option>
-              <option value="Lucida Console">Lucida Console</option>
-              <option value="Lucida Sans Unicode">Lucida Sans Unicode</option>
-              <option value="Gill Sans">Gill Sans</option>
-              <option value="Century Gothic">Century Gothic</option>
-              <option value="Comic Sans MS">Comic Sans MS</option>
-              <option value="Garamond">Garamond</option>
-              <option value="Bookman">Bookman</option>
-              <option value="Arial Narrow">Arial Narrow</option>
-              <option value="Brush Script MT">Brush Script MT</option>
-              <option value="Candara">Candara</option>
-              <option value="Franklin Gothic Medium">Franklin Gothic Medium</option>
-              <option value="Goudy Old Style">Goudy Old Style</option>
-              <option value="Herculanum">Herculanum</option>
-              <option value="Monaco">Monaco</option>
-              <option value="Optima">Optima</option>
-              <option value="Perpetua">Perpetua</option>
-              <option value="Rockwell">Rockwell</option>
-              <option value="Segoe UI">Segoe UI</option>
-            </select>
-          </div>
-          <div className='colordiv'>
-            <div>
-              <span style={{ color: fontColor }}>FC <i class="bi bi-palette"></i> </span>
-              <input type="color" value={fontColor} onChange={(e) => setFontColor(e.target.value)} className="bg-color-picker ms-2" />
-            </div>
-            <div>
-              <span style={{ color: headingColor }}>HC <i class="bi bi-palette"></i></span>
-              <input type="color" value={headingColor} onChange={(e) => setHeadingColor(e.target.value)} className="bg-color-picker ms-2" />
-            </div>
-
-          </div>
-          <div className='colordiv'>
-            <div>
-              <span style={{ color: headingColor }}><i class="bi bi-patch-plus"></i>HS  </span>
-              <input type="number" value={fontSizeheading} onChange={(e) => setFontSizeheading(Number(e.target.value))} className="bg-color-picker ms-2" />
-            </div>
-            <div>
-              <span style={{ color: fontColor }}><i class="bi bi-patch-plus"></i>FS  </span>
-              <input type="number" value={fontSize} onChange={(e) => setFontSize(Number(e.target.value))} className="bg-color-picker ms-2" />
-            </div>
-          </div>
-          <div id="loadingSpinner" style={{ display: "none", position: "fixed", top: "50%", left: "50%" }}>
-            <div class="spinner"></div>
-          </div>
-          <div style={{ fontSize: fontSize, width: '100%' }}>
-            <GoogleAd />
-          </div>
-
+        <div className="resume-download-section0" style={{ padding: `${padding}px` }}>
+         
+          <PdfDownloadButton
+            inputFields={inputFields}
+            setInputFields={setInputFields}
+            bgColor={bgColor}
+            setBgColor={setBgColor}
+            fontStyle={fontStyle}
+            setFontStyle={setFontStyle}
+            headingColor={headingColor}
+            setHeadingColor={setHeadingColor}
+            fontColor={fontColor}
+            setFontColor={setFontColor}
+            fontSize={fontSize}
+            setFontSize={setFontSize}
+            headingSize={headingSize}
+            setHeadingSize={setHeadingSize}
+            margin={margin}
+            setMargin={setMargin}
+            padding={padding}
+            setPadding={setPadding}
+            lineSpacing={lineSpacing}
+            setLineSpacing={setLineSpacing}
+            sectionSpacing={sectionSpacing}
+            setSectionSpacing={setSectionSpacing}
+            elementId="Alisha_mirza302"
+          />
+          <GoogleAd />
         </div>
       </div>
     </div>

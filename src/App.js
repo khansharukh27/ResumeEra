@@ -739,7 +739,8 @@ function App() {
         <Route path="/about-resumeera" element={<AboutResumeEra />} />
         <Route
           path="/how-to-create-a-professional-resume"
-          element={<HowToCreateResume />}
+          element={<HowToCreateResume 
+          />}
         />
         <Route
           path="/tips-for-writing-a-cover-letter"
@@ -879,7 +880,7 @@ function App() {
         />
         <Route
           path="/administrative-assistant-cover-letter-example"
-          element={<AdministrativeAssistantCoverLetter />}
+          element={<AdministrativeAssistantCoverLetter fresherResumeImage={fresherResumeImage} techImages={techImages} images={images}/>}
         />
         <Route
           path="/lawyer-cover-letter-example"
@@ -1283,7 +1284,7 @@ function App() {
         />
         <Route
           path="/best-resume-format-pdf-for-professionals-download-now"
-          element={<BestResumeFormatPDFforProfessionals/>}
+          element={<BestResumeFormatPDFforProfessionals fresherResumeImage={fresherResumeImage} techImages={techImages} images={images}/>}
         />
 <Route
           path="/how-to-create-a-winning-resume-using-resume-format-pdf"

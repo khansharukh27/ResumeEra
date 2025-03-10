@@ -9,13 +9,16 @@ import { useEffect } from "react";
 import CallToAction from "../CallToAction";
 import GoogleAd from "../adFolder/GoogleAd";
 import AuthorCard from "../AuthorCard";
+
 const AboutResumeEra = () => {
   const ArticleUrl =
     "https://resumeera.xyz/improving-your-resume-with-action-verbs";
   const ArticleTitle = "ResumeEra: Craft Your Perfect and Free resume format Today";
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
   return (
     <div>
       <Helmet>
@@ -48,8 +51,8 @@ const AboutResumeEra = () => {
       </Helmet>
       <div className="aboutResumeEra">
         <section className="header">
-        <h1>ResumeEra: Craft Your Perfect Resume Today</h1>
-        <AuthorCard />
+          <h1>ResumeEra: Craft Your Perfect Resume Today</h1>
+          <AuthorCard />
         </section>
         <figure>
           <img src={download} alt="Perfect Resume" loading="lazy" />
@@ -63,14 +66,17 @@ const AboutResumeEra = () => {
           heavy. The quest for the perfect resume is daunting, leaving me
           feeling overwhelmed. But today, I'm ready to overcome self-doubt with
           ResumeEra, a platform that promises to change how I present myself.
+          Learn more on how to get started with{" "}
+          <Link to="/how-to-create-a-professional-resume">creating a professional resume</Link>.
         </p>
         <p>
           In today's competitive job market, a well-crafted resume is crucial.
           It's my first chance to make a lasting impression. With ResumeEra, I
-          have the tools and guidance to create a standout resume.
+          have the tools and guidance to create a standout resume. Discover our{" "}
+          <Link to="/top-resume-templates-for-2024">top resume templates for 2024</Link> to get inspired.
         </p>
       </div>
-      <div className=" aboutResumeEra">
+      <div className="aboutResumeEra">
         <div>
           <GoogleAd />
         </div>
@@ -83,19 +89,23 @@ const AboutResumeEra = () => {
           </li>
           <li>
             The platform offers a wide range of resume templates, making it easy
-            to find the right format for your needs
+            to find the right format for your needs. Check out{" "}
+            <Link to="/how-to-choose-the-right-resume-template">how to choose the right resume template</Link>.
           </li>
           <li>
             ResumeEra's AI-powered suggestions and customization options allow
-            you to tailor your resume to each job application
+            you to tailor your resume to each job application. See how to{" "}
+            <Link to="/tailor-resume-to-job-description">tailor your resume to a job description</Link>.
           </li>
           <li>
             Using measurable achievements and quantifiable results in your
-            resume can significantly enhance its effectiveness
+            resume can significantly enhance its effectiveness. Learn more in{" "}
+            <Link to="/how-to-highlight-achievements-in-a-resume">how to highlight achievements in a resume</Link>.
           </li>
           <li>
             Optimizing your resume for applicant tracking systems (ATS) is
-            crucial in today's digital job search landscape
+            crucial in today's digital job search landscape. Explore{" "}
+            <Link to="/9-things-you-need-to-know-about-ATS-in-2024">9 things you need to know about ATS in 2024</Link>.
           </li>
         </ul>
         <div>
@@ -104,7 +114,8 @@ const AboutResumeEra = () => {
         <h3>The Importance of a Professional Resume</h3>
         <p>
           In today's job market, a well-made resume is key. It's often the first
-          thing employers see. A good resume can get you an interview.
+          thing employers see. A good resume can get you an interview. Find out{" "}
+          <Link to="/what-employers-look-for-in-a-resume">what employers look for in a resume</Link>.
         </p>
         <div>
           <GoogleAd />
@@ -114,7 +125,8 @@ const AboutResumeEra = () => {
           Hiring managers glance at a resume for about 6 seconds. So, your
           resume must be short, error-free, and show your best skills. List your
           education, experience, and achievements in reverse order. This shows
-          you're the best fit for the job.
+          you're the best fit for the job. Get tips from{" "}
+          <Link to="/how-to-write-a-strong-resume-objective">how to write a strong resume objective</Link>.
         </p>
         <div>
           <GoogleAd />
@@ -123,12 +135,14 @@ const AboutResumeEra = () => {
         <p>
           The right resume format, like chronological or combination, matters a
           lot. Tailor your resume to the job you want. This shows you understand
-          the role and fit well.
+          the role and fit well. Learn about{" "}
+          <Link to="/chronological-vs-functional-resume-formatting">chronological vs functional resume formatting</Link>.
         </p>
         <p>
           Whether you have a lot of experience or just starting, the right
           format makes your resume pop. Highlight your key skills and
-          achievements. This way, your resume truly shows your value.
+          achievements. This way, your resume truly shows your value. See{" "}
+          <Link to="/resume-formatting">resume formatting essentials</Link>.
         </p>
         <p className="quotes">
           "A well-crafted resume is essential for getting noticed in today's job
@@ -144,7 +158,8 @@ const AboutResumeEra = () => {
           Making a strong first impression with employers starts with a standout
           resume. A winning resume has key elements like an engaging summary or
           career objective. It also has a detailed work experience section that
-          highlights your achievements and results.
+          highlights your achievements and results. Dive into{" "}
+          <Link to="/resume_component">resume components</Link>.
         </p>
         <div>
           <GoogleAd />
@@ -155,7 +170,8 @@ const AboutResumeEra = () => {
           career and goals. Those changing careers or returning after a break
           might prefer functional or combination resumes. A good summary tells
           recruiters about your skills and what you can offer. Focus on your
-          most relevant skills and achievements to grab their attention.
+          most relevant skills and achievements to grab their attention. Check{" "}
+          <Link to="/attention-grabbing-resume-summary">attention-grabbing resume summary tips</Link>.
         </p>
         <h3>Highlighting Relevant Work Experience</h3>
         <div>
@@ -167,13 +183,15 @@ const AboutResumeEra = () => {
           with their resumes and LinkedIn profiles. Use action verbs to show
           you're proactive and have made an impact. List your experience in
           reverse chronological order, including job title, company, dates, and
-          key achievements.
+          key achievements. See{" "}
+          <Link to="/improving-your-resume-with-action-verbs">improving your resume with action verbs</Link>.
         </p>
         <p>
           Customizing your resume for each job is key. Make sure to tailor your
           resume for each job, using keywords from the job description. Don't
           forget to proofread and edit to keep your resume professional and
-          error-free.
+          error-free. Learn more in{" "}
+          <Link to="/tailor-resume-job-description-chatgpt">tailoring your resume with ChatGPT</Link>.
         </p>
         <table>
           <thead>
@@ -219,13 +237,15 @@ const AboutResumeEra = () => {
           systems called Applicant Tracking Systems (ATS) play a big role. They
           look for certain keywords in your resume. Learning how to use resume
           keywords optimization can help you get past these systems and meet a
-          real person.
+          real person. Explore{" "}
+          <Link to="/how-to-use-keywords-in-a-resume">how to use keywords in a resume</Link>.
         </p>
         <h3>Keyword Optimization Techniques</h3>
         <p>
           To find the right keywords, try using WordClouds.com. It helps you
           find the main keywords from job descriptions. Use these keywords in
-          your resume to match the job's needs.
+          your resume to match the job's needs. Get more tips from{" "}
+          <Link to="/ats-friendly-resume-format-for-beginners">ATS-friendly resume formats for beginners</Link>.
         </p>
         <p>
           But, remember, it's not just about adding keywords. You should put
@@ -247,7 +267,8 @@ const AboutResumeEra = () => {
           In today's job market, resumes compete fiercely. AI-powered Applicant
           Tracking Systems (ATS) often screen them first. It's key to show what
           makes you special. Instead of just listing your jobs, focus on the
-          achievements that prove your worth.
+          achievements that prove your worth. Learn how in{" "}
+          <Link to="/how-to-highlight-achievements-in-resume-formatting">highlighting achievements in resume formatting</Link>.
         </p>
         <h3>Selling Instead of Summarizing</h3>
         <p>
@@ -276,6 +297,8 @@ const AboutResumeEra = () => {
         <p>
           Using this formula, your resume bullets will grab attention. They'll
           also pass ATS checks, boosting your chances of getting an interview.
+          See more in{" "}
+          <Link to="/xyz-formula-resume">the XYZ formula for resumes</Link>.
         </p>
 
         <p>
@@ -290,7 +313,8 @@ const AboutResumeEra = () => {
           In today's digital world, your online presence is key in your job
           search. LinkedIn, the top professional social network, is a powerful
           tool to enhance your resume. It helps you build your professional
-          brand and boosts your job search success.
+          brand and boosts your job search success. Discover{" "}
+          <Link to="/linkedin-job-hunting">LinkedIn job hunting tips</Link>.
         </p>
         <p>
           Recent studies show that over 90% of recruiters look for talent on
@@ -315,7 +339,8 @@ const AboutResumeEra = () => {
             Expand Your Network: Connect with industry professionals, former
             colleagues, and potential employers on LinkedIn. Engage with their
             content, comment on posts, and join relevant discussions to build
-            relationships and increase your visibility.
+            relationships and increase your visibility. Check{" "}
+            <Link to="/networking-tips">networking tips</Link>.
           </li>
           <li>
             Leverage LinkedIn's Features: Use LinkedIn's features like sharing
@@ -328,7 +353,8 @@ const AboutResumeEra = () => {
           By optimizing your LinkedIn presence and linking it to your resume,
           you create a strong personal brand. In today's digital age, a complete
           online presence is essential. LinkedIn is a key platform to showcase
-          your professional skills and achievements.
+          your professional skills and achievements. Learn how to{" "}
+          <Link to="/how-to-create-resume-formatting-that-matches-your-linkedin-profile">match your resume to your LinkedIn profile</Link>.
         </p>
         <table>
           <thead>
@@ -369,7 +395,8 @@ const AboutResumeEra = () => {
           Making a great resume is not the same for everyone. To really stand
           out, you need to make your resume fit the job you want. Knowing what
           each industry looks for helps you show off your best skills and
-          experience.
+          experience. Explore{" "}
+          <Link to="/job-specific-resume-formatting">job-specific resume formatting</Link>.
         </p>
         <h3>
           Retail Resumes: Highlighting Customer Service and Sales Expertise
@@ -391,7 +418,8 @@ const AboutResumeEra = () => {
           done. Include terms like "software development," "coding," and
           "problem-solving" to show you're tech-savvy. Talk about how you keep
           up with new tech and your love for innovation, which tech companies
-          love.
+          love. See{" "}
+          <Link to="/it-resume-formatting-tips">IT resume formatting tips</Link>.
         </p>
         <h3>
           Healthcare Resumes: Emphasizing Clinical and Patient-Centric
@@ -401,7 +429,8 @@ const AboutResumeEra = () => {
           Healthcare resumes should highlight your medical skills and focus on
           patients. Use terms like "patient care," "medical procedures," and
           "regulatory compliance" to meet healthcare employer needs. Show you're
-          a team player and dedicated to top-notch patient care.
+          a team player and dedicated to top-notch patient care. Check out{" "}
+          <Link to="/healthcare-industry-ke-liye-resume-formatting-guide">healthcare resume formatting guide</Link>.
         </p>
         <img src={download_1} alt="resume_for_reusme" />
         <p>
@@ -409,13 +438,14 @@ const AboutResumeEra = () => {
           noticed more. A well-made, industry-focused resume is key to moving
           forward in your career.
         </p>
-        <h3>The Benefits of Using resumeera</h3>
+        <h3>The Benefits of Using ResumeEra</h3>
         <p>
           In today's job market, a standout resume is key to success.{" "}
           <a href="https://resumeera.xyz">ResumeEra</a> is here to help,
           offering many benefits for creating a winning resume. It provides a
           wide range of professionally-designed templates, making your resume
-          look polished and appealing.
+          look polished and appealing. Try{" "}
+          <Link to="/free-resume-format-pdf">free resume format PDFs</Link>.
         </p>
         <p>
           ResumeEra's AI-powered suggestion engine is a big plus. It analyzes
@@ -427,21 +457,24 @@ const AboutResumeEra = () => {
           <a href="https://resumeera.xyz">ResumeEra</a> also makes it easy to
           customize your resume. You can change the layout, font, and sections
           to reflect your unique qualifications and career path. This empowers
-          you to create a resume that truly showcases your strengths.
+          you to create a resume that truly showcases your strengths. Learn more at{" "}
+          <Link to="/create-your-perfect-resume-for-free">create your perfect resume for free</Link>.
         </p>
         <p>
           Finally, <a href="https://resumeera.xyz">ResumeEra</a> lets you
           download and share your resume for free. This makes it easy to apply
           to many jobs without constantly updating your resume. With ResumeEra,
           you can focus on your job search, knowing your resume is ready for
-          success.
+          success. See{" "}
+          <Link to="/download-resume-format-pdf-today">download resume format PDF today</Link>.
         </p>
         <p>
           In summary, <a href="https://resumeera.xyz">ResumeEra</a> offers many
           benefits. You get access to professional templates, AI-powered
           optimization, customizable tools, and easy download and sharing. By
           using ResumeEra, you can make your resume-building process easier and
-          boost your chances of getting your dream job.
+          boost your chances of getting your dream job. Visit{" "}
+          <Link to="/how-to-land-your-dream-job">how to land your dream job</Link>.
         </p>
         <h3>Common Resume Mistakes to Avoid</h3>
         <div>
@@ -451,14 +484,16 @@ const AboutResumeEra = () => {
           Making a resume that grabs the attention of hiring managers is tough.
           One big mistake is using vague language and buzzwords too much. These
           generic terms don't make you stand out and don't show off your special
-          skills and qualifications.
+          skills and qualifications. Read more in{" "}
+          <Link to="/common-mistakes-to-avoid-on-your-resume">common mistakes to avoid on your resume</Link>.
         </p>
         <h3>Steer Clear of Vague Language and Buzzwords</h3>
         <p>
           Terms like "results-oriented," "team-focused," and "proven manager"
           might sound good but are empty. Instead, focus on showing your
           achievements with real numbers and examples. Employers want to see
-          proof of what you can do, not just claims.
+          proof of what you can do, not just claims. Avoid pitfalls with{" "}
+          <Link to="/Dont_Copy_Paste_On_Your_Cv">don’t copy-paste on your CV</Link>.
         </p>
         <p>
           To avoid this mistake, write clear, short bullet points that show what
@@ -510,7 +545,8 @@ const AboutResumeEra = () => {
         <p>
           In today's job market, how your resume looks matters a lot. A good
           resume design and formatting can make you stand out. It leaves a
-          strong impression on hiring managers.
+          strong impression on hiring managers. Get started with{" "}
+          <Link to="/how-to-format-a-resume-correctly">how to format a resume correctly</Link>.
         </p>
         <p>
           To make your resume look good and easy to read, focus on these key
@@ -540,7 +576,8 @@ const AboutResumeEra = () => {
         </ul>
         <p>
           By paying attention to these how to format resume tips, you can make a
-          resume that shows off your skills and impresses employers.
+          resume that shows off your skills and impresses employers. See more in{" "}
+          <Link to="/simple-resume-formatting-best-practices">simple resume formatting best practices</Link>.
         </p>
         <p className="quotes">
           "A well-designed and formatted resume can be the key to opening doors
@@ -560,7 +597,8 @@ const AboutResumeEra = () => {
           Crafting a winning resume is key to your career journey. By using
           strategies like optimizing for Applicant Tracking Systems, you can
           stand out. Showcasing your unique value and using LinkedIn can also
-          help.
+          help. Learn more in{" "}
+          <Link to="/how-to-write-a-resume-in-7-easy-steps">how to write a resume in 7 easy steps</Link>.
         </p>
         <p>
           This guide has shown how important a professional, tailored resume is.
@@ -571,7 +609,9 @@ const AboutResumeEra = () => {
         <p>
           Understanding the modern recruitment landscape is crucial. Tools like{" "}
           <a href="https://resumeera.xyz">ResumeEra</a> can help. Investing in
-          your resume opens doors to new career opportunities and growth.
+          your resume opens doors to new career opportunities and growth. Start
+          today with{" "}
+          <Link to="/free-online-resume-maker">our free online resume maker</Link>.
         </p>
         <h3>What is the importance of a professional resume?</h3>
         <h1>FAQs about Professional Resumes</h1>
@@ -587,13 +627,16 @@ const AboutResumeEra = () => {
         <p>
           Choose the right resume format to stand out. Use a strong summary or
           objective statement that gives a quick overview of your career and
-          goals.
+          goals. See{" "}
+          <Link to="/how-to-write-an-attention-grabbing-resume-summary">how to write an attention-grabbing resume summary</Link>.
         </p>
 
         <h3>What are the key components of a winning resume?</h3>
         <p>
           A winning resume has a strong summary or objective, and it highlights
           your work experience and skills. Focus on what makes you stand out.
+          Explore{" "}
+          <Link to="/resume-tip-component">resume tip components</Link>.
         </p>
 
         <h3>
@@ -602,7 +645,8 @@ const AboutResumeEra = () => {
         <p>
           To beat ATS, use the right keywords. Tools like WordClouds.com can
           help you find these keywords. Include them in your resume to match the
-          system’s search.
+          system’s search. Learn from{" "}
+          <Link to="/11-ats-formatting-mistakes-that-can-cost-you-a-job">11 ATS formatting mistakes to avoid</Link>.
         </p>
 
         <h3>
@@ -620,7 +664,8 @@ const AboutResumeEra = () => {
         </h3>
         <p>
           Link to your LinkedIn profile on your resume. A ResumeGo study shows
-          this boosts callback rates by 71%.
+          this boosts callback rates by 71%. Get tips from{" "}
+          <Link to="/how-to-respond-to-a-linkedin-recruiter">how to respond to a LinkedIn recruiter</Link>.
         </p>
 
         <h3>
@@ -628,7 +673,8 @@ const AboutResumeEra = () => {
         </h3>
         <p>
           Customize your resume for each industry and job. Tailoring shows you
-          fit the role by highlighting your relevant skills and experience.
+          fit the role by highlighting your relevant skills and experience. See{" "}
+          <Link to="/career-change-resume-formatting">career change resume formatting</Link>.
         </p>
 
         <h3>
@@ -638,13 +684,15 @@ const AboutResumeEra = () => {
         <p>
           <a href="https://resumeera.xyz">ResumeEra</a> offers free templates
           and AI suggestions. It's easy to customize and download your resume.
-          This platform helps you create a polished, ATS-friendly resume.
+          This platform helps you create a polished, ATS-friendly resume. Try{" "}
+          <Link to="/Best_AI_Resume_Builder">the best AI resume builder</Link>.
         </p>
 
         <h3>What common resume mistakes should I avoid?</h3>
         <p>
           Avoid vague language and buzzwords. Instead, use specific examples and
-          clear language to show your skills and achievements.
+          clear language to show your skills and achievements. Check{" "}
+          <Link to="/20-Resume-Formatting-Mistakes-You-Should-Avoid">20 resume formatting mistakes to avoid</Link>.
         </p>
 
         <h3>
@@ -654,7 +702,8 @@ const AboutResumeEra = () => {
 
         <p>
           Your resume should be clean and professional. Use clear headings and
-          consistent formatting. Good design makes a strong impression.
+          consistent formatting. Good design makes a strong impression. Learn more in{" "}
+          <Link to="/guide/resume-formatting">resume formatting guide</Link>.
         </p>
         <div>
           <GoogleAd />
@@ -674,4 +723,5 @@ const AboutResumeEra = () => {
     </div>
   );
 };
+
 export default AboutResumeEra;

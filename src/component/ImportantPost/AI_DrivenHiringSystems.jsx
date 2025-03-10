@@ -8,6 +8,7 @@ import AuthorCard from "../AuthorCard";
 import CallToAction from "../CallToAction";
 import ShareButtons from "../shareButton/ShareButtons";
 import CombinedTemplates from "../CombinedTemplates";
+import { Link } from "react-router-dom";
 
 
 export default function AI_DrivenHiringSystems(props) {
@@ -190,9 +191,9 @@ export default function AI_DrivenHiringSystems(props) {
             • <em>How to Do It:</em> Read the job ad carefully. Highlight skills, qualifications, and terms repeated multiple times (e.g., “project management,” “data analysis”).<br />
             • <em>Example:</em> If a posting says “Proficiency in Salesforce required,” include “Salesforce” exactly as written—don’t assume “CRM software” will suffice.<br />
             • <em>SEO Tip:</em> Keywords like “job description keywords” and “ATS optimization” boost your research process online—learn more at{' '}
-            <a href="https://resumeera.xyz/how-to-use-keywords-in-a-resume" style={{ color: '#007bff', textDecoration: 'none' }}>
+            <Link to="https://resumeera.xyz/how-to-use-keywords-in-a-resume" style={{ color: '#007bff', textDecoration: 'none' }}>
               how to use keywords in a resume
-            </a>.
+            </Link>.
           </li>
           <li>
             <strong>Use Relevant Keywords Strategically</strong><br />
@@ -201,9 +202,9 @@ export default function AI_DrivenHiringSystems(props) {
             • <em>How to Include:</em> Weave them naturally into your professional summary, skills section, and experience bullets. Avoid stuffing—AI can flag over-optimization.<br />
             • <em>Example:</em> “Managed a team of 5 using Agile methodology to deliver projects on time” (keywords: managed, Agile, projects).<br />
             • <em>Pro Tip:</em> Mirror the job ad’s phrasing—e.g., “customer service” vs. “client support” might differ in the system—check out{' '}
-            <a href="https://resumeera.xyz/tailor-your-resume" style={{ color: '#007bff', textDecoration: 'none' }}>
+            <Link to="https://resumeera.xyz/tailor-your-resume" style={{ color: '#007bff', textDecoration: 'none' }}>
               tailor your resume
-            </a>.
+            </Link>.
           </li>
           <li>
             <strong>Stick to a Simple, ATS-Friendly Format</strong><br />
@@ -214,9 +215,9 @@ export default function AI_DrivenHiringSystems(props) {
             o Stick to one column with clear section headings (e.g., “Experience,” “Skills”).<br />
             • <em>Free Tools:</em> Google Docs or Microsoft Word’s basic templates work well.<br />
             • <em>Why It Works:</em> A 2023 ResumeLab study found 43% of ATS-rejected resumes had unreadable formatting—avoid pitfalls with{' '}
-            <a href="https://resumeera.xyz/simple-resume-formatting-best-practices" style={{ color: '#007bff', textDecoration: 'none' }}>
+            <Link to="https://resumeera.xyz/simple-resume-formatting-best-practices" style={{ color: '#007bff', textDecoration: 'none' }}>
               simple resume formatting best practices
-            </a>.
+            </Link>.
           </li>
           <li>
             <strong>Include a Professional Summary with Keywords</strong><br />
@@ -224,9 +225,9 @@ export default function AI_DrivenHiringSystems(props) {
             • <em>What to Write:</em> A 3-4 sentence overview of your skills and experience, packed with job-specific terms.<br />
             • <em>Example:</em> “Detail-oriented Data Analyst with 3 years of experience in SQL, Tableau, and statistical modeling. Proven track record of optimizing business processes through data-driven insights.”<br />
             • <em>Benefit:</em> It signals relevance upfront, boosting your ATS score—get tips at{' '}
-            <a href="https://resumeera.xyz/attention-grabbing-resume-summary" style={{ color: '#007bff', textDecoration: 'none' }}>
+            <Link to="https://resumeera.xyz/attention-grabbing-resume-summary" style={{ color: '#007bff', textDecoration: 'none' }}>
               attention-grabbing resume summary
-            </a>.
+            </Link>.
           </li>
           <li>
             <strong>Optimize Your Skills Section</strong><br />
@@ -234,9 +235,9 @@ export default function AI_DrivenHiringSystems(props) {
             • <em>What to Include:</em> Hard skills (e.g., “JavaScript,” “Adobe Photoshop”) and soft skills (e.g., “team collaboration,” “problem-solving”) from the job ad.<br />
             • <em>How to List:</em> Bullet points or a simple comma-separated list—e.g., “Skills: Project Management, PMP, Microsoft Office, Communication.”<br />
             • <em>Tip:</em> If the job mentions certifications (e.g., “Six Sigma”), add them here or in a separate section—see{' '}
-            <a href="https://resumeera.xyz/how-to-highlight-achievements-in-a-resume" style={{ color: '#007bff', textDecoration: 'none' }}>
+            <Link to="https://resumeera.xyz/how-to-highlight-achievements-in-a-resume" style={{ color: '#007bff', textDecoration: 'none' }}>
               how to highlight achievements in a resume
-            </a>.
+            </Link>.
           </li>
           <li>
             <strong>Quantify Achievements in Experience</strong><br />
@@ -244,9 +245,9 @@ export default function AI_DrivenHiringSystems(props) {
             • <em>How to Do It:</em> Use metrics—e.g., “Increased sales by 20%” or “Trained 50+ employees in 6 months.”<br />
             • <em>Example:</em> o “Developed a customer onboarding program using Zendesk, reducing support tickets by 15%.”<br />
             • <em>Why It Helps:</em> Quantified results align with performance-focused algorithms and impress humans later—explore{' '}
-            <a href="https://resumeera.xyz/improving-your-resume-with-action-verbs" style={{ color: '#007bff', textDecoration: 'none' }}>
+            <Link to="https://resumeera.xyz/improving-your-resume-with-action-verbs" style={{ color: '#007bff', textDecoration: 'none' }}>
               improving your resume with action verbs
-            </a>.
+            </Link>.
           </li>
           <li>
             <strong>Match Job Titles Where Possible</strong><br />
@@ -262,9 +263,9 @@ export default function AI_DrivenHiringSystems(props) {
             o Don’t use PDFs with locked text—some ATS can’t parse them.<br />
             o Avoid spelling errors—AI won’t guess “Mircosoft” means “Microsoft.”<br />
             • <em>Fix:</em> Use Grammarly (free version) to proofread—avoid errors with{' '}
-            <a href="https://resumeera.xyz/common-mistakes-to-avoid-on-your-resume" style={{ color: '#007bff', textDecoration: 'none' }}>
+            <Link to="https://resumeera.xyz/common-mistakes-to-avoid-on-your-resume" style={{ color: '#007bff', textDecoration: 'none' }}>
               common mistakes to avoid on your resume
-            </a>.
+            </Link>.
           </li>
           <li>
             <strong>Test Your Resume with Free ATS Tools</strong><br />
@@ -272,44 +273,44 @@ export default function AI_DrivenHiringSystems(props) {
             • <em>Options:</em> Jobscan, Resunate, or SkillSyncer offer free trials to analyze keyword matches.<br />
             • <em>How It Works:</em> Upload your resume and the job ad; get a match score and suggestions.<br />
             • <em>SEO Boost:</em> Search “free ATS resume checker” to find these tools—learn more at{' '}
-            <a href="https://resumeera.xyz/11-ats-formatting-mistakes-that-can-cost-you-a-job" style={{ color: '#007bff', textDecoration: 'none' }}>
+            <Link to="https://resumeera.xyz/11-ats-formatting-mistakes-that-can-cost-you-a-job" style={{ color: '#007bff', textDecoration: 'none' }}>
               11 ATS formatting mistakes that can cost you a job
-            </a>.
+            </Link>.
           </li>
           <li>
             <strong>Keep It Human-Readable Too</strong><br />
             AI gets you in the door, but recruiters decide your fate.<br />
             • <em>Balance:</em> Use natural language—e.g., “Led a team to improve KPIs” feels less robotic than “Keyword: Leadership, KPI optimization.”<br />
             • <em>Tip:</em> Read it aloud—does it sound like you? If not, tweak it—refine it with{' '}
-            <a href="https://resumeera.xyz/how-to-format-a-resume-correctly" style={{ color: '#007bff', textDecoration: 'none' }}>
+            <Link to="https://resumeera.xyz/how-to-format-a-resume-correctly" style={{ color: '#007bff', textDecoration: 'none' }}>
               how to format a resume correctly
-            </a>.
+            </Link>.
           </li>
         </ol>
 
         <h2 style={{ fontSize: '20px', marginTop: '30px' }}>Deep Dive: How ATS Algorithms Work</h2>
         <p style={{ lineHeight: '1.6' }}>
           Understanding the tech behind AI-driven hiring systems gives you an edge. ATS platforms use natural language processing (NLP) to extract data from your resume—think job titles, skills, and dates. They then assign a relevance score based on: 1. Keyword Density: How often job-specific terms appear. 2. Context: Whether keywords fit logically (e.g., “Python” in a coding role vs. a random mention). 3. Structure: Clear headings and text blocks improve parsing accuracy. Some advanced systems, like those with machine learning, even weigh soft skills or predict cultural fit. However, most still rely heavily on exact matches, making keyword strategy king—dive deeper with{' '}
-          <a href="https://resumeera.xyz/resume-for-ai-driven-hiring-systems" style={{ color: '#007bff', textDecoration: 'none' }}>
+          <Link to="https://resumeera.xyz/resume-for-ai-driven-hiring-systems" style={{ color: '#007bff', textDecoration: 'none' }}>
             resume formatting for AI-driven ATS
-          </a>.
+          </Link>.
         </p>
 
         <h2 style={{ fontSize: '20px', marginTop: '30px' }}>Industry-Specific Tips</h2>
         <p style={{ lineHeight: '1.6' }}>
           Different fields prioritize different optimizations.<br />
           • <em>Tech Jobs:</em> List programming languages (e.g., “Java,” “C++”) and tools (e.g., “GitHub”) explicitly—see{' '}
-          <a href="https://resumeera.xyz/it-resume-formatting-tips" style={{ color: '#007bff', textDecoration: 'none' }}>
+          <Link to="https://resumeera.xyz/it-resume-formatting-tips" style={{ color: '#007bff', textDecoration: 'none' }}>
             IT resume formatting tips
-          </a>.<br />
+          </Link>.<br />
           • <em>Healthcare:</em> Include certifications (e.g., “RN,” “CPR”) and clinical terms (e.g., “patient care”)—explore{' '}
-          <a href="https://resumeera.xyz/healthcare-industry-ke-liye-resume-formatting-guide" style={{ color: '#007bff', textDecoration: 'none' }}>
+          <Link to="https://resumeera.xyz/healthcare-industry-ke-liye-resume-formatting-guide" style={{ color: '#007bff', textDecoration: 'none' }}>
             healthcare resume formatting guide
-          </a>.<br />
+          </Link>.<br />
           • <em>Creative Roles:</em> Balance keywords (e.g., “Adobe Creative Suite”) with a portfolio link—many ATS allow URLs—check{' '}
-          <a href="https://resumeera.xyz/creative-and-designer-resume-tips" style={{ color: '#007bff', textDecoration: 'none' }}>
+          <Link to="https://resumeera.xyz/creative-and-designer-resume-tips" style={{ color: '#007bff', textDecoration: 'none' }}>
             creative and designer resume tips
-          </a>.
+          </Link>.
         </p>
 
         <h2 style={{ fontSize: '20px', marginTop: '30px' }}>Sample ATS-Optimized Resume</h2>
@@ -344,9 +345,9 @@ export default function AI_DrivenHiringSystems(props) {
         <ol style={{ lineHeight: '1.6' }}>
           <li>Long-Tail Keywords: Use phrases like “customer relationship management software” if the job ad does.</li>
           <li>File Format: Save as a .docx unless specified—most ATS handle it better than PDFs—see{' '}
-            <a href="https://resumeera.xyz/pdf-vs-word-resume" style={{ color: '#007bff', textDecoration: 'none' }}>
+            <Link to="https://resumeera.xyz/pdf-vs-word-resume" style={{ color: '#007bff', textDecoration: 'none' }}>
               PDF vs Word resume
-            </a>.</li>
+            </Link>.</li>
           <li>Multiple Versions: Create role-specific resumes (e.g., one for “Marketing Manager,” another for “Content Strategist”).</li>
           <li>Job Boards: Platforms like Indeed optimize for ATS—use their resume builder for a head start.</li>
         </ol>
@@ -359,9 +360,9 @@ export default function AI_DrivenHiringSystems(props) {
         <h2 style={{ fontSize: '20px', marginTop: '30px' }}>SEO Boosters</h2>
         <p style={{ lineHeight: '1.6' }}>
           Searching “how to optimize resume for AI hiring” or “ATS resume tips”? Keywords like “AI job application,” “resume optimization guide,” and “beat ATS systems” lead here. Mirror job ad terms in your resume to rank higher with AI and recruiters—start with{' '}
-          <a href="https://resumeera.xyz/how-to-create-a-professional-resume" style={{ color: '#007bff', textDecoration: 'none' }}>
+          <Link to="https://resumeera.xyz/how-to-create-a-professional-resume" style={{ color: '#007bff', textDecoration: 'none' }}>
             how to create a professional resume
-          </a>.
+          </Link>.
         </p>
 
         <h2 style={{ fontSize: '20px', marginTop: '30px' }}>Common Myths Debunked</h2>
@@ -378,17 +379,17 @@ export default function AI_DrivenHiringSystems(props) {
             <strong>Myth: “Fancy templates impress ATS.”</strong><br />
             <strong>Truth: Graphics confuse parsers—keep it plain.</strong><br />
             Those sleek resume templates on Canva with colorful charts and icons? They might wow a human, but they’re kryptonite to ATS. The parsers behind systems like Workday or Taleo are designed to read text, not interpret a pie chart of your skills or text buried in a footer. A client of mine once used a two-column layout with a headshot—stunning on paper, but the ATS read it as gibberish, dropping her from contention. Studies show 43% of ATS rejections stem from unreadable formatting. Stick to a single-column, text-only format with standard fonts (Arial, 11 pt) and clear headings like “Experience” or “Skills.” It’s not about looking boring—it’s about being seen. Save the flair for your portfolio or interview—avoid these with{' '}
-            <a href="https://resumeera.xyz/why-ats-unfriendly-formatting-can-lead-to-resume-rejection" style={{ color: '#007bff', textDecoration: 'none' }}>
+            <Link to="https://resumeera.xyz/why-ats-unfriendly-formatting-can-lead-to-resume-rejection" style={{ color: '#007bff', textDecoration: 'none' }}>
               why ATS-unfriendly formatting can lead to rejection
-            </a>.
+            </Link>.
           </li>
           <li>
             <strong>Myth: “One resume fits all.”</strong><br />
             <strong>Truth: Tailoring per job is non-negotiable.</strong><br />
             Sending the same resume to every job feels efficient—why rewrite it when you’re “qualified”? Because ATS doesn’t care about your general awesomeness; it’s laser-focused on the specific role. A generic resume might mention “customer service,” but if the job ad screams “client relationship management,” you’re toast. I’ve seen candidates with 10 years of experience get filtered out because their one-size-fits-all resume missed key terms like “Salesforce” or “data-driven decision-making.” Tailoring takes effort—about 20 minutes per job to tweak keywords and bullets—but it’s the difference between obscurity and opportunity. A 2023 LinkedIn report says tailored resumes are 40% more likely to reach a recruiter. Build a master resume, then customize it for each posting. It’s not optional; it’s essential—master this with{' '}
-            <a href="https://resumeera.xyz/tailor-resume-to-job-description" style={{ color: '#007bff', textDecoration: 'none' }}>
+            <Link to="https://resumeera.xyz/tailor-resume-to-job-description" style={{ color: '#007bff', textDecoration: 'none' }}>
               tailor resume to job description
-            </a>.
+            </Link>.
           </li>
         </ol>
         <p style={{ lineHeight: '1.6' }}>
@@ -407,16 +408,16 @@ export default function AI_DrivenHiringSystems(props) {
           <li>
             <strong>Tomorrow: Rewrite Your Resume with a Simple Format and Those Terms</strong><br />
             Day two is about execution. Open your resume and strip it down to basics: no fancy fonts, no tables, just clean, ATS-friendly text in Arial or Calibri. Start weaving in yesterday’s keywords naturally. If the job wants “data analysis,” swap out vague phrases like “worked with numbers” for “Performed data analysis using SQL to drive insights.” Add a skills section if you don’t have one—list those 10 terms there too. Aim for clarity: short sentences, bullet points, and numbers (e.g., “Cut costs by 15%”). By nightfall, you’ll have a lean, mean, AI-ready document—try a template from{' '}
-            <a href="https://resumeera.xyz/resume-format-pdf-free-download" style={{ color: '#007bff', textDecoration: 'none' }}>
+            <Link to="https://resumeera.xyz/resume-format-pdf-free-download" style={{ color: '#007bff', textDecoration: 'none' }}>
               resume format PDF free download
-            </a>.
+            </Link>.
           </li>
           <li>
             <strong>Next: Test It with Jobscan and Apply to 5 Roles</strong><br />
             Day three is your victory lap. Upload your revamped resume to a free ATS checker like Jobscan, along with the job ad. Aim for an 80% match score—if it’s lower, tweak keywords or phrasing. Once you’re golden, fire off applications to at least five roles that fit your skills. Track them in a spreadsheet with dates and company names—organization keeps you sane. Then, celebrate: you’ve just outsmarted the bots—boost your chances with{' '}
-            <a href="https://resumeera.xyz/how-to-land-your-dream-job" style={{ color: '#007bff', textDecoration: 'none' }}>
+            <Link to="https://resumeera.xyz/how-to-land-your-dream-job" style={{ color: '#007bff', textDecoration: 'none' }}>
               how to land your dream job
-            </a>.
+            </Link>.
           </li>
         </ul>
         <p style={{ lineHeight: '1.6' }}>

@@ -1,12 +1,19 @@
-function debounce(func,delay){
-    let timeId;
-    return function(...args){
-        if(timeId) clearTimeout(timeId);
-        timeId = setTimeout(()=>{
-            func.apply(this, args);
+import { useState, useEffect } from 'react';
 
-        },delay)
-    }
-}
+const useDebounce = (value, delay) => {
+  const [debouncedValue, setDebouncedValue] = useState(value);
 
-export default debounce;
+  useEffect(() => {
+    const handler = setTimeout(() => {
+      setDebouncedValue(value);
+    }, delay);
+
+    return () => {
+      clearTimeout(handler);
+    };
+  }, [value, delay]);
+
+  return debouncedValue;
+};
+
+export default useDebounce;
