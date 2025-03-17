@@ -5,6 +5,7 @@ import Choose_temp from "../../image/image_for_link/choose_temp.jpg";
 import { Link } from "react-router-dom";
 import ShareButtons from "../shareButton/ShareButtons";
 import DateAndAuthor from "../DateAndAuthor";
+import GoogleAd from "../adFolder/GoogleAd";
 const ChooseTemplate = () => {
   const keyword = "How to choose the right resume template"
   const publishDate = '2025-01-06'
@@ -125,7 +126,7 @@ const ChooseTemplate = () => {
           your application and shows employers that you pay attention to detail.
           Using {keyword} ensures you tailor your application effectively.
         </p>
-      </section>
+      </section><GoogleAd />
 
       <section className="section-importance">
         <h2>Why Choosing the Right Resume Template Matters</h2>
@@ -150,7 +151,7 @@ const ChooseTemplate = () => {
           interview and being overlooked. Investing time in this step is
           essential.
         </p>
-      </section>
+      </section><GoogleAd />
 
       <section className="section-types">
         <h2>Types of Resume Templates</h2>
@@ -188,7 +189,7 @@ const ChooseTemplate = () => {
           work history. They highlight transferable skills relevant to the
           desired role.
         </p>
-      </section>
+      </section><GoogleAd />
 
       <section className="section-choosing-tips">
         <h2>How to Choose the Right Resume Template</h2>
@@ -231,7 +232,7 @@ const ChooseTemplate = () => {
           template that aligns with your personal brand and effectively
           communicates your strengths and style.
         </p>
-      </section>
+      </section><GoogleAd />
 
       <section className="section-common-mistakes">
         <h2>Common Mistakes to Avoid</h2>
@@ -255,7 +256,7 @@ const ChooseTemplate = () => {
           By avoiding these mistakes, you can ensure your resume template
           enhances your application rather than detracting from it.
         </p>
-      </section>
+      </section><GoogleAd />
 
       <section className="section-conclusion">
         <h2>Conclusion</h2>
@@ -271,7 +272,7 @@ const ChooseTemplate = () => {
           standards. Visit ResumeEra for expert tips and a wide range of
           templates to kickstart your career journey.
         </p>
-      </section>
+      </section><GoogleAd />
 
       <section className="section-faq">
         <h2>FAQs</h2>
@@ -298,7 +299,7 @@ const ChooseTemplate = () => {
             Avoid complex designs, images, or charts that may confuse the ATS.
           </p>
         </div>
-      </section>
+      </section><GoogleAd />
 
       <div className="btn">
         <Link className=".button" to="/common-mistakes-to-avoid-on-your-resume">

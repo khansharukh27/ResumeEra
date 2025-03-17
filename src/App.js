@@ -482,6 +482,20 @@ import BestSummaryForResumeForFreshers from "./component/ImportantPost/FreshersR
 import FresherSummaryForResume from "./component/ImportantPost/FreshersResumeSummary.jsx/FresherSummaryForResume.jsx";
 import WhatShouldIAddinMyResume from "./component/ImportantPost/WhatShouldIAddinMyResume.jsx";
 import AI_DrivenHiringSystems from "./component/ImportantPost/AI_DrivenHiringSystems.jsx";
+import Enhanceresumevisibility from "./component/ImportantPost/Enhanceresumevisibility.jsx";
+import ToolForResumeBuilding from "./component/ImportantPost/ToolForResumeBuilding.jsx";
+import HundredPercentfreeresumebuilder from "./component/ImportantPost/HundredPercentfreeresumebuilder.jsx";
+import CoveerLetterTips from "./component/cover letter post/CoverLetterTips.jsx";
+import CoverLetterMapping from "./component/CoverLetterMapping.jsx";
+import CoverLetterLengthGuide from "./component/cover letter post/CoverLetterLengthGuide.jsx";
+import Coverletterwithnoexperience from "./component/cover letter post/Coverletterwithnoexperience.jsx";
+import CoverLetterBestPractices from "./component/cover letter post/CoverLetterBestPractices.jsx";
+import CommonCoverLetterMistake from "./component/cover letter post/CommonCoverLetterMistake.jsx";
+import CoverLetterForRecentGraduates from "./component/cover letter post/CoverLetterForRecentGraduates.jsx";
+import CraftingHRManagerCoverLetter from "./component/cover letter post/CraftingHRManagerCoverLetter.jsx";
+import ShortCoverLetterCustomerService from "./component/cover letter post/ShortCoverLetterCustomerService.jsx";
+import ShortCoverLetterForFresher from "./component/cover letter post/ShortCoverLetterForFresher.jsx";
+import SampleCoverLetterForJobApplication from "./component/cover letter post/SampleCoverLetterForJobApplication.jsx";
 
 var images = [
   { id: 1, src: resum1, alt: "Professional Resume Template 1",description:'Professional and elegant resume template with a timeline structure' },
@@ -670,6 +684,7 @@ function App() {
           />
         ))}
         <Route path="/myresume" element={<MyResume />} />
+        <Route path="#" element={<CoverLetterMapping  CoverImage={CoverImage}/>} />
         <Route
           path="/cover_letter"
           element={<CoverLetter CoverImage={CoverImage} />}
@@ -872,7 +887,7 @@ function App() {
         <Route path="/it-cover-letter-guide-2024" element={<ItCoverLetter />} />
         <Route
           path="/management-cover-letter-example"
-          element={<ManagementCoverLetter />}
+          element={<ManagementCoverLetter CoverImage={CoverImage}/>}
         />
         <Route
           path="/mechanical-engineering-cover-letter-example/"
@@ -1284,7 +1299,7 @@ function App() {
         />
         <Route
           path="/best-resume-format-pdf-for-professionals-download-now"
-          element={<BestResumeFormatPDFforProfessionals fresherResumeImage={fresherResumeImage} techImages={techImages} images={images}/>}
+          element={<BestResumeFormatPDFforProfessionals/>}
         />
 <Route
           path="/how-to-create-a-winning-resume-using-resume-format-pdf"
@@ -1308,7 +1323,7 @@ function App() {
         />
         <Route
           path="/craft-the-perfect-resume-with-our-free-resume-format-pdf"
-          element={<CraftthePerfectResumewithOurFreeResumeFormatPDF/>}
+          element={<CraftthePerfectResumewithOurFreeResumeFormatPDF techImages={techImages} images={images} fresherResumeImage={fresherResumeImage}    />}
         />
 <Route
           path="/free-resume-format-pdf-design-your-resume-in-minutes"
@@ -1869,10 +1884,49 @@ function App() {
       <Route path="/resume-for-ai-driven-hiring-systems"
         element={<AI_DrivenHiringSystems fresherResumeImage={fresherResumeImage} techImages={techImages} images={images}/>}
       />
-      
-      
-      
-      
+      <Route path="/enhance-resume-visibility"
+        element={<Enhanceresumevisibility fresherResumeImage={fresherResumeImage} techImages={techImages} images={images}/>}
+      />
+      <Route path="/tool-for-resume-building"
+        element={<ToolForResumeBuilding fresherResumeImage={fresherResumeImage} techImages={techImages} images={images}/>}
+      />
+      <Route path="/hundered-percent-free-resume-builder"
+        element={<HundredPercentfreeresumebuilder fresherResumeImage={fresherResumeImage} techImages={techImages} images={images}/>}
+      />
+       <Route path="/effective-cover-letter-tips"
+        element={<CoveerLetterTips CoverImage={CoverImage}/>}
+      />
+      <Route path="/cover-letter-length-guide"
+        element={<CoverLetterLengthGuide CoverImage={CoverImage}/>}
+      />
+      <Route path="/cover-letter-with-no-experience"
+        element={<Coverletterwithnoexperience CoverImage={CoverImage}/>}
+      />
+      <Route path="/cover-letter-best-practices"
+        element={<CoverLetterBestPractices CoverImage={CoverImage}/>}
+      />
+      <Route path="/common-cover-letter-mistake"
+        element={<CommonCoverLetterMistake CoverImage={CoverImage}/>}
+      />
+      <Route path="/cover-letter-for-recent-graduates"
+        element={<CoverLetterForRecentGraduates CoverImage={CoverImage}/>}
+      />
+      <Route path="/crafting-an-impactful-hr-manager-cover-letter"
+        element={<CraftingHRManagerCoverLetter CoverImage={CoverImage}/>}
+      />
+      <Route path="/short-cover-letter-sample-for-customer-service"
+        element={<ShortCoverLetterCustomerService CoverImage={CoverImage}/>}
+      />
+      <Route path="/short-cover-letter-sample-for-fresher"
+        element={<ShortCoverLetterForFresher CoverImage={CoverImage}/>}
+      />
+      <Route path="/sample-cover-letter-for-job-application"
+        element={<SampleCoverLetterForJobApplication CoverImage={CoverImage}/>}
+      />
+     
+    
+     
+     
         <Route path="/Blog_or_Career_Tips_Page" element={<BlogCareer />} />
         <Route path="/how-to-land-your-dream-job" element={<DreamJob2024 />} />
         <Route

@@ -221,7 +221,7 @@ export default function Preview308() {
                               lineHeight: `${lineSpacing}em`,
                             }}
                           >
-                            {keys.softSkills} {/* Corrected from softSkill to match Redux state */}
+                            {keys.softSkill} {/* Corrected from softSkill to match Redux state */}
                           </li>
                         </ul>
                       </div>

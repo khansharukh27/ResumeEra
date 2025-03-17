@@ -1,13 +1,18 @@
-import React from 'react';
+import React, { Suspense, lazy } from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
-import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { Provider } from 'react-redux';
 import { Auth0Provider } from '@auth0/auth0-react';
 import { HelmetProvider } from 'react-helmet-async';
 import store from './Redux/store';
 import ShareButtons from './component/shareButton/ShareButtons'; // Adjust path if needed
+import best_logo from '../src/image/best_logo.webp'; // Make sure to adjust the path
+
+// Lazy load the App component
+const App = lazy(() => import('./App'));
+
+// Import your logo or loading spinner
 
 // Create root for the main app
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -48,7 +53,25 @@ root.render(
             }}
         >
             <Provider store={store}>
-                <App />
+                <Suspense
+                    fallback={
+                        <div
+                            style={{
+                                display: 'flex',
+                                justifyContent: 'center',
+                                alignItems: 'center',
+                                height: '100vh',
+                                flexDirection: 'column',
+                            }}
+                        >
+                            <img src={best_logo} alt='Loading...' 
+                            style={{ width: '100px', marginBottom: '20px', borderRadius:'15px', border:'1px solid green' }} />
+                            <h1>Loading...</h1>
+                        </div>
+                    }
+                >
+                    <App />
+                </Suspense>
             </Provider>
         </Auth0Provider>
     </HelmetProvider>

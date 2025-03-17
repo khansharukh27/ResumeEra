@@ -63,6 +63,7 @@ export const socialMediaLink = (input) => {
 };
 
 export const addSoftSkills = (input) => {
+    console.log("INPUT",input);
     localStorage.setItem('softSkillsData', JSON.stringify(input));
     return {
         type: 'add_soft_skills',

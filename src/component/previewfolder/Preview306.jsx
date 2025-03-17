@@ -218,7 +218,7 @@ export default function Preview306() { // Corrected function name to match assum
  lineHeight: `${lineSpacing}em`,
  }}
  >
- {keys.softSkills} {/* Corrected from softSkill to match Redux state */}
+ {keys.softSkill} {/* Corrected from softSkill to match Redux state */}
  </li>
  </ul>
  </div>

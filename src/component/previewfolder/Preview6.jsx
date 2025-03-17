@@ -128,7 +128,6 @@ const Preview6 = () => {
                         >
                             {contactHeading}
                         </h5>
-                        <hr />
                         <div className="d-flex inner-information6">
                             <div className="mt-2 me-3">
                                 <b>

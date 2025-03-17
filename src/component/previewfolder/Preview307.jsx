@@ -223,7 +223,7 @@ export default function Preview307() { // Updated to Preview307 based on persona
                         lineHeight: `${lineSpacing}em`,
                       }}
                     >
-                      {keys.softSkills} {/* Corrected from softSkill to match Redux state */}
+                      {keys.softSkill} {/* Corrected from softSkill to match Redux state */}
                     </li>
                   </ul>
                 </div>

@@ -1952,6 +1952,85 @@ const ImportantPostLink = () => {
       src: 'https://i.postimg.cc/7hZH0VdJ/Resume-for-AI-Driven-Hiring-Systems.jpg',
       alt: "Resume for AI-Driven Hiring Systems",
     },
+    {
+      path: "/enhance-resume-visibility",
+      title: "Enhance Resume Visibility And Download free Resume Now",
+      src: 'https://i.postimg.cc/d0hdxfS8/enhace-cv-visibility.jpg',
+      alt: "Enhance Resume Visibility",
+    },
+    {
+      path: "/tool-for-resume-building",
+      title: "Tool for Resume Building: Why Resumeera.xyz is the Best Option for You",
+      src: 'https://i.postimg.cc/d0hdxfS8/enhace-cv-visibility.jpg',
+      alt: "Tool for Resume Building",
+    },
+    {
+      path: "/hundered-percent-free-resume-builder",
+      title: "100% Free Resume Builder: Downlaod Now Your Free Resume",
+      src: 'https://i.postimg.cc/d0hdxfS8/enhace-cv-visibility.jpg',
+      alt: "100% Free Resume Builder",
+    },
+    {
+      path: "/effective-cover-letter-tips",
+      title: "Effective Cover Letter: Tips, Editing, and Free Download",
+      src: 'https://i.postimg.cc/T3q2vZ3z/cover-letter-tips.webp',
+      alt: "Effective Cover Letter: Tips, Editing, and Free Download",
+    },
+    {
+      path: "/cover-letter-length-guide",
+      title: "Cover Letter Length: How Long Should It Be to Make the Best Impression?",
+      src: 'https://i.postimg.cc/rwCm4cmp/cover-letter-lenth.webp',
+      alt: "Cover Letter Length",
+    },
+    {
+      path: "/cover-letter-with-no-experience",
+      title: "How to Write a Cover Letter with No Experience",
+      src: 'https://i.postimg.cc/P5vzd6mZ/multi-page-resume-formatting.jpg',
+      alt: "Cover Letter with No Experience",
+    },
+    {
+      path: "/cover-letter-best-practices",
+      title: "Cover Letter Best Practices:The most Template free download",
+      src: 'https://i.postimg.cc/P5vzd6mZ/multi-page-resume-formatting.jpg',
+      alt: "Cover Letter Best Practices",
+    },
+    {
+      path: "/common-cover-letter-mistake",
+      title: " The Most Common Cover Letter Mistake | 100% Free Download",
+      src: 'https://i.postimg.cc/gkN2Vmyg/bg-mid.png',
+      alt: "Common Cover Letter Mistake",
+    },
+    {
+      path: "/cover-letter-for-recent-graduates",
+      title: " Cover Letter for Recent Graduates: Guide And free download template",
+      src: 'https://i.postimg.cc/jjLjZmqy/recent-graduate-cover-letter.jpg',
+      alt: "Cover Letter for Recent Graduates",
+    },
+    {
+      path: "/crafting-an-impactful-hr-manager-cover-letter",
+      title: " Crafting an Impactful HR Manager Cover Letter: A Comprehensive Guide | ResumeEra",
+      src: 'https://i.postimg.cc/mDP5Y48P/hr-manager-cover-letter.jpg',
+      alt: "Crafting an Impactful HR Manager Cover Letter",
+    },
+    {
+      path: "/short-cover-letter-sample-for-customer-service",
+      title: " Short Cover Letter Sample for Customer Service: Edit and Download Now in Free",
+      src: 'https://i.postimg.cc/pLWLV51P/short-cover-letter-for-costumer-services.jpg',
+      alt: "Short Cover Letter Sample for Customer Service",
+    },
+    {
+      path: "/short-cover-letter-sample-for-fresher",
+      title: " Short Cover Letter Sample for Fresher: Free Template to Kickstart Your Career",
+      src: 'https://i.postimg.cc/2jq1ZWwG/Short-Cover-Letter-Sample-for-Fresher.webp',
+      alt: "Short Cover Letter Sample for Fresher",
+    },
+    {
+      path: "/sample-cover-letter-for-job-application",
+      title: "Sample Cover Letter for Job Application: Free Template to Secure Your Next Role",
+      src: 'https://i.postimg.cc/sD913t7W/Sample-Cover-Letter-for-Job-Application.webp',
+      alt: "Sample Cover Letter for Job Application",
+    },
+
   ];
   
   

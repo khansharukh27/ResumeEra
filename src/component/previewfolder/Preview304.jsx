@@ -42,7 +42,7 @@ export default function Preview304() {
   const Hobbies = useSelector((state) => [state.reducer.addHobies]);
   const project = useSelector((state) => [state.reducer.projectData]);
 
-  console.log('hobbies preview 304:-', Hobbies); // Updated log message to match component
+  console.log('SoftSkill preview 304:-',SoftSkill); // Updated log message to match component
   console.log('honor and award:-', Honor);
 
   // Responsive heading size
@@ -205,7 +205,7 @@ export default function Preview304() {
                         lineHeight: `${lineSpacing}em`,
                       }}
                     >
-                      {keys.softSkills} {/* Corrected from softSkill to match Redux state */}
+                      {keys.softSkill} 
                     </li>
                   </ul>
                 </div>
@@ -237,14 +237,18 @@ export default function Preview304() {
                       fontFamily: fontStyle,
                       marginRight: '0px',
                       minWidth: '100px',
-                      marginBottom: '-5px',
+                      
                     }}
                   >
                     <li
                       style={{
                         color: fontColor,
-                        fontFamily: fontStyle,
                         lineHeight: `${lineSpacing}em`,
+                        fontSize: `${fontSize}px`,
+                      fontFamily: fontStyle,
+                      marginRight: '0px',
+                      minWidth: '100px',
+                      
                       }}
                     >
                       {keys.keyskills}
@@ -273,21 +277,23 @@ export default function Preview304() {
                   {experienceHeading}
                 </h4>
                 {work[0].map((works, index) => (
-                  <div key={index} className="employment-history304" style={{ marginBottom: `${sectionSpacing}px` }}>
+                  <div key={index} className="employment-history304" 
+                  style={{ marginBottom: `${sectionSpacing}px` }}>
                     <div className="exp-inner304">
                       <p
                         style={{
                           color: fontColor,
                           fontFamily: fontStyle,
                           fontSize: `${fontSize}px`,
-                          marginBottom: '-5px',
+                          
                           lineHeight: `${lineSpacing}em`,
                         }}
                         className="employment-detail304"
                       >
+                        <p></p>
                         <b style={{ fontWeight: 500, color: fontColor }}>{works.jobtitle}</b>
                         <br />
-                        {works.organization} {works.city || 'N/A'} {/* Corrected from work.city */}
+                        {works.organization} {works.city || ' '} {/* Corrected from work.city */}
                       </p>
                       <div style={{ display: 'flex', justifyContent: 'space-between' }}>
                         <p
@@ -295,7 +301,7 @@ export default function Preview304() {
                             color: fontColor,
                             fontFamily: fontStyle,
                             fontSize: `${fontSize}px`,
-                            marginBottom: '-5px',
+                            
                             lineHeight: `${lineSpacing}em`,
                           }}
                           className="employment-detail304"
@@ -344,7 +350,7 @@ export default function Preview304() {
                             fontFamily: fontStyle,
                             fontSize: `${fontSize}px`,
                             fontWeight: 600, // Corrected from 60
-                            marginBottom: '-5px',
+                            // 
                             lineHeight: `${lineSpacing}em`,
                           }}
                           className="employment-detail304"
@@ -357,7 +363,7 @@ export default function Preview304() {
                             fontFamily: fontStyle,
                             fontSize: `${fontSize}px`,
                             fontWeight: 600,
-                            marginBottom: '-5px',
+                            // 
                             lineHeight: `${lineSpacing}em`,
                           }}
                           className="employment-detail304"
@@ -371,7 +377,7 @@ export default function Preview304() {
                             color: fontColor,
                             fontFamily: fontStyle,
                             fontSize: `${fontSize}px`,
-                            marginBottom: '-5px',
+                            // 
                             lineHeight: `${lineSpacing}em`,
                           }}
                           className="employment-detail304"
@@ -468,17 +474,18 @@ export default function Preview304() {
                       <div key={index} className="d-flex align-items-center">
                         <ul
                           style={{
-                            fontSize: `${fontSize}px`,
+                            
                             color: fontColor,
                             fontFamily: fontStyle,
                             marginRight: '0px',
                             minWidth: '100px',
-                            marginBottom: '-5px',
+                            
                           }}
                         >
                           <li
                             style={{
-                              marginBottom: '-5px',
+                              fontSize: `${fontSize}px`,
+                              
                               color: fontColor,
                               fontFamily: fontStyle,
                               lineHeight: `${lineSpacing}em`,
