@@ -1,0 +1,190 @@
+/* General Styling */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+}
+
+/* Article container */
+.shadi-card-container{
+    background:linear-gradient(145deg, #cec333 0%, #7fdf8f, #c07fdf, 100%);
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 30px;
+    /* box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05); */
+}
+
+/* Heading Section */
+h1 {
+    font-size: 32px;
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Image Styling */
+img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 20px;
+}
+
+/* Intro Text */
+.intro-text {
+    font-size: 18px;
+    color: #555;
+    text-align: justify;
+    margin-bottom: 30px;
+}
+
+/* Shadi Card Section */
+.shadi-card-container {
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+}
+
+/* Section Styling */
+.section {
+    margin-bottom: 40px;
+}
+
+h2 {
+    font-size: 28px;
+    color: #2c3e50;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+/* Lists */
+ol.list,
+ul {
+    margin: 20px 0;
+    padding-left: 40px;
+}
+
+li {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+li strong {
+    color: #2c3e50;
+}
+
+/* Links */
+a {
+    color: #3498db;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Tips Section */
+.section img {
+    border-radius: 8px;
+    margin-top: 20px;
+}
+
+/* Footer Section */
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+    margin-top: 50px;
+    font-size: 16px;
+}
+.cta-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px 20px;
+    background-color: #410b0b;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  .cta-content {
+    max-width: 600px;
+  }
+  
+  .cta-content h2 {
+    font-size: 32px;
+    color: #800000;
+    margin-bottom: 15px;
+    font-weight: bold;
+  }
+  
+  .cta-content p {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 20px;
+  }
+  
+  .cta-button {
+    padding: 12px 25px;
+    background-color: #800000;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .cta-button:hover {
+    background-color: #9b2226;
+  }
+  
+  .cta-images {
+    display: flex;
+    gap: 15px;
+    padding: 25px;
+  }
+  
+  .cta-images img {
+    width: 200px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+
+/* Mobile Responsiveness */
+@media screen and (max-width: 768px) {
+    h1 {
+        font-size: 28px;
+    }
+
+    h2 {
+        font-size: 24px;
+    }
+
+    .aboutResumeEra {
+        padding: 10px;
+    }
+
+    .intro-text {
+        font-size: 16px;
+    }
+
+    ol.list,
+    ul {
+        padding-left: 30px;
+    }
+
+    .section img {
+        width: 100%;
+        height: auto;
+    }
+}

@@ -7,6 +7,7 @@ import jsPDF from 'jspdf';
 import html2canvas from 'html2canvas';
 import './CSS/preview116.css';
 import PdfDownloadButton from '../PdfDownloadButton';
+import Toolbar from '../Toolbar';
 
 const Preview116 = () => {
   // State for PDF filename and styling options
@@ -55,7 +56,18 @@ const Preview116 = () => {
         setHeadingSize(20); // Default heading size
       }
     };
+    const changeAlignment = (alignment) => {
+      document.execCommand('justify' + alignment, false, null);
+  };
+  
+  const toggleStyle = (style) => {
+      document.execCommand(style, false, null);
+  };
 
+  // Function to toggle lists (bullet and numbered)
+  const toggleList = (listType) => {
+      document.execCommand(listType, false, null);
+  };
     handleResize();
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
@@ -65,7 +77,18 @@ const Preview116 = () => {
   const handleEdit = (e, defaultValue, setter) => {
     setter(e.target.textContent.trim() || defaultValue);
   };
+  const changeAlignment = (alignment) => {
+    document.execCommand('justify' + alignment, false, null);
+};
 
+const toggleStyle = (style) => {
+    document.execCommand(style, false, null);
+};
+
+// Function to toggle lists (bullet and numbered)
+const toggleList = (listType) => {
+    document.execCommand(listType, false, null);
+};
   return (
     <div>
       <header style={{ paddingLeft: '10px', paddingRight: '10px', textAlign: 'center' }}>
@@ -83,7 +106,8 @@ const Preview116 = () => {
           Take a moment to review your resume. Remember, the right opportunity is just around the corner. Stand out, stay confident, and let ResumeEra be your trusted partner in achieving your career goals!
         </p>
       </header>
-      <div className="main116">
+      <div className="main116 marging">
+        <toolbar toggleStyle={toggleStyle} changeAlignment={changeAlignment} toggleList={toggleList}  />
         <div
           className="Preview116"
           style={{ backgroundColor: bgColor, margin: `${margin}px` }}

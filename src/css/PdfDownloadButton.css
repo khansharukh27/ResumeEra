@@ -1,0 +1,216 @@
+/* Main section styles */
+.resume-download-section {
+    display: flex;
+    padding: 20px;
+    background-color: transparent;
+    border-radius: 15px;
+    width: fit-content;
+    margin: 0 auto; /* Center align the section */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Soft shadow for a professional look */
+    justify-content: space-between; /* Distributes space between elements */
+    left: 0px;
+    flex-flow: row;
+    
+}
+
+.headers {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: -25px;
+    padding-bottom: 10px;
+    width: 100%;
+}
+
+.resume-name-input {
+    border-radius: 5px;
+    padding: 10px;
+    width:50%;
+    margin-bottom: 20px;
+    flex: 1;
+    border: 1px solid #ccc;
+    font-size: 16px; /* Consistent font size */
+}
+
+.download-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-size: 16px;
+    width:'50%';
+    text-transform: uppercase;
+}
+
+.download-button:hover {
+    background-color: #0056b3;
+}
+
+.customization-controls {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: nowrap; /* Ensures items stay in one row */
+    margin-top: 10px;
+}
+
+.control-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background-color: #007bff;
+    padding: 10px;
+    border-radius: 5px;
+    color: white;
+    font-size: 14px;
+}
+
+.color-input,
+.font-select,
+.size-input,
+.spacing-input {
+    border-radius: 5px;
+    padding: 5px;
+    border: 1px solid #ccc;
+    width: 30px;
+}
+
+.size-input,
+.spacing-input {
+    width: 40px;
+}
+
+.ad-section {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 14px;
+    color: #555;
+}
+
+.control-item i {
+    font-size: 18px;
+}
+
+.control-item span {
+    font-size: 14px;
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 1024px) {
+    .resume-download-section {
+        width: 1024px;
+        padding: 15px;
+        left: 0px;
+    }
+
+    .headers {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .resume-name-input {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .download-button {
+        width: 100%;
+        padding: 12px;
+    }
+
+    .customization-controls {
+        justify-content: flex-start;
+        margin-top: 10px;
+    }
+
+    .control-item {
+        font-size: 12px;
+        padding: 8px;
+    }
+}
+
+@media (max-width: 768px) {
+    .resume-download-section {
+        width: 768px;
+        padding: 15px;
+        left: 0px;
+    }
+
+    .resume-name-input {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+
+    .download-button {
+        width: 100%;
+        padding: 12px;
+    }
+
+    .customization-controls {
+        justify-content: flex-start;
+        gap: 8px;
+    }
+
+    .control-item {
+        font-size: 14px;
+        padding: 8px 12px;
+    }
+
+    .color-input,
+    .font-select,
+    .size-input,
+    .spacing-input {
+        width: 35px;
+        padding: 4px;
+    }
+}
+
+@media (max-width: 480px) {
+    .resume-download-section {
+        width: 480px;
+        padding: 10px;
+        left: 0px;
+    }
+
+    .headers {
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        margin-top: 0px;
+    }
+
+    .resume-name-input {
+        width: 100%;
+        margin-bottom: 15px;
+    }
+
+    .download-button {
+        width: 100%;
+        padding: 12px;
+    }
+
+    .customization-controls {
+        flex-direction: row;
+        gap: 5px;
+    }
+
+    .control-item {
+        font-size: 12px;
+        padding: 8px;
+        width: auto;
+    }
+
+    .color-input,
+    .font-select,
+    .size-input,
+    .spacing-input {
+        width: 30px;
+        padding: 4px;
+    }
+}

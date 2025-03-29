@@ -3,12 +3,12 @@ import '../css/coverletter/coverletter.css';
 import { Link, useNavigate } from 'react-router-dom';
 import { coverletters } from '../Redux/action';
 import { useState, useEffect } from 'react';
-import what_is_cover from '../image/image_for_link/what_is_cover.jpg'
-import importance_of_cover from '../image/image_for_link/importance_of _cover.jpg'
-import cover_letter_1 from '../image/image_for_link/cover_letter_1.jpg'
-import cover_letter_2 from '../image/image_for_link/cover_letter_2.png'
+import what_is_cover from '../image/image_for_link/what_is_cover.png'
+import importance_of_cover from '../image/image_for_link/importance of coverletter.png'
+import cover_letter_1 from '../image/CoverImage/creative-cover-letter-template.png'
+import cover_letter_2 from '../image/CoverImage/general-cover-letter-template.png'
 
-import cover_letter_3 from '../image/image_for_link/cover_letter_3.jpg'
+import writing_cover_tip from '../image/image_for_link/Tips for Writing an Effective Cover Letter - visual selection.png'
 import '../css/covercomponent.css'
 import { Helmet } from 'react-helmet';
 
@@ -227,11 +227,11 @@ const CoverLetter = (props) => {
                         <div className='cover_letter_image_sample'>
                             <img src={cover_letter_1} alt="cover letter" />
                             <img src={cover_letter_2} alt="cover letter" />
-                            <img src={cover_letter_3} alt="cover letter" />
                         </div>
                     </p>
                     <hr />
                     <h2>Tips for Writing an Effective Cover Letter</h2>
+
                     <p>
                         <ol>
                             <li><b>Tailor Each Letter:</b> Customize your cover letter for each job application to reflect the specific requirements and culture of the company.</li>
@@ -242,6 +242,7 @@ const CoverLetter = (props) => {
                             <li><b>Include SEO Keywords:</b> Incorporate relevant keywords like "resumeera," "how to make a cover letter online," and "cover letter tips" to enhance visibility if the document is shared online.</li>
                         </ol>
                     </p>
+                    <img src={writing_cover_tip} alt="writing_cover_tip" loading='lazy' style={{width:'100%'}} />
                     <h2>Creating a Cover Letter Online</h2>
                     <p>
                         For those looking to create a cover letter quickly, many online tools can assist you. Websites like resumeera offer templates and step-by-step guides on how to make a cover letter online, making it easier to produce a professional document without starting from scratch.
@@ -267,8 +268,12 @@ const CoverLetter = (props) => {
                                 className="template-image"
                                 src={image.src}
                                 alt={image.alt}
-                                style={{ height: '350px', width: '250px' }}
+                                loading="lazy"
+                                style={{ height: '450px', width: '100%',border: '1px solid black',
+                                borderRadius:'25px',filter: "grayscale(50%)",objectFit:"contain" }}
                             />
+                            <h4 style={{ textAlign: 'center' ,fontWeight:'bold',marginTop:'5px'}}>{image.alt.split(' ')[0]}</h4>
+                            <small style={{ textAlign: 'center',marginTop:'5px' }}>{image.description}</small>
                             {hoveredImage === image.id && (
                                 <a
                                     href={`/cover_letter/${hoveredImage}`}

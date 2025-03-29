@@ -5,14 +5,17 @@ import NormalResume from './NormalResume';
 import TechnicalResumeImages from './TechResume/TechnicalResumeImages';
 import GoogleAd from './adFolder/GoogleAd';
 import FresherResume from './FresherResume';
+import ShadiCard from './Shadi Card/ShadiCard';
+import { useSelector } from 'react-redux';
 
 const TemplatePage = (props) => {
-  const { images, techImages, fresherResumeImage } = props;
+  const { images, techImages, fresherResumeImage ,shadi_Card} = props;
 
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
 
+  
   return (
     <div className="template-page-container">
       {/* Helmet for SEO */}
@@ -107,6 +110,13 @@ const TemplatePage = (props) => {
       <GoogleAd />
       <TechnicalResumeImages techImages={techImages} />
       <GoogleAd />
+      <div className="shadiCardDescription">
+        <h2>About Our Wedding Card Collection</h2>
+        <p>
+          Our wedding card collection offers a wide variety of beautiful designs to match every couple's taste and style. Each card has been crafted with care and attention to detail, ensuring that your special day is celebrated with elegance. From traditional borders to modern clipart, our collection is designed to provide a perfect match for your wedding theme. Whether you prefer a simple and classic look or a more intricate and stylish design, you'll find something that suits your vision. Explore our collection of wedding cards and find the ideal match for your big day!
+        </p>
+      </div>
+      <ShadiCard shadi_Card={shadi_Card}/>
       {/* Introduction Section */}
       <section className="template-intro">
         <h2>Why Resume Templates Matter in Your 2025 Job Search</h2>

@@ -2030,13 +2030,120 @@ const ImportantPostLink = () => {
       src: 'https://i.postimg.cc/sD913t7W/Sample-Cover-Letter-for-Job-Application.webp',
       alt: "Sample Cover Letter for Job Application",
     },
+    {
+      path: "/resume-vs-cover-letter-what-you-need-to-know",
+      title: "Resume vs Cover Letter: Understanding the Differences and How to Use Them Effectively",
+      src: 'https://i.postimg.cc/kgXyv7Mn/resume-vs-cover-letter.jpg',
+      alt: "Resume vs Cover Letter",
+    },
+    {
+      path: "/tips-for-writing-a-general-cover-letter",
+      title: "General Cover Letter: Your Guide to Crafting an Effective One in 2025",
+      src: 'https://i.postimg.cc/kgXyv7Mn/resume-vs-cover-letter.jpg',
+      alt: "General Cover Letter",
+    },
+    {
+      path: "/crafting-a-standout-civil-engineering-resume-for-freshers",
+      title: "Crafting a Standout Civil Engineering Resume for Freshers | ResumeEra",
+      src: 'https://i.postimg.cc/T2qLBKfq/Civil-Engineering-Resume-for-Freshers.jpg',
+      alt: "Civil Engineering Resume for Freshers",
+    },
+    {
+      path: "/crafting-an-outstanding-react-js-developer-resume",
+      title: "Crafting an Outstanding React JS Developer Resume | ResumeEra",
+      src: 'https://i.postimg.cc/T2qLBKfq/Civil-Engineering-Resume-for-Freshers.jpg',
+      alt: "React JS Developer Resume",
+    },
+    {
+      path: "/how-to-craft-an-impressive-assistant-professor-resume",
+      title: "How to Craft an Impressive Assistant Professor Resume | ResumeEra",
+      src: 'https://i.postimg.cc/T2qLBKfq/Civil-Engineering-Resume-for-Freshers.jpg',
+      alt: "Assistant Professor Resume",
+    },
+    {
+      path: "/how-to-write-the-perfect-electrician-resume-pdf",
+      title: "How to Write the Perfect Electrician Resume Pdf| ResumeEra",
+      src: 'https://i.postimg.cc/wjR7Qpcn/Electrician-Resume-pdf.jpg',
+      alt: " Electrician Resume pdf",
+    },
+    {
+      path: "/crafting-a-sample-resume-for-assistant-professor-fresher-pdf",
+      title: "Crafting a Sample Resume for Assistant Professor Fresher PDF | ResumeEra",
+      src: 'https://i.postimg.cc/wjR7Qpcn/Electrician-Resume-pdf.jpg',
+      alt: "Sample Resume for Assistant Professor Fresher PDF",
+    },
+    {
+      path: "/crafting-an-effective-servicenow-developer-resume",
+      title: "Crafting an Effective ServiceNow Developer Resume | ResumeEra",
+      src: 'https://i.postimg.cc/wjR7Qpcn/Electrician-Resume-pdf.jpg',
+      alt: "Crafting an Effective ServiceNow Developer Resume",
+    },
+    {
+      path: "/us-it-recruiter-resume-your-gateway-to-career-success",
+      title: "US IT Recruiter Resume: Your Gateway to Career Success | ResumeEra",
+      src: 'https://i.postimg.cc/RV7Z2Zmj/us-it-requireter-reusme-1.webp',
+      alt: "US IT Recruiter Resume",
+    },
+    {
+      path: "/how-to-write-an-automation-testing-resume-for-2-years-in-experience",
+      title: "How to Write an Automation Testing Resume for 2 Years in Experience | ResumeEra",
+      src: 'https://i.postimg.cc/NjmBP196/Automation-Testing-Resume.jpg',
+      alt: "Automation Testing Resume for 2 Years in Experience",
+    },
+    {
+      path: "/how-i-created-the-perfect-ayurveda-doctor-resume-that-got-me-interviews",
+      title: "How I Created the Perfect Ayurveda Doctor Resume That Got Me Interviews | ResumeEra",
+      src: 'https://i.postimg.cc/qMJ8TP9q/converted-image.webp',
+      alt: "Ayurveda Doctor Resume",
+    },
+    {
+      path: "/how-to-craft-the-perfect-bams-doctor-resume-that-will-land-you-interviews",
+      title: "How to Craft the Perfect BAMS Doctor Resume That Will Land You Interviews | ResumeEra",
+      src: 'https://i.postimg.cc/3NBfwg8v/How-to-Craft-the-Perfect-BAMS-Doctor-Resume-That-Will-Land-You-Interviews.png',
+      alt: "BAMS Doctor Resume",
+    },
+    {
+      path: "/how-to-honda-careers-resume-upload",
+      title: "How to Successfully Upload Your Resume for Honda Careers | ResumeEra",
+      src: 'https://i.postimg.cc/wvKwQ90F/How-to-Successfully-Upload-Your-Resume-for-Honda-Careers.png',
+      alt: "Honda Careers resume upload",
+    },
+    {
+      path: "/iti-fitter-resume-format",
+      title: "ITI Fitter Resume Format: A Complete Guide for Crafting a Perfect Resume | ResumeEra",
+      src: 'https://i.postimg.cc/R0S9KP7b/ITI-Fitter-Resume-Format.png',
+      alt: "ITI Fitter Resume Format",
+    },
+    {
+      path: "/process-associate-resume-format",
+      title: "Crafting an Effective Process Associate Resume: Download with Guide | ResumeEra",
+      src: 'https://i.postimg.cc/qMFmHQM6/Process-Associate-Resume.png',
+      alt: "Process Associate Resume",
+    },
+    {
+      path: "/crafting-an-outstanding-react-js-resume",
+      title: "How to Build an Impressive React JS Resume with Resumeera.xyz | ResumeEra",
+      src: 'https://i.postimg.cc/x8XpqGMc/Impressive-React-JS-Resume.png',
+      alt: "React JS Resume",
+    },
+    {
+      path: "/crafting-an-effective-resume-for-c++-developer",
+      title: "Crafting an Effective Resume for C++ Developer: A Complete Guide | ResumeEra",
+      src: 'https://i.postimg.cc/yYnrV0nH/Resume-for-a-C-Developer.png',
+      alt: "Effective Resume for C++ Developer",
+    },
+
+    {
+      path: "/marriage-biodata-in-hindi",
+      title: "Marriage Biodata in Hindi  template: edit and Download now free",
+      src: 'https://i.postimg.cc/BvSkhYKV/Marriage-Biodata-in-Hindi.png',
+      alt: "Marriage Biodata in Hindi",
+    },
 
   ];
   
   
   
-  
-
   // Filter posts based on search term
   const filteredPosts = posts.filter((post) =>
     post.title.toLowerCase().includes(searchTerm.toLowerCase())

@@ -98,6 +98,22 @@ import CoverLetter from "./component/CoverLetter";
 import cover_letter_1 from "../src/image/CoverImage/cover_letter_1.png";
 import cover_letter_2 from "../src/image/CoverImage/cover_letter_2.webp";
 import cover_letter_3 from "../src/image/CoverImage/cover_letter_3.webp";
+import basic_cover_letter_template from "../src/image/CoverImage/basic-cover-letter-template.png";
+import college_cover_letter_template from "../src/image/CoverImage/college-cover-letter-template.png"
+import combined_cover_letter_template from "../src/image/CoverImage/combined-cover-letter-template.png";
+import creative_cover_letter_template from "../src/image/CoverImage/creative-cover-letter-template.png";
+import executive_cover_letter_template from "../src/image/CoverImage/executive-cover-letter-template.png";
+import functional_cover_letter_template from "../src/image/CoverImage/functional-cover-letter-template.png";
+import general_cover_letter_template from "../src/image/CoverImage/general-cover-letter-template.png";
+import  hybrid_cover_letter_template from "../src/image/CoverImage/hybrid-cover-letter-template.png";
+import it_cover_letter_template from "../src/image/CoverImage/it-cover-letter-template.png";
+import minimalist_cover_letter_template from "../src/image/CoverImage/minimalist-cover-letter-template.png";
+import modern_cover_letter_template from "../src/image/CoverImage/modern-cover-letter-template.png";
+import professional_cover_letter_template from "../src/image/CoverImage/professional-cover-letter-template.png";
+import simple_covder_letter_template from "../src/image/CoverImage/simple-cover-letter-template.png";
+import tech_cover_letter_template from "../src/image/CoverImage/tech-cover-letter-template.png";
+import traditional_cover_letter_template from "../src/image/CoverImage/traditional-cover-letter-template.png";
+import skill_based_cover_letter_template from '../src/image/CoverImage/skill-based-cover-letter-template.png'
 import Preview301 from './component/previewfolder/Preview301.jsx'
 import Preview302 from './component/previewfolder/Preview302.jsx'
 import Preview303 from './component/previewfolder/Preview303.jsx'
@@ -193,7 +209,7 @@ import MotivationalCareerQuotes from "./component/MOTIVATIONAL/MotivationalCaree
 import Login from "./component/signupAndLogin/Login";
 import MotivateToStudy from "./component/MOTIVATIONAL/MotivateToStudy";
 import RemoveBadHabits from "./component/MOTIVATIONAL/RemoveBadHabits";
-import { loadCoverImages, loadImages, loadTechImages } from "./Redux/action";
+import { loadCoverImages, loadImages, loadTechImages, marriedImage } from "./Redux/action";
 import { useDispatch, useSelector } from "react-redux";
 import CoverLetterGuide from "./component/ImportantPost/CoverLetterGuide";
 import HowToMakeResume2024 from "./component/ImportantPost/HowToMakeResume2024";
@@ -233,7 +249,6 @@ import HighlightAchievementsForResume from "./component/ImportantPost/HighlightA
 import MultiPageResumeFormatting from "./component/ImportantPost/MultiPageResumeFormatting";
 import TailorResumeGuide from "./component/ImportantPost/TailorResumeGuide";
 import ResumeFormattingArticle from "./component/ImportantPost/ResumeFormattingArticle.jsx";
-import { Helmet } from "react-helmet";
 import GoogleAnalytics from "./component/GoogleAnalytics.jsx";
 import ITResumeTips from "./component/ImportantPost/ITResumeTips.jsx";
 import HealthcareResumeGuide from "./component/ImportantPost/HealthcareResumeGuide.jsx";
@@ -243,11 +258,8 @@ import ResumeFormattingForTeachersAndProfessors from "./component/ImportantPost/
 import ResumeFormattingEngineeringStudents from "./component/ImportantPost/ResumeFormattingEngineeringStudents.jsx";
 import ResumeFormattingforFreelancersandRemoteWorkers from "./component/ImportantPost/ResumeFormattingforFreelancersandRemoteWorkers.jsx";
 import GovernmentJobResumeGuide from "./component/ImportantPost/GovernmentJobResumeGuide.jsx";
-import Hospitality_and_Tourism from "./component/ImportantPost/HospitalityandTourism.jsx";
 import Resume_Formatting_Real_Estate_Agents from "./component/ImportantPost/Resume_Formatting_Real_Estate_Agents.jsx";
-import Best_Free_Resume_Formatting_Tools_for_2024 from "./component/ImportantPost/Best_Free_Resume_Formatting_Tools_for_2024.jsx";
 import Best_Free_Resume_Formatting_Tools_for_2025 from "./component/ImportantPost/Best_Free_Resume_Formatting_Tools_for_2024.jsx";
-import SitemapNotifier from "./component/SitemapNotifier.jsx";
 import ResumeFormattingTool from "./component/ImportantPost/ResumeFormattingTool.jsx";
 import Infographic_Resume_Formatting from "./component/ImportantPost/Infographic_Resume_Formatting.jsx";
 import ResumeFormattinMistake from "./component/ImportantPost/ResumeFormattinMistake.jsx";
@@ -453,6 +465,15 @@ import ICICIBankResumeFormatForFreshers from "./component/ImportantPost/bank res
 import BankResumeFormatFreshers from "./component/ImportantPost/bank resume artifcle/BankResumeFormatFreshers.jsx";
 import AxisBankResumeFormatForFreshers from "./component/ImportantPost/bank resume artifcle/AxisBankResumeFormatForFreshers.jsx";
 import Preview309 from "./component/previewfolder/Preview309.jsx";
+import Preview401 from './component/Shadi Card/shadiCardPreview/Preview401.jsx'
+import Preview402 from './component/Shadi Card/shadiCardPreview/Preview402.jsx'
+import Preview403 from './component/Shadi Card/shadiCardPreview/Preview403.jsx'
+import Preview404 from './component/Shadi Card/shadiCardPreview/Preview404.jsx'
+import Preview405 from './component/Shadi Card/shadiCardPreview/Preview405.jsx'
+import Preview406 from './component/Shadi Card/shadiCardPreview/Preview406.jsx'
+import Preview407 from './component/Shadi Card/shadiCardPreview/Preview407.jsx'
+import Preview408 from './component/Shadi Card/shadiCardPreview/Preview408.jsx'
+import Preview409 from './component/Shadi Card/shadiCardPreview/Preview409.jsx'
 import HowToCreateResumeForFreshers from "./component/ImportantPost/teenager resume/HowToCreateResumeForFreshers.jsx";
 import FormatOfResume from "./component/ImportantPost/teenager resume/FormatOfResume.jsx";
 import FresherResumeTemplate from "./component/ImportantPost/teenager resume/FresherResumeTemplate.jsx";
@@ -496,7 +517,52 @@ import CraftingHRManagerCoverLetter from "./component/cover letter post/Crafting
 import ShortCoverLetterCustomerService from "./component/cover letter post/ShortCoverLetterCustomerService.jsx";
 import ShortCoverLetterForFresher from "./component/cover letter post/ShortCoverLetterForFresher.jsx";
 import SampleCoverLetterForJobApplication from "./component/cover letter post/SampleCoverLetterForJobApplication.jsx";
-
+import ResumeVsCoverLetter from "./component/ImportantPost/ResumeVsCoverLetter.jsx";
+import GeneralCoverLetter from "./component/cover letter post/GeneralCoverLetter.jsx";
+import Preview203 from "./component/coverletterFolder/Preview203.jsx";
+import CivilEngineeringResumeforFreshers from './component/ImportantPost/CivilEngineeringResumeforFreshers.jsx'
+import Preview204 from "./component/coverletterFolder/Preview204.jsx";
+import Preview205 from './component/coverletterFolder/Preview205.jsx'
+import Preview206 from './component/coverletterFolder/Preview206.jsx'
+import Preview207 from './component/coverletterFolder/Preview207.jsx'
+import Preview208 from './component/coverletterFolder/Preview208.jsx'
+import Preview209 from './component/coverletterFolder/Preview209.jsx'
+import Preview210 from './component/coverletterFolder/Preview210.jsx'
+import Preview211 from './component/coverletterFolder/Preview211.jsx'
+import Preview212 from './component/coverletterFolder/Preview212.jsx'
+import Preview213 from './component/coverletterFolder/Preview213.jsx'
+import Preview214 from './component/coverletterFolder/Preview214.jsx'
+import Preview215 from './component/coverletterFolder/Preview215.jsx'
+import Preview216 from './component/coverletterFolder/Preview216.jsx'
+import Preview217 from './component/coverletterFolder/Preview217.jsx'
+import Preview218 from './component/coverletterFolder/Preview218.jsx'
+import ReactJsDeveloperResume from "./component/ImportantPost/ReactJsDeveloperResume.jsx";
+import AssistantProfessorResumeSamplePdf from "./component/ImportantPost/AssistantProfessorResumeSamplePdf.jsx";
+import ElectricianResumedf from "./component/ImportantPost/ElectricianResumedf.jsx";
+import SampleResumeForAssistantProfessorFresherPdf from "./component/ImportantPost/SampleResumeForAssistantProfessorFresherPdf.jsx";
+import ServicenowDeveloperResume from "./component/ImportantPost/ServicenowDeveloperResume.jsx";
+import USITRecruiterResumeGuide from "./component/ImportantPost/USITRecruiterResumeGuide.jsx";
+import AutomationTestingResumeGuide from "./component/ImportantPost/AutomationTestingResumeGuide.jsx";
+import ImageConverter from "./component/ImageConverter.jsx";
+import AyurvedaDoctorResumeGuide from "./component/ImportantPost/AyurvedaDoctorResumeGuide.jsx";
+import BAMSDoctorResumeGuide from "./component/ImportantPost/BAMSDoctorResumeGuide.jsx";
+import HondaCareersResumeUpload from "./component/ImportantPost/HondaCareersResumeUpload.jsx";
+import ITIFitterResumeFormat from "./component/ImportantPost/ITIFitterResumeFormat.jsx";
+import ProcessAssociateResumeFormat from "./component/ImportantPost/ProcessAssociateResumeFormat.jsx";
+import ReactJSResumeFormat from "./component/ImportantPost/ReactJSResumeFormat.jsx";
+import CppDeveloperResumeFormat from "./component/ImportantPost/CppDeveloperResumeFormat.jsx";
+import ShadiCard from "./component/Shadi Card/ShadiCard.jsx";
+import Border_Element from "./image/shadi biodata/Border_Element.png";
+import Border_Fashion from "./image/shadi biodata/Border_Fashion_married_Template.png";
+import Border_married_Template from "./image/shadi biodata/Border_married_Template.png";
+import Corner_Star_Marrige_Template from "./image/shadi biodata/Corner_Star_Marrige_template.png";
+import Elegant_Border_marriege_Invitation_Template from "./image/shadi biodata/Elegant_Border_marriege_Invitation_Template.png";
+import Free_Heart_Border_Clipart from "./image/shadi biodata/Free_Heart_Border_Clipart.png";
+import Free_Wedding_Heart_Border_Clipart from "./image/shadi biodata/Free_Wedding_Heart_Border_Clipart.png";
+import Marrige_Clipart from "./image/shadi biodata/Marrige_Clipart.png";
+import Simple_Fancy_Border_Marrige_Template from "./image/shadi biodata/Simple_Fancy_Border_Marrige_Template.png";
+import PersonalInfoForm from './component/Shadi Card/PersonalInfoForm.jsx'
+import MarriageBiodataInHindi from "./component/Shadi article/MarriageBiodataInHindi.jsx";
 var images = [
   { id: 1, src: resum1, alt: "Professional Resume Template 1",description:'Professional and elegant resume template with a timeline structure' },
   { id: 2, src: resume2, alt: "Modern Resume Design 2",description:'Clean and modern resume portfolio or cv template' },
@@ -552,9 +618,25 @@ var techImages = [
 ];
 
 const CoverImage = [
-  { id: 201, src: cover_letter_1, alt: "cover leter" },
-  { id: 202, src: cover_letter_2, alt: "INTERNSHIP" },
-  { id: 203, src: cover_letter_3, alt: "TEACHER" },
+  { id: 201, src: cover_letter_1, alt: "cover leter", description:"" },
+  { id: 202, src: cover_letter_2, alt: "", description:"" },
+  { id: 203, src: basic_cover_letter_template, alt: "basic cover letter", description:"A classic but stylish design for the basic cover letter layout that has a minimalistic approach." },
+  { id: 204, src: college_cover_letter_template, alt: "college cover letter template", description:"College cover letter template for students applying for internships or part-time jobs, or for graduates applying for their first full-time job." },
+  { id: 205, src: combined_cover_letter_template, alt: "combined cover letter template", description:"A cover letter that matches your resume and helps you explain your achievements and skills." },
+  { id: 206, src: creative_cover_letter_template, alt: "creative cover letter template", description:"A creative cover letter template that matches your creative CV to create an eye-catching application." },
+  { id: 207, src: executive_cover_letter_template, alt: "executive cover letter template" , description:"Executive cover letter sample having an up-to-date arrangement that aligns with the principles imposed by recruiters and employers."},
+  { id: 208, src: functional_cover_letter_template, alt: "functional cover letter template", description:"A functional cover letter template that will increase your chances of being called for an interview." },
+  { id: 209, src: general_cover_letter_template, alt: "general cover letter template" , description:"This versatile cover letter format can be tailored for any job application, no matter the industry."},
+  { id: 210, src: hybrid_cover_letter_template, alt: "hybrid cover letter template", description:"Use this template when you need a job application that showcases your experience and skills equally." },
+  { id: 211, src: it_cover_letter_template, alt: "it covdedr letter template" , description:"Are you applying for an IT job? Use this cover letter template to make the right impression."},
+  { id: 212, src: minimalist_cover_letter_template, alt: "minimalist cover letter template", description:"A crisp and simple cover letter is key to making the right impression with your minimalist resume or CV." },
+  { id: 213, src: modern_cover_letter_template, alt: "modern cover letter template" , description:"Impress the recruiter with a modern cover letter template that has the perfect blend of functionality and design."},
+  { id: 214, src: professional_cover_letter_template, alt: "professional cover letter template" , description:"A professional cover letter template that will make sure you will have higher chances of getting your dream job."},
+  { id: 215, src: simple_covder_letter_template, alt: " simple cover letter template" , description:"A simple cover letter layout for those applying in more traditional industries such as banking, academia or law."},
+  { id: 216, src: skill_based_cover_letter_template, alt: "skill based cover letter template" , description:"A cover letter template that is the perfect match for your skill-based resume used when changing careers."},
+  { id: 217, src: tech_cover_letter_template, alt: "tech cover letter template", description:"This cover letter format was created primarily to impress the job recruiters in the technology sector." },
+  { id: 218, src: traditional_cover_letter_template, alt: "traditional cover letter template", description:"The traditional cover letter template is one of the most common formats that employers expect to see." },
+
 ];
 const fresherResumeImage = [
   {id:301, src:image_301,alt:'accountant resume'},
@@ -567,8 +649,19 @@ const fresherResumeImage = [
   {id:308, src:image_308, alt:'web developer'},
   {id:309, src:image_309, alt:'internship resume'}
 ]
-console.log("images:=", images);
-console.log(images[0].id);
+const shadi_Card = [
+  { id: 401, src: Border_Element, alt: 'Border Element', number: '1/9', link: 'https://example.com/1' },
+  { id: 402, src: Border_Fashion, alt: 'Border Fashion', number: '2/9', link: 'https://example.com/2' },
+  { id: 403, src: Border_married_Template, alt: 'Border Married Template', number: '3/9', link: 'https://example.com/3' },
+  { id: 404, src: Corner_Star_Marrige_Template, alt: 'Corner Star Marriage Template', number: '4/9', link: 'https://example.com/4' },
+  { id: 405, src: Elegant_Border_marriege_Invitation_Template, alt: 'Elegant Border Marriage Invitation Template', number: '5/9', link: 'https://example.com/5' },
+  { id: 406, src: Free_Heart_Border_Clipart, alt: 'Free Heart Border Clipart', number: '6/9', link: 'https://example.com/6' },
+  { id: 407, src: Free_Wedding_Heart_Border_Clipart, alt: 'Free Wedding Heart Border Clipart', number: '7/9', link: 'https://example.com/7' },
+  { id: 408, src: Marrige_Clipart, alt: 'Marriage Clipart', number: '8/9', link: 'https://example.com/8' },
+  { id: 409, src: Simple_Fancy_Border_Marrige_Template, alt: 'Simple Fancy Border Marriage Template', number: '9/9', link: 'https://example.com/9' }
+];
+
+console.log("shadi_Card", shadi_Card);
 const path = "mainpage";
 
 function App() {
@@ -579,6 +672,7 @@ function App() {
     dispatch(loadImages(images)); // Replace with your actual data
     dispatch(loadTechImages(techImages));
     dispatch(loadCoverImages(CoverImage));
+    dispatch(marriedImage(shadi_Card))
   }, [dispatch]);
   // const result = useSelector((state) =>state.reducer)
   // console.log('image data:-',result)
@@ -594,9 +688,7 @@ function App() {
     preloadHomeCSS.as = 'style';
     document.head.appendChild(preloadHomeCSS);
   },[]);
-// Get the current route location
 
-  // Track pageview whenever location changes
   
   return (
     <div>
@@ -633,6 +725,7 @@ function App() {
               techImages={techImages}
               CoverImage={CoverImage}
               fresherResumeImage={fresherResumeImage}
+              shadi_Card={shadi_Card}
             />
           }
         />
@@ -668,9 +761,21 @@ function App() {
           />
         ))}
         
+        {shadi_Card.map((image) => (
+          <Route
+            key={image.id}
+            path={`/shadi-card/${image.id}`}
+            element={
+              <PersonalInfoForm shadi_Card={shadi_Card} />
+            }
+          />
+        ))}
+       
+        
         <Route path="#" element={<TechImageShow  techImages={techImages}/>}/>
         <Route path='#' element={<FresherimageCard fresherResumeImage={fresherResumeImage}/>}/>
         <Route path="#" element={<CombinedTemplates fresherResumeImage={fresherResumeImage} techImages={techImages} images={images}/>}/>
+        <Route path='#' element={<ShadiCard  shadi_Card={shadi_Card}/>}/>
         {CoverImage.map((image) => (
           <Route
             key={image.id}
@@ -701,12 +806,15 @@ function App() {
           path="/edit"
           element={<Edit CoverImage={CoverImage} />}
         />
+        <Route path="/image-converter" element={<ImageConverter />} />
         
-{/* <Route
+       
+
+
+      {/* <Route
           path="/site-map-notifier"
           element={<SitemapNotifier />}
         /> */}
-
 
 
         {/* <Route path=`/cover_lett` element={<CoverLetterInput CoverImage={CoverImage}/>}/> */}
@@ -1923,10 +2031,66 @@ function App() {
       <Route path="/sample-cover-letter-for-job-application"
         element={<SampleCoverLetterForJobApplication CoverImage={CoverImage}/>}
       />
-     
+      <Route path="/resume-vs-cover-letter-what-you-need-to-know"
+        element={<ResumeVsCoverLetter CoverImage={CoverImage} fresherResumeImage={fresherResumeImage} techImages={techImages} images={images}/>}
+      />
+      <Route path="/tips-for-writing-a-general-cover-letter"
+        element={<GeneralCoverLetter CoverImage={CoverImage} />}
+      />
+       <Route path="/crafting-a-standout-civil-engineering-resume-for-freshers"
+        element={<CivilEngineeringResumeforFreshers CoverImage={CoverImage} fresherResumeImage={fresherResumeImage} techImages={techImages} images={images} />}
+      />
+      <Route path="/crafting-an-outstanding-react-js-developer-resume"
+        element={<ReactJsDeveloperResume CoverImage={CoverImage} fresherResumeImage={fresherResumeImage} techImages={techImages} images={images} />}
+      />
+      <Route path="/how-to-craft-an-impressive-assistant-professor-resume"
+        element={<AssistantProfessorResumeSamplePdf CoverImage={CoverImage} fresherResumeImage={fresherResumeImage} techImages={techImages} images={images} />}
+      />
+      <Route path="/how-to-write-the-perfect-electrician-resume-pdf"
+        element={<ElectricianResumedf CoverImage={CoverImage} fresherResumeImage={fresherResumeImage} techImages={techImages} images={images} />}
+      />
+      <Route path="/crafting-a-sample-resume-for-assistant-professor-fresher-pdf"
+        element={<SampleResumeForAssistantProfessorFresherPdf CoverImage={CoverImage} fresherResumeImage={fresherResumeImage} techImages={techImages} images={images} />}
+      />
+      <Route path="/crafting-an-effective-servicenow-developer-resume"
+        element={<ServicenowDeveloperResume CoverImage={CoverImage} fresherResumeImage={fresherResumeImage} techImages={techImages} images={images} />}
+      />
+      <Route path="/us-it-recruiter-resume-your-gateway-to-career-success"
+        element={<USITRecruiterResumeGuide CoverImage={CoverImage} fresherResumeImage={fresherResumeImage} techImages={techImages} images={images} />}
+      />
+      <Route path="/how-to-write-an-automation-testing-resume-for-2-years-in-experience"
+        element={<AutomationTestingResumeGuide CoverImage={CoverImage} fresherResumeImage={fresherResumeImage} techImages={techImages} images={images} />}
+      />
+      <Route path="/how-i-created-the-perfect-ayurveda-doctor-resume-that-got-me-interviews"
+        element={<AyurvedaDoctorResumeGuide CoverImage={CoverImage} fresherResumeImage={fresherResumeImage} techImages={techImages} images={images} />}
+      />
+      <Route path="/how-to-craft-the-perfect-bams-doctor-resume-that-will-land-you-interviews"
+        element={<BAMSDoctorResumeGuide CoverImage={CoverImage} fresherResumeImage={fresherResumeImage} techImages={techImages} images={images} />}
+      />
+      <Route path="/how-to-honda-careers-resume-upload"
+        element={<HondaCareersResumeUpload CoverImage={CoverImage} fresherResumeImage={fresherResumeImage} techImages={techImages} images={images} />}
+      />
+      <Route path="/iti-fitter-resume-format"
+        element={<ITIFitterResumeFormat CoverImage={CoverImage} fresherResumeImage={fresherResumeImage} techImages={techImages} images={images} />}
+      />
+       <Route path="/process-associate-resume-format"
+        element={<ProcessAssociateResumeFormat CoverImage={CoverImage} fresherResumeImage={fresherResumeImage} techImages={techImages} images={images} />}
+      />
+      <Route path="/crafting-an-outstanding-react-js-resume"
+        element={<ReactJSResumeFormat CoverImage={CoverImage} fresherResumeImage={fresherResumeImage} techImages={techImages} images={images} />}
+      />
+      <Route path="/crafting-an-effective-resume-for-c++-developer"
+        element={<CppDeveloperResumeFormat CoverImage={CoverImage} fresherResumeImage={fresherResumeImage} techImages={techImages} images={images} />}
+      />
+      <Route path="/marriage-biodata-in-hindi"
+        element={<MarriageBiodataInHindi shadi_Card={shadi_Card}/>}
+      />
+      
+      
+
+      
+      
     
-     
-     
         <Route path="/Blog_or_Career_Tips_Page" element={<BlogCareer />} />
         <Route path="/how-to-land-your-dream-job" element={<DreamJob2024 />} />
         <Route
@@ -2066,8 +2230,23 @@ function App() {
         {/* CoverLetter Link */}
         <Route path="/preview/201" element={<Preview201 />} />
         <Route path="/preview/202" element={<Preview202 />} />
+        <Route path="/preview/203" element={<Preview203 />} />
+        <Route path="/preview/204" element={<Preview204 />} />
+        <Route path="/preview/205" element={<Preview205 />} />
+        <Route path="/preview/206" element={<Preview206 />} />
+        <Route path="/preview/207" element={<Preview207 />} />
+        <Route path="/preview/208" element={<Preview208 />} />
+        <Route path="/preview/209" element={<Preview209 />} />
+        <Route path="/preview/210" element={<Preview210 />} />
+        <Route path="/preview/211" element={<Preview211 />} />
+        <Route path="/preview/212" element={<Preview212 />} />
+        <Route path="/preview/213" element={<Preview213 />} />
+        <Route path="/preview/214" element={<Preview214 />} />
+        <Route path="/preview/215" element={<Preview215 />} />
+        <Route path="/preview/216" element={<Preview216 />} />
+        <Route path="/preview/217" element={<Preview217 />} />
+        <Route path="/preview/218" element={<Preview218 />} />
         <Route path="/EditablePage" element={<EditablePage />} />
-
         <Route path="/preview301" element={<Preview301 />} />
         <Route path="/preview302" element={<Preview302 />} />
         <Route path="/preview303" element={<Preview303 />} />
@@ -2077,6 +2256,16 @@ function App() {
         <Route path="/preview307" element={<Preview307 />} />
         <Route path="/preview308" element={<Preview308 />} />
         <Route path="/preview309" element={<Preview309 />} />
+        <Route path="/preview401" element={<Preview401 />} />
+        <Route path="/preview402" element={<Preview402 />} />
+        <Route path="/preview403" element={<Preview403 />} />
+        <Route path="/preview404" element={<Preview404 />} />
+        <Route path="/preview405" element={<Preview405 />} />
+        <Route path="/preview406" element={<Preview406 />} />
+        <Route path="/preview407" element={<Preview407 />} />
+        <Route path="/preview408" element={<Preview408 />} />
+        <Route path="/preview409" element={<Preview409 />} />
+
 
 
       </Routes>

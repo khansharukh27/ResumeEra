@@ -5,6 +5,7 @@ import jsPDF from 'jspdf';
 import { useSelector } from 'react-redux';
 import GoogleAd from '../adFolder/GoogleAd';
 import PdfDownloadButton from '../PdfDownloadButton';
+import Toolbar from '../Toolbar';
 
 export default function Preview307() { // Updated to Preview307 based on personalInfo307
   // State for PDF filename and styling options
@@ -63,7 +64,18 @@ export default function Preview307() { // Updated to Preview307 based on persona
   const handleEdit = (e, defaultValue, setter) => {
     setter(e.target.textContent.trim() || defaultValue);
   };
+  const changeAlignment = (alignment) => {
+    document.execCommand('justify' + alignment, false, null);
+};
 
+const toggleStyle = (style) => {
+    document.execCommand(style, false, null);
+};
+
+// Function to toggle lists (bullet and numbered)
+const toggleList = (listType) => {
+    document.execCommand(listType, false, null);
+};
   return (
     <div>
       <header style={{ paddingLeft: '10px', paddingRight: '10px', textAlign: 'center' }}>
@@ -82,7 +94,8 @@ export default function Preview307() { // Updated to Preview307 based on persona
         </p>
       </header>
       <GoogleAd />
-      <div className="main306">
+      <div className="main306 marging">
+        <Toolbar toggleStyle={toggleStyle} changeAlignment={changeAlignment} toggleList={toggleList}  />
         <div
           className="preview306"
           style={{ backgroundColor: bgColor, margin: `${margin}px` }}

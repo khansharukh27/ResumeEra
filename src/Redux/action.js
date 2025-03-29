@@ -125,4 +125,12 @@ export const loadCoverImages = (CoverImage) =>({
     type:'COVER_IMAGE',
     payload:CoverImage
 });
+export const marriedData = (formData) =>({
+    type:'Form_Data',
+    payload:formData
+});
+export const marriedImage = (selectedShadiCard) =>({
+    type:'selected_Shadi_Card',
+    payload:selectedShadiCard
+});
 

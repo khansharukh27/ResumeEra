@@ -30,7 +30,7 @@ function Navbar() {
                 <Link className="navbar-link" to="/" style={{fontSize:'.8rem',textAlign:'center',marginTop:'auto'}}>Home</Link>
                 <Link className="navbar-link" to="/template" style={{fontSize:'.8rem',textAlign:'center',marginTop:'auto'}}>TEMPLATES</Link>
                 <Link className="navbar-link" to="/myresume" style={{fontSize:'.8rem',textAlign:'center',marginTop:'auto'}}>MY RESUME</Link>
-                <Link className="navbar-link" to="/cover_letter" style={{fontSize:'.8rem',textAlign:'center',marginTop:'auto'}}>CoverLetter</Link>
+                <Link className="navbar-link" to="/cover_letter" style={{fontSize:'.8rem',textAlign:'center',marginTop:'auto'}}>COVER LETTER</Link>
             </div>
         </div>
     );

@@ -3,11 +3,11 @@
     justify-content: space-between;
 }
 .alisha104{
-    padding: 15px;
-font-size: medium;
+    /* padding: 15px;
+font-size: medium; */
 }
 .alisha104 h5{
-    font-size: large;
+    /* font-size: large; */
     margin-top: 10px;
     margin-bottom: -5px;
 }
@@ -77,8 +77,8 @@ margin-right: 5px;
     }
     
     .alisha104{
-        font-size: xx-small;
-        width: 60%;
+        width: 200%;
+        padding: 0px;
     }
     .alisha104 h5{
         font-size: small;

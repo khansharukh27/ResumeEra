@@ -3,6 +3,7 @@ import { useSelector } from 'react-redux';
 import './CSS/preview103.css';
 import GoogleAd from '../adFolder/GoogleAd';
 import PdfDownloadButton from '../PdfDownloadButton';
+import Toolbar from '../Toolbar';
 
 const Preview103 = () => {
     const [inputFields, setInputFields] = useState('resume.pdf');
@@ -57,7 +58,18 @@ const Preview103 = () => {
     const handleEdit = (e, defaultValue, setter) => {
         setter(e.target.textContent.trim() || defaultValue);
     };
+    const changeAlignment = (alignment) => {
+        document.execCommand('justify' + alignment, false, null);
+    };
+    
+    const toggleStyle = (style) => {
+        document.execCommand(style, false, null);
+    };
 
+    // Function to toggle lists (bullet and numbered)
+    const toggleList = (listType) => {
+        document.execCommand(listType, false, null);
+    };
     return (
         <div>
             <header style={{ paddingLeft: '10px', paddingRight: '10px', textAlign: 'center' }}>
@@ -76,7 +88,8 @@ const Preview103 = () => {
                 </p>
             </header>
             <GoogleAd />
-            <div className="personal-info-section103">
+            <div className="personal-info-section103 marging">
+                <Toolbar toggleStyle={toggleStyle} changeAlignment={changeAlignment} toggleList={toggleList}  />
                 <div
                     className="main103 mt-4 me-md-5 ms-md-1"
                     id="Alisha_mirza103"

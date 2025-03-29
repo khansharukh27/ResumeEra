@@ -3,6 +3,7 @@ import { useSelector } from 'react-redux';
 import './CSS/preview101.css';
 import GoogleAd from '../adFolder/GoogleAd';
 import PdfDownloadButton from '../PdfDownloadButton';
+import Toolbar from '../Toolbar';
 
 const Preview101 = () => {
     const [inputFields, setInputFields] = useState('resume.pdf');
@@ -61,7 +62,18 @@ const Preview101 = () => {
     const handleEdit = (e, defaultValue, setter) => {
         setter(e.target.textContent.trim() || defaultValue);
     };
+    const changeAlignment = (alignment) => {
+        document.execCommand('justify' + alignment, false, null);
+    };
+    
+    const toggleStyle = (style) => {
+        document.execCommand(style, false, null);
+    };
 
+    // Function to toggle lists (bullet and numbered)
+    const toggleList = (listType) => {
+        document.execCommand(listType, false, null);
+    };
     return (
         <div>
             <header style={{ paddingLeft: '10px', paddingRight: '10px', textAlign: 'center' }}>
@@ -83,7 +95,8 @@ const Preview101 = () => {
                 ResumeReady created by ResumeEra
             </h1>
             <GoogleAd />
-            <div className="mainn101">
+            <div className="mainn101 marging">
+<Toolbar toggleStyle={toggleStyle} changeAlignment={changeAlignment} toggleList={toggleList}  />
                 <div
                     id="Alisha_mirza301"
                     className="preview101"

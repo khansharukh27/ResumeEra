@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import '../previewfolder/CSS/Preview3.css'; // Import the CSS file
 import GoogleAd from '../adFolder/GoogleAd';
 import PdfDownloadButton from '../PdfDownloadButton';
+import Toolbar from '../Toolbar';
 
 const Preview3 = () => {
     const [inputFields, setInputFields] = useState('resume.pdf');
@@ -54,7 +55,18 @@ const Preview3 = () => {
     const handleEdit = (e, defaultValue, setter) => {
         setter(e.target.textContent.trim() || defaultValue);
     };
+    const changeAlignment = (alignment) => {
+        document.execCommand('justify' + alignment, false, null);
+    };
+    
+    const toggleStyle = (style) => {
+        document.execCommand(style, false, null);
+    };
 
+    // Function to toggle lists (bullet and numbered)
+    const toggleList = (listType) => {
+        document.execCommand(listType, false, null);
+    };
     return (
         <div>
             <header style={{ paddingLeft: '10px', paddingRight: '10px', textAlign: 'center' }}>
@@ -73,7 +85,8 @@ const Preview3 = () => {
                 </p>
             </header>
             <div style={{ width: '100%' }}><GoogleAd /></div>
-            <div className="container3">
+            <div className="container3 marging">
+                <Toolbar toggleStyle={toggleStyle} changeAlignment={changeAlignment} toggleList={toggleList}  />
                 <div
                     className="resume-wrapper"
                     id="Alish_mirza1"

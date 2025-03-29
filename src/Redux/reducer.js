@@ -26,6 +26,8 @@ const initialState = {
   images: [],
     techImages: [],
     coverImages: [],
+    shadiData: JSON.parse(localStorage.getItem("FormData")) || [],
+    shadicarddata: JSON.parse(localStorage.getItem("selected_Shadi_Card")) || [],
 };
 
 const reducer = (state = initialState, action) => {
@@ -122,6 +124,16 @@ const reducer = (state = initialState, action) => {
         return{
           ...state,
           coverletters:[action.payload]
+        } 
+        case 'Form_Data':  
+        return{
+          ...state,
+          shadiData:[action.payload]
+        } 
+        case 'selected_Shadi_Card':  
+        return{
+          ...state,
+          shadicarddata:[action.payload]
         }  
     default:
       return state;

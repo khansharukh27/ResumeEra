@@ -75,7 +75,7 @@ export default function Infographic_Resume_Formatting() {
              },
              "publisher": {
                 "@type": "Organization",
-                "name": "Publisher Name",
+                "name": "Publisher Name",/
                 "logo": {
                     "@type": "ImageObject",
                     "url": "https://resumeera.xyz/images/logo.png"

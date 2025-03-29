@@ -1,92 +1,110 @@
-import { useState, useEffect } from "react";
-import { useSelector } from "react-redux";
-import '.././previewfolder/CSS/Preview201.css'
-import { useNavigate } from "react-router-dom";
-import PdfDownloadButton from "../PdfDownloadButton";
-import GoogleAd from "../adFolder/GoogleAd";
-const Preview201 = () => {
+import React, { useEffect, useState } from 'react';
+import './previewcss/preview205.css';
+import { useSelector } from 'react-redux';
+import PdfDownloadButton from '../PdfDownloadButton'
+import Toolbar from '../Toolbar';
+export default function Preview201() {
     const [localData, setLocalData] = useState({});
-    const [inputFields, setInputFields] = useState('resume.pdf');
-    const [bgColor, setBgColor] = useState('white');
-    const [fontStyle, setFontStyle] = useState('Arial');
-    const [headingColor, setHeadingColor] = useState('black');
-    const [fontColor, setFontColor] = useState('black');
-    
+    const [inputFields, setInputFields] = useState("resume.pdf");
+    const [bgColor, setBgColor] = useState("white");
+    const [fontStyle, setFontStyle] = useState("Arial");
+    const [headingColor, setHeadingColor] = useState("black");
+    const [fontColor, setFontColor] = useState("black");
+
     // Adding missing state for PDF formatting
-    const [fontSize, setFontSize] = useState('12');
-    const [headingSize, setHeadingSize] = useState('16');
-    const [margin, setMargin] = useState('10');
-    const [padding, setPadding] = useState('5');
-    const [lineSpacing, setLineSpacing] = useState('1.5');
-    const [sectionSpacing, setSectionSpacing] = useState('10');
-    
+    const [fontSize, setFontSize] = useState("12");
+    const [headingSize, setHeadingSize] = useState("16");
+    const [margin, setMargin] = useState("10");
+    const [padding, setPadding] = useState("5");
+    const [lineSpacing, setLineSpacing] = useState("1.5");
+    const [sectionSpacing, setSectionSpacing] = useState("10");
 
-   
-    const navigate = useNavigate();
-
-    
     // Retrieve Redux state
-    const reduxData = useSelector((state) => state.reducer.personalInfo?.[0] || {});
+    const reduxData = useSelector(
+        (state) => state.reducer.personalInfo?.[0] || {}
+    );
 
     // Check if there is data in localStorage when the component mounts
     useEffect(() => {
-        const savedData = JSON.parse(localStorage.getItem('personalInfoData'));
+        const savedData = JSON.parse(localStorage.getItem("personalInfoData"));
         if (savedData) {
-            setLocalData(savedData);  // Set local data if available
+            setLocalData(savedData); // Set local data if available
         }
     }, []);
 
     // Combine redux data with local data, prioritize redux data
     const result = Object.keys(reduxData).length > 0 ? reduxData : localData;
 
-    // Check if required fields are available
-    const hasRequiredData = result && result.fullname && result.jobposition;
+
+    // Create a dynamic styles object
+    const dynamicStyle = {
+        fontSize: fontSize,
+        fontFamily: fontStyle,
+        lineHeight: lineSpacing,
+        color: fontColor,
+        heading: {
+            color: headingColor,
+            fontSize: headingSize,
+            fontFamily: fontStyle,
+            lineHeight: lineSpacing,
+        },
+    };
+    const changeAlignment = (alignment) => {
+        document.execCommand('justify' + alignment, false, null);
+    };
+    
+    const toggleStyle = (style) => {
+        document.execCommand(style, false, null);
+    };
+
+    // Function to toggle lists (bullet and numbered)
+    const toggleList = (listType) => {
+        document.execCommand(listType, false, null);
+    };
 
     return (
-        <div className="">
-            <div>
-                <GoogleAd/>
-            </div>
-            <div className="preview-container201"
-            style={{ margin:margin,padding:padding }}
+        <div>
+       
+        <div className="d-md-flex justify-content-between marging">
+        <Toolbar toggleStyle={toggleStyle} changeAlignment={changeAlignment} toggleList={toggleList}  />              
+
+            <div className="contentss" id='Alish_mirza'
             contentEditable
             suppressContentEditableWarning={true}
-            spellCheck={false}
-            >
-                <div className="preview201" id='Alish_mirza' style={{ color: fontColor, backgroundColor: bgColor, fontFamily: fontStyle }}>
-                    {hasRequiredData ? (
-                        <div className="name-201">
-                            <h3 style={{ color: headingColor,lineHeight:lineSpacing,fontSize:headingSize,fontFamily:fontStyle}}>{result.fullname}
-                                <br />
-                            </h3>
-                            <p>{result.jobposition}</p>
-                        </div>
-                    ) : (
-                        <p>Loading or No data available...</p> // Fallback message
-                    )}
-                    <div className="contact-201" style={{ color: fontColor,lineHeight:lineSpacing,fontSize:fontSize,fontFamily:fontStyle, }} >
-                        <p style={{ color: fontColor,lineHeight:lineSpacing,fontSize:fontSize,fontFamily:fontStyle, }}>{result.email}</p>
-                        <p style={{ color: fontColor,lineHeight:lineSpacing,fontSize:fontSize,fontFamily:fontStyle, }}>{result.mobileNumber}</p>
-                        <p style={{ color: fontColor,lineHeight:lineSpacing,fontSize:fontSize,fontFamily:fontStyle, }}>{result.city} {result.state}</p>
-                        <p style={{ color: fontColor,lineHeight:lineSpacing,fontSize:fontSize,fontFamily:fontStyle, }}>{result.linkedin}</p>
+            spellCheck={true}
+                style={{ width:'auto',backgroundColor: bgColor, margin: margin, 
+                padding: padding ,height:'auto'}}>
+                <div className='header205'>
+                    <div className="left205" style={{backgroundColor:'#333b4e',marginBottom:'-17px',paddingTop: '10px',paddingBottom:'10px',padding:'5px'}}>
+                        <h3 style={dynamicStyle.heading}>{result.fullname}</h3>
+                        <h3 style={dynamicStyle}>{result.jobposition}</h3>
                     </div>
-                    <div className="company-detail-201">
-                        To <br />
-                        <p style={{ color: fontColor,lineHeight:lineSpacing,fontSize:fontSize,fontFamily:fontStyle, }}>{result.hiringManager}</p>
-                        <p style={{ color: fontColor,lineHeight:lineSpacing,fontSize:fontSize,fontFamily:fontStyle, }}>{result.companyName}</p>
-                        <p style={{ color: fontColor,lineHeight:lineSpacing,fontSize:fontSize,fontFamily:fontStyle, }}>{result.companyWebsite}</p>
-                        <p style={{ color: fontColor,lineHeight:lineSpacing,fontSize:fontSize,fontFamily:fontStyle, }}>{result.companyLocation}</p>
-                    </div>
-                    <div className="your-object-201">
-                        <p style={{ color: fontColor,lineHeight:lineSpacing,fontSize:fontSize,fontFamily:fontStyle, }}>DEAR {result.hiringManager}</p>
-                        <p style={{ color: fontColor,lineHeight:lineSpacing,fontSize:fontSize,fontFamily:fontStyle, }}>{result.object}</p>
-                    </div>
-                    <div className="sincerely-201"><p style={{ color: fontColor,lineHeight:lineSpacing,fontSize:fontSize,fontFamily:fontStyle, }}>SINCERELY</p>
-                        <p style={{ color: fontColor,lineHeight:lineSpacing,fontSize:fontSize,fontFamily:fontStyle, }}>{result.fullname}</p>
+
+                    <div className="right205 d-flex justify-content-around align-items-center" style={{backgroundColor:'#212b33'}}>
+                        <p className='text-end ' style={dynamicStyle}>{result.email} <span className="icon" >✉️</span></p>
+                        <p className='text-end' style={dynamicStyle}>{result.mobileNumber} <span className="icon" >📞</span></p>
+                        <p className='text-end' style={dynamicStyle}>{result.city}, {result.state || "CA"} <span className="icon" >📍</span></p>
+                        <p className='text-end' style={dynamicStyle}>{result.linkedin} <span className="icon" >🔗</span></p>
                     </div>
                 </div>
-                
-                <PdfDownloadButton
+               
+                <div style={{lineHeight:sectionSpacing}}>
+                    <p style={dynamicStyle}><>To:</></p>
+                    <p style={dynamicStyle}>{result.hiringManager}</p>
+                    <p style={dynamicStyle}>Human Resources Manager</p>
+                    <p style={dynamicStyle}>Optimal Workplace Inc.</p>
+                    <p style={dynamicStyle}>321 Employment Avenue</p>
+                    <p style={dynamicStyle}>San Francisco, CA</p>
+                    <br />
+                    <p style={dynamicStyle}>Dear {result.hiringManager},</p>
+                    <p style={dynamicStyle}>{result.object}</p>
+  
+                    <br />
+                    <p style={dynamicStyle}>Sincerely,</p>
+                    <p style={dynamicStyle}>{result.fullname}</p>
+                </div>
+            </div>
+            <PdfDownloadButton
                 inputFields={inputFields}
                 setInputFields={setInputFields}
                 bgColor={bgColor}
@@ -111,10 +129,7 @@ const Preview201 = () => {
                 setSectionSpacing={setSectionSpacing}
                 elementId="Alish_mirza"
             />
-            </div>
-            <div><GoogleAd/></div>
+        </div>
         </div>
     );
-};
-
-export default Preview201;
+}

@@ -1,9 +1,8 @@
-// ResumeDownloadSection.jsx
 import React, { useState } from 'react';
+import GoogleAd from './adFolder/GoogleAd'; // Adjust path as needed
+import '../css/PdfDownloadButton.css'
 import html2canvas from 'html2canvas';
 import jsPDF from 'jspdf';
-import GoogleAd from './adFolder/GoogleAd'; // Adjust path as needed
-
 const ResumeDownloadSection = ({
     inputFields,
     setInputFields,
@@ -83,152 +82,136 @@ const ResumeDownloadSection = ({
     };
 
     return (
-        <div className="resume-download-section0">
-            <div className="downloadbuttondiv" style={{ display: 'flex', alignItems: 'center', gap: '10px' }}>
+        <div className="resume-download-section" style={{ width:'fit-content', border:'1px solid black' }}>
+            
+
+            {/* Customization Controls */}
+            <div className="customization-controls" >
+                <div className="color-picker" title='Background Color'>
+                    <i className="fa-solid fa-fill-drip" />
+                    <input
+                        type="color"
+                        value={bgColor}
+                        onChange={(e) => setBgColor(e.target.value)}
+                        className="color-input"
+                        
+                    />
+                </div>
+
+                <div className="font-style-selector"title='Font Style'>
+                    <i className="fa-solid fa-font" />
+                    <select
+                        value={fontStyle}
+                        onChange={(e) => setFontStyle(e.target.value)}
+                        className="font-select"
+                    >
+                        <option value="Arial">Arial</option>
+                        <option value="Arial Black">Arial Black</option>
+                        <option value="Verdana">Verdana</option>
+                        <option value="Times New Roman">Times New Roman</option>
+                    </select>
+                </div>
+
+                <div className="color-picker"  title='Font Color'>
+                    <i className="fa-solid fa-fill-drip" />
+                    <input
+                        type="color"
+                        value={fontColor}
+                        onChange={(e) => setFontColor(e.target.value)}
+                        className="color-input"
+                    />
+                </div>
+
+                <div className="color-picker" title='Heading Color'>
+                    <i className="fa-solid fa-fill-drip" />
+                    <input
+                        type="color"
+                        value={headingColor}
+                        onChange={(e) => setHeadingColor(e.target.value)}
+                        className="color-input"
+                    />
+                </div>
+
+                <div className="size-selector" title='Heading Size'>
+                    <i className="fa-solid fa-heading" />
+                    <input
+                        type="number"
+                        value={headingSize}
+                        onChange={(e) => setHeadingSize(Number(e.target.value))}
+                        className="size-input"
+                    />
+                </div>
+
+                <div className="size-selector" title='Font Size'>
+                    <i className="fa-solid fa-font" />
+                    <input
+                        type="number"
+                        value={fontSize}
+                        onChange={(e) => setFontSize(Number(e.target.value))}
+                        className="size-input"
+                    />
+                </div>
+
+                <div className="spacing-selector" title='Margin'>
+                    <i className="fa-solid fa-arrows-up-down-left-right" />
+                    <input
+                        type="number"
+                        value={margin}
+                        onChange={(e) => setMargin(Number(e.target.value))}
+                        className="spacing-input"
+                    />
+                </div>
+
+                <div className="spacing-selector" title='Padding'>
+                    <i className="fa-solid fa-arrows-up-down-left-right" />
+                    <input
+                        type="number"
+                        value={padding}
+                        onChange={(e) => setPadding(Number(e.target.value))}
+                        className="spacing-input"
+                    />
+                </div>
+
+                <div className="spacing-selector" title='Line Spacing'>
+                    <i className="fa-solid fa-font" />
+                    <input
+                        type="number"
+                        step="0.1"
+                        value={lineSpacing}
+                        onChange={(e) => setLineSpacing(Number(e.target.value))}
+                        className="spacing-input"
+                    />
+                </div>
+
+                <div className="spacing-selector" title='Section Spacing'>
+                    <i className="fa-solid fa-arrows-up-down-left-right" />
+                    <input
+                        type="number"
+                        value={sectionSpacing}
+                        onChange={(e) => setSectionSpacing(Number(e.target.value))}
+                        className="spacing-input"
+                    />
+                </div>
+            </div>
+            <div className="headers  d-md-flex" title='Give Your Resume a Name'>
                 <input
                     type="text"
                     placeholder="Enter your resume name"
                     className="resume-name-input"
-                    style={{ borderRadius: '5px', padding: '10px', flex: 1 }}
                     value={inputFields}
                     onChange={(e) => setInputFields(e.target.value)}
                 />
                 <button
                     onClick={handleDownloadPDF}
                     type="button"
-                    className="btn btn-primary ms-2 download-button"
+                    className="btn download-button"
                     disabled={isLoading}
-                    style={{ padding: '10px 20px' }}
+                    title='Download'
                 >
                     {isLoading ? 'Downloading...' : 'Download'}
                 </button>
             </div>
 
-            {/* Customization Controls */}
-            <div className="d-flex border fontfamilydiv" style={{ marginTop: '5px', flexDirection: 'column', padding: '10px' }}>
-                <div>
-                    <span>Background Color: </span>
-                    <input
-                        type="color"
-                        value={bgColor}
-                        onChange={(e) => setBgColor(e.target.value)}
-                        className="bg-color-picker ms-2"
-                    />
-                </div>
-                <div>
-                    <span>Font Style: </span>
-                    <select
-                        value={fontStyle}
-                        onChange={(e) => setFontStyle(e.target.value)}
-                        className="font-style-selector ms-2"
-                    >
-                        <option value="Arial">Arial</option>
-                        <option value="Arial Black">Arial Black</option>
-                        <option value="Verdana">Verdana</option>
-                        <option value="Times New Roman">Times New Roman</option>
-                        {/* Add more font options as needed */}
-                    </select>
-                </div>
-            </div>
-
-            <div className="colordiv" style={{ padding: '10px' }}>
-                <div>
-                    <span>Font Color: </span>
-                    <input
-                        type="color"
-                        value={fontColor}
-                        onChange={(e) => setFontColor(e.target.value)}
-                        className="bg-color-picker ms-2"
-                    />
-                </div>
-                <div>
-                    <span>Heading Color: </span>
-                    <input
-                        type="color"
-                        value={headingColor}
-                        onChange={(e) => setHeadingColor(e.target.value)}
-                        className="bg-color-picker ms-2"
-                    />
-                </div>
-            </div>
-
-            <div className="colordiv" style={{ padding: '10px' }}>
-                <div>
-                    <span>Heading Size: </span>
-                    <input
-                        type="number"
-                        value={headingSize}
-                        onChange={(e) => setHeadingSize(Number(e.target.value))}
-                        className="bg-color-picker ms-2"
-                        min="10"
-                        max="40"
-                    />
-                </div>
-                <div>
-                    <span>Font Size: </span>
-                    <input
-                        type="number"
-                        value={fontSize}
-                        onChange={(e) => setFontSize(Number(e.target.value))}
-                        className="bg-color-picker ms-2"
-                        min="8"
-                        max="30"
-                    />
-                </div>
-            </div>
-
-            <div className="colordiv" style={{ padding: '10px' }}>
-                <div>
-                    <span>Margin (px): </span>
-                    <input
-                        type="number"
-                        value={margin}
-                        onChange={(e) => setMargin(Number(e.target.value))}
-                        className="bg-color-picker ms-2"
-                        min="0"
-                        max="50"
-                    />
-                </div>
-                <div>
-                    <span>Padding (px): </span>
-                    <input
-                        type="number"
-                        value={padding}
-                        onChange={(e) => setPadding(Number(e.target.value))}
-                        className="bg-color-picker ms-2"
-                        min="0"
-                        max="50"
-                    />
-                </div>
-            </div>
-            <div className="colordiv" style={{ padding: '10px' }}>
-                <div>
-                    <span>Line Spacing: </span>
-                    <input
-                        type="number"
-                        step="0.1"
-                        value={lineSpacing}
-                        onChange={(e) => setLineSpacing(Number(e.target.value))}
-                        className="bg-color-picker ms-2"
-                        min="1"
-                        max="2"
-                    />
-                </div>
-                <div>
-                    <span>Section Spacing (px): </span>
-                    <input
-                        type="number"
-                        value={sectionSpacing}
-                        onChange={(e) => setSectionSpacing(Number(e.target.value))}
-                        className="bg-color-picker ms-2"
-                        min="5"
-                        max="50"
-                    />
-                </div>
-            </div>
-            <div className="w-100"><GoogleAd /></div>
-
-            <div className="w-100"><GoogleAd /></div>
         </div>
     );
 };

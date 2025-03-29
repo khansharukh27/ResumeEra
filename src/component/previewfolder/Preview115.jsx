@@ -1,12 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
-import GoogleAd from '../adFolder/GoogleAd';
-import HobbyIcons from '../HobbyIcons';
-import jsPDF from 'jspdf';
-import html2canvas from 'html2canvas';
 import './CSS/preview115.css';
 import PdfDownloadButton from '../PdfDownloadButton';
+import Toolbar from '../Toolbar';
 
 const Preview115 = () => {
   // State for PDF filename and styling options
@@ -64,7 +61,18 @@ const Preview115 = () => {
   const handleEdit = (e, defaultValue, setter) => {
     setter(e.target.textContent.trim() || defaultValue);
   };
+  const changeAlignment = (alignment) => {
+    document.execCommand('justify' + alignment, false, null);
+};
 
+const toggleStyle = (style) => {
+    document.execCommand(style, false, null);
+};
+
+// Function to toggle lists (bullet and numbered)
+const toggleList = (listType) => {
+    document.execCommand(listType, false, null);
+};
   return (
     <div>
       <header style={{ paddingLeft: '10px', paddingRight: '10px', textAlign: 'center' }}>
@@ -82,7 +90,8 @@ const Preview115 = () => {
           Take a moment to review your resume. Remember, the right opportunity is just around the corner. Stand out, stay confident, and let ResumeEra be your trusted partner in achieving your career goals!
         </p>
       </header>
-      <div className="main115 d-md-flex">
+      <div className="main115 d-md-flex marging">
+        <Toolbar toggleStyle={toggleStyle} changeAlignment={changeAlignment} toggleList={toggleList}  />
         <div
           className="preview115"
           style={{ backgroundColor: bgColor }}

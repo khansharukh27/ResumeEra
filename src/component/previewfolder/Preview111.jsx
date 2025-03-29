@@ -6,6 +6,7 @@ import './CSS/preview111.css';
 import HobbyIcons from '../HobbyIcons';
 import GoogleAd from '../adFolder/GoogleAd';
 import PdfDownloadButton from '../PdfDownloadButton';
+import Toolbar from '../Toolbar';
 
 const Preview111 = () => {
   // State for PDF filename and styling options
@@ -63,7 +64,18 @@ const Preview111 = () => {
   const handleEdit = (e, defaultValue, setter) => {
     setter(e.target.textContent.trim() || defaultValue);
   };
+  const changeAlignment = (alignment) => {
+    document.execCommand('justify' + alignment, false, null);
+};
 
+const toggleStyle = (style) => {
+    document.execCommand(style, false, null);
+};
+
+// Function to toggle lists (bullet and numbered)
+const toggleList = (listType) => {
+    document.execCommand(listType, false, null);
+};
   return (
     <div className="resume111">
       <header style={{ paddingLeft: '10px', paddingRight: '20px', textAlign: 'center' }}>
@@ -88,6 +100,7 @@ const Preview111 = () => {
         Functional-ATS-Resume-Template
       </h1>
       <div className="main111">
+        <Toolbar toggleStyle={toggleStyle} changeAlignment={changeAlignment} toggleList={toggleList}  />
         <div
           className="preview111"
           id="Alisha_mirza111"

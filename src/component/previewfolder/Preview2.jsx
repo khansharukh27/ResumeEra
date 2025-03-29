@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import '../previewfolder/CSS/preview2.css';
 import GoogleAd from '../adFolder/GoogleAd';
 import PdfDownloadButton from '../PdfDownloadButton';
+import Toolbar from '../Toolbar';
 
 const Preview2 = () => {
     const [inputFields, setInputFields] = useState('resume.pdf');
@@ -60,7 +61,18 @@ const Preview2 = () => {
         }
         setHeadingSize(headingsize); // headingSize को headingsize के साथ सिंक करें
     }, [personalInfo, nameHeading, headingsize]);
+    const changeAlignment = (alignment) => {
+        document.execCommand('justify' + alignment, false, null);
+    };
+    
+    const toggleStyle = (style) => {
+        document.execCommand(style, false, null);
+    };
 
+    // Function to toggle lists (bullet and numbered)
+    const toggleList = (listType) => {
+        document.execCommand(listType, false, null);
+    };
     return (
         <div>
             <header style={{ paddingLeft: '10px', paddingRight: '10px', textAlign: 'center' }}>
@@ -79,7 +91,8 @@ const Preview2 = () => {
                 </p>
             </header>
             <div style={{ width: '100%' }}><GoogleAd /></div>
-            <div className="preview2">
+            <div className="preview2 marging">
+                <Toolbar toggleStyle={toggleStyle} changeAlignment={changeAlignment} toggleList={toggleList}  />
                 <div
                     className="main"
                     id="Alish_mirza1"

@@ -4,6 +4,7 @@ import { useNavigate } from 'react-router-dom';
 import './CSS/preview.css';
 import GoogleAd from '../adFolder/GoogleAd';
 import PdfDownloadButton from '../PdfDownloadButton';
+import Toolbar from '../Toolbar';
 
 const Preview = () => {
     const [inputFields, setInputFields] = useState('resume.pdf');
@@ -91,10 +92,22 @@ const Preview = () => {
         updatedHobbies[index] = { hobbies: value };
         setter(updatedHobbies);
     };
+    const changeAlignment = (alignment) => {
+        document.execCommand('justify' + alignment, false, null);
+    };
+    
+    const toggleStyle = (style) => {
+        document.execCommand(style, false, null);
+    };
 
+    // Function to toggle lists (bullet and numbered)
+    const toggleList = (listType) => {
+        document.execCommand(listType, false, null);
+    };
     return (
         <div>
             <header style={{ paddingLeft: '10px', paddingRight: '10px', textAlign: 'center' }}>
+                
                 <h1 style={{ fontSize: headingSize, lineHeight: `${lineSpacing}em` }}>
                     Congratulations on Creating a Winning Resume!
                 </h1>
@@ -108,7 +121,8 @@ const Preview = () => {
 
             <div style={{ width: '100%' }}><GoogleAd /></div>
 
-            <div className="preview-container d-md-flex" style={{ position: 'relative' }}>
+            <div className="preview-container d-md-flex marging" style={{ position: 'relative' }}>
+                <Toolbar toggleStyle={toggleStyle} changeAlignment={changeAlignment} toggleList={toggleList}  />
                 <div
                     className="preview-page"
                     id="Alish_mirza1"

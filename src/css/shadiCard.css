@@ -1,0 +1,58 @@
+.shadiCardMain {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+  }
+  
+  .shadiCardKey {
+    /* display: flex;
+    justify-content: space-between;
+    /* flex-direction: column; */
+    /* align-items: center; */
+    /* margin: 15px;
+    text-align: center; */ 
+  }
+  
+  .shadiCardKey img {
+    width: 300px;
+    max-width: 400px;
+    height:400px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .shadiCardKey p {
+    font-size: 14px;
+    font-weight: bold;
+    color: #333;
+    margin-top: 5px;
+  }
+  
+  /* Media Queries for Responsiveness */
+  @media (max-width: 768px) {
+    .shadiCardKey {
+      width: 100%;
+      margin: 10px 0;
+    }
+  
+    .shadiCardKey img {
+      max-width: 250px;
+    }
+  
+    .shadiCardKey p {
+      font-size: 12px;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .shadiCardKey img {
+      max-width: 200px;
+    }
+  
+    .shadiCardKey p {
+      font-size: 12px;
+    }
+  }
+  

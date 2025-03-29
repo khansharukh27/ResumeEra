@@ -4,6 +4,7 @@ import './CSS/preview109.css';
 import HobbyIcons from '../HobbyIcons';
 import GoogleAd from '../adFolder/GoogleAd';
 import PdfDownloadButton from '../PdfDownloadButton';
+import Toolbar from '../Toolbar';
 
 const Preview109 = () => {
     const [inputFields, setInputFields] = useState('resume.pdf');
@@ -59,7 +60,18 @@ const Preview109 = () => {
     const handleEdit = (e, defaultValue, setter) => {
         setter(e.target.textContent.trim() || defaultValue);
     };
+    const changeAlignment = (alignment) => {
+        document.execCommand('justify' + alignment, false, null);
+    };
+    
+    const toggleStyle = (style) => {
+        document.execCommand(style, false, null);
+    };
 
+    // Function to toggle lists (bullet and numbered)
+    const toggleList = (listType) => {
+        document.execCommand(listType, false, null);
+    };
     return (
         <div>
             <header style={{ paddingLeft: '10px', paddingRight: '10px', textAlign: 'center' }}>
@@ -78,7 +90,8 @@ const Preview109 = () => {
                 </p>
             </header>
             <GoogleAd />
-            <div className="main109">
+            <div className="main109 marging">
+<Toolbar toggleStyle={toggleStyle} changeAlignment={changeAlignment} toggleList={toggleList}  />
                 <div
                     className="preview109"
                     id="Alisha_mirza109"

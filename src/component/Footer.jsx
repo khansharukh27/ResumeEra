@@ -58,7 +58,14 @@ const Footer = () => {
           </ul>
         </div>
         <div className="footer-links">
-          <h3  style={{ color: 'green' }}>Learn</h3>        
+          <h3 style={{ color: 'green' }}>OTHER APP</h3>
+          <ul>
+            <li><Link to="/image-converter">IMAGE CONVERTER</Link></li>
+            <li><Link to='/marriage-biodata-in-hindi'>BioData For Marriage</Link></li>
+          </ul>
+        </div>
+        <div className="footer-links">
+          <h3  style={{ color: 'green' }}>LERN</h3>        
             <ul>
             <li><Link to="/importantPost">Post To Learn</Link></li>
             <li><Link to="/Blog_or_Career_Tips_Page">Career Tips </Link></li>

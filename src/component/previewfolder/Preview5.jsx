@@ -6,6 +6,7 @@ import { useNavigate } from 'react-router-dom';
 import '../previewfolder/CSS/preview5.css';
 import GoogleAd from '../adFolder/GoogleAd';
 import PdfDownloadButton from '../PdfDownloadButton';
+import Toolbar from '../Toolbar';
 
 const Preview5 = () => {
     const [inputFields, setInputFields] = useState('resume.pdf');
@@ -23,7 +24,18 @@ const Preview5 = () => {
     const work = useSelector((state) => [state.reducer.workExperience]);
     const LLanguage = useSelector((state) => [state.reducer.addLanguage]);
     const Hobbies = useSelector((state) => [state.reducer.addHobies]);
+    const changeAlignment = (alignment) => {
+        document.execCommand('justify' + alignment, false, null);
+    };
+    
+    const toggleStyle = (style) => {
+        document.execCommand(style, false, null);
+    };
 
+    // Function to toggle lists (bullet and numbered)
+    const toggleList = (listType) => {
+        document.execCommand(listType, false, null);
+    };
     return (
         <div>
             <header style={{ paddingLeft: '10px', paddingRight: '10px', textAlign: 'center' }}>
@@ -38,7 +50,8 @@ const Preview5 = () => {
                 </p>
             </header>
             <div className="w-100"><GoogleAd /></div>
-            <div className="d-md-flex">
+            <div className="d-md-flex marging">
+                <Toolbar toggleStyle={toggleStyle} changeAlignment={changeAlignment} toggleList={toggleList}  />
                 <div className="preview05" id="Alish_mirza1" style={{ backgroundColor: bgColor }}>
                     <div className="contact05" style={{ backgroundColor: 'grey' }}>
                         <img src={personalInfo.image} className="" alt="Selected" style={{ width: '100px', height: '100px', borderRadius: '50%', border: '3px solid grey' }} />

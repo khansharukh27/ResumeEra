@@ -5,6 +5,7 @@ import html2canvas from 'html2canvas';
 import jsPDF from 'jspdf';
 import '../previewfolder/CSS/preview303.css';
 import PdfDownloadButton from '../PdfDownloadButton';
+import Toolbar from '../Toolbar';
 
 export default function Preview303() {
   // State for PDF filename and styling options
@@ -64,7 +65,18 @@ export default function Preview303() {
   const handleEdit = (e, defaultValue, setter) => {
     setter(e.target.textContent.trim() || defaultValue);
   };
+  const changeAlignment = (alignment) => {
+    document.execCommand('justify' + alignment, false, null);
+};
 
+const toggleStyle = (style) => {
+    document.execCommand(style, false, null);
+};
+
+// Function to toggle lists (bullet and numbered)
+const toggleList = (listType) => {
+    document.execCommand(listType, false, null);
+};
   return (
     <div>
       <header style={{ paddingLeft: '10px', paddingRight: '10px', textAlign: 'center' }}>
@@ -83,7 +95,8 @@ export default function Preview303() {
         </p>
       </header>
       <GoogleAd />
-      <div className="main303">
+      <div className="main303 marging">
+        <Toolbar toggleStyle={toggleStyle} changeAlignment={changeAlignment} toggleList={toggleList}  />
         <div
           className="preview303"
           style={{ backgroundColor: bgColor, margin: `${margin}px` }}

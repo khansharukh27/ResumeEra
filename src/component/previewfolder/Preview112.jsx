@@ -6,6 +6,7 @@ import { useNavigate } from 'react-router-dom';
 import '../previewfolder/CSS/preview11.css';
 import GoogleAd from '../adFolder/GoogleAd';
 import PdfDownloadButton from '../PdfDownloadButton';
+import Toolbar from '../Toolbar';
 
 const Preview12 = () => {
   // State for PDF filename and styling options
@@ -71,7 +72,18 @@ const Preview12 = () => {
     margin: `${sectionSpacing}px auto`,
     borderRadius: '5px',
   };
+  const changeAlignment = (alignment) => {
+    document.execCommand('justify' + alignment, false, null);
+};
 
+const toggleStyle = (style) => {
+    document.execCommand(style, false, null);
+};
+
+// Function to toggle lists (bullet and numbered)
+const toggleList = (listType) => {
+    document.execCommand(listType, false, null);
+};
   return (
     <div>
       <header style={{ paddingLeft: '10px', paddingRight: '10px', textAlign: 'center' }}>
@@ -92,7 +104,8 @@ const Preview12 = () => {
       <div>
         <GoogleAd />
       </div>
-      <div className="main11">
+      <div className="main11 marging">
+        <Toolbar toggleStyle={toggleStyle} changeAlignment={changeAlignment} toggleList={toggleList}  />
         <div
           id="Alish_mirza1"
           style={{

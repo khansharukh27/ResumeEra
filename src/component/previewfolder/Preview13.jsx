@@ -3,6 +3,7 @@ import { useSelector } from 'react-redux';
 import '../previewfolder/CSS/preview13.css';
 import GoogleAd from '../adFolder/GoogleAd';
 import PdfDownloadButton from '../PdfDownloadButton';
+import Toolbar from '../Toolbar';
 
 const Preview13 = () => {
     const [inputFields, setInputFields] = useState('resume.pdf');
@@ -63,7 +64,18 @@ const Preview13 = () => {
         borderRadius: '5px',
         border: '1px solid grey',
     };
+    const changeAlignment = (alignment) => {
+        document.execCommand('justify' + alignment, false, null);
+    };
+    
+    const toggleStyle = (style) => {
+        document.execCommand(style, false, null);
+    };
 
+    // Function to toggle lists (bullet and numbered)
+    const toggleList = (listType) => {
+        document.execCommand(listType, false, null);
+    };
     return (
         <div>
             <header style={{ paddingLeft: '10px', paddingRight: '10px', textAlign: 'center' }}>
@@ -84,7 +96,8 @@ const Preview13 = () => {
             <div>
                 <GoogleAd />
             </div>
-            <div className="main13">
+            <div className="main13 marging">
+                <Toolbar toggleStyle={toggleStyle} changeAlignment={changeAlignment} toggleList={toggleList}  />
                 <div
                     className="me-4 resume-13"
                     style={{
