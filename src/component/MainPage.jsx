@@ -3,14 +3,14 @@ import { useLocation } from "react-router-dom";
 import PersonalInfo from "./PersonalInfo";
 // import WorkExperience from "./WorkExperience";
 import '../css/mainpage.css';
-import PersonalInfoForm from "./Shadi Card/PersonalInfoForm";
+// import PersonalInfoForm from "./Shadi Card/PersonalInfoForm";
 // import CoverComponent from "./CoverComponent";
 
 const MainPage = (props) => {
     // Using array destructuring for useState hooks
     const [personalInfo, setPersonalInfo] = useState(true);
     const [ setWorkExperience] = useState(false);
-    const [personalInfoForm,setPersonalInfoForm] = useState(false);
+    // const [personalInfoForm,setPersonalInfoForm] = useState(false);
     
     const { hoveredImage, CoverImage } = props;
     console.log("hoveredImage:-",hoveredImage)
@@ -23,24 +23,19 @@ console.log("location:-",location.pathname)
         if (location.pathname === `/cover_letter/${result}`) {
             setPersonalInfo(false);
             setWorkExperience(true);
-            setPersonalInfoForm(false);
+            // setPersonalInfoForm(false);
         } else if (location.pathname === `/mainpage/${hoveredImage}`) {
             setPersonalInfo(true);
             setWorkExperience(false);
-            setPersonalInfoForm(false);
+            // setPersonalInfoForm(false);
         } else if (location.pathname === `/techmain/${hoveredImage}`) {
             setPersonalInfo(true);
             setWorkExperience(false);
-            setPersonalInfoForm(false);
+            // setPersonalInfoForm(false);
         }else if (location.pathname === `/freshertemplate/${hoveredImage}`) {
             setPersonalInfo(true);
             setWorkExperience(false);
-            setPersonalInfoForm(false);
-            
-        }else if (location.pathname === `/shadi-card/${hoveredImage}`) {
-            setPersonalInfoForm(true);
-            setPersonalInfo(false);
-            setWorkExperience(false);
+            // setPersonalInfoForm(false);
             
         }
 
@@ -48,7 +43,7 @@ console.log("location:-",location.pathname)
     return (
         <div className="mt-2 mainpage" data-aos="flip-left" data-aos-duration="2000">
             { personalInfo && <PersonalInfo /> }
-            { personalInfoForm && <PersonalInfoForm /> }
+            {/* { personalInfoForm && <PersonalInfoForm /> } */}
             {/* { workExperience && <CoverComponent CoverImage={CoverImage} /> } */}
         </div>
     );

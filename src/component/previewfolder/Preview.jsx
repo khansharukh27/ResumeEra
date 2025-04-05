@@ -265,7 +265,6 @@ const Preview = () => {
                                 </div>
                             ))}
                         </div>
-
                         <div className="preview-profile-section">
                             {/* Profile Section */}
                             <h6
@@ -282,7 +281,6 @@ const Preview = () => {
                             suppressContentEditableWarningstyle={{ fontSize: `${fontSize}px`, lineHeight: `${lineSpacing}em`, marginBottom: `${sectionSpacing}px` }}>
                                 {editablePersonalInfo?.object || personalInfo.object}
                             </span>
-
                             {/* Employment History Section */}
                             <h6
                                 className="details-title"
@@ -344,7 +342,8 @@ const Preview = () => {
                         </div>
                     </div>
                 </div>
-
+                            <div>
+                            <GoogleAd/>
                 <PdfDownloadButton
                     inputFields={inputFields}
                     setInputFields={setInputFields}
@@ -370,6 +369,8 @@ const Preview = () => {
                     setSectionSpacing={setSectionSpacing}
                     elementId="Alish_mirza1"
                 />
+                <GoogleAd/>
+                </div>
             </div>
 
             <div style={{ width: '100%' }}><GoogleAd /></div>

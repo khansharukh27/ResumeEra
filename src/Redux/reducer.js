@@ -24,13 +24,13 @@ const initialState = {
   certificateData: JSON.parse(localStorage.getItem("certificateData")) || [],
   projectData: JSON.parse(localStorage.getItem("ProjectData")) || [],
   images: [],
-    techImages: [],
-    coverImages: [],
-    shadiData: JSON.parse(localStorage.getItem("FormData")) || [],
-    shadicarddata: JSON.parse(localStorage.getItem("selected_Shadi_Card")) || [],
+  techImages: [],
+  coverImages: [],
+  shadiData: [JSON.parse(localStorage.getItem("personalInfo"))] || [],
+  shadicarddata: JSON.parse(localStorage.getItem("")) || [],
 };
 
-const reducer = (state = initialState, action) => {
+const reducer = (state = initialState,action) => {
   switch (action.type) {
     case 'personalinfo_data':
       const updatedPersonalInfo = action.payload || JSON.parse(localStorage.getItem("personalInfoData"));

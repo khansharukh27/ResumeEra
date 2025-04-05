@@ -5,17 +5,14 @@ import NormalResume from './NormalResume';
 import TechnicalResumeImages from './TechResume/TechnicalResumeImages';
 import GoogleAd from './adFolder/GoogleAd';
 import FresherResume from './FresherResume';
-import ShadiCard from './Shadi Card/ShadiCard';
-import { useSelector } from 'react-redux';
+import ShadiCard from './Shadi article/ShadiCard';
+
 
 const TemplatePage = (props) => {
-  const { images, techImages, fresherResumeImage ,shadi_Card} = props;
-
+  const { images, techImages, fresherResumeImage,shadi_Card } = props;
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
-
-  
   return (
     <div className="template-page-container">
       {/* Helmet for SEO */}
@@ -117,6 +114,7 @@ const TemplatePage = (props) => {
         </p>
       </div>
       <ShadiCard shadi_Card={shadi_Card}/>
+      {/* <MuslimMerriageCard muslim_biodata={muslim_biodata}/> */}
       {/* Introduction Section */}
       <section className="template-intro">
         <h2>Why Resume Templates Matter in Your 2025 Job Search</h2>

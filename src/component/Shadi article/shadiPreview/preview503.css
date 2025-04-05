@@ -1,0 +1,64 @@
+
+  .container503 {
+    background-color: transparent;
+    padding: 20px;
+    text-align: center;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  .arabic-text {
+    font-size: 40px;
+    /* color: #2C3E50; */
+    font-family: 'Amiri', serif; /* Beautiful Arabic font */
+    margin: 10px 0;
+  }
+  
+  .bismillah {
+    font-size: 30px;
+    /* color: #16A085; */
+    font-family: 'Amiri', serif; /* Beautiful Arabic font */
+    margin: 5px 0;
+  }
+  
+.personal-info503{
+    margin-top: 200px;
+}
+.preview503{
+    padding:'150px'
+}
+.personal-info503 img{
+    width: 150px;
+    height: 150px;
+}
+
+@media (max-width: 768px) {
+    .personal-info503 {
+        margin-top: 150px;
+    }
+    .preview503{
+        padding: 70px;
+    }
+    .preview503 p,.preview503 h{
+        font-size: 8px;
+        line-height: 1;
+    }
+}
+
+@media (max-width: 425px) {
+    .personal-info503 {
+        margin-top: 70px;
+    }
+    .personal-info503 img{
+        width: 100px;
+        height: 100px;
+    }
+    .preview503 p,.preview503 h3{
+        font-size: 8px;
+        /* line-height: 1; */
+    }
+    .preview503{
+        padding: auto;
+    }
+
+}

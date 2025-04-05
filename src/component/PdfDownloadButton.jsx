@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import GoogleAd from './adFolder/GoogleAd'; // Adjust path as needed
+// import GoogleAd from './adFolder/GoogleAd'; // Adjust path as needed
 import '../css/PdfDownloadButton.css'
 import html2canvas from 'html2canvas';
 import jsPDF from 'jspdf';
@@ -29,60 +29,83 @@ const ResumeDownloadSection = ({
     elementId,
 }) => {
     const [isLoading, setIsLoading] = useState(false);
-
     const handleDownloadPDF = async () => {
         setIsLoading(true);
         const element = document.getElementById(elementId);
+        
         if (!element) {
             setIsLoading(false);
             alert('Resume element not found!');
             return;
         }
-
+    
         try {
-            const scale = 2;
+            const scale = 2;  // Adjust scale for better quality
             const canvas = await html2canvas(element, {
                 scale: scale,
                 useCORS: true,
                 logging: false,
+                textRendering: "geometricPrecision",
                 width: element.scrollWidth,
                 height: element.scrollHeight,
                 windowWidth: element.scrollWidth,
                 windowHeight: element.scrollHeight,
             });
-
-            const imgData = canvas.toDataURL('image/jpeg', 0.7);
+    
+            const imgData = canvas.toDataURL('image/jpeg', 0.85);  // High quality JPEG with 85% compression
             const pdf = new jsPDF('p', 'mm', 'a4');
+    
             const imgWidth = 210;
             const pageHeight = 297;
             const imgHeight = (canvas.height * imgWidth) / canvas.width;
             let heightLeft = imgHeight;
             let position = 0;
-
-            pdf.addImage(imgData, 'JPEG', 0, position, imgWidth, imgHeight, undefined, 'FAST');
-            heightLeft -= pageHeight;
-
-            while (heightLeft > 0) {
-                pdf.addPage();
-                position = -pageHeight;
+    
+            // Force content into two pages
+            const maxHeight = 2 * pageHeight;  // Max height for two pages combined
+            let remainingHeight = imgHeight;
+    
+            // Add image to the PDF, ensuring it's split into two pages if necessary
+            if (remainingHeight <= maxHeight) {
                 pdf.addImage(imgData, 'JPEG', 0, position, imgWidth, imgHeight, undefined, 'FAST');
-                heightLeft -= pageHeight;
+                remainingHeight -= pageHeight;  // First page
+    
+                // Second page logic
+                if (remainingHeight > 0) {
+                    pdf.addPage();
+                    pdf.addImage(imgData, 'JPEG', 0, -pageHeight, imgWidth, imgHeight, undefined, 'FAST');  // Shift for second page
+                }
+            } else {
+                // If content is too large for 1 page, force split into two pages.
+                pdf.addImage(imgData, 'JPEG', 0, position, imgWidth, pageHeight, undefined, 'FAST');  // First page
+                pdf.addPage();
+                pdf.addImage(imgData, 'JPEG', 0, -pageHeight, imgWidth, pageHeight, undefined, 'FAST');  // Second page
             }
-
-            pdf.save(`${inputFields}.pdf`);
+    
+            // Get filename from input fields, ensuring it's safe for use in filenames
+            const filename = inputFields ? inputFields.replace(/[^\w\s]/gi, '_') : 'default_filename';
+            pdf.save(`${filename}.pdf`);
+    
             setIsLoading(false);
-            alert('Your Resume is downloaded');
-            canvas.width = 0; // Clear canvas to free memory
+            alert('Your Resume is downloaded successfully!');
+    
+            // Clear canvas to free memory
+            canvas.width = 0;
             canvas.height = 0;
+    
         } catch (error) {
             setIsLoading(false);
             console.error('Error downloading PDF:', error);
-            alert('Failed to download PDF.');
+            alert('Failed to download PDF. Please try again.');
         }
     };
+    
+    
 
+    
     return (
-        <div className="resume-download-section" style={{ width:'fit-content', border:'1px solid black' }}>
+        <div className="resume-download-section" 
+        style={{ width:'fit-content', border:'1px solid black' }}>
             
 
             {/* Customization Controls */}

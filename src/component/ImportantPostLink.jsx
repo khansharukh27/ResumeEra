@@ -2139,9 +2139,13 @@ const ImportantPostLink = () => {
       src: 'https://i.postimg.cc/BvSkhYKV/Marriage-Biodata-in-Hindi.png',
       alt: "Marriage Biodata in Hindi",
     },
-
+    {
+      path: "/how-to-write-biodata-for-marriage",
+      title: "How to Write Biodata for Marriage: Guide with Examples, Tips, and Templates",
+      src: 'https://i.postimg.cc/BvSkhYKV/Marriage-Biodata-in-Hindi.png',
+      alt: "How to Write Biodata for Marriage",
+    },
   ];
-  
   
   
   // Filter posts based on search term

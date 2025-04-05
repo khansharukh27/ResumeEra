@@ -1,190 +1,251 @@
-/* General Styling */
-body {
-    font-family: 'Arial', sans-serif;
-    background-color: #f4f4f4;
-    margin: 0;
-    padding: 0;
+/* General Reset and Base Styles */
+.marriageBiodataArticle {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: 'Noto Sans Devanagari', 'Arial', sans-serif; /* Added Hindi-compatible font */
     line-height: 1.6;
-}
-
-/* Article container */
-.shadi-card-container{
-    background:linear-gradient(145deg, #cec333 0%, #7fdf8f, #c07fdf, 100%);
-    border-radius: 10px;
-    padding: 20px;
-    margin-bottom: 30px;
-    /* box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05); */
-}
-
-/* Heading Section */
-h1 {
-    font-size: 32px;
     color: #333;
-    text-align: center;
-    margin-bottom: 20px;
 }
 
-/* Image Styling */
-img {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-    margin-bottom: 20px;
-}
-
-/* Intro Text */
-.intro-text {
-    font-size: 18px;
-    color: #555;
-    text-align: justify;
-    margin-bottom: 30px;
-}
-
-/* Shadi Card Section */
-.shadi-card-container {
+/* CTA Container */
+.biodataCtaWrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     background-color: #f9f9f9;
-    border-radius: 10px;
     padding: 20px;
-    margin-bottom: 30px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-}
-
-/* Section Styling */
-.section {
-    margin-bottom: 40px;
-}
-
-h2 {
-    font-size: 28px;
-    color: #2c3e50;
-    border-bottom: 2px solid #3498db;
-    padding-bottom: 10px;
+    border-radius: 10px;
     margin-bottom: 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-/* Lists */
-ol.list,
-ul {
-    margin: 20px 0;
-    padding-left: 40px;
+.biodataCtaText {
+    flex: 1;
 }
 
-li {
-    font-size: 16px;
-    color: #555;
+.biodataCtaText h2 {
+    font-size: 24px;
+    color: #2c3e50;
     margin-bottom: 10px;
 }
 
-li strong {
+.biodataCtaText p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.biodataCtaBtn {
+    background-color: #3498db;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.biodataCtaBtn:hover {
+    background-color: #2980b9;
+}
+
+.biodataCtaImages {
+    display: flex;
+    gap: 10px;
+}
+
+.biodataCtaImages img {
+    width: 100px;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Intro Text */
+.biodataIntro {
+    font-size: 18px;
+    color: #444;
+    margin-bottom: 20px;
+    text-align: justify;
+}
+
+/* Shadi Card Container with Checkered Border */
+.biodataCardSection {
+    position: relative;
+    background-color: lightgreen;
+    padding: 20px;
+    margin: 20px 0;
+    border-radius: 10px;
+    text-align: center;
+    padding: 30px; /* Space for the border */
+}
+
+.biodataCardSection::before {
+    content: '';
+    position: absolute;
+    top: -20px;
+    left: -20px;
+    right: -20px;
+    bottom: -20px;
+    background: repeating-conic-gradient(
+        cyan 0deg 90deg,
+        yellow 90deg 180deg,
+        orange 180deg 270deg,
+        green 270deg 360deg
+    );
+    z-index: -1;
+    border-radius: 10px;
+}
+
+.biodataCardSection h3 {
+    font-size: 22px;
     color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+.biodataCardSection p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.biodataCardSection .biodataBtnPrimary {
+    background-color: #3498db;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+.biodataCardSection .biodataBtnPrimary:hover {
+    background-color: #2980b9;
+}
+
+/* Section Styles */
+.biodataSection {
+    margin: 30px 0;
+}
+
+.biodataSection h2 {
+    font-size: 26px;
+    color: #2c3e50;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 5px;
+}
+
+.biodataSection p {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 15px;
+    text-align: justify;
+}
+
+/* List Styles */
+.biodataList {
+    padding-left: 20px;
+    margin-bottom: 20px;
+}
+
+.biodataList li {
+    margin-bottom: 10px;
+    font-size: 16px;
+    color: #444;
+}
+
+.biodataList ul {
+    padding-left: 20px;
+    margin-top: 5px;
+}
+
+.biodataList ul li {
+    font-size: 15px;
+    color: #555;
+    list-style-type: disc;
+}
+
+/* Images */
+.biodataSection img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin: 15px 0;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* FAQ Section */
+.biodataFaqs {
+    margin: 30px 0;
+}
+
+.biodataFaqEntry {
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.biodataFaqEntry h3 {
+    font-size: 18px;
+    color: #2c3e50;
+    margin-bottom: 10px;
+}
+
+.biodataFaqEntry p {
+    font-size: 16px;
+    color: #555;
 }
 
 /* Links */
 a {
     color: #3498db;
     text-decoration: none;
+    transition: color 0.3s ease;
 }
 
 a:hover {
+    color: #2980b9;
     text-decoration: underline;
 }
 
-/* Tips Section */
-.section img {
-    border-radius: 8px;
-    margin-top: 20px;
-}
-
-/* Footer Section */
-footer {
-    background-color: #333;
-    color: #fff;
-    padding: 20px;
-    text-align: center;
-    margin-top: 50px;
-    font-size: 16px;
-}
-.cta-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 40px 20px;
-    background-color: #410b0b;
-    border-radius: 15px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-  }
-  
-  .cta-content {
-    max-width: 600px;
-  }
-  
-  .cta-content h2 {
-    font-size: 32px;
-    color: #800000;
-    margin-bottom: 15px;
-    font-weight: bold;
-  }
-  
-  .cta-content p {
-    font-size: 18px;
-    color: #555;
-    margin-bottom: 20px;
-  }
-  
-  .cta-button {
-    padding: 12px 25px;
-    background-color: #800000;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  .cta-button:hover {
-    background-color: #9b2226;
-  }
-  
-  .cta-images {
-    display: flex;
-    gap: 15px;
-    padding: 25px;
-  }
-  
-  .cta-images img {
-    width: 200px;
-    height: auto;
-    border-radius: 10px;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-  }
-  
-
-/* Mobile Responsiveness */
-@media screen and (max-width: 768px) {
-    h1 {
-        font-size: 28px;
+/* Responsive Design */
+@media (max-width: 768px) {
+    .biodataCtaWrapper {
+        flex-direction: column;
+        text-align: center;
     }
 
-    h2 {
-        font-size: 24px;
+    .biodataCtaImages {
+        margin-top: 20px;
     }
 
-    .aboutResumeEra {
-        padding: 10px;
+    .biodataCtaImages img {
+        width: 80px;
     }
 
-    .intro-text {
-        font-size: 16px;
+    .biodataSection h2 {
+        font-size: 22px;
     }
 
-    ol.list,
-    ul {
-        padding-left: 30px;
+    .biodataIntro,
+    .biodataSection p,
+    .biodataFaqEntry p {
+        font-size: 14px;
     }
 
-    .section img {
-        width: 100%;
-        height: auto;
+    .biodataCardSection {
+        padding: 15px;
+    }
+
+    .biodataCardSection::before {
+        top: -15px;
+        left: -15px;
+        right: -15px;
+        bottom: -15px;
     }
 }

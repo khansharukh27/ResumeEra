@@ -1,0 +1,41 @@
+.personal-info502{
+    margin-top: 200px;
+}
+.preview502{
+    padding:'150px'
+}
+.personal-info502 img{
+    width: 150px;
+    height: 150px;
+}
+
+@media (max-width: 768px) {
+    .personal-info502 {
+        margin-top: 150px;
+    }
+    .preview502{
+        padding: 70px;
+    }
+    .preview502 p,.preview502 h{
+        font-size: 8px;
+        line-height: 1;
+    }
+}
+
+@media (max-width: 425px) {
+    .personal-info502 {
+        margin-top: 70px;
+    }
+    .personal-info502 img{
+        width: 100px;
+        height: 100px;
+    }
+    .preview502 p,.preview502 h3{
+        font-size: 8px;
+        /* line-height: 1; */
+    }
+    .preview502{
+        padding: auto;
+    }
+
+}

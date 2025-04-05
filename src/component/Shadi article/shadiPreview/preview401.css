@@ -1,0 +1,154 @@
+/* Main container flexbox settings for screen */
+.shadi-401 {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+  
+  /* Preview container for full width */
+  .preview401 {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% 100%;
+    text-wrap: wrap;
+    padding: 130px;
+    
+  }
+  
+  /* Personal info section */
+  .personal-info401 {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+  
+  .personal-info401 img {
+    width:150px;
+    height: 150px;
+    object-fit: contain; /* Ensures the image is fully visible */
+  }
+  .personal-info401 h3{
+    font-size: large;
+  }
+  .personal-info401 p {
+    
+    font-size: 16px;
+  }
+  
+  /* Print-specific styles */
+  @media print {
+    /* Reset margins and paddings for printing */
+    body, html {
+      margin: 0;
+      padding: 0;
+      width: 100%; /* Full width for printing */
+      height: 100%;
+    }
+  
+    /* Ensure full-width layout on print */
+    .preview401 {
+      width: 100% !important; /* Ensure it takes up the full width */
+      margin: 0;
+      padding: 0;
+      height: 100%;
+    }
+  
+    /* Remove flex layout for print */
+    .shadi-401 {
+      display:inline-flexbox; /* Turn flex into block layout for print */
+      width: auto;
+      height: 100%;
+    }
+  
+    /* Make sure the preview container takes full width */
+    
+    
+  
+    /* Ensure paragraphs span full width */
+    .personal-info401 p {
+      width: 100%;
+      font-size: 16px;
+      line-height: 1.5;
+    }
+  }
+  @media (max-width: 768px) {
+    .personal-info401 img {
+        width: 150px;
+        height: 150px;
+        /* object-fit: cover Ensures the image is fully visible */
+      }
+      .preview401 {
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 100% 100%;
+        text-wrap: wrap;
+        padding: 53px;
+        margin:-40px;
+        padding:100px;
+        
+      }
+      .personal-info401 h3,p{
+        font-size: 20px;
+      }
+  }
+  @media (max-width: 480px) {
+    .personal-info401 img {
+        width: 100px;
+        height: 100px;
+        /* object-fit: cover Ensures the image is fully visible */
+      }
+      .preview401 {
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 100% 100%;
+        text-wrap: wrap;
+        padding: 53px;
+        margin:-40px;
+        padding: 50px;
+        
+      }
+      .personal-info401 h3,p{
+        font-size: 8px;
+      }
+      
+  }
+  .checkered-border {
+    position: relative;
+    width: fit-content; /* Adjust size as needed */
+    height: fit-content;
+    background: white; /* Inner black background like the image */
+    padding: 0px; /* This will act as the "border" width */
+    box-sizing: border-box;
+    margin: auto;
+}
+
+.checkered-border::before {
+    content: '';
+    position: absolute;
+    top: -20px; /* Matches the padding to create the border */
+    left: -20px;
+    right: -20px;
+    bottom: -20px;
+    background: repeating-conic-gradient(
+        cyan 0deg 90deg, 
+        yellow 90deg 180deg, 
+        orange 180deg 270deg, 
+        green 270deg 360deg
+    );
+    z-index: -1; /* Places the pseudo-element behind the div */
+}
+
+.inner-content {
+    width: 100%;
+    height: 100%;
+    background: black; /* Ensures the inner area remains black */
+}
